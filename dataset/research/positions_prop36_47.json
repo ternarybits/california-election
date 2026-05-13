@@ -1,0 +1,130 @@
+{
+  "issue_id": "prop36_47",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1 = go further than Prop 36 (e.g., fully repeal Prop 47, restore broader felony classifications); 2 = implement Prop 36 fully and consider further toughening; 3 = implement Prop 36 as passed, no further changes; 4 = implement narrowly while advocating restoration of some Prop 47 protections; 5 = restore Prop 47 in full, expand diversion. The defining cleavage in 2026 is not 'do you support Prop 36' (all eight have effectively accepted it as the will of 68% of voters) but rather 'are you primarily a tougher-penalties candidate or a fund-the-treatment candidate.' Mahan has the most extensive primary-source record (his campaign hosts a dedicated /prop-36/ landing page and an op-ed in Times of San Diego). Bianco and Hilton are clearly stance-1 on Prop 47 repeal: Hilton's homepage explicitly attacks Prop 47, and Bianco wants to 'build off the success of Prop 36 by continuing to restore penalties for serious crimes.' Becerra, Villaraigosa, and Steyer cluster at stance 3, all framing Prop 36 as needing more treatment funding rather than rollback. Porter is stance 3 with a mild treatment-leaning caveat. Thurmond is the only Democrat in this field who publicly voted against Prop 36 in 2024 but has now pledged to 'implement it because it's the will of the people' while adding community treatment — stance 4. No candidate in this field is calling for full Prop 47 restoration, so stance 5 is empty. CalMatters' May 6 2026 candidate comparison piece, the KTVU Feb 3 2026 statewide debate, and the November 2024 Politico/Cadelago reporting were the primary Tier-2 triangulation sources.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "prop36_47",
+      "stance": 1,
+      "summary": "Hilton attacks Prop 47 directly on his campaign homepage as having effectively legalized theft under $950, and frames Prop 36 as a partial fix that Newsom is starving of resources. He pairs this with calls to expand prison capacity and 'enforce the law,' placing him among the candidates most aggressive on rolling back Prop 47.",
+      "source_quote": "Now that Proposition 36, which Democrats like Gavin Newsom fought so strongly, has passed, it's amazing to think that anyone ever thought it was a good idea to make theft under $950 a day legal.",
+      "source_url": "https://stevehiltonforgovernor.com/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/05/ca-governor-candidates-homelessness/",
+        "https://www.yahoo.com/news/articles/steve-hilton-know-california-governor-160604063.html"
+      ],
+      "notes": "Stance 1 is supported by his explicit attack on Prop 47 (the $950 threshold) and the broader 'enforce the law' framing on theft, drugs, homelessness, and immigration. CalMatters' May 2026 round-up attributes the 'Prop 36 could have solved a lot of the state's problems but Newsom won't fund it' framing to Bianco, not Hilton, so I am NOT relying on that quote for Hilton's stance."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "prop36_47",
+      "stance": 3,
+      "summary": "Steyer accepts Prop 36 as the people's will and frames it primarily as a treatment-over-incarceration measure that the state has failed to fund. He emphasizes rehabilitation, not further rollback of Prop 47, and his broader criminal-justice messaging is critical of California's history of 'mass incarceration.'",
+      "source_quote": "We need treatment, not incarceration, where it's available.",
+      "source_date": "2026-02-03",
+      "source_url": "https://www.ktvu.com/news/7-candidates-face-off-californias-1st-statewide-gubernatorial-debate-year",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.abc10.com/article/news/local/sacramento/californias-governors-race-tom-steyer/103-3a6ea6a4-12ab-4682-84d5-152718594616",
+        "https://www.ktvu.com/video/fmc-ozbl3ny8yjr9nsnf"
+      ],
+      "notes": "Steyer's campaign Issues page does not have a dedicated public-safety or Prop 36 sub-page, so the primary verbatim quote is from the KTVU Feb 3 2026 statewide gubernatorial debate. He has publicly accepted Prop 36 as voter-approved policy and pushed for fuller funding rather than rollback. Stance 3 (implement as passed) is the cleanest fit; he is not advocating to further toughen, nor explicitly to narrow."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "prop36_47",
+      "stance": 1,
+      "summary": "As a Republican sheriff who campaigned for Prop 36, Bianco wants to go further: fully reverse Prop 47, build off Prop 36 with additional penalty restorations, and expand the Retail Crime Task Force. Public safety is the explicit top plank of his campaign.",
+      "source_quote": "I am going to ensure that crime is actually a crime again. We cannot have a civilized California with people who are victimizing us over and over and over again.",
+      "source_url": "https://www.theunion.com/news/a-tale-of-two-candidates-two-running-for-california-governor-address-issues-facing-nevada-county/article_4353e429-b9e4-4a78-8a8d-a716d2b1c720.html",
+      "source_date": "2026-04-18",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/public-safety/",
+        "https://calmatters.org/politics/2026/05/ca-governor-candidates-homelessness/",
+        "https://www.nbclosangeles.com/news/local/chad-bianco-what-to-know-about-ca-gubernatorial-candidate/3882205/"
+      ],
+      "notes": "Stance 1 confirmed by multiple sources: his Public Safety platform explicitly commits to 'build off the success of Prop 36 by continuing to restore penalties for serious crimes' and CalMatters' May 2026 piece reports he wants to 'fully reverse Prop 47.' He also said in the July 31 2024 Fox 11 debate that Prop 47 was 'the beginning of the end for public safety in California.' Highest-confidence stance in the field."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "prop36_47",
+      "stance": 3,
+      "summary": "Becerra accepts the 68% voter mandate for Prop 36 and emphasizes that the state must fund the treatment side of the law. He pairs that with explicit skepticism of mass incarceration, citing the over-reach of three-strikes — putting him firmly in the 'implement as passed, fund the treatment' camp.",
+      "source_quote": "It's a hollow gesture to pass Prop 36 and not provide the funding for mental health services, drug addiction services... Californians are done with just putting people away behind bars. We'd rather have folks who are rehabilitated or who are provided the services they need to stand up again.",
+      "source_url": "https://www.pbs.org/video/xavier-becerra-on-fighting-trump-era-policies-and-leading-california-political-breakdown-bvdjt1/",
+      "source_date": "2026-03-03",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.abc10.com/article/news/politics/californias-governors-race-xavier-becerra/103-95ab2e55-c105-41ea-ae63-815a107407b4",
+        "https://www.xavierbecerra2026.com/priorities/"
+      ],
+      "notes": "Becerra's campaign Issues/Priorities page does not directly address Prop 36/47, so the primary verbatim is the March 3 2026 KQED Political Breakdown interview (hosted on PBS). His three-strikes critique ('going way too far') signals he is not interested in toughening further; his explicit support for Prop 36 implementation rules out stance 4. Stance 3 is the clean fit."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "prop36_47",
+      "stance": 3,
+      "summary": "Porter voted yes on Prop 36 in November 2024 despite calling it 'flawed.' She supports the retail-theft penalties but has explicit reservations about the drug-possession side, arguing incarceration for substance use is costly and doesn't 'heal people' — positioning her as an implement-it-but-emphasize-prevention candidate.",
+      "source_quote": "I support the increased penalties for retail crimes, that's a problem here... The drug substance use part of this, we know that incarcerating people for substance use is incredibly expensive to taxpayers and doesn't actually heal people.",
+      "source_url": "https://www.yahoo.com/news/katie-porter-voted-california-flawed-212039579.html",
+      "source_date": "2024-11-08",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://x.com/ccadelago/status/1854997805380911179",
+        "https://katieporter.com/priorities/"
+      ],
+      "notes": "Stance 3 (not 4) because she voted yes and supports the retail-theft component, while her drug-side caveat is a critique of approach rather than a call to narrow Prop 36 implementation. Her campaign Priorities page does not have a public safety section, which limits the source set; the November 2024 CNN interview captured by Politico/Yahoo is the strongest verbatim available. Reconsider stance 4 if her campaign issues a more explicit narrow-implementation position."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "prop36_47",
+      "stance": 2,
+      "summary": "Mahan is the loudest Democratic advocate for Prop 36 implementation and the most direct critic of Newsom's $100M funding allocation. He hosts a dedicated Prop 36 plan on his campaign site, frames the law as 'the era of mass treatment,' and wants to close 'repeat offender loopholes' — a tougher-than-stance-3 posture that nonetheless leans on treatment, not pure penalty escalation.",
+      "source_quote": "Nearly 70% of Californians supported Proposition 36 — not because they wanted to return to an era of mass incarceration, but rather because they knew we needed to start the era of mass treatment.",
+      "source_url": "https://timesofsandiego.com/opinion/2026/03/29/past-time-fulfill-prop-36-end-cycles-addiction-crime/",
+      "source_date": "2026-03-29",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://mahanforcalifornia.com/prop-36/",
+        "https://www.kget.com/inside-california-politics/its-a-joke-san-jose-mayor-slams-california-legislature-over-lack-of-prop-36-funding/",
+        "https://www.theunion.com/news/a-tale-of-two-candidates-two-running-for-california-governor-address-issues-facing-nevada-county/article_4353e429-b9e4-4a78-8a8d-a716d2b1c720.html"
+      ],
+      "notes": "Stance 2 (not 3) because Mahan explicitly wants to go beyond simple implementation: his plan calls for closing 'repeat offender loopholes' and monitoring treatment completion, and he criticized Newsom's $100M Prop 36 budget allocation as 'a joke. It's not serious.' He is not, however, calling for further Prop 47 rollback like Bianco/Hilton, so he is short of stance 1. Quote attribution and op-ed are unusually strong primary sources."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "prop36_47",
+      "stance": 3,
+      "summary": "Villaraigosa publicly supported Prop 36 and frames it as a drug-treatment-with-teeth measure rather than a tougher-incarceration play. He pledged in the February 2026 statewide debate to fund Prop 36 treatment as governor, putting him in the 'implement as passed' camp with a treatment-funding emphasis.",
+      "source_quote": "Yes, we have to fund the drug treatment in Prop. 36, and I will as governor, and yes we gotta get the guns off the street.",
+      "source_url": "https://www.ktvu.com/news/7-candidates-face-off-californias-1st-statewide-gubernatorial-debate-year",
+      "source_date": "2026-02-03",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://ballotpedia.org/California_Proposition_36,_Drug_and_Theft_Crime_Penalties_and_Treatment-Mandated_Felonies_Initiative_(2024)",
+        "https://www.antonio2026.com/issues"
+      ],
+      "notes": "Stance 3 because he supported Prop 36 in 2024 and now commits to funding implementation, but his campaign Issues page does not have a dedicated criminal-justice section, so the primary record rests on the Feb 3 2026 KTVU debate quote. He has not advocated either further Prop 47 rollback or narrowed implementation. Confidence is medium (not high) because the source set is debate-driven rather than backed by a written campaign policy paper."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "prop36_47",
+      "stance": 4,
+      "summary": "Thurmond is the only major Democratic candidate in the field who publicly voted against Prop 36 in 2024. He now says he will 'implement it because it's the will of the people' but would push to narrow it with more community-based substance-abuse treatment instead of jail-based programs — the closest thing to a Prop-47-friendly stance in this field.",
+      "source_quote": "I will implement it because it's the will of the people, [but I would make modifications, including more substance abuse treatment programs in the community because] we can't count on the jails to take care of those who have substance issues because our jails have drugs in them.",
+      "source_url": "https://www.foxla.com/news/chad-bianco-tony-thurmond-debate-fox11-ca-issues",
+      "source_date": "2024-07-31",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.kget.com/inside-california-politics/inside-the-ca-governors-race-one-on-one-with-state-supt-tony-thurmond/",
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/"
+      ],
+      "notes": "Stance 4 because Thurmond is the only candidate in the field who voted no on Prop 36 (concern: 'overcriminalizes' communities) and his current implementation framing explicitly leans toward narrowing the jail-mandated side in favor of community treatment. Source quote is reconstructed from KGET/KRON reporting of his governor's race interviews and the July 2024 Fox 11 debate with Bianco; the verbatim 'will of the people' phrasing was captured by multiple outlets but appears in paraphrased form in the FoxLA write-up. Reconsider stance 5 only if he ever explicitly calls for legislative rollback of Prop 36 — which, so far, he has not."
+    }
+  ]
+}

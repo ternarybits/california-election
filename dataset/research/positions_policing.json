@@ -1,0 +1,135 @@
+{
+  "issue_id": "policing",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale 1=significantly expand law enforcement & toughen penalties; 2=expand law enforcement with modest reforms; 3=mixed (more officers AND more accountability/diversion); 4=prioritize reform, oversight, non-police alternatives; 5=substantially shift funding from policing to community services. Sources span campaign sites, the May 5 2026 CNN debate, CalMatters, ABC10, ACLU CA Action's 2026 candidate survey, Oakland Voices interviews, and PORAC's 2025 dual endorsement of Villaraigosa and Bianco. Useful triangulation: the ACLU CA Action survey (https://aclucalaction.org/2026-election-guide/gubernatorial-candidates/) shows Becerra, Porter, Thurmond, and Villaraigosa all answered 'yes' to community-based alternatives, expanded oversight, social-service responders for mental-health calls, and banning facial recognition in body cameras — which constrains how far up the punitive scale they can credibly be placed. Steyer and Mahan did not respond to the ACLU survey, and Bianco and Hilton gave 'no reply' to every question. Governance-vs-rhetoric gaps: Villaraigosa cuts against his progressive legislative past (he led the anti-three-strikes fight) by explicitly endorsing Prop 36 and trumpeting +1,000 LAPD officers as mayor — code to the governing record, which is more enforcement-forward. Mahan: campaign messaging is 'community policing + trust', but the governing record is unambiguously expansionary (doubling SJPD hiring rate, ALPR rollout, Prop 36 endorsement, plus an accountability dashboard/independent police auditor appointment that prevents him from sliding to 1).",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "policing",
+      "stance": 1,
+      "summary": "Hilton frames public safety as the foundation of his platform: enforce existing laws, fully support officers, back Prop 36, and crack down across the board on homelessness, drugs, theft, illegal immigration, and violent crime. His pitch is consistent enforcement without new reform; he cites violent crime up 23% and arrest rates falling to 30% statewide as proof the current system is failing.",
+      "source_quote": "We need to get back to the basic principle that we should enforce the law... As governor, I will ensure our brave law enforcement officers are fully supported in enforcing the law.",
+      "source_url": "https://stevehiltonforgovernor.com/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kpbs.org/news/politics/2026/05/06/steve-hilton-lays-out-his-plans-to-make-the-state-califordable-as-governor",
+        "https://factually.co/fact-checks/politics/steve-hilton-distinguishing-statements-policy-proposals-2026-california-governor-088315",
+        "https://www.newsnationnow.com/politics/2026-midterm-elections/california-governor-candidate-steve-hilton/"
+      ],
+      "notes": "Stance 1 (rather than 2) because Hilton's framing is enforcement-only with zero rhetorical concession to reform, oversight, or non-police alternatives. He explicitly cites Prop 36 support and the need for prosecutions/convictions; the platform does not mention accountability, body cameras, oversight commissions, or non-police responders. ACLU CA Action survey shows he declined to engage on civil-liberties/oversight questions, which is consistent with a stance-1 placement."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "policing",
+      "stance": 4,
+      "summary": "Steyer self-describes as a progressive criminal-justice reformer: incarcerate violent people, but rehabilitate and treat nonviolent offenders rather than imprison them. He highlights his role in passing SB 10 (eliminating cash bail as a precondition for release) and frames ICE as a criminal organization he would prosecute. He has not been a vocal champion of expanded police hiring.",
+      "source_quote": "Steyer is a big believer in keeping communities safe and incarcerating violent people who are a danger, but for nonviolent criminals, he believes rehabilitating and treating them is a much more successful and effective way to deal with crime.",
+      "source_url": "https://www.tomsteyer.com/criminal-justice-reform",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.justiceactionnetwork.org/tom-steyer",
+        "https://couragecalifornia.org/2026-primary-election-endorsement-steyer/",
+        "https://davisvanguard.org/2026/04/ice-agents-prosecution-steyer/"
+      ],
+      "notes": "Stance 4 rather than 3 or 5: Steyer's criminal-justice page is framed as reform-and-rehabilitation, his major proud point is bail reform (SB 10), and he has not proposed expanding police hiring; but he also explicitly endorses incarcerating violent offenders, which keeps him short of stance 5 (substantial divestment from policing). He did not respond to the ACLU CA Action survey, which limits confidence vs. the other Democrats. His ICE-prosecution rhetoric is the loudest law-enforcement plank, but that targets federal agents, not California policing."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "policing",
+      "stance": 1,
+      "summary": "A sitting Riverside County sheriff with PORAC's endorsement, Bianco runs on the most explicitly tough-on-crime platform in the field: roll back Prop 47's $950 felony threshold, restore cash bail for serious and violent offenses, end DA non-prosecution policies, expand the Retail Crime Task Force, build on Prop 36's penalty increases, and 'stand behind the line officers who have been sued, scapegoated, and second-guessed.'",
+      "source_quote": "roll back Prop 47's $950 felony threshold, restore cash bail for serious and violent offenses... end DA non-prosecution policies through statewide accountability standards... stand behind the line officers who have been sued, scapegoated, and second-guessed for the better part of a decade.",
+      "source_url": "https://biancoforgovernor.com/public-safety/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://porac.org/wp-content/uploads/PORAC-2025-Gov-Endorsements_Press-Release.pdf",
+        "https://www.cnn.com/2026/05/05/politics/takeaways-cnn-california-governor-debate",
+        "https://sdcitytimes.com/news/2026/05/12/primary-26-bianco-introduction/"
+      ],
+      "notes": "Stance 1 is the textbook fit. Bianco is a sitting sheriff, has been the loudest opponent of Prop 47 and zero-bail, and was endorsed by PORAC. The 2023 CA DOJ investigation of his department for alleged unconstitutional policing/excessive-force/jail-conditions issues underscores the absence of any reform plank in his platform — he frames officer 'accountability' demands as the problem to be reversed, not embraced."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "policing",
+      "stance": 3,
+      "summary": "Becerra threads the needle: 'tough on people who are committing crime' while also focused on getting them 'off the path of committing crime' through mental-health, addiction, and reentry services. As CA AG he pushed Congress to give state AGs federal authority to investigate patterns of unconstitutional policing; CalMatters previously noted he was less aggressive than progressives wanted on disclosing police misconduct records.",
+      "source_quote": "We want to make sure we're tough on people who are committing crime, but we also want to make sure that we can get them off the path of committing crime... If we don't provide the services that you need, whether it's mental health, drug addiction services... let's do what we know works, provide people with the services that let them rehabilitate and get on the right path.",
+      "source_url": "https://factually.co/fact-checks/politics/xavier-becerra-2026-stance-ice-policing-prisons-military-promises-3f81b4",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://oag.ca.gov/news/press-releases/attorney-general-becerra-urges-congress-expand-authority-state-attorneys-general",
+        "https://calmatters.org/politics/2019/02/xavier-becerra-police-accountability-progressives/",
+        "https://aclucalaction.org/2026-election-guide/gubernatorial-candidates/"
+      ],
+      "notes": "Stance 3 (mixed) fits because Becerra explicitly couples 'tough' enforcement with rehabilitation/services and has a record of pushing federal pattern-or-practice authority — but he is not a stance-4 reformer (CalMatters reporting from his AG tenure flagged him as cautious on police-record disclosure and SB 1421 implementation). He answered 'yes' to the ACLU CA Action 2026 survey questions on community alternatives and oversight, which prevents drift to stance 2. Note: his campaign site has NO dedicated public-safety/policing page — these positions come from interviews and his AG record, which lowers confidence."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "policing",
+      "stance": 4,
+      "summary": "Porter explicitly endorses criminal-justice reform: revisit three-strikes, look at compassionate/hospice release for elderly long-sentenced inmates, and acknowledge that Prop 36 is 'focused on punishment' — 'we need punishment, but we really need to dig in on prevention.' Her campaign has no standalone public-safety page; policing is not a major emphasis.",
+      "source_quote": "We're definitely moving in the right direction on criminal justice reform, particularly in terms of looking back at what are the consequences of our three strike law... We've passed Prop 36, that's focused on punishment. We need punishment, but we really need to dig in on prevention and making our streets feel safe.",
+      "source_url": "https://www.abc10.com/article/news/local/sacramento/californias-governors-race-katie-porter/103-00361394-9314-4a95-bf57-3d3e718a220b",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://aclucalaction.org/2026-election-guide/gubernatorial-candidates/",
+        "https://katieporter.com/priorities/"
+      ],
+      "notes": "Stance 4 because Porter's ABC10 framing is prevention-first, she's actively critiquing three-strikes and Prop 36's punishment posture, and she answered 'yes' across the ACLU CA Action survey to oversight/community-alternatives questions. She has not proposed expanded police hiring (unlike Mahan, Villaraigosa, Thurmond). Confidence is medium not high because policing is conspicuously absent from her 12-priority list on katieporter.com — her brand is consumer protection, not criminal justice — so we are inferring from one ABC10 interview plus the ACLU survey."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "policing",
+      "stance": 2,
+      "summary": "Mahan's gubernatorial pitch is 'community policing and hired more officers — helping make San Jose the safest big city in America,' anchored by his San Jose record: doubled SJPD hiring to 30+ officers/year, plans 200 new sworn + 100 community service officers, deployed Automatic License Plate Readers, was a 'main proponent' of Prop 36 in 2024, and paired the expansion with a new Independent Police Auditor and accountability dashboards.",
+      "source_quote": "Matt believes there are two sure-fire ways to keep crime low: assure consequences and build trust. People now know, if they harm San Jose, they will be found and held accountable. They also know their neighborhood police officer.",
+      "source_url": "https://www.mahanforcalifornia.com/about",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.sjmayormatt.com/policy-community-safety",
+        "https://www.sjmayormatt.com/news-room/san-jos-mayor-and-council-appoint-new-independent-police-auditor-after-nationwide-search",
+        "https://www.kqed.org/news/12064587/civil-liberties-groups-sue-san-jose-over-license-plate-reader-use"
+      ],
+      "notes": "Stance 2 (expand law enforcement with modest reforms) is the right read. Governance-vs-rhetoric note: campaign messaging is 'common sense' and trust-building, but the governing actions are unambiguously expansionary — doubled SJPD hiring, ALPRs (which civil-liberties groups sued San Jose over), and Prop 36 endorsement. He cannot be coded stance 1 because he did appoint an Independent Police Auditor and built accountability dashboards into the program. He cannot be coded stance 3 because his rhetoric is not 'more accountability AND more officers in equal measure' — accountability is a supporting beam, not a co-equal pillar. Mahan did not respond to the ACLU CA Action 2026 survey, which is itself a signal he doesn't want to lock in progressive policing commitments."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "policing",
+      "stance": 2,
+      "summary": "Villaraigosa runs on his LA mayoral public-safety record: hired ~1,000 new LAPD officers (force exceeded 10,000 for the first time), violent crime down 48%, federally-modeled gang intervention programs, and the end of the LAPD federal consent decree. He explicitly supported Prop 36 and frames himself as the only Democrat with both law-enforcement and reform credibility — PORAC endorsed him (along with Bianco) in 2025.",
+      "source_quote": "I led the fight against 'three strikes, you're out' when I was in the legislature. I'm against the death penalty, but I tell people I believe in accountability. When you keep on stealing and you're on drugs and you get arrested and you refuse drug treatment the first time, the second time, the third time, you're going to jail. That's why I supported Prop 36.",
+      "source_url": "https://www.antonio2026.com/news/villaraigosa-endorsed-bynbspcalifornias-largest-public-safety-organization-porac",
+      "source_date": "2025-12-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://porac.org/wp-content/uploads/PORAC-2025-Gov-Endorsements_Press-Release.pdf",
+        "https://www.antonio2026.com/record-of-results",
+        "https://davisvanguard.org/2025/08/porac-endorses-villaraigosa-bianco/",
+        "https://aclucalaction.org/2026-election-guide/gubernatorial-candidates/"
+      ],
+      "notes": "Stance 2 (expand law enforcement with modest reforms). Governance-vs-rhetoric gap: his 1990s legislative record fighting three-strikes would suggest stance 3-4, but his 2026 campaign explicitly leads with +1,000 LAPD officers, Prop 36 endorsement, and PORAC's endorsement — code to the current platform, not the 30-year-old legislative votes. He is not stance 1 because he did oversee the end of LAPD's federal consent decree by satisfying its reform terms, ran community/gang intervention programs, and answered 'yes' to ACLU CA Action's oversight/community-alternatives questions. PORAC's dual endorsement with Bianco is a strong signal of his current law-enforcement-supportive positioning."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "policing",
+      "stance": 3,
+      "summary": "Thurmond explicitly rejects a 'police your way out' approach and pairs his proposal to hire thousands more officers and increase 911 dispatch capacity with crime intervention, job-training programs, mental health, and substance-use treatment. He frames police accountability and community programs as co-equal pillars, drawing on his Richmond city council record.",
+      "source_quote": "The only way we're going to really address crime issues is to have a combination of police officers who are accountable to the community and intervention programs that create job opportunities. I don't think we can police our way out of all the challenges.",
+      "source_url": "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+      "source_date": "2026-04-24",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://aclucalaction.org/2026-election-guide/gubernatorial-candidates/",
+        "https://www.abc10.com/article/news/local/california/californias-governors-race-tony-thurmond/103-ea30d4ea-af1f-40e9-8482-8f5734a67b65"
+      ],
+      "notes": "Stance 3 (mixed) fits cleanly. He explicitly proposes both expanded hiring (thousands of officers + 911 dispatch) AND accountability + intervention as co-equal pillars — the textbook stance-3 framing. ACLU CA Action survey confirms 'yes' across community-alternatives, social-service responders, oversight, and facial-recognition-ban questions. He is not stance 4 because his plan visibly includes a major expansion in police hiring; not stance 2 because intervention and accountability are positioned as co-equal, not bolt-ons."
+    }
+  ]
+}

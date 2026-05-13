@@ -1,0 +1,136 @@
+{
+  "issue_id": "sanctuary",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1=repeal SB 54 / full ICE cooperation; 2=allow specific exceptions to SB 54; 3=maintain SB 54 as-is; 4=expand sanctuary protections (e.g., legal defense funding, ICE accountability statutes); 5=major expansion including state-level ID and full anti-cooperation infrastructure. SB 54 (2017) already contains carve-outs allowing notification/transfer to ICE for certain serious-felony convictions; under SB 54 'as-is' California cooperates with ICE only on those specified felony categories. So a Democrat saying 'the law already lets us cooperate on violent felons' is articulating stance 3 (status quo), not stance 2 (which means *expanding* cooperation beyond the existing carve-outs).\n\nThe field separates cleanly. Bianco and Hilton both campaign on repealing SB 54 and restoring full ICE cooperation (stance 1) — Bianco's campaign issue page literally promises to 'abolish Sanctuary State policies,' and Hilton has called SB 54 'unconstitutional' and pledged to be a 'clear and willing partner' with federal immigration enforcement. Steyer is the most aggressive Democrat: his published plan would *prosecute and jail ICE agents and leadership*, fund legal defense, create a state investigative unit to monitor ICE, and outlaw enforcement profiling — a clear stance 5. Porter and Villaraigosa each publicly defend SB 54 'as it currently is' with its built-in exceptions for violent felonies; both mapped to 3, though Porter pairs that with an 'abolish ICE' platform plank and Villaraigosa pairs it with an extensive ICE Accountability executive-order package that tightens enforcement standards inside California (which nudges him into 3-trending-4 territory). Thurmond's campaign priorities page commits to 'Protect California's sanctuary state laws,' 'Fight to Abolish ICE,' and 'Levy a tax on companies that operate ICE detention centers' — that's expansion, stance 4. Becerra defended SB 54 in court as AG, repeats the line at debates that 'the federal government cannot compel the State of California to do federal immigration enforcement,' has the CHIRLA Action Fund endorsement, and frames his platform as 'stopping ICE overreach' and protecting Dreamers — stance 4. Mahan is the trickiest: as San Jose mayor he pushed strong local sanctuary policies (ICE-mask ordinance, restrictions on city property, prosecution if ICE breaks state law, increased legal-services funding) and at debate said local police should not cooperate with federal immigration authorities — that record reads like stance 4. But on rhetoric he calls 'abolish ICE' symbolic and pushes ICE 'reform.' I am mapping him to 4 based on the policy record (verifiable San Jose actions) rather than the rhetoric.\n\nLatino political dynamics: Becerra has the CHIRLA Action Fund endorsement (the major immigrant-rights political vehicle in CA) and leans into his AG record defending SB 54. Villaraigosa stakes out a moderate-but-clearly-pro-immigrant position — accepting the existing felony carve-outs while building an ICE-accountability superstructure around them — which fits his coalition (Latino base + PORAC). No candidate is openly campaigning to *narrow* SB 54 from the Democratic side, despite some moderate framing.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "sanctuary",
+      "stance": 1,
+      "summary": "Hilton has called SB 54 'ridiculous' and 'unconstitutional' and pledged that as governor California 'will not have sanctuary policies of any kind.' He says his administration would be a 'clear and willing partner' with federal immigration enforcement and endorses Trump's 'worst go first' deportation framing.",
+      "source_quote": "It's a ridiculous policy. It's actually unconstitutional. We need to have a cooperative working relationship between the federal government and state and local government to make sure that all our laws are peacefully enforced.",
+      "source_url": "https://www.nbcsandiego.com/news/politics/politically-speaking/steve-hilton-lockstep-trump-immigration-policy/4007469/",
+      "source_date": "2026-04-08",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/",
+        "https://www.youtube.com/watch?v=OHSGxvPmYnQ",
+        "https://www.breitbart.com/politics/2026/05/06/steve-hilton-ill-grow-californias-economy-productivity-not-migration/"
+      ],
+      "notes": "Hilton's own campaign issues page is thin on immigration specifics — the public-safety section only commits to 'enforce the law — whether it's on homelessness, open air drug markets, shoplifting, illegal immigration or violent crime.' The verbatim SB 54 'ridiculous and unconstitutional' quote comes from his NBC 7 San Diego Politically Speaking interview, where he also said California should be 'a clear and willing partner' with federal immigration enforcement. Endorses Trump's 'worst go first' deportation framing. CBS California Investigates also quotes him asking 'What is the point of passing laws if you don't enforce them?' on SB 54. Clear stance 1."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "sanctuary",
+      "stance": 5,
+      "summary": "Steyer's published immigration plan goes well beyond defending SB 54: he would grant the state Attorney General authority to criminally prosecute and jail ICE agents and supervisors, create a special state investigative unit to monitor ICE, outlaw enforcement profiling by race/ethnicity/language/occupation/location, fund a major legal defense infrastructure, and use the governorship to retrieve deported Californians. He has also said he would 'fight fire with fire' against ICE.",
+      "source_quote": "ICE is acting like a criminal organization, carrying out indiscriminate racial profiling and using violence, intimidation, terrorism, and the murder of Americans to extend Trump's rule by fear. I've made it clear: ICE must be abolished. California must build a system that fights fire with fire... Put ICE agents and their leadership in jail for their crimes, because that's how you take on a violent extremist group and win.",
+      "source_url": "https://tomsteyer.substack.com/p/how-california-can-put-ice-in-jail",
+      "source_date": "2026-04-14",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/abolish-ice",
+        "https://www.thebulwark.com/p/tom-steyer-wants-to-jail-ice-agents-california-governor-campaign",
+        "https://www.compactmag.com/article/tom-steyers-disastrous-immigration-plan/"
+      ],
+      "notes": "Steyer's plan is the field's most aggressive expansion of state anti-cooperation infrastructure: prosecutorial authority over ICE supervisors via supervisory liability, a state ICE-monitoring unit, statewide 'Know Your Rights' campaign, expanded legal defense funding, anti-profiling statute, and bringing deported Californians back. He does not specifically discuss SB 54 by number — he treats it as a floor and builds far above it. Clearly stance 5 (major expansion beyond status quo)."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "sanctuary",
+      "stance": 1,
+      "summary": "Bianco's campaign issues page explicitly commits to 'Abolish Sanctuary State policies.' As Riverside Sheriff he was one of the first to publicly oppose SB 54 and has been a fixture of pro-ICE-cooperation Republican politics in CA. He attended a February 2025 press conference promoting SB 554 (a bill to weaken SB 54) and has said he is suing the state over its sanctuary status.",
+      "source_quote": "Abolish Sanctuary State policies and ensure local law enforcement is free to collaborate with federal partners when dealing with illegal immigrants who commit crimes... Prioritize the deportation of violent criminals from our jail and prison systems.",
+      "source_url": "https://biancoforgovernor.com/immigration/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.washingtontimes.com/news/2026/feb/10/chad-bianco-sheriff-gop-gubernatorial-candidate-vows-end-californias/",
+        "https://en.wikipedia.org/wiki/Chad_Bianco",
+        "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/"
+      ],
+      "notes": "Bianco at CBS California Investigates: 'Every single person that is here illegally, that in addition commits a crime and ends up in jail, should be deported.' On NBC LA he framed SB 54 as the cause of community ICE operations: 'We warned them. We told them if you are going to prevent sheriffs from cooperating with ICE for criminals in our jail and turning them over, you're going to force ICE into our communities.' Background context: Bianco was first elected Riverside Sheriff in 2018 and was one of the first CA sheriffs to publicly defy SB 54 cooperation limits. Unambiguous stance 1."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "sanctuary",
+      "stance": 4,
+      "summary": "Becerra defended SB 54 in court as California Attorney General and has built his campaign immigration identity around 'stopping ICE overreach' and protecting Dreamers. He has the CHIRLA Action Fund endorsement — the major CA immigrant-rights political endorsement — and repeats at debates that the federal government cannot compel California to do its immigration enforcement. Treats sanctuary protections as legal infrastructure to be defended and expanded rather than merely held.",
+      "source_quote": "The federal government cannot compel the State of California, and I'm saying this to you not just because I'm pontificating, I'm saying it because, as attorney general, I went to court and won my case on this.",
+      "source_url": "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/",
+      "source_date": "2025-11-17",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.calonews.com/communities/los-angeles/chirla-action-fund-endorses-xavier-becerra-for-california-governor/article_095a8745-bcc9-43ef-833a-9e736ace7ae0.html",
+        "https://www.cnn.com/2026/04/28/politics/xavier-becerra-california-governor",
+        "https://www.xavierbecerra2026.com/"
+      ],
+      "notes": "Becerra's campaign homepage frames his record as 'I sued Trump 122 times – never shying away from the fight on critical issues like... stopping ICE overreach... and protecting Dreamers from deportation.' He has not (as of 2026-05-13) published a dedicated immigration policy page on his campaign site beyond the 'Fighting Donald Trump' priority section, so a more specific legislative agenda is not on record. CHIRLA Action Fund unanimously endorsed him with 60% of members' recommendation. AG record: Becerra led California's defense of SB 54 against the first Trump administration's lawsuit (US v. California) and won at the 9th Circuit. Mapped to 4 because his identifiable platform is 'expand the legal defense of sanctuary' rather than just maintain SB 54, but he stops short of Steyer-style criminal prosecution of ICE agents. If a future Becerra immigration-policy page surfaces with more aggressive expansion language, this could move toward 5."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "sanctuary",
+      "stance": 3,
+      "summary": "Porter publicly defends SB 54 'as it currently is' — pointing to its built-in exceptions for violent crimes — and frames the governor's role as protecting 'every single Californian.' Her campaign-issue platform also includes 'Abolish ICE' working with federal partners and commits that 'every California community must remain a sanctuary for immigrants.'",
+      "source_quote": "Every California community must remain a sanctuary for immigrants – not staging grounds for ICE and federal law enforcement. That's why I will work with our federal partners to Abolish ICE. That means rejecting federal overreach and ensuring our infrastructure serves our communities, not a horrific deportation agenda.",
+      "source_url": "https://katieporter.com/priority/abolish-ice/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/",
+        "https://www.nbclosangeles.com/news/local/california-governor-la-mayor-debate-immigration/3887792/",
+        "https://www.yahoo.com/news/articles/candidates-california-governor-immigration-side-172200144.html"
+      ],
+      "notes": "CBS California Investigates (Nov 2025) summarized Porter's position as 'California's current policy is appropriate the way it is, pointing to built-in exceptions for violent crimes' and that her support for state-prison-ICE cooperation 'depends on the conviction.' Her own campaign page is rhetorically expansionist ('every community must remain a sanctuary,' 'abolish ICE working with federal partners') but doesn't propose specific new CA statutory expansion beyond defending the existing sanctuary regime — so the dominant signal is 3 (maintain). If she releases a fuller legal-defense-fund or anti-cooperation expansion plan, this could shift to 4."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "sanctuary",
+      "stance": 4,
+      "summary": "As San Jose mayor, Mahan reaffirmed the city's sanctuary policies and pushed concrete expansions: an ordinance requiring ICE agents to unmask and visibly identify themselves, restrictions on ICE use of city-owned properties, increased funding for immigrant legal services, and a commitment that ICE agents who violate state law should be prosecuted. At the first 2026 debate he framed immigration around legal-path expansion, not enforcement.",
+      "source_quote": "if federal immigration agents violate California law, they should be prosecuted.",
+      "source_url": "https://www.immigrantmagazine.com/can-california-still-work-for-immigrants-matt-mahan-on-housing-immigration-and-rising-costs/",
+      "source_date": "2026-05-11",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12061923/san-jose-aims-to-thwart-ice-with-new-policies-on-masks-and-public-properties",
+        "https://sanjosespotlight.com/san-jose-approves-plan-for-ice-agents-to-identify-themselves/",
+        "https://localnewsmatters.org/2025/10/30/san-jose-ice-enforcement-policy/",
+        "https://www.ktvu.com/news/california-governors-candidates-call-ice-be-abolished-1st-debate"
+      ],
+      "notes": "Mahan is the trickiest member of the field to place. Rhetorically he is moderate: he calls 'abolish ICE' symbolic, supports deep ICE reform 'if not a complete restart,' and at the Feb 2026 KTVU debate emphasized legal-pathway-to-citizenship language rather than sanctuary expansion ('We need to create a legal path for people who want to be here'). But his governing record as San Jose mayor is concretely sanctuary-expansionist: (1) October 2025 City Council vote requiring ICE agents to unmask and identify themselves, (2) October 2025 restrictions on ICE use of city-owned property, (3) increased immigrant legal services funding, (4) reaffirmation of San Jose's existing sanctuary city policies, (5) public position that ICE agents breaking state law should be prosecuted. Mapped to 4 on the strength of the verifiable record. If polling-driven moderate rhetoric leads to a published statewide proposal to *narrow* sanctuary protections, this would move toward 3."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "sanctuary",
+      "stance": 3,
+      "summary": "Villaraigosa explicitly endorses SB 54 'as currently written' — including its existing cooperation carve-out for violent and serious felons. He pairs that maintain-the-law posture with a sweeping ICE Accountability executive-order package that would inspect detention facilities, declare a child welfare emergency for detained minors, designate schools/churches/hospitals/homes/workplaces as protected locations requiring judicial (not administrative) warrants, and strengthen AB 450 workplace protections.",
+      "source_quote": "What the law says currently is that we do cooperate with violent and serious felons. And I do think we should cooperate with them.",
+      "source_url": "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/",
+      "source_date": "2025-11-17",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/ice",
+        "https://www.ktvu.com/news/california-governors-candidates-call-ice-be-abolished-1st-debate",
+        "https://www.nbclosangeles.com/news/local/california-governor-la-mayor-debate-immigration/3887792/"
+      ],
+      "notes": "The 'cooperate with violent and serious felons' quote is the SB 54 status-quo position — those carve-outs are already in the law, and Villaraigosa is explicitly declining to expand or narrow them. At the Feb 2026 KTVU debate he also said 'We will stand up for civil liberties in this state. We've got to say no to ICE and we've got to take on Trump.' His campaign /ice page commits to Day-One executive orders covering: ICE Detention Facility Task Force unannounced inspections; child welfare emergency declaration for detained minors; designation of schools/churches/hospitals/homes/workplaces as protected locations requiring judicial (not administrative) warrants except for violent-felony suspects; strengthened AB 450 with mandatory 72-hour employee notice and judicial warrant requirement. Coalition note: Villaraigosa has PORAC (law-enforcement) endorsement and a Latino base, and the SB-54-as-is framing reflects that balance. Mapped to 3 because the SB 54 stance is explicitly status-quo; the ICE Accountability package strengthens *enforcement standards on ICE inside CA* without expanding the underlying anti-cooperation statute, so it doesn't push into 4 the way Becerra's expansion frame or Mahan's local ordinances do. Reasonable people could argue 4."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "sanctuary",
+      "stance": 4,
+      "summary": "Thurmond's campaign priorities page lists 'Protect California's sanctuary state laws,' 'Fight to Abolish ICE,' and 'Levy a tax on companies that operate ICE detention centers' as explicit commitments. As State Superintendent he sponsored legislation to keep ICE out of California schools and co-sponsored AB 1633 to tax private immigration detention corporations at 50%. At the Feb 2026 debate he opened by vowing to resist ICE 'until it is abolished.'",
+      "source_quote": "Protect California's sanctuary state laws... Fight to Abolish ICE... Levy a tax on companies that operate ICE detention centers... Work with Congress to establish a pathway to citizenship.",
+      "source_url": "https://www.tonythurmond.com/priorities",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.ktvu.com/news/california-governors-candidates-call-ice-be-abolished-1st-debate",
+        "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/",
+        "https://www.cde.ca.gov/nr/ne/yr26/yr26rel03.asp"
+      ],
+      "notes": "Thurmond is the rare Democrat in the field whose published platform pairs sanctuary defense with specific revenue-raising statutory expansion (the detention-facility tax) plus institutional carve-outs (ICE-out-of-schools legislation). Stops short of Steyer's prosecute-ICE-agents framework, so not stance 5. The CBS California Investigates summary noted a partial nuance: Thurmond said law enforcement officials 'have a responsibility' to work with ICE when a judicial warrant is involved, which is consistent with SB 54's existing structure (judicial warrants are honored). That nuance does not narrow SB 54; it tracks the law. Mapped to 4 (expansion via detention-facility tax + ICE-out-of-schools statute + anti-cooperation rhetoric)."
+    }
+  ]
+}
