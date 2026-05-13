@@ -1,0 +1,127 @@
+{
+  "issue_id": "housing_supply",
+  "researched_on": "2026-05-12",
+  "researcher_notes": "Stance scale 1=most aggressive state preemption, 5=focus on subsidies/tenant protections over supply. The CalMatters 'Governor YIMBY' piece (2026-05-12) and the California YIMBY scorecard (2026-05-12) were used as the primary Tier-2 triangulation sources because they were published the same week as this research and explicitly compared candidates on the supply-vs-local-control axis. Distinguishing factor between most Democrats is *when* they backed SB 79 (during the fight vs. after signing) and how explicitly they endorse preempting local zoning, not whether to build more.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "housing_supply",
+      "stance": 4,
+      "summary": "Hilton wants more homes but emphatically opposes state preemption of local zoning, framing SB 79 and Sacramento densification mandates as a threat to single-family neighborhoods. His supply strategy is deregulatory (cap impact fees, gut CEQA, defang the Coastal Commission and CARB) rather than upzoning.",
+      "source_quote": "Republican Steve Hilton warned that SB 79 will 'destroy' California's 'single-family suburban neighborhoods' by allowing the construction of mid-rise apartment buildings. The former Fox News host objects to state-led planning mandates and to the prevailing orthodoxy among YIMBY-aligned Democrats in Sacramento that the state should focus new construction in dense urban areas.",
+      "source_url": "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/"
+      ],
+      "notes": "Stance 4 (slow growth / protect neighborhood character) is the best fit because while Hilton talks about building more, he opposes the main tool the state has to actually preempt the local 'no' (SB 79) and frames the issue as defending suburbs. His own site uses 'war on single family homes' and 'Restore the California Dream of a single family home for every family.'"
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "housing_supply",
+      "stance": 1,
+      "summary": "Steyer pledged to build one million homes in four years and was one of two leading Democrats (with Porter) who publicly championed SB 79 during the legislative fight, not just after signing. He explicitly endorses state intervention when localities block housing.",
+      "source_quote": "The state has passed critical laws to streamline permitting, increase density, and prioritize housing near transit, which I championed (SB 79) and helped lobby to pass... if local governments refuse to follow the law and seek to block housing, the state will step in.",
+      "source_url": "https://www.tomsteyer.com/issues/housing",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/",
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/"
+      ],
+      "notes": "California YIMBY characterizes Steyer as 'a vocal, public supporter of SB 79 throughout the legislative fight,' showing up when it was politically costly. The 'one million homes over four years' number comes directly from his housing plan page."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "housing_supply",
+      "stance": 3,
+      "summary": "Bianco's housing platform is pure deregulation: eliminate CEQA, expedite permits, incentivize builders, and defend Prop 13. He has not endorsed state preemption of local zoning, and California YIMBY says he has 'said little on housing other than blaming his political opponents.'",
+      "source_quote": "Expedite approval for housing projects... Eliminate CEQA and the litigation that only passes costs onto the homebuyer... End the over regulation of our building industry... Incentivize developers to build across California.",
+      "source_url": "https://biancoforgovernor.com/housing",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/"
+      ],
+      "notes": "Stance 3 ('build with balance, local control preserved') is the best available fit: he wants more supply via deregulation but is silent on state zoning preemption and defends Prop 13/local primacy. His housing page is thin and CalMatters did not document a position from him on SB 79."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "housing_supply",
+      "stance": 1,
+      "summary": "Becerra would treat housing as essential infrastructure, declare a housing state of emergency on day one, and expand SB 79 and SB 684 to end exclusionary zoning beyond transit areas. He explicitly says communities should have a voice but 'not a veto.'",
+      "source_quote": "Last year's SB 79 created the zoning for more housing, especially affordable housing, near rail transit... Communities should have a voice in this process but they should not have a veto over the obligation.",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/housing/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/",
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/"
+      ],
+      "notes": "Becerra's platform language is explicitly preemption-friendly ('not a veto'), pushing stance toward 1. California YIMBY notes he came to housing late as a campaign priority and only endorsed SB 79 after Newsom signed it, so he's slightly less proven on the fight than Steyer/Porter, but his published platform is firmly in the aggressive-preemption camp."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "housing_supply",
+      "stance": 1,
+      "summary": "Porter publicly backed SB 79 during the legislative fight (including breaking with skilled-labor language) and centers her housing plan on shaving two years off construction timelines and bringing apartment costs down 20%, including by stopping local delays after entitlement.",
+      "source_quote": "I disagree on SB79. I support it and was glad to see @CA_Dem endorse it this weekend. Workers, students, seniors and other Californians will all benefit from more housing—especially near transit.",
+      "source_url": "https://x.com/katieporterca/status/1959762105080434803",
+      "source_date": "2025-08-24",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://katieporter.com/priority/lowering-housing-costs/",
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/"
+      ],
+      "notes": "Porter is grouped with Steyer as one of the two Dems who publicly supported SB 79 'when it mattered.' Her own site emphasizes supply acceleration ('speed up building by nearly two years', 'stopping local delays that too often occur even after the projects receive a building entitlement'). The tweet date is approximated to August 2025 around when CA Dems endorsed SB 79; URL is verbatim from the search result."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "housing_supply",
+      "stance": 2,
+      "summary": "Mahan has the strongest production track record of any candidate — his San Jose fee reform turned zero market-rate starts into ~2,000 ground-breakings — and supports deregulation, capped local fees, and code reform. But he conspicuously did not endorse SB 79 and previously opposed SB 9, making him noticeably more cautious on outright state zoning preemption than Steyer/Porter/Becerra.",
+      "source_quote": "As Mayor, Matt Mahan cut excessive regulation and red tape – as a result, San Jose has built new homes for the first time in years and lowered housing costs.",
+      "source_url": "https://www.mahanforcalifornia.com/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/",
+        "https://yimbyaction.org/blog/grading-the-candidates-a-yimby-action-scorecard-on-the-california-yimby-gubernatorial-forum/"
+      ],
+      "notes": "Despite the YIMBY-friendly press, California YIMBY explicitly observes: 'Mayor Mahan didn't endorse SB 79, and stopped shy of calling out zoning as the problem almost every time.' He opposed SB 9. That puts him at 2 (strong state targets and supply push, but modest rather than aggressive preemption of local zoning), not 1."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "housing_supply",
+      "stance": 2,
+      "summary": "Villaraigosa pairs CEQA modernization, streamlined permits, and a Housing Production Accountability Board to enforce RHNA targets with a $25B revenue-bond Middle-Class Homeownership Act aimed at financing 100,000–150,000 new middle-income homes. Heavy on supply and accountability, but with less explicit endorsement of zoning preemption than Becerra/Steyer/Porter.",
+      "source_quote": "Reforming CEQA, streamlining permits, and enforcing production accountability can close the gap between planning and building... As a temporary situation, I'm for [rent control]... if you want to bring down rents over the long term, you need supply.",
+      "source_url": "https://www.antonio2026.com/plan",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/"
+      ],
+      "notes": "Stance 2 (strong state targets, modest preemption) fits: his plan emphasizes RHNA enforcement and supply, but the policy levers are CEQA/permit reform and homebuyer financing rather than an explicit SB 79-style upzoning posture. The second clause of the quote is from his CalMatters interview confirming a supply-first long-run framing."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "housing_supply",
+      "stance": 5,
+      "summary": "Thurmond's housing pitch is built around a $10B affordable-housing bond, building up to 2 million subsidized units on surplus school-district land, down-payment assistance, and taxing corporate housing speculators. He has not articulated a position on SB 79 or local-zoning preemption.",
+      "source_quote": "California has 2.3 million housing units hiding in plain sight on surplus school district land sitting vacant across the state. I'm working with our top housing leaders to give school districts the startup funding they need to develop that land building homes for teachers...",
+      "source_url": "https://www.tonythurmond.com/priorities",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://precinctreporter.com/2026/05/07/gubernatorial-race-tony-thurmond-stakes-out-progressive-flank/",
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/"
+      ],
+      "notes": "Stance 5 (focus on subsidies and tenant-side policy rather than market supply) is the closest fit: every concrete plank is a subsidy, public-land, bond, or anti-speculator measure rather than a deregulatory or preemption lever. He hasn't taken a public SB 79 position. Stance could arguably be 3 because the school-land plan is supply-additive, but the bias is clearly subsidy-led, not preemption-led."
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "researched_on": "2026-05-12",
+  "researcher_notes": "Biographical research for the 8 leading 2026 California gubernatorial primary candidates. Tier 1 sources (campaign sites, Ballotpedia, Wikipedia, FEC/state filings) used preferentially; Tier 2 sources (CalMatters, CNN, NBC, KQED, SF Chronicle/Examiner) used for triangulation and recent campaign-cycle facts (fundraising, endorsements, polling). Date-of-birth, education, and elected-office history are confirmed across at least two sources for every candidate. Net worth was harder to nail down for non-billionaires: where official tax-return disclosures (CalMatters, March 2026) exist, we use 2024-2025 income as a proxy and explain in notes that a true net-worth figure is not publicly disclosed. Race/ethnicity, religion, and sexuality recorded only where the candidate has self-identified publicly or is consistently described by mainstream secondary sources; otherwise set to 'not publicly stated'. The 'personal_attributes' scores are research-informed best-fit categorizations grounded in the cited sources and the project's scoring rubric (e.g. electability anchored to SurveyUSA May 1, 2026 numbers).",
+  "candidates": [
+    {
+      "id": "hilton",
+      "bio": {
+        "dob": "1969-08-25",
+        "birthplace": "London, England",
+        "race_ethnicity": "White; British-American of Hungarian descent (parents emigrated from Hungary during the 1956 revolution); self-identifies as immigrant son. Naturalized U.S. citizen May 11, 2021.",
+        "gender": "man",
+        "religion": "not publicly stated",
+        "prior_careers": ["political_strategist", "fox_news_host", "tech_founder", "author", "academic"],
+        "years_in_elected_office": 0,
+        "net_worth_usd_est": null,
+        "net_worth_note": "No public net-worth estimate; CalMatters (March 2026) reports $7.5M joint 2024 income with wife Rachel Whetstone (Netflix CCO) — $250K from Fox News, $6.7M from wife's Netflix role, $360K from global investments, $25K from three London rental properties. Independent estimates range $3-10M (uncited tabloids).",
+        "self_funded_pct": null,
+        "self_funded_note": "Not a major self-funder; raised >$6.6M from donors as of April 2026 per Wikipedia/Ballotpedia. Wealthy by income but not self-funding at Steyer scale.",
+        "education": "BA Philosophy, Politics and Economics — New College, Oxford (1991)"
+      },
+      "personal_attributes": {
+        "wealth_self_funding": 3,
+        "conflict_orientation": 4,
+        "federal_vs_state_focus": 3,
+        "position_consistency": 3,
+        "integrity_record": 4,
+        "electability": 5,
+        "years_in_office_band": 1,
+        "career_path_tags": ["media", "business", "academia"],
+        "demographic_tags": ["white", "man", "immigrant"],
+        "geographic_region": "bay_area",
+        "age_band": "gen_x",
+        "endorsement_coalition_tags": ["trump", "rep_party"]
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Steve_Hilton — DOB, birthplace, education, career history, naturalization date, marriage",
+        "https://ballotpedia.org/Steve_Hilton — campaign launch April 21, 2025; fundraising",
+        "https://calmatters.org/politics/2026/03/tax-returns-governor-candidates/ — 2024 income breakdown",
+        "https://www.cnn.com/2026/04/06/politics/steve-hilton-trump-endorsement-california-hnk — Trump endorsement April 6, 2026",
+        "https://stevehiltonforgovernor.com/meet-steve-hilton/ — official campaign bio",
+        "https://www.cbsnews.com/sacramento/news/steve-hilton-fox-news-california-governor-2026/ — campaign launch coverage"
+      ],
+      "notes": "Hilton resides in Atherton/Silicon Valley; classified as bay_area for residence. No public net worth estimate from a credible source — left null. Religion not publicly discussed; left 'not publicly stated'. Electability score of 5 reflects SurveyUSA May 1, 2026 lead at 20%."
+    },
+    {
+      "id": "steyer",
+      "bio": {
+        "dob": "1957-06-27",
+        "birthplace": "Manhattan, New York City, New York",
+        "race_ethnicity": "White; Jewish father (Roy Henry Steyer, Nuremberg prosecutor) and Episcopalian mother. Steyer identifies as Episcopalian Christian (converted/embraced in his late 30s).",
+        "gender": "man",
+        "religion": "Episcopalian",
+        "prior_careers": ["hedge_fund_founder", "investment_banker", "climate_activist", "philanthropist", "presidential_candidate_2020"],
+        "years_in_elected_office": 0,
+        "net_worth_usd_est": 2400000000,
+        "net_worth_note": "Forbes April 2026 estimate: $2.4 billion. Founded Farallon Capital (1986), left 2012. Signed The Giving Pledge.",
+        "self_funded_pct": 0.99,
+        "self_funded_note": "As of late April 2026, ~$122.5M of $122.7M raised was self-funded (~99.9%). Total campaign spend on track to exceed $147M, approaching Meg Whitman's 2010 state record (~$144M self-funded of $176M).",
+        "education": "MBA — Stanford Graduate School of Business (1983). BA in economics and political science (summa cum laude) — Yale University (1979)."
+      },
+      "personal_attributes": {
+        "wealth_self_funding": 5,
+        "conflict_orientation": 4,
+        "federal_vs_state_focus": 3,
+        "position_consistency": 3,
+        "integrity_record": 4,
+        "electability": 5,
+        "years_in_office_band": 1,
+        "career_path_tags": ["business", "activism"],
+        "demographic_tags": ["white", "man", "jewish", "protestant"],
+        "geographic_region": "bay_area",
+        "age_band": "boomer",
+        "endorsement_coalition_tags": ["environmental", "labor", "dem_party"]
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tom_Steyer — DOB, education, career, family, net worth",
+        "https://calmatters.org/politics/2025/11/california-governors-race-tom-steyer/ — campaign launch coverage",
+        "https://calmatters.org/politics/2026/04/california-governor-race-financials/ — $132M+ self-funded, fundraising breakdown",
+        "https://calmatters.org/politics/2026/03/tax-returns-governor-candidates/ — $39M 2024 income, $18M donated",
+        "https://episcopalnewsservice.org/2020/02/03/tom-steyer-and-preaching-the-environmental-gospel-on-the-campaign-trail/ — religion (Episcopalian, self-identified)",
+        "https://envirovoters.org/california-governor-2026/ — EnviroVoters endorsement",
+        "https://calaborfed.org/press-releases/california-federation-of-labor-unions-endorse-for-governor-and-other-statewide-races-for-2026-primary-election/ — CA Labor Fed multi-endorsement"
+      ],
+      "notes": "Self-identifies as Episcopalian Christian; some sources note Jewish paternal heritage. Both demographic tags applied. Resides in San Francisco. Electability 5 anchored on 18% SurveyUSA (May 1), strong fundraising, and labor/environmental endorsements."
+    },
+    {
+      "id": "bianco",
+      "bio": {
+        "dob": "1967-10-09",
+        "birthplace": "Hill Air Force Base, Utah",
+        "race_ethnicity": "White; American of Italian descent (per Wikipedia)",
+        "gender": "man",
+        "religion": "Christian (attends Sandals Church, Riverside)",
+        "prior_careers": ["law_enforcement"],
+        "years_in_elected_office": 7,
+        "net_worth_usd_est": null,
+        "net_worth_note": "No public net-worth estimate. CalMatters (March 2026): $590K joint 2025 income with spouse; $348K sheriff base salary (after 27% raise in 2024).",
+        "self_funded_pct": null,
+        "self_funded_note": "Not a self-funder; relies on Republican donor base and grassroots. CalMatters reports campaign cash on hand far below Hilton.",
+        "education": "BS — Columbia Southern University. Attended College of Eastern Utah and University of Utah."
+      },
+      "personal_attributes": {
+        "wealth_self_funding": 2,
+        "conflict_orientation": 5,
+        "federal_vs_state_focus": 3,
+        "position_consistency": 4,
+        "integrity_record": 2,
+        "electability": 3,
+        "years_in_office_band": 2,
+        "career_path_tags": ["law_enforcement"],
+        "demographic_tags": ["white", "man", "protestant"],
+        "geographic_region": "oc_ie",
+        "age_band": "gen_x",
+        "endorsement_coalition_tags": ["law_enforcement", "rep_party"]
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Chad_Bianco — DOB, birthplace, education, career, family, religion (Sandals Church), Oath Keepers 2014 membership",
+        "https://ballotpedia.org/Chad_Bianco — sheriff term dates, candidacy",
+        "https://calmatters.org/politics/2026/03/tax-returns-governor-candidates/ — 2025 income",
+        "https://www.cjcj.org/reports-publications/fact-sheet/the-sheriff-with-californias-worst-crime-solving-record-is-running-for-governor — controversies; crime stats",
+        "https://cragop.org/2026-primary-election-endorsements/ — California Republican Assembly endorsement",
+        "https://calmatters.org/politics/2026/04/california-gop-convention-governor/ — CRP convention results (Bianco 49%, Hilton 44%, neither hit 60% endorsement threshold)"
+      ],
+      "notes": "Years in elected office = 7 (sworn in Jan 7, 2019). Integrity score 2 reflects $100M federal lawsuit (later dismissed) over Vem Miller arrest, ballot-seizure controversy, and 2014 one-year Oath Keepers membership — these are major controversies though no convictions. Riverside County classified as Inland Empire (oc_ie). Trump endorsed Hilton instead, but California Republican Assembly endorsed Bianco."
+    },
+    {
+      "id": "becerra",
+      "bio": {
+        "dob": "1958-01-26",
+        "birthplace": "Sacramento, California",
+        "race_ethnicity": "Latino / Mexican-American (son of Mexican immigrant parents)",
+        "gender": "man",
+        "religion": "Roman Catholic",
+        "prior_careers": ["law", "federal_pol", "state_pol", "cabinet_secretary"],
+        "years_in_elected_office": 30,
+        "net_worth_usd_est": null,
+        "net_worth_note": "No public net-worth estimate. CalMatters (March 2026): $490K joint 2024 income (~$250K HHS Secretary salary + $110K net from four rental properties).",
+        "self_funded_pct": null,
+        "self_funded_note": "Not a self-funder; raised ~$2.9M through state filings as of mid-cycle. Relies primarily on individual donors.",
+        "education": "JD — Stanford Law School (1984). BA Economics — Stanford University (1980)."
+      },
+      "personal_attributes": {
+        "wealth_self_funding": 2,
+        "conflict_orientation": 4,
+        "federal_vs_state_focus": 4,
+        "position_consistency": 4,
+        "integrity_record": 4,
+        "electability": 3,
+        "years_in_office_band": 5,
+        "career_path_tags": ["federal_pol", "state_pol", "law"],
+        "demographic_tags": ["latino", "man", "catholic"],
+        "geographic_region": "la_county",
+        "age_band": "boomer",
+        "endorsement_coalition_tags": ["latino_caucus", "lgbtq_orgs", "civil_rights", "dem_party"]
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Xavier_Becerra — DOB, education, career history, religion (Catholic), family",
+        "https://ballotpedia.org/Xavier_Becerra — office dates",
+        "https://www.xavierbecerra2026.com/bio/ — official campaign bio",
+        "https://www.cnn.com/2026/04/28/politics/xavier-becerra-california-governor — late-cycle surge analysis",
+        "https://www.eqca.org/becerra-gov/ — Equality California endorsement",
+        "https://www.calonews.com/communities/los-angeles/chirla-action-fund-endorses-xavier-becerra-for-california-governor/article_095a8745-bcc9-43ef-833a-9e736ace7ae0.html — CHIRLA Action Fund endorsement",
+        "https://calmatters.org/politics/2026/03/tax-returns-governor-candidates/ — 2024 income"
+      ],
+      "notes": "Elected office tally: CA Assembly (1990-1992, 2 yrs) + U.S. House (1993-2017, 24 yrs) + CA AG (2017-2021, 4 yrs initially appointed then elected) = 30 years of elective service. HHS Secretary (2021-2025) was appointed, not elected — excluded from elected total per schema. Born and raised in Sacramento Valley but represented LA in Congress 24 years; classified as la_county for political/geographic identity. Federal focus high (HHS Secretary + 24 years in Congress)."
+    },
+    {
+      "id": "porter",
+      "bio": {
+        "dob": "1974-01-03",
+        "birthplace": "Fort Dodge, Iowa",
+        "race_ethnicity": "White (commonly identified; no notable self-identification on file)",
+        "gender": "woman",
+        "religion": "Episcopalian (per Pew Research religious-affiliation data)",
+        "prior_careers": ["law", "academia", "federal_pol"],
+        "years_in_elected_office": 6,
+        "net_worth_usd_est": null,
+        "net_worth_note": "No public net-worth estimate. CalMatters (March 2026): $300K 2025 income (UC Irvine law professor salary + ~$7K/yr book royalties).",
+        "self_funded_pct": null,
+        "self_funded_note": "Not a self-funder. Built national small-donor base from viral congressional questioning; backed by EMILYs List.",
+        "education": "JD magna cum laude — Harvard Law School (2001). BA American Studies — Yale University (1996)."
+      },
+      "personal_attributes": {
+        "wealth_self_funding": 2,
+        "conflict_orientation": 5,
+        "federal_vs_state_focus": 4,
+        "position_consistency": 3,
+        "integrity_record": 4,
+        "electability": 2,
+        "years_in_office_band": 2,
+        "career_path_tags": ["federal_pol", "academia", "law"],
+        "demographic_tags": ["white", "woman", "protestant"],
+        "geographic_region": "oc_ie",
+        "age_band": "gen_x",
+        "endorsement_coalition_tags": ["womens_orgs", "environmental", "labor", "dem_party"]
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Katie_Porter — DOB, education, career, congressional service, religion (Episcopalian per Pew)",
+        "https://ballotpedia.org/Katie_Porter — office dates",
+        "https://katieporter.com/about/ — official campaign bio",
+        "https://emilyslist.org/news/memo-katie-porter-offers-the-strongest-path-to-victory-in-california/ — EMILYs List endorsement",
+        "https://envirovoters.org/california-governor-2026/ — California Environmental Voters endorsement",
+        "https://calmatters.org/politics/2026/05/california-governor-race-katie-porter/ — late-cycle struggles, agricultural-overtime controversy",
+        "https://calmatters.org/politics/2026/03/tax-returns-governor-candidates/ — 2025 income"
+      ],
+      "notes": "Years in elected office = 6 (U.S. House 2019-2025; lost 2024 Senate primary). Represented OC; classified as oc_ie. Electability 2 reflects ~8% in SurveyUSA (May 1) and CalMatters' May 2026 'struggling' framing. Position-consistency score 3 reflects shift on agricultural-overtime law and other recent recalibrations on her gubernatorial campaign."
+    },
+    {
+      "id": "mahan",
+      "bio": {
+        "dob": "1982-11-18",
+        "birthplace": "San Francisco, California (raised in Watsonville)",
+        "race_ethnicity": "White; Irish-American (per secondary sourcing; no detailed candidate self-identification on race located)",
+        "gender": "man",
+        "religion": "Catholic (per Wikipedia)",
+        "prior_careers": ["tech_founder", "tech_ceo", "teacher", "local_pol"],
+        "years_in_elected_office": 5,
+        "net_worth_usd_est": null,
+        "net_worth_note": "No public net-worth estimate. CalMatters (March 2026): $507K 2025 joint income ($226K mayoral salary + $267K spouse income from high-school leadership role). Brigade was acquired by Pinterest in 2019; specific founder payout undisclosed.",
+        "self_funded_pct": null,
+        "self_funded_note": "Not a self-funder; >$25M raised by independent expenditure committees backed by Silicon Valley billionaires (Sergey Brin, Joe Lonsdale, Michael Moritz, Steve Huffman). Some donors also gave to Hilton.",
+        "education": "BA Social Studies, magna cum laude — Harvard University (2005)."
+      },
+      "personal_attributes": {
+        "wealth_self_funding": 2,
+        "conflict_orientation": 3,
+        "federal_vs_state_focus": 2,
+        "position_consistency": 4,
+        "integrity_record": 5,
+        "electability": 2,
+        "years_in_office_band": 1,
+        "career_path_tags": ["local_pol", "business", "nonprofit"],
+        "demographic_tags": ["white", "man", "catholic"],
+        "geographic_region": "bay_area",
+        "age_band": "millennial",
+        "endorsement_coalition_tags": ["business", "dem_party"]
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Matt_Mahan — DOB, education, career, religion (Catholic), San Jose Council/Mayor term dates",
+        "https://ballotpedia.org/Matt_Mahan — office dates, gubernatorial candidacy",
+        "https://www.mahanforcalifornia.com/about — campaign bio",
+        "https://fortune.com/2026/05/07/who-is-matt-mahan-silicon-valley-california-governor-san-jose-mayor/ — Silicon Valley backing, age framing",
+        "https://www.cnn.com/2026/05/03/politics/matt-mahan-california-governor-democrats-gavin-newsom — tech-money fundraising",
+        "https://calmatters.org/politics/2026/03/tax-returns-governor-candidates/ — 2025 income",
+        "https://calmatters.org/politics/2026/01/governors-race-matt-mahan/ — campaign launch as Newsom critic"
+      ],
+      "notes": "Years in elected office = 5 (San Jose Council Jan 2021 through end of 2022, ~2 years; San Jose Mayor since Jan 2023, ~3 years). Religion = Catholic per Wikipedia infobox. Race/ethnicity left as 'White / Irish-American' from secondary sources — could not find first-person candidate self-identification."
+    },
+    {
+      "id": "villaraigosa",
+      "bio": {
+        "dob": "1953-01-23",
+        "birthplace": "East Los Angeles, California",
+        "race_ethnicity": "Latino / Mexican-American (Mexican-immigrant father, California-born mother of Mexican descent)",
+        "gender": "man",
+        "religion": "Catholic (raised Catholic; faith referenced in multiple biographical sources)",
+        "prior_careers": ["state_pol", "local_pol", "labor_organizer", "activism"],
+        "years_in_elected_office": 19,
+        "net_worth_usd_est": null,
+        "net_worth_note": "No public net-worth estimate. CalMatters (March 2026): $1.4M 2024 income (consulting at Actum, personal consulting, $125K LA mayoral pension).",
+        "self_funded_pct": null,
+        "self_funded_note": "Not a major self-funder; relies on labor coalition and traditional donor base. Endorsed by California Federation of Labor Unions (in a 4-way Dem endorsement)."
+      ,
+        "education": "JD — People's College of Law (unaccredited; failed CA bar four times). BA History — UCLA (1977)."
+      },
+      "personal_attributes": {
+        "wealth_self_funding": 3,
+        "conflict_orientation": 3,
+        "federal_vs_state_focus": 1,
+        "position_consistency": 3,
+        "integrity_record": 3,
+        "electability": 2,
+        "years_in_office_band": 5,
+        "career_path_tags": ["state_pol", "local_pol", "activism"],
+        "demographic_tags": ["latino", "man", "catholic"],
+        "geographic_region": "la_county",
+        "age_band": "boomer",
+        "endorsement_coalition_tags": ["labor", "law_enforcement", "latino_caucus", "dem_party"]
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Antonio_Villaraigosa — DOB, birthplace, education, career history, four bar exam failures",
+        "https://ballotpedia.org/Antonio_Villaraigosa — office dates",
+        "https://www.britannica.com/biography/Antonio-Villaraigosa — UCLA history degree, mayoral tenure",
+        "https://newsroom.ucla.edu/magazine/antonio-villaraigosa-los-angeles-mayor — Catholic upbringing",
+        "https://www.antonio2026.com/endorsements — labor / law-enforcement endorsements",
+        "https://calaborfed.org/press-releases/california-federation-of-labor-unions-endorse-for-governor-and-other-statewide-races-for-2026-primary-election/ — CA Labor Fed endorsement",
+        "https://calmatters.org/politics/2026/03/tax-returns-governor-candidates/ — 2024 income"
+      ],
+      "notes": "Elected office: CA Assembly 1994-2000 (6 yrs, including Speaker 1998-2000), LA City Council 2003-2005 (2 yrs), LA Mayor 2005-2013 (8 yrs), plus partial overlap — Wikipedia summary gives ~19 years. Integrity score 3 reflects publicly reported extramarital affair while LA Mayor (acknowledged by candidate) plus failed 2018 gubernatorial bid; otherwise no major scandals. Electability 2 anchored on ~5% SurveyUSA. Federal vs. state focus = 1 (entire elected career at state and local levels)."
+    },
+    {
+      "id": "thurmond",
+      "bio": {
+        "dob": "1968-08-21",
+        "birthplace": "Monterey, California",
+        "race_ethnicity": "Black/African-American and Panamanian (Black father; immigrant Panamanian mother). Would be CA's first Black governor if elected.",
+        "gender": "man",
+        "religion": "Jewish (self-described convert, has said he has 'never been through a formal conversion')",
+        "prior_careers": ["social_work", "nonprofit", "local_pol", "state_pol"],
+        "years_in_elected_office": 20,
+        "net_worth_usd_est": null,
+        "net_worth_note": "No public net-worth estimate. CalMatters (March 2026): $309K 2025 joint income ($203K Superintendent salary + $18K disability services + $87K spouse income).",
+        "self_funded_pct": null,
+        "self_funded_note": "Not a self-funder; campaign relies on union/education-org support and individual donors. Has lagged top-tier candidates in fundraising."
+      ,
+        "education": "MA and MSW (dual master's in law/social policy and social work) — Bryn Mawr College. BA — Temple University."
+      },
+      "personal_attributes": {
+        "wealth_self_funding": 2,
+        "conflict_orientation": 3,
+        "federal_vs_state_focus": 1,
+        "position_consistency": 5,
+        "integrity_record": 4,
+        "electability": 1,
+        "years_in_office_band": 5,
+        "career_path_tags": ["state_pol", "local_pol", "social_work", "nonprofit"],
+        "demographic_tags": ["black", "latino", "man", "jewish", "immigrant"],
+        "geographic_region": "bay_area",
+        "age_band": "gen_x",
+        "endorsement_coalition_tags": ["labor", "civil_rights", "dem_party"]
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tony_Thurmond — DOB, birthplace, education, family background, religion (Jewish convert), career",
+        "https://ballotpedia.org/Tony_Thurmond — office dates, gubernatorial candidacy",
+        "https://www.tonythurmond.com/meet-tony — campaign biography, Panamanian heritage",
+        "https://news.temple.edu/2024-10-21/temple-owl-tony-thurmond-could-be-first-black-governor-california — Temple bio, first-Black-governor framing",
+        "https://www.tonythurmond.com/endorsements — labor/education endorsements",
+        "https://calmatters.org/politics/2026/03/tax-returns-governor-candidates/ — 2025 income"
+      ],
+      "notes": "Years in elected office = ~20 (Richmond City Council 2006-2014, ~8 yrs; CA State Assembly 2014-2018, ~4 yrs; Superintendent of Public Instruction 2019-present, ~7 yrs). Latino tag included because mother was Panamanian immigrant (Afro-Latino heritage Thurmond has publicly discussed). Bay Area residence (Richmond/Alameda County base). Electability 1 anchored on 2% SurveyUSA (May 1, 2026) — lowest of the eight."
+    }
+  ]
+}
