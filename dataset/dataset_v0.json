@@ -1,0 +1,591 @@
+{
+  "$schema_note": "v0 scaffold. Roster, polling, fundraising are research-backed. Issue stance scales and personal-fit dimensions are agreed schema. Candidate bios and per-(candidate, issue) positions are TODO and will be filled in via Phase 0 research.",
+  "version": "v0",
+  "snapshot_date": "2026-05-12",
+  "race": {
+    "name": "California 2026 Gubernatorial Primary",
+    "primary_date": "2026-06-02",
+    "type": "top-two open primary",
+    "incumbent": "Gavin Newsom (D, term-limited)"
+  },
+  "citation_sources": {
+    "polling_latest": {
+      "name": "SurveyUSA / KGTV-TV",
+      "field_dates": "2026-04-28 to 2026-05-01",
+      "n": 991,
+      "moe_pp": 4.2,
+      "population": "likely primary voters",
+      "aggregator_url": "https://theballotbook.com/polling",
+      "secondary_url": "https://x.com/PollTracker2024/status/2051387797286826085"
+    },
+    "polling_corroborating": [
+      { "name": "CBS News / YouGov", "field_dates": "2026-04-23 to 2026-04-27", "n": 1479, "moe_pp": 4.1, "population": "registered CA voters", "url": "https://www.cbsnews.com/news/california-governors-race-primary-voters-opinion-poll-2026-04-27/" },
+      { "name": "UC Berkeley IGS Poll", "field_dates": "2026-03", "url": "https://igs.berkeley.edu/research/berkeley-igs-poll" }
+    ],
+    "fundraising": {
+      "primary_url": "https://calmatters.org/politics/2026/04/california-governor-race-financials/",
+      "secondary_url": "https://www.capradio.org/articles/2026/04/27/billionaire-blitz-steyers-132-million-campaign-dwarfs-rivals-in-california-governor-race/",
+      "as_of": "through 2026-04"
+    }
+  },
+  "selection_criteria": {
+    "rule": "Include if any one is met: (a) ≥2% in a credible recent poll, (b) ≥$1M cumulative fundraising, (c) holds or has held statewide / major office.",
+    "applied_on": "2026-05-12"
+  },
+  "withdrawn": [
+    { "id": "swalwell", "name": "Eric Swalwell", "party": "Democratic", "former_role": "U.S. Representative (East Bay)", "suspended_date": "2026-04-12", "note": "Suspended following sexual assault and misconduct allegations." },
+    { "id": "yee", "name": "Betty Yee", "party": "Democratic", "former_role": "Former California State Controller", "suspended_date": "2026-04-20" }
+  ],
+  "candidates": [
+    {
+      "id": "hilton", "name": "Steve Hilton", "party": "Republican", "slug": "steve-hilton",
+      "bio_short": "Fox News contributor; former host of The Next Revolution (2017–2023); former senior adviser to UK PM David Cameron. Endorsed by Donald Trump (2026-04-06).",
+      "campaign_url": "https://stevehiltonforgovernor.com/", "declared_date": "2025-04-21",
+      "polling_latest_pct": 20, "money_raised_usd": 6600000,
+      "money_raised_note": "$6.6M cumulative per April 2026 reporting; CalMatters H2-2025 filing showed $4.1M.",
+      "endorsements": [{ "endorser": "Donald Trump", "date": "2026-04-06" }],
+      "selection_trigger": ["polling", "fundraising"], "snapshot_date": "2026-05-12",
+      "bio": { "dob": "TODO", "birthplace": "TODO", "race_ethnicity": "TODO", "gender": "TODO", "religion": "TODO", "prior_careers": ["TODO"], "years_in_elected_office": null, "net_worth_usd_est": null, "self_funded_pct": null, "education": "TODO" },
+      "personal_attributes": { "wealth_self_funding": null, "conflict_orientation": null, "federal_vs_state_focus": null, "position_consistency": null, "integrity_record": null, "electability": null, "years_in_office_band": null, "career_path_tags": [], "demographic_tags": [], "geographic_region": null, "age_band": null, "endorsement_coalition_tags": [] }
+    },
+    {
+      "id": "steyer", "name": "Tom Steyer", "party": "Democratic", "slug": "tom-steyer",
+      "bio_short": "Billionaire investor, environmental activist, and 2020 presidential candidate; founder of Farallon Capital and NextGen America. Campaign is largely self-funded.",
+      "campaign_url": "https://www.tomsteyer.com/", "declared_date": "2025-11",
+      "polling_latest_pct": 18, "money_raised_usd": 132000000,
+      "money_raised_note": "Largely self-funded through April 2026 per CapRadio. On track for most expensive gubernatorial campaign in CA history.",
+      "endorsements": [],
+      "selection_trigger": ["polling", "fundraising"], "snapshot_date": "2026-05-12",
+      "bio": { "dob": "TODO", "birthplace": "TODO", "race_ethnicity": "TODO", "gender": "TODO", "religion": "TODO", "prior_careers": ["TODO"], "years_in_elected_office": null, "net_worth_usd_est": null, "self_funded_pct": null, "education": "TODO" },
+      "personal_attributes": { "wealth_self_funding": null, "conflict_orientation": null, "federal_vs_state_focus": null, "position_consistency": null, "integrity_record": null, "electability": null, "years_in_office_band": null, "career_path_tags": [], "demographic_tags": [], "geographic_region": null, "age_band": null, "endorsement_coalition_tags": [] }
+    },
+    {
+      "id": "bianco", "name": "Chad Bianco", "party": "Republican", "slug": "chad-bianco",
+      "bio_short": "Sheriff of Riverside County since 2018; 26-year veteran of the Riverside County Sheriff's Department.",
+      "campaign_url": "https://biancoforgovernor.com/", "declared_date": "TODO",
+      "polling_latest_pct": 12, "money_raised_usd": 4369122,
+      "money_raised_note": "Over 10,000 individual donors per CalMatters / theballotbook.com.",
+      "endorsements": [],
+      "selection_trigger": ["polling", "fundraising", "office"], "snapshot_date": "2026-05-12",
+      "bio": { "dob": "TODO", "birthplace": "TODO", "race_ethnicity": "TODO", "gender": "TODO", "religion": "TODO", "prior_careers": ["TODO"], "years_in_elected_office": null, "net_worth_usd_est": null, "self_funded_pct": null, "education": "TODO" },
+      "personal_attributes": { "wealth_self_funding": null, "conflict_orientation": null, "federal_vs_state_focus": null, "position_consistency": null, "integrity_record": null, "electability": null, "years_in_office_band": null, "career_path_tags": [], "demographic_tags": [], "geographic_region": null, "age_band": null, "endorsement_coalition_tags": [] }
+    },
+    {
+      "id": "becerra", "name": "Xavier Becerra", "party": "Democratic", "slug": "xavier-becerra",
+      "bio_short": "Former U.S. Secretary of Health and Human Services (2021–2025); former Attorney General of California (2017–2021); former U.S. Representative (1993–2017).",
+      "campaign_url": "https://www.xavierbecerra2026.com/", "declared_date": "TODO",
+      "polling_latest_pct": 10, "money_raised_usd": 1000000,
+      "money_raised_note": "H2 2025 figure per CalMatters; cumulative through April 2026 likely higher.",
+      "endorsements": [],
+      "selection_trigger": ["polling", "fundraising", "office"], "snapshot_date": "2026-05-12",
+      "bio": { "dob": "TODO", "birthplace": "TODO", "race_ethnicity": "TODO", "gender": "TODO", "religion": "TODO", "prior_careers": ["TODO"], "years_in_elected_office": null, "net_worth_usd_est": null, "self_funded_pct": null, "education": "TODO" },
+      "personal_attributes": { "wealth_self_funding": null, "conflict_orientation": null, "federal_vs_state_focus": null, "position_consistency": null, "integrity_record": null, "electability": null, "years_in_office_band": null, "career_path_tags": [], "demographic_tags": [], "geographic_region": null, "age_band": null, "endorsement_coalition_tags": [] }
+    },
+    {
+      "id": "porter", "name": "Katie Porter", "party": "Democratic", "slug": "katie-porter",
+      "bio_short": "Former U.S. Representative for CA-47 (previously CA-45), 2019–2025; UC Irvine law professor; known nationally for committee-hearing whiteboard explainers.",
+      "campaign_url": "https://katieporter.com/", "declared_date": "2025-03",
+      "polling_latest_pct": 8, "money_raised_usd": 2800000,
+      "money_raised_note": "H2 2025 figure per CalMatters.",
+      "endorsements": [],
+      "selection_trigger": ["polling", "fundraising", "office"], "snapshot_date": "2026-05-12",
+      "bio": { "dob": "TODO", "birthplace": "TODO", "race_ethnicity": "TODO", "gender": "TODO", "religion": "TODO", "prior_careers": ["TODO"], "years_in_elected_office": null, "net_worth_usd_est": null, "self_funded_pct": null, "education": "TODO" },
+      "personal_attributes": { "wealth_self_funding": null, "conflict_orientation": null, "federal_vs_state_focus": null, "position_consistency": null, "integrity_record": null, "electability": null, "years_in_office_band": null, "career_path_tags": [], "demographic_tags": [], "geographic_region": null, "age_band": null, "endorsement_coalition_tags": [] }
+    },
+    {
+      "id": "mahan", "name": "Matt Mahan", "party": "Democratic", "slug": "matt-mahan",
+      "bio_short": "Mayor of San José since 2022; former San José City Council member; former tech executive; moderate Democrat focused on homelessness response and cost-of-living.",
+      "campaign_url": "https://www.mahanforcalifornia.com/", "declared_date": "TODO",
+      "polling_latest_pct": 7, "money_raised_usd": 13000000,
+      "money_raised_note": "Leading Democratic non-self-funded candidate per CapRadio April 2026.",
+      "endorsements": [],
+      "selection_trigger": ["polling", "fundraising", "office"], "snapshot_date": "2026-05-12",
+      "bio": { "dob": "TODO", "birthplace": "TODO", "race_ethnicity": "TODO", "gender": "TODO", "religion": "TODO", "prior_careers": ["TODO"], "years_in_elected_office": null, "net_worth_usd_est": null, "self_funded_pct": null, "education": "TODO" },
+      "personal_attributes": { "wealth_self_funding": null, "conflict_orientation": null, "federal_vs_state_focus": null, "position_consistency": null, "integrity_record": null, "electability": null, "years_in_office_band": null, "career_path_tags": [], "demographic_tags": [], "geographic_region": null, "age_band": null, "endorsement_coalition_tags": [] }
+    },
+    {
+      "id": "villaraigosa", "name": "Antonio Villaraigosa", "party": "Democratic", "slug": "antonio-villaraigosa",
+      "bio_short": "Former Mayor of Los Angeles (2005–2013); former Speaker of the California State Assembly (1998–2000). Previously ran for governor in 2018.",
+      "campaign_url": "https://www.antonio2026.com/", "declared_date": "TODO",
+      "polling_latest_pct": 5, "money_raised_usd": 707000,
+      "money_raised_note": "H2 2025 figure per CalMatters.",
+      "endorsements": [
+        { "endorser": "Building and Construction Trades Council of California" },
+        { "endorser": "Peace Officers Research Association of California (PORAC)" }
+      ],
+      "selection_trigger": ["polling", "office"], "snapshot_date": "2026-05-12",
+      "bio": { "dob": "TODO", "birthplace": "TODO", "race_ethnicity": "TODO", "gender": "TODO", "religion": "TODO", "prior_careers": ["TODO"], "years_in_elected_office": null, "net_worth_usd_est": null, "self_funded_pct": null, "education": "TODO" },
+      "personal_attributes": { "wealth_self_funding": null, "conflict_orientation": null, "federal_vs_state_focus": null, "position_consistency": null, "integrity_record": null, "electability": null, "years_in_office_band": null, "career_path_tags": [], "demographic_tags": [], "geographic_region": null, "age_band": null, "endorsement_coalition_tags": [] }
+    },
+    {
+      "id": "thurmond", "name": "Tony Thurmond", "party": "Democratic", "slug": "tony-thurmond",
+      "bio_short": "California Superintendent of Public Instruction since 2019; former State Assemblymember (Richmond / Contra Costa); former social worker.",
+      "campaign_url": "https://www.tonythurmond.com/", "declared_date": "TODO",
+      "polling_latest_pct": 2, "money_raised_usd": 62000,
+      "money_raised_note": "H2 2025 figure per CalMatters; the lowest reported total in the field.",
+      "endorsements": [],
+      "selection_trigger": ["polling", "office"], "snapshot_date": "2026-05-12",
+      "bio": { "dob": "TODO", "birthplace": "TODO", "race_ethnicity": "TODO", "gender": "TODO", "religion": "TODO", "prior_careers": ["TODO"], "years_in_elected_office": null, "net_worth_usd_est": null, "self_funded_pct": null, "education": "TODO" },
+      "personal_attributes": { "wealth_self_funding": null, "conflict_orientation": null, "federal_vs_state_focus": null, "position_consistency": null, "integrity_record": null, "electability": null, "years_in_office_band": null, "career_path_tags": [], "demographic_tags": [], "geographic_region": null, "age_band": null, "endorsement_coalition_tags": [] }
+    }
+  ],
+  "issues": [
+    {
+      "id": "housing_supply", "name": "Housing supply & zoning preemption", "tier": 1, "category": "housing",
+      "short_description": "How aggressively should the state push to build more housing, including over local objection?",
+      "ca_specific_context": "Local control under CEQA and city zoning has historically blocked dense infill; recent state law (SB 9, SB 10, SB 423) preempts some of that.",
+      "stance_scale": [
+        { "value": 1, "label": "Build aggressively — preempt local zoning where it blocks supply" },
+        { "value": 2, "label": "Build a lot — strong state targets, modest preemption" },
+        { "value": 3, "label": "Build with balance — state nudges, local control preserved" },
+        { "value": 4, "label": "Slow growth — protect neighborhood character and existing residents" },
+        { "value": 5, "label": "Focus on subsidies and tenant protections, not supply" }
+      ]
+    },
+    {
+      "id": "homelessness", "name": "Homelessness response", "tier": 1, "category": "housing",
+      "short_description": "Where should the state's approach to homelessness sit on the enforcement-to-services spectrum?",
+      "ca_specific_context": "Prop 1 (2024) expanded conservatorship and mental-health funding; cities differ widely on encampment sweeps; SB 43 widened the bar for conservatorship.",
+      "stance_scale": [
+        { "value": 1, "label": "Aggressive clearance — sweeps and expanded conservatorship as primary tools" },
+        { "value": 2, "label": "Enforcement-first with concurrent service offers" },
+        { "value": 3, "label": "Balanced — enforcement only when shelter/services are available" },
+        { "value": 4, "label": "Housing-first primarily, minimal enforcement" },
+        { "value": 5, "label": "Heavy investment in supportive housing and services; treat enforcement as last resort" }
+      ]
+    },
+    {
+      "id": "tax_middle", "name": "Middle-income tax rates", "tier": 1, "category": "economy",
+      "short_description": "Where should state income tax rates for middle-income earners go?",
+      "ca_specific_context": "California's progressive income tax has top marginal rate ~13.3%; middle brackets fund the bulk of state services.",
+      "stance_scale": [
+        { "value": 1, "label": "Significantly cut middle-income tax rates" },
+        { "value": 2, "label": "Modestly cut middle-income rates" },
+        { "value": 3, "label": "Hold current rates" },
+        { "value": 4, "label": "Modestly raise middle-income rates" },
+        { "value": 5, "label": "Significantly raise middle-income rates" }
+      ]
+    },
+    {
+      "id": "tax_top_wealth", "name": "Top-bracket / corporate / wealth tax", "tier": 1, "category": "economy",
+      "short_description": "Should CA raise taxes on top earners, corporations, or introduce a wealth tax?",
+      "ca_specific_context": "Multiple wealth-tax bills (e.g., AB 259) have been proposed; corporate tax is 8.84%.",
+      "stance_scale": [
+        { "value": 1, "label": "Cut top-bracket and corporate rates" },
+        { "value": 2, "label": "Hold current top rates" },
+        { "value": 3, "label": "Modestly raise top-bracket and/or corporate rates" },
+        { "value": 4, "label": "Substantially raise top-bracket and corporate rates" },
+        { "value": 5, "label": "Introduce a new state-level wealth tax on highest earners" }
+      ]
+    },
+    {
+      "id": "prop13_commercial", "name": "Commercial property tax (Prop 13 split-roll)", "tier": 1, "category": "economy",
+      "short_description": "Should commercial property be taxed at market value (split-roll), or stay under Prop 13?",
+      "ca_specific_context": "Prop 15 (2020) would have implemented a commercial split-roll; failed 52-48.",
+      "stance_scale": [
+        { "value": 1, "label": "Strengthen Prop 13 protections for commercial property" },
+        { "value": 2, "label": "Hold Prop 13 protections for commercial property" },
+        { "value": 3, "label": "Targeted reforms (e.g., apply only to very large commercial holdings)" },
+        { "value": 4, "label": "Phase in commercial split-roll" },
+        { "value": 5, "label": "Full commercial split-roll — tax commercial at market value" }
+      ]
+    },
+    {
+      "id": "prop13_residential", "name": "Residential Prop 13 protections", "tier": 1, "category": "economy",
+      "short_description": "Should residential Prop 13 protections be preserved, narrowed, or rolled back?",
+      "ca_specific_context": "Prop 13 (1978) caps property tax at 1% of assessed value with limited increases; Prop 19 (2020) restricted parent-child transfers.",
+      "stance_scale": [
+        { "value": 1, "label": "Strengthen residential Prop 13 protections" },
+        { "value": 2, "label": "Hold current residential protections" },
+        { "value": 3, "label": "Limited reforms (e.g., transfer-rule tweaks)" },
+        { "value": 4, "label": "Significant reforms while preserving primary-home protection" },
+        { "value": 5, "label": "Phase out residential Prop 13" }
+      ]
+    },
+    {
+      "id": "utility_rates", "name": "Utility rate regulation", "tier": 1, "category": "economy",
+      "short_description": "What role should the state play in setting electricity, gas, and insurance rates?",
+      "ca_specific_context": "PG&E, SCE, SDG&E rates have risen sharply; CPUC reform and proposals to replace investor-owned utilities are active debate.",
+      "stance_scale": [
+        { "value": 1, "label": "Deregulate — let market and competition set rates" },
+        { "value": 2, "label": "Modest regulation, focus on grid investment" },
+        { "value": 3, "label": "Rate freeze and significant CPUC reform" },
+        { "value": 4, "label": "Public option / break up monopolies" },
+        { "value": 5, "label": "Full state takeover of investor-owned utilities" }
+      ]
+    },
+    {
+      "id": "gas_tax", "name": "California gas excise tax", "tier": 1, "category": "economy",
+      "short_description": "Should CA's gas excise tax be suspended, held, or expanded?",
+      "ca_specific_context": "SB 1 (2017) raised the tax and earmarked revenue for transportation; current rate among highest in US.",
+      "stance_scale": [
+        { "value": 1, "label": "Suspend the gas excise tax" },
+        { "value": 2, "label": "Pause scheduled increases" },
+        { "value": 3, "label": "Hold the current rate" },
+        { "value": 4, "label": "Modestly raise the tax for transportation investment" },
+        { "value": 5, "label": "Significantly raise the tax, earmark for climate / transit" }
+      ]
+    },
+    {
+      "id": "fuel_env_rules", "name": "Fuel and refinery environmental rules", "tier": 1, "category": "energy",
+      "short_description": "Should LCFS, refinery emissions rules, and related fuel mandates be loosened, held, or tightened?",
+      "ca_specific_context": "Low Carbon Fuel Standard (LCFS) and CARB rules push refineries toward lower-carbon fuels; oil industry argues this raises pump prices.",
+      "stance_scale": [
+        { "value": 1, "label": "Suspend LCFS and refinery environmental rules" },
+        { "value": 2, "label": "Weaken specific rules to lower gas prices" },
+        { "value": 3, "label": "Maintain current rules" },
+        { "value": 4, "label": "Tighten specific rules to accelerate decarbonization" },
+        { "value": 5, "label": "Major expansion of fuel emissions regulation" }
+      ]
+    },
+
+    {
+      "id": "policing", "name": "Policing and criminal penalties", "tier": 2, "category": "safety",
+      "short_description": "What's the right balance between expanding police capacity, reform, and non-police alternatives?",
+      "ca_specific_context": "Fentanyl deaths, retail-theft enforcement, and police oversight debates have all driven CA policy since 2024.",
+      "stance_scale": [
+        { "value": 1, "label": "Significantly expand law enforcement and toughen penalties" },
+        { "value": 2, "label": "Expand law enforcement with modest reforms" },
+        { "value": 3, "label": "Mixed approach — more officers AND more accountability/diversion" },
+        { "value": 4, "label": "Prioritize reform, oversight, and non-police alternatives" },
+        { "value": 5, "label": "Substantially shift funding from policing to community services" }
+      ]
+    },
+    {
+      "id": "prop36_47", "name": "Prop 36 / Prop 47 direction", "tier": 2, "category": "safety",
+      "short_description": "Should CA go further on rolling back Prop 47, hold Prop 36 as passed, or restore Prop 47?",
+      "ca_specific_context": "Prop 47 (2014) reduced certain felonies to misdemeanors; Prop 36 (2024) rolled back parts of that; implementation is still in progress.",
+      "stance_scale": [
+        { "value": 1, "label": "Go further than Prop 36 — significantly toughen penalties" },
+        { "value": 2, "label": "Implement Prop 36 fully, consider further toughening" },
+        { "value": 3, "label": "Implement Prop 36 as passed; no further changes" },
+        { "value": 4, "label": "Implement narrowly; advocate restoring some Prop 47 protections" },
+        { "value": 5, "label": "Restore Prop 47 in full; expand diversion programs" }
+      ]
+    },
+    {
+      "id": "sanctuary", "name": "Sanctuary and immigration enforcement", "tier": 2, "category": "immigration",
+      "short_description": "What should CA's posture be on cooperation with federal immigration enforcement?",
+      "ca_specific_context": "SB 54 (2017) limits state cooperation with ICE; under renewed federal pressure as of 2025–2026.",
+      "stance_scale": [
+        { "value": 1, "label": "Repeal SB 54; full ICE cooperation" },
+        { "value": 2, "label": "Allow specific exceptions to SB 54" },
+        { "value": 3, "label": "Maintain SB 54 as-is" },
+        { "value": 4, "label": "Expand sanctuary protections (e.g., legal defense funding)" },
+        { "value": 5, "label": "Major expansion — state-level immigration protections including state ID" }
+      ]
+    },
+
+    {
+      "id": "decarbonization", "name": "Climate goals and decarbonization timeline", "tier": 3, "category": "climate",
+      "short_description": "Should the state's net-zero-by-2045 target be accelerated, held, or softened?",
+      "ca_specific_context": "AB 1279 (2022) codified net-zero-by-2045; interim milestones are in flux.",
+      "stance_scale": [
+        { "value": 1, "label": "Repeal or significantly soften the 2045 target" },
+        { "value": 2, "label": "Slow the timeline; allow more flexibility" },
+        { "value": 3, "label": "Hold the 2045 target with current implementation" },
+        { "value": 4, "label": "Accelerate the timeline (e.g., to 2040)" },
+        { "value": 5, "label": "Major acceleration (e.g., 2035) with binding interim milestones" }
+      ]
+    },
+    {
+      "id": "nuclear", "name": "Nuclear power's role in CA's grid", "tier": 3, "category": "energy",
+      "short_description": "Expand, hold, or phase out nuclear power in California?",
+      "ca_specific_context": "Diablo Canyon's life was extended in 2022; no new plants currently planned.",
+      "stance_scale": [
+        { "value": 1, "label": "Expand significantly — site new plants; extend existing" },
+        { "value": 2, "label": "Extend Diablo Canyon and similar; keep options open" },
+        { "value": 3, "label": "Maintain status quo (current Diablo extension only)" },
+        { "value": 4, "label": "Wind down existing plants on current schedule" },
+        { "value": 5, "label": "Accelerate phase-out of all nuclear" }
+      ]
+    },
+    {
+      "id": "natgas_bridge", "name": "Natural gas as bridge fuel", "tier": 3, "category": "energy",
+      "short_description": "What role should natural gas play during the energy transition?",
+      "ca_specific_context": "Natural gas peaker plants and building-gas hookups are both contested; SoCalGas / PG&E gas systems are aging.",
+      "stance_scale": [
+        { "value": 1, "label": "Expand natural gas infrastructure and use" },
+        { "value": 2, "label": "Maintain current natural gas role; gradual phase-down" },
+        { "value": 3, "label": "Stable status; let market and reliability needs decide" },
+        { "value": 4, "label": "Phase out natural gas in power generation by mid-2030s" },
+        { "value": 5, "label": "Aggressive natural gas phase-out across all sectors" }
+      ]
+    },
+    {
+      "id": "oil_gas", "name": "Oil and gas production in CA", "tier": 3, "category": "energy",
+      "short_description": "Should in-state oil and gas extraction expand, hold, or phase down?",
+      "ca_specific_context": "SB 1137 (2022) established 3,200-ft setbacks; ballot fight overturned and re-affirmed; Kern County is the production heartland.",
+      "stance_scale": [
+        { "value": 1, "label": "Expand in-state oil and gas production" },
+        { "value": 2, "label": "Maintain current production levels; reduce regulation" },
+        { "value": 3, "label": "Status quo — current setbacks and permitting" },
+        { "value": 4, "label": "Phase down — tighten setbacks, halt new permits" },
+        { "value": 5, "label": "Rapid phase-out of in-state extraction" }
+      ]
+    },
+    {
+      "id": "water_projects", "name": "Water storage and conveyance projects", "tier": 3, "category": "water",
+      "short_description": "What should CA's posture be on Delta tunnel, new dams, and major water infrastructure?",
+      "ca_specific_context": "Delta Conveyance Project, Sites Reservoir, and Pacheco Reservoir are all in various permitting stages.",
+      "stance_scale": [
+        { "value": 1, "label": "Expand all major projects — Delta tunnel, new dams, conveyance" },
+        { "value": 2, "label": "Pursue most major projects with environmental modifications" },
+        { "value": 3, "label": "Pursue selected projects case-by-case" },
+        { "value": 4, "label": "Pause major new construction; focus on existing infrastructure" },
+        { "value": 5, "label": "Halt major new water infrastructure projects" }
+      ]
+    },
+    {
+      "id": "water_allocations", "name": "Water allocations (ag vs. urban vs. environmental)", "tier": 3, "category": "water",
+      "short_description": "How should CA balance water among agriculture, urban use, and environmental flows?",
+      "ca_specific_context": "Roughly 80% of human-developed water goes to agriculture; environmental flows, Delta salinity, and groundwater recharge are competing claims.",
+      "stance_scale": [
+        { "value": 1, "label": "Prioritize agriculture — protect water rights, ease environmental flows" },
+        { "value": 2, "label": "Favor agriculture with modest environmental considerations" },
+        { "value": 3, "label": "Balance among ag, urban, and environmental needs" },
+        { "value": 4, "label": "Favor urban and environmental with ag concessions" },
+        { "value": 5, "label": "Prioritize environmental flows and urban use over ag" }
+      ]
+    },
+    {
+      "id": "ceqa", "name": "CEQA reform", "tier": 3, "category": "environment",
+      "short_description": "Should CEQA's environmental review requirements be rolled back, preserved, or strengthened?",
+      "ca_specific_context": "CEQA (California Environmental Quality Act) is widely blamed for project delays; multiple targeted reform bills (e.g., AB 1633, SB 423) have passed since 2023.",
+      "stance_scale": [
+        { "value": 1, "label": "Major rollback — broad statutory exemptions" },
+        { "value": 2, "label": "Significant exemptions for housing and infrastructure" },
+        { "value": 3, "label": "Targeted exemptions, case-by-case" },
+        { "value": 4, "label": "Preserve CEQA with minor procedural reforms" },
+        { "value": 5, "label": "Strengthen CEQA's environmental review requirements" }
+      ]
+    },
+
+    {
+      "id": "school_funding", "name": "K-12 school funding and governance", "tier": 4, "category": "education",
+      "short_description": "Should CA increase, hold, or restructure K-12 funding?",
+      "ca_specific_context": "Prop 98 (1988) sets a minimum funding floor; LCFF (2013) restructured allocation around student need.",
+      "stance_scale": [
+        { "value": 1, "label": "Significantly cut K-12 spending" },
+        { "value": 2, "label": "Hold or modestly trim spending" },
+        { "value": 3, "label": "Maintain current spending levels" },
+        { "value": 4, "label": "Modest funding increases (teacher pay, facilities)" },
+        { "value": 5, "label": "Major new funding via dedicated tax or bond" }
+      ]
+    },
+    {
+      "id": "school_choice", "name": "School choice and charters", "tier": 4, "category": "education",
+      "short_description": "Should CA expand charter schools and school choice, or restrict them?",
+      "ca_specific_context": "AB 1505 (2019) gave districts more charter denial authority; vouchers have repeatedly failed at the ballot.",
+      "stance_scale": [
+        { "value": 1, "label": "Significantly expand charters and school choice (including vouchers)" },
+        { "value": 2, "label": "Expand charters; protect parental choice" },
+        { "value": 3, "label": "Maintain the current charter framework" },
+        { "value": 4, "label": "Restrict charter expansion" },
+        { "value": 5, "label": "Cap or freeze charter growth; redirect funding to public schools" }
+      ]
+    },
+    {
+      "id": "healthcare_funding", "name": "Healthcare funding mechanism", "tier": 4, "category": "healthcare",
+      "short_description": "If state-level single-payer healthcare is on the table, how should it be funded?",
+      "ca_specific_context": "AB 1400 / CalCare proposals have repeatedly stalled over funding; Medi-Cal was expanded to undocumented adults in 2024.",
+      "stance_scale": [
+        { "value": 1, "label": "Roll back recent Medi-Cal expansions" },
+        { "value": 2, "label": "Hold current system; focus on cost containment" },
+        { "value": 3, "label": "Incremental Medi-Cal / ACA expansion, no new broad tax" },
+        { "value": 4, "label": "State single-payer, funded primarily by wealth and corporate taxes" },
+        { "value": 5, "label": "State single-payer with broad new taxation (payroll, VAT-style)" }
+      ]
+    },
+    {
+      "id": "abortion", "name": "Abortion and reproductive rights", "tier": 4, "category": "social",
+      "short_description": "Should CA expand, hold, or restrict abortion access?",
+      "ca_specific_context": "Prop 1 (2022) enshrined abortion rights in the CA Constitution; CA has funded travel for out-of-state patients.",
+      "stance_scale": [
+        { "value": 1, "label": "Significant restrictions (gestational limits, parental consent)" },
+        { "value": 2, "label": "Permit some restrictions" },
+        { "value": 3, "label": "Hold current CA protections (Prop 1)" },
+        { "value": 4, "label": "Strong defense — expand access funding and provider network" },
+        { "value": 5, "label": "Major expansion — constitutional amendment beyond Prop 1; fund out-of-state patients; broaden providers" }
+      ]
+    },
+    {
+      "id": "gun_policy", "name": "Gun policy", "tier": 4, "category": "safety",
+      "short_description": "Should CA's gun laws be loosened, held, or expanded?",
+      "ca_specific_context": "CA's assault-weapons ban, magazine limits, and CCW frameworks have been in continuous litigation since Bruen (2022).",
+      "stance_scale": [
+        { "value": 1, "label": "Significant rollback (looser concealed-carry, ease assault-weapons enforcement)" },
+        { "value": 2, "label": "Loosen specific restrictions" },
+        { "value": 3, "label": "Hold current CA gun laws" },
+        { "value": 4, "label": "Strong defense of current laws; close loopholes" },
+        { "value": 5, "label": "Major expansion of restrictions (registry, supply controls, additional bans)" }
+      ]
+    }
+  ],
+  "personal_fit_dimensions": [
+    {
+      "id": "wealth_self_funding", "type": "ordinal", "name": "Wealth and self-funding",
+      "description": "How much do a candidate's personal wealth and self-funding of their campaign matter to you?",
+      "scale": [
+        { "value": 1, "label": "Strongly prefer non-wealthy, small-donor-funded candidates" },
+        { "value": 2, "label": "Lean toward non-wealthy / small-donor" },
+        { "value": 3, "label": "No preference on wealth" },
+        { "value": 4, "label": "Lean toward wealthy / self-funded" },
+        { "value": 5, "label": "Strongly prefer wealthy / self-funded (independent of donors)" }
+      ]
+    },
+    {
+      "id": "conflict_orientation", "type": "ordinal", "name": "Conflict orientation",
+      "description": "Do you prefer a candidate who acts as a pragmatic dealmaker, or a principled fighter?",
+      "scale": [
+        { "value": 1, "label": "Strongly prefer pragmatic dealmaker / consensus-builder" },
+        { "value": 2, "label": "Lean dealmaker" },
+        { "value": 3, "label": "No preference" },
+        { "value": 4, "label": "Lean fighter" },
+        { "value": 5, "label": "Strongly prefer principled fighter / outspoken critic" }
+      ]
+    },
+    {
+      "id": "federal_vs_state_focus", "type": "ordinal", "name": "Federal vs. state focus",
+      "description": "Should the next governor focus on California's own problems, or actively confront the federal government?",
+      "scale": [
+        { "value": 1, "label": "Strongly state-focused — keep DC fights out of CA governance" },
+        { "value": 2, "label": "Lean state-focused" },
+        { "value": 3, "label": "Balanced" },
+        { "value": 4, "label": "Lean federal-fight" },
+        { "value": 5, "label": "Strongly prefer willingness to confront the Trump administration" }
+      ]
+    },
+    {
+      "id": "position_consistency", "type": "ordinal", "name": "Position consistency",
+      "description": "Do you weight consistent positions over time, or are you open to candidates whose positions have evolved?",
+      "scale": [
+        { "value": 1, "label": "Strongly value consistent positions" },
+        { "value": 2, "label": "Lean toward consistency" },
+        { "value": 3, "label": "No preference" },
+        { "value": 4, "label": "Open to evolved positions" },
+        { "value": 5, "label": "Strongly value candidates who update based on new information" }
+      ]
+    },
+    {
+      "id": "integrity_record", "type": "ordinal", "name": "Integrity and controversy record",
+      "description": "How much do prior scandals, ethics investigations, or controversies factor into your decision?",
+      "scale": [
+        { "value": 1, "label": "Past controversies are non-starters" },
+        { "value": 2, "label": "Significant weight" },
+        { "value": 3, "label": "Moderate weight" },
+        { "value": 4, "label": "Some weight" },
+        { "value": 5, "label": "Past controversies do not influence me" }
+      ]
+    },
+    {
+      "id": "electability", "type": "ordinal", "name": "Electability",
+      "description": "How much does general-election viability — polling strength, fundraising, broad appeal — factor in?",
+      "scale": [
+        { "value": 1, "label": "Decisive — I weight electability above other factors" },
+        { "value": 2, "label": "Significant weight" },
+        { "value": 3, "label": "Moderate weight" },
+        { "value": 4, "label": "Some weight" },
+        { "value": 5, "label": "Does not factor in — I vote on alignment regardless of viability" }
+      ]
+    },
+    {
+      "id": "years_in_office_band", "type": "ordinal", "name": "Years in elected office",
+      "description": "Do you prefer a fresh political voice, or someone with extensive elected-office tenure?",
+      "scale": [
+        { "value": 1, "label": "Strongly prefer fresh — under 5 years in elected office" },
+        { "value": 2, "label": "Lean fresh" },
+        { "value": 3, "label": "No preference" },
+        { "value": 4, "label": "Lean experienced" },
+        { "value": 5, "label": "Strongly prefer extensive — 15+ years in elected office" }
+      ]
+    },
+    {
+      "id": "career_path", "type": "multi_select", "name": "Career background",
+      "description": "Which career backgrounds appeal to you in a governor? (Leave blank for no preference.)",
+      "options": [
+        { "id": "state_pol", "label": "State politics (Assembly, Senate, statewide office)" },
+        { "id": "federal_pol", "label": "Federal politics (Congress, Cabinet)" },
+        { "id": "local_pol", "label": "Local politics (mayor, council, sheriff)" },
+        { "id": "business", "label": "Business / private sector" },
+        { "id": "law_enforcement", "label": "Law enforcement" },
+        { "id": "law", "label": "Practicing or academic law" },
+        { "id": "activism", "label": "Activism / community organizing" },
+        { "id": "nonprofit", "label": "Nonprofit leadership" },
+        { "id": "academia", "label": "Academia / teaching" },
+        { "id": "media", "label": "Media / journalism" },
+        { "id": "health", "label": "Healthcare / public health" },
+        { "id": "social_work", "label": "Social work / public service" }
+      ]
+    },
+    {
+      "id": "demographic_background", "type": "multi_select", "name": "Demographic background",
+      "description": "Which candidate backgrounds matter positively to you? (Optional — leave blank for no preference. Your answers are anonymous.)",
+      "options": [
+        { "id": "black", "label": "Black / African American" },
+        { "id": "latino", "label": "Latino / Hispanic" },
+        { "id": "aapi", "label": "Asian American / Pacific Islander" },
+        { "id": "white", "label": "White" },
+        { "id": "native", "label": "Native American / Indigenous" },
+        { "id": "multiracial", "label": "Multiracial" },
+        { "id": "woman", "label": "Woman" },
+        { "id": "man", "label": "Man" },
+        { "id": "nonbinary", "label": "Non-binary" },
+        { "id": "lgbtq", "label": "LGBTQ+" },
+        { "id": "catholic", "label": "Catholic" },
+        { "id": "protestant", "label": "Protestant / Evangelical" },
+        { "id": "jewish", "label": "Jewish" },
+        { "id": "muslim", "label": "Muslim" },
+        { "id": "hindu", "label": "Hindu" },
+        { "id": "sikh", "label": "Sikh" },
+        { "id": "secular", "label": "Secular / atheist / no religion" },
+        { "id": "immigrant", "label": "Immigrant or first-generation American" },
+        { "id": "veteran", "label": "Veteran / military service" }
+      ]
+    },
+    {
+      "id": "geographic_background", "type": "multi_select", "name": "Geographic background",
+      "description": "Do you prefer a candidate from a particular region of California? (Leave blank for no preference.)",
+      "options": [
+        { "id": "bay_area", "label": "Bay Area" },
+        { "id": "la_county", "label": "Los Angeles County" },
+        { "id": "oc_ie", "label": "Orange County / Inland Empire" },
+        { "id": "san_diego", "label": "San Diego" },
+        { "id": "central_valley", "label": "Central Valley" },
+        { "id": "north", "label": "Far North / Sierra" },
+        { "id": "central_coast", "label": "Central Coast" }
+      ]
+    },
+    {
+      "id": "age_band", "type": "multi_select", "name": "Age / generation",
+      "description": "Which age cohort do you prefer? (Optional.)",
+      "options": [
+        { "id": "millennial", "label": "Millennial (born 1981–1996)" },
+        { "id": "gen_x", "label": "Gen X (born 1965–1980)" },
+        { "id": "boomer", "label": "Baby Boomer (born 1946–1964)" },
+        { "id": "silent", "label": "Silent Generation (born before 1946)" }
+      ]
+    },
+    {
+      "id": "endorsement_coalition", "type": "multi_select", "name": "Endorser coalition",
+      "description": "Whose endorsement signal matters most to you? (Leave blank for no preference.)",
+      "options": [
+        { "id": "labor", "label": "Labor unions" },
+        { "id": "environmental", "label": "Environmental organizations" },
+        { "id": "civil_rights", "label": "Civil rights organizations" },
+        { "id": "business", "label": "Business community" },
+        { "id": "law_enforcement", "label": "Law enforcement associations" },
+        { "id": "womens_orgs", "label": "Women's organizations" },
+        { "id": "faith", "label": "Faith communities" },
+        { "id": "latino_caucus", "label": "Latino caucus / Latino organizations" },
+        { "id": "lgbtq_orgs", "label": "LGBTQ+ organizations" },
+        { "id": "newspapers", "label": "Major California newspapers (LA Times, SF Chronicle, Sac Bee)" },
+        { "id": "dem_party", "label": "California Democratic Party" },
+        { "id": "rep_party", "label": "California Republican Party" },
+        { "id": "trump", "label": "Donald Trump / national Republican figures" }
+      ]
+    }
+  ],
+  "positions": [],
+  "questions": []
+}

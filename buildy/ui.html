@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CA 2026 Candidate Matcher</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>California 2026 Candidate Matcher</h1>
+      <p class="subtitle">Spike build — schema only, positions not yet researched.</p>
+    </header>
+
+    <section id="status" class="card">
+      <p>Loading dataset…</p>
+    </section>
+
+    <section id="quiz" class="card hidden">
+      <h2 id="q-title"></h2>
+      <p id="q-desc" class="muted"></p>
+      <div id="q-options"></div>
+      <div class="row">
+        <label for="importance">Importance</label>
+        <select id="importance">
+          <option value="0.5">low</option>
+          <option value="1.0" selected>medium</option>
+          <option value="2.0">high</option>
+        </select>
+        <button id="skip">skip</button>
+        <button id="next" disabled>next →</button>
+      </div>
+      <p class="muted small"><span id="q-progress"></span></p>
+    </section>
+
+    <section id="results" class="card hidden">
+      <h2>Your match (scaffold scoring)</h2>
+      <p class="muted small">
+        v0 dataset has no real candidate positions yet, so this is just a plumbing demo.
+        Real matching comes online with <code>dataset_v1.json</code>.
+      </p>
+      <ol id="ranking"></ol>
+      <p><a id="share-link" href="#">share link →</a></p>
+      <button id="retake">retake</button>
+    </section>
+
+    <footer>
+      <p class="muted small">
+        Open source: <a href="https://github.com/ternarybits/california-election">ternarybits/california-election</a>.
+        Snapshot date: <span id="snapshot-date">—</span>.
+      </p>
+    </footer>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+  <script type="module">
+    // Inline app — kept here so Buildy can serve a single HTML payload.
+    const API = ""; // same-origin
+
+    const $ = (sel) => document.querySelector(sel);
+
+    const state = {
+      issues: [],
+      candidates: [],
+      idx: 0,
+      answers: [], // { issue_id, stance, importance }
+    };
+
+    async function boot() {
+      try {
+        const [issuesRes, candidatesRes, datasetRes] = await Promise.all([
+          fetch(`${API}/api/issues`),
+          fetch(`${API}/api/candidates`),
+          fetch(`${API}/api/dataset`),
+        ]);
+        if (!issuesRes.ok || !candidatesRes.ok || !datasetRes.ok) throw new Error("api error");
+        state.issues = await issuesRes.json();
+        state.candidates = await candidatesRes.json();
+        state.dataset = await datasetRes.json();
+        $("#snapshot-date").textContent = state.dataset.snapshot_date;
+        if (!state.issues.length) {
+          $("#status").innerHTML = "<p>No issues in dataset_v0. Add some and redeploy.</p>";
+          return;
+        }
+        $("#status").classList.add("hidden");
+        $("#quiz").classList.remove("hidden");
+        renderQuestion();
+      } catch (e) {
+        $("#status").innerHTML = `<p>Failed to load: ${e.message}</p>`;
+      }
+    }
+
+    function renderQuestion() {
+      const issue = state.issues[state.idx];
+      $("#q-title").textContent = issue.name;
+      $("#q-desc").textContent = issue.short_description;
+      const optsEl = $("#q-options");
+      optsEl.innerHTML = "";
+      let selected = null;
+      issue.stance_scale.forEach((opt) => {
+        const id = `opt-${issue.id}-${opt.value}`;
+        const wrap = document.createElement("label");
+        wrap.className = "option";
+        wrap.innerHTML = `<input type="radio" name="stance" id="${id}" value="${opt.value}" /> <span>${opt.label}</span>`;
+        wrap.querySelector("input").addEventListener("change", (e) => {
+          selected = Number(e.target.value);
+          $("#next").disabled = false;
+        });
+        optsEl.appendChild(wrap);
+      });
+      $("#importance").value = "1.0";
+      $("#next").disabled = true;
+      $("#q-progress").textContent = `Question ${state.idx + 1} of ${state.issues.length}`;
+      $("#next").onclick = () => {
+        if (selected == null) return;
+        state.answers.push({
+          issue_id: issue.id,
+          stance: selected,
+          importance: Number($("#importance").value),
+        });
+        advance();
+      };
+      $("#skip").onclick = () => {
+        state.answers.push({ issue_id: issue.id, stance: null, importance: 0 });
+        advance();
+      };
+    }
+
+    function advance() {
+      state.idx += 1;
+      if (state.idx >= state.issues.length) return finish();
+      renderQuestion();
+    }
+
+    function score() {
+      // Ordinal agreement weighted by user-importance.
+      // Skip questions where the candidate position is unknown for that candidate.
+      const positions = state.dataset.positions;
+      const byCandidate = {};
+      for (const c of state.candidates) byCandidate[c.id] = { num: 0, den: 0, used: 0 };
+
+      for (const ans of state.answers) {
+        if (ans.stance == null || ans.importance === 0) continue;
+        const issue = state.issues.find((i) => i.id === ans.issue_id);
+        if (!issue) continue;
+        const maxStance = Math.max(...issue.stance_scale.map((s) => s.value));
+        const minStance = Math.min(...issue.stance_scale.map((s) => s.value));
+        const range = maxStance - minStance || 1;
+        for (const c of state.candidates) {
+          const pos = positions.find((p) => p.candidate_id === c.id && p.issue_id === ans.issue_id);
+          if (!pos || pos.stance === "unknown" || typeof pos.stance !== "number") continue;
+          const dist = Math.abs(pos.stance - ans.stance) / range;
+          const agreement = 1 - dist;
+          byCandidate[c.id].num += ans.importance * agreement;
+          byCandidate[c.id].den += ans.importance * 1;
+          byCandidate[c.id].used += 1;
+        }
+      }
+
+      return state.candidates
+        .map((c) => {
+          const b = byCandidate[c.id];
+          const pct = b.den > 0 ? Math.round((b.num / b.den) * 100) : null;
+          return { ...c, match_pct: pct, scored_questions: b.used };
+        })
+        .sort((a, b) => (b.match_pct ?? -1) - (a.match_pct ?? -1));
+    }
+
+    async function finish() {
+      $("#quiz").classList.add("hidden");
+      const ranking = score();
+      const rEl = $("#ranking");
+      rEl.innerHTML = "";
+      for (const r of ranking) {
+        const li = document.createElement("li");
+        const pct = r.match_pct == null ? "—" : `${r.match_pct}%`;
+        li.innerHTML = `<strong>${r.name}</strong> <span class="muted">(${r.party})</span> — <code>${pct}</code> match <span class="muted small">(${r.scored_questions} scored q's)</span>`;
+        rEl.appendChild(li);
+      }
+      $("#results").classList.remove("hidden");
+
+      try {
+        const save = await fetch(`${API}/api/result`, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ answers: state.answers, ranking: ranking.map((r) => ({ id: r.id, match_pct: r.match_pct })) }),
+        });
+        if (save.ok) {
+          const { url_suffix } = await save.json();
+          $("#share-link").href = url_suffix;
+          $("#share-link").textContent = `${location.origin}${location.pathname}${url_suffix}`;
+        }
+      } catch {}
+
+      $("#retake").onclick = () => location.reload();
+    }
+
+    boot();
+  </script>
+</body>
+</html>
