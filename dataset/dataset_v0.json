@@ -1958,6 +1958,127 @@
         "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/"
       ],
       "notes": "Stance 5 (focus on subsidies and tenant-side policy rather than market supply) is the closest fit: every concrete plank is a subsidy, public-land, bond, or anti-speculator measure rather than a deregulatory or preemption lever. He hasn't taken a public SB 79 position. Stance could arguably be 3 because the school-land plan is supply-additive, but the bias is clearly subsidy-led, not preemption-led."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "homelessness",
+      "stance": 1,
+      "summary": "Hilton's primary lever is law enforcement: clear encampments first under Grants Pass authority, then triage. He calls Housing First a 'complete disaster' and would redirect funding to 'sober housing' with sobriety conditions, framing the status quo as a $24 billion 'catastrophic failure.'",
+      "source_quote": "This is against the law, and the law needs to be enforced. [Hilton] called the existing 'housing first' philosophy a 'complete disaster' and instead wants to free up all state funding to support sober housing.",
+      "source_url": "https://calmatters.org/politics/2026/05/ca-governor-candidates-homelessness/",
+      "source_date": "2026-05-06",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://localnewsmatters.org/2026/05/07/california-governor-candidates-homelessness/",
+        "https://stevehiltonforgovernor.com/"
+      ],
+      "notes": "Stance 1 (aggressive clearance) fits because removal-first is his explicit sequencing. He ducked specifics on conservatorship standards when pressed by CalMatters, so he's not as fully committed to expanded involuntary commitment as Bianco — but his enforcement-first framing and rejection of Housing First put him at the most aggressive end of the scale."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "homelessness",
+      "stance": 4,
+      "summary": "Steyer is 'fully committed to a Housing First approach' but pairs it with 'bridge housing with robust stabilization services' and a spending review — he treats homelessness as primarily a housing-supply and care-matching problem, not an enforcement problem. He has not endorsed sweeps or expanded conservatorship.",
+      "source_quote": "No one gets better on the street... [Steyer is] fully committed to a Housing First approach... matching the right housing with the right level of care.",
+      "source_url": "https://www.tomsteyer.com/issues/housing",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.pressdemocrat.com/2026/01/19/how-california-governor-candidates-say-they-will-tackle-homelessness-2/",
+        "https://abc7.com/post/california-governors-race-tom-steyer-outlines-tax-health-care-homelessness-plans/18682042/"
+      ],
+      "notes": "Stance 4 rather than 5 because his framing leans heavily on bridge/interim housing as the urgent immediate step (a moderate position) and he wants a 'full spending review' — not a stance 5 'pour more money in' posture. He has not addressed encampment sweeps or conservatorship directly in his public platform, which lowers confidence."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "homelessness",
+      "stance": 1,
+      "summary": "Bianco wants the state to use Grants Pass to clear encampments, force people into treatment via new legislation, and cut off all nonprofit/HHAP funding. He rejects the 'homeless' framing entirely and claims ~95% of people on the street are addicted — the most enforcement-and-treatment-coercive platform in the field.",
+      "source_quote": "This is not about homes. Stop calling it homeless... We have to get to a point where the Legislature passes a law that we can actually force people into mental health treatment... No NGO and no nonprofit is going to get money with me as the governor.",
+      "source_url": "https://calmatters.org/politics/2026/05/ca-governor-candidates-homelessness/",
+      "source_date": "2026-05-06",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/homelessness",
+        "https://localnewsmatters.org/2026/05/07/california-governor-candidates-homelessness/"
+      ],
+      "notes": "Stance 1 is the unambiguous fit: he explicitly wants forced treatment legislation beyond what SB 43 and Prop 1 already allow, and would zero out nonprofit homelessness funding. His own platform page lists Grants Pass-based encampment clearance as Pillar 1."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "homelessness",
+      "stance": 4,
+      "summary": "Becerra explicitly endorses Housing First 'always paired, where needed, with behavioral health and addiction treatment,' commits to implementing every Prop 1 reform, and frames shelter as 'a bridge, not an endpoint.' His main innovation is accountability dashboards and tying HHAP funding to outcomes, not enforcement.",
+      "source_quote": "Housing First approaches, always paired, where needed, with behavioral health and addiction treatment... This is not a housing crisis alone. It is a mental health crisis... expand shelter capacity as a bridge, not an endpoint.",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/homelessness/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://ktla.com/news/california/xavier-becerra-interview-governor-race/",
+        "https://www.pressdemocrat.com/2026/01/19/how-california-governor-candidates-say-they-will-tackle-homelessness-2/"
+      ],
+      "notes": "Stance 4 rather than 5 because his Prop 1 / conservatorship enthusiasm and his 'communities that fail will face real consequences' framing carry meaningful coercive edges — he isn't a pure services-only candidate. He declined to participate in the Press Democrat round-up, and his campaign page is the cleanest articulation."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "homelessness",
+      "stance": 4,
+      "summary": "Porter frames homelessness as 'a direct correlate of our housing problems' and emphasizes prevention (emergency rental assistance, rapid re-housing) plus interim housing as 'absolutely necessary.' She has not endorsed sweeps or expanded conservatorship and treats unsheltered status itself as a mental-health/substance-use risk factor.",
+      "source_quote": "It is so much more cost-effective and so much more humane to prevent families from becoming homeless in the first place... [her plan focuses on] homeless prevention through emergency rental assistance and rapid re-housing, and interim housing that can keep people from being unsheltered, which is itself a risk factor for mental health and substance use problems.",
+      "source_url": "https://katieporter.com/priority/ending-homelessness/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.pressdemocrat.com/2026/01/19/how-california-governor-candidates-say-they-will-tackle-homelessness-2/",
+        "https://ktla.com/news/politics/inside-california-politics/california-gubernatorial-candidate-katie-porter-outlines-her-priorities-for-golden-state/"
+      ],
+      "notes": "Stance 4 fits her prevention-and-housing-supply emphasis. Confidence is medium because she has not publicly addressed CARE Court, SB 43, or sweeps in detail — a notable gap given how prominent those debates are. If she were to articulate them, she could easily move to stance 5."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "homelessness",
+      "stance": 2,
+      "summary": "Mahan describes an 'all-of-the-above' approach and 'mass treatment' on his gubernatorial campaign — but his actual San Jose record is the most enforcement-forward of any Democrat in the field: his June 2025 'Responsibility to Shelter' ordinance lets the city cite and ultimately arrest unhoused people who refuse three shelter offers in 18 months. He also openly endorses 30-60 day involuntary commitment as 'a temporary suspension of certain civil liberties.'",
+      "source_quote": "I don't think it's humane or compassionate to allow people to live or die on our streets when they are unable or unwilling to accept the help the city is able to offer... The compassionate thing to do is to intervene. And yes, that may look like a temporary suspension of certain civil liberties.",
+      "source_url": "https://www.kqed.org/news/12043418/san-jose-council-approves-mahans-shelter-enforcement-plan",
+      "source_date": "2025-06-11",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/05/ca-governor-candidates-homelessness/",
+        "https://www.cbsnews.com/sanfrancisco/news/san-jose-responsibility-to-shelter-ordinance-approved-mayor-matt-mahan/",
+        "https://www.mahanforcalifornia.com/treatment"
+      ],
+      "notes": "GOVERNANCE-RHETORIC GAP. Mahan's gubernatorial site ('balancing compassion with accountability,' 'mass treatment not mass incarceration') reads like a stance 3. But his actual San Jose ordinance — citation on first two refusals, arrest on the third within 18 months, with explicit intent to use arrests to compel court-ordered treatment — is materially more coercive than any other Democrat in this field. Coding to the record (stance 2: enforcement-first with concurrent service offers), not the rhetoric. Santa Clara County's DA and Sheriff publicly opposed the ordinance."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "homelessness",
+      "stance": 3,
+      "summary": "Villaraigosa rejects criminalization ('I'm not for criminalizing homelessness. I am for compassion. But I'm not for chaos') and prioritizes housing construction (including tiny homes), but he also wants to convene experts to lower the bar for locked psychiatric conservatorship and would withhold HHAP funding from counties that underperform on CARE Court.",
+      "source_quote": "I'm not for criminalizing homeless(ness). I am for compassion. But I'm not for chaos... sometimes the compassionate course of action is to commit them to a locked psychiatric institution.",
+      "source_url": "https://calmatters.org/politics/2026/05/ca-governor-candidates-homelessness/",
+      "source_date": "2026-05-06",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://localnewsmatters.org/2026/05/07/california-governor-candidates-homelessness/",
+        "https://www.antonio2026.com/issues"
+      ],
+      "notes": "Stance 3 is the best fit because he pairs a clear anti-criminalization line with a willingness to expand involuntary commitment for severe mental illness and to use HHAP funding as a stick. The 'compassion vs chaos' framing is his deliberate middle position. His current campaign site does not foreground homelessness positions — most detail comes from the CalMatters interview."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "homelessness",
+      "stance": 4,
+      "summary": "Thurmond's platform is build-and-treat: 2 million affordable units on surplus school land by 2030, a $10B housing bond including tiny homes, taxing the wealthy to fund mental-health services, and conditioning housing-program participation on treatment 'if applicable.' He has not endorsed sweeps or expanded conservatorship.",
+      "source_quote": "[Thurmond] favors taxing the state's wealthiest residents more to pay for health care, including mental health services for those experiencing or at risk of homelessness, and he supports housing programs that require participants to undergo treatment if applicable to their situation.",
+      "source_url": "https://www.capradio.org/articles/2026/05/07/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race/",
+      "source_date": "2026-05-07",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.tonythurmond.com/priorities",
+        "https://www.pressdemocrat.com/2026/01/19/how-california-governor-candidates-say-they-will-tackle-homelessness-2/"
+      ],
+      "notes": "Stance 4 fits his housing-supply-plus-services emphasis. Confidence is medium because his campaign site lacks a dedicated homelessness page — positions are reconstructed from CapRadio and Press Democrat reporting. The 'treatment if applicable' condition keeps him from a pure stance 5; he has not endorsed any specific encampment-enforcement or conservatorship-expansion position."
     }
   ],
   "questions": []
