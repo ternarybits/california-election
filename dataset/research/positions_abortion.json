@@ -1,0 +1,127 @@
+{
+  "issue_id": "abortion",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "All eight candidates have stated positions on abortion. The two Republicans (Hilton, Bianco) sit at the restrictive end; the six Democrats all defend Prop 1 and California's sanctuary posture, with Becerra clearly the most expansion-oriented (record as CA AG defending abortion access and HHS Secretary directing Planned Parenthood funding; Planned Parenthood Affiliates of California endorsement). Porter, Thurmond, Steyer, and Villaraigosa are reliably pro-choice but light on new expansion specifics in 2026 campaign materials. Mahan is publicly pro-choice but his record has been called inconsistent (former tech-CEO neutrality stance, criticized in 2022 mayoral race); placed at 3. Bianco is explicitly anti-abortion (life begins at conception, would not fund Planned Parenthood); placed at 1. Hilton is more guarded — he calls abortion 'an awful outcome,' has said he'd allow Louisiana to extradite a CA abortion provider, would end public funding for out-of-state patients (AB 1666 / 'abortion tourism'), but acknowledges Prop 1 passed; placed at 2 (some restrictions / cooperation with anti-abortion states) rather than 1 because he hasn't proposed a CA gestational ban (CA constitution forbids it post-Prop 1). Spread: 1, 2, 3, 3, 3, 4, 4, 4.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "abortion",
+      "stance": 2,
+      "summary": "Calls abortion 'an awful, awful outcome' and wants policies that reduce demand. Would allow Louisiana to extradite a Bay Area abortion provider despite CA shield laws; opposes public funding for out-of-state patients ('abortion tourism'). Acknowledges Prop 1 passed and does not propose overturning it, but would cooperate with anti-abortion states and roll back CA's sanctuary posture.",
+      "source_quote": "Louisiana is trying to uphold what its people voted for, and California is undermining it. And I don't think that's right. Just as I wouldn't want to see Louisiana coming in and undermining something that we voted for here in California.",
+      "source_url": "https://www.kqed.org/news/12071206/gop-candidate-steve-hilton-would-extradite-california-abortion-doctor-to-louisiana",
+      "source_date": "2026-01-27",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://reproductivefreedomforall.org/news/ahead-of-tonights-debate-steve-hilton-will-allow-the-criminalization-of-doctors-who-provide-reproductive-healthcare/",
+        "https://reproductivefreedomforall.org/news/california-gubernatorial-debate-leaves-steve-hiltons-plan-to-let-anti-abortion-states-extradite-california-doctors-unanswered/"
+      ],
+      "notes": "On Political Breakdown (KQED, Jan 2026), Hilton said he would 'enforce the law' referring to Louisiana's abortion law against a CA doctor. In an earlier interview with pastor Jack Hibbs he called abortion an 'awful, awful outcome' and emphasized adoption. Position is anti-abortion in posture but constrained by Prop 1; cooperating with other states' enforcement and cutting AB 1666-style funding is the actual restrictive lever — hence stance 2."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "abortion",
+      "stance": 4,
+      "summary": "Treats abortion as healthcare and a fundamental right; founded NextGen America which campaigns on reproductive rights. Has explicitly called Hilton's extradition position 'insanity' and 'disqualifying.' Strong pro-choice defender; no specific 2026 expansion-of-funding proposal located.",
+      "source_quote": "Abortion is healthcare and reproductive choice is an issue that affects all gender and sexual identities. We should not stop shouting it from the rooftops.",
+      "source_url": "https://x.com/tomsteyer/status/1136323518633840640",
+      "source_date": "2019-06-05",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.facebook.com/officialtomsteyer/posts/this-is-insanity-and-its-disqualifying-abortion-is-health-care-by-signaling-he-w/1431222918365050/",
+        "https://www.nbcnews.com/politics/2026-election/tom-steyer-unexpected-alliance-progressives-california-governor-race-rcna342878"
+      ],
+      "notes": "Steyer's tomsteyer.com/issues page does not have a dedicated reproductive rights section (focuses on housing, taxes, energy, AI, healthcare, ICE). Confidence medium because primary 2026-campaign-cycle reproductive-rights statement is a Facebook reaction post rather than an issues-page commitment. Coded 4 (strong defense) based on lifetime record and DSA-aligned progressive coalition; not 5 because no major expansion proposal beyond Prop 1 has been articulated."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "abortion",
+      "stance": 1,
+      "summary": "Explicitly anti-abortion. Says 'life begins at conception' and 'I do not believe that an abortion is healthcare.' Would not fund Planned Parenthood as governor. Faith-driven (evangelical) conviction. Limited by Prop 1 from enacting a CA ban, but would strip state funding and end sanctuary-state policies.",
+      "source_quote": "I do not believe that an abortion is healthcare.",
+      "source_url": "https://www.kqed.org/news/12081096/riverside-county-sheriff-chad-bianco-on-his-faith-cutting-taxes-and-ballot-seizure",
+      "source_date": "2026-04-23",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://en.wikipedia.org/wiki/Chad_Bianco",
+        "https://www.pbs.org/video/chad-bianco-on-running-for-governor-politics-are-destroying-this-state-dlz7gv/"
+      ],
+      "notes": "On KQED's Political Breakdown podcast (April 2026) Bianco said abortion is not healthcare, would defund Planned Parenthood, and on a separate occasion stated 'life begins at conception.' Stance 1 — most restrictive available; he has not proposed a specific CA gestational ban (constitutionally precluded by Prop 1), but his policy posture is to restrict by every available means (defunding, ending sanctuary cooperation)."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "abortion",
+      "stance": 4,
+      "summary": "Longest pro-choice public-office record in the field. As CA AG sued Trump 1.0 over abortion access and Title X gag rule; as HHS Secretary directed Planned Parenthood Title X funding to clinics. Campaign explicitly commits to expanding access. Endorsed by Planned Parenthood Affiliates of California (April 2026).",
+      "source_quote": "As the husband of a high-risk Ob-Gyn, I know that abortion access is health care. … As Governor, I will ensure that California continues to lead when it comes to protecting access to abortion, to the ballot, and to live and love without restraint.",
+      "source_url": "https://www.xavierbecerra2026.com/",
+      "source_date": "2026-04-24",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/press/planned-parenthood-affiliates-of-california-endorses-xavier-becerra-for-governor",
+        "https://www.cnn.com/2026/04/28/politics/xavier-becerra-california-governor"
+      ],
+      "notes": "Coded 4 (strong defense / expand access) rather than 5 because campaign rhetoric emphasizes 'continue to lead' and protecting existing access more than a specific new constitutional amendment beyond Prop 1. Track record makes him arguably the strongest pro-choice candidate in the field; PPAC endorsement reinforces this. Could justify 5 with verbatim expansion proposal — none located by 2026-05-13."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "abortion",
+      "stance": 4,
+      "summary": "Long-standing pro-choice voice; says she 'first ran for Congress to stand up for women's rights and our access to reproductive health care.' Frames reproductive rights as inseparable from women's economic equality. EMILY's List endorsed her in April 2026. Commits to keeping CA a state that 'protects and defends abortion rights.'",
+      "source_quote": "The attacks on abortion access and reproductive rights from extremists in Washington must end. … California must remain a state that protects and defends abortion rights and when I'm Governor we will.",
+      "source_url": "https://katieporter.com/priority/protecting-healthcare/",
+      "source_date": "2026-04-17",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://emilyslist.org/news/memo-katie-porter-offers-the-strongest-path-to-victory-in-california/",
+        "https://www.thepinknews.com/2025/03/12/katie-porter-california-governor-race/"
+      ],
+      "notes": "Stance 4 — strong defense framing; no specific new constitutional amendment proposal located. Campaign issue page url confirmed live; date approximated to EMILY's List endorsement memo for verifiable cycle reference."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "abortion",
+      "stance": 3,
+      "summary": "States he is pro-choice and supports taxpayer-funded abortion. As San Jose mayor has appeared with Planned Parenthood for clinic openings. Record has been criticized as inconsistent — his prior tech company stayed neutral on abortion, drawing 2022 mayoral-race criticism. No new abortion-expansion proposal in 2026 gubernatorial materials; campaign focused on housing, public safety, homelessness.",
+      "source_quote": "I am pro-choice and support taxpayer funded abortion, and I've never said anything to the contrary.",
+      "source_url": "https://sanjosespotlight.com/san-jose-mayor-candidate-councilmember-matt-mahan-criticized-over-past-comments-supervisor-cindy-chavez-pro-choice-abortion-election-2022/",
+      "source_date": "2022-07-16",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.audacy.com/kcbsradio/news/local/ad-targets-san-jose-mayoral-candidates-abortion-stance",
+        "https://www.mahanforcalifornia.com/"
+      ],
+      "notes": "Primary on-the-record verbatim is from 2022 mayoral cycle; 2026 governor campaign site does not feature a reproductive-rights issue page. Coded 3 (hold current CA protections) rather than 4 because (a) the 2026 campaign hasn't pushed expansion rhetoric and (b) past inconsistency means there's no strong signal of leadership on expanding access. Confidence medium — could be 4 if updated 2026-cycle statements surface."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "abortion",
+      "stance": 3,
+      "summary": "Pro-choice; frames reproductive freedom as economic justice. In 2018 said he 'would be the strongest defender of a woman's right to choose'; said he would have signed the Reproductive Health Nondiscrimination Act if governor. 2026 campaign materials focus on affordability, housing, public safety — no dedicated reproductive-rights issue page found.",
+      "source_quote": "The issue of reproductive freedom is really an issue of economic justice. … all four of us would be the strongest defenders of a woman's right to choose and for protecting reproductive health care choices for women.",
+      "source_url": "https://www.ontheissues.org/Governor/Antonio_Villaraigosa_Abortion.htm",
+      "source_date": "2018-01-23",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.courthousenews.com/top-california-democrats-agree-on-abortion-rights/",
+        "https://www.antonio2026.com/"
+      ],
+      "notes": "Verbatim quotes are from the 2018 NARAL Pro-Choice California gubernatorial forum, not 2026 campaign materials; his antonio2026.com/issues page does not address abortion. Coded 3 because: (a) consistent lifetime pro-choice record but (b) positioned as one of the more moderate Democrats in the 2026 field and has not articulated 2026 expansion proposals. Could be 4 with a verbatim 2026 statement; confidence medium."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "abortion",
+      "stance": 4,
+      "summary": "Long pro-choice record; as State Superintendent endorsed SCA 10 (the precursor to Prop 1) to constitutionally protect abortion and contraception. As UC Regents ex-officio voted to protect comprehensive reproductive and LGBTQ-inclusive healthcare at UC facilities. As legislator and social worker says he has 'always supported measures that expand access to reproductive health care services.' Progressive lane of the 2026 field.",
+      "source_quote": "As a state legislator, a social worker, and now State Superintendent, I have always supported measures that expand access to reproductive health care services. At a time where we see constitutional rights being undermined at a federal level, and with the fall of Roe v. Wade now imminent, we, as Californians, must secure these rights for our state, leading the way and setting an example for the nation.",
+      "source_url": "https://www.cde.ca.gov/nr/ne/yr22/yr22rel34.asp",
+      "source_date": "2022-06-20",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tonythurmond.com/",
+        "https://reproductivefreedomforall.org/news/naral-pro-choice-california-endorses-slate-reproductive-freedom-champions-reelection-statewide-office/"
+      ],
+      "notes": "Verbatim quote from his 2022 CDE press release endorsing SCA 10. 2026 tonythurmond.com priorities page does not have a dedicated reproductive-rights section, but the CDE record + Regents votes + SCA 10 support are clear pro-expansion signals. Coded 4 because of the 'expand access' language and SCA 10 support; not 5 because no specific new constitutional amendment beyond Prop 1 has been proposed."
+    }
+  ]
+}

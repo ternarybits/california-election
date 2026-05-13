@@ -1,0 +1,131 @@
+{
+  "issue_id": "gun_policy",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "California has the strictest gun laws in the US (assault weapons ban, 10-round magazine limit, may-issue-then-Bruen CCW, ammo background checks, gun-violence-prevention 11% excise tax via AB 28 effective 2024). The race shows the classic CA-2026 cleavage: the two Republicans (Hilton, Bianco) want major rollback toward post-Bruen federal floor, all six Democrats want to hold or expand. Hilton's UK background did NOT moderate him — he ran a UK column comparing post-Las-Vegas gun-control calls to Trump's Muslim ban (2017), and earned an A from California Rifle & Pistol Association in 2026. Hilton announced a specific plan with running-mate AG candidate Michael Gates to issue Day-1 executive orders reviewing every CA gun restriction against Bruen. Bianco is the more clearly anti-restriction of the two — endorsed by the CRPA, Riverside CCW issuance jumped from ~3,000 to >9,000 under his tenure, and he has publicly celebrated the 9th Circuit blocking SB 2. On the Democratic side, Becerra has the strongest record (defended Miller v. Becerra/Bonta assault-weapons ban litigation, joined multi-state coalition defending mag limits) — places him at 4-5. Villaraigosa is also 4-5: was an Assembly co-author of CA's original assault-weapons ban and the cheap-handgun ban, scored 7% from NRA. Porter co-sponsored federal Assault Weapons Ban of 2022 and 2023 and Bipartisan Background Checks Act — 4. Steyer ran a 2019 presidential platform with national gun licensing + assault-weapons ban + national registry — 4-5 if applied to CA. Thurmond's campaign statement names 'weapons of war' explicitly — 4. Mahan is the most ambiguous Democrat: pro-public-safety, supports getting illegal guns off streets and ghost-gun buyback, but voted against San Jose's annual gun-owner fee in 2022 citing constitutionality concerns — places him at 3-4 (hold the line; defend existing laws but skeptical of new municipal-style restrictions). 2026 campaign-specific gun-policy statements from Becerra and Steyer were thin on their websites; relied on AG-era record for Becerra and 2019 presidential platform for Steyer, both flagged with medium confidence for stance specificity. Becerra and Steyer have not published a 2026 gun-policy page as of 2026-05-13.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "gun_policy",
+      "stance": 1,
+      "summary": "Strong rollback. As Day-1 governor, will issue executive order ordering every state agency to review policies for Second Amendment / Bruen compliance, direct his AG (running mate Michael Gates) to enforce uniform statewide CCW issuance, and commission legal review of CA firearm laws for unconstitutional restrictions — implicitly targeting the assault-weapons ban (Miller v. Bonta) and magazine limit (Duncan v. Bonta). Earned 'A' rating from California Rifle & Pistol Association.",
+      "source_quote": "I will issue an executive order directing all state agencies to review their policies, regulations, and enforcement practices to ensure they comply with the Second Amendment and recent Supreme Court rulings... direct the Attorney General to ensure every county in California complies with federal and state concealed carry law, including the standards established by the Supreme Court's decision in New York State Rifle & Pistol Association v. Bruen... conduct a comprehensive review of California's firearm laws to determine which restrictions are unconstitutional under current Supreme Court precedent.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/restoring-second-amendment-rights-in-california/",
+      "source_date": "2026-03-26",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.facebook.com/TheSteveHilton/posts/proud-to-earn-an-a-rating-from-the-california-rifle-pistol-association-newsom-an/1249172650758618/",
+        "https://www.huffingtonpost.co.uk/entry/las-vegas-gun-control-steve-hilton_uk_59d33abfe4b0f96298898a51"
+      ],
+      "notes": "Hilton's UK background does NOT moderate him on guns — his 2017 HuffPost UK piece compared post-Las-Vegas gun-control proposals to Trump's Muslim ban. The CRPA 'A' rating (March 2026) and Trump endorsement confirm full alignment with rollback wing. Source-date '2026-03-26' is approximate for the CRPA Facebook post; policy page itself has no visible publication date."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defense of gun-safety laws. Supports assault-weapons ban, universal background checks, high-capacity-magazine ban, restrictions on ghost guns / 3D-printed / home-manufactured firearms, and a national gun license. 2026 campaign website does not feature a dedicated gun-policy page; stance is inferred from his 2019 presidential gun-violence platform, which campaign has not repudiated.",
+      "source_quote": "Ban high risk weapons, including assault weapons, device modifications, high capacity ammunition magazines, and strengthen laws on untraceable firearms, including ghost guns, 3D printed guns, and home manufactured guns... pass universal background checks by expanding them to private sales and unlicensed sellers and establish waiting periods at the federal level for delivery of guns... Create a national license for all gun ownership.",
+      "source_url": "https://www.presidency.ucsb.edu/documents/steyer-campaign-press-release-tom-steyer-announces-his-plan-end-gun-violence-america",
+      "source_date": "2019-10-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.isidewith.com/candidates/tom-steyer/policies/domestic-policy/gun-control",
+        "https://www.tomsteyer.com/issues"
+      ],
+      "notes": "Steyer's 2026 campaign site lists 10 issue pages (housing, taxes, electricity, etc.) but no gun-policy page. Confidence is medium because 2026-specific statements are scarce; 2019 platform is most detailed primary source and remains his most-cited position. National license + new-assault-weapons ban + registry could push to 5; defaulting to 4 because he has not re-affirmed the registry idea in 2026."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "gun_policy",
+      "stance": 1,
+      "summary": "Significant rollback. Endorsed by California Rifle & Pistol Association. As Riverside sheriff, dramatically expanded CCW issuance (from ~3,000 to >9,000 in two years) and has been the most prominent CA sheriff publicly challenging state gun laws. Celebrated 9th Circuit blocking SB 2 (sensitive-places concealed-carry restriction). Says no firearm law in California keeps people safe; favors severe penalties for criminal use rather than restrictions on lawful owners.",
+      "source_quote": "The Second Amendment is non negotiable. I am very proud to have the endorsement of the California Rifle and Pistol Association representing the 10 million law abiding gun owners in our beautiful state.",
+      "source_url": "https://www.facebook.com/chad.bianco.3/posts/the-second-amendment-is-non-negotiable-i-am-very-proud-to-have-the-endorsement-o/10234826991034921/",
+      "source_date": "2025-12-04",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.foxnews.com/politics/ca-sheriff-blasts-newsoms-anti-2a-pro-criminal-agenda-after-court-blocks-latest-gun-control-law",
+        "https://www.riversidesheriff.org/757/Concealed-Carry-Weapons-Permit",
+        "https://en.wikipedia.org/wiki/Chad_Bianco"
+      ],
+      "notes": "On Fox News (Jan 2024): 'he needs to drop his gun agenda, his anti-2A agenda' (re Newsom). 'I believe that every law-abiding citizen, properly-vetted, should be allowed to carry a concealed firearm if they so choose.' Has not publicly committed to non-enforcement of state assault-weapons ban as governor, but his sheriff-tenure pattern and CRPA endorsement strongly signal a stance-1 rollback orientation."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defender of CA gun laws. As CA Attorney General (2017-2021), personally defended California's assault-weapons ban (Miller v. Becerra/Bonta) and high-capacity-magazine ban; sponsored SB 376 and AB 1669 gun-safety bills; joined 16-state AG coalition arguing 'strong, reasonable gun laws save lives' in defense of NJ magazine limits. 2026 campaign website does not yet feature a dedicated gun-policy page.",
+      "source_quote": "California continues to lead when it comes to implementing common-sense measures that protect our communities from gun violence.",
+      "source_url": "https://oag.ca.gov/news/press-releases/attorney-general-becerra-new-gun-safety-laws-take-important-steps-keep",
+      "source_date": "2019-10-11",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://oag.ca.gov/news/press-releases/attorney-general-becerra-joins-coalition-defending-states%E2%80%99-rights-implement-gun",
+        "https://en.wikipedia.org/wiki/Miller_v._Bonta",
+        "https://www.firearmspolicy.org/meet_xavier_becerra_california_s_new_anti_gun_ag"
+      ],
+      "notes": "Becerra's 2026 priorities (xavierbecerra2026.com) list 8 areas — gun policy is not among them — but his AG record is unambiguous and recent. Stance 4 (not 5) because the documented record is defense of *existing* laws rather than calls for major new expansions; if a campaign expansion plank emerges this could move to 5."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defense / close loopholes. In Congress (CA-45/47), co-sponsored Assault Weapons Ban of 2022 (HR 1808) and 2023 (HR 698), and co-introduced Enhanced Background Checks Act of 2021 to close the 'Charleston loophole.' Endorsed by GIFFORDS. Supports raising firearm purchase age to 21, mandatory waiting periods, national ERPO, gun registration, and permit-to-purchase.",
+      "source_quote": "Congresswoman Porter is committed to advancing common sense reforms to keep families safe from gun violence. As a congresswoman, Porter co-sponsored and voted for the Bipartisan Background Checks Act and helped introduce the Enhanced Background Checks Act of 2021 to close dangerous loopholes in federal firearm laws.",
+      "source_url": "https://giffords.org/candidates/katie-porter/",
+      "source_date": "2024-01-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.congress.gov/bill/118th-congress/house-bill/698/cosponsors",
+        "https://www.congress.gov/bill/117th-congress/house-bill/1808/cosponsors",
+        "https://www.thetrace.org/2023/10/lee-porter-schiff-gun-control-interview/"
+      ],
+      "notes": "Porter's 2026 campaign 'priorities' page lists 12 areas; gun policy is not separately featured. Stance derived from federal congressional record (assault-weapons-ban co-sponsorship, universal background checks, ERPO, registration, permit-to-purchase) — all consistent with stance 4-5. Defaulting to 4 because no 2026-specific new-expansion plank is published; would move to 5 if she publicly endorses, e.g., a state firearms registry or supply-side controls."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "gun_policy",
+      "stance": 3,
+      "summary": "Hold-the-line moderate Democrat. Touts San Jose's 70% gun-violence reduction and frames public safety around getting *illegal* guns off streets, summer-jobs programs, and funding local LE. As San Jose councilmember in 2022 voted *against* the annual gun-owner fee (citing constitutionality and management-structure concerns) while supporting the broader liability-insurance ordinance. Backed San Jose's 'Cash for Ghost Guns' program.",
+      "source_quote": "San Jose is the safest big city in America, but no California community can settle for the status quo. Everyone deserves to be safe, and we'll get there by getting illegal guns off the streets, investing in summer job programs, and funding local law enforcement.",
+      "source_url": "https://x.com/MattMahanSJ/status/2027172557364064559",
+      "source_date": "2025-11-15",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://sanjosespotlight.com/san-jose-could-set-a-precedent-by-requiring-gun-insurance/",
+        "https://thereload.com/san-jose-passes-mandatory-insurance-annual-fee-for-gun-owners/",
+        "https://www.kron4.com/news/bay-area/san-jose-launches-cash-for-ghost-guns-program/"
+      ],
+      "notes": "Stance 3 (not 4) because Mahan emphasizes enforcement-against-illegal-guns framing rather than calling for major new gun restrictions, and his vote against the SJ gun-owner fee suggests he is the most skeptical Democrat in the field toward novel regulatory schemes. He has not opposed existing CA bans. Source-date for the X post is approximate (post ID encodes Nov 2025); the X URL is the canonical primary."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defender of gun-safety laws with a long record. As CA Assembly Speaker, co-authored and helped pass California's landmark assault-weapons ban; banned 'Saturday Night Special' cheap handguns; required safety trigger locks. As LA mayor, member of Mayors Against Illegal Guns and ran a gun-buyback program. Scored 7% from the NRA. Has publicly reaffirmed support for an assault-weapons ban.",
+      "source_quote": "Antonio took on the NRA to pass California's landmark assault weapons ban, banned cheap handguns that put several gun factories out of business, and required safety trigger locks on guns sold in California.",
+      "source_url": "https://www.antonio2026.com/record-of-results",
+      "source_date": "2026-02-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.ontheissues.org/Governor/Antonio_Villaraigosa_Gun_Control.htm",
+        "https://www.antonio2026.com/about-antonio"
+      ],
+      "notes": "The campaign's own 'Record of Results' page features his gun-control work prominently — he is leaning into it as a 2026 credential, unlike some moderate Dems. Stance 4 (not 5) because the documented record is defense of and proud authorship of *existing* CA laws; no specific new-expansion 2026 plank is published. Source-date approximate (page is undated; using his 2026 campaign-launch month)."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defense; framed around school safety and removing 'weapons of war.' As State Superintendent of Public Instruction, deployed federal Mental Health First Aid Grants to schools for gun-violence prevention training and led parent-notification implementation for AB 452 / SB 906 safe-storage laws. 2026 candidate statement on the official Secretary of State voter guide explicitly names 'getting weapons of war off of our streets' as a priority.",
+      "source_quote": "getting weapons of war off of our streets",
+      "source_url": "https://voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm",
+      "source_date": "2026-03-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.cde.ca.gov/nr/el/le/yr23ltr0628.asp",
+        "https://www.tonythurmond.com/"
+      ],
+      "notes": "Quote is brief but explicit — 'weapons of war' is the standard Democratic shorthand for assault-style rifles and signals a 4-stance defense of CA's assault-weapons ban. Confidence medium because the campaign website itself does not include a dedicated gun-policy page; the SoS voter-guide statement is currently the most specific primary source. Source-date approximate (March 2026 voter-guide publication window)."
+    }
+  ]
+}

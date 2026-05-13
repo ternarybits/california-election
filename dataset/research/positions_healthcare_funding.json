@@ -1,0 +1,139 @@
+{
+  "issue_id": "healthcare_funding",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale 1=roll back recent Medi-Cal expansions; 2=hold current system, focus on cost containment; 3=incremental Medi-Cal/ACA expansion, no new broad tax; 4=state single-payer funded primarily by wealth/corporate taxes; 5=state single-payer with broad new taxation (payroll/VAT). IMPORTANT: this issue is about the FUNDING MECHANISM, not in-principle support. Most Democrats in this race say they support single-payer in principle; the real differentiation is whether they specify HOW to pay for it. Per the KFF Health News May 8 2026 piece, 'In California Governor Race, Single-Payer Is a Litmus Test. There's Still No Way To Pay for It' — and per CalMatters' March 4 2026 single-payer survey — no candidate in this field has endorsed a specific payroll tax for CalCare. Steyer dodged with 'God is going to be in the details'; Porter says single-payer 'saves billions' but specifies no funding mechanism; Becerra has materially softened his single-payer support after winning the CMA endorsement (LAist/KQED May 1 2026); Villaraigosa and Mahan oppose state single-payer as unaffordable; Thurmond is the only candidate endorsing a specific NEW broad-base revenue source tied to healthcare — the California Billionaire Tax Act (one-time 5% on ~200 California billionaires) — which lands him at stance 4. Hilton and Bianco want to roll back Medi-Cal expansion for undocumented adults (stance 1). On the CalCare yes/no question: Porter committed unconditionally ('deliver single-payer'), Steyer committed unconditionally ('I will die on this hill'), but neither named a funding source. AB 1400 / CalCare cost estimates cited in reporting range from $391B to $731B/yr. Per the May 8 2026 KFF piece, federal cooperation is required (Medicaid/Medicare waiver) and is not forthcoming under the Trump administration — most candidates lean on this to defer the funding question.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "healthcare_funding",
+      "stance": 1,
+      "summary": "Hilton opposes single-payer (cites UK experience: 'subpar patient care and taxes sky high') and wants to roll back Medi-Cal eligibility for undocumented adults, which he calls a $20B/yr line item the state can't afford. He proposes large income-tax cuts that would reduce Medi-Cal funding, with promised offsets from 'waste and fraud' enforcement. No engagement with CalCare/AB 1400 financing because he rejects the underlying program.",
+      "source_quote": "The actual way we deal with healthcare in this state is to at least stop spending $20 billion a year on free healthcare for illegal immigrants who shouldn't even be in the country.",
+      "source_url": "https://www.foxnews.com/politics/watch-california-dems-rally-around-healthcare-illegal-immigrants-fiery-debate",
+      "source_date": "2026-05-05",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+        "https://www.cnn.com/2026/05/05/politics/takeaways-cnn-california-governor-debate",
+        "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/"
+      ],
+      "notes": "Stance 1 (rather than 2) because Hilton explicitly campaigns on rolling back the 2024 Medi-Cal expansion to undocumented adults — that is the recent expansion this scale references. His CNN-debate analogy comparing CalCare to the UK NHS ('taxes sky high to pay for it') confirms he rejects payroll/wealth-tax financing too. Multiple debate venues and the CBS News immigrant healthcare piece corroborate."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "healthcare_funding",
+      "stance": 4,
+      "summary": "Steyer is the race's most vocal single-payer champion and the only Democrat besides Porter to commit unconditionally to CalCare. He has won the California Nurses Association endorsement on this basis. On funding, he names only one concrete source: closing a corporate tax loophole worth roughly $20B/yr — orders of magnitude short of the $400-731B/yr cost estimates. Pressed for details by KFF Health News, he said 'God is going to be in the details.' He has not endorsed a payroll tax.",
+      "source_quote": "I will die on this hill. ... God is going to be in the details.",
+      "source_url": "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+      "source_date": "2026-05-08",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues",
+        "https://calmatters.org/politics/2026/03/california-governor-single-payer-health-care/",
+        "https://sfist.com/2026/04/18/porter-steyer-and-becarra-push-for-single-payer-health-care-in-their-campaigns-for-governor/",
+        "https://www.pressdemocrat.com/2026/05/07/democratic-candidates-revive-single-payer-promise-as-californias-healthcare-system-faces-strain/"
+      ],
+      "notes": "Placed at 4 rather than 5 because the only concrete revenue source he has publicly named is a corporate-tax-loophole closure (~$20B). He has explicitly NOT endorsed a payroll tax (which would put him at 5), and the CNA-backed Kalra bill (AB 1400 lineage) defers funding decisions to the Legislature. Confidence medium because he has been deliberately vague on financing — could land at 5 if he eventually accepts a payroll-tax frame, or drift toward 3 in office if no funding plan materializes. The 'God is going to be in the details' line is widely cited and a defining moment of the campaign."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "healthcare_funding",
+      "stance": 1,
+      "summary": "Bianco opposes Medi-Cal coverage for undocumented immigrants ('they shouldn't be here', warns against 'incentivizing illegal entry with benefits'), and his broader platform pairs sweeping tax elimination (income tax, gas tax) with deregulation — leaving no room for a state single-payer expansion. Healthcare is not a featured issue on his campaign site; his only on-record healthcare positions are about restricting Medi-Cal eligibility.",
+      "source_quote": "They enter the country illegally, we're not going to incentivize them to come here to take more of the resources that regular Californians aren't getting.",
+      "source_url": "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/",
+      "source_date": "2026-05-05",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.foxnews.com/politics/watch-california-dems-rally-around-healthcare-illegal-immigrants-fiery-debate",
+        "https://biancoforgovernor.com/",
+        "https://ktla.com/news/politics/inside-california-politics/california-gubernatorial-candidate-chad-bianco/"
+      ],
+      "notes": "Stance 1 with medium confidence: Bianco has not laid out a comprehensive healthcare plan on his campaign site, so this is partly inference from his immigration/Medi-Cal posture and tax-cut platform. He did soften slightly on the debate stage (recipients in asylum/residency proceedings could be covered IF they 'had to be working'), which prevents him from being a pure 1, but he otherwise frames the 2024 undocumented-adult expansion as a fiscal target. No evidence he supports any version of CalCare."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "healthcare_funding",
+      "stance": 3,
+      "summary": "Becerra was a longtime single-payer advocate in Congress and as HHS Secretary, and his campaign site still says he will 'build toward a universal, single-payer CalCare system.' But after winning the California Medical Association endorsement, he materially softened: per CMA leadership, 'at this point, he wasn't supportive of single payer'; his spokesperson said 'a single payer system is the right goal — but it's not possible under this administration.' On the May 5 debate stage, when Porter directly asked whether he supports CalCare yes-or-no, he refused to answer and pivoted to Medicare for All. He names no California funding mechanism; his immediate priority is backfilling the ~$9.5B/yr Trump 'Big Beautiful Bill' cut to Medi-Cal — i.e. incremental Medi-Cal preservation, no new broad tax.",
+      "source_quote": "A single payer system is the right goal — but it's not possible under this administration, and right now we have a crisis on our hands.",
+      "source_url": "https://laist.com/news/politics/xavier-becerra-backpedals-on-single-payer-as-he-woos-powerful-doctors-lobby",
+      "source_date": "2026-05-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/health-care/",
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+        "https://www.kqed.org/news/12082059/xavier-becerra-backpedals-on-single-payer-as-he-woos-powerful-doctors-lobby",
+        "https://laist.com/news/politics/2026-election-california-primary-xavier-becerra-california-governor-transcript"
+      ],
+      "notes": "Per the user's framing: 'A candidate who says I support single-payer when we can afford it but won't endorse a specific funding source is effectively stance 3.' That fits Becerra exactly post-CMA-endorsement. He knows the federal-waiver and ERISA constraints intimately ('We cannot enact in California a system of single payer' without federal law changes — LAist transcript) and frames the practical agenda as Medi-Cal cost-containment (standardizing billing codes, eliminating prior authorization), incremental coverage expansion, and reviewing the tax code for billionaire fairness — not a CalCare payroll tax. Confidence high — well documented across KQED, LAist, KFF, and the debate transcript."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "healthcare_funding",
+      "stance": 4,
+      "summary": "Porter is one of two candidates (with Steyer) to commit unconditionally to delivering CalCare. Her campaign site says single-payer 'will deliver the highest quality AND most cost-effective care to the MOST people' and 'reports estimate it will save California billions in healthcare costs every year.' She argues the system needs 'a good federal partner' to be feasible. On funding she has been less specific than Steyer — her single-payer page names no specific tax — but she has separately endorsed taxing large corporations and CEO-pay-ratio measures. Her spokesperson did not respond to KFF when asked how she would actually pay for CalCare.",
+      "source_quote": "I have never wavered in my support for Medicare for All ... [single payer / CalCare] will deliver the highest quality AND most cost-effective care to the MOST people.",
+      "source_url": "https://katieporter.com/priority/single-payer-health-care/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+        "https://calmatters.org/politics/2026/03/california-governor-single-payer-health-care/",
+        "https://sfist.com/2026/04/18/porter-steyer-and-becarra-push-for-single-payer-health-care-in-their-campaigns-for-governor/",
+        "https://www.cnn.com/2026/05/05/politics/takeaways-cnn-california-governor-debate"
+      ],
+      "notes": "Placed at 4 because (a) she unconditionally commits to CalCare on her campaign site, (b) her broader tax platform leans on higher corporate taxes (not a broad payroll tax), and (c) she has not endorsed a payroll-tax frame, which would land her at 5. There is real risk she belongs at 3 given that as recently as 2025 she declined to commit on feasibility grounds, and her campaign refused KFF's funding-mechanism question — but her current public commitment to deliver CalCare and her corporate-tax lean justifies 4 over 3. Confidence medium."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "healthcare_funding",
+      "stance": 3,
+      "summary": "Mahan does not support state single-payer. His healthcare platform is workforce- and access-focused: expand telehealth, allow out-of-state providers, let nurses and nurse practitioners practice at the top of their license, strengthen workforce incentives, and improve services in underserved regions. He accepts that California cannot fully backfill the Trump Medi-Cal cuts ('the magnitude of the Trump cuts is so great that we won't be able to fully do that'), implying he will manage within existing revenue rather than pursue a major new health tax. He proposes no new broad-base tax to fund healthcare.",
+      "source_quote": "The magnitude of the Trump cuts is so great that we won't be able to fully do that.",
+      "source_url": "https://asianjournal.com/usa/california/california-governors-race-2026-a-silicon-valley-mayor-courts-californias-immigrant-communities-and-the-states-diverse-voters/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://timesofsandiego.com/politics/2026/05/09/in-california-governor-race-single-payer-is-a-litmus-test-theres-still-no-way-to-pay-for-it/",
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+        "https://www.cnn.com/2026/05/03/politics/matt-mahan-california-governor-democrats-gavin-newsom"
+      ],
+      "notes": "Stance 3 (incremental, no new broad tax). The Times of San Diego / KFF reporting groups him with Villaraigosa as Democrats who explicitly do not support state single-payer. His Mahan-brand 'data-driven moderate' framing and Silicon Valley donor base point away from payroll- or wealth-tax financing. No evidence he wants to roll back Medi-Cal expansion (so not 1-2). Confidence medium because his campaign has emphasized housing/homelessness/public safety over healthcare specifics, so most of this is reported positioning rather than a written healthcare plan."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "healthcare_funding",
+      "stance": 3,
+      "summary": "Villaraigosa frames healthcare as a right and supports universal coverage in principle, but rejects state single-payer as fiscally and politically unrealistic — he called CalCare 'pie in the sky' on the debate stage and estimates it at ~$500B/yr requiring federal approval that won't come from the Trump administration. His Affordable California plan instead proposes a 'Golden Choice' public option through Covered California, the existing Office of Health Care Affordability for cost containment, prescription-drug cost cuts, medical-debt relief, and primary-care investment. He explicitly commits to 'hold the line on taxes' and pledges to veto 'reckless multi-billion-dollar tax hikes,' which rules out any new broad health-financing tax.",
+      "source_quote": "Coverage without affordability is an empty promise. ... I will hold the line on taxes and veto any reckless multi-billion-dollar tax hike on middle-class families.",
+      "source_url": "https://www.antonio2026.com/plan",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/health/2025/11/gubernatorial-health-care-california-2026/",
+        "https://www.foxnews.com/politics/watch-california-dems-rally-around-healthcare-illegal-immigrants-fiery-debate",
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/"
+      ],
+      "notes": "Stance 3 (incremental + cost containment, no new broad tax). He goes meaningfully further on cost containment than a pure stance-2 candidate — public option, drug pricing, medical-debt relief — but his explicit 'hold the line on taxes' veto pledge means he cannot be placed at 4 or 5. Distinguishable from Hilton/Bianco because he does not propose rolling back the 2024 undocumented-adult Medi-Cal expansion (notes that CA already pays for ER care). Confidence high — his plan is one of the most detailed in the field."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "healthcare_funding",
+      "stance": 4,
+      "summary": "Thurmond supports a state-run single-payer system to 'remove profit from healthcare' and is the only candidate in the field who has endorsed a specific NEW broad-base revenue source tied to healthcare: the California Billionaire Tax Act, a one-time 5% tax on the ~200 California residents with a net worth over $1B, projected to raise up to $100B for health care, education, and food assistance. He has separately floated taxing assets above $150M to fund tax credits. He supports continued Medi-Cal coverage for undocumented Californians and frames healthcare in personal terms (his brother died at 35 after losing insurance). He has not endorsed a payroll tax.",
+      "source_quote": "No person should lose their life simply because they don't have health insurance.",
+      "source_url": "https://www.immigrantmagazine.com/california-governors-race-inside-tony-thurmonds-bold-plan-on-housing-healthcare-and-immigration/",
+      "source_date": "2026-05-03",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+        "https://www.tonythurmond.com/priorities",
+        "https://calmatters.org/health/2025/11/gubernatorial-health-care-california-2026/",
+        "https://ballotpedia.org/California_One-Time_Wealth_Tax_for_State-Funded_Healthcare,_Education,_and_Food_Assistance_Programs_Initiative_(2026)"
+      ],
+      "notes": "Clean fit for stance 4: state single-payer + endorsement of a specific wealth-tax revenue mechanism (the Billionaire Tax Act), with no payroll tax. He is the only candidate in the field where the funding mechanism is concretely tied to a named ballot initiative. Note the $100B one-time revenue is still far short of the ~$400-731B/yr CalCare cost estimates — so this is best understood as the most aggressive proposed broad-base health-financing source in the field, not a complete CalCare pay-for. Confidence high — multiple independent outlets confirm the Billionaire Tax Act endorsement."
+    }
+  ]
+}

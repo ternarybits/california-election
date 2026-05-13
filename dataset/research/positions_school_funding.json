@@ -1,0 +1,130 @@
+{
+  "issue_id": "school_funding",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1=significantly cut, 2=hold/modestly trim, 3=maintain current, 4=modest increases (teacher pay, facilities), 5=major new funding via dedicated tax or bond. The EdSource (2026-05-03) and Local News Matters (2026-05-03) coverage of the CBS gubernatorial education debate was the single most useful Tier-2 triangulation source — it explicitly bucketed Democrats (more funding) vs. Republicans (cut waste, no new money). Thurmond is by far the most-detailed voice on this issue (his CDE statement on Newsom's 2026-27 budget plus his billionaire-tax revenue plan and Literacy Moonshot). Becerra and Villaraigosa are the two with the thinnest current-cycle public record on K-12 funding levels: Becerra's campaign priorities page does not list education at all (as of 2026-05-13), and Villaraigosa's 2026 site emphasizes his record (LAUSD turnaround, per-pupil increases as Assembly Speaker) rather than a stance on new spending. Where a candidate's spend/cut stance was clearly inferable from their broader fiscal framing but not literally quoted, I marked confidence medium and recorded the inference in notes.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "school_funding",
+      "stance": 2,
+      "summary": "Hilton argues California already spends more than $22,000 per student and that outcomes are a leadership and accountability problem, not a funding problem. His K-12 plan explicitly does not require more spending; he would instead expand school choice through Education Savings Accounts (starting with low-income and special needs students), grade every school and teacher, weaken tenure (5-year minimum), and let parents trigger charter conversion of failing schools.",
+      "source_quote": "California spends more than $22,000 per student each year, among the highest in the nation, yet outcomes continue to decline. This is not a funding problem. It is a leadership and accountability problem... This approach does not require more spending. It requires a new focus on results.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/steve-hiltons-plan-to-fix-public-education-by-3rd-grade/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/"
+      ],
+      "notes": "Stance 2 (hold or modestly trim) is the best fit: he is not promising literal cuts to Prop 98, but he explicitly says no new money is needed, wants ESAs (which divert dollars from district schools), and the EdSource/Local News Matters debate writeup bucketed him with Bianco as Republicans who 'say schools don't need more funding and should cut wasteful spending.' If he leaned into ESAs aggressively this could move to stance 1, but the published plan stops short of net cuts."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "school_funding",
+      "stance": 5,
+      "summary": "Steyer would raise up to $50 billion in new revenue by closing corporate tax loopholes (including a commercial Prop 13 split-roll reform) and taxing wealthy individuals, splitting it between health care and education. He pairs that with explicit teacher-pay increases for recruitment and retention, universal free school meals year-round, and pre-K starting at age 3 — and notes California ranks 31st in the nation in per-pupil funding adjusted for cost of living.",
+      "source_quote": "Steyer has proposed investing more money in public schools and increasing teacher pay to help recruit and retain them... He says he'll generate up to $50 billion in new revenue by raising taxes on corporations and wealthy individuals, with funds split between health care and education.",
+      "source_url": "https://edsource.org/2026/california-governors-education-debate/756626",
+      "source_date": "2026-05-03",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/education",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/",
+        "https://www.cta.org/press-release/california-teachers-association-recommends-tom-steyer-for-california-state-governor"
+      ],
+      "notes": "Stance 5 (major new funding via dedicated tax) is the cleanest fit because Steyer ties new K-12 dollars to a specific revenue mechanism (corporate loophole closure, Trump-loophole closure, commercial Prop 13 reform). CTA endorsement reinforces alignment with teacher-pay increases."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "school_funding",
+      "stance": 2,
+      "summary": "Bianco argues California already spends more on education than any other state with the lowest results, so the answer is redirecting dollars (to teachers, classrooms, training, recruitment, career-technical education, and charter schools), not adding more. He wants school funding to go 'directly to teachers, students, and the classroom' and rolls in a school-resource-officer mandate and repeal of AB 1955.",
+      "source_quote": "California spends more on education than any other state, and yet we see some of the lowest metrics of success and student learning... Ensure school funding goes directly to teachers, students, and the classroom.",
+      "source_url": "https://biancoforgovernor.com/education",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/"
+      ],
+      "notes": "Stance 2: he does not call for outright cuts, but he is explicit that no new K-12 dollars are needed and frames current spending as wasteful. He does say increase 'funding for teacher training and recruitment programs' specifically, which keeps him from a 1; this is targeted reallocation, not net new investment."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "school_funding",
+      "stance": "unknown",
+      "summary": "As of mid-May 2026, Becerra's campaign priorities page lists eight issue areas (Health Care, Fighting Donald Trump, Housing, Economy & Affordability, Energy & Utilities, Disaster Preparedness, AI, Homelessness) and K-12 education is not among them. He has historical credit for defending federal pandemic K-12 funds in court as AG and for expanding Head Start teacher pay as HHS Secretary, but no current-cycle K-12 spending level proposal has been published. EdSource's debate writeup explicitly noted his absence from the K-12 funding discussion.",
+      "source_quote": "Education is notably absent from this priorities section. [The eight listed priorities are: Health Care, Fighting Donald Trump, Housing, Economy & Affordability, Energy & Utilities, Disaster Preparedness & Resilience, Artificial Intelligence, Homelessness.]",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/",
+      "source_date": "2026-05-12",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://www.calfac.org/cfa-makes-dual-endorsement-for-california-governor/"
+      ],
+      "notes": "Marked unknown per the spec when a candidate has not addressed the issue. He has CFA (higher-ed faculty) endorsement, which is suggestive but is about higher ed, not K-12 funding levels. If a K-12 plan drops between now and June, expect a Democratic-baseline stance 4 — but that should be re-researched, not inferred."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "school_funding",
+      "stance": 4,
+      "summary": "Porter's published campaign priorities center on tuition-free public universities (paid for by closing corporate tax loopholes / raising corporate taxes) and childcare, not on a specific K-12 dollar number. EdSource grouped her with Democrats who support increased K-12 funding through corporate taxes, but she has not published a Prop 98-scale or dedicated-bond K-12 plan as Steyer and Thurmond have.",
+      "source_quote": "Porter: tuition-free state universities for California residents by raising corporate taxes... Democratic candidates largely agree that schools need more funding while Republicans disagree.",
+      "source_url": "https://edsource.org/2026/california-governors-education-debate/756626",
+      "source_date": "2026-05-03",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://katieporter.com/priorities/",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/"
+      ],
+      "notes": "Stance 4 (modest increases) is the best fit given (a) the Democratic baseline she shares per EdSource, (b) her teacher background and Warren-style consumer-protection framing, and (c) the absence of a dedicated K-12 tax/bond proposal that would justify stance 5. If she publishes a K-12 plan with a specific revenue source, revisit."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "school_funding",
+      "stance": 4,
+      "summary": "Mahan, a former Teach for America middle-school teacher, frames K-12 as a 'five-alarm fire' on test scores and would invest in high-dosage tutoring, evidence-based phonics literacy curricula, and performance-linked teacher rewards/coaching. As a moderate Democrat he opposes new broad-based taxes and emphasizes accountability and outcomes over raw spending levels; his vision references using existing tax revenue for schools and a 'shared prosperity fund.'",
+      "source_quote": "As governor, I would set clear goals for literacy—closing racial gaps and getting all students reading at grade level—because reading proficiency opens doors to opportunity... Evidence-based instruction like phonics improves literacy. Tracking student progress and providing targeted tutoring when students fall behind works.",
+      "source_url": "https://sdvoice.info/qa-with-matt-mahan-gubernatorial-candidate-has-clear-goals-for-childhood-literacy-improving-the-lives-of-working-families/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/"
+      ],
+      "notes": "Stance 4 reflects: targeted new investment (tutoring, literacy coaching) without a dedicated new revenue mechanism. He is more skeptical of net new state K-12 spending than Steyer/Thurmond and more interested in performance-pay reform than the CTA-aligned Democrats. Could arguably be stance 3 if you weight the no-new-taxes posture heavily; I picked 4 because his published proposals (high-dosage tutoring at scale, evidence-based curricula adoption with district accountability) cost real money."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "school_funding",
+      "stance": 4,
+      "summary": "Villaraigosa positions himself as the 'education governor,' citing his Assembly Speaker record of 'record investments in public schools,' significantly increased per-pupil funding, class-size reduction, and a 'historic bipartisan school bond' to repair and build schools — plus the LAUSD turnaround. On the 2026 trail his focus is outcomes and dual enrollment / career-technical education rather than a new dedicated tax, and he stresses California is 'No. 1 in teacher pay' but '21st in per-pupil spending' and 'dead last in graduation.'",
+      "source_quote": "Made record investments in public schools, including the largest single allocation of school safety funds in state history... Significantly increased per pupil funding in public schools... Passed historic bipartisan school bond to repair old schools and build new schools.",
+      "source_url": "https://www.antonio2026.com/record-of-results",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+        "https://www.the74million.org/article/i-will-be-the-education-governor-former-l-a-mayor-antonio-villaraigosa-recaps-k-12-track-record-and-looks-ahead-to-statewide-education-priorities-at-special-childrens-forum/"
+      ],
+      "notes": "Stance 4 reflects modest funding increases (especially facilities via bonds, dual enrollment, career-tech) without a Steyer-scale dedicated tax mechanism. Most of his public language is about doing more with current dollars and closing achievement gaps; he is the candidate most likely to revive a school facilities bond. If he publishes a billionaire-tax-for-schools proposal, revisit toward 5."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "school_funding",
+      "stance": 5,
+      "summary": "As the sitting Superintendent of Public Instruction, Thurmond has the most developed K-12 funding posture: he criticized Newsom's 2026-27 budget as 'falling short of funding levels and meaningful reforms needed to truly accelerate student achievement,' opposed Newsom's plan to shift TK-12 governance away from his elected office, called out California's reliance on average daily attendance for school revenue, and is running on closing tax loopholes and taxing billionaires (he endorses the California Billionaire Tax Act / a tax on residents with >$150M in assets) to fund education. He is also pushing a $10B affordable-housing bond aimed partly at educator/public-worker housing on surplus school land, and a five-year 'Literacy Moonshot.'",
+      "source_quote": "[The budget proposal] falls short of funding levels and meaningful reforms needed to truly accelerate student achievement... [The governance proposal] shifts authority to implement TK-12 education programs away from the official who California voters have elected to lead our state's public schools.",
+      "source_url": "https://www.cde.ca.gov/nr/ne/yr26/yr26rel02.asp",
+      "source_date": "2026-01-08",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://thecollegeinvestor.com/78544/tony-thurmond-backs-billionaire-tax-for-k-14-schools-as-he-runs-for-california-governor/",
+        "https://www.kpbs.org/news/politics/2026/05/11/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race",
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://www.cde.ca.gov/nr/ne/yr26/yr26rel01.asp"
+      ],
+      "notes": "Stance 5 (major new funding via dedicated tax or bond) is unambiguous: Thurmond is publicly tying K-14 funding to a billionaire wealth tax, has an active state-superintendent record of pushing for more than the Governor proposed, and explicitly opposes shifting K-12 governance authority out of the elected SPI office. He is also the most LCFF-fluent voice in the field and the most likely to push for an ADA-to-enrollment funding-base shift."
+    }
+  ]
+}

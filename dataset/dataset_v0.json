@@ -4232,6 +4232,629 @@
         "https://www.kqed.org/voterguide/california/governor"
       ],
       "notes": "Thurmond is a Richmond / East Bay Democrat with progressive endorsements and a Bay Area regional base that generally opposes the Delta Conveyance Project; the directional prior is tunnel-skeptical (likely 3 or 4). But absent any direct quote, marking unknown is the responsible call. Recommend re-research after the June primary when policy positions typically firm up. Source date is access date."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "abortion",
+      "stance": 2,
+      "summary": "Calls abortion 'an awful, awful outcome' and wants policies that reduce demand. Would allow Louisiana to extradite a Bay Area abortion provider despite CA shield laws; opposes public funding for out-of-state patients ('abortion tourism'). Acknowledges Prop 1 passed and does not propose overturning it, but would cooperate with anti-abortion states and roll back CA's sanctuary posture.",
+      "source_quote": "Louisiana is trying to uphold what its people voted for, and California is undermining it. And I don't think that's right. Just as I wouldn't want to see Louisiana coming in and undermining something that we voted for here in California.",
+      "source_url": "https://www.kqed.org/news/12071206/gop-candidate-steve-hilton-would-extradite-california-abortion-doctor-to-louisiana",
+      "source_date": "2026-01-27",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://reproductivefreedomforall.org/news/ahead-of-tonights-debate-steve-hilton-will-allow-the-criminalization-of-doctors-who-provide-reproductive-healthcare/",
+        "https://reproductivefreedomforall.org/news/california-gubernatorial-debate-leaves-steve-hiltons-plan-to-let-anti-abortion-states-extradite-california-doctors-unanswered/"
+      ],
+      "notes": "On Political Breakdown (KQED, Jan 2026), Hilton said he would 'enforce the law' referring to Louisiana's abortion law against a CA doctor. In an earlier interview with pastor Jack Hibbs he called abortion an 'awful, awful outcome' and emphasized adoption. Position is anti-abortion in posture but constrained by Prop 1; cooperating with other states' enforcement and cutting AB 1666-style funding is the actual restrictive lever — hence stance 2."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "abortion",
+      "stance": 4,
+      "summary": "Treats abortion as healthcare and a fundamental right; founded NextGen America which campaigns on reproductive rights. Has explicitly called Hilton's extradition position 'insanity' and 'disqualifying.' Strong pro-choice defender; no specific 2026 expansion-of-funding proposal located.",
+      "source_quote": "Abortion is healthcare and reproductive choice is an issue that affects all gender and sexual identities. We should not stop shouting it from the rooftops.",
+      "source_url": "https://x.com/tomsteyer/status/1136323518633840640",
+      "source_date": "2019-06-05",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.facebook.com/officialtomsteyer/posts/this-is-insanity-and-its-disqualifying-abortion-is-health-care-by-signaling-he-w/1431222918365050/",
+        "https://www.nbcnews.com/politics/2026-election/tom-steyer-unexpected-alliance-progressives-california-governor-race-rcna342878"
+      ],
+      "notes": "Steyer's tomsteyer.com/issues page does not have a dedicated reproductive rights section (focuses on housing, taxes, energy, AI, healthcare, ICE). Confidence medium because primary 2026-campaign-cycle reproductive-rights statement is a Facebook reaction post rather than an issues-page commitment. Coded 4 (strong defense) based on lifetime record and DSA-aligned progressive coalition; not 5 because no major expansion proposal beyond Prop 1 has been articulated."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "abortion",
+      "stance": 1,
+      "summary": "Explicitly anti-abortion. Says 'life begins at conception' and 'I do not believe that an abortion is healthcare.' Would not fund Planned Parenthood as governor. Faith-driven (evangelical) conviction. Limited by Prop 1 from enacting a CA ban, but would strip state funding and end sanctuary-state policies.",
+      "source_quote": "I do not believe that an abortion is healthcare.",
+      "source_url": "https://www.kqed.org/news/12081096/riverside-county-sheriff-chad-bianco-on-his-faith-cutting-taxes-and-ballot-seizure",
+      "source_date": "2026-04-23",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://en.wikipedia.org/wiki/Chad_Bianco",
+        "https://www.pbs.org/video/chad-bianco-on-running-for-governor-politics-are-destroying-this-state-dlz7gv/"
+      ],
+      "notes": "On KQED's Political Breakdown podcast (April 2026) Bianco said abortion is not healthcare, would defund Planned Parenthood, and on a separate occasion stated 'life begins at conception.' Stance 1 — most restrictive available; he has not proposed a specific CA gestational ban (constitutionally precluded by Prop 1), but his policy posture is to restrict by every available means (defunding, ending sanctuary cooperation)."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "abortion",
+      "stance": 4,
+      "summary": "Longest pro-choice public-office record in the field. As CA AG sued Trump 1.0 over abortion access and Title X gag rule; as HHS Secretary directed Planned Parenthood Title X funding to clinics. Campaign explicitly commits to expanding access. Endorsed by Planned Parenthood Affiliates of California (April 2026).",
+      "source_quote": "As the husband of a high-risk Ob-Gyn, I know that abortion access is health care. … As Governor, I will ensure that California continues to lead when it comes to protecting access to abortion, to the ballot, and to live and love without restraint.",
+      "source_url": "https://www.xavierbecerra2026.com/",
+      "source_date": "2026-04-24",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.plannedparenthoodaction.org/planned-parenthood-affiliates-california/press/planned-parenthood-affiliates-of-california-endorses-xavier-becerra-for-governor",
+        "https://www.cnn.com/2026/04/28/politics/xavier-becerra-california-governor"
+      ],
+      "notes": "Coded 4 (strong defense / expand access) rather than 5 because campaign rhetoric emphasizes 'continue to lead' and protecting existing access more than a specific new constitutional amendment beyond Prop 1. Track record makes him arguably the strongest pro-choice candidate in the field; PPAC endorsement reinforces this. Could justify 5 with verbatim expansion proposal — none located by 2026-05-13."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "abortion",
+      "stance": 4,
+      "summary": "Long-standing pro-choice voice; says she 'first ran for Congress to stand up for women's rights and our access to reproductive health care.' Frames reproductive rights as inseparable from women's economic equality. EMILY's List endorsed her in April 2026. Commits to keeping CA a state that 'protects and defends abortion rights.'",
+      "source_quote": "The attacks on abortion access and reproductive rights from extremists in Washington must end. … California must remain a state that protects and defends abortion rights and when I'm Governor we will.",
+      "source_url": "https://katieporter.com/priority/protecting-healthcare/",
+      "source_date": "2026-04-17",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://emilyslist.org/news/memo-katie-porter-offers-the-strongest-path-to-victory-in-california/",
+        "https://www.thepinknews.com/2025/03/12/katie-porter-california-governor-race/"
+      ],
+      "notes": "Stance 4 — strong defense framing; no specific new constitutional amendment proposal located. Campaign issue page url confirmed live; date approximated to EMILY's List endorsement memo for verifiable cycle reference."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "abortion",
+      "stance": 3,
+      "summary": "States he is pro-choice and supports taxpayer-funded abortion. As San Jose mayor has appeared with Planned Parenthood for clinic openings. Record has been criticized as inconsistent — his prior tech company stayed neutral on abortion, drawing 2022 mayoral-race criticism. No new abortion-expansion proposal in 2026 gubernatorial materials; campaign focused on housing, public safety, homelessness.",
+      "source_quote": "I am pro-choice and support taxpayer funded abortion, and I've never said anything to the contrary.",
+      "source_url": "https://sanjosespotlight.com/san-jose-mayor-candidate-councilmember-matt-mahan-criticized-over-past-comments-supervisor-cindy-chavez-pro-choice-abortion-election-2022/",
+      "source_date": "2022-07-16",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.audacy.com/kcbsradio/news/local/ad-targets-san-jose-mayoral-candidates-abortion-stance",
+        "https://www.mahanforcalifornia.com/"
+      ],
+      "notes": "Primary on-the-record verbatim is from 2022 mayoral cycle; 2026 governor campaign site does not feature a reproductive-rights issue page. Coded 3 (hold current CA protections) rather than 4 because (a) the 2026 campaign hasn't pushed expansion rhetoric and (b) past inconsistency means there's no strong signal of leadership on expanding access. Confidence medium — could be 4 if updated 2026-cycle statements surface."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "abortion",
+      "stance": 3,
+      "summary": "Pro-choice; frames reproductive freedom as economic justice. In 2018 said he 'would be the strongest defender of a woman's right to choose'; said he would have signed the Reproductive Health Nondiscrimination Act if governor. 2026 campaign materials focus on affordability, housing, public safety — no dedicated reproductive-rights issue page found.",
+      "source_quote": "The issue of reproductive freedom is really an issue of economic justice. … all four of us would be the strongest defenders of a woman's right to choose and for protecting reproductive health care choices for women.",
+      "source_url": "https://www.ontheissues.org/Governor/Antonio_Villaraigosa_Abortion.htm",
+      "source_date": "2018-01-23",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.courthousenews.com/top-california-democrats-agree-on-abortion-rights/",
+        "https://www.antonio2026.com/"
+      ],
+      "notes": "Verbatim quotes are from the 2018 NARAL Pro-Choice California gubernatorial forum, not 2026 campaign materials; his antonio2026.com/issues page does not address abortion. Coded 3 because: (a) consistent lifetime pro-choice record but (b) positioned as one of the more moderate Democrats in the 2026 field and has not articulated 2026 expansion proposals. Could be 4 with a verbatim 2026 statement; confidence medium."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "abortion",
+      "stance": 4,
+      "summary": "Long pro-choice record; as State Superintendent endorsed SCA 10 (the precursor to Prop 1) to constitutionally protect abortion and contraception. As UC Regents ex-officio voted to protect comprehensive reproductive and LGBTQ-inclusive healthcare at UC facilities. As legislator and social worker says he has 'always supported measures that expand access to reproductive health care services.' Progressive lane of the 2026 field.",
+      "source_quote": "As a state legislator, a social worker, and now State Superintendent, I have always supported measures that expand access to reproductive health care services. At a time where we see constitutional rights being undermined at a federal level, and with the fall of Roe v. Wade now imminent, we, as Californians, must secure these rights for our state, leading the way and setting an example for the nation.",
+      "source_url": "https://www.cde.ca.gov/nr/ne/yr22/yr22rel34.asp",
+      "source_date": "2022-06-20",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tonythurmond.com/",
+        "https://reproductivefreedomforall.org/news/naral-pro-choice-california-endorses-slate-reproductive-freedom-champions-reelection-statewide-office/"
+      ],
+      "notes": "Verbatim quote from his 2022 CDE press release endorsing SCA 10. 2026 tonythurmond.com priorities page does not have a dedicated reproductive-rights section, but the CDE record + Regents votes + SCA 10 support are clear pro-expansion signals. Coded 4 because of the 'expand access' language and SCA 10 support; not 5 because no specific new constitutional amendment beyond Prop 1 has been proposed."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "gun_policy",
+      "stance": 1,
+      "summary": "Strong rollback. As Day-1 governor, will issue executive order ordering every state agency to review policies for Second Amendment / Bruen compliance, direct his AG (running mate Michael Gates) to enforce uniform statewide CCW issuance, and commission legal review of CA firearm laws for unconstitutional restrictions — implicitly targeting the assault-weapons ban (Miller v. Bonta) and magazine limit (Duncan v. Bonta). Earned 'A' rating from California Rifle & Pistol Association.",
+      "source_quote": "I will issue an executive order directing all state agencies to review their policies, regulations, and enforcement practices to ensure they comply with the Second Amendment and recent Supreme Court rulings... direct the Attorney General to ensure every county in California complies with federal and state concealed carry law, including the standards established by the Supreme Court's decision in New York State Rifle & Pistol Association v. Bruen... conduct a comprehensive review of California's firearm laws to determine which restrictions are unconstitutional under current Supreme Court precedent.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/restoring-second-amendment-rights-in-california/",
+      "source_date": "2026-03-26",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.facebook.com/TheSteveHilton/posts/proud-to-earn-an-a-rating-from-the-california-rifle-pistol-association-newsom-an/1249172650758618/",
+        "https://www.huffingtonpost.co.uk/entry/las-vegas-gun-control-steve-hilton_uk_59d33abfe4b0f96298898a51"
+      ],
+      "notes": "Hilton's UK background does NOT moderate him on guns — his 2017 HuffPost UK piece compared post-Las-Vegas gun-control proposals to Trump's Muslim ban. The CRPA 'A' rating (March 2026) and Trump endorsement confirm full alignment with rollback wing. Source-date '2026-03-26' is approximate for the CRPA Facebook post; policy page itself has no visible publication date."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defense of gun-safety laws. Supports assault-weapons ban, universal background checks, high-capacity-magazine ban, restrictions on ghost guns / 3D-printed / home-manufactured firearms, and a national gun license. 2026 campaign website does not feature a dedicated gun-policy page; stance is inferred from his 2019 presidential gun-violence platform, which campaign has not repudiated.",
+      "source_quote": "Ban high risk weapons, including assault weapons, device modifications, high capacity ammunition magazines, and strengthen laws on untraceable firearms, including ghost guns, 3D printed guns, and home manufactured guns... pass universal background checks by expanding them to private sales and unlicensed sellers and establish waiting periods at the federal level for delivery of guns... Create a national license for all gun ownership.",
+      "source_url": "https://www.presidency.ucsb.edu/documents/steyer-campaign-press-release-tom-steyer-announces-his-plan-end-gun-violence-america",
+      "source_date": "2019-10-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.isidewith.com/candidates/tom-steyer/policies/domestic-policy/gun-control",
+        "https://www.tomsteyer.com/issues"
+      ],
+      "notes": "Steyer's 2026 campaign site lists 10 issue pages (housing, taxes, electricity, etc.) but no gun-policy page. Confidence is medium because 2026-specific statements are scarce; 2019 platform is most detailed primary source and remains his most-cited position. National license + new-assault-weapons ban + registry could push to 5; defaulting to 4 because he has not re-affirmed the registry idea in 2026."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "gun_policy",
+      "stance": 1,
+      "summary": "Significant rollback. Endorsed by California Rifle & Pistol Association. As Riverside sheriff, dramatically expanded CCW issuance (from ~3,000 to >9,000 in two years) and has been the most prominent CA sheriff publicly challenging state gun laws. Celebrated 9th Circuit blocking SB 2 (sensitive-places concealed-carry restriction). Says no firearm law in California keeps people safe; favors severe penalties for criminal use rather than restrictions on lawful owners.",
+      "source_quote": "The Second Amendment is non negotiable. I am very proud to have the endorsement of the California Rifle and Pistol Association representing the 10 million law abiding gun owners in our beautiful state.",
+      "source_url": "https://www.facebook.com/chad.bianco.3/posts/the-second-amendment-is-non-negotiable-i-am-very-proud-to-have-the-endorsement-o/10234826991034921/",
+      "source_date": "2025-12-04",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.foxnews.com/politics/ca-sheriff-blasts-newsoms-anti-2a-pro-criminal-agenda-after-court-blocks-latest-gun-control-law",
+        "https://www.riversidesheriff.org/757/Concealed-Carry-Weapons-Permit",
+        "https://en.wikipedia.org/wiki/Chad_Bianco"
+      ],
+      "notes": "On Fox News (Jan 2024): 'he needs to drop his gun agenda, his anti-2A agenda' (re Newsom). 'I believe that every law-abiding citizen, properly-vetted, should be allowed to carry a concealed firearm if they so choose.' Has not publicly committed to non-enforcement of state assault-weapons ban as governor, but his sheriff-tenure pattern and CRPA endorsement strongly signal a stance-1 rollback orientation."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defender of CA gun laws. As CA Attorney General (2017-2021), personally defended California's assault-weapons ban (Miller v. Becerra/Bonta) and high-capacity-magazine ban; sponsored SB 376 and AB 1669 gun-safety bills; joined 16-state AG coalition arguing 'strong, reasonable gun laws save lives' in defense of NJ magazine limits. 2026 campaign website does not yet feature a dedicated gun-policy page.",
+      "source_quote": "California continues to lead when it comes to implementing common-sense measures that protect our communities from gun violence.",
+      "source_url": "https://oag.ca.gov/news/press-releases/attorney-general-becerra-new-gun-safety-laws-take-important-steps-keep",
+      "source_date": "2019-10-11",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://oag.ca.gov/news/press-releases/attorney-general-becerra-joins-coalition-defending-states%E2%80%99-rights-implement-gun",
+        "https://en.wikipedia.org/wiki/Miller_v._Bonta",
+        "https://www.firearmspolicy.org/meet_xavier_becerra_california_s_new_anti_gun_ag"
+      ],
+      "notes": "Becerra's 2026 priorities (xavierbecerra2026.com) list 8 areas — gun policy is not among them — but his AG record is unambiguous and recent. Stance 4 (not 5) because the documented record is defense of *existing* laws rather than calls for major new expansions; if a campaign expansion plank emerges this could move to 5."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defense / close loopholes. In Congress (CA-45/47), co-sponsored Assault Weapons Ban of 2022 (HR 1808) and 2023 (HR 698), and co-introduced Enhanced Background Checks Act of 2021 to close the 'Charleston loophole.' Endorsed by GIFFORDS. Supports raising firearm purchase age to 21, mandatory waiting periods, national ERPO, gun registration, and permit-to-purchase.",
+      "source_quote": "Congresswoman Porter is committed to advancing common sense reforms to keep families safe from gun violence. As a congresswoman, Porter co-sponsored and voted for the Bipartisan Background Checks Act and helped introduce the Enhanced Background Checks Act of 2021 to close dangerous loopholes in federal firearm laws.",
+      "source_url": "https://giffords.org/candidates/katie-porter/",
+      "source_date": "2024-01-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.congress.gov/bill/118th-congress/house-bill/698/cosponsors",
+        "https://www.congress.gov/bill/117th-congress/house-bill/1808/cosponsors",
+        "https://www.thetrace.org/2023/10/lee-porter-schiff-gun-control-interview/"
+      ],
+      "notes": "Porter's 2026 campaign 'priorities' page lists 12 areas; gun policy is not separately featured. Stance derived from federal congressional record (assault-weapons-ban co-sponsorship, universal background checks, ERPO, registration, permit-to-purchase) — all consistent with stance 4-5. Defaulting to 4 because no 2026-specific new-expansion plank is published; would move to 5 if she publicly endorses, e.g., a state firearms registry or supply-side controls."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "gun_policy",
+      "stance": 3,
+      "summary": "Hold-the-line moderate Democrat. Touts San Jose's 70% gun-violence reduction and frames public safety around getting *illegal* guns off streets, summer-jobs programs, and funding local LE. As San Jose councilmember in 2022 voted *against* the annual gun-owner fee (citing constitutionality and management-structure concerns) while supporting the broader liability-insurance ordinance. Backed San Jose's 'Cash for Ghost Guns' program.",
+      "source_quote": "San Jose is the safest big city in America, but no California community can settle for the status quo. Everyone deserves to be safe, and we'll get there by getting illegal guns off the streets, investing in summer job programs, and funding local law enforcement.",
+      "source_url": "https://x.com/MattMahanSJ/status/2027172557364064559",
+      "source_date": "2025-11-15",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://sanjosespotlight.com/san-jose-could-set-a-precedent-by-requiring-gun-insurance/",
+        "https://thereload.com/san-jose-passes-mandatory-insurance-annual-fee-for-gun-owners/",
+        "https://www.kron4.com/news/bay-area/san-jose-launches-cash-for-ghost-guns-program/"
+      ],
+      "notes": "Stance 3 (not 4) because Mahan emphasizes enforcement-against-illegal-guns framing rather than calling for major new gun restrictions, and his vote against the SJ gun-owner fee suggests he is the most skeptical Democrat in the field toward novel regulatory schemes. He has not opposed existing CA bans. Source-date for the X post is approximate (post ID encodes Nov 2025); the X URL is the canonical primary."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defender of gun-safety laws with a long record. As CA Assembly Speaker, co-authored and helped pass California's landmark assault-weapons ban; banned 'Saturday Night Special' cheap handguns; required safety trigger locks. As LA mayor, member of Mayors Against Illegal Guns and ran a gun-buyback program. Scored 7% from the NRA. Has publicly reaffirmed support for an assault-weapons ban.",
+      "source_quote": "Antonio took on the NRA to pass California's landmark assault weapons ban, banned cheap handguns that put several gun factories out of business, and required safety trigger locks on guns sold in California.",
+      "source_url": "https://www.antonio2026.com/record-of-results",
+      "source_date": "2026-02-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.ontheissues.org/Governor/Antonio_Villaraigosa_Gun_Control.htm",
+        "https://www.antonio2026.com/about-antonio"
+      ],
+      "notes": "The campaign's own 'Record of Results' page features his gun-control work prominently — he is leaning into it as a 2026 credential, unlike some moderate Dems. Stance 4 (not 5) because the documented record is defense of and proud authorship of *existing* CA laws; no specific new-expansion 2026 plank is published. Source-date approximate (page is undated; using his 2026 campaign-launch month)."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "gun_policy",
+      "stance": 4,
+      "summary": "Strong defense; framed around school safety and removing 'weapons of war.' As State Superintendent of Public Instruction, deployed federal Mental Health First Aid Grants to schools for gun-violence prevention training and led parent-notification implementation for AB 452 / SB 906 safe-storage laws. 2026 candidate statement on the official Secretary of State voter guide explicitly names 'getting weapons of war off of our streets' as a priority.",
+      "source_quote": "getting weapons of war off of our streets",
+      "source_url": "https://voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm",
+      "source_date": "2026-03-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.cde.ca.gov/nr/el/le/yr23ltr0628.asp",
+        "https://www.tonythurmond.com/"
+      ],
+      "notes": "Quote is brief but explicit — 'weapons of war' is the standard Democratic shorthand for assault-style rifles and signals a 4-stance defense of CA's assault-weapons ban. Confidence medium because the campaign website itself does not include a dedicated gun-policy page; the SoS voter-guide statement is currently the most specific primary source. Source-date approximate (March 2026 voter-guide publication window)."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "healthcare_funding",
+      "stance": 1,
+      "summary": "Hilton opposes single-payer (cites UK experience: 'subpar patient care and taxes sky high') and wants to roll back Medi-Cal eligibility for undocumented adults, which he calls a $20B/yr line item the state can't afford. He proposes large income-tax cuts that would reduce Medi-Cal funding, with promised offsets from 'waste and fraud' enforcement. No engagement with CalCare/AB 1400 financing because he rejects the underlying program.",
+      "source_quote": "The actual way we deal with healthcare in this state is to at least stop spending $20 billion a year on free healthcare for illegal immigrants who shouldn't even be in the country.",
+      "source_url": "https://www.foxnews.com/politics/watch-california-dems-rally-around-healthcare-illegal-immigrants-fiery-debate",
+      "source_date": "2026-05-05",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+        "https://www.cnn.com/2026/05/05/politics/takeaways-cnn-california-governor-debate",
+        "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/"
+      ],
+      "notes": "Stance 1 (rather than 2) because Hilton explicitly campaigns on rolling back the 2024 Medi-Cal expansion to undocumented adults — that is the recent expansion this scale references. His CNN-debate analogy comparing CalCare to the UK NHS ('taxes sky high to pay for it') confirms he rejects payroll/wealth-tax financing too. Multiple debate venues and the CBS News immigrant healthcare piece corroborate."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "healthcare_funding",
+      "stance": 4,
+      "summary": "Steyer is the race's most vocal single-payer champion and the only Democrat besides Porter to commit unconditionally to CalCare. He has won the California Nurses Association endorsement on this basis. On funding, he names only one concrete source: closing a corporate tax loophole worth roughly $20B/yr — orders of magnitude short of the $400-731B/yr cost estimates. Pressed for details by KFF Health News, he said 'God is going to be in the details.' He has not endorsed a payroll tax.",
+      "source_quote": "I will die on this hill. ... God is going to be in the details.",
+      "source_url": "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+      "source_date": "2026-05-08",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues",
+        "https://calmatters.org/politics/2026/03/california-governor-single-payer-health-care/",
+        "https://sfist.com/2026/04/18/porter-steyer-and-becarra-push-for-single-payer-health-care-in-their-campaigns-for-governor/",
+        "https://www.pressdemocrat.com/2026/05/07/democratic-candidates-revive-single-payer-promise-as-californias-healthcare-system-faces-strain/"
+      ],
+      "notes": "Placed at 4 rather than 5 because the only concrete revenue source he has publicly named is a corporate-tax-loophole closure (~$20B). He has explicitly NOT endorsed a payroll tax (which would put him at 5), and the CNA-backed Kalra bill (AB 1400 lineage) defers funding decisions to the Legislature. Confidence medium because he has been deliberately vague on financing — could land at 5 if he eventually accepts a payroll-tax frame, or drift toward 3 in office if no funding plan materializes. The 'God is going to be in the details' line is widely cited and a defining moment of the campaign."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "healthcare_funding",
+      "stance": 1,
+      "summary": "Bianco opposes Medi-Cal coverage for undocumented immigrants ('they shouldn't be here', warns against 'incentivizing illegal entry with benefits'), and his broader platform pairs sweeping tax elimination (income tax, gas tax) with deregulation — leaving no room for a state single-payer expansion. Healthcare is not a featured issue on his campaign site; his only on-record healthcare positions are about restricting Medi-Cal eligibility.",
+      "source_quote": "They enter the country illegally, we're not going to incentivize them to come here to take more of the resources that regular Californians aren't getting.",
+      "source_url": "https://www.cbsnews.com/news/california-immigrant-healthcare-ice-sanctuary-state-2026-governors-race/",
+      "source_date": "2026-05-05",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.foxnews.com/politics/watch-california-dems-rally-around-healthcare-illegal-immigrants-fiery-debate",
+        "https://biancoforgovernor.com/",
+        "https://ktla.com/news/politics/inside-california-politics/california-gubernatorial-candidate-chad-bianco/"
+      ],
+      "notes": "Stance 1 with medium confidence: Bianco has not laid out a comprehensive healthcare plan on his campaign site, so this is partly inference from his immigration/Medi-Cal posture and tax-cut platform. He did soften slightly on the debate stage (recipients in asylum/residency proceedings could be covered IF they 'had to be working'), which prevents him from being a pure 1, but he otherwise frames the 2024 undocumented-adult expansion as a fiscal target. No evidence he supports any version of CalCare."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "healthcare_funding",
+      "stance": 3,
+      "summary": "Becerra was a longtime single-payer advocate in Congress and as HHS Secretary, and his campaign site still says he will 'build toward a universal, single-payer CalCare system.' But after winning the California Medical Association endorsement, he materially softened: per CMA leadership, 'at this point, he wasn't supportive of single payer'; his spokesperson said 'a single payer system is the right goal — but it's not possible under this administration.' On the May 5 debate stage, when Porter directly asked whether he supports CalCare yes-or-no, he refused to answer and pivoted to Medicare for All. He names no California funding mechanism; his immediate priority is backfilling the ~$9.5B/yr Trump 'Big Beautiful Bill' cut to Medi-Cal — i.e. incremental Medi-Cal preservation, no new broad tax.",
+      "source_quote": "A single payer system is the right goal — but it's not possible under this administration, and right now we have a crisis on our hands.",
+      "source_url": "https://laist.com/news/politics/xavier-becerra-backpedals-on-single-payer-as-he-woos-powerful-doctors-lobby",
+      "source_date": "2026-05-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/health-care/",
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+        "https://www.kqed.org/news/12082059/xavier-becerra-backpedals-on-single-payer-as-he-woos-powerful-doctors-lobby",
+        "https://laist.com/news/politics/2026-election-california-primary-xavier-becerra-california-governor-transcript"
+      ],
+      "notes": "Per the user's framing: 'A candidate who says I support single-payer when we can afford it but won't endorse a specific funding source is effectively stance 3.' That fits Becerra exactly post-CMA-endorsement. He knows the federal-waiver and ERISA constraints intimately ('We cannot enact in California a system of single payer' without federal law changes — LAist transcript) and frames the practical agenda as Medi-Cal cost-containment (standardizing billing codes, eliminating prior authorization), incremental coverage expansion, and reviewing the tax code for billionaire fairness — not a CalCare payroll tax. Confidence high — well documented across KQED, LAist, KFF, and the debate transcript."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "healthcare_funding",
+      "stance": 4,
+      "summary": "Porter is one of two candidates (with Steyer) to commit unconditionally to delivering CalCare. Her campaign site says single-payer 'will deliver the highest quality AND most cost-effective care to the MOST people' and 'reports estimate it will save California billions in healthcare costs every year.' She argues the system needs 'a good federal partner' to be feasible. On funding she has been less specific than Steyer — her single-payer page names no specific tax — but she has separately endorsed taxing large corporations and CEO-pay-ratio measures. Her spokesperson did not respond to KFF when asked how she would actually pay for CalCare.",
+      "source_quote": "I have never wavered in my support for Medicare for All ... [single payer / CalCare] will deliver the highest quality AND most cost-effective care to the MOST people.",
+      "source_url": "https://katieporter.com/priority/single-payer-health-care/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+        "https://calmatters.org/politics/2026/03/california-governor-single-payer-health-care/",
+        "https://sfist.com/2026/04/18/porter-steyer-and-becarra-push-for-single-payer-health-care-in-their-campaigns-for-governor/",
+        "https://www.cnn.com/2026/05/05/politics/takeaways-cnn-california-governor-debate"
+      ],
+      "notes": "Placed at 4 because (a) she unconditionally commits to CalCare on her campaign site, (b) her broader tax platform leans on higher corporate taxes (not a broad payroll tax), and (c) she has not endorsed a payroll-tax frame, which would land her at 5. There is real risk she belongs at 3 given that as recently as 2025 she declined to commit on feasibility grounds, and her campaign refused KFF's funding-mechanism question — but her current public commitment to deliver CalCare and her corporate-tax lean justifies 4 over 3. Confidence medium."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "healthcare_funding",
+      "stance": 3,
+      "summary": "Mahan does not support state single-payer. His healthcare platform is workforce- and access-focused: expand telehealth, allow out-of-state providers, let nurses and nurse practitioners practice at the top of their license, strengthen workforce incentives, and improve services in underserved regions. He accepts that California cannot fully backfill the Trump Medi-Cal cuts ('the magnitude of the Trump cuts is so great that we won't be able to fully do that'), implying he will manage within existing revenue rather than pursue a major new health tax. He proposes no new broad-base tax to fund healthcare.",
+      "source_quote": "The magnitude of the Trump cuts is so great that we won't be able to fully do that.",
+      "source_url": "https://asianjournal.com/usa/california/california-governors-race-2026-a-silicon-valley-mayor-courts-californias-immigrant-communities-and-the-states-diverse-voters/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://timesofsandiego.com/politics/2026/05/09/in-california-governor-race-single-payer-is-a-litmus-test-theres-still-no-way-to-pay-for-it/",
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/",
+        "https://www.cnn.com/2026/05/03/politics/matt-mahan-california-governor-democrats-gavin-newsom"
+      ],
+      "notes": "Stance 3 (incremental, no new broad tax). The Times of San Diego / KFF reporting groups him with Villaraigosa as Democrats who explicitly do not support state single-payer. His Mahan-brand 'data-driven moderate' framing and Silicon Valley donor base point away from payroll- or wealth-tax financing. No evidence he wants to roll back Medi-Cal expansion (so not 1-2). Confidence medium because his campaign has emphasized housing/homelessness/public safety over healthcare specifics, so most of this is reported positioning rather than a written healthcare plan."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "healthcare_funding",
+      "stance": 3,
+      "summary": "Villaraigosa frames healthcare as a right and supports universal coverage in principle, but rejects state single-payer as fiscally and politically unrealistic — he called CalCare 'pie in the sky' on the debate stage and estimates it at ~$500B/yr requiring federal approval that won't come from the Trump administration. His Affordable California plan instead proposes a 'Golden Choice' public option through Covered California, the existing Office of Health Care Affordability for cost containment, prescription-drug cost cuts, medical-debt relief, and primary-care investment. He explicitly commits to 'hold the line on taxes' and pledges to veto 'reckless multi-billion-dollar tax hikes,' which rules out any new broad health-financing tax.",
+      "source_quote": "Coverage without affordability is an empty promise. ... I will hold the line on taxes and veto any reckless multi-billion-dollar tax hike on middle-class families.",
+      "source_url": "https://www.antonio2026.com/plan",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/health/2025/11/gubernatorial-health-care-california-2026/",
+        "https://www.foxnews.com/politics/watch-california-dems-rally-around-healthcare-illegal-immigrants-fiery-debate",
+        "https://kffhealthnews.org/health-care-costs/california-governor-race-single-payer-healthcare-becerra-cma-steyer/"
+      ],
+      "notes": "Stance 3 (incremental + cost containment, no new broad tax). He goes meaningfully further on cost containment than a pure stance-2 candidate — public option, drug pricing, medical-debt relief — but his explicit 'hold the line on taxes' veto pledge means he cannot be placed at 4 or 5. Distinguishable from Hilton/Bianco because he does not propose rolling back the 2024 undocumented-adult Medi-Cal expansion (notes that CA already pays for ER care). Confidence high — his plan is one of the most detailed in the field."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "healthcare_funding",
+      "stance": 4,
+      "summary": "Thurmond supports a state-run single-payer system to 'remove profit from healthcare' and is the only candidate in the field who has endorsed a specific NEW broad-base revenue source tied to healthcare: the California Billionaire Tax Act, a one-time 5% tax on the ~200 California residents with a net worth over $1B, projected to raise up to $100B for health care, education, and food assistance. He has separately floated taxing assets above $150M to fund tax credits. He supports continued Medi-Cal coverage for undocumented Californians and frames healthcare in personal terms (his brother died at 35 after losing insurance). He has not endorsed a payroll tax.",
+      "source_quote": "No person should lose their life simply because they don't have health insurance.",
+      "source_url": "https://www.immigrantmagazine.com/california-governors-race-inside-tony-thurmonds-bold-plan-on-housing-healthcare-and-immigration/",
+      "source_date": "2026-05-03",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+        "https://www.tonythurmond.com/priorities",
+        "https://calmatters.org/health/2025/11/gubernatorial-health-care-california-2026/",
+        "https://ballotpedia.org/California_One-Time_Wealth_Tax_for_State-Funded_Healthcare,_Education,_and_Food_Assistance_Programs_Initiative_(2026)"
+      ],
+      "notes": "Clean fit for stance 4: state single-payer + endorsement of a specific wealth-tax revenue mechanism (the Billionaire Tax Act), with no payroll tax. He is the only candidate in the field where the funding mechanism is concretely tied to a named ballot initiative. Note the $100B one-time revenue is still far short of the ~$400-731B/yr CalCare cost estimates — so this is best understood as the most aggressive proposed broad-base health-financing source in the field, not a complete CalCare pay-for. Confidence high — multiple independent outlets confirm the Billionaire Tax Act endorsement."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "school_choice",
+      "stance": 1,
+      "summary": "Hilton's published education plan calls for expanding choice through Education Savings Accounts (starting with low-income and special-needs students), cross-district open enrollment regardless of zip code, and a parent-trigger mechanism that converts D-graded schools to charter models after two years. His running mate Gloria Romero is an explicit voucher advocate.",
+      "source_quote": "To give parents immediate options while traditional schools improve, Hilton will expand choice through ESAs, starting with low-income and special needs students... parents will be free to move their children to any public school that performs better, regardless of zip code... If a school receives a D grade two years in a row, parents will have the right to trigger administrative changes, curriculum overhauls, or conversion to a charter model.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/steve-hiltons-plan-to-fix-public-education-by-3rd-grade/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/",
+        "https://www.nbclosangeles.com/news/local/who-is-steve-hilton-california-governor-election/3882164/"
+      ],
+      "notes": "Stance 1 fits: ESAs for low-income/special-needs students are functionally vouchers in everything but name, and the parent-trigger-to-charter mechanism is the most aggressive charter-expansion lever currently used anywhere in the country. He stops short of universal vouchers (Bianco's territory) — but his ticket explicitly includes a voucher advocate (Romero), so the overall package is unambiguously at the maximum-expansion end of the California Overton window."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "school_choice",
+      "stance": 5,
+      "summary": "Steyer's education platform is built around investing tax revenue into public schools (he proposes ~$50B/year in new revenue) and making education free from preschool through community college. He has publicly said he does not support using public money for private or religious education. The California Teachers Association endorsed him in April 2026 specifically over the charter-skeptical Thurmond.",
+      "source_quote": "Make corporations pay their fair share, and put that money into our public schools to make California a top ten state for education... I'm enormously proud to have the endorsement of @WeAreCTA.",
+      "source_url": "https://www.tomsteyer.com/issues/education",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.cta.org/press-release/california-teachers-association-recommends-tom-steyer-for-california-state-governor",
+        "https://freebeacon.com/democrats/california-teachers-union-endorses-billionaire-tom-steyer-who-attended-elite-phillips-exeter-academy-and-sent-kids-to-private-school/"
+      ],
+      "notes": "Stance 5 (cap/freeze charters, redirect to public schools) is supported by (a) the CTA endorsement, which is the single strongest signal a CA Democrat is fully aligned with the union-side charter posture; (b) Steyer's 2020 stated opposition to public money for private education; (c) his education platform listing zero charter-supportive policies and treating public-school investment as the entire answer. He has not personally called for a charter cap, so the position-specifically-on-charters confidence is technically medium — but the CTA's endorsement effectively commits him to that coalition, hence overall high confidence."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "school_choice",
+      "stance": 1,
+      "summary": "Bianco is the most aggressive school-choice candidate in the field. At the December 2025 California School Boards Association forum he was the only candidate to publicly back universal vouchers, comparing the choice to picking 'the restaurant with the best food.' His campaign platform pairs this with expanded high-performing charters.",
+      "source_quote": "If you are deciding where you want to eat dinner, you choose the restaurant with the best food, and the other restaurant is not going to get your service until they change their policies. I will be the only person offering voucher systems for all of your kids... Encourage and expand access to high-performing charter schools that are creating innovative new learning environments outside of our public-school districts.",
+      "source_url": "https://ca.news.yahoo.com/support-school-vouchers-sets-republican-012545191.html",
+      "source_date": "2025-12-04",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/issues/education/",
+        "https://spectrumnews1.com/ca/la/politics/2025/12/05/governor-forum-candidates-school-board"
+      ],
+      "notes": "Stance 1 — universal vouchers PLUS charter expansion is the maximum school-choice position available; he is to Hilton's right on this axis because Hilton's ESAs start narrow (low-income/special-needs) while Bianco proposes universal."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "school_choice",
+      "stance": "unknown",
+      "summary": "Becerra's 2026 campaign site lists no K-12 education priorities at all (priorities are health care, fighting Trump, housing, affordability, energy, disasters, AI, and homelessness). His only material public record on charters is a 2018 Attorney General opinion concluding charter schools are subject to the Brown Act and California Public Records Act — a transparency/oversight posture, not a position on expansion vs. restriction.",
+      "source_quote": "Charter schools and their governing bodies are subject to the Ralph M. Brown Act and the California Public Records Act... the public has a right to expect transparency from charter schools because they are licensed and paid by the state to participate in the core function of educating California's children.",
+      "source_url": "https://oag.ca.gov/system/files/opinions/pdfs/11-201.pdf",
+      "source_date": "2018-12-26",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/",
+        "https://www.kqed.org/news/11715137/california-attorney-general-calls-for-more-charter-school-transparency",
+        "https://edsource.org/2026/california-governors-education-debate/756626"
+      ],
+      "notes": "Coded unknown because his 2026 campaign has not addressed K-12 schools. His AG opinion is consistent with a stance 3-4 leaning (more oversight, not expansion) but is a legal interpretation rather than a policy position. CFA dual-endorsed him with Thurmond, which is a higher-ed signal more than a K-12 one. Without an explicit charter statement, insufficient_data is the honest call."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "school_choice",
+      "stance": "unknown",
+      "summary": "Porter's 2026 gubernatorial platform addresses higher education (tuition-free state universities) but does not mention charter schools, vouchers, or K-12 school choice. Her House voting record on charter legislation is not prominent, and her education identity is built around being a public-school parent who can't afford private school.",
+      "source_quote": "There is no room in my budget to pay for private school... Knowing that my kids are safe, that they're learning and building good life skills in public school, makes this job possible.",
+      "source_url": "https://katieporter.com/priorities/",
+      "source_date": "2026-05-12",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Coded unknown. Her public-school-parent identity and CSEA endorsement (classified school employees) during her 2024 Senate run suggest she sits in the union/public-schools coalition (stance 4 likely), but she has not made a charter-policy statement in 2026 and her platform omits K-12 entirely. Insufficient_data is the honest read until she publishes a K-12 plank or is pressed in a debate."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "school_choice",
+      "stance": "unknown",
+      "summary": "Mahan's 'Back to Basics' education plank focuses on phonics-based reading, high-dosage tutoring, and teacher accountability tied to student outcomes. He has not stated a position on charter expansion or vouchers despite a heavily pro-charter donor coalition (Brin, Lonsdale, Moritz, Tan, Seibel collectively giving millions to his campaign and IE committee).",
+      "source_quote": "[Mahan] calls low test scores 'a five-alarm fire' requiring 'high-dosage tutoring for students who are behind'... rewarding teachers whose students improve academically while providing 'additional coaching and training' for those whose students struggle... ensure districts are accountable for adopting evidence-based literacy curricula.",
+      "source_url": "https://edsource.org/2026/california-governors-education-debate/756626",
+      "source_date": "2026-04-01",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.mahanforcalifornia.com/",
+        "https://localnewsmatters.org/2026/02/14/matt-mahan-billionaire-tech-donors-california-governor/",
+        "https://www.cnn.com/2026/05/03/politics/matt-mahan-california-governor-democrats-gavin-newsom"
+      ],
+      "notes": "Coded unknown because his platform is silent on charters and vouchers despite a donor base (Sergey Brin, Joe Lonsdale, Michael Moritz, Garry Tan, Michael Seibel) historically supportive of charters and ed-reform. His accountability/test-score framing leans pro-reform (stance 2 is the most likely landing spot if pressed), but there is no on-record statement. He has also not visibly contested the recent SJUSD public-school closures that some San José Spotlight commentators tie to charter enrollment growth in San José, which is consistent with at least passive tolerance of charters."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "school_choice",
+      "stance": 2,
+      "summary": "Villaraigosa is the field's most prominent pro-charter Democrat by long-form record: as Assembly Speaker in 1998 he brokered the deal that lifted California's charter cap, as LA Mayor he championed charter expansion, and his 2018 gubernatorial run drew $22M+ in independent expenditures from CCSA, Bloomberg, Hastings, Broad, Walton, and Oberndorf. He told EdSource in 2018 he supports 'quality charters and quality traditional public schools' but opposes for-profit charters. His 2026 platform is silent on K-12.",
+      "source_quote": "I believe in unions... I'm for great schools, whether they are charter or traditional... But we are living at a time when somehow you are anti-union because you stand up and say 'Hey, I want to put the kids first.'",
+      "source_url": "https://edsource.org/2018/while-criticizing-newsom-california-charter-schools-association-endorses-villaraigosa-for-governor/595340",
+      "source_date": "2018-04-17",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://edsource.org/2018/charter-school-backers-support-for-former-la-mayors-bid-for-governor-grows/597847",
+        "https://calmatters.org/politics/elections/2018/08/charter-school-campaign-financing-california-governor-primary/",
+        "https://www.antonio2026.com/issues"
+      ],
+      "notes": "Stance 2 (expand charters, protect parental choice) is the long-form record. Confidence is medium rather than high because (a) his 2026 platform deliberately omits K-12, suggesting he may be triangulating away from the 2018 CCSA-funded image in a CTA-dominated Democratic primary; (b) he has also said he opposes for-profit charters and wants accountability, which is a step softer than stance 1. Worth re-coding if he publishes a 2026 K-12 plank or stakes out a clearer position in debate."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "school_choice",
+      "stance": 4,
+      "summary": "Thurmond is the field's most identifiably charter-skeptical candidate by governing record: he beat charter advocate Marshall Tuck in 2018 with $8M in CTA backing, then as Superintendent convened the statewide Charter School Task Force whose recommendations became AB 1505 (2019) — the law giving districts more authority to deny charter petitions on fiscal-impact grounds. He publicly thanked Newsom and the legislature on signing day. His 2026 platform leads with a five-year third-grade literacy plan and a shift from ADA to enrollment-based funding (a pro-traditional-public-schools structural reform).",
+      "source_quote": "I want to thank Governor Newsom, Assemblymember O'Donnell, and all the stakeholders for this important legislation [AB 1505]... [The bill] empowering communities to consider the fiscal impact of new charter schools on existing schools in the neighborhood, increasing accountability and transparency for all charter schools.",
+      "source_url": "https://www.gov.ca.gov/2019/10/03/governor-newsom-signs-charter-school-legislation-10-3-19/",
+      "source_date": "2019-10-03",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://www.cde.ca.gov/nr/ne/yr26/yr26rel01.asp",
+        "https://calmatters.org/education/2022/06/tony-thurmond-california-schools/"
+      ],
+      "notes": "Stance 4 (restrict charter expansion) rather than 5 (cap/freeze): AB 1505 deliberately did not impose a charter cap — it gave districts more denial authority and fiscal-impact discretion, which is the policy stance Thurmond championed. The shift from ADA to enrollment-based funding also reinforces this — it directly addresses the funding pressure traditional districts face when charters draw students away. Notably, CTA's 2026 gubernatorial endorsement went to Steyer, not Thurmond, possibly because Steyer's stance 5 framing is even more union-aligned and because Thurmond is polling far back. Thurmond's stance is well-documented even though charters have not been a centerpiece of his 2026 campaign messaging."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "school_funding",
+      "stance": 2,
+      "summary": "Hilton argues California already spends more than $22,000 per student and that outcomes are a leadership and accountability problem, not a funding problem. His K-12 plan explicitly does not require more spending; he would instead expand school choice through Education Savings Accounts (starting with low-income and special needs students), grade every school and teacher, weaken tenure (5-year minimum), and let parents trigger charter conversion of failing schools.",
+      "source_quote": "California spends more than $22,000 per student each year, among the highest in the nation, yet outcomes continue to decline. This is not a funding problem. It is a leadership and accountability problem... This approach does not require more spending. It requires a new focus on results.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/steve-hiltons-plan-to-fix-public-education-by-3rd-grade/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/"
+      ],
+      "notes": "Stance 2 (hold or modestly trim) is the best fit: he is not promising literal cuts to Prop 98, but he explicitly says no new money is needed, wants ESAs (which divert dollars from district schools), and the EdSource/Local News Matters debate writeup bucketed him with Bianco as Republicans who 'say schools don't need more funding and should cut wasteful spending.' If he leaned into ESAs aggressively this could move to stance 1, but the published plan stops short of net cuts."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "school_funding",
+      "stance": 5,
+      "summary": "Steyer would raise up to $50 billion in new revenue by closing corporate tax loopholes (including a commercial Prop 13 split-roll reform) and taxing wealthy individuals, splitting it between health care and education. He pairs that with explicit teacher-pay increases for recruitment and retention, universal free school meals year-round, and pre-K starting at age 3 — and notes California ranks 31st in the nation in per-pupil funding adjusted for cost of living.",
+      "source_quote": "Steyer has proposed investing more money in public schools and increasing teacher pay to help recruit and retain them... He says he'll generate up to $50 billion in new revenue by raising taxes on corporations and wealthy individuals, with funds split between health care and education.",
+      "source_url": "https://edsource.org/2026/california-governors-education-debate/756626",
+      "source_date": "2026-05-03",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/education",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/",
+        "https://www.cta.org/press-release/california-teachers-association-recommends-tom-steyer-for-california-state-governor"
+      ],
+      "notes": "Stance 5 (major new funding via dedicated tax) is the cleanest fit because Steyer ties new K-12 dollars to a specific revenue mechanism (corporate loophole closure, Trump-loophole closure, commercial Prop 13 reform). CTA endorsement reinforces alignment with teacher-pay increases."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "school_funding",
+      "stance": 2,
+      "summary": "Bianco argues California already spends more on education than any other state with the lowest results, so the answer is redirecting dollars (to teachers, classrooms, training, recruitment, career-technical education, and charter schools), not adding more. He wants school funding to go 'directly to teachers, students, and the classroom' and rolls in a school-resource-officer mandate and repeal of AB 1955.",
+      "source_quote": "California spends more on education than any other state, and yet we see some of the lowest metrics of success and student learning... Ensure school funding goes directly to teachers, students, and the classroom.",
+      "source_url": "https://biancoforgovernor.com/education",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/"
+      ],
+      "notes": "Stance 2: he does not call for outright cuts, but he is explicit that no new K-12 dollars are needed and frames current spending as wasteful. He does say increase 'funding for teacher training and recruitment programs' specifically, which keeps him from a 1; this is targeted reallocation, not net new investment."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "school_funding",
+      "stance": "unknown",
+      "summary": "As of mid-May 2026, Becerra's campaign priorities page lists eight issue areas (Health Care, Fighting Donald Trump, Housing, Economy & Affordability, Energy & Utilities, Disaster Preparedness, AI, Homelessness) and K-12 education is not among them. He has historical credit for defending federal pandemic K-12 funds in court as AG and for expanding Head Start teacher pay as HHS Secretary, but no current-cycle K-12 spending level proposal has been published. EdSource's debate writeup explicitly noted his absence from the K-12 funding discussion.",
+      "source_quote": "Education is notably absent from this priorities section. [The eight listed priorities are: Health Care, Fighting Donald Trump, Housing, Economy & Affordability, Energy & Utilities, Disaster Preparedness & Resilience, Artificial Intelligence, Homelessness.]",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/",
+      "source_date": "2026-05-12",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://www.calfac.org/cfa-makes-dual-endorsement-for-california-governor/"
+      ],
+      "notes": "Marked unknown per the spec when a candidate has not addressed the issue. He has CFA (higher-ed faculty) endorsement, which is suggestive but is about higher ed, not K-12 funding levels. If a K-12 plan drops between now and June, expect a Democratic-baseline stance 4 — but that should be re-researched, not inferred."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "school_funding",
+      "stance": 4,
+      "summary": "Porter's published campaign priorities center on tuition-free public universities (paid for by closing corporate tax loopholes / raising corporate taxes) and childcare, not on a specific K-12 dollar number. EdSource grouped her with Democrats who support increased K-12 funding through corporate taxes, but she has not published a Prop 98-scale or dedicated-bond K-12 plan as Steyer and Thurmond have.",
+      "source_quote": "Porter: tuition-free state universities for California residents by raising corporate taxes... Democratic candidates largely agree that schools need more funding while Republicans disagree.",
+      "source_url": "https://edsource.org/2026/california-governors-education-debate/756626",
+      "source_date": "2026-05-03",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://katieporter.com/priorities/",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/"
+      ],
+      "notes": "Stance 4 (modest increases) is the best fit given (a) the Democratic baseline she shares per EdSource, (b) her teacher background and Warren-style consumer-protection framing, and (c) the absence of a dedicated K-12 tax/bond proposal that would justify stance 5. If she publishes a K-12 plan with a specific revenue source, revisit."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "school_funding",
+      "stance": 4,
+      "summary": "Mahan, a former Teach for America middle-school teacher, frames K-12 as a 'five-alarm fire' on test scores and would invest in high-dosage tutoring, evidence-based phonics literacy curricula, and performance-linked teacher rewards/coaching. As a moderate Democrat he opposes new broad-based taxes and emphasizes accountability and outcomes over raw spending levels; his vision references using existing tax revenue for schools and a 'shared prosperity fund.'",
+      "source_quote": "As governor, I would set clear goals for literacy—closing racial gaps and getting all students reading at grade level—because reading proficiency opens doors to opportunity... Evidence-based instruction like phonics improves literacy. Tracking student progress and providing targeted tutoring when students fall behind works.",
+      "source_url": "https://sdvoice.info/qa-with-matt-mahan-gubernatorial-candidate-has-clear-goals-for-childhood-literacy-improving-the-lives-of-working-families/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/"
+      ],
+      "notes": "Stance 4 reflects: targeted new investment (tutoring, literacy coaching) without a dedicated new revenue mechanism. He is more skeptical of net new state K-12 spending than Steyer/Thurmond and more interested in performance-pay reform than the CTA-aligned Democrats. Could arguably be stance 3 if you weight the no-new-taxes posture heavily; I picked 4 because his published proposals (high-dosage tutoring at scale, evidence-based curricula adoption with district accountability) cost real money."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "school_funding",
+      "stance": 4,
+      "summary": "Villaraigosa positions himself as the 'education governor,' citing his Assembly Speaker record of 'record investments in public schools,' significantly increased per-pupil funding, class-size reduction, and a 'historic bipartisan school bond' to repair and build schools — plus the LAUSD turnaround. On the 2026 trail his focus is outcomes and dual enrollment / career-technical education rather than a new dedicated tax, and he stresses California is 'No. 1 in teacher pay' but '21st in per-pupil spending' and 'dead last in graduation.'",
+      "source_quote": "Made record investments in public schools, including the largest single allocation of school safety funds in state history... Significantly increased per pupil funding in public schools... Passed historic bipartisan school bond to repair old schools and build new schools.",
+      "source_url": "https://www.antonio2026.com/record-of-results",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+        "https://www.the74million.org/article/i-will-be-the-education-governor-former-l-a-mayor-antonio-villaraigosa-recaps-k-12-track-record-and-looks-ahead-to-statewide-education-priorities-at-special-childrens-forum/"
+      ],
+      "notes": "Stance 4 reflects modest funding increases (especially facilities via bonds, dual enrollment, career-tech) without a Steyer-scale dedicated tax mechanism. Most of his public language is about doing more with current dollars and closing achievement gaps; he is the candidate most likely to revive a school facilities bond. If he publishes a billionaire-tax-for-schools proposal, revisit toward 5."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "school_funding",
+      "stance": 5,
+      "summary": "As the sitting Superintendent of Public Instruction, Thurmond has the most developed K-12 funding posture: he criticized Newsom's 2026-27 budget as 'falling short of funding levels and meaningful reforms needed to truly accelerate student achievement,' opposed Newsom's plan to shift TK-12 governance away from his elected office, called out California's reliance on average daily attendance for school revenue, and is running on closing tax loopholes and taxing billionaires (he endorses the California Billionaire Tax Act / a tax on residents with >$150M in assets) to fund education. He is also pushing a $10B affordable-housing bond aimed partly at educator/public-worker housing on surplus school land, and a five-year 'Literacy Moonshot.'",
+      "source_quote": "[The budget proposal] falls short of funding levels and meaningful reforms needed to truly accelerate student achievement... [The governance proposal] shifts authority to implement TK-12 education programs away from the official who California voters have elected to lead our state's public schools.",
+      "source_url": "https://www.cde.ca.gov/nr/ne/yr26/yr26rel02.asp",
+      "source_date": "2026-01-08",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://thecollegeinvestor.com/78544/tony-thurmond-backs-billionaire-tax-for-k-14-schools-as-he-runs-for-california-governor/",
+        "https://www.kpbs.org/news/politics/2026/05/11/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race",
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://www.cde.ca.gov/nr/ne/yr26/yr26rel01.asp"
+      ],
+      "notes": "Stance 5 (major new funding via dedicated tax or bond) is unambiguous: Thurmond is publicly tying K-14 funding to a billionaire wealth tax, has an active state-superintendent record of pushing for more than the Governor proposed, and explicitly opposes shifting K-12 governance authority out of the elected SPI office. He is also the most LCFF-fluent voice in the field and the most likely to push for an ADA-to-enrollment funding-base shift."
     }
   ],
   "questions": []

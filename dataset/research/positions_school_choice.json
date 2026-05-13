@@ -1,0 +1,131 @@
+{
+  "issue_id": "school_choice",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1=significantly expand charters/choice including vouchers/ESAs; 2=expand charters and protect parental choice; 3=maintain current charter framework (AB 1505 status quo); 4=restrict charter expansion; 5=cap/freeze charter growth, redirect to traditional public schools. The single best triangulation source was the December 2025 California School Boards Association forum (Spectrum News 1, Yahoo/AP wire) where Bianco was the only candidate to explicitly call for universal vouchers. The EdSource 2026-04 education-debate piece pinned down where Steyer, Mahan, Thurmond, Villaraigosa, and Porter focus their education energy — notably none of the Democrats has made charter expansion or restriction a marquee issue in 2026. Hilton's plan is the most detailed school-choice platform in the Democratic-leaning Cs (ESAs starting with low-income/special-needs students, plus parent-triggered charter conversion). For Becerra, the primary record is his 2018 AG opinion that subjected charters to the Brown Act and Public Records Act — an oversight/transparency posture rather than a stance on expansion or contraction. For Porter and Mahan, neither has put forward a 2026 charter platform; both are coded medium/low confidence based on platform priorities and donor coalitions. Thurmond's stance is inferred from his 2018 CTA-backed proxy-war victory over charter advocate Marshall Tuck, his role convening the task force that became AB 1505, and CTA's 2026 endorsement going to Steyer (not Thurmond) — meaning Thurmond is no longer the CTA's preferred vehicle but his governance record is the most charter-skeptical in the field. Villaraigosa is the trickiest call: he was the CCSA's $22M choice in 2018, but his 2026 platform is silent on K-12 and he explicitly told EdSource in 2018 he doesn't support for-profit charters and supports holding charters accountable. Coded as stance 2 on the long-form record, with a note that his 2026 silence may indicate softening.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "school_choice",
+      "stance": 1,
+      "summary": "Hilton's published education plan calls for expanding choice through Education Savings Accounts (starting with low-income and special-needs students), cross-district open enrollment regardless of zip code, and a parent-trigger mechanism that converts D-graded schools to charter models after two years. His running mate Gloria Romero is an explicit voucher advocate.",
+      "source_quote": "To give parents immediate options while traditional schools improve, Hilton will expand choice through ESAs, starting with low-income and special needs students... parents will be free to move their children to any public school that performs better, regardless of zip code... If a school receives a D grade two years in a row, parents will have the right to trigger administrative changes, curriculum overhauls, or conversion to a charter model.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/steve-hiltons-plan-to-fix-public-education-by-3rd-grade/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/",
+        "https://www.nbclosangeles.com/news/local/who-is-steve-hilton-california-governor-election/3882164/"
+      ],
+      "notes": "Stance 1 fits: ESAs for low-income/special-needs students are functionally vouchers in everything but name, and the parent-trigger-to-charter mechanism is the most aggressive charter-expansion lever currently used anywhere in the country. He stops short of universal vouchers (Bianco's territory) — but his ticket explicitly includes a voucher advocate (Romero), so the overall package is unambiguously at the maximum-expansion end of the California Overton window."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "school_choice",
+      "stance": 5,
+      "summary": "Steyer's education platform is built around investing tax revenue into public schools (he proposes ~$50B/year in new revenue) and making education free from preschool through community college. He has publicly said he does not support using public money for private or religious education. The California Teachers Association endorsed him in April 2026 specifically over the charter-skeptical Thurmond.",
+      "source_quote": "Make corporations pay their fair share, and put that money into our public schools to make California a top ten state for education... I'm enormously proud to have the endorsement of @WeAreCTA.",
+      "source_url": "https://www.tomsteyer.com/issues/education",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.cta.org/press-release/california-teachers-association-recommends-tom-steyer-for-california-state-governor",
+        "https://freebeacon.com/democrats/california-teachers-union-endorses-billionaire-tom-steyer-who-attended-elite-phillips-exeter-academy-and-sent-kids-to-private-school/"
+      ],
+      "notes": "Stance 5 (cap/freeze charters, redirect to public schools) is supported by (a) the CTA endorsement, which is the single strongest signal a CA Democrat is fully aligned with the union-side charter posture; (b) Steyer's 2020 stated opposition to public money for private education; (c) his education platform listing zero charter-supportive policies and treating public-school investment as the entire answer. He has not personally called for a charter cap, so the position-specifically-on-charters confidence is technically medium — but the CTA's endorsement effectively commits him to that coalition, hence overall high confidence."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "school_choice",
+      "stance": 1,
+      "summary": "Bianco is the most aggressive school-choice candidate in the field. At the December 2025 California School Boards Association forum he was the only candidate to publicly back universal vouchers, comparing the choice to picking 'the restaurant with the best food.' His campaign platform pairs this with expanded high-performing charters.",
+      "source_quote": "If you are deciding where you want to eat dinner, you choose the restaurant with the best food, and the other restaurant is not going to get your service until they change their policies. I will be the only person offering voucher systems for all of your kids... Encourage and expand access to high-performing charter schools that are creating innovative new learning environments outside of our public-school districts.",
+      "source_url": "https://ca.news.yahoo.com/support-school-vouchers-sets-republican-012545191.html",
+      "source_date": "2025-12-04",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/issues/education/",
+        "https://spectrumnews1.com/ca/la/politics/2025/12/05/governor-forum-candidates-school-board"
+      ],
+      "notes": "Stance 1 — universal vouchers PLUS charter expansion is the maximum school-choice position available; he is to Hilton's right on this axis because Hilton's ESAs start narrow (low-income/special-needs) while Bianco proposes universal."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "school_choice",
+      "stance": "unknown",
+      "summary": "Becerra's 2026 campaign site lists no K-12 education priorities at all (priorities are health care, fighting Trump, housing, affordability, energy, disasters, AI, and homelessness). His only material public record on charters is a 2018 Attorney General opinion concluding charter schools are subject to the Brown Act and California Public Records Act — a transparency/oversight posture, not a position on expansion vs. restriction.",
+      "source_quote": "Charter schools and their governing bodies are subject to the Ralph M. Brown Act and the California Public Records Act... the public has a right to expect transparency from charter schools because they are licensed and paid by the state to participate in the core function of educating California's children.",
+      "source_url": "https://oag.ca.gov/system/files/opinions/pdfs/11-201.pdf",
+      "source_date": "2018-12-26",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/",
+        "https://www.kqed.org/news/11715137/california-attorney-general-calls-for-more-charter-school-transparency",
+        "https://edsource.org/2026/california-governors-education-debate/756626"
+      ],
+      "notes": "Coded unknown because his 2026 campaign has not addressed K-12 schools. His AG opinion is consistent with a stance 3-4 leaning (more oversight, not expansion) but is a legal interpretation rather than a policy position. CFA dual-endorsed him with Thurmond, which is a higher-ed signal more than a K-12 one. Without an explicit charter statement, insufficient_data is the honest call."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "school_choice",
+      "stance": "unknown",
+      "summary": "Porter's 2026 gubernatorial platform addresses higher education (tuition-free state universities) but does not mention charter schools, vouchers, or K-12 school choice. Her House voting record on charter legislation is not prominent, and her education identity is built around being a public-school parent who can't afford private school.",
+      "source_quote": "There is no room in my budget to pay for private school... Knowing that my kids are safe, that they're learning and building good life skills in public school, makes this job possible.",
+      "source_url": "https://katieporter.com/priorities/",
+      "source_date": "2026-05-12",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Coded unknown. Her public-school-parent identity and CSEA endorsement (classified school employees) during her 2024 Senate run suggest she sits in the union/public-schools coalition (stance 4 likely), but she has not made a charter-policy statement in 2026 and her platform omits K-12 entirely. Insufficient_data is the honest read until she publishes a K-12 plank or is pressed in a debate."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "school_choice",
+      "stance": "unknown",
+      "summary": "Mahan's 'Back to Basics' education plank focuses on phonics-based reading, high-dosage tutoring, and teacher accountability tied to student outcomes. He has not stated a position on charter expansion or vouchers despite a heavily pro-charter donor coalition (Brin, Lonsdale, Moritz, Tan, Seibel collectively giving millions to his campaign and IE committee).",
+      "source_quote": "[Mahan] calls low test scores 'a five-alarm fire' requiring 'high-dosage tutoring for students who are behind'... rewarding teachers whose students improve academically while providing 'additional coaching and training' for those whose students struggle... ensure districts are accountable for adopting evidence-based literacy curricula.",
+      "source_url": "https://edsource.org/2026/california-governors-education-debate/756626",
+      "source_date": "2026-04-01",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.mahanforcalifornia.com/",
+        "https://localnewsmatters.org/2026/02/14/matt-mahan-billionaire-tech-donors-california-governor/",
+        "https://www.cnn.com/2026/05/03/politics/matt-mahan-california-governor-democrats-gavin-newsom"
+      ],
+      "notes": "Coded unknown because his platform is silent on charters and vouchers despite a donor base (Sergey Brin, Joe Lonsdale, Michael Moritz, Garry Tan, Michael Seibel) historically supportive of charters and ed-reform. His accountability/test-score framing leans pro-reform (stance 2 is the most likely landing spot if pressed), but there is no on-record statement. He has also not visibly contested the recent SJUSD public-school closures that some San José Spotlight commentators tie to charter enrollment growth in San José, which is consistent with at least passive tolerance of charters."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "school_choice",
+      "stance": 2,
+      "summary": "Villaraigosa is the field's most prominent pro-charter Democrat by long-form record: as Assembly Speaker in 1998 he brokered the deal that lifted California's charter cap, as LA Mayor he championed charter expansion, and his 2018 gubernatorial run drew $22M+ in independent expenditures from CCSA, Bloomberg, Hastings, Broad, Walton, and Oberndorf. He told EdSource in 2018 he supports 'quality charters and quality traditional public schools' but opposes for-profit charters. His 2026 platform is silent on K-12.",
+      "source_quote": "I believe in unions... I'm for great schools, whether they are charter or traditional... But we are living at a time when somehow you are anti-union because you stand up and say 'Hey, I want to put the kids first.'",
+      "source_url": "https://edsource.org/2018/while-criticizing-newsom-california-charter-schools-association-endorses-villaraigosa-for-governor/595340",
+      "source_date": "2018-04-17",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://edsource.org/2018/charter-school-backers-support-for-former-la-mayors-bid-for-governor-grows/597847",
+        "https://calmatters.org/politics/elections/2018/08/charter-school-campaign-financing-california-governor-primary/",
+        "https://www.antonio2026.com/issues"
+      ],
+      "notes": "Stance 2 (expand charters, protect parental choice) is the long-form record. Confidence is medium rather than high because (a) his 2026 platform deliberately omits K-12, suggesting he may be triangulating away from the 2018 CCSA-funded image in a CTA-dominated Democratic primary; (b) he has also said he opposes for-profit charters and wants accountability, which is a step softer than stance 1. Worth re-coding if he publishes a 2026 K-12 plank or stakes out a clearer position in debate."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "school_choice",
+      "stance": 4,
+      "summary": "Thurmond is the field's most identifiably charter-skeptical candidate by governing record: he beat charter advocate Marshall Tuck in 2018 with $8M in CTA backing, then as Superintendent convened the statewide Charter School Task Force whose recommendations became AB 1505 (2019) — the law giving districts more authority to deny charter petitions on fiscal-impact grounds. He publicly thanked Newsom and the legislature on signing day. His 2026 platform leads with a five-year third-grade literacy plan and a shift from ADA to enrollment-based funding (a pro-traditional-public-schools structural reform).",
+      "source_quote": "I want to thank Governor Newsom, Assemblymember O'Donnell, and all the stakeholders for this important legislation [AB 1505]... [The bill] empowering communities to consider the fiscal impact of new charter schools on existing schools in the neighborhood, increasing accountability and transparency for all charter schools.",
+      "source_url": "https://www.gov.ca.gov/2019/10/03/governor-newsom-signs-charter-school-legislation-10-3-19/",
+      "source_date": "2019-10-03",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://www.cde.ca.gov/nr/ne/yr26/yr26rel01.asp",
+        "https://calmatters.org/education/2022/06/tony-thurmond-california-schools/"
+      ],
+      "notes": "Stance 4 (restrict charter expansion) rather than 5 (cap/freeze): AB 1505 deliberately did not impose a charter cap — it gave districts more denial authority and fiscal-impact discretion, which is the policy stance Thurmond championed. The shift from ADA to enrollment-based funding also reinforces this — it directly addresses the funding pressure traditional districts face when charters draw students away. Notably, CTA's 2026 gubernatorial endorsement went to Steyer, not Thurmond, possibly because Steyer's stance 5 framing is even more union-aligned and because Thurmond is polling far back. Thurmond's stance is well-documented even though charters have not been a centerpiece of his 2026 campaign messaging."
+    }
+  ]
+}
