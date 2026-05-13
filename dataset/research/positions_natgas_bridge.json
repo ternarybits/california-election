@@ -1,0 +1,135 @@
+{
+  "issue_id": "natgas_bridge",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1=expand natural gas infrastructure and use; 2=maintain current role with gradual phase-down; 3=stable status, let market/reliability decide; 4=phase out gas in power generation by mid-2030s; 5=aggressive phase-out across all sectors. Natural gas is two debates in one: (a) gas-fired power generation and pipeline infrastructure, and (b) building gas (furnaces, water heaters, stoves) which is the live political fight in CA following Berkeley v. CRA (9th Cir 2023) and CARB's 2026 zero-emission space-and-water-heater sales rule. Candidates rarely speak about natural gas as a distinct fuel — most map onto a broader 'all-of-the-above vs. phase-out' axis tied to refineries and pump prices. The single clearest natgas-specific datapoint is Villaraigosa's verbatim 'we need oil and gas' (antonio2026.com/issues) plus his opposition to the South Coast AQMD gas-furnace phase-down rule that the board ultimately rejected in June 2025. Mahan presided over San Jose's natural gas infrastructure prohibition ordinance (the 2020 expansion was in effect throughout his mayoralty), but his gubernatorial messaging is conspicuously pragmatist on the pace of transition — mapped to 2 not 3, because the underlying record is electrification-positive. Porter and Steyer signed onto an 'electrification = decarbonization' frame; Steyer's platform names heat pumps explicitly. Porter has no specific natgas statement found but her congressional record (greenwashing hearings, Ending Taxpayer Welfare for Oil and Gas Companies Act) plus her endorsement by EnviroVoters/Sierra Club support 4. Thurmond's 'balance' framing and refinery-friendly carbon-capture stance put him at 3, not 4 — surprising given his left-of-field positioning on tax-the-billionaires, but the energy record doesn't show specific gas-phase-down advocacy. Becerra's 'open to revising climate goals' and refinery-friendly framing places him at 2. Both Republicans (Hilton, Bianco) are clear 1s — Hilton names expanding in-state oil and gas production; Bianco wants to roll back environmental restrictions wholesale. CONFIDENCE NOTES: Villaraigosa (high), Hilton (high), Bianco (high) — clear on-record. Steyer (medium), Mahan (medium), Becerra (medium), Porter (medium-low; inferred from broader record), Thurmond (low; no natgas-specific statement found).",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "natgas_bridge",
+      "stance": 1,
+      "summary": "Hilton wants to expand in-state oil and natural gas production and roll back the regulations he says have made California energy expensive. His 'Califordable' platform pairs the $3-gas promise with 'common sense environmental regulation of energy in California, freed from the ideological constraints' of net-zero policy. He has not separately addressed CARB's 2026 zero-emission appliance rule or the South Coast AQMD furnace fight, but his overall posture is unambiguously pro-gas.",
+      "source_quote": "Aggressively reduce crude oil imports, especially from authoritarian regimes [by expanding in-state production]... common sense environmental regulation of energy in California, freed from the ideological constraints [of net-zero policy].",
+      "source_url": "https://stevehiltonforgovernor.com/policy/gasprices/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://californiaglobe.com/articles/steve-hiltons-plan-for-cutting-gas-prices-and-affordable-energy/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://laist.com/news/politics/2026-election-california-primary-candidate-steve-hilton-governor-transcript"
+      ],
+      "notes": "Hilton's policy page is oil-centric; he rarely says 'natural gas' as a distinct phrase, but his expansion-of-domestic-production framing applies to gas as well, and he opposes the broader CARB regulatory agenda that would phase down gas appliances. Stance 1 is the conservative call."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "natgas_bridge",
+      "stance": 4,
+      "summary": "Steyer's climate platform explicitly equates 'electrification = decarbonization' and names heat pumps as a target technology to 'make accessible to all.' His Galvanize Climate Solutions fund has raised $370M for building decarbonization retrofits (HVAC, heat pumps, on-site solar). On power generation, his platform centers on solar/wind/storage replacing fossil generation, and he has positioned 'get off oil' as the answer to gas prices rather than expanding refineries. He has not publicly endorsed a specific gas-power-plant retirement date, which keeps him at 4 rather than 5.",
+      "source_quote": "Electrification = decarbonization. Make electricity cheap... Make the most advanced technologies like home batteries, rooftop solar, heatpumps, and EVs accessible to all.",
+      "source_url": "https://www.tomsteyer.com/issues/climate",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://envirovoters.org/california-governor-2026/",
+        "https://carboncredits.com/tom-steyer-climate-fund-raises-370m-to-turn-old-buildings-into-climate-assets/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "Steyer talks about electrification more than about natural gas phase-out specifically. His business activity (Galvanize, NextGen, the IRA advisory council) is consistent with an aggressive phase-down, but the campaign hasn't named a target date for retiring gas peakers. Stance 4 is the defensible call; could argue for 5 given his climate record but absent a verbatim 'phase out all gas' statement, 4 fits better."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "natgas_bridge",
+      "stance": 1,
+      "summary": "Bianco would expand California oil and gas drilling, scrap environmental regulations he says drive prices, and replace state income tax revenue with oil and gas extraction proceeds. His only clean-energy answer is 'nuclear.' Among the field, he is the most aggressively pro-fossil-fuel candidate — even more flat-rejection of California's regulatory framework than Hilton.",
+      "source_quote": "My signature on paper is going to remove those restrictions, and we are going to allow the oil companies to drill oil... we will get our own oil from California that we have unlimited reserves from.",
+      "source_url": "https://www.sfexaminer.com/news/politics/riverside-sheriff-chad-bianco-on-california-governor-bid/article_268ac412-3aa8-41bf-b51a-b2e9f1eb7d85.html",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://ktla.com/news/politics/inside-california-politics/california-gubernatorial-candidate-chad-bianco/",
+        "https://biancoforgovernor.com/"
+      ],
+      "notes": "Bianco's rhetoric focuses on oil drilling, not gas-power-plant policy, but his blanket 'regulations have to go away' framing includes the CARB and SCAQMD rules targeting natural gas appliances and pipelines. Stance 1 is the obvious call."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "natgas_bridge",
+      "stance": 2,
+      "summary": "Becerra emphasizes stabilizing energy supply and prices over accelerating transitions. He is on record as open to revising California's climate goals for affordability and wants to keep refineries running. His Energy & Utilities page reaffirms 'climate action only succeeds if it is affordable, reliable, and fair' and centers on utility-bill affordability rather than gas-system retirements. Stance 2 (maintain current natgas role with a gradual phase-down) is the best read of his 'never going backwards but also not accelerating' positioning.",
+      "source_quote": "The most important thing we can do is stabilize… not just the price, but stabilize the supply and stabilize the distribution of gas... [California should] maintain refinery capacity while continuing its transition to cleaner energy.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/energy-utilities/",
+        "https://www.eenews.net/articles/xavier-becerras-surge-spotlights-big-oil-in-california-governors-race/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "The most-cited quote 'stabilize the supply... stabilize the distribution of gas' is about gasoline (motor fuel), not natural gas per se, but Becerra's broader framing — open to slowing climate goals, refinery-friendly, took $39,200 from Chevron — translates to a stance-2 read on natural gas. Worth re-verifying with a direct natgas-specific statement before publication."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "natgas_bridge",
+      "stance": 4,
+      "summary": "Porter's congressional record is unambiguously anti-fossil-fuel-subsidy (Ending Taxpayer Welfare for Oil and Gas Companies Act 2021; greenwashing hearings; introduced hydrogen-for-ports and hydrogen-for-trucking bills) and her gubernatorial platform targets '100% clean energy output, 365 days a year.' She has accepted the EnviroVoters endorsement and swears off oil money. On refineries she does support 'staying the course' on existing capacity through the transition — but on natural gas as a power-generation and building-heat fuel, her electrification framing places her squarely at 4. Could be 5; no specific gas-power-plant retirement date stated.",
+      "source_quote": "Ensure that California remains on the front-edge of clean energy innovation and technology so California can be the first state to achieve 100% renewable energy output, 365 days a year... accelerate our transition to clean energy by investing in renewable resources like wind, solar, and geothermal.",
+      "source_url": "https://katieporter.com/priority/protecting-our-planet/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://envirovoters.org/california-governor-2026/",
+        "https://porter.house.gov/issues/issue/?IssueID=14893",
+        "https://www.lcv.org/moc/katie-porter/"
+      ],
+      "notes": "No verbatim Porter statement found specifically on natural gas as a bridge fuel or on the building-gas / heat-pump fight. Stance is inferred from her aggressive clean-energy platform, fossil-fuel-subsidy congressional record, and EnviroVoters endorsement. The 'stay the course on refineries' line is about motor-fuel supply continuity, not about extending the natgas role. Confidence is medium because the specific natgas-bridge question is unaddressed in the materials reviewed."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "natgas_bridge",
+      "stance": 2,
+      "summary": "As San Jose mayor (2023–present) Mahan inherited and enforced the city's 2020 Natural Gas Infrastructure Prohibition Ordinance requiring all-electric new construction, and his administration's SJCE program offers up to $12K in heat-pump rebates. But his gubernatorial messaging is conspicuously pragmatist: he objects to carbon-neutrality deadlines 'without a plan to do it or the math around what it will cost people' and wants the transition 'driven by innovation' (storage, virtual power plants) rather than mandates. He is the only major Democrat calling for a gas-tax suspension. Net read: gradual phase-down (stance 2), pace-cautious but not pro-expansion.",
+      "source_quote": "The transition has to be driven by innovation and better alternatives... we should be using technology to have a smarter grid that better balances supply and demand. We're going to be carbon neutral by whatever date without a plan to do it or the math around what it will cost people.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.sanjoseca.gov/Home/Components/News/News/2210/4699",
+        "https://www.nbcsandiego.com/news/politics/matt-mahan-paragon-pragmatism-governors-race/4021375/",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript"
+      ],
+      "notes": "Tension between record (San Jose all-electric ordinance enforcement, SJCE heat-pump rebates) and rhetoric (pragmatist pushback on carbon-neutral deadlines, gas-tax suspension). Mapped to 2 rather than 3 because the underlying record is electrification-positive. Could argue for 3 if you weight gubernatorial rhetoric over San Jose record."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "natgas_bridge",
+      "stance": 1,
+      "summary": "The clearest pro-natural-gas Democrat in the field. Villaraigosa's 'Affordable Energy for All' platform explicitly lists 'natural gas' as part of his 'all of the above' mix alongside renewables, nuclear, and gas-powered cars. He publicly opposed the South Coast AQMD's June 2025 proposal to phase down new gas furnaces and water heaters (which the board rejected), and his refinery-retention pitch frames climate mandates as 'energy mandates that unfairly burden working families.' On the natgas-bridge question he is the only major Democrat at stance 1.",
+      "source_quote": "We need an 'All of the Above' energy policy, with renewables like solar and wind, but also nuclear, natural gas, and yes, gas-powered cars... we can't just have energy mandates that unfairly burden working families.",
+      "source_url": "https://www.antonio2026.com/issues",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://gvwire.com/2025/09/29/villaraigosa-confident-hell-be-californias-next-governor-all-of-the-above-approach-on-energy-costs/",
+        "https://www.canarymedia.com/articles/heat-pumps/socal-gas-heaters-rules-nox",
+        "https://calmatters.org/commentary/2025/06/underestimate-antonio-villaraigosa-california-governor/"
+      ],
+      "notes": "Villaraigosa is the most useful 'differentiator' candidate on this issue — his explicit naming of natural gas as a desired part of the long-run mix is unique among Democrats in the field. Stance 1 is unambiguous."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "natgas_bridge",
+      "stance": 3,
+      "summary": "Thurmond emphasizes 'balance' — pursuing climate goals while investing in transition technologies and giving Californians a tax credit to offset higher energy costs. He has called for protecting refinery jobs and investing in carbon capture so refineries can 'get safer,' and his framing is closer to status-quo-with-mitigation than to active phase-down. No statement found specifically about natural gas in power generation or about the building-gas / heat-pump fight.",
+      "source_quote": "We can do a better job at balance... We have to find ways to balance climate change, but we also have to invest in technologies like carbon capture that allow refineries to get safer.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://www.tonythurmond.com/in-the-news"
+      ],
+      "notes": "No natgas-specific statement found in Thurmond's campaign materials or major-outlet interviews reviewed. The available record is about refineries (motor fuel) and broad 'balance' framing. Confidence is low — could be stance 4 if his climate-jobs framing translates to building electrification, or stance 2 if the 'balance' framing dominates. Stance 3 is the conservative middle call; revisit if a specific gas statement surfaces."
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "issue_id": "nuclear",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1 = expand significantly (site new plants + extend existing); 2 = extend Diablo Canyon and similar / keep options open; 3 = maintain status quo (extension only); 4 = wind down on current schedule; 5 = accelerate phase-out. CA context anchor: at the Pomona College debate on 2026-04-28 (8 candidates, moderated by reporter Paris Ortiz-Wines among others), the moderator asked whether to extend Diablo Canyon past 2030; all candidates who answered said yes in some form, captured in a widely circulated Paris-Ortiz-Wines social post recapping the exchange. Differentiation on this issue is therefore NOT 'extend Diablo yes/no' (everyone is yes) but rather 'do you support NEW nuclear / advanced reactors / SMRs in California, or just keep the one we have running?' That distinction sorts the field: Hilton and Bianco explicitly call for new plants and lifting California's 1976 moratorium; Villaraigosa explicitly calls for 'small nuclear' in his all-of-the-above plan; Mahan as San Jose mayor has publicly endorsed an 'all of the above' energy mix that names nuclear by name for data-center load growth. The rest (Steyer, Becerra, Porter) support continued Diablo operation but show no public support for siting new plants — Steyer's published electricity plan literally does not contain the word 'nuclear,' Becerra's energy/utilities priority page does not mention nuclear, and Porter's only public nuclear statements are (a) a Feb 2024 Senate-debate call to decommission Diablo and (b) an April 2026 SLO town-hall walkback to 'nothing offline if safe.' Thurmond has no findable public statement on nuclear in any tier-1 or tier-2 source, including his platform page, the Legal Planet climate forum recap, the Oakland Voices interview, and major debate coverage; stance coded 'unknown.' Confidence is HIGH for Hilton, Steyer, Bianco, Becerra, Mahan, Villaraigosa (multiple sources including own platform/quotes), MEDIUM for Porter (clear directional shift but ambiguous endpoint), and INSUFFICIENT for Thurmond.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "nuclear",
+      "stance": 1,
+      "summary": "Hilton wants California to expand nuclear aggressively: keep Diablo Canyon open AND permit new large-scale and small-scale reactors, reclassify nuclear as 'clean energy' alongside efficient natural gas under a renamed 'clean portfolio standard,' and end the regulatory and litigation tilt against reliable generation. He frames nuclear as one of California's three best long-term electricity options.",
+      "source_quote": "Retain and expand California's nuclear power capacity, which can be fulfilled by keeping Diablo Canyon open while permitting new large and small scale reactors.",
+      "source_url": "https://californiapolicycenter.org/reports/energy-abundance/",
+      "source_date": "2025-02-24",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/policy/cut-californias-electricity-bills-by-ending-wind-and-solar-farm-mandates-and-subsidies/",
+        "https://x.com/ParisOrtizWines/status/2052506681221972054"
+      ],
+      "notes": "Stance 1 is unambiguous because Hilton co-authored the 'Energy Abundance' report (Golden Together / California Policy Center, Feb 2025) that explicitly calls for new large and small reactors in California — i.e., overturning the de facto 1976 moratorium. His campaign platform reinforces this with 'allow natural gas, nuclear, and consumer-driven rooftop solar to compete on a level playing field, free from government mandates' and complains of 'endless litigation and permitting delays that drive up the price of nuclear.' At the April 28 Pomona debate he was among the candidates who answered 'yes' on extending Diablo."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "nuclear",
+      "stance": 3,
+      "summary": "Steyer's debate answer is to extend Diablo Canyon, but his published electricity plan is silent on nuclear and is built almost entirely around distributed renewables (rooftop solar, batteries, community solar, microgrids, virtual power plants). He shows no public support for new nuclear or SMRs and has historically been a renewables-only climate advocate, so his position is fairly read as status-quo: keep Diablo, don't site new plants.",
+      "source_quote": "Extend it.",
+      "source_url": "https://x.com/ParisOrtizWines/status/2052506681221972054",
+      "source_date": "2026-04-28",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/electricity",
+        "https://www.volts.wtf/p/tom-steyer-wants-to-be-californias",
+        "https://calmatters.org/politics/2026/01/governor-steyer-electricity-rates/"
+      ],
+      "notes": "Coded 3 (status quo, Diablo-only) rather than 2 (open to expansion) because Steyer's own published electricity policy page does not contain the word 'nuclear' anywhere — every concrete generation lever he names is distributed renewable. His extended Volts/David Roberts interview (April 27, 2026) likewise did not mention nuclear, SMRs, or Diablo. The debate 'Extend it' answer is the floor of what's politically viable in CA in 2026 (Newsom-aligned position) and does not imply he'd back NEW reactors. Stance 2 would require evidence of openness to expansion that I could not find."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "nuclear",
+      "stance": 1,
+      "summary": "Bianco explicitly calls for keeping Diablo Canyon operational AND making nuclear part of California's long-term energy future on his campaign's energy page, listed alongside hydrogen, geothermal, and hydro as 'innovative energy solutions that are driven by the market.' Combined with his deregulation framing and his answer at the Pomona debate, he is a clear stance 1 (expand).",
+      "source_quote": "Keep Diablo Canyon up and operational. Support nuclear as a clean and reliable source of California's energy future.",
+      "source_url": "https://biancoforgovernor.com/energy/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://x.com/ParisOrtizWines/status/2052506681221972054",
+        "https://abc7.com/post/republican-governor-candidate-chad-bianco-says-hes-antithesis-california-state-government/18677627/"
+      ],
+      "notes": "Stance 1 (expand) rather than 2 (just extend) because the platform language goes beyond Diablo — 'California's energy FUTURE' implies a forward expansion, and the broader plank to 'unleash the California energy industry by lifting prohibitions and restrictions' on the supply side reads as overturning California's nuclear moratorium. Less explicit than Hilton's white paper (which names new reactors) but pointing the same direction. Confidence high on direction; medium on whether he's specifically endorsed new-build SMRs (no SMR-specific quote found)."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "nuclear",
+      "stance": 2,
+      "summary": "Becerra supports extending Diablo Canyon if operations are safe ('Yes, if safe, yes' at the Pomona debate) but his campaign's Energy and Utilities priority page never mentions nuclear, SMRs, or new plants — it frames clean energy and grid resilience as 'public investments' with affordability and reliability as the core goals. He has not foreclosed nuclear expansion but has also not endorsed it.",
+      "source_quote": "Yes, if safe, yes.",
+      "source_url": "https://x.com/ParisOrtizWines/status/2052506681221972054",
+      "source_date": "2026-04-28",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/energy-utilities/",
+        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/"
+      ],
+      "notes": "Coded 2 (keep options open) rather than 3 (pure status quo) because the safety-conditioned 'yes' answer is genuinely permissive — he didn't say 'extend Diablo only,' he said yes-if-safe, which logically extends to new nuclear under the same condition. But there is no affirmative public support for new plants. The 'if safe' qualifier is the lever Sierra Club / progressive opponents will use to flip him later if needed, but on its face this is an extension-friendly, expansion-neutral posture."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "nuclear",
+      "stance": 3,
+      "summary": "Porter's position has shifted notably. In her February 2024 Senate debate she said 'Diablo Canyon needs to be safely decommissioned. I would close Diablo Canyon.' By April 2026, on a gubernatorial campaign town hall on the Central Coast, she had walked back to 'nothing can go offline if it can be operated safely today' while still framing the long-term future as 'green and clean' renewables. She has no public support for new nuclear or SMRs.",
+      "source_quote": "We need more power than we have to even stay the course where we've been, so that means nothing can go offline if it can be operated safely today.",
+      "source_url": "https://www.aol.com/news/governor-candidate-katie-porter-talks-160000398.html",
+      "source_date": "2026-04-03",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.yahoo.com/news/california-just-saved-last-nuclear-233011319.html",
+        "https://katieporter.com/priority/protecting-our-planet/",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Coded 3 (status quo) because she's now explicitly accepted continued Diablo operation while still framing California's future as renewables-based and saying things like 'We're all getting a day older every day, and so is Diablo' (acknowledging aging infrastructure, not endorsing replacement plants). Medium confidence because the 2024 'decommission' statement is still recent enough that anti-nuclear groups treat her as soft; a moderator pushing her at the Pomona debate would likely have gotten the same Diablo-yes answer, but I do not have her individual response transcribed. Stance 2 would require evidence of openness to NEW nuclear, which I couldn't find. Stance 4 is wrong because she has now publicly walked back the 2024 close-Diablo position."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "nuclear",
+      "stance": 2,
+      "summary": "Mahan answered 'Keep it open' on Diablo Canyon at the Pomona debate and as San Jose mayor has publicly endorsed an 'all of the above' generation mix that names nuclear by name for meeting AI/data-center electricity demand, alongside geothermal, hydro, gas, batteries, solar and wind. He has not personally endorsed siting new fission plants in California, but he is the candidate whose 'clean energy AI capital of the world' framing most clearly invites nuclear-powered industrial growth.",
+      "source_quote": "Keep it open.",
+      "source_url": "https://x.com/ParisOrtizWines/status/2052506681221972054",
+      "source_date": "2026-04-28",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.pge.com/en/newsroom/currents/future-of-energy/revolutionizing-data-centers--the-ultimate-power-play-for-today-.html",
+        "https://www.sanjoseca.gov/Home/Components/News/News/6819/4699?npage=2",
+        "https://www.climateone.org/audio/san-jose-mayor-matt-mahan-live-sf-climate-week"
+      ],
+      "notes": "Coded 2 (extend + keep options open / all-of-the-above) rather than 1 (explicit expansion) because Mahan personally has NOT said 'site new reactors' in any quote I found — the PG&E article reporting the all-of-the-above mix attributes the energy-mix language to context around his data-center push rather than to a verbatim Mahan quote endorsing new nuclear specifically. His Silicon Valley donor base is pro-nuclear (Sam Altman et al., per the user-provided hint) and his data-center ambition implies nuclear-friendly policy, but absent a verbatim 'build SMRs' quote, stance 2 is the defensible coding. Could be revised up to 1 if a specific Mahan quote backing AB 2647 / new fission permits surfaces before launch."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "nuclear",
+      "stance": 1,
+      "summary": "Villaraigosa is the most explicit nuclear-expansion Democrat in the field. His September 2025 campaign rollout and his own issues page both call for an 'all of the above' energy approach that explicitly names 'small nuclear' (SMRs) alongside renewables, oil, gas, and big/little hydro. This places him to the right of every other Democrat in the race on nuclear and roughly tied with Hilton/Bianco directionally.",
+      "source_quote": "We need an all-of-the-above approach to energy, an all-of-the-above approach as we take on climate change. And so, yes, we need renewables — solar, wind, geothermal, big hydro, and little hydro. But we also need oil and gas. And we need small nuclear.",
+      "source_url": "https://gvwire.com/2025/09/29/villaraigosa-confident-hell-be-californias-next-governor-all-of-the-above-approach-on-energy-costs/",
+      "source_date": "2025-09-29",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/issues",
+        "https://x.com/ParisOrtizWines/status/2052506681221972054"
+      ],
+      "notes": "Stance 1 (expand) is the clean coding because he explicitly endorses 'small nuclear' — i.e., SMRs — as part of California's future generation mix. That's an expansion of capacity beyond Diablo, which requires overturning or carving an exception to the 1976 moratorium (the AB 65 / AB 2647 territory). His issues page restates this as 'renewables like solar and wind, but also nuclear, natural gas, and yes, gas-powered cars,' confirming nuclear-by-name in the all-of-the-above plank. He is also presumed to have said yes on the Diablo-extension debate question (the X recap was 'ALL candidates' supported extension)."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "nuclear",
+      "stance": "unknown",
+      "summary": "Thurmond has no findable public position on nuclear power, Diablo Canyon, SMRs, or California's 1976 nuclear moratorium. His campaign priorities page, his Oakland Voices interview, the Legal Planet climate forum recap, and major debate coverage all touch on climate and 'clean energy jobs' generically without naming nuclear in any direction. He skipped the in-person Legal Planet climate forum (submitted video instead). As a progressive aligned with Sierra Club / EnviroVoters' historical opposition camp, his prior is mild anti-nuclear, but he has not voiced it publicly in this race.",
+      "source_quote": "We have to build, build, build. We can create clean energy jobs and protect communities at the same time.",
+      "source_url": "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+      "source_date": "2026-04-24",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.tonythurmond.com/priorities",
+        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Stance 'unknown' is correct here per the brief's instruction to expect 2-4 unknowns. The quoted 'build, build, build' clean-energy line is the closest he has come to an energy-mix statement and is deliberately non-specific. The Paris-Ortiz-Wines recap of the Pomona debate said 'ALL candidates' backed extending Diablo, which would include Thurmond, but I could not find a sourceable Thurmond-specific quote on that question. If forced to guess: probably stance 3 (extend Diablo, no new nuclear) — but per the brief, 'unknown' with insufficient_data is the correct coding rather than speculation."
+    }
+  ]
+}

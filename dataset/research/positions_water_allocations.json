@@ -1,0 +1,133 @@
+{
+  "issue_id": "water_allocations",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale 1=prioritize agriculture / loosen environmental flows; 2=favor agriculture with modest environmental considerations; 3=balance agriculture, urban, and environmental needs (all-of-the-above storage and conveyance); 4=favor urban and environmental flows with ag concessions; 5=prioritize environmental flows and urban use over agriculture. The April 1, 2026 Fresno State / Maddy Institute gubernatorial forum (covered by GV Wire, Fresno Chamber of Commerce, and Agri-Pulse) was the single richest source for direct water-policy quotes from the six candidates who attended (Hilton, Bianco, Becerra, Porter, Mahan, Villaraigosa); Steyer and Thurmond did not appear at that forum. The forum framing was explicitly ag-friendly so most candidates tilted ag-ward; that biases the spread but the relative gradient is still informative. Hilton and Bianco are the two clearest stance-1 candidates: Hilton has a public commitment to appoint John Duarte as Natural Resources Secretary and 'increased water deliveries to agriculture could be achieved immediately by reversing certain regulatory decisions that restrict water flows for environmental purposes'; Bianco brands the shortage 'a man-made drought' and his issues page explicitly leads with 'Protect California Farmers' Water Rights.' Villaraigosa, Becerra, Mahan, and Porter cluster around stance 2-3: each backs more storage, conveyance, and groundwater recharge ('all of the above'), is sympathetic to farmer 'predictability,' and avoids explicit defenses of environmental flows or the Bay-Delta Plan's flow requirements; Villaraigosa is the closest of the four to stance 2 because of his Cadiz water-marketing past and his moratorium-on-regulations rhetoric. Steyer is mapped to stance 4 based on his Sierra Club / EnviroVoters endorsements and his career-long environmental brand, despite the absence of a verbatim Delta-flows statement on his campaign site — confidence medium. Thurmond is mapped unknown: his attendance at the climate-future forum and Bay Area progressive profile suggest 4, but he did not attend the Fresno forum and has no published water-specific position. Bianco's Delta Conveyance opposition ('a completely ridiculous project') is interesting — it puts him at odds with parts of the ag establishment that want the tunnel, but his core stance (ag water > environmental flows) is unambiguous.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "water_allocations",
+      "stance": 1,
+      "summary": "Hilton would immediately reverse regulatory decisions restricting agricultural water deliveries for environmental purposes, appoint new members to the State Water Resources Control Board, and name John Duarte (a Central Valley farmer) as Natural Resources Secretary. He supports expanding Sites Reservoir and raising Shasta Dam and frames California water policy as a 'partisan choice' that has 'taken away water rights' from farmers. He treats environmental flow requirements as the cause of an artificial shortage.",
+      "source_quote": "Every single aspect of farming has been made impossible: taking away water rights... It is partisan. It's a choice.",
+      "source_url": "https://stevehiltonforgovernor.com/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://agnetwest.com/steve-hilton-california-agriculture-policy-plan/",
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://www.agri-pulse.com/articles/24484-governor-hopefuls-clash-on-water-regulations-and-ags-future"
+      ],
+      "notes": "Clearest stance 1 in the field along with Bianco. Hilton's promised John Duarte appointment is unusually concrete — Duarte fought the federal government for years over a Clean Water Act enforcement case and is a household name among Central Valley farmers. Hilton's site also flags 'almost a million Californians don't have access to clean drinking water,' but that is framed as a quality/disadvantaged-community issue, not as a competing claim on allocation."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "water_allocations",
+      "stance": 4,
+      "summary": "Steyer has no published water-allocation position on his campaign site, but his decades-long climate brand, Sierra Club and EnviroVoters endorsements, and 'get off oil' / restore-ecosystems framing make him the most environmentally-aligned candidate in the field. He skipped the ag-heavy Fresno forum where competitors made farmer-friendly water pledges. Best read as favoring environmental flows and urban conservation over relaxing ag deliveries, with ag concessions only where ecologically defensible — but the absence of a verbatim Delta-flows or voluntary-agreement statement keeps confidence at medium.",
+      "source_quote": "(no direct water-policy quote located; mapping derives from Sierra Club endorsement and absence from ag-coalition forum) Sierra Club: 'a candidate with a long record of investing in climate solutions, taking on Big Oil, and helping build the coalitions needed to win major environmental fights.'",
+      "source_url": "https://www.sierraclub.org/press-releases/2026/05/sierra-club-endorses-tom-steyer-california-governor",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/climate",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://www.tomsteyer.com/issues"
+      ],
+      "notes": "Steyer's TomKat Ranch is positioned as a sustainable-agriculture demonstration, and his Galvanize Climate Solutions fund has backed irrigation-tech (weather stations for ag). That suggests he is not anti-farmer in principle — he is the candidate most likely to package any ag concessions inside an environmental-flows-first framework. If he ever stakes a verbatim position on Bay-Delta voluntary agreements vs. flow-and-allocation rules, that should be re-checked; for now stance 4 with medium confidence is the defensible call."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "water_allocations",
+      "stance": 1,
+      "summary": "Bianco's campaign issues page leads with 'Protect California Farmers' Water Rights' and frames the shortage as a 'man-made drought' caused by 70-80% of California water flowing 'unused into the ocean.' He would build 'massive dams,' expedite Sites Reservoir, reform SGMA to lighten groundwater regulation, and eliminate regulations on farming. He blames Democratic environmental policy directly: 'It's an ideological, Democratic agenda.' Unusually for a stance-1 candidate, he opposes the Delta Conveyance tunnel as a 'completely ridiculous project,' but only because he sees it as bureaucratic boondoggle, not because he favors environmental flows.",
+      "source_quote": "Protect California Farmers' Water Rights and ensure California farmers have the water allocations necessary to feed California and the nation.",
+      "source_url": "https://biancoforgovernor.com/agriculture-and-water/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://agnetwest.com/chad-bianco-california-agriculture-plan/",
+        "https://www.agri-pulse.com/articles/24484-governor-hopefuls-clash-on-water-regulations-and-ags-future"
+      ],
+      "notes": "Bianco is from Riverside, an IE-ag region, and his rhetoric is the most explicitly anti-environmental-regulation of any candidate. His Delta Conveyance opposition is a notable wrinkle — it diverges from Hilton/Duarte and from much of organized ag, but the underlying allocation preference is unambiguously stance 1. His SGMA-reform pitch ('reduce regulations on groundwater management') stops short of repealing the statute outright."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "water_allocations",
+      "stance": 3,
+      "summary": "Becerra's campaign priorities page does not address water. At the April 2026 Fresno forum he told growers 'we need to give you predictability on water,' framing the problem as administrative-negotiation rather than reallocation: 'We may not know how much rain is going to fall in a particular year, but we can still give you predictability based on the amount of water we currently only have.' As Attorney General he sued the first Trump administration over Delta biological opinions, citing endangered-fish protections — a stance-4-ish posture — but as a 2026 candidate he is courting Central Valley voters with a balance-and-negotiate frame. Best read as 3.",
+      "source_quote": "We need to give you predictability on water... We may not know how much rain is going to fall in a particular year, but we can still give you predictability based on the amount of water we currently only have. Water is more precious than gold. Let's make it work.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.kqed.org/news/11802722/california-files-lawsuit-to-block-trump-administration-delta-water-rules",
+        "https://www.xavierbecerra2026.com/priorities/"
+      ],
+      "notes": "His AG-era Delta lawsuits suggest he would defend the existing federal environmental-flow regime if forced to choose, but in 2026 he is conspicuously avoiding any allocation-side commitment. If pressed in a debate he could plausibly land at 3 or 4 depending on audience. Mapped 3 with medium confidence because he refuses to choose between ag predictability and environmental flows in public."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "water_allocations",
+      "stance": 3,
+      "summary": "Porter's priorities page does not specifically address water allocations. At the Fresno forum she stated 'there is no magic wand to create more water' and acknowledged that regulations are 'choking off' farming, while emphasizing accountability over wholesale rollback. Her broader 'protect air and water' / climate-resilience framing pairs with sympathy for farmer compliance burden, putting her at a balance posture rather than at either extreme.",
+      "source_quote": "There is no magic wand to create more water.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://katieporter.com/priorities/",
+        "https://www.wga.com/news/california-gubernatorial-candidates-discuss-affordability-and-rural-issues-at-fresno-forum/"
+      ],
+      "notes": "Porter is OC-rooted and has consumer-protection instincts but no clear Delta-flows record. Her Fresno-forum framing was 'we can't pretend to manufacture water,' which is supply-realist but agnostic between the ag-vs-environment poles. Could be 2 or 4 depending on how she translates the consumer-protection lens — for now 3 with medium confidence."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "water_allocations",
+      "stance": 3,
+      "summary": "Mahan, the San Jose mayor, treats water primarily as an infrastructure-and-storage problem rather than an ag-vs-environment fight. He calls it 'a crime' that California has not built more reservoirs and storage, wants to repair canals losing water to subsidence damage, and argues CEQA reform is the unlock for water infrastructure. He says farmers are 'already embracing innovation' and pledged to elevate ag communities he says have been treated as 'second-tier.' All-of-the-above storage posture, agnostic on flow-vs-allocation rule fights.",
+      "source_quote": "We absolutely need to expand storage. It is a crime that it has taken this long to move forward these reservoir projects.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.agri-pulse.com/articles/24484-governor-hopefuls-clash-on-water-regulations-and-ags-future",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript",
+        "https://www.mahanforcalifornia.com/"
+      ],
+      "notes": "Silicon Valley moderate who frames water through CEQA / build-more lens. No verbatim position on Bay-Delta voluntary agreements, environmental flows, or pre-1914 vs. post-1914 rights. The 'storage is a crime to delay' framing leans modestly ag-friendly but is squarely within the bipartisan 'all-of-the-above' consensus the Newsom administration has staked out, so stance 3."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "water_allocations",
+      "stance": 2,
+      "summary": "Villaraigosa promotes an 'all of the above' water strategy — storage, conveyance, and groundwater recharge — and pledged at the Fresno forum to put 'a moratorium on farming regulations' and extend the same moratorium to CARB and Air Board rules. His campaign frames water as 'capture, clean, and store the water we will desperately need' while criticizing 'endless lawsuits and bureaucratic inertia.' His post-mayoral tenure on the board of Cadiz Inc. (a controversial Mojave groundwater-marketing project) suggests comfort with private water-rights deals. Lands modestly ag-friendly of center.",
+      "source_quote": "We've got to put a moratorium on farming regulations.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.antonio2026.com/issues",
+        "https://www.agri-pulse.com/articles/24484-governor-hopefuls-clash-on-water-regulations-and-ags-future",
+        "https://en.wikipedia.org/wiki/Antonio_Villaraigosa"
+      ],
+      "notes": "Mapped stance 2 rather than 3 primarily because of the moratorium-on-farming-regulations pledge — it is a clear directional choice in favor of ag over environmental constraints. Villaraigosa's Cadiz board service is a relevant biographical signal but pre-dates the campaign; he has not invoked it in 2026. As LA mayor he expanded MWD/LADWP conservation programs, which puts urban water on his radar. Could be argued at 3 if voters weight his all-of-the-above rhetoric over the moratorium pledge."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "water_allocations",
+      "stance": "unknown",
+      "summary": "Thurmond's campaign site and priorities pages do not address water allocations. He did not attend the April 2026 Fresno State ag-forum where most rivals staked positions, and his recent interviews have focused on education, housing, and a billionaire wealth tax. A Bay Area progressive profile and his climate-forum participation suggest he would likely lean stance 4 (environmental flows / urban first), but absent any direct statement on Bay-Delta flows, voluntary agreements, SGMA, or ag allocations, the position is insufficiently documented to assign.",
+      "source_quote": "(no water-allocation position located across campaign site, recent interviews, or forum recaps)",
+      "source_url": "https://www.tonythurmond.com/",
+      "source_date": "2026-05-13",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/"
+      ],
+      "notes": "Worth re-checking after any upcoming debate appearances or a Fresno/Central Valley campaign swing. Thurmond's progressive flank position on most other issues makes stance 4 the modal prediction, but without a verbatim quote it would be irresponsible to assign — water-rights politics in California are nuanced enough that progressives sometimes split on flow vs. equity-of-disadvantaged-community framings."
+    }
+  ]
+}

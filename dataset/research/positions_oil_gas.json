@@ -1,0 +1,139 @@
+{
+  "issue_id": "oil_gas",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale 1=expand in-state oil and gas production; 2=maintain current production levels and reduce regulation; 3=status quo on setbacks and permitting; 4=phase down (tighten setbacks, halt new permits); 5=rapid phase-out of in-state extraction. The decisive Tier-2 source was Streetsblog California's 2026-05-12 recap of the CBS California Governor's Debate (Pomona College, 2026-04-28), where seven of the eight candidates (all except Thurmond, who did not qualify by polling) were asked verbatim: 'if a bill comes before you... do you sign it, or do you veto it? And this bill would be whether to seek an increase in oil production in Kern County in the Central Valley.' Only Porter and Steyer answered 'No.' Villaraigosa, Bianco, Hilton, Becerra, and Mahan all answered 'Yes' (or 'Absolutely' in Bianco's case). Becerra qualified his with 'Versus importing? Yes' — narrower than the others but still a 'sign' answer. Hilton's 'We don't need a bill. I'll get it done directly as governor' is the strongest pro-expansion answer in the field, alongside Bianco's. Villaraigosa is unusual: he favors expanded in-state production AND has explicitly committed to SB 1137's 3,200-ft setbacks as 'non-negotiable commitments, not bargaining chips' on his campaign site — so he sits at 2, not 1, because he is not promising to weaken the setbacks voters upheld in 2024 Prop 6. Mahan is similarly 2: he said 'yes' on the Kern question and supports reopening refineries but has not proposed rolling back setbacks. Bianco and Hilton are 1: both explicitly promise to dismantle the regulatory regime that constrains drilling, and Bianco frames expanded drilling as a state revenue source. Becerra's answer is the trickiest to map: 'Versus importing? Yes' on the Kern question combined with his openness to 'revising climate goals' for affordability puts him at 2, but with low confidence because his campaign-site Energy & Utilities page emphasizes 'we're never going backwards' on climate. Porter and Steyer answered 'No' on Kern expansion, but neither has called for phasing out existing in-state production — Porter said 'There's a big difference between keeping what we've got open... and drilling more, which I oppose' and Steyer's focus is refinery-margin oversight and EV transition rather than halting permits. That maps both to 4 (phase down: halt new permits but no phase-out of existing) rather than 5. Thurmond was not asked the Kern question, but his only on-record statement is pro-refinery-retention with carbon capture and a 'better balance' framing — that's closer to 3 than to the 4-5 his progressive reputation might suggest; mapped to 3 with low confidence and noted as such. The pre-research hints were largely accurate: Bianco/Hilton at 1 confirmed; Villaraigosa at 2 confirmed (with the setback nuance); Becerra at 2 confirmed; Steyer and Porter at 4 (not 5 — neither has called for halting existing extraction); Mahan at 2 confirmed; Thurmond's hint (4-5) was NOT confirmed — his actual record is much more centrist on refineries/fossil-fuel retention than his progressive profile on taxes/education would suggest, so he is mapped 3 with low confidence.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "oil_gas",
+      "stance": 1,
+      "summary": "Hilton would 'aggressively reduce crude oil imports... by rapidly expanding California production,' streamline drilling permits within his first three months, and bypass the legislature entirely on Kern County expansion via executive action through CalGEM. His campaign explicitly names SB 1137 and AB 2-1 as laws to roll back.",
+      "source_quote": "We don't need a bill. I'll get it done directly as governor by instructing the California Department geologic and energy management to...",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/policy/gasprices/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://californiaglobe.com/articles/steve-hiltons-plan-for-cutting-gas-prices-and-affordable-energy/"
+      ],
+      "notes": "Tied with Bianco for the strongest expansion stance. Hilton is distinctive in claiming gubernatorial authority to expand drilling without legislation by directing CalGEM permitting. His own policy page identifies the Sacramento Basin and the 'permitting delays, drilling restrictions, and costly new laws like SB1-2 and AB2-1' as targets."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "oil_gas",
+      "stance": 4,
+      "summary": "Steyer was one of only two candidates to answer 'No' to signing a Kern County oil-expansion bill. His campaign's central energy frame is 'get off oil,' he is Sierra Club-endorsed, has pledged not to take oil money, and his gas-price plan emphasizes refinery-margin oversight and accelerating EV adoption rather than expanding extraction. He has not, however, called for halting existing in-state production — placing him at 4 rather than 5.",
+      "source_quote": "No",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/oil-gas-prices",
+        "https://www.sierraclub.org/press-releases/2026/05/sierra-club-endorses-tom-steyer-california-governor",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "The Press Democrat 2026-05-13 piece reports legacy Farallon fossil-fuel holdings, but Steyer broke with the firm in 2012 over divestment and has run NextGen Climate since. His campaign rejects new in-state oil expansion (Kern question = No) and his website's energy page does not propose any new permitting — it focuses on price-gouging enforcement and EV trade-in. Could be argued as 5 given Sierra Club endorsement, but no explicit 'phase out existing extraction' statement in sources reviewed."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "oil_gas",
+      "stance": 1,
+      "summary": "Bianco answered 'Absolutely' to signing a Kern County oil-expansion bill and has built his platform around using expanded in-state oil drilling to replace state income tax revenue. His core line — 'The regulations have to go away. We have to allow drilling to occur' — is the most categorical pro-expansion statement in the field.",
+      "source_quote": "Absolutely",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://ktla.com/news/politics/inside-california-politics/california-gubernatorial-candidate-chad-bianco/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Bianco's framing is the most revenue-tied of the expansion candidates: he proposes that expanded oil drilling pay for the elimination of California's state income tax. He has explicitly criticized SB 1137-style restrictions as part of the regime he would dismantle."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "oil_gas",
+      "stance": 2,
+      "summary": "Becerra answered 'Versus importing? Yes' to signing a Kern County oil-expansion bill — a qualified yes that frames in-state production as preferable to imports. Combined with his stated openness to revising California's climate goals for fuel affordability and his acceptance of Chevron/Sempra/PG&E contributions, this maps to maintain-and-loosen rather than expand-aggressively. He has not endorsed weakening SB 1137 setbacks specifically.",
+      "source_quote": "Versus importing? Yes",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://www.eenews.net/articles/xavier-becerras-surge-spotlights-big-oil-in-california-governors-race/",
+        "https://www.counterpunch.org/2026/05/01/xavier-becerra-says-we-must-think-about-the-future-of-humanity-then-cashes-checks-from-chevron/"
+      ],
+      "notes": "Borderline between 2 and 3. His campaign site emphasizes 'we're never going backwards' on climate while accepting fossil-fuel donations and answering yes on Kern expansion. Confidence medium because the Kern answer is qualified ('versus importing') and his written platform avoids the specifics. The cleaner read is stance 2 — willing to expand at the margin, oppose climate-goal acceleration — rather than full status-quo (3)."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "oil_gas",
+      "stance": 4,
+      "summary": "Porter answered 'No' to signing a Kern County oil-expansion bill and stated 'There's a big difference between keeping what we've got open — which I think we have to do, at least with [President] Donald Trump in office — and drilling more, which I oppose.' She backs maintaining existing in-state refinery capacity through the transition but opposes new drilling and has rejected oil-industry contributions.",
+      "source_quote": "There's a big difference between keeping what we've got open — which I think we have to do, at least with [President] Donald Trump in office — and drilling more, which I oppose.",
+      "source_url": "https://nationaltoday.com/us/ca/riverside/news/2026/03/27/katie-porter-outlines-energy-federal-funding-positions-during-riverside-campaign-stop/",
+      "source_date": "2026-03-27",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+        "https://katieporter.com/priority/protecting-our-planet/",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Porter explicitly distinguishes existing extraction (keep) from new drilling (oppose) — a textbook stance-4 'halt new permits, do not phase out existing.' EnviroVoters dual-endorsed her with Steyer to ensure a pro-climate candidate advances. Not stance 5 because she has affirmed she would 'stay the course with regard to our existing refinery capacity' to protect jobs and keep gas as low as possible through the transition."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "oil_gas",
+      "stance": 2,
+      "summary": "Mahan answered 'Yes' to signing a Kern County oil-expansion bill and added that California 'should stop pushing all of our refining capacity out of state and importing dirtier oil from thousands of miles away.' He has also said he is open to curbing refinery regulations. He has not, however, proposed weakening SB 1137 setbacks or built the same revenue/regulatory dismantling case the Republicans have.",
+      "source_quote": "Yes. We also should stop pushing all of our refining capacity out of state and importing dirtier oil from thousands of miles away",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://www.mahanforcalifornia.com/gas-tax"
+      ],
+      "notes": "Mahan is one of the two Democrats (with Villaraigosa) who openly broke with the party's climate orthodoxy on the Kern question. His framing emphasizes 'dirtier imports' to justify in-state production — a 2, not a 1, because he has not promised to dismantle setbacks or the broader regulatory regime."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "oil_gas",
+      "stance": 2,
+      "summary": "Villaraigosa answered 'Yes' on Kern expansion and his campaign endorses an 'all-of-the-above' energy posture treating oil and gas as a transition fuel, citing Norway as the model. Crucially, his campaign-site fine print explicitly commits to SB 1137 setbacks as 'non-negotiable commitments, not bargaining chips' and opposes offshore drilling — so his expansion is intra-onshore-permits, not deregulatory in the Hilton/Bianco mold.",
+      "source_quote": "Supporting in-state oil and gas production is a direct lever for reducing gas prices... Every barrel of crude oil produced in California reduces the state's dependence on imported crude.",
+      "source_url": "https://www.antonio2026.com/gas",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+        "https://gvwire.com/2025/09/29/villaraigosa-confident-hell-be-californias-next-governor-all-of-the-above-approach-on-energy-costs/",
+        "https://kfiam640.iheart.com/featured/wake-up-call/content/2025-05-26-villaraigosa-shifts-toward-oil-industry-in-california-governor-race/",
+        "https://www.antonio2026.com/news/antonio-calls-for-immediate-moratorium-on-costly-regulations-vows-to-reform-carb-as-go"
+      ],
+      "notes": "Villaraigosa is the most heterodox Democrat on this issue — pro-expansion on production but explicitly committed to SB 1137 setbacks. That combination is why he is 2 (maintain production + reduce regulation) rather than 1 (expand and dismantle setback regime). The 'no way' line on offshore drilling and his Refinery Retention and Investment Act framing further differentiate him from the GOP candidates' more sweeping deregulation."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "oil_gas",
+      "stance": 3,
+      "summary": "Thurmond did not appear on stage at the 2026-04-28 CBS debate where the Kern oil-expansion question was asked (he did not meet the polling threshold). His only on-record statement on extraction is pro-refinery-retention paired with carbon capture and a 'better balance' framing — closer to status quo than to phase-down. Insufficient direct extraction-permitting position to confidently map him higher up the phase-down scale.",
+      "source_quote": "We can do a better job at balance... We have to find ways to balance climate change, but we also have to invest in technologies like carbon capture that allow refineries to get safer.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "The pre-research hint of 4-5 is NOT supported by the available record. Thurmond submitted a video response to the January 2026 'Our Climate Future' forum but the full transcript was not retrievable, and his other media interviews on energy focus on refinery retention plus carbon capture, not new drilling restrictions or extraction phase-down. Mapped to 3 with low confidence — he may sit at 4 if a more direct anti-extraction statement surfaces, but no Tier-1 or Tier-2 source reviewed supports that placement. Worth a re-research pass before publishing if dataset launches before primary."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "issue_id": "decarbonization",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1=repeal or significantly soften the 2045 net-zero target; 2=slow the timeline / allow more flexibility on AB 1279 and SB 100; 3=hold the 2045 target with current implementation; 4=accelerate (e.g., to 2040); 5=major acceleration (e.g., 2035) with binding interim milestones. Note that this issue intentionally overlaps with — but is distinct from — `fuel_env_rules`: a candidate can favor loosening fuel/refinery rules while still nominally keeping the 2045 target (a 'flexibility' position, stance 2), or vice versa. Hilton is the clearest stance 1: he names net-zero 2045 by name and calls it 'a wildly unrealistic target with an incredibly costly and destructive price tag,' and on his electricity policy page he pledges to repeal SB 100's renewable mandates ('60 percent of their electricity from renewables by 2030 and 100 percent carbon-free by 2045'). Bianco is also stance 1 by inference: he denies the climate-wildfire link, would dismantle CARB, and his energy platform contains no commitment to the 2045 target — but he has not named AB 1279 explicitly in the sources reviewed, so confidence is medium. Becerra is the most prominent Democratic 'open to revising' voice; mapped to 2. Villaraigosa is also stance 2: 'must keep our commitment to tackling climate change, but we can't do it at the expense of good-paying jobs' plus a 180-day moratorium on new CARB cost-increasing regulations is functionally a slow-the-timeline position even though he does not call for repealing AB 1279. Mahan's 'carbon neutral by whatever date without a plan to do it or the math around what it will cost people' is critical of the target's implementation more than its existence — mapped to 2 with explicit notes; the GrowSF questionnaire shows he still references 'tripling grid capacity by 2045 for electrification goals,' which is consistent with keeping the 2045 frame but loosening the path. Porter said 'California's future is going to be green energy, but we also have to be realistic about where we are' and emphasized maintaining refinery capacity through the transition — that's a stance-3 'hold the target, manage the transition' position; she has not proposed accelerating to 2040. Thurmond's record is thin in the sources reviewed; his clearest climate statement is 'we can create clean energy jobs and protect communities at the same time' with no explicit endorsement of accelerating or softening the 2045 target — I rate this stance 3 with low confidence rather than 'unknown' because his EnviroVoters scorecard history and progressive Democratic profile make stance 1 or 2 implausible, but he could plausibly be a 4 (acceleration) without us having seen it. Steyer is the hardest call. He explicitly called in 2021 for moving CA's net-zero goal forward from 2045, and his current campaign issues page commits to 100% clean electricity by 2040 (five years ahead of SB 100). His current campaign rhetoric on the 2045 economy-wide net-zero target is less explicit — he defends the existing climate framework rather than calling for accelerating AB 1279 specifically. The Volts.wtf interview and Bloomberg 2021 archive both support stance 4 (acceleration of electricity-sector timeline plus historical 2030 economy-wide push). I rate him stance 4 with medium confidence; could be argued as 5 historically or 3 if you only weight 2026 statements. Hints in the prompt suggested 'Republicans likely 1-2' and 'Porter unclear' — those broadly track. Tier-1 sources used where possible (campaign issue pages: Hilton's electricity-mandates page, Steyer's climate page, Becerra's energy page, Porter's planet page, Villaraigosa's issues page); Tier-2 anchors include the 2026-04-06 CBS News debate recap (the single most useful direct-quote source for this issue), the 2026-05-06 KPBS Hilton profile, and the 2026-02-18 Legal Planet recap of the EnviroVoters Our Climate Future forum.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "decarbonization",
+      "stance": 1,
+      "summary": "Hilton would repeal California's net-zero-by-2045 target, calling it 'wildly unrealistic' and 'incredibly costly,' and would 'start rolling back extreme climate regulations' on Day 1 by firing CARB chair Liane Randolph. His electricity policy page also targets SB 100's '100 percent carbon-free by 2045' mandate, proposing to 'repeal California's costly wind and solar mandates and subsidies.'",
+      "source_quote": "Democrats have declared a 'war on fossil fuel', with a stated goal of 'net zero' carbon emissions by 2045 – a wildly unrealistic target with an incredibly costly and destructive price tag.",
+      "source_url": "https://californiaglobe.com/articles/steve-hiltons-plan-for-cutting-gas-prices-and-affordable-energy/",
+      "source_date": "2026-05-06",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/policy/cut-californias-electricity-bills-by-ending-wind-and-solar-farm-mandates-and-subsidies/",
+        "https://www.kpbs.org/news/politics/2026/05/06/steve-hilton-lays-out-his-plans-to-make-the-state-califordable-as-governor",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "The clearest stance 1 in the field. Hilton names the 2045 net-zero target by name and pairs it with explicit calls to repeal the SB 100 renewable mandate. He frames climate policy as 'climate elitism' and questions whether California's emissions cuts affect global temperatures: 'What is any of this pain that we're inflicting on working families and small businesses in California in the name of climate action, what is it actually doing for the climate in terms of impact on global temperatures?' (KPBS 2026-05-06)."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "decarbonization",
+      "stance": 4,
+      "summary": "Steyer is the most climate-forward candidate in the field: his current campaign climate plan targets '100 percent clean electricity by 2040 and net-zero greenhouse gas emissions by 2045 across all sectors' (accelerating SB 100's electricity timeline by five years), and in 2021 he publicly pushed California to move its economy-wide net-zero goal forward from 2045. He defends AB 1279, cap-and-trade, climate-disclosure laws, and CARB on his issues page and frames decarbonization as 'electrification = decarbonization. Make electricity cheap.'",
+      "source_quote": "Electrification = decarbonization. Make electricity cheap.",
+      "source_url": "https://www.tomsteyer.com/issues/climate",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.bloomberg.com/news/articles/2021-04-20/steyer-joins-pundits-in-call-for-california-to-go-green-faster",
+        "https://www.volts.wtf/p/tom-steyer-wants-to-be-californias",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://www.dbwexecsearch.com/post/tom-steyer-announces-2026-bid-for-california-governor-highlighting-climate"
+      ],
+      "notes": "Stance 4 rather than 5 because the 2030 economy-wide net-zero push he signed in 2021 is not explicitly part of his 2026 campaign platform; the 2040 clean-electricity acceleration is. Co-endorsed (with Porter) by California Environmental Voters in 2026, who cited 'aggressive climate action.' Could be argued at 5 if you weight his 2021 advocacy; could be argued at 3 if you require an explicit 2026 statement that AB 1279's 2045 economy-wide target should be moved up. The 2040 electricity target is the load-bearing acceleration commitment."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "decarbonization",
+      "stance": 1,
+      "summary": "Bianco would dismantle California's climate-regulatory regime — eliminating CARB-driven rules, ending the LCFS-style 'environmental regulations,' opening in-state oil and gas drilling, and replacing renewable mandates with 'market-driven' energy including expanded nuclear, hydrogen, and geothermal. He has questioned whether wildfires are linked to climate change and is the most explicit climate-skeptic Democrat-or-Republican in the field.",
+      "source_quote": "Gasoline, the regulations that increase it almost $2 a gallon, that will be immediately reduced... The regulations have to go away. We have to allow drilling to occur.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-04-06",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/issues/energy/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://forbesca.com/climate-change-and-wildfires-divide-california-gubernatorial-candidates-at-forum/"
+      ],
+      "notes": "Confidence medium rather than high because Bianco does not name AB 1279 or the 2045 target explicitly in the sources reviewed — his rhetoric is about the regulatory regime broadly ('the regulations have to go away'). But his platform contains no commitment to net-zero 2045 and CalMatters characterizes him as advocating for suspending state environmental regulations and boosting oil and gas production; mapped to stance 1 by inference."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "decarbonization",
+      "stance": 2,
+      "summary": "Becerra has explicitly said he is 'open to revising the state's climate goals to keep fuel affordable for middle-class Californians' — the most prominent 'flexibility' position from a Democrat in the field. His campaign frames climate action as something that 'only succeeds if it is affordable, reliable, and fair' and emphasizes maintaining refinery capacity through the transition. He has not endorsed repealing AB 1279 or moving past the 2045 target itself.",
+      "source_quote": "climate action only succeeds if it is affordable, reliable, and fair",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/energy-utilities/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://ktla.com/news/california/xavier-becerra-interview-governor-race/"
+      ],
+      "notes": "The CalMatters voter guide's 'open to revising the state's climate goals to keep fuel affordable' framing is paraphrased rather than verbatim, but it is repeated across KQED's affordability piece and KTLA's Becerra interview. He pairs this with 'we're never going backwards' rhetoric (CBS News 2026-04-06), making him a clearer stance 2 than stance 1 — slow/flexibilize rather than repeal."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "decarbonization",
+      "stance": 3,
+      "summary": "Porter holds the 2045 net-zero framework but emphasizes managed transition and consumer-cost realism. Her climate page commits to making California 'the first state to achieve 100% clean energy output, 365 days a year' but does not propose an accelerated year. In the CBS News round-up she said California needs to 'stay the course with regard to our existing refinery capacity' through the transition — a hold-the-target, manage-the-pace position.",
+      "source_quote": "California's future is going to be green energy, but we also have to be realistic about where we are.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-04-06",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://katieporter.com/priority/protecting-our-planet/",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://redwoodmary.substack.com/p/katie-porter-and-tom-steyer-on-climate"
+      ],
+      "notes": "EnviroVoters co-endorsed Porter with Steyer in 2026, citing her climate-justice record (100% LCV scorecard during her House tenure and oversight of oil-company gouging as House Natural Resources Oversight chair). She is not proposing acceleration in her 2026 platform, however; her '365 days a year' clean-energy framing does not assign a year more aggressive than the existing 2045 framework. Could be argued at 4 based on her record, but 2026-cycle statements support 3."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "decarbonization",
+      "stance": 2,
+      "summary": "Mahan does not call for repealing the 2045 target but criticizes its implementation as planless: 'We're going to be carbon neutral by whatever date without a plan to do it or the math around what it will cost people.' He would let innovation and grid modernization (virtual power plants, storage, EV-to-grid) set the pace rather than statutory milestones, and frames the transition through cost and feasibility rather than acceleration. His GrowSF questionnaire still cites 'tripling grid capacity by 2045 for electrification goals.'",
+      "source_quote": "We're going to be carbon neutral by whatever date without a plan to do it or the math around what it will cost people. The transition we need has to be led by what we are best at in California, which is innovation.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-04-06",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://growsf.org/voter-guide/questionnaires/june-2026/matt-mahan/",
+        "https://www.climateone.org/audio/san-jose-mayor-matt-mahan-live-sf-climate-week",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Borderline 2 vs. 3. He references 2045 as a planning horizon (GrowSF) rather than rejecting it, but his CBS quote is explicitly skeptical of binding-date thinking. As San Jose mayor he inherited (and missed) a 2030 city carbon-neutral pledge, which he has not repeated as a statewide proposal. Mapped to 2 because his rhetoric privileges flexibility over the statutory timeline; could plausibly be 3."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "decarbonization",
+      "stance": 2,
+      "summary": "Villaraigosa positions himself as 'keep[ing] our commitment to tackling climate change, but we can't do it at the expense of good-paying jobs,' rejects 'energy mandates that unfairly burden working families,' and would impose a Day-1 moratorium on new CARB cost-increasing regulations pending a 180-day review. His 'all of the above' platform includes natural gas, nuclear, and continued gas-powered cars — a slow-the-timeline, transition-fuel position rather than a repeal.",
+      "source_quote": "We must keep our commitment to tackling climate change, but we can't do it at the expense of good-paying jobs. We need an 'All of the Above' energy policy, with renewables like solar and wind, but also nuclear, natural gas, and yes, gas-powered cars.",
+      "source_url": "https://www.antonio2026.com/issues",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/news/antonio-calls-for-immediate-moratorium-on-costly-regulations-vows-to-reform-carb-as-go",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "Could be argued at 1 because CalMatters' voter guide describes him as 'more skeptical of the state's climate goals' and his moratorium press release names cap-and-trade and refinery emissions rules as 'failed policies.' Mapped to 2 because he still says 'I believe in climate change. I have fought for climate change my entire political life' (LAist) and his moratorium is on new cost-increasing regulations rather than repealing AB 1279 or SB 100 itself. He is the most aggressive 'slow the timeline' Democrat in the field."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "decarbonization",
+      "stance": 3,
+      "summary": "Thurmond's public record on the 2045 timeline is thin. His clearest 2026-cycle climate statement is 'we can create clean energy jobs and protect communities at the same time,' and at a candidate forum he said 'the impacts of climate change are proven and undeniable.' He has not called for accelerating or softening AB 1279/SB 100 in the sources reviewed. His prior Assembly EnviroVoters scorecard record was strongly pro-climate, but as a 2026 statewide candidate he has not articulated a 2045 stance more specific than 'better balance.'",
+      "source_quote": "We can create clean energy jobs and protect communities at the same time.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-04-06",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://forbesca.com/climate-change-and-wildfires-divide-california-gubernatorial-candidates-at-forum/",
+        "https://envirovoters.org/archives/scorecard/2018/assembly/thurmond/index.html",
+        "https://www.tonythurmond.com/priorities"
+      ],
+      "notes": "Mapped to 3 (hold the target with current implementation) rather than 'unknown' because his public record and forum statements clearly affirm climate action without advocating either repeal/soften or acceleration of the 2045 target. Confidence is low because no direct quote on AB 1279, the 2045 economy-wide goal, or SB 100 was found. Could plausibly be a 4 if a more thorough scan of his forum-video submission to EnviroVoters' 'Our Climate Future' event yields a stronger acceleration statement — worth re-researching when transcripts surface."
+    }
+  ]
+}

@@ -3340,6 +3340,898 @@
         "https://www.cde.ca.gov/nr/ne/yr26/yr26rel03.asp"
       ],
       "notes": "Thurmond is the rare Democrat in the field whose published platform pairs sanctuary defense with specific revenue-raising statutory expansion (the detention-facility tax) plus institutional carve-outs (ICE-out-of-schools legislation). Stops short of Steyer's prosecute-ICE-agents framework, so not stance 5. The CBS California Investigates summary noted a partial nuance: Thurmond said law enforcement officials 'have a responsibility' to work with ICE when a judicial warrant is involved, which is consistent with SB 54's existing structure (judicial warrants are honored). That nuance does not narrow SB 54; it tracks the law. Mapped to 4 (expansion via detention-facility tax + ICE-out-of-schools statute + anti-cooperation rhetoric)."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "ceqa",
+      "stance": 1,
+      "summary": "Hilton wants to gut CEQA, particularly by prohibiting the private lawsuits that he says have made CEQA a tool for special-interest 'blackmail.' He frames CEQA as a law that was 'never intended to cover housing' and would block roughly 70% of current CEQA suits.",
+      "source_quote": "One of the worst examples is the abuse of lawsuits by special interests. One of the worst examples is the abuse of CEQA (the California Environmental Quality Act). Originally passed in 1970, it was never intended to cover housing, or to be used for private lawsuits. But over the years, unelected judges extended its scope and usage so that now, around 70% of CEQA lawsuits are used to block housing, many by special interests (like unions) masquerading as environmental groups in order to blackmail house-builders.",
+      "source_url": "https://stevehiltonforgovernor.com/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.newsweek.com/republican-steve-hilton-california-governor-race-2026-donald-trump-11849699",
+        "https://factually.co/fact-checks/politics/steve-hilton-key-california-policy-proposals-cost-estimates-201a56"
+      ],
+      "notes": "Hilton's specific proposal is to prohibit private CEQA lawsuits, which is functionally a major statutory rollback (it would gut the primary enforcement mechanism). Newsweek (2026-04-19, updated 2026-05-01) quotes him saying 'Seventy percent of lawsuits under CEQA are used to block housing.' Stance 1 is clearly correct."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "ceqa",
+      "stance": 2,
+      "summary": "Steyer supports broad CEQA streamlining as part of his million-homes housing agenda and championed SB 79 publicly during the legislative fight, but he has not called for repealing CEQA or restricting its core framework. His emphasis is on combining streamlined permitting with state-led housing finance.",
+      "source_quote": "candidates for the most powerful office in California promised how they'd be the most aggressive on local preemption, fee reform, and CEQA... [Steyer is] a vocal, public supporter of SB 79 throughout the legislative fight, not just after the bill was signed.",
+      "source_url": "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/housing",
+        "https://davisvanguard.org/2026/05/steyer-yimby-real-estate/",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Steyer's own housing page does not name CEQA explicitly; the strongest direct evidence comes from CA YIMBY framing him as one of the candidates 'most aggressive on CEQA.' On Pod Save America (2026-05-11) he described California permitting as 'overlapping, contradictory, expensive, time consuming' and pledged to 'simplify and coordinate.' Crucially, he is co-endorsed by EnviroVoters (with Porter), which suggests his CEQA reform appetite stops short of dismantling the framework. Stance 2 ('significant exemptions') is the best fit; confidence medium because Steyer has not published a specific CEQA proposal."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "ceqa",
+      "stance": 1,
+      "summary": "Bianco wants to abolish CEQA outright. He frames CEQA as a regulatory obstacle making housing unaffordable and says he would eliminate it alongside the Coastal Commission and other state regulators.",
+      "source_quote": "Expedite approval for housing projects... Eliminate CEQA and the litigation that only passes costs onto the homebuyer... End the over regulation of our building industry... Incentivize developers to build across California.",
+      "source_url": "https://biancoforgovernor.com/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://sdcitytimes.com/news/2026/05/12/primary-26-bianco-introduction/",
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/"
+      ],
+      "notes": "Bianco's position is the most extreme in the field: full repeal, not just exemptions. Multiple secondary sources independently confirm 'eliminate CEQA' as a campaign plank. Stance 1 is clearly correct with high confidence."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "ceqa",
+      "stance": 2,
+      "summary": "Becerra has pledged a Housing Affordability Master Plan that would unify zoning, streamlining, fees, financing, and regulatory costs — including CEQA reform — but he has not published specific carve-outs and as Attorney General he intervened under CEQA against San Diego County housing developments in wildfire zones. His campaign-era position is significant reform; his prior record shows willingness to use CEQA defensively.",
+      "source_quote": "candidates for the most powerful office in California promised how they'd be the most aggressive on local preemption, fee reform, and CEQA.",
+      "source_url": "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/housing/",
+        "https://missionlocal.org/2026/05/california-governor-candidates-housing-abundance/",
+        "https://oag.ca.gov/news/press-releases/attorney-general-becerra-seeks-intervene-litigation-over-wildfire-risk-san-diego"
+      ],
+      "notes": "Becerra's housing platform calls for 'comprehensive' regulatory reform including CEQA but is light on specifics. The YIMBY Action scorecard (2026-03-11) graded him C and noted he 'used CEQA to block a San Diego housing development while serving as Attorney General' (Otay Ranch, 2020-21, wildfire risk). At the Ezra Klein forum (2026-05-08) he was pressed and 'landed on cutting red tape and reducing local fees' but did not detail CEQA specifics. Stance 2 is the best fit given his current platform; confidence medium because of the tension with his AG record."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "ceqa",
+      "stance": 2,
+      "summary": "Porter has explicitly said CEQA reform would be her top priority as governor if pending reform bills don't pass the legislature, while acknowledging the law's core purpose is worth preserving. She was an early public backer of SB 79 and supports both pre- and post-entitlement reform.",
+      "source_quote": "Its purpose is one I strongly agree with. Making sure we're thinking about protecting our environment, making good decisions about when we build something, it is going to have an environmental effect... But that law has been abused. It has been used to simply stop building projects when we desperately need them.",
+      "source_url": "https://bakersfieldnow.com/news/local/former-rep-katie-porter-visits-bakersfield-to-discuss-run-for-california-governor-gubernatorial-2026-election-politics-democrats-republicans-sacramento-kern-county-central-valley",
+      "source_date": "2025-06-18",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://www.washingtonexaminer.com/news/campaigns/state/3828518/california-candidates-governor-crime-environmental-overhaul-debate/"
+      ],
+      "notes": "Porter is rare in this field for explicitly defending CEQA's underlying purpose while still calling its abuse her top reform priority — a stance 2 profile rather than a stance 1. The Bakersfield Now interview is the cleanest verbatim source on her CEQA framing. She is co-endorsed by EnviroVoters with Steyer, which is consistent with stance 2 (significant exemptions but preserve framework)."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "ceqa",
+      "stance": 1,
+      "summary": "Mahan is the most aggressive Democratic CEQA reformer in the field. He explicitly calls for a 'comprehensive overhaul' of CEQA — replacing the current 'swiss cheese' exemption-by-exemption approach with broader statutory simplification — and would impose mandatory CEQA review timelines to curb 'junk lawsuits.' He ran on stopping CEQA abuse in San Jose.",
+      "source_quote": "stop junk environmental lawsuits blocking new infill housing. New homes near transit and in walkable existing communities are a huge benefit to the environment, and should not be treated as pollution.",
+      "source_url": "https://www.mahanforcalifornia.com/housing",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://growsf.org/voter-guide/questionnaires/june-2026/matt-mahan/",
+        "https://yimbyaction.org/blog/grading-the-candidates-a-yimby-action-scorecard-on-the-california-yimby-gubernatorial-forum/",
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/"
+      ],
+      "notes": "Mahan's GrowSF questionnaire is the most explicit Democratic CEQA-reform statement in the field: he wants to 'overhaul CEQA more comprehensively to provide greater simplicity and certainty (vs. the current complicated set of exemptions)' and 'impose firm, mandatory timelines for CEQA review to cut the procedural delays and junk lawsuits.' YIMBY Action scored him a B and noted he committed to 'tough conversations' with environmental groups on the 'CEQA reforms we badly need.' Stance 1 (broad statutory rollback) is a closer fit than stance 2 because he explicitly wants statutory overhaul, not more carve-outs."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "ceqa",
+      "stance": 2,
+      "summary": "Villaraigosa has been one of the most vocal CEQA reform advocates in California politics, including co-authoring a 2023 California Forward report on the topic as Newsom's state infrastructure advisor. His proposal — adopt NEPA's standing requirement, limit post-comment-period submissions, fund judicial CEQA training, set clear significance thresholds — is a structural reform that would meaningfully narrow CEQA's reach without repealing it.",
+      "source_quote": "reforms CEQA by adopting NEPA's standing requirement, limiting post-comment-period submissions, funding judicial CEQA training, and establishing clear significance thresholds... reforming CEQA, streamlining permits, and enforcing production accountability can close the gap between planning and building and deliver the homes California families desperately need.",
+      "source_url": "https://www.antonio2026.com/plan",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://capitolweekly.net/ceqa-reform-with-antonio-villaraigosa-and-micah-weinberg/",
+        "https://www.washingtonexaminer.com/news/campaigns/state/3828518/california-candidates-governor-crime-environmental-overhaul-debate/",
+        "https://www.antonio2026.com/issues"
+      ],
+      "notes": "Villaraigosa has the deepest paper trail on CEQA: his California Forward / Boston Consulting Group report (2023, with Micah Weinberg) is the source of the standing-requirement and significance-threshold proposals. At a 2025 forum he named CEQA twice as 'the driving factor for the problems.' His California Housing Acceleration Act specifically targets CEQA modernization. Stance is a strong 2 — significant structural reform but explicitly within the existing CEQA framework, not repeal."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "ceqa",
+      "stance": 4,
+      "summary": "Thurmond has not articulated a specific CEQA reform position. His housing strategy emphasizes public funding ($10 billion for affordable housing, building 2 million units by 2030, public land utilization) rather than deregulation, distinguishing him from the rest of the Democratic field. He acknowledges permitting delays as a barrier but proposes funding, not statutory CEQA changes, as the response.",
+      "source_quote": "If it takes six years in some counties to permit a project, that is a huge barrier, who will do that? No one... We are experiencing a crisis of supply and demand. The state has not invested in affordable housing in over a decade.",
+      "source_url": "https://asianjournal.com/usa/california/thurmond-outlines-policy-agenda-on-housing-healthcare-and-immigration-in-media-briefing/",
+      "source_date": "2026-05-02",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/",
+        "https://yimbyaction.org/blog/grading-the-candidates-a-yimby-action-scorecard-on-the-california-yimby-gubernatorial-forum/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/"
+      ],
+      "notes": "Thurmond is the clearest outlier in the Democratic field on CEQA. CalMatters (2026-05-12) explicitly contrasts him: 'San Jose Mayor Matt Mahan supports deregulating housing policy... Superintendent of Public Instruction Tony Thurmond, in contrast, is focused on finding more public support for affordable housing.' YIMBY Action graded him F and documented no CEQA reform statements. Stance 4 ('preserve CEQA with minor procedural reforms') is the best fit by inference — he is not calling to strengthen CEQA, but he is also conspicuously not joining the CEQA-rollback consensus. Confidence is medium because he hasn't directly addressed CEQA; the stance is inferred from his choice to talk about funding rather than deregulation."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "decarbonization",
+      "stance": 1,
+      "summary": "Hilton would repeal California's net-zero-by-2045 target, calling it 'wildly unrealistic' and 'incredibly costly,' and would 'start rolling back extreme climate regulations' on Day 1 by firing CARB chair Liane Randolph. His electricity policy page also targets SB 100's '100 percent carbon-free by 2045' mandate, proposing to 'repeal California's costly wind and solar mandates and subsidies.'",
+      "source_quote": "Democrats have declared a 'war on fossil fuel', with a stated goal of 'net zero' carbon emissions by 2045 – a wildly unrealistic target with an incredibly costly and destructive price tag.",
+      "source_url": "https://californiaglobe.com/articles/steve-hiltons-plan-for-cutting-gas-prices-and-affordable-energy/",
+      "source_date": "2026-05-06",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/policy/cut-californias-electricity-bills-by-ending-wind-and-solar-farm-mandates-and-subsidies/",
+        "https://www.kpbs.org/news/politics/2026/05/06/steve-hilton-lays-out-his-plans-to-make-the-state-califordable-as-governor",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "The clearest stance 1 in the field. Hilton names the 2045 net-zero target by name and pairs it with explicit calls to repeal the SB 100 renewable mandate. He frames climate policy as 'climate elitism' and questions whether California's emissions cuts affect global temperatures: 'What is any of this pain that we're inflicting on working families and small businesses in California in the name of climate action, what is it actually doing for the climate in terms of impact on global temperatures?' (KPBS 2026-05-06)."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "decarbonization",
+      "stance": 4,
+      "summary": "Steyer is the most climate-forward candidate in the field: his current campaign climate plan targets '100 percent clean electricity by 2040 and net-zero greenhouse gas emissions by 2045 across all sectors' (accelerating SB 100's electricity timeline by five years), and in 2021 he publicly pushed California to move its economy-wide net-zero goal forward from 2045. He defends AB 1279, cap-and-trade, climate-disclosure laws, and CARB on his issues page and frames decarbonization as 'electrification = decarbonization. Make electricity cheap.'",
+      "source_quote": "Electrification = decarbonization. Make electricity cheap.",
+      "source_url": "https://www.tomsteyer.com/issues/climate",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.bloomberg.com/news/articles/2021-04-20/steyer-joins-pundits-in-call-for-california-to-go-green-faster",
+        "https://www.volts.wtf/p/tom-steyer-wants-to-be-californias",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://www.dbwexecsearch.com/post/tom-steyer-announces-2026-bid-for-california-governor-highlighting-climate"
+      ],
+      "notes": "Stance 4 rather than 5 because the 2030 economy-wide net-zero push he signed in 2021 is not explicitly part of his 2026 campaign platform; the 2040 clean-electricity acceleration is. Co-endorsed (with Porter) by California Environmental Voters in 2026, who cited 'aggressive climate action.' Could be argued at 5 if you weight his 2021 advocacy; could be argued at 3 if you require an explicit 2026 statement that AB 1279's 2045 economy-wide target should be moved up. The 2040 electricity target is the load-bearing acceleration commitment."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "decarbonization",
+      "stance": 1,
+      "summary": "Bianco would dismantle California's climate-regulatory regime — eliminating CARB-driven rules, ending the LCFS-style 'environmental regulations,' opening in-state oil and gas drilling, and replacing renewable mandates with 'market-driven' energy including expanded nuclear, hydrogen, and geothermal. He has questioned whether wildfires are linked to climate change and is the most explicit climate-skeptic Democrat-or-Republican in the field.",
+      "source_quote": "Gasoline, the regulations that increase it almost $2 a gallon, that will be immediately reduced... The regulations have to go away. We have to allow drilling to occur.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-04-06",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/issues/energy/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://forbesca.com/climate-change-and-wildfires-divide-california-gubernatorial-candidates-at-forum/"
+      ],
+      "notes": "Confidence medium rather than high because Bianco does not name AB 1279 or the 2045 target explicitly in the sources reviewed — his rhetoric is about the regulatory regime broadly ('the regulations have to go away'). But his platform contains no commitment to net-zero 2045 and CalMatters characterizes him as advocating for suspending state environmental regulations and boosting oil and gas production; mapped to stance 1 by inference."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "decarbonization",
+      "stance": 2,
+      "summary": "Becerra has explicitly said he is 'open to revising the state's climate goals to keep fuel affordable for middle-class Californians' — the most prominent 'flexibility' position from a Democrat in the field. His campaign frames climate action as something that 'only succeeds if it is affordable, reliable, and fair' and emphasizes maintaining refinery capacity through the transition. He has not endorsed repealing AB 1279 or moving past the 2045 target itself.",
+      "source_quote": "climate action only succeeds if it is affordable, reliable, and fair",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/energy-utilities/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://ktla.com/news/california/xavier-becerra-interview-governor-race/"
+      ],
+      "notes": "The CalMatters voter guide's 'open to revising the state's climate goals to keep fuel affordable' framing is paraphrased rather than verbatim, but it is repeated across KQED's affordability piece and KTLA's Becerra interview. He pairs this with 'we're never going backwards' rhetoric (CBS News 2026-04-06), making him a clearer stance 2 than stance 1 — slow/flexibilize rather than repeal."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "decarbonization",
+      "stance": 3,
+      "summary": "Porter holds the 2045 net-zero framework but emphasizes managed transition and consumer-cost realism. Her climate page commits to making California 'the first state to achieve 100% clean energy output, 365 days a year' but does not propose an accelerated year. In the CBS News round-up she said California needs to 'stay the course with regard to our existing refinery capacity' through the transition — a hold-the-target, manage-the-pace position.",
+      "source_quote": "California's future is going to be green energy, but we also have to be realistic about where we are.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-04-06",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://katieporter.com/priority/protecting-our-planet/",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://redwoodmary.substack.com/p/katie-porter-and-tom-steyer-on-climate"
+      ],
+      "notes": "EnviroVoters co-endorsed Porter with Steyer in 2026, citing her climate-justice record (100% LCV scorecard during her House tenure and oversight of oil-company gouging as House Natural Resources Oversight chair). She is not proposing acceleration in her 2026 platform, however; her '365 days a year' clean-energy framing does not assign a year more aggressive than the existing 2045 framework. Could be argued at 4 based on her record, but 2026-cycle statements support 3."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "decarbonization",
+      "stance": 2,
+      "summary": "Mahan does not call for repealing the 2045 target but criticizes its implementation as planless: 'We're going to be carbon neutral by whatever date without a plan to do it or the math around what it will cost people.' He would let innovation and grid modernization (virtual power plants, storage, EV-to-grid) set the pace rather than statutory milestones, and frames the transition through cost and feasibility rather than acceleration. His GrowSF questionnaire still cites 'tripling grid capacity by 2045 for electrification goals.'",
+      "source_quote": "We're going to be carbon neutral by whatever date without a plan to do it or the math around what it will cost people. The transition we need has to be led by what we are best at in California, which is innovation.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-04-06",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://growsf.org/voter-guide/questionnaires/june-2026/matt-mahan/",
+        "https://www.climateone.org/audio/san-jose-mayor-matt-mahan-live-sf-climate-week",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Borderline 2 vs. 3. He references 2045 as a planning horizon (GrowSF) rather than rejecting it, but his CBS quote is explicitly skeptical of binding-date thinking. As San Jose mayor he inherited (and missed) a 2030 city carbon-neutral pledge, which he has not repeated as a statewide proposal. Mapped to 2 because his rhetoric privileges flexibility over the statutory timeline; could plausibly be 3."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "decarbonization",
+      "stance": 2,
+      "summary": "Villaraigosa positions himself as 'keep[ing] our commitment to tackling climate change, but we can't do it at the expense of good-paying jobs,' rejects 'energy mandates that unfairly burden working families,' and would impose a Day-1 moratorium on new CARB cost-increasing regulations pending a 180-day review. His 'all of the above' platform includes natural gas, nuclear, and continued gas-powered cars — a slow-the-timeline, transition-fuel position rather than a repeal.",
+      "source_quote": "We must keep our commitment to tackling climate change, but we can't do it at the expense of good-paying jobs. We need an 'All of the Above' energy policy, with renewables like solar and wind, but also nuclear, natural gas, and yes, gas-powered cars.",
+      "source_url": "https://www.antonio2026.com/issues",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/news/antonio-calls-for-immediate-moratorium-on-costly-regulations-vows-to-reform-carb-as-go",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "Could be argued at 1 because CalMatters' voter guide describes him as 'more skeptical of the state's climate goals' and his moratorium press release names cap-and-trade and refinery emissions rules as 'failed policies.' Mapped to 2 because he still says 'I believe in climate change. I have fought for climate change my entire political life' (LAist) and his moratorium is on new cost-increasing regulations rather than repealing AB 1279 or SB 100 itself. He is the most aggressive 'slow the timeline' Democrat in the field."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "decarbonization",
+      "stance": 3,
+      "summary": "Thurmond's public record on the 2045 timeline is thin. His clearest 2026-cycle climate statement is 'we can create clean energy jobs and protect communities at the same time,' and at a candidate forum he said 'the impacts of climate change are proven and undeniable.' He has not called for accelerating or softening AB 1279/SB 100 in the sources reviewed. His prior Assembly EnviroVoters scorecard record was strongly pro-climate, but as a 2026 statewide candidate he has not articulated a 2045 stance more specific than 'better balance.'",
+      "source_quote": "We can create clean energy jobs and protect communities at the same time.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-04-06",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://forbesca.com/climate-change-and-wildfires-divide-california-gubernatorial-candidates-at-forum/",
+        "https://envirovoters.org/archives/scorecard/2018/assembly/thurmond/index.html",
+        "https://www.tonythurmond.com/priorities"
+      ],
+      "notes": "Mapped to 3 (hold the target with current implementation) rather than 'unknown' because his public record and forum statements clearly affirm climate action without advocating either repeal/soften or acceleration of the 2045 target. Confidence is low because no direct quote on AB 1279, the 2045 economy-wide goal, or SB 100 was found. Could plausibly be a 4 if a more thorough scan of his forum-video submission to EnviroVoters' 'Our Climate Future' event yields a stronger acceleration statement — worth re-researching when transcripts surface."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "natgas_bridge",
+      "stance": 1,
+      "summary": "Hilton wants to expand in-state oil and natural gas production and roll back the regulations he says have made California energy expensive. His 'Califordable' platform pairs the $3-gas promise with 'common sense environmental regulation of energy in California, freed from the ideological constraints' of net-zero policy. He has not separately addressed CARB's 2026 zero-emission appliance rule or the South Coast AQMD furnace fight, but his overall posture is unambiguously pro-gas.",
+      "source_quote": "Aggressively reduce crude oil imports, especially from authoritarian regimes [by expanding in-state production]... common sense environmental regulation of energy in California, freed from the ideological constraints [of net-zero policy].",
+      "source_url": "https://stevehiltonforgovernor.com/policy/gasprices/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://californiaglobe.com/articles/steve-hiltons-plan-for-cutting-gas-prices-and-affordable-energy/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://laist.com/news/politics/2026-election-california-primary-candidate-steve-hilton-governor-transcript"
+      ],
+      "notes": "Hilton's policy page is oil-centric; he rarely says 'natural gas' as a distinct phrase, but his expansion-of-domestic-production framing applies to gas as well, and he opposes the broader CARB regulatory agenda that would phase down gas appliances. Stance 1 is the conservative call."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "natgas_bridge",
+      "stance": 4,
+      "summary": "Steyer's climate platform explicitly equates 'electrification = decarbonization' and names heat pumps as a target technology to 'make accessible to all.' His Galvanize Climate Solutions fund has raised $370M for building decarbonization retrofits (HVAC, heat pumps, on-site solar). On power generation, his platform centers on solar/wind/storage replacing fossil generation, and he has positioned 'get off oil' as the answer to gas prices rather than expanding refineries. He has not publicly endorsed a specific gas-power-plant retirement date, which keeps him at 4 rather than 5.",
+      "source_quote": "Electrification = decarbonization. Make electricity cheap... Make the most advanced technologies like home batteries, rooftop solar, heatpumps, and EVs accessible to all.",
+      "source_url": "https://www.tomsteyer.com/issues/climate",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://envirovoters.org/california-governor-2026/",
+        "https://carboncredits.com/tom-steyer-climate-fund-raises-370m-to-turn-old-buildings-into-climate-assets/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "Steyer talks about electrification more than about natural gas phase-out specifically. His business activity (Galvanize, NextGen, the IRA advisory council) is consistent with an aggressive phase-down, but the campaign hasn't named a target date for retiring gas peakers. Stance 4 is the defensible call; could argue for 5 given his climate record but absent a verbatim 'phase out all gas' statement, 4 fits better."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "natgas_bridge",
+      "stance": 1,
+      "summary": "Bianco would expand California oil and gas drilling, scrap environmental regulations he says drive prices, and replace state income tax revenue with oil and gas extraction proceeds. His only clean-energy answer is 'nuclear.' Among the field, he is the most aggressively pro-fossil-fuel candidate — even more flat-rejection of California's regulatory framework than Hilton.",
+      "source_quote": "My signature on paper is going to remove those restrictions, and we are going to allow the oil companies to drill oil... we will get our own oil from California that we have unlimited reserves from.",
+      "source_url": "https://www.sfexaminer.com/news/politics/riverside-sheriff-chad-bianco-on-california-governor-bid/article_268ac412-3aa8-41bf-b51a-b2e9f1eb7d85.html",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://ktla.com/news/politics/inside-california-politics/california-gubernatorial-candidate-chad-bianco/",
+        "https://biancoforgovernor.com/"
+      ],
+      "notes": "Bianco's rhetoric focuses on oil drilling, not gas-power-plant policy, but his blanket 'regulations have to go away' framing includes the CARB and SCAQMD rules targeting natural gas appliances and pipelines. Stance 1 is the obvious call."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "natgas_bridge",
+      "stance": 2,
+      "summary": "Becerra emphasizes stabilizing energy supply and prices over accelerating transitions. He is on record as open to revising California's climate goals for affordability and wants to keep refineries running. His Energy & Utilities page reaffirms 'climate action only succeeds if it is affordable, reliable, and fair' and centers on utility-bill affordability rather than gas-system retirements. Stance 2 (maintain current natgas role with a gradual phase-down) is the best read of his 'never going backwards but also not accelerating' positioning.",
+      "source_quote": "The most important thing we can do is stabilize… not just the price, but stabilize the supply and stabilize the distribution of gas... [California should] maintain refinery capacity while continuing its transition to cleaner energy.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/energy-utilities/",
+        "https://www.eenews.net/articles/xavier-becerras-surge-spotlights-big-oil-in-california-governors-race/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "The most-cited quote 'stabilize the supply... stabilize the distribution of gas' is about gasoline (motor fuel), not natural gas per se, but Becerra's broader framing — open to slowing climate goals, refinery-friendly, took $39,200 from Chevron — translates to a stance-2 read on natural gas. Worth re-verifying with a direct natgas-specific statement before publication."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "natgas_bridge",
+      "stance": 4,
+      "summary": "Porter's congressional record is unambiguously anti-fossil-fuel-subsidy (Ending Taxpayer Welfare for Oil and Gas Companies Act 2021; greenwashing hearings; introduced hydrogen-for-ports and hydrogen-for-trucking bills) and her gubernatorial platform targets '100% clean energy output, 365 days a year.' She has accepted the EnviroVoters endorsement and swears off oil money. On refineries she does support 'staying the course' on existing capacity through the transition — but on natural gas as a power-generation and building-heat fuel, her electrification framing places her squarely at 4. Could be 5; no specific gas-power-plant retirement date stated.",
+      "source_quote": "Ensure that California remains on the front-edge of clean energy innovation and technology so California can be the first state to achieve 100% renewable energy output, 365 days a year... accelerate our transition to clean energy by investing in renewable resources like wind, solar, and geothermal.",
+      "source_url": "https://katieporter.com/priority/protecting-our-planet/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://envirovoters.org/california-governor-2026/",
+        "https://porter.house.gov/issues/issue/?IssueID=14893",
+        "https://www.lcv.org/moc/katie-porter/"
+      ],
+      "notes": "No verbatim Porter statement found specifically on natural gas as a bridge fuel or on the building-gas / heat-pump fight. Stance is inferred from her aggressive clean-energy platform, fossil-fuel-subsidy congressional record, and EnviroVoters endorsement. The 'stay the course on refineries' line is about motor-fuel supply continuity, not about extending the natgas role. Confidence is medium because the specific natgas-bridge question is unaddressed in the materials reviewed."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "natgas_bridge",
+      "stance": 2,
+      "summary": "As San Jose mayor (2023–present) Mahan inherited and enforced the city's 2020 Natural Gas Infrastructure Prohibition Ordinance requiring all-electric new construction, and his administration's SJCE program offers up to $12K in heat-pump rebates. But his gubernatorial messaging is conspicuously pragmatist: he objects to carbon-neutrality deadlines 'without a plan to do it or the math around what it will cost people' and wants the transition 'driven by innovation' (storage, virtual power plants) rather than mandates. He is the only major Democrat calling for a gas-tax suspension. Net read: gradual phase-down (stance 2), pace-cautious but not pro-expansion.",
+      "source_quote": "The transition has to be driven by innovation and better alternatives... we should be using technology to have a smarter grid that better balances supply and demand. We're going to be carbon neutral by whatever date without a plan to do it or the math around what it will cost people.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.sanjoseca.gov/Home/Components/News/News/2210/4699",
+        "https://www.nbcsandiego.com/news/politics/matt-mahan-paragon-pragmatism-governors-race/4021375/",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript"
+      ],
+      "notes": "Tension between record (San Jose all-electric ordinance enforcement, SJCE heat-pump rebates) and rhetoric (pragmatist pushback on carbon-neutral deadlines, gas-tax suspension). Mapped to 2 rather than 3 because the underlying record is electrification-positive. Could argue for 3 if you weight gubernatorial rhetoric over San Jose record."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "natgas_bridge",
+      "stance": 1,
+      "summary": "The clearest pro-natural-gas Democrat in the field. Villaraigosa's 'Affordable Energy for All' platform explicitly lists 'natural gas' as part of his 'all of the above' mix alongside renewables, nuclear, and gas-powered cars. He publicly opposed the South Coast AQMD's June 2025 proposal to phase down new gas furnaces and water heaters (which the board rejected), and his refinery-retention pitch frames climate mandates as 'energy mandates that unfairly burden working families.' On the natgas-bridge question he is the only major Democrat at stance 1.",
+      "source_quote": "We need an 'All of the Above' energy policy, with renewables like solar and wind, but also nuclear, natural gas, and yes, gas-powered cars... we can't just have energy mandates that unfairly burden working families.",
+      "source_url": "https://www.antonio2026.com/issues",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://gvwire.com/2025/09/29/villaraigosa-confident-hell-be-californias-next-governor-all-of-the-above-approach-on-energy-costs/",
+        "https://www.canarymedia.com/articles/heat-pumps/socal-gas-heaters-rules-nox",
+        "https://calmatters.org/commentary/2025/06/underestimate-antonio-villaraigosa-california-governor/"
+      ],
+      "notes": "Villaraigosa is the most useful 'differentiator' candidate on this issue — his explicit naming of natural gas as a desired part of the long-run mix is unique among Democrats in the field. Stance 1 is unambiguous."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "natgas_bridge",
+      "stance": 3,
+      "summary": "Thurmond emphasizes 'balance' — pursuing climate goals while investing in transition technologies and giving Californians a tax credit to offset higher energy costs. He has called for protecting refinery jobs and investing in carbon capture so refineries can 'get safer,' and his framing is closer to status-quo-with-mitigation than to active phase-down. No statement found specifically about natural gas in power generation or about the building-gas / heat-pump fight.",
+      "source_quote": "We can do a better job at balance... We have to find ways to balance climate change, but we also have to invest in technologies like carbon capture that allow refineries to get safer.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://www.tonythurmond.com/in-the-news"
+      ],
+      "notes": "No natgas-specific statement found in Thurmond's campaign materials or major-outlet interviews reviewed. The available record is about refineries (motor fuel) and broad 'balance' framing. Confidence is low — could be stance 4 if his climate-jobs framing translates to building electrification, or stance 2 if the 'balance' framing dominates. Stance 3 is the conservative middle call; revisit if a specific gas statement surfaces."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "nuclear",
+      "stance": 1,
+      "summary": "Hilton wants California to expand nuclear aggressively: keep Diablo Canyon open AND permit new large-scale and small-scale reactors, reclassify nuclear as 'clean energy' alongside efficient natural gas under a renamed 'clean portfolio standard,' and end the regulatory and litigation tilt against reliable generation. He frames nuclear as one of California's three best long-term electricity options.",
+      "source_quote": "Retain and expand California's nuclear power capacity, which can be fulfilled by keeping Diablo Canyon open while permitting new large and small scale reactors.",
+      "source_url": "https://californiapolicycenter.org/reports/energy-abundance/",
+      "source_date": "2025-02-24",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/policy/cut-californias-electricity-bills-by-ending-wind-and-solar-farm-mandates-and-subsidies/",
+        "https://x.com/ParisOrtizWines/status/2052506681221972054"
+      ],
+      "notes": "Stance 1 is unambiguous because Hilton co-authored the 'Energy Abundance' report (Golden Together / California Policy Center, Feb 2025) that explicitly calls for new large and small reactors in California — i.e., overturning the de facto 1976 moratorium. His campaign platform reinforces this with 'allow natural gas, nuclear, and consumer-driven rooftop solar to compete on a level playing field, free from government mandates' and complains of 'endless litigation and permitting delays that drive up the price of nuclear.' At the April 28 Pomona debate he was among the candidates who answered 'yes' on extending Diablo."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "nuclear",
+      "stance": 3,
+      "summary": "Steyer's debate answer is to extend Diablo Canyon, but his published electricity plan is silent on nuclear and is built almost entirely around distributed renewables (rooftop solar, batteries, community solar, microgrids, virtual power plants). He shows no public support for new nuclear or SMRs and has historically been a renewables-only climate advocate, so his position is fairly read as status-quo: keep Diablo, don't site new plants.",
+      "source_quote": "Extend it.",
+      "source_url": "https://x.com/ParisOrtizWines/status/2052506681221972054",
+      "source_date": "2026-04-28",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/electricity",
+        "https://www.volts.wtf/p/tom-steyer-wants-to-be-californias",
+        "https://calmatters.org/politics/2026/01/governor-steyer-electricity-rates/"
+      ],
+      "notes": "Coded 3 (status quo, Diablo-only) rather than 2 (open to expansion) because Steyer's own published electricity policy page does not contain the word 'nuclear' anywhere — every concrete generation lever he names is distributed renewable. His extended Volts/David Roberts interview (April 27, 2026) likewise did not mention nuclear, SMRs, or Diablo. The debate 'Extend it' answer is the floor of what's politically viable in CA in 2026 (Newsom-aligned position) and does not imply he'd back NEW reactors. Stance 2 would require evidence of openness to expansion that I could not find."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "nuclear",
+      "stance": 1,
+      "summary": "Bianco explicitly calls for keeping Diablo Canyon operational AND making nuclear part of California's long-term energy future on his campaign's energy page, listed alongside hydrogen, geothermal, and hydro as 'innovative energy solutions that are driven by the market.' Combined with his deregulation framing and his answer at the Pomona debate, he is a clear stance 1 (expand).",
+      "source_quote": "Keep Diablo Canyon up and operational. Support nuclear as a clean and reliable source of California's energy future.",
+      "source_url": "https://biancoforgovernor.com/energy/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://x.com/ParisOrtizWines/status/2052506681221972054",
+        "https://abc7.com/post/republican-governor-candidate-chad-bianco-says-hes-antithesis-california-state-government/18677627/"
+      ],
+      "notes": "Stance 1 (expand) rather than 2 (just extend) because the platform language goes beyond Diablo — 'California's energy FUTURE' implies a forward expansion, and the broader plank to 'unleash the California energy industry by lifting prohibitions and restrictions' on the supply side reads as overturning California's nuclear moratorium. Less explicit than Hilton's white paper (which names new reactors) but pointing the same direction. Confidence high on direction; medium on whether he's specifically endorsed new-build SMRs (no SMR-specific quote found)."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "nuclear",
+      "stance": 2,
+      "summary": "Becerra supports extending Diablo Canyon if operations are safe ('Yes, if safe, yes' at the Pomona debate) but his campaign's Energy and Utilities priority page never mentions nuclear, SMRs, or new plants — it frames clean energy and grid resilience as 'public investments' with affordability and reliability as the core goals. He has not foreclosed nuclear expansion but has also not endorsed it.",
+      "source_quote": "Yes, if safe, yes.",
+      "source_url": "https://x.com/ParisOrtizWines/status/2052506681221972054",
+      "source_date": "2026-04-28",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/energy-utilities/",
+        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/"
+      ],
+      "notes": "Coded 2 (keep options open) rather than 3 (pure status quo) because the safety-conditioned 'yes' answer is genuinely permissive — he didn't say 'extend Diablo only,' he said yes-if-safe, which logically extends to new nuclear under the same condition. But there is no affirmative public support for new plants. The 'if safe' qualifier is the lever Sierra Club / progressive opponents will use to flip him later if needed, but on its face this is an extension-friendly, expansion-neutral posture."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "nuclear",
+      "stance": 3,
+      "summary": "Porter's position has shifted notably. In her February 2024 Senate debate she said 'Diablo Canyon needs to be safely decommissioned. I would close Diablo Canyon.' By April 2026, on a gubernatorial campaign town hall on the Central Coast, she had walked back to 'nothing can go offline if it can be operated safely today' while still framing the long-term future as 'green and clean' renewables. She has no public support for new nuclear or SMRs.",
+      "source_quote": "We need more power than we have to even stay the course where we've been, so that means nothing can go offline if it can be operated safely today.",
+      "source_url": "https://www.aol.com/news/governor-candidate-katie-porter-talks-160000398.html",
+      "source_date": "2026-04-03",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.yahoo.com/news/california-just-saved-last-nuclear-233011319.html",
+        "https://katieporter.com/priority/protecting-our-planet/",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Coded 3 (status quo) because she's now explicitly accepted continued Diablo operation while still framing California's future as renewables-based and saying things like 'We're all getting a day older every day, and so is Diablo' (acknowledging aging infrastructure, not endorsing replacement plants). Medium confidence because the 2024 'decommission' statement is still recent enough that anti-nuclear groups treat her as soft; a moderator pushing her at the Pomona debate would likely have gotten the same Diablo-yes answer, but I do not have her individual response transcribed. Stance 2 would require evidence of openness to NEW nuclear, which I couldn't find. Stance 4 is wrong because she has now publicly walked back the 2024 close-Diablo position."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "nuclear",
+      "stance": 2,
+      "summary": "Mahan answered 'Keep it open' on Diablo Canyon at the Pomona debate and as San Jose mayor has publicly endorsed an 'all of the above' generation mix that names nuclear by name for meeting AI/data-center electricity demand, alongside geothermal, hydro, gas, batteries, solar and wind. He has not personally endorsed siting new fission plants in California, but he is the candidate whose 'clean energy AI capital of the world' framing most clearly invites nuclear-powered industrial growth.",
+      "source_quote": "Keep it open.",
+      "source_url": "https://x.com/ParisOrtizWines/status/2052506681221972054",
+      "source_date": "2026-04-28",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.pge.com/en/newsroom/currents/future-of-energy/revolutionizing-data-centers--the-ultimate-power-play-for-today-.html",
+        "https://www.sanjoseca.gov/Home/Components/News/News/6819/4699?npage=2",
+        "https://www.climateone.org/audio/san-jose-mayor-matt-mahan-live-sf-climate-week"
+      ],
+      "notes": "Coded 2 (extend + keep options open / all-of-the-above) rather than 1 (explicit expansion) because Mahan personally has NOT said 'site new reactors' in any quote I found — the PG&E article reporting the all-of-the-above mix attributes the energy-mix language to context around his data-center push rather than to a verbatim Mahan quote endorsing new nuclear specifically. His Silicon Valley donor base is pro-nuclear (Sam Altman et al., per the user-provided hint) and his data-center ambition implies nuclear-friendly policy, but absent a verbatim 'build SMRs' quote, stance 2 is the defensible coding. Could be revised up to 1 if a specific Mahan quote backing AB 2647 / new fission permits surfaces before launch."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "nuclear",
+      "stance": 1,
+      "summary": "Villaraigosa is the most explicit nuclear-expansion Democrat in the field. His September 2025 campaign rollout and his own issues page both call for an 'all of the above' energy approach that explicitly names 'small nuclear' (SMRs) alongside renewables, oil, gas, and big/little hydro. This places him to the right of every other Democrat in the race on nuclear and roughly tied with Hilton/Bianco directionally.",
+      "source_quote": "We need an all-of-the-above approach to energy, an all-of-the-above approach as we take on climate change. And so, yes, we need renewables — solar, wind, geothermal, big hydro, and little hydro. But we also need oil and gas. And we need small nuclear.",
+      "source_url": "https://gvwire.com/2025/09/29/villaraigosa-confident-hell-be-californias-next-governor-all-of-the-above-approach-on-energy-costs/",
+      "source_date": "2025-09-29",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/issues",
+        "https://x.com/ParisOrtizWines/status/2052506681221972054"
+      ],
+      "notes": "Stance 1 (expand) is the clean coding because he explicitly endorses 'small nuclear' — i.e., SMRs — as part of California's future generation mix. That's an expansion of capacity beyond Diablo, which requires overturning or carving an exception to the 1976 moratorium (the AB 65 / AB 2647 territory). His issues page restates this as 'renewables like solar and wind, but also nuclear, natural gas, and yes, gas-powered cars,' confirming nuclear-by-name in the all-of-the-above plank. He is also presumed to have said yes on the Diablo-extension debate question (the X recap was 'ALL candidates' supported extension)."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "nuclear",
+      "stance": "unknown",
+      "summary": "Thurmond has no findable public position on nuclear power, Diablo Canyon, SMRs, or California's 1976 nuclear moratorium. His campaign priorities page, his Oakland Voices interview, the Legal Planet climate forum recap, and major debate coverage all touch on climate and 'clean energy jobs' generically without naming nuclear in any direction. He skipped the in-person Legal Planet climate forum (submitted video instead). As a progressive aligned with Sierra Club / EnviroVoters' historical opposition camp, his prior is mild anti-nuclear, but he has not voiced it publicly in this race.",
+      "source_quote": "We have to build, build, build. We can create clean energy jobs and protect communities at the same time.",
+      "source_url": "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+      "source_date": "2026-04-24",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.tonythurmond.com/priorities",
+        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Stance 'unknown' is correct here per the brief's instruction to expect 2-4 unknowns. The quoted 'build, build, build' clean-energy line is the closest he has come to an energy-mix statement and is deliberately non-specific. The Paris-Ortiz-Wines recap of the Pomona debate said 'ALL candidates' backed extending Diablo, which would include Thurmond, but I could not find a sourceable Thurmond-specific quote on that question. If forced to guess: probably stance 3 (extend Diablo, no new nuclear) — but per the brief, 'unknown' with insufficient_data is the correct coding rather than speculation."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "oil_gas",
+      "stance": 1,
+      "summary": "Hilton would 'aggressively reduce crude oil imports... by rapidly expanding California production,' streamline drilling permits within his first three months, and bypass the legislature entirely on Kern County expansion via executive action through CalGEM. His campaign explicitly names SB 1137 and AB 2-1 as laws to roll back.",
+      "source_quote": "We don't need a bill. I'll get it done directly as governor by instructing the California Department geologic and energy management to...",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/policy/gasprices/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://californiaglobe.com/articles/steve-hiltons-plan-for-cutting-gas-prices-and-affordable-energy/"
+      ],
+      "notes": "Tied with Bianco for the strongest expansion stance. Hilton is distinctive in claiming gubernatorial authority to expand drilling without legislation by directing CalGEM permitting. His own policy page identifies the Sacramento Basin and the 'permitting delays, drilling restrictions, and costly new laws like SB1-2 and AB2-1' as targets."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "oil_gas",
+      "stance": 4,
+      "summary": "Steyer was one of only two candidates to answer 'No' to signing a Kern County oil-expansion bill. His campaign's central energy frame is 'get off oil,' he is Sierra Club-endorsed, has pledged not to take oil money, and his gas-price plan emphasizes refinery-margin oversight and accelerating EV adoption rather than expanding extraction. He has not, however, called for halting existing in-state production — placing him at 4 rather than 5.",
+      "source_quote": "No",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/oil-gas-prices",
+        "https://www.sierraclub.org/press-releases/2026/05/sierra-club-endorses-tom-steyer-california-governor",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "The Press Democrat 2026-05-13 piece reports legacy Farallon fossil-fuel holdings, but Steyer broke with the firm in 2012 over divestment and has run NextGen Climate since. His campaign rejects new in-state oil expansion (Kern question = No) and his website's energy page does not propose any new permitting — it focuses on price-gouging enforcement and EV trade-in. Could be argued as 5 given Sierra Club endorsement, but no explicit 'phase out existing extraction' statement in sources reviewed."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "oil_gas",
+      "stance": 1,
+      "summary": "Bianco answered 'Absolutely' to signing a Kern County oil-expansion bill and has built his platform around using expanded in-state oil drilling to replace state income tax revenue. His core line — 'The regulations have to go away. We have to allow drilling to occur' — is the most categorical pro-expansion statement in the field.",
+      "source_quote": "Absolutely",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://ktla.com/news/politics/inside-california-politics/california-gubernatorial-candidate-chad-bianco/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Bianco's framing is the most revenue-tied of the expansion candidates: he proposes that expanded oil drilling pay for the elimination of California's state income tax. He has explicitly criticized SB 1137-style restrictions as part of the regime he would dismantle."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "oil_gas",
+      "stance": 2,
+      "summary": "Becerra answered 'Versus importing? Yes' to signing a Kern County oil-expansion bill — a qualified yes that frames in-state production as preferable to imports. Combined with his stated openness to revising California's climate goals for fuel affordability and his acceptance of Chevron/Sempra/PG&E contributions, this maps to maintain-and-loosen rather than expand-aggressively. He has not endorsed weakening SB 1137 setbacks specifically.",
+      "source_quote": "Versus importing? Yes",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://www.eenews.net/articles/xavier-becerras-surge-spotlights-big-oil-in-california-governors-race/",
+        "https://www.counterpunch.org/2026/05/01/xavier-becerra-says-we-must-think-about-the-future-of-humanity-then-cashes-checks-from-chevron/"
+      ],
+      "notes": "Borderline between 2 and 3. His campaign site emphasizes 'we're never going backwards' on climate while accepting fossil-fuel donations and answering yes on Kern expansion. Confidence medium because the Kern answer is qualified ('versus importing') and his written platform avoids the specifics. The cleaner read is stance 2 — willing to expand at the margin, oppose climate-goal acceleration — rather than full status-quo (3)."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "oil_gas",
+      "stance": 4,
+      "summary": "Porter answered 'No' to signing a Kern County oil-expansion bill and stated 'There's a big difference between keeping what we've got open — which I think we have to do, at least with [President] Donald Trump in office — and drilling more, which I oppose.' She backs maintaining existing in-state refinery capacity through the transition but opposes new drilling and has rejected oil-industry contributions.",
+      "source_quote": "There's a big difference between keeping what we've got open — which I think we have to do, at least with [President] Donald Trump in office — and drilling more, which I oppose.",
+      "source_url": "https://nationaltoday.com/us/ca/riverside/news/2026/03/27/katie-porter-outlines-energy-federal-funding-positions-during-riverside-campaign-stop/",
+      "source_date": "2026-03-27",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+        "https://katieporter.com/priority/protecting-our-planet/",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Porter explicitly distinguishes existing extraction (keep) from new drilling (oppose) — a textbook stance-4 'halt new permits, do not phase out existing.' EnviroVoters dual-endorsed her with Steyer to ensure a pro-climate candidate advances. Not stance 5 because she has affirmed she would 'stay the course with regard to our existing refinery capacity' to protect jobs and keep gas as low as possible through the transition."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "oil_gas",
+      "stance": 2,
+      "summary": "Mahan answered 'Yes' to signing a Kern County oil-expansion bill and added that California 'should stop pushing all of our refining capacity out of state and importing dirtier oil from thousands of miles away.' He has also said he is open to curbing refinery regulations. He has not, however, proposed weakening SB 1137 setbacks or built the same revenue/regulatory dismantling case the Republicans have.",
+      "source_quote": "Yes. We also should stop pushing all of our refining capacity out of state and importing dirtier oil from thousands of miles away",
+      "source_url": "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://www.mahanforcalifornia.com/gas-tax"
+      ],
+      "notes": "Mahan is one of the two Democrats (with Villaraigosa) who openly broke with the party's climate orthodoxy on the Kern question. His framing emphasizes 'dirtier imports' to justify in-state production — a 2, not a 1, because he has not promised to dismantle setbacks or the broader regulatory regime."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "oil_gas",
+      "stance": 2,
+      "summary": "Villaraigosa answered 'Yes' on Kern expansion and his campaign endorses an 'all-of-the-above' energy posture treating oil and gas as a transition fuel, citing Norway as the model. Crucially, his campaign-site fine print explicitly commits to SB 1137 setbacks as 'non-negotiable commitments, not bargaining chips' and opposes offshore drilling — so his expansion is intra-onshore-permits, not deregulatory in the Hilton/Bianco mold.",
+      "source_quote": "Supporting in-state oil and gas production is a direct lever for reducing gas prices... Every barrel of crude oil produced in California reduces the state's dependence on imported crude.",
+      "source_url": "https://www.antonio2026.com/gas",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://cal.streetsblog.org/2026/05/12/only-porter-and-steyer-would-spare-central-valley-from-more-oil-extraction-and-air-pollution",
+        "https://gvwire.com/2025/09/29/villaraigosa-confident-hell-be-californias-next-governor-all-of-the-above-approach-on-energy-costs/",
+        "https://kfiam640.iheart.com/featured/wake-up-call/content/2025-05-26-villaraigosa-shifts-toward-oil-industry-in-california-governor-race/",
+        "https://www.antonio2026.com/news/antonio-calls-for-immediate-moratorium-on-costly-regulations-vows-to-reform-carb-as-go"
+      ],
+      "notes": "Villaraigosa is the most heterodox Democrat on this issue — pro-expansion on production but explicitly committed to SB 1137 setbacks. That combination is why he is 2 (maintain production + reduce regulation) rather than 1 (expand and dismantle setback regime). The 'no way' line on offshore drilling and his Refinery Retention and Investment Act framing further differentiate him from the GOP candidates' more sweeping deregulation."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "oil_gas",
+      "stance": 3,
+      "summary": "Thurmond did not appear on stage at the 2026-04-28 CBS debate where the Kern oil-expansion question was asked (he did not meet the polling threshold). His only on-record statement on extraction is pro-refinery-retention paired with carbon capture and a 'better balance' framing — closer to status quo than to phase-down. Insufficient direct extraction-permitting position to confidently map him higher up the phase-down scale.",
+      "source_quote": "We can do a better job at balance... We have to find ways to balance climate change, but we also have to invest in technologies like carbon capture that allow refineries to get safer.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "The pre-research hint of 4-5 is NOT supported by the available record. Thurmond submitted a video response to the January 2026 'Our Climate Future' forum but the full transcript was not retrievable, and his other media interviews on energy focus on refinery retention plus carbon capture, not new drilling restrictions or extraction phase-down. Mapped to 3 with low confidence — he may sit at 4 if a more direct anti-extraction statement surfaces, but no Tier-1 or Tier-2 source reviewed supports that placement. Worth a re-research pass before publishing if dataset launches before primary."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "water_allocations",
+      "stance": 1,
+      "summary": "Hilton would immediately reverse regulatory decisions restricting agricultural water deliveries for environmental purposes, appoint new members to the State Water Resources Control Board, and name John Duarte (a Central Valley farmer) as Natural Resources Secretary. He supports expanding Sites Reservoir and raising Shasta Dam and frames California water policy as a 'partisan choice' that has 'taken away water rights' from farmers. He treats environmental flow requirements as the cause of an artificial shortage.",
+      "source_quote": "Every single aspect of farming has been made impossible: taking away water rights... It is partisan. It's a choice.",
+      "source_url": "https://stevehiltonforgovernor.com/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://agnetwest.com/steve-hilton-california-agriculture-policy-plan/",
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://www.agri-pulse.com/articles/24484-governor-hopefuls-clash-on-water-regulations-and-ags-future"
+      ],
+      "notes": "Clearest stance 1 in the field along with Bianco. Hilton's promised John Duarte appointment is unusually concrete — Duarte fought the federal government for years over a Clean Water Act enforcement case and is a household name among Central Valley farmers. Hilton's site also flags 'almost a million Californians don't have access to clean drinking water,' but that is framed as a quality/disadvantaged-community issue, not as a competing claim on allocation."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "water_allocations",
+      "stance": 4,
+      "summary": "Steyer has no published water-allocation position on his campaign site, but his decades-long climate brand, Sierra Club and EnviroVoters endorsements, and 'get off oil' / restore-ecosystems framing make him the most environmentally-aligned candidate in the field. He skipped the ag-heavy Fresno forum where competitors made farmer-friendly water pledges. Best read as favoring environmental flows and urban conservation over relaxing ag deliveries, with ag concessions only where ecologically defensible — but the absence of a verbatim Delta-flows or voluntary-agreement statement keeps confidence at medium.",
+      "source_quote": "(no direct water-policy quote located; mapping derives from Sierra Club endorsement and absence from ag-coalition forum) Sierra Club: 'a candidate with a long record of investing in climate solutions, taking on Big Oil, and helping build the coalitions needed to win major environmental fights.'",
+      "source_url": "https://www.sierraclub.org/press-releases/2026/05/sierra-club-endorses-tom-steyer-california-governor",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/climate",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://www.tomsteyer.com/issues"
+      ],
+      "notes": "Steyer's TomKat Ranch is positioned as a sustainable-agriculture demonstration, and his Galvanize Climate Solutions fund has backed irrigation-tech (weather stations for ag). That suggests he is not anti-farmer in principle — he is the candidate most likely to package any ag concessions inside an environmental-flows-first framework. If he ever stakes a verbatim position on Bay-Delta voluntary agreements vs. flow-and-allocation rules, that should be re-checked; for now stance 4 with medium confidence is the defensible call."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "water_allocations",
+      "stance": 1,
+      "summary": "Bianco's campaign issues page leads with 'Protect California Farmers' Water Rights' and frames the shortage as a 'man-made drought' caused by 70-80% of California water flowing 'unused into the ocean.' He would build 'massive dams,' expedite Sites Reservoir, reform SGMA to lighten groundwater regulation, and eliminate regulations on farming. He blames Democratic environmental policy directly: 'It's an ideological, Democratic agenda.' Unusually for a stance-1 candidate, he opposes the Delta Conveyance tunnel as a 'completely ridiculous project,' but only because he sees it as bureaucratic boondoggle, not because he favors environmental flows.",
+      "source_quote": "Protect California Farmers' Water Rights and ensure California farmers have the water allocations necessary to feed California and the nation.",
+      "source_url": "https://biancoforgovernor.com/agriculture-and-water/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://agnetwest.com/chad-bianco-california-agriculture-plan/",
+        "https://www.agri-pulse.com/articles/24484-governor-hopefuls-clash-on-water-regulations-and-ags-future"
+      ],
+      "notes": "Bianco is from Riverside, an IE-ag region, and his rhetoric is the most explicitly anti-environmental-regulation of any candidate. His Delta Conveyance opposition is a notable wrinkle — it diverges from Hilton/Duarte and from much of organized ag, but the underlying allocation preference is unambiguously stance 1. His SGMA-reform pitch ('reduce regulations on groundwater management') stops short of repealing the statute outright."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "water_allocations",
+      "stance": 3,
+      "summary": "Becerra's campaign priorities page does not address water. At the April 2026 Fresno forum he told growers 'we need to give you predictability on water,' framing the problem as administrative-negotiation rather than reallocation: 'We may not know how much rain is going to fall in a particular year, but we can still give you predictability based on the amount of water we currently only have.' As Attorney General he sued the first Trump administration over Delta biological opinions, citing endangered-fish protections — a stance-4-ish posture — but as a 2026 candidate he is courting Central Valley voters with a balance-and-negotiate frame. Best read as 3.",
+      "source_quote": "We need to give you predictability on water... We may not know how much rain is going to fall in a particular year, but we can still give you predictability based on the amount of water we currently only have. Water is more precious than gold. Let's make it work.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.kqed.org/news/11802722/california-files-lawsuit-to-block-trump-administration-delta-water-rules",
+        "https://www.xavierbecerra2026.com/priorities/"
+      ],
+      "notes": "His AG-era Delta lawsuits suggest he would defend the existing federal environmental-flow regime if forced to choose, but in 2026 he is conspicuously avoiding any allocation-side commitment. If pressed in a debate he could plausibly land at 3 or 4 depending on audience. Mapped 3 with medium confidence because he refuses to choose between ag predictability and environmental flows in public."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "water_allocations",
+      "stance": 3,
+      "summary": "Porter's priorities page does not specifically address water allocations. At the Fresno forum she stated 'there is no magic wand to create more water' and acknowledged that regulations are 'choking off' farming, while emphasizing accountability over wholesale rollback. Her broader 'protect air and water' / climate-resilience framing pairs with sympathy for farmer compliance burden, putting her at a balance posture rather than at either extreme.",
+      "source_quote": "There is no magic wand to create more water.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://katieporter.com/priorities/",
+        "https://www.wga.com/news/california-gubernatorial-candidates-discuss-affordability-and-rural-issues-at-fresno-forum/"
+      ],
+      "notes": "Porter is OC-rooted and has consumer-protection instincts but no clear Delta-flows record. Her Fresno-forum framing was 'we can't pretend to manufacture water,' which is supply-realist but agnostic between the ag-vs-environment poles. Could be 2 or 4 depending on how she translates the consumer-protection lens — for now 3 with medium confidence."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "water_allocations",
+      "stance": 3,
+      "summary": "Mahan, the San Jose mayor, treats water primarily as an infrastructure-and-storage problem rather than an ag-vs-environment fight. He calls it 'a crime' that California has not built more reservoirs and storage, wants to repair canals losing water to subsidence damage, and argues CEQA reform is the unlock for water infrastructure. He says farmers are 'already embracing innovation' and pledged to elevate ag communities he says have been treated as 'second-tier.' All-of-the-above storage posture, agnostic on flow-vs-allocation rule fights.",
+      "source_quote": "We absolutely need to expand storage. It is a crime that it has taken this long to move forward these reservoir projects.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.agri-pulse.com/articles/24484-governor-hopefuls-clash-on-water-regulations-and-ags-future",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript",
+        "https://www.mahanforcalifornia.com/"
+      ],
+      "notes": "Silicon Valley moderate who frames water through CEQA / build-more lens. No verbatim position on Bay-Delta voluntary agreements, environmental flows, or pre-1914 vs. post-1914 rights. The 'storage is a crime to delay' framing leans modestly ag-friendly but is squarely within the bipartisan 'all-of-the-above' consensus the Newsom administration has staked out, so stance 3."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "water_allocations",
+      "stance": 2,
+      "summary": "Villaraigosa promotes an 'all of the above' water strategy — storage, conveyance, and groundwater recharge — and pledged at the Fresno forum to put 'a moratorium on farming regulations' and extend the same moratorium to CARB and Air Board rules. His campaign frames water as 'capture, clean, and store the water we will desperately need' while criticizing 'endless lawsuits and bureaucratic inertia.' His post-mayoral tenure on the board of Cadiz Inc. (a controversial Mojave groundwater-marketing project) suggests comfort with private water-rights deals. Lands modestly ag-friendly of center.",
+      "source_quote": "We've got to put a moratorium on farming regulations.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.antonio2026.com/issues",
+        "https://www.agri-pulse.com/articles/24484-governor-hopefuls-clash-on-water-regulations-and-ags-future",
+        "https://en.wikipedia.org/wiki/Antonio_Villaraigosa"
+      ],
+      "notes": "Mapped stance 2 rather than 3 primarily because of the moratorium-on-farming-regulations pledge — it is a clear directional choice in favor of ag over environmental constraints. Villaraigosa's Cadiz board service is a relevant biographical signal but pre-dates the campaign; he has not invoked it in 2026. As LA mayor he expanded MWD/LADWP conservation programs, which puts urban water on his radar. Could be argued at 3 if voters weight his all-of-the-above rhetoric over the moratorium pledge."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "water_allocations",
+      "stance": "unknown",
+      "summary": "Thurmond's campaign site and priorities pages do not address water allocations. He did not attend the April 2026 Fresno State ag-forum where most rivals staked positions, and his recent interviews have focused on education, housing, and a billionaire wealth tax. A Bay Area progressive profile and his climate-forum participation suggest he would likely lean stance 4 (environmental flows / urban first), but absent any direct statement on Bay-Delta flows, voluntary agreements, SGMA, or ag allocations, the position is insufficiently documented to assign.",
+      "source_quote": "(no water-allocation position located across campaign site, recent interviews, or forum recaps)",
+      "source_url": "https://www.tonythurmond.com/",
+      "source_date": "2026-05-13",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/"
+      ],
+      "notes": "Worth re-checking after any upcoming debate appearances or a Fresno/Central Valley campaign swing. Thurmond's progressive flank position on most other issues makes stance 4 the modal prediction, but without a verbatim quote it would be irresponsible to assign — water-rights politics in California are nuanced enough that progressives sometimes split on flow vs. equity-of-disadvantaged-community framings."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "water_projects",
+      "stance": 1,
+      "summary": "Hilton would expand California water infrastructure aggressively — endorses building Sites Reservoir, raising Shasta Dam, and dredging the Delta — and would 'reverse certain regulatory decisions that restrict water flows for environmental purposes' to free up supply immediately. He frames environmental regulation as the chief barrier to building new water storage.",
+      "source_quote": "Hilton said that increased water deliveries to agriculture could be achieved immediately by reversing certain regulatory decisions that restrict water flows for environmental purposes... [he supports] expanding long-discussed infrastructure projects such as Sites Reservoir and raising Shasta Dam, both of which could significantly increase water storage capacity.",
+      "source_url": "https://agnetwest.podbean.com/e/steve-hilton-lays-out-plan-to-revive-california-agriculture-energy-and-water-policy/",
+      "source_date": "2026-04-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://fresnochamber.com/news/california-governor-hopefuls-clash-over-agriculture-affordability-and-water-policy/",
+        "https://stevehiltonforgovernor.com/"
+      ],
+      "notes": "Hilton does NOT explicitly take a position on the Delta Conveyance Project (tunnel) in the sources reviewed — he endorses Sites + Shasta + dredging plus rolling back environmental restrictions on water flows. The frame is wholesale supply-side expansion; even if he is silent on the tunnel specifically, his deregulate-and-build stance is the maximal-expansion archetype. Source date is approximate (AgNet West podcast aired around the Fresno State forum)."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "water_projects",
+      "stance": 4,
+      "summary": "Steyer has not publicly stated a Delta tunnel position in the sources reviewed, but his climate-and-environment-first brand, endorsements from Sierra Club California and Food & Water Action (both vocally opposed to the Delta Conveyance Project), and skipping the Fresno State agriculture-and-water forum signal he is at minimum tunnel-skeptical and oriented toward conservation/recycling/groundwater over new conveyance megaprojects.",
+      "source_quote": "Sierra Club California will lend its considerable grassroots strength to Tom Steyer's campaign... backing a candidate with a long record of investing in climate solutions, taking on Big Oil, and helping build the coalitions needed to win major environmental fights.",
+      "source_url": "https://www.sierraclub.org/press-releases/2026/05/sierra-club-endorses-tom-steyer-california-governor",
+      "source_date": "2026-05-06",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.foodandwateraction.org/press/food-water-action-endorses-tom-steyer-for-california-governor/",
+        "https://www.tomsteyer.com/issues/climate",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Inferred from endorsers and his Bay Area / climate-investor profile. His campaign Issues page lists Climate and Environment but does not name the Delta tunnel, Sites Reservoir, or dams. Could plausibly be 3 (case-by-case) if elected and pressed; could be 5 if he campaigns on explicit tunnel opposition before the primary. Mapped to 4 as the most defensible reading absent a direct quote."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "water_projects",
+      "stance": 1,
+      "summary": "Bianco is the most aggressively pro-expansion candidate — promises to 'expedite the construction of Sites Reservoir,' expand above-ground storage, modernize aging water infrastructure, and 'sign away the environmental regulations that are preventing those dams from being built.' He invokes the unbuilt Prop 1 (2014) dam projects as a failure of state will, not engineering.",
+      "source_quote": "Expedite the construction of Sites Reservoir which will provide a more flexible water supply for future generations of Californians... Expand the capacity of California's above-ground water storage to create drought-resiliency for dry years... Proposition 1 was passed in 2014, over 10 years ago, and not a single new water project has been completed.",
+      "source_url": "https://biancoforgovernor.com/agriculture-and-water/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.theunion.com/news/a-tale-of-two-candidates-two-running-for-california-governor-address-issues-facing-nevada-county/article_4353e429-b9e4-4a78-8a8d-a716d2b1c720.html",
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/"
+      ],
+      "notes": "At The Union (Nevada County) interview Bianco said he would build 'numerous dams' and sign away the environmental regulations blocking them. At the Fresno State forum he called for 'massive dams.' Like Hilton, he does not explicitly state a Delta Conveyance Project position in the sources reviewed, but his maximal-expansion + deregulate frame is the clearest stance 1 in the field. Source date for the campaign page is the access date."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "water_projects",
+      "stance": 2,
+      "summary": "Becerra's only on-record water quote located is rhetorical — 'water is more precious than gold; let's make it work' at the 2026-04 Fresno State forum. His campaign is built around abundance and infrastructure investment, and he is LA-rooted with the SoCal water-import constituency (the same base that backs the Delta Conveyance Project at MWD). Inferred pro-expansion with modifications.",
+      "source_quote": "Water is more precious than gold. Let's make it work.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/",
+        "https://fresnochamber.com/news/california-governor-hopefuls-clash-over-agriculture-affordability-and-water-policy/"
+      ],
+      "notes": "His campaign Priorities page covers energy, utilities, disaster preparedness, and resilience but does not address the Delta tunnel, Sites Reservoir, or dams. As LA-rooted Democrat from the SoCal MWD-aligned constituency, the regional default is pro-tunnel/pro-storage. Could be 1 if he explicitly endorses the Delta Conveyance Project; could be 3 if he stakes out a moderate case-by-case position. Mapped to 2 as the most defensible default."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "water_projects",
+      "stance": 3,
+      "summary": "Porter's only on-record water statement located is a deliberate dampener on the supply-side framing — 'there is no magic wand to create more water' — paired with her congressional record sponsoring water conservation and sustainability legislation rather than new conveyance. She has not stated a Delta tunnel position; mapped to case-by-case with a conservation lean.",
+      "source_quote": "There is no magic wand to create more water.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://porter.house.gov/news/documentsingle.aspx?DocumentID=536",
+        "https://katieporter.com/priorities/",
+        "https://fresnochamber.com/news/california-governor-hopefuls-clash-over-agriculture-affordability-and-water-policy/"
+      ],
+      "notes": "Her Priorities page does not address water infrastructure. She is from Orange County (Irvine), which is SoCal but not strongly water-import dependent the way LA is. Her House record favors conservation/sustainability bills over conveyance. Could be 4 if she explicitly opposes the tunnel; could be 2 if she ends up endorsing storage. Mapped to 3 as the most defensible reading of 'no magic wand' rhetoric."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "water_projects",
+      "stance": 2,
+      "summary": "Mahan at the 2026-04 Fresno State forum called California's water conveyance system 'outdated and losing water' and called the delay on storage expansion 'a crime' — pro-expansion framing. Valley Water (the Santa Clara County water district that supplies San Jose, where he is mayor) voted to fund Delta Conveyance Project planning in 2025, situating him in a Bay Area subregion that supports the tunnel.",
+      "source_quote": "[Mahan criticized the state's water conveyance system as] outdated and losing water [and called it] a crime [that water storage expansion took so long].",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.dailykos.com/stories/2025/1/15/2297038/-Valley-Water-District-Approves-9-69-Million-for-Delta-Tunnel-Project-Planning",
+        "https://valleywaternews.org/2026/01/05/video-why-valley-water-is-evaluating-californias-delta-conveyance-project/"
+      ],
+      "notes": "Mahan does not personally control Valley Water's vote (it is an independently elected board), but his political base is in a Bay Area subregion that is pro-Delta Conveyance, unusual within the Bay Area. His 'crime' quote about storage delays is unambiguously expansionist. His campaign site focuses on housing/safety/homelessness; water is not a featured priority. The GV Wire quote is paraphrased, not verbatim — bracketed to show that — but the substance is well documented across the Fresno forum recaps."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "water_projects",
+      "stance": 2,
+      "summary": "Villaraigosa at the 2026-04 Fresno State forum endorsed 'an all-of-the-above strategy — storage, conveyance and groundwater recharge' — and on his campaign Issues page says 'we can capture, clean, and store the water we will desperately need.' This is a notable shift from his 2018 governor run when he opposed the WaterFix tunnels. As Newsom's 2022 infrastructure czar he was inside the administration that drove the Delta Conveyance Project forward.",
+      "source_quote": "We can capture, clean, and store the water we will desperately need in the years ahead.",
+      "source_url": "https://www.antonio2026.com/issues",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://nodeltagates.com/2018/04/16/rating-the-candidates-for-governor-on-the-tunnels/",
+        "https://www.gov.ca.gov/2022/08/11/governor-newsom-names-antonio-villaraigosa-infrastructure-advisor-to-leverage-federal-dollars-in-building-california-infrastructure-for-the-next-century/"
+      ],
+      "notes": "The verbatim quote pulled is from his Issues page and is short — it does not name the Delta tunnel specifically. The 2018 history (he opposed the twin tunnels then) plus his current infrastructure-czar/all-of-the-above pivot is the basis for the medium-confidence stance 2 call. He has shifted noticeably toward expansion since 2018. Could be 1 if he explicitly endorses the Delta Conveyance Project before the primary; the LA regional default would support that. Source date is access date."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "water_projects",
+      "stance": "unknown",
+      "summary": "No public statement located on the Delta tunnel, Sites Reservoir, dams, or water infrastructure in any of the sources reviewed — his campaign site, his Oakland Voices candidate interview, his Ballotpedia and CalMatters Digital Democracy profiles, and the CalMatters/KQED voter guides. Water has not been part of his early-2026 campaign messaging, which has focused on education, childcare, housing, and a billionaire tax.",
+      "source_quote": "",
+      "source_url": "https://www.tonythurmond.com/",
+      "source_date": "2026-05-13",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://www.kqed.org/voterguide/california/governor"
+      ],
+      "notes": "Thurmond is a Richmond / East Bay Democrat with progressive endorsements and a Bay Area regional base that generally opposes the Delta Conveyance Project; the directional prior is tunnel-skeptical (likely 3 or 4). But absent any direct quote, marking unknown is the responsible call. Recommend re-research after the June primary when policy positions typically firm up. Source date is access date."
     }
   ],
   "questions": []

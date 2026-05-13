@@ -1,0 +1,133 @@
+{
+  "issue_id": "ceqa",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1=major rollback (broad statutory exemptions or outright repeal), 2=significant exemptions for housing and infrastructure, 3=targeted exemptions case-by-case, 4=preserve CEQA with minor procedural reforms, 5=strengthen environmental review. As of May 2026, the field has shifted broadly toward CEQA reform in the wake of AB 130/SB 131 (signed June 2025). Almost all Democratic candidates now back some form of additional CEQA streamlining; the differentiator is *how broad* (statutory carve-outs vs. case-by-case fixes) and *whether they would defend the remaining framework*. Republicans (Hilton, Bianco) are the only candidates calling for outright repeal or broad statutory dismantling. Mahan is the most aggressive Democrat — he wants 'comprehensive overhaul,' not just more exemptions. Villaraigosa published a detailed CEQA reform plan as Newsom's infrastructure advisor in 2023 and has continued to lead on this. Steyer, Porter, Becerra all favor significant new carve-outs for housing/infrastructure while preserving CEQA's underlying framework. Thurmond is the clearest outlier — he emphasizes public funding for affordable housing over deregulation and has not articulated a specific CEQA position, putting him closest to 'preserve with minor reforms' by default.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "ceqa",
+      "stance": 1,
+      "summary": "Hilton wants to gut CEQA, particularly by prohibiting the private lawsuits that he says have made CEQA a tool for special-interest 'blackmail.' He frames CEQA as a law that was 'never intended to cover housing' and would block roughly 70% of current CEQA suits.",
+      "source_quote": "One of the worst examples is the abuse of lawsuits by special interests. One of the worst examples is the abuse of CEQA (the California Environmental Quality Act). Originally passed in 1970, it was never intended to cover housing, or to be used for private lawsuits. But over the years, unelected judges extended its scope and usage so that now, around 70% of CEQA lawsuits are used to block housing, many by special interests (like unions) masquerading as environmental groups in order to blackmail house-builders.",
+      "source_url": "https://stevehiltonforgovernor.com/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.newsweek.com/republican-steve-hilton-california-governor-race-2026-donald-trump-11849699",
+        "https://factually.co/fact-checks/politics/steve-hilton-key-california-policy-proposals-cost-estimates-201a56"
+      ],
+      "notes": "Hilton's specific proposal is to prohibit private CEQA lawsuits, which is functionally a major statutory rollback (it would gut the primary enforcement mechanism). Newsweek (2026-04-19, updated 2026-05-01) quotes him saying 'Seventy percent of lawsuits under CEQA are used to block housing.' Stance 1 is clearly correct."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "ceqa",
+      "stance": 2,
+      "summary": "Steyer supports broad CEQA streamlining as part of his million-homes housing agenda and championed SB 79 publicly during the legislative fight, but he has not called for repealing CEQA or restricting its core framework. His emphasis is on combining streamlined permitting with state-led housing finance.",
+      "source_quote": "candidates for the most powerful office in California promised how they'd be the most aggressive on local preemption, fee reform, and CEQA... [Steyer is] a vocal, public supporter of SB 79 throughout the legislative fight, not just after the bill was signed.",
+      "source_url": "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/housing",
+        "https://davisvanguard.org/2026/05/steyer-yimby-real-estate/",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Steyer's own housing page does not name CEQA explicitly; the strongest direct evidence comes from CA YIMBY framing him as one of the candidates 'most aggressive on CEQA.' On Pod Save America (2026-05-11) he described California permitting as 'overlapping, contradictory, expensive, time consuming' and pledged to 'simplify and coordinate.' Crucially, he is co-endorsed by EnviroVoters (with Porter), which suggests his CEQA reform appetite stops short of dismantling the framework. Stance 2 ('significant exemptions') is the best fit; confidence medium because Steyer has not published a specific CEQA proposal."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "ceqa",
+      "stance": 1,
+      "summary": "Bianco wants to abolish CEQA outright. He frames CEQA as a regulatory obstacle making housing unaffordable and says he would eliminate it alongside the Coastal Commission and other state regulators.",
+      "source_quote": "Expedite approval for housing projects... Eliminate CEQA and the litigation that only passes costs onto the homebuyer... End the over regulation of our building industry... Incentivize developers to build across California.",
+      "source_url": "https://biancoforgovernor.com/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://sdcitytimes.com/news/2026/05/12/primary-26-bianco-introduction/",
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/"
+      ],
+      "notes": "Bianco's position is the most extreme in the field: full repeal, not just exemptions. Multiple secondary sources independently confirm 'eliminate CEQA' as a campaign plank. Stance 1 is clearly correct with high confidence."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "ceqa",
+      "stance": 2,
+      "summary": "Becerra has pledged a Housing Affordability Master Plan that would unify zoning, streamlining, fees, financing, and regulatory costs — including CEQA reform — but he has not published specific carve-outs and as Attorney General he intervened under CEQA against San Diego County housing developments in wildfire zones. His campaign-era position is significant reform; his prior record shows willingness to use CEQA defensively.",
+      "source_quote": "candidates for the most powerful office in California promised how they'd be the most aggressive on local preemption, fee reform, and CEQA.",
+      "source_url": "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/housing/",
+        "https://missionlocal.org/2026/05/california-governor-candidates-housing-abundance/",
+        "https://oag.ca.gov/news/press-releases/attorney-general-becerra-seeks-intervene-litigation-over-wildfire-risk-san-diego"
+      ],
+      "notes": "Becerra's housing platform calls for 'comprehensive' regulatory reform including CEQA but is light on specifics. The YIMBY Action scorecard (2026-03-11) graded him C and noted he 'used CEQA to block a San Diego housing development while serving as Attorney General' (Otay Ranch, 2020-21, wildfire risk). At the Ezra Klein forum (2026-05-08) he was pressed and 'landed on cutting red tape and reducing local fees' but did not detail CEQA specifics. Stance 2 is the best fit given his current platform; confidence medium because of the tension with his AG record."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "ceqa",
+      "stance": 2,
+      "summary": "Porter has explicitly said CEQA reform would be her top priority as governor if pending reform bills don't pass the legislature, while acknowledging the law's core purpose is worth preserving. She was an early public backer of SB 79 and supports both pre- and post-entitlement reform.",
+      "source_quote": "Its purpose is one I strongly agree with. Making sure we're thinking about protecting our environment, making good decisions about when we build something, it is going to have an environmental effect... But that law has been abused. It has been used to simply stop building projects when we desperately need them.",
+      "source_url": "https://bakersfieldnow.com/news/local/former-rep-katie-porter-visits-bakersfield-to-discuss-run-for-california-governor-gubernatorial-2026-election-politics-democrats-republicans-sacramento-kern-county-central-valley",
+      "source_date": "2025-06-18",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://www.washingtonexaminer.com/news/campaigns/state/3828518/california-candidates-governor-crime-environmental-overhaul-debate/"
+      ],
+      "notes": "Porter is rare in this field for explicitly defending CEQA's underlying purpose while still calling its abuse her top reform priority — a stance 2 profile rather than a stance 1. The Bakersfield Now interview is the cleanest verbatim source on her CEQA framing. She is co-endorsed by EnviroVoters with Steyer, which is consistent with stance 2 (significant exemptions but preserve framework)."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "ceqa",
+      "stance": 1,
+      "summary": "Mahan is the most aggressive Democratic CEQA reformer in the field. He explicitly calls for a 'comprehensive overhaul' of CEQA — replacing the current 'swiss cheese' exemption-by-exemption approach with broader statutory simplification — and would impose mandatory CEQA review timelines to curb 'junk lawsuits.' He ran on stopping CEQA abuse in San Jose.",
+      "source_quote": "stop junk environmental lawsuits blocking new infill housing. New homes near transit and in walkable existing communities are a huge benefit to the environment, and should not be treated as pollution.",
+      "source_url": "https://www.mahanforcalifornia.com/housing",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://growsf.org/voter-guide/questionnaires/june-2026/matt-mahan/",
+        "https://yimbyaction.org/blog/grading-the-candidates-a-yimby-action-scorecard-on-the-california-yimby-gubernatorial-forum/",
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/"
+      ],
+      "notes": "Mahan's GrowSF questionnaire is the most explicit Democratic CEQA-reform statement in the field: he wants to 'overhaul CEQA more comprehensively to provide greater simplicity and certainty (vs. the current complicated set of exemptions)' and 'impose firm, mandatory timelines for CEQA review to cut the procedural delays and junk lawsuits.' YIMBY Action scored him a B and noted he committed to 'tough conversations' with environmental groups on the 'CEQA reforms we badly need.' Stance 1 (broad statutory rollback) is a closer fit than stance 2 because he explicitly wants statutory overhaul, not more carve-outs."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "ceqa",
+      "stance": 2,
+      "summary": "Villaraigosa has been one of the most vocal CEQA reform advocates in California politics, including co-authoring a 2023 California Forward report on the topic as Newsom's state infrastructure advisor. His proposal — adopt NEPA's standing requirement, limit post-comment-period submissions, fund judicial CEQA training, set clear significance thresholds — is a structural reform that would meaningfully narrow CEQA's reach without repealing it.",
+      "source_quote": "reforms CEQA by adopting NEPA's standing requirement, limiting post-comment-period submissions, funding judicial CEQA training, and establishing clear significance thresholds... reforming CEQA, streamlining permits, and enforcing production accountability can close the gap between planning and building and deliver the homes California families desperately need.",
+      "source_url": "https://www.antonio2026.com/plan",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://capitolweekly.net/ceqa-reform-with-antonio-villaraigosa-and-micah-weinberg/",
+        "https://www.washingtonexaminer.com/news/campaigns/state/3828518/california-candidates-governor-crime-environmental-overhaul-debate/",
+        "https://www.antonio2026.com/issues"
+      ],
+      "notes": "Villaraigosa has the deepest paper trail on CEQA: his California Forward / Boston Consulting Group report (2023, with Micah Weinberg) is the source of the standing-requirement and significance-threshold proposals. At a 2025 forum he named CEQA twice as 'the driving factor for the problems.' His California Housing Acceleration Act specifically targets CEQA modernization. Stance is a strong 2 — significant structural reform but explicitly within the existing CEQA framework, not repeal."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "ceqa",
+      "stance": 4,
+      "summary": "Thurmond has not articulated a specific CEQA reform position. His housing strategy emphasizes public funding ($10 billion for affordable housing, building 2 million units by 2030, public land utilization) rather than deregulation, distinguishing him from the rest of the Democratic field. He acknowledges permitting delays as a barrier but proposes funding, not statutory CEQA changes, as the response.",
+      "source_quote": "If it takes six years in some counties to permit a project, that is a huge barrier, who will do that? No one... We are experiencing a crisis of supply and demand. The state has not invested in affordable housing in over a decade.",
+      "source_url": "https://asianjournal.com/usa/california/thurmond-outlines-policy-agenda-on-housing-healthcare-and-immigration-in-media-briefing/",
+      "source_date": "2026-05-02",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/",
+        "https://yimbyaction.org/blog/grading-the-candidates-a-yimby-action-scorecard-on-the-california-yimby-gubernatorial-forum/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/"
+      ],
+      "notes": "Thurmond is the clearest outlier in the Democratic field on CEQA. CalMatters (2026-05-12) explicitly contrasts him: 'San Jose Mayor Matt Mahan supports deregulating housing policy... Superintendent of Public Instruction Tony Thurmond, in contrast, is focused on finding more public support for affordable housing.' YIMBY Action graded him F and documented no CEQA reform statements. Stance 4 ('preserve CEQA with minor procedural reforms') is the best fit by inference — he is not calling to strengthen CEQA, but he is also conspicuously not joining the CEQA-rollback consensus. Confidence is medium because he hasn't directly addressed CEQA; the stance is inferred from his choice to talk about funding rather than deregulation."
+    }
+  ]
+}

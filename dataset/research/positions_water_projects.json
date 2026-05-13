@@ -1,0 +1,132 @@
+{
+  "issue_id": "water_projects",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale 1=expand all major projects (Delta tunnel, new dams, conveyance); 2=pursue most major projects with environmental modifications; 3=pursue selected projects case-by-case; 4=pause major new construction; focus on existing infrastructure; 5=halt major new water infrastructure projects. Best primary-source coverage came from the 2026-04-01 Fresno State gubernatorial forum on agriculture and water (recapped by GV Wire and the Fresno Chamber of Commerce summary of an Agri-Pulse Communications piece — the Agri-Pulse original is paywalled). That forum is where most Democrats had to say something about water on the record; Hilton, Bianco, Villaraigosa, Becerra, Mahan, and Porter were in the room and quoted. Steyer was a NO-SHOW at the Fresno forum, and water did not come up in the two televised debates the press recapped (4/28 CalMatters, 5/7 NYT/DNYUZ takeaways), which is the principal reason his confidence is low. Hilton has a podcast-length water policy interview with AgNet West and explicitly endorses Sites Reservoir + raising Shasta Dam + dredging the Delta — but does NOT take a stand on the Delta tunnel in the sources reviewed; mapped to 1 because his all-of-the-above plus environmental-regulation-rollback frame is identical to maximal-expansion. Bianco's campaign Agriculture & Water page is unusually specific: it explicitly endorses expediting Sites Reservoir and calls out 10 years of inaction on Prop 1 dam projects, plus he's said publicly he would 'sign away the environmental regulations' blocking dams — clearest stance 1 in the field. Villaraigosa is the trickiest call: in his 2018 run he opposed the WaterFix tunnels and called for a 'grand bargain,' but since 2022 he has been Newsom's infrastructure advisor and at the 2026 Fresno forum endorsed an 'all-of-the-above' storage + conveyance + groundwater strategy. His Issues page mentions capturing/cleaning/storing water but not the tunnel by name. Given his LA water-supply roots, infrastructure-czar role, and the Fresno forum framing, mapped to 2 (medium confidence). Becerra: only on-record water quote found is the rhetorical 'water is more precious than gold; let's make it work' from the Fresno forum — no Delta tunnel position. He is LA-rooted and from the SoCal water-import constituency, his campaign talks abundance and infrastructure investment, and the field's hint is that he leans toward expansion; mapped to 2 with low confidence given lack of specifics. Porter: her one quoted line is 'there is no magic wand to create more water' — a deliberate dampener on the supply-side framing, consistent with her congressional record sponsoring water conservation/sustainability legislation rather than new conveyance. No Delta tunnel position located. Mapped to 3 (medium-low) as conservation-leaning case-by-case. Mahan: at Fresno he called California's water conveyance system 'outdated and losing water' and called the delay on storage 'a crime' — that is pro-expansion framing. Plus Valley Water (the South Bay agency he indirectly oversees as San Jose mayor) has voted to fund Delta Conveyance Project planning. Mapped to 2; he is more cautious than Bianco/Hilton but his rhetoric is closer to expansion than to Bay Area Democratic opposition. Steyer: Sierra Club and Food & Water Action endorsed him, both organizations are strongly opposed to the Delta tunnel — that's strong inferential signal he is at minimum tunnel-skeptical. But no direct Delta tunnel quote was located in the sources reviewed. Mapped to 4 with low confidence as a regional/environmental best guess; could easily be 3 if he treats it case-by-case. Thurmond: zero water statements located in the sources reviewed, including his campaign site, his Oakland Voices candidate interview, and CalMatters/KQED voter guides. Marked unknown / insufficient_data; he is a Richmond Bay Area Democrat with progressive endorsements, likely tunnel-skeptical, but without a quote it is irresponsible to map a stance. Note: regional pattern held — Republicans most pro-expansion, SoCal/LA Dems pro-expansion-with-modifications, Bay Area/environmental-brand Dems more cautious — but specificity varied wildly and three of eight candidates had no on-the-record Delta tunnel position located, an expected pattern for an issue many candidates avoid in primaries.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "water_projects",
+      "stance": 1,
+      "summary": "Hilton would expand California water infrastructure aggressively — endorses building Sites Reservoir, raising Shasta Dam, and dredging the Delta — and would 'reverse certain regulatory decisions that restrict water flows for environmental purposes' to free up supply immediately. He frames environmental regulation as the chief barrier to building new water storage.",
+      "source_quote": "Hilton said that increased water deliveries to agriculture could be achieved immediately by reversing certain regulatory decisions that restrict water flows for environmental purposes... [he supports] expanding long-discussed infrastructure projects such as Sites Reservoir and raising Shasta Dam, both of which could significantly increase water storage capacity.",
+      "source_url": "https://agnetwest.podbean.com/e/steve-hilton-lays-out-plan-to-revive-california-agriculture-energy-and-water-policy/",
+      "source_date": "2026-04-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://fresnochamber.com/news/california-governor-hopefuls-clash-over-agriculture-affordability-and-water-policy/",
+        "https://stevehiltonforgovernor.com/"
+      ],
+      "notes": "Hilton does NOT explicitly take a position on the Delta Conveyance Project (tunnel) in the sources reviewed — he endorses Sites + Shasta + dredging plus rolling back environmental restrictions on water flows. The frame is wholesale supply-side expansion; even if he is silent on the tunnel specifically, his deregulate-and-build stance is the maximal-expansion archetype. Source date is approximate (AgNet West podcast aired around the Fresno State forum)."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "water_projects",
+      "stance": 4,
+      "summary": "Steyer has not publicly stated a Delta tunnel position in the sources reviewed, but his climate-and-environment-first brand, endorsements from Sierra Club California and Food & Water Action (both vocally opposed to the Delta Conveyance Project), and skipping the Fresno State agriculture-and-water forum signal he is at minimum tunnel-skeptical and oriented toward conservation/recycling/groundwater over new conveyance megaprojects.",
+      "source_quote": "Sierra Club California will lend its considerable grassroots strength to Tom Steyer's campaign... backing a candidate with a long record of investing in climate solutions, taking on Big Oil, and helping build the coalitions needed to win major environmental fights.",
+      "source_url": "https://www.sierraclub.org/press-releases/2026/05/sierra-club-endorses-tom-steyer-california-governor",
+      "source_date": "2026-05-06",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.foodandwateraction.org/press/food-water-action-endorses-tom-steyer-for-california-governor/",
+        "https://www.tomsteyer.com/issues/climate",
+        "https://envirovoters.org/california-governor-2026/"
+      ],
+      "notes": "Inferred from endorsers and his Bay Area / climate-investor profile. His campaign Issues page lists Climate and Environment but does not name the Delta tunnel, Sites Reservoir, or dams. Could plausibly be 3 (case-by-case) if elected and pressed; could be 5 if he campaigns on explicit tunnel opposition before the primary. Mapped to 4 as the most defensible reading absent a direct quote."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "water_projects",
+      "stance": 1,
+      "summary": "Bianco is the most aggressively pro-expansion candidate — promises to 'expedite the construction of Sites Reservoir,' expand above-ground storage, modernize aging water infrastructure, and 'sign away the environmental regulations that are preventing those dams from being built.' He invokes the unbuilt Prop 1 (2014) dam projects as a failure of state will, not engineering.",
+      "source_quote": "Expedite the construction of Sites Reservoir which will provide a more flexible water supply for future generations of Californians... Expand the capacity of California's above-ground water storage to create drought-resiliency for dry years... Proposition 1 was passed in 2014, over 10 years ago, and not a single new water project has been completed.",
+      "source_url": "https://biancoforgovernor.com/agriculture-and-water/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.theunion.com/news/a-tale-of-two-candidates-two-running-for-california-governor-address-issues-facing-nevada-county/article_4353e429-b9e4-4a78-8a8d-a716d2b1c720.html",
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/"
+      ],
+      "notes": "At The Union (Nevada County) interview Bianco said he would build 'numerous dams' and sign away the environmental regulations blocking them. At the Fresno State forum he called for 'massive dams.' Like Hilton, he does not explicitly state a Delta Conveyance Project position in the sources reviewed, but his maximal-expansion + deregulate frame is the clearest stance 1 in the field. Source date for the campaign page is the access date."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "water_projects",
+      "stance": 2,
+      "summary": "Becerra's only on-record water quote located is rhetorical — 'water is more precious than gold; let's make it work' at the 2026-04 Fresno State forum. His campaign is built around abundance and infrastructure investment, and he is LA-rooted with the SoCal water-import constituency (the same base that backs the Delta Conveyance Project at MWD). Inferred pro-expansion with modifications.",
+      "source_quote": "Water is more precious than gold. Let's make it work.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/",
+        "https://fresnochamber.com/news/california-governor-hopefuls-clash-over-agriculture-affordability-and-water-policy/"
+      ],
+      "notes": "His campaign Priorities page covers energy, utilities, disaster preparedness, and resilience but does not address the Delta tunnel, Sites Reservoir, or dams. As LA-rooted Democrat from the SoCal MWD-aligned constituency, the regional default is pro-tunnel/pro-storage. Could be 1 if he explicitly endorses the Delta Conveyance Project; could be 3 if he stakes out a moderate case-by-case position. Mapped to 2 as the most defensible default."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "water_projects",
+      "stance": 3,
+      "summary": "Porter's only on-record water statement located is a deliberate dampener on the supply-side framing — 'there is no magic wand to create more water' — paired with her congressional record sponsoring water conservation and sustainability legislation rather than new conveyance. She has not stated a Delta tunnel position; mapped to case-by-case with a conservation lean.",
+      "source_quote": "There is no magic wand to create more water.",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://porter.house.gov/news/documentsingle.aspx?DocumentID=536",
+        "https://katieporter.com/priorities/",
+        "https://fresnochamber.com/news/california-governor-hopefuls-clash-over-agriculture-affordability-and-water-policy/"
+      ],
+      "notes": "Her Priorities page does not address water infrastructure. She is from Orange County (Irvine), which is SoCal but not strongly water-import dependent the way LA is. Her House record favors conservation/sustainability bills over conveyance. Could be 4 if she explicitly opposes the tunnel; could be 2 if she ends up endorsing storage. Mapped to 3 as the most defensible reading of 'no magic wand' rhetoric."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "water_projects",
+      "stance": 2,
+      "summary": "Mahan at the 2026-04 Fresno State forum called California's water conveyance system 'outdated and losing water' and called the delay on storage expansion 'a crime' — pro-expansion framing. Valley Water (the Santa Clara County water district that supplies San Jose, where he is mayor) voted to fund Delta Conveyance Project planning in 2025, situating him in a Bay Area subregion that supports the tunnel.",
+      "source_quote": "[Mahan criticized the state's water conveyance system as] outdated and losing water [and called it] a crime [that water storage expansion took so long].",
+      "source_url": "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+      "source_date": "2026-04-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.dailykos.com/stories/2025/1/15/2297038/-Valley-Water-District-Approves-9-69-Million-for-Delta-Tunnel-Project-Planning",
+        "https://valleywaternews.org/2026/01/05/video-why-valley-water-is-evaluating-californias-delta-conveyance-project/"
+      ],
+      "notes": "Mahan does not personally control Valley Water's vote (it is an independently elected board), but his political base is in a Bay Area subregion that is pro-Delta Conveyance, unusual within the Bay Area. His 'crime' quote about storage delays is unambiguously expansionist. His campaign site focuses on housing/safety/homelessness; water is not a featured priority. The GV Wire quote is paraphrased, not verbatim — bracketed to show that — but the substance is well documented across the Fresno forum recaps."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "water_projects",
+      "stance": 2,
+      "summary": "Villaraigosa at the 2026-04 Fresno State forum endorsed 'an all-of-the-above strategy — storage, conveyance and groundwater recharge' — and on his campaign Issues page says 'we can capture, clean, and store the water we will desperately need.' This is a notable shift from his 2018 governor run when he opposed the WaterFix tunnels. As Newsom's 2022 infrastructure czar he was inside the administration that drove the Delta Conveyance Project forward.",
+      "source_quote": "We can capture, clean, and store the water we will desperately need in the years ahead.",
+      "source_url": "https://www.antonio2026.com/issues",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://nodeltagates.com/2018/04/16/rating-the-candidates-for-governor-on-the-tunnels/",
+        "https://www.gov.ca.gov/2022/08/11/governor-newsom-names-antonio-villaraigosa-infrastructure-advisor-to-leverage-federal-dollars-in-building-california-infrastructure-for-the-next-century/"
+      ],
+      "notes": "The verbatim quote pulled is from his Issues page and is short — it does not name the Delta tunnel specifically. The 2018 history (he opposed the twin tunnels then) plus his current infrastructure-czar/all-of-the-above pivot is the basis for the medium-confidence stance 2 call. He has shifted noticeably toward expansion since 2018. Could be 1 if he explicitly endorses the Delta Conveyance Project before the primary; the LA regional default would support that. Source date is access date."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "water_projects",
+      "stance": "unknown",
+      "summary": "No public statement located on the Delta tunnel, Sites Reservoir, dams, or water infrastructure in any of the sources reviewed — his campaign site, his Oakland Voices candidate interview, his Ballotpedia and CalMatters Digital Democracy profiles, and the CalMatters/KQED voter guides. Water has not been part of his early-2026 campaign messaging, which has focused on education, childcare, housing, and a billionaire tax.",
+      "source_quote": "",
+      "source_url": "https://www.tonythurmond.com/",
+      "source_date": "2026-05-13",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://www.kqed.org/voterguide/california/governor"
+      ],
+      "notes": "Thurmond is a Richmond / East Bay Democrat with progressive endorsements and a Bay Area regional base that generally opposes the Delta Conveyance Project; the directional prior is tunnel-skeptical (likely 3 or 4). But absent any direct quote, marking unknown is the responsible call. Recommend re-research after the June primary when policy positions typically firm up. Source date is access date."
+    }
+  ]
+}
