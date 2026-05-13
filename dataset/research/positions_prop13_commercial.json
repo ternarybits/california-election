@@ -1,0 +1,131 @@
+{
+  "issue_id": "prop13_commercial",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Commercial Prop 13 / split-roll is one of the most polarized issues in the 2026 race because Tom Steyer has made it a centerpiece of his campaign (proposing a 2027 special election) and several of his Democratic rivals have publicly attacked the proposal. This generates unusually rich on-the-record evidence for Steyer, Villaraigosa, and Mahan. Republicans (Hilton, Bianco) reliably oppose any Prop 13 change; Hilton has explicit 'Protect Prop 13' language and the HJTA PAC endorsement, Bianco's tax platform is broadly anti-tax-increase but does not single out Prop 13 by name. Porter, Becerra, and Thurmond have published detailed tax plans (corporate income tax hike, building affordable housing, billionaire wealth tax respectively) that pointedly avoid taking a position on commercial Prop 13 — given how live the Steyer proposal is in this race, that silence is itself a signal of political caution, but we do not have evidence to assign a numeric stance. Note Steyer was a major backer of Prop 15 (2020) and his current proposal is essentially Prop 15 revisited. Note Villaraigosa publicly endorsed split-roll concepts in 2017 as a candidate but has reversed in the 2026 race.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "prop13_commercial",
+      "stance": 1,
+      "summary": "Opposes any changes to Prop 13, including for commercial property. Endorsed by the Howard Jarvis Taxpayers Association PAC (the leading Prop 13 defense organization).",
+      "source_quote": "I'm proud to have the endorsement of the HJTA PAC. As governor, I'll cut taxes for working people and protect Prop 13 so families can stay in their homes, without property taxes spiraling out of control.",
+      "source_url": "https://www.facebook.com/TheSteveHilton/posts/im-proud-to-have-the-endorsement-of-the-hjta-pac-as-governor-ill-cut-taxes-for-w/1242363491439534/",
+      "source_date": "2026-03-18",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://stevehiltonforgovernor.com/policy/a-califordable-tax-plan/"
+      ],
+      "notes": "HJTA endorsement is the single strongest signal a candidate can send on Prop 13 — HJTA exists specifically to defend Prop 13. KQED's tax-comparison piece (2026-04-14) confirms: 'He opposed any changes to Proposition 13 and wants to eliminate the minimum franchise tax.' Stance 1 (strengthen) rather than 2 (hold) is appropriate because the HJTA-aligned posture is actively defensive."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "prop13_commercial",
+      "stance": 5,
+      "summary": "Centerpiece campaign proposal: remove Prop 13 protections from commercial and industrial property and reassess them at market value. Has floated a 2027 special election to put it on the ballot. Frames it as closing a 'Trump tax loophole' that benefits wealthy corporate landlords.",
+      "source_quote": "We need to fund our schools, and I'll do that by changing Prop 13 so that corporations pay real estate taxes based on their property's true value, not its value from the 1970s.",
+      "source_url": "https://californiaglobe.com/articles/tom-steyer-campaigning-on-blowing-up-prop-13/",
+      "source_date": "2026-04-14",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/tax-loopholes",
+        "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html",
+        "https://therealdeal.com/san-francisco/2026/02/23/steyer-backs-prop-13-commercial-overhaul/",
+        "https://tomsteyer.substack.com/p/what-is-californias-trump-tax-loophole",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Steyer's own campaign site (tax-loopholes page) explicitly calls to 'reform the commercial side of Prop. 13 to end this corporate tax break that lets the wealthiest property owners, like Donald Trump, avoid paying taxes based on what their skyscrapers, golf courses, and tech campuses are actually worth.' He was a major backer of Prop 15 in 2020 (which failed 52-48), and this 2026 proposal is essentially Prop 15 revisited. Stance 5 (full commercial split-roll, market-value reassessment) rather than 4 (phase-in) because his framing is full assessment, not gradual."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "prop13_commercial",
+      "stance": 2,
+      "summary": "Broadly opposes any new taxes on Californians and businesses, including commercial property tax increases. Has not made explicit Prop 13 protection a campaign theme the way Hilton has, but as a Republican running on eliminating the state income tax, he would clearly oppose split-roll.",
+      "source_quote": "Californians deserve to keep more of their hard-earned money.",
+      "source_url": "https://biancoforgovernor.com/affordability-and-taxes/",
+      "source_date": "2026-05-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Bianco's campaign-issues page is silent on Prop 13 specifically, but his platform of eliminating the state income tax and opposing any new taxes places him firmly in the anti-split-roll camp. Stance 2 (hold) rather than 1 (strengthen) because, unlike Hilton, he has not made Prop 13 defense an active campaign plank — he simply opposes the tax increase. Source quote is from his affordability/taxes page rather than a Prop 13 statement. Source date is approximate (campaign page, no clear timestamp)."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "prop13_commercial",
+      "stance": "unknown",
+      "summary": "Has not taken a public position on commercial Prop 13 / split-roll in his 2026 gubernatorial campaign. His published priorities focus on housing, healthcare, and budget management — not property tax reform.",
+      "source_quote": "",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/",
+      "source_date": "2026-05-01",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://laist.com/news/politics/2026-election-california-primary-xavier-becerra-california-governor-transcript",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "As CA Attorney General (2017-2021), Becerra wrote the official ballot title and summary for the 2020 split-roll initiative (Prop 15). Opponents accused his office of writing biased language, but that role was procedural — the title was assigned to his office by law and is not a personal endorsement of split-roll. His 2026 campaign materials (campaign-site priorities, LAist interview transcript 2026-04-15, KQED tax comparison piece 2026-04-14) do not mention Prop 13 or commercial property tax. Given the high political salience of the issue in this race, this silence reads as deliberate caution rather than oversight. Setting stance to unknown rather than guessing."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "prop13_commercial",
+      "stance": "unknown",
+      "summary": "Has built her tax platform around eliminating state income tax for households under $100k and raising the state corporate income tax rate — not around commercial property tax. Has not publicly taken a position on commercial Prop 13 / split-roll in the 2026 race.",
+      "source_quote": "",
+      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
+      "source_date": "2026-05-01",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12078450/katie-porters-run-for-governor-centers-tax-cuts-corporate-accountability",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Porter's published tax plan targets the corporate income tax (raising it from a flat 8.84% up to 9.75% on the highest-earning corporations) and the state personal income tax — explicitly different levers than commercial property tax. Her priorities page, KQED's profile (2026-04-02), and KQED's tax comparison (2026-04-14) do not contain any Porter statement on Prop 13 or split-roll. As a former consumer-finance professor with a populist anti-corporate brand, she might be sympathetic to split-roll, but inferring is not appropriate given the post-Prop-15 political risk and her deliberate silence on the issue."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "prop13_commercial",
+      "stance": 2,
+      "summary": "Opposes raising taxes — including commercial property taxes — until state government demonstrates better spending oversight. Has explicitly opposed Steyer's split-roll proposal.",
+      "source_quote": "We need to make government work better before we ask families and small businesses to pay more.",
+      "source_url": "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html",
+      "source_date": "2026-02-25",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://x.com/TomSteyer/status/2024605495521157185"
+      ],
+      "notes": "Mahan responded specifically to Steyer's split-roll proposal with the quoted statement, framing it as small-business protection. Steyer escalated the dispute on X, accusing Mahan of protecting 'billionaires and MAGA donors.' KQED confirms Mahan 'vows to oppose all tax increases until oversight measures are in place.' Stance 2 (hold) rather than 1 (strengthen) because his framing is fiscal-discipline / oversight rather than Prop 13 defense as a principle."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "prop13_commercial",
+      "stance": 2,
+      "summary": "Opposes Steyer's split-roll proposal in the 2026 race, citing the 2020 Prop 15 defeat as evidence voters have already decided the issue. His campaign site commits to 'holding the line on property taxes' generally. Notable reversal from his 2017 statements as LA mayor when he advocated split-roll.",
+      "source_quote": "A rushed, off-year special election in 2027 to raise corporate taxes isn't serious governing; it's an expensive political gamble.",
+      "source_url": "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html",
+      "source_date": "2026-02-25",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/plan",
+        "https://www.foxandhoundsdaily.com/2017/11/villaraigosa-business-support-and-prop-13/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Important reversal: in 2017, as a previous gubernatorial candidate, Villaraigosa advocated for split-roll in a Sacramento Press Club speech and told reporters 'all aspects of Proposition 13 should be reviewed.' In 2026 he is running with the State Building & Construction Trades Council backing but has shifted to a defensive position, likely reflecting the post-Prop-15 political environment and his Latino-business / moderate-coalition strategy. His campaign plan section is titled 'A Commitment to Hold the Line on Taxes' and reads: 'Holding the line on property taxes is about protecting working- and middle-class families, keeping seniors in their homes, and making sure Californians are not pushed out of an already expensive market.' Stance 2 (hold) rather than 1 because his framing is housing-affordability not Prop 13 sanctity, and the 2017 history means he's not a doctrinaire Prop 13 defender."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "prop13_commercial",
+      "stance": "unknown",
+      "summary": "Has staked out the progressive flank of the Democratic primary on taxes, supporting a one-time 5% billionaire wealth tax and a state inheritance tax — but has not publicly taken a position on commercial Prop 13 / split-roll.",
+      "source_quote": "",
+      "source_url": "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+      "source_date": "2026-04-14",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/"
+      ],
+      "notes": "Thurmond's published tax positions (billionaire wealth tax, inheritance tax, working/middle-class tax credits) are progressive but conspicuously sidestep commercial property tax. As Superintendent of Public Instruction with strong CTA ties — and CTA was a major Prop 15 backer in 2020 — one might predict sympathy for split-roll, but he has not said so on the record. Given his progressive tax framing and education-funding focus, his eventual stance is more likely to be 3-5 than 1-2, but inferring without a quote is inappropriate. KQED tax-comparison article confirms he supports the wealth-tax proposal but says nothing about commercial property tax."
+    }
+  ]
+}

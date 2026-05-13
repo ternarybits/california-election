@@ -1,0 +1,131 @@
+{
+  "issue_id": "fuel_env_rules",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale 1=suspend LCFS and refinery environmental rules; 2=weaken specific rules to lower gas prices; 3=maintain current rules; 4=tighten specific rules to accelerate decarbonization; 5=major expansion of fuel emissions regulation. The CBS News round-up (2026, undated but post-Valero closure) and a Streetsblog CA recap of the 2026-05-07 candidates' debate were the primary Tier-2 triangulation sources, with CalMatters' 2026 voter guide and CalMatters' 2026-03 gas-price piece as secondary anchors. Hilton's campaign issue page is unusually detailed — he names LCFS and refinery reformulation rules explicitly. Villaraigosa's campaign issued a dedicated press release (antonio2026.com/news/...moratorium-on-costly-regulations) naming CARB and LCFS, plus a 'My Plan to Lower Gas Prices' page that quantifies LCFS pass-through and proposes a credit price ceiling — this is the most aggressively deregulatory Democrat in the field. Becerra's position is more nuanced than the 'revising climate goals' framing suggests: he says he is open to revisiting goals for affordability but his Energy & Utilities page reiterates 'we're never going backwards' and frames affordability as compatible with the transition; mapped to stance 2 with explicit notes. Porter's 'stay the course with our existing refinery capacity' line is about keeping refineries open, not about loosening LCFS — she effectively backs the status quo (stance 3). Thurmond and Steyer also fall at 3, with Steyer arguably leaning higher but lacking an explicit LCFS-tightening statement in the sources reviewed. Mahan said in March 2026 he 'wouldn't rule out also curbing some of the state's refinery regulations' — that is a clear stance 2 signal even though he has been less specific than Villaraigosa. Bianco is stance 1 by his own framing ('the regulations have to go away'), though he is less LCFS-specific than Hilton.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "fuel_env_rules",
+      "stance": 1,
+      "summary": "Hilton would suspend the LCFS, reformulation requirements, and 'other extreme and unnecessary refinery regulation' by executive action on Day 1, fire CARB chair Liane Randolph, and roll back cap-and-trade pass-through to drive pump prices to $3/gal. He frames LCFS as adding ~40 cents/gal with minimal environmental benefit.",
+      "source_quote": "Suspend the Low Carbon Fuel Standard (LCFS), reformulation requirements, and other extreme and unnecessary refinery regulation... On Day 1 as governor I will remove Liane Randolph and start rolling back extreme climate regulations so we can have $3.00 gas.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/gasprices/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://californiaglobe.com/articles/steve-hiltons-plan-for-cutting-gas-prices-and-affordable-energy/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "The clearest stance 1 in the field — names LCFS, refinery reformulation, and cap-and-trade pass-through explicitly, with a Day 1 executive-action commitment."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "fuel_env_rules",
+      "stance": 3,
+      "summary": "Steyer defends California's climate framework and would attack pump prices via refinery-margin caps and accelerating alternatives — not by loosening LCFS or CARB rules. He has spent decades funding climate policy (NextGen, IRA advisory council) and frames the answer to gas prices as 'get off oil,' not as cutting LCFS. No statement found tightening LCFS specifically, so mapped to 3 rather than 4.",
+      "source_quote": "We need to develop alternative sources of gasoline in the state of California... The answer here is to get off oil. As I say, solar and wind don't go through the Straits of Hormuz.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.volts.wtf/p/tom-steyer-wants-to-be-californias",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/"
+      ],
+      "notes": "Steyer's signature gas-price idea is the CEC 'maximum gross refining margin' penalty, which tightens oversight of refiner profits rather than fuel-carbon rules. He has not publicly proposed tightening LCFS or new refinery emissions rules in the sources reviewed; if anything, the CalMatters 2026-03 piece notes he dismissed Villaraigosa and Mahan's loosening proposals as 'unserious.' Could be argued as 4 given his EnviroVoters endorsement and climate record, but absent a verbatim 'tighten LCFS' statement, 3 is the defensible call."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "fuel_env_rules",
+      "stance": 1,
+      "summary": "Bianco would 'eliminate the regulations' on California's oil industry, allow expanded in-state drilling, and rescind environmental rules he says add ~$2/gal at the pump. He doesn't name LCFS as specifically as Hilton, but his framing of 'the regulations have to go away' encompasses CARB fuel rules and refinery requirements.",
+      "source_quote": "Gasoline, the regulations that increase it almost $2 a gallon, that will be immediately reduced... The regulations have to go away. We have to allow drilling to occur.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://ktla.com/news/politics/inside-california-politics/california-gubernatorial-candidate-chad-bianco/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Less LCFS-specific than Hilton — his rhetoric is wholesale ('regulations have to go away') rather than itemized. Still clearly stance 1: he is the candidate who most flatly rejects the existence of California's fuel/refinery regulatory regime."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "fuel_env_rules",
+      "stance": 2,
+      "summary": "Becerra says he is 'open to revising the state's climate goals to keep fuel affordable for middle-class Californians' and wants to maintain refinery capacity through the transition, while still framing 'we're never going backwards.' He has not endorsed suspending LCFS but signals willingness to soften compliance costs — the most prominent centrist-Democrat 'affordability over speed' position in the field.",
+      "source_quote": "The most important thing we can do is stabilize... not just the price, but stabilize the supply and stabilize the distribution of gas... if you can provide some predictability, you won't see the spikes in the price of gas the way you see now.",
+      "source_url": "https://calmatters.org/california-voter-guide-2026/governor/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/energy-utilities/",
+        "https://laist.com/news/politics/voter-guides/2026-election-california-primary-california-governor",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "Notable position to flag in the dataset. Becerra has not explicitly named LCFS in his own materials — his Energy & Utilities page focuses on utility oversight and 'affordable, reliable, fair' climate transition. The 'open to revising the state's climate goals to keep fuel affordable' phrasing is reported consistently across CalMatters and LAist voter guides, which is what places him at stance 2 rather than 3. Worth re-verifying with a direct on-record statement before publication."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "fuel_env_rules",
+      "stance": 3,
+      "summary": "Porter defends LCFS as part of why California has made air-quality progress and would 'stay the course' on existing refinery capacity through the transition — explicitly distinguishing keeping current refineries open from new drilling, which she opposes. She would not suspend LCFS but also has not proposed tightening it.",
+      "source_quote": "We are creating a lot of good, high-paying jobs in renewables, but I think we're going to have to kind of stay the course with regard to our existing refinery capacity, protecting those California jobs, keeping gas as low as we can for the foreseeable future while that transition occurs.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://envirovoters.org/california-governor-2026/",
+        "https://katieporter.com/priorities/"
+      ],
+      "notes": "Her 'stay the course' line is sometimes misread as deregulation; in context it is about keeping existing refineries operating, not about loosening LCFS. She credited California's fuel standard for the state's air-quality progress in the same CBS interview."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "fuel_env_rules",
+      "stance": 2,
+      "summary": "Mahan's headline gas-price idea is a temporary suspension of the state gas tax, but he has explicitly said he 'wouldn't rule out also curbing some of the state's refinery regulations.' He frames the climate transition as needing innovation and a real cost accounting, criticizing carbon-neutrality mandates set 'without a plan to do it or the math around what it will cost people.'",
+      "source_quote": "Mahan supports temporarily suspending the state gas tax, but in an interview said he wouldn't rule out also curbing some of the state's refinery regulations.",
+      "source_url": "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+      "source_date": "2026-03-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript"
+      ],
+      "notes": "No verbatim Mahan statement found that names LCFS specifically — the CalMatters phrasing is paraphrased but presented as his direct interview answer. Stance 2 reflects the clear 'open to curbing refinery rules' signal plus his innovation-over-mandate climate framing, while acknowledging he has been less specific than Villaraigosa."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "fuel_env_rules",
+      "stance": 2,
+      "summary": "Villaraigosa has called for an immediate moratorium on CARB regulations that raise consumer fuel costs by more than $0.01/gal and proposes a hard cap on LCFS credit-cost pass-through to drivers. He would 'reform and overhaul CARB' as governor and labels existing fuel-emissions rules 'failed policies.' He stops short of fully suspending LCFS — he wants a ceiling on its pass-through cost and a moratorium on new rules, not outright repeal.",
+      "source_quote": "Today, I am calling for an immediate moratorium on costly regulations overburdening California refineries that produce the cleanest gas in the nation and a moratorium on the costly regulations that have made the price of gas a crippling burden on working families... As Governor, I will reform and overhaul CARB...",
+      "source_url": "https://www.antonio2026.com/news/antonio-calls-for-immediate-moratorium-on-costly-regulations-vows-to-reform-carb-as-go",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/gas",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://cal.streetsblog.org/2026/05/07/gas-taxes-and-high-speed-rail-what-we-can-learn-from-the-candidates-debate"
+      ],
+      "notes": "Most deregulatory Democrat on this issue. Plausibly stance 1 given the 'reform and overhaul CARB' language and explicit LCFS credit-price ceiling proposal, but he is not calling to repeal LCFS outright — his gas plan accepts the framework and proposes a price ceiling on compliance costs plus a moratorium on new rules. Stance 2 is the more accurate placement; reviewers should note he sits at the edge of 1-2."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "fuel_env_rules",
+      "stance": 3,
+      "summary": "Thurmond would keep refineries operating during the transition while investing in cleaner technology like carbon capture, and offset higher fuel costs for Californians via a tax credit rather than by loosening rules. He has not proposed suspending or weakening LCFS or CARB rules; his framing is 'balance' — continue climate progress while protecting consumers.",
+      "source_quote": "We can do a better job at balance... We have to find ways to balance climate change, but we also have to invest in technologies like carbon capture that allow refineries to get safer.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/"
+      ],
+      "notes": "Thurmond is described as the most progressive Democrat in the field and has touted shutting down idle oil wells and CalSTRS fossil-fuel divestment, which could argue for stance 4. But on LCFS / refinery emissions rules specifically, the only on-record fuel position is 'balance + carbon capture + tax credits' — i.e., maintain current framework. Mapped to 3 absent an explicit tightening statement."
+    }
+  ]
+}

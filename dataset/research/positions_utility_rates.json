@@ -1,0 +1,135 @@
+{
+  "issue_id": "utility_rates",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1 = deregulate / let market and competition set rates; 2 = modest regulation, focus on grid investment; 3 = rate freeze and significant CPUC reform (intervention via rate controls + structural oversight, but keep investor-owned utility model); 4 = public option / break up monopolies / open competition against IOUs; 5 = full state takeover of investor-owned utilities. This issue spans both electricity/gas (PG&E/SCE/SDG&E + CPUC) and the homeowners-insurance crisis (Prop 103 / CDI / FAIR Plan), because every candidate who talks about 'rates' tends to address them together and so do all the triangulation sources. Tier-2 sources used heavily: CalMatters voter guide and Steyer deep-dive (2026-01), KQED affordability comparison (12082915), Newsweek insurance debate piece, and abc10 final-debate coverage. Coding rule: stance reflects the candidate's primary lever for lowering ratepayer bills. Steyer is the clearest stance 4 (open competition / community choice / cap utility rate of return, explicitly NOT a takeover but explicitly anti-monopoly structure). Hilton is unusual — anti-monopoly but from a deregulation/local-control angle; coded 1 because his proposed mechanism is repealing mandates and dismantling state-level controls, with monopoly critique secondary. Mahan and Villaraigosa do not have utility-rate proposals on their own platforms; Mahan's stance is reconstructed from his San Jose mayoral record (PG&E partnership rather than municipal-utility takeover, data-center cost-shift protection). Becerra's freeze is explicit and dual (utility + insurance) — clean stance 3. Porter's stance is reconstructed from candidate-forum reporting (CPUC 'reboot and refresh') and her congressional record opposing CPUC's fixed-charge proposal; medium confidence. Thurmond's strongest proposal is on insurance (withholding state tax credits/benefits from non-cooperative insurers); on electricity/utility rates specifically he has been quiet, so his stance is partially inferred. Confidence is 'low' for Mahan, Villaraigosa, and Thurmond on the utility-rate axis specifically.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "utility_rates",
+      "stance": 1,
+      "summary": "Hilton's plan is deregulation plus monopoly break-up from the right: repeal the Renewable Portfolio Standard and Renewable Energy Credits, scrap climate mandates he says inflate ratepayer bills, end PG&E's 'state-protected monopoly,' and expand locally owned utilities and rooftop solar so customers can buy elsewhere. He has launched a 'Cal DOGE' proposal to cut state energy regulators directly to lower electricity costs. He promises to roughly halve electricity bills via this combination.",
+      "source_quote": "California should not be locked into a single, state-protected monopoly utility... Move away from PG&E's monopoly model and toward locally owned utilities... Repeal climate mandates that force utilities into costly energy choices and wasteful spending.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/ending-the-pge-nightmare/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/policy/cut-californias-electricity-bills-by-ending-wind-and-solar-farm-mandates-and-subsidies/",
+        "https://www.kpbs.org/news/politics/2026/05/06/steve-hilton-lays-out-his-plans-to-make-the-state-califordable-as-governor",
+        "https://www.abc10.com/article/entertainment/television/programs/to-the-point/governor-candidate-proposes-cal-doge-cuts-to-states-energy-regulators-to-lower-electricity-costs/103-b86171ef-5dfa-487b-a195-56aa5c9601fe"
+      ],
+      "notes": "Coded 1 (deregulate) rather than 4 (break up monopolies) because Hilton's primary mechanism is repealing state mandates / RPS / RECs and 'auditing system costs of renewables' — i.e., shrinking the regulatory state — with the anti-monopoly framing serving the same deregulatory goal (open the market). His insurance position is similarly market-restoration: 'The industry needs to be able to take account of future risk, including climate' (Newsweek). Notably right-coded but with a populist anti-PG&E edge."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "utility_rates",
+      "stance": 4,
+      "summary": "Steyer wants to lower electricity bills ~25% by structurally constraining investor-owned utilities short of nationalizing them: cut the CPUC-guaranteed ~10% rate of return on capital projects, fill CPUC seats with ratepayer-side commissioners, expand community choice aggregators so cities/counties can form publicly owned power providers, and shift to distributed generation (rooftop solar, batteries, microgrids) so customers have alternatives. On gas, he proposes a refinery profit cap. On insurance, he focuses on home-hardening plus pressure on insurers.",
+      "source_quote": "We're going to have a different rule at the Public Utilities Commission about how they get paid. And we're going to introduce local competition... Households shouldn't be forced to pay more so that utilities can earn a guaranteed 10 percent return on their investments... stop the utilities from acting like monopolies and build a truly distributed, competitive, and resilient energy system.",
+      "source_url": "https://www.tomsteyer.com/issues/electricity",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/01/governor-steyer-electricity-rates/",
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable",
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071"
+      ],
+      "notes": "Stance 4 (public option / break-up monopolies via competition) is the cleanest fit. He explicitly disclaimed nationalization in the CalMatters piece ('not actually arguing for breaking up PG&E') so stance 5 is wrong. But every concrete lever he names — cutting utility rate of return, ending the monopoly framework, enabling municipal/CCA public power — points to weakening IOU market power rather than just stronger CPUC oversight, which separates him from Becerra (stance 3)."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "utility_rates",
+      "stance": 1,
+      "summary": "Bianco's lever is deregulation across the supply side: lift drilling prohibitions, scrap the 61-cent gas tax, keep Diablo Canyon running, expand nuclear/hydrogen/geothermal under a market-driven framework, and 'hold the CPUC and CEC accountable' for rate hikes — framed as deregulatory accountability rather than rate-freeze intervention. On insurance, he wants to 'stop insurers from leaving California by ensuring a stable and fair regulatory environment' and shore up the FAIR Plan, blaming wildfire / 'failed environmental policy' for insurer flight.",
+      "source_quote": "Hold the CPUC and CEC accountable for allowing rate price increases to take effect... Unleash the California energy industry by lifting prohibitions and restrictions on new drilling... Stop Insurers from Leaving California by ensuring a stable and fair regulatory environment.",
+      "source_url": "https://biancoforgovernor.com/energy",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/insurance",
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071",
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable"
+      ],
+      "notes": "Coded 1 (deregulate) because every proposed lever pulls toward less state intervention: more drilling, less environmental review, less rate-cap regulation on insurance, regulators 'held accountable' for letting rate hikes through rather than empowered to freeze rates. He does not propose breaking up PG&E or creating public utilities."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "utility_rates",
+      "stance": 3,
+      "summary": "Becerra's signature affordability proposal is a state-of-emergency freeze on both utility rates and homeowners-insurance premiums while the state investigates the cost drivers, paired with 'stronger oversight and accountability of our utilities.' He pitches it as a temporary intervention — sit everyone down, get behind the curtain, and resume normal rate-setting only after the audit. He does not propose breaking up IOUs or creating a public option; the structural model stays, but with much stronger CPUC oversight and immediate price controls.",
+      "source_quote": "As Governor, I will freeze utility rates and home insurance premiums. Californians are getting gouged and dropped without explanation. No more. I will fight back for California families.",
+      "source_url": "https://x.com/XavierBecerra/status/2047161583839940859",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable",
+        "https://energyandpolicy.org/becerra-150k-from-ca-utilities/",
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071"
+      ],
+      "notes": "Textbook stance 3: explicit rate freeze plus CPUC accountability/transparency, no structural break-up, no public takeover. Note the credibility tension flagged by Energy and Policy Institute — Becerra took $153K+ from PG&E/SCE/SDG&E in prior federal/AG races but has not taken utility money in the governor race. The legality of a governor-imposed insurance-rate freeze under Prop 103 / Insurance Commissioner authority was challenged at the April debate; Becerra argued back. Porter publicly disagreed at the same event, warning a freeze would accelerate insurer departures."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "utility_rates",
+      "stance": 3,
+      "summary": "Porter frames utility costs as a consumer-protection problem and has said the CPUC 'is no longer fighting' for Californians and 'needs to have a reboot and a refresh.' In Congress she co-led opposition to CPUC's proposed monthly fixed charge on electric bills regardless of usage. On insurance, she publicly opposed a Becerra-style rate freeze, warning insurers would keep leaving, and instead proposes state-dollar interventions to bring costs down. No proposal to break up PG&E or create a public option.",
+      "source_quote": "Many Californians feel like the Public Utilities Commission is no longer fighting for them... The Public Utilities Commission needs to have a reboot and a refresh.",
+      "source_url": "https://calmatters.org/politics/2026/01/governor-steyer-electricity-rates/",
+      "source_date": "2026-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071",
+        "https://katieporter.com/priority/protecting-our-planet/",
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable"
+      ],
+      "notes": "Coded 3 (rate-side intervention + significant CPUC reform) rather than 4 because she has not endorsed structural break-up, public option, or community-choice expansion as a primary lever, and rejected Becerra's freeze as too blunt on insurance. Her brand is regulator-accountability — pointing-at-the-whiteboard hearings, not breaking up utilities. Confidence medium because her own campaign site doesn't elaborate utility-specific proposals beyond clean-energy investment; the CPUC 'reboot' quote is from a forum, not a written platform document."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "utility_rates",
+      "stance": 2,
+      "summary": "Mahan does not have a stand-alone utility-rates platform; his record is the data: as San Jose mayor he stepped back from his predecessors' exploration of a municipal-utility takeover of PG&E and instead signed a 2024 partnership giving PG&E performance milestones to deliver power for data centers and other large users, in exchange for ~$2.5M/year in city revenue. He has publicly insisted that data-center customers pay their own cost of service rather than shift it onto residential ratepayers, framing utility policy as grid-investment plus cost-shift protection rather than rate freezes or break-ups.",
+      "source_quote": "Large tech companies wanting to build new data centers cannot shift those costs onto ordinary ratepayers and must pay for the full cost, with the goal of leveraging their investment to make energy cleaner and more affordable for everyone else.",
+      "source_url": "https://www.sanjoseca.gov/Home/Components/News/News/6819/4699",
+      "source_date": "2024",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12049830/san-jose-and-pge-strike-deal-to-attract-data-centers-to-south-bay",
+        "https://insider.govtech.com/california/news/data-center-first-to-connect-under-san-jose-pg-e-deal",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript"
+      ],
+      "notes": "Coded 2 (modest regulation, focus on grid investment) because his governing record explicitly chose IOU partnership over public takeover, and his only utility-rate-related public position is cost-shift protection — a grid-investment governance question, not a rate-control or break-up question. Confidence is low because he has issued no gubernatorial-campaign utility-rate platform; the source quote is paraphrased from search-result reporting on his data-center stance, not a verbatim transcript. He has also called for suspending the gas tax, which is consistent with a grid/affordability rather than structural-reform posture."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "utility_rates",
+      "stance": 2,
+      "summary": "Villaraigosa's energy frame is 'all-of-the-above' generation plus grid build-out — renewables, nuclear, natural gas, and faster transmission permitting — paired with a moratorium on new climate regulations he says burden ratepayers. He has not proposed a rate freeze, CPUC structural reform, or a public option. On insurance he focuses on fixing the FAIR Plan rather than capping rates: 'The Fair Plan, which is an unfair plan, not abiding by Prop 103, we got to make it work.'",
+      "source_quote": "We need an 'All of the Above' energy policy, with renewables like solar and wind, but also nuclear, natural gas, and yes, gas-powered cars... By building our generation capacity, we can meet our energy needs and goals, while creating jobs and ultimately, making energy more affordable.",
+      "source_url": "https://www.antonio2026.com/issues",
+      "source_date": "2026-05-13",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071",
+        "https://www.abc10.com/article/news/politics/california-governor-candidates-sparred-over-housing-insurance-immigration-and-high-speed-rail-in-the-final-televised-debate-before-june-2/103-c1106e27-7b39-493a-bbcb-21ed5f15bb00",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Coded 2 (modest regulation, grid investment) by inference: his proposed mechanism for lower bills is more supply (build more generation, build transmission faster) plus rolling back climate mandates, not rate-side intervention or structural break-up. Confidence low because his affordability plan and issues page do not contain dedicated utility-rate sections — Fair Plan reform is his most concrete rate-adjacent position."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "utility_rates",
+      "stance": 3,
+      "summary": "Thurmond is one of the most interventionist candidates on insurance — he would withhold state tax credits, subsidies, and benefits from insurers that refuse to write policies, and would restrict rate increases unless insurers maintain coverage. On electricity/utility rates specifically, his platform foregrounds clean-energy jobs and broad affordability rather than CPUC structural reform or a public option; he has not endorsed breaking up PG&E or creating a state utility, but he frames the cost crisis as one the state must use leverage to fix.",
+      "source_quote": "The state should restrict rate increases unless insurers continue offering coverage... [Thurmond] would withhold tax credits, subsidies and benefits from noncooperative insurers.",
+      "source_url": "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.capradio.org/news/insight/2026/05/07/ca-insurance-commissioner-race-gubernatorial-candidate-tony-thurmond-arts-talk/",
+        "https://www.tonythurmond.com/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Coded 3 (rate-side intervention + CPUC reform-coded) by combining (a) his explicit willingness to use state coercion to restrict insurance rate hikes with (b) the absence of any public-option / break-up / state-takeover language. He is to the left of Mahan/Villaraigosa on rate intervention (because of the insurer-leverage proposal) but to the right of Steyer on structural reform. Confidence medium rather than high because he has issued no dedicated electricity-rate or CPUC platform, and the legality of his insurer-coercion tactic was questioned by debate moderators."
+    }
+  ]
+}

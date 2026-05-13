@@ -1,0 +1,137 @@
+{
+  "issue_id": "gas_tax",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1=suspend the gas excise tax; 2=pause scheduled increases; 3=hold the current rate; 4=modestly raise for transportation investment; 5=significantly raise and earmark for climate/transit. California's gas excise tax sits near 61 cents/gallon — the highest in the U.S. — after SB 1 (2017) raised it and indexed it to inflation, with revenue earmarked for the SHA/road repair. This question is distinct from the broader fuel/refinery environmental rules question (LCFS, refinery regs), which is covered separately in positions_fuel_env_rules.json.\n\nThe race has separated cleanly on this issue at the 2026-04-28 CBS California debate and again at the 2026-05-07 candidates' forum: Mahan and Thurmond joined Republicans Hilton and Bianco in calling for some form of suspension, while Steyer, Becerra, and Villaraigosa explicitly opposed it. Porter's case is the only ambiguous one in the field — she opposed the 2017 SB 1 hike and has said infrastructure should come from the general fund (a directional stance 1/2 signal), but in the 2026 debate she also declined to commit to a suspension and called other candidates' proposals too narrow. Mapped to 2 with explicit caveats.\n\nA Tier-1 wrinkle: Hilton's own campaign issue page calls for a *50% reduction* of the excise tax through procurement reform — not a full suspension. Secondary outlets often shorthand this as 'suspend the gas tax,' but the primary source is more limited. He is still the most aggressive Republican on cutting the tax mechanism itself; mapped to 1 (the scale's most-cut option), but the notes flag the 50%-not-100% nuance.\n\nBianco is unambiguously stance 1 with a verbatim 'when I'm governor the gas tax is gone' quote. Mahan has a dedicated /gas-tax campaign page and is the most vocal Democrat for suspension. Thurmond's affordability page commits to a pause specifically framed against 'Trump's Iran War tax.' Steyer rejects suspension and would instead use the CEC maximum-gross-refining-margin penalty to refund refiner windfall profits. Becerra has the cleanest 'no' on cutting the tax, framed around protecting transportation funding. Villaraigosa proposed a rebate trigger (above $5.50/gal funded from cap-and-invest) rather than cutting the tax itself — a clear stance 3 with redistribution.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "gas_tax",
+      "stance": 1,
+      "summary": "Hilton's published 'Plan for $3 Gas' commits to cutting the gas excise tax by 50% via procurement and bureaucracy reform, alongside suspending LCFS and refinery rules. In debate and stump appearances he describes this as 'cutting the gas tax in half'; secondary outlets often shorthand his position as a suspension. Either way he is among the field's most aggressive on the tax mechanism itself.",
+      "source_quote": "Reduce bureaucracy and reform procurement to reduce excise tax by 50%. California charges 60 cents per gallon in excise taxes, but much of this revenue intended to improve roads and transportation infrastructure is wasted in sprawling, costly and cumbersome design and procurement bureaucracy.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/gasprices/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://cal.streetsblog.org/2026/05/07/gas-taxes-and-high-speed-rail-what-we-can-learn-from-the-candidates-debate"
+      ],
+      "notes": "The KQED voter guide (2026-05-11) summarizes Hilton's position as 'reduce the gas tax and suspend the state's Low Carbon Fuel Standard.' Most coverage treats Hilton as a suspension proponent, but his campaign issue page is more specific (50% cut via efficiency, not full suspension). Mapped to 1 because the scale's most-cut option captures his directional intent; the 50%-not-100% nuance is flagged here."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "gas_tax",
+      "stance": 3,
+      "summary": "Steyer explicitly opposes a gas tax suspension. His pump-price plan instead activates the California Energy Commission's 'maximum gross refining margin' penalty to cap refiner profits and rebate excess to consumers, and blames high prices on Trump's Iran war and Big Oil rather than on the state tax.",
+      "source_quote": "I will direct the California Energy Commission (CEC) to activate the 'maximum gross refining margin' penalty to establish a legal ceiling on refinery profits, with excess profits returned to Californians as rebates.",
+      "source_url": "https://www.tomsteyer.com/issues/oil-gas-prices",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.dailywire.com/news/top-democrats-could-instantly-lower-gas-prices-they-refuse-to-do-it",
+        "https://www.cbsnews.com/losangeles/news/top-takeaways-cbs-california-governors-debate/"
+      ],
+      "notes": "CalMatters 2026-03 article notes Steyer dismissed Mahan and Villaraigosa's gas-tax-style proposals as 'unserious.' At the 2026-04-28 CBS debate, Steyer answered 'no' on suspending the gas tax and pivoted to a windfall profits tax on oil companies. No verbatim signal that he would raise the tax, so mapped to 3 (hold)."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "gas_tax",
+      "stance": 1,
+      "summary": "Bianco has been the most categorical candidate on eliminating the gas tax outright, framing it as wasted revenue that can be replaced by cutting government waste. He repeats the line in stump speeches, debates, and campaign video.",
+      "source_quote": "When I'm governor the gas tax is gone. California doesn't need a gas tax to fund roads, it needs to cut the waste, fraud and abuse.",
+      "source_url": "https://thenerdstash.com/when-im-governor-the-gas-tax-is-gone-riverside-county-sheriff-chad-bianco-vows-to-cut-waste-fraud-and-abuse-in-california/",
+      "source_date": "2026-04-23",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.kpbs.org/news/politics/2026/05/04/2026-primary-election-california-governor-race-explainer"
+      ],
+      "notes": "Bianco's campaign-site Affordability & Taxes page does not name the excise tax specifically, but his social posts, KQED voter-guide summary ('eliminating the state's 61-cent-per-gallon gas tax, which funds road repair and transit'), and Riverside County stump events do. High confidence, stance 1."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "gas_tax",
+      "stance": 3,
+      "summary": "Becerra is on record opposing a gas tax cut, arguing that the tax funds the roads, bridges, and transit voters use every day. He directs his pump-price answer at supply stability and at Trump-era oil-price spikes rather than at the state tax.",
+      "source_quote": "[I am] not in favor of cutting the gas tax. ... You have to fund [the roads] somehow. ... I want everyone who is sitting here to drive on the roads, cross our bridges, make sure transit is working.",
+      "source_url": "https://www.cbsnews.com/losangeles/news/top-takeaways-cbs-california-governors-debate/",
+      "source_date": "2026-04-28",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://laist.com/news/politics/2026-election-california-primary-xavier-becerra-california-governor-transcript",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.dailywire.com/news/top-democrats-could-instantly-lower-gas-prices-they-refuse-to-do-it"
+      ],
+      "notes": "Multiple debate recaps (CBS, KQED, Streetsblog CA) align that Becerra rejected a suspension at the 2026-04-28 debate. The LAist 2026-04-15 transcript shows the same posture: stabilize supply, not cut the tax. Stance 3 (hold) is solid."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "gas_tax",
+      "stance": 2,
+      "summary": "Porter has long opposed raising the gas tax (she voted-with-her-feet against the 2017 SB 1 hike rhetorically) and argues infrastructure should come from the general fund, not from a regressive pump tax. But at the 2026 debate she declined to commit to a temporary suspension, calling rivals' proposals too narrow.",
+      "source_quote": "I opposed the gas tax increase in 2018. Some of you might not know that 'cause every other Democrat just said sure. ... We do have to, I think, stop imposing gas taxes as a way of funding our infrastructure. Infrastructure benefits all of us. And we should fund it out of the general fund.",
+      "source_url": "https://www.pbs.org/video/former-us-representative-katie-porter-0zyjre/",
+      "source_date": "2026-05-08",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.dailywire.com/news/top-democrats-could-instantly-lower-gas-prices-they-refuse-to-do-it",
+        "https://cal.streetsblog.org/2026/05/07/gas-taxes-and-high-speed-rail-what-we-can-learn-from-the-candidates-debate"
+      ],
+      "notes": "Mapped to 2 (pause scheduled increases) rather than 1 because in 2026 Porter has not endorsed an outright suspension and has not put a gas-tax cut on her priorities page; her stated framing is structural — fund infrastructure from the general fund — rather than a current-rate suspension. Daily Wire (2026-04-29) reports her debate answer to a suspension question as 'no.' Could be argued as 3 if one weights the 2026 debate posture over the 2017/2018 voting record; 2 is the directional middle."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "gas_tax",
+      "stance": 1,
+      "summary": "Mahan is the highest-profile Democratic candidate calling for an outright temporary suspension of the gas excise tax, with a dedicated /gas-tax page on his campaign site and a debate-stage line that it is 'the most regressive tax in California.' He says he would backfill road funding from elsewhere in the budget.",
+      "source_quote": "Sacramento has the power to give working Californians real, immediate relief at the pump. A temporary gas tax suspension isn't a political statement — it's a common-sense solution for working families, and I'm willing to fight for it, even if that means standing up to the status quo.",
+      "source_url": "https://www.mahanforcalifornia.com/gas-tax",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.kqed.org/voterguide/california/governor",
+        "https://www.nbcbayarea.com/news/local/sj-mayor-state-leaders-suspend-ca-gas-taxes/4051710/",
+        "https://x.com/MattMahanSJ/status/2039105905174921419"
+      ],
+      "notes": "The 2026-04-28 CBS debate line — 'It is the most regressive tax in California. Working people, rural people are spending three times as much maintaining our roads as wealthy EV owners' — has been widely re-reported. Mahan has paired the suspension call with a proposed EV/road-usage charge to broaden the funding base over time. Unambiguous stance 1."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "gas_tax",
+      "stance": 3,
+      "summary": "Villaraigosa rejects a gas tax suspension in favor of a price-trigger rebate: when gas crosses $5.50/gallon, the state would return cap-and-invest revenue to drivers. His pump-price agenda focuses on refinery regulations and CARB reform, not on cutting the excise tax itself.",
+      "source_quote": "Not break the gas tax, but in fact, I said that on your show — a rebate after $5.50.",
+      "source_url": "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+      "source_date": "2026-04-15",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/gas",
+        "https://www.antonio2026.com/news/gaspriceshit6dollars",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://cal.streetsblog.org/2026/05/07/gas-taxes-and-high-speed-rail-what-we-can-learn-from-the-candidates-debate"
+      ],
+      "notes": "Villaraigosa is sometimes lumped in with Mahan as a 'suspension Democrat' (e.g., the Legal Insurrection 2026-04-14 piece) but the underlying source is about a regulatory moratorium, not a tax suspension; the LAist transcript explicitly disclaims 'not break the gas tax.' His /gas issues page does not propose changing the excise tax. Confidently 3 (hold) — with a rebate mechanism layered on top."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "gas_tax",
+      "stance": 1,
+      "summary": "Thurmond's affordability platform calls for a temporary pause of the state gas tax, framed as relief from 'Trump's Iran War tax,' alongside a working- and middle-class tax credit. He affirmed this position with a 'yes' on suspension at the 2026 CBS California debate.",
+      "source_quote": "Pause California's Gas tax to provide relief in the midst of Trump's Iran War tax.",
+      "source_url": "https://www.tonythurmond.com/priorities",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.cbsnews.com/losangeles/news/top-takeaways-cbs-california-governors-debate/",
+        "https://www.dailywire.com/news/top-democrats-could-instantly-lower-gas-prices-they-refuse-to-do-it",
+        "https://www.capradio.org/articles/2026/05/07/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race/"
+      ],
+      "notes": "Daily Wire (2026-04-29) and CBS Los Angeles debate recap both report Thurmond aligning with Republicans Bianco and Hilton plus Democrat Mahan in supporting a suspension, against Becerra/Porter/Steyer/Villaraigosa who opposed. The campaign-site language is 'pause' — temporary — so stance 1 (suspend) is appropriate; this is not a permanent repeal proposal."
+    }
+  ]
+}

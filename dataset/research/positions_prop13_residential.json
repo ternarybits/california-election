@@ -1,0 +1,127 @@
+{
+  "issue_id": "prop13_residential",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Stance scale: 1=strengthen residential Prop 13 protections, 2=hold current residential protections, 3=limited reforms (e.g., transfer-rule tweaks), 4=significant reforms while preserving primary-home protection, 5=phase out residential Prop 13. KEY DISTINCTION: This issue is specifically about RESIDENTIAL Prop 13. Several Democrats (Steyer, Becerra, Thurmond, and historically Villaraigosa) advocate a 'split roll' that would eliminate Prop 13 protections for COMMERCIAL/INDUSTRIAL property while leaving RESIDENTIAL protections intact — that is a stance 2 on this residential-specific issue (no change to homeowner protections). Many candidates either default to status-quo defense or have not addressed Prop 13 at all in 2026 — 'unknown' is the honest answer for those. No candidate in the field has called for residential reform; the politics make that a third rail. The Save Prop 13 initiative qualifying for the November 2026 ballot has made every candidate's stance newly relevant. Primary sources: KQED (2026-05) and LAist (2026-05) tax overviews, The Real Deal (2026-05-12) housing debate writeup, plus individual campaign sites where they touch on Prop 13.",
+  "positions": [
+    {
+      "candidate_id": "hilton",
+      "issue_id": "prop13_residential",
+      "stance": 1,
+      "summary": "Hilton makes Prop 13 a core campaign pillar — 'Protect Prop. 13!' appears explicitly in his tax platform alongside a commitment to no property tax increases. He frames any reform attempt (including split-roll) as part of the affordability problem and is the most vocal defender of Prop 13 in the field.",
+      "source_quote": "No increase in property taxes. Protect Prop.13!",
+      "source_url": "https://stevehiltonforgovernor.com/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Stance 1 (strengthen) rather than 2 (hold) because Hilton uses Prop 13 as an affirmative pillar of his economic message — KQED reports he 'opposed any changes to Proposition 13' and he uses Prop 13 defense to argue for cutting related fees (impact fees) as well. He is positioning himself to capture Howard Jarvis Taxpayers Association-aligned voters."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Steyer is the most aggressive Prop 13 reformer in the field on COMMERCIAL property — vowing a 2027 special election to close what he calls the 'corporate real estate tax loophole' — but is explicit that residential Prop 13 protections stay intact. On the residential question specifically, his stance is hold-the-line.",
+      "source_quote": "Steyer wants to retain Prop 13 for residential property, but repeal its benefits for commercial property, which he has called a 'corporate tax loophole' that costs the state $20 billion per year.",
+      "source_url": "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html",
+      "source_date": "2026-02-23",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/"
+      ],
+      "notes": "Important framing: on the COMMERCIAL Prop 13 question (a separate issue), Steyer would be stance 5. On the RESIDENTIAL question scored here, he is explicitly stance 2 — he has gone out of his way to wall off residential protections from his reform pitch, calling Prop 13 untouchable for homeowners. This is the cleanest illustration of why split-roll proponents register as stance 2 on this specific issue."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "prop13_residential",
+      "stance": 1,
+      "summary": "Bianco has not made Prop 13 a focal point of his campaign but is a hard-line tax-cutter (proposes eliminating the state income tax) and Riverside County's Republican sheriff aligned with Howard Jarvis-style tax-defense politics. His tax platform opposes all new taxes; no reporting suggests any opening to residential Prop 13 reform.",
+      "source_quote": "Californians deserve to keep more of their hard-earned money.",
+      "source_url": "https://biancoforgovernor.com/affordability-and-taxes/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Bianco's affordability/taxes page does not mention Prop 13 by name, so the source quote is the closest direct quote from his own platform. Coded stance 1 (strengthen) rather than 2 (hold) by reasonable inference: he is a Republican county sheriff running on aggressive tax cuts and would be expected to align with the Save Prop 13 November 2026 ballot initiative if asked. Confidence is medium rather than high because he has not affirmatively addressed Prop 13 himself in 2026 coverage we surveyed."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Becerra's published 2026 housing plan pairs a million-homes target with a revenue plan to end Prop 13 protections for INDUSTRIAL AND COMMERCIAL property — explicitly carving out residential. As California AG (2019-20) he wrote the ballot title for Prop 15, which targeted only commercial/industrial property. On residential Prop 13 specifically, his stance is hold.",
+      "source_quote": "Xavier Becerra is more balanced/institutional... his plan to build a million new homes in four years is paired with a revenue plan of ending Proposition 13 protections for industrial and commercial property to raise revenues and reduce cities' dependence on developer fees that drive up housing costs.",
+      "source_url": "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.politifact.com/factchecks/2020/jan/24/facebook-posts/no-californians-arent-being-asked-repeal-prop-13s-/",
+        "https://www.capradio.org/articles/2019/11/12/opponents-of-split-roll-property-tax-ballot-measure-accuse-california-attorney-general-of-rigging-the-system/"
+      ],
+      "notes": "Like Steyer, Becerra would score stance 5 on a COMMERCIAL Prop 13 question but is stance 2 on the residential question — his split-roll position by definition leaves residential homeowner protections untouched. Confidence is medium rather than high because his current campaign site (xavierbecerra2026.com) does not mention Prop 13 explicitly; the residential carve-out is documented via the CA YIMBY summary of his housing plan and his AG-era handling of Prop 15."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "prop13_residential",
+      "stance": "unknown",
+      "summary": "Porter has not staked out a public position on Prop 13 in her 2026 campaign. Her tax pitch centers on eliminating state income tax for families under $100,000, paid for by raising the corporate tax rate — neither her campaign site nor reporting from KQED, LAist, CalMatters, or the May 2026 candidate forums document a stance on residential or commercial Prop 13.",
+      "source_quote": "My promise as Governor is to stand up to Donald Trump and to fight for Californians – not big corporations or special interests.",
+      "source_url": "https://katieporter.com/priorities/",
+      "source_date": "2026-05-12",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/"
+      ],
+      "notes": "Multiple tax-focused articles (KQED, LAist, CalMatters) cover Porter's income-tax and corporate-tax proposals in detail but do not record any statement from her about Prop 13 — residential or commercial. The Real Deal's 2026-05-12 housing debate writeup also did not surface a Porter Prop 13 quote. Source quote is a generic platform line and is included only as a working URL anchor; it does not support a substantive stance. Honest classification: unknown."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Mahan opposes Steyer's commercial split-roll proposal and has staked out a no-new-taxes posture pending efficiency reforms. He has not called for any reform to Prop 13, residential or commercial — he is positioning as the tech-backed moderate defending the status quo on property taxation.",
+      "source_quote": "We need to make government work better before we ask families and small businesses to pay more.",
+      "source_url": "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/",
+        "https://x.com/TomSteyer/status/2024605495521157185"
+      ],
+      "notes": "Mahan's only documented engagement with Prop 13 in 2026 is his rejection of Steyer's commercial split-roll proposal — Steyer publicly attacked him on X for 'want[ing] to preserve this egregious corporate property tax loophole.' Mahan has not addressed RESIDENTIAL Prop 13 directly, but a candidate defending commercial Prop 13 against split-roll is plainly stance 2 (or stronger) on the residential question by implication. Coded stance 2 rather than 1 because his framing is 'fix government first, then talk taxes,' not active Prop 13 defense like Hilton's."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Villaraigosa's 2026 position is muddled but lands on defending homeowner property taxes. He said at a debate he'd 'fix' Prop 13 while also 'holding the line on property taxes,' and has publicly opposed Steyer's 2027 special-election split-roll plan as 'an expensive political gamble' — siding with status quo on the residential question.",
+      "source_quote": "Early in the evening, Villaraigosa said he rejected Prop 13 — a 1970s era policy that caps property tax increases across the state — but wanted to 'hold the line on property taxes.' He later said he wanted to 'fix' Prop 13 but didn't clarify how he could accomplish it while holding the line on property taxes.",
+      "source_url": "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.nbcbayarea.com/news/local/villaraigosas-revisit-of-prop-13/1899117/",
+        "https://laist.com/shows/airtalk/mayor-villaraigosa-puts-proposition-13-on-the-table"
+      ],
+      "notes": "Villaraigosa was an early advocate (as LA mayor, c. 2009-2012) for revisiting Prop 13 on commercial property. In 2026 he has dialed that back: explicit opposition to Steyer's 2027 special election, and the debate quote above shows him defending residential homeowner tax stability. Stance 2 (hold residential) with low-medium confidence because his 'fix Prop 13' language hints he could be open to limited reforms (stance 3) — but he has not specified what 'fix' means and has paired it with the homeowner-protection caveat."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Thurmond endorsed Prop 15 in 2020 (commercial split-roll) and has reiterated in 2026 that closing 'Prop 13 loopholes' should target corporations, not homeowners. His direct quote walls off seniors, homeowners, and small businesses from any tax change. On residential Prop 13 specifically, this is a hold-the-line stance.",
+      "source_quote": "I think we tax billionaires and close loopholes for corporations like in Prop 13. That won't mean any new taxes for seniors or for homeowners, or for small businesses.",
+      "source_url": "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+      "source_date": "2026-04-24",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.capradio.org/articles/2026/05/07/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Like Steyer and Becerra, Thurmond is a split-roll supporter (stance 5 on a commercial Prop 13 question) who scores stance 2 here because residential protections are explicitly preserved. The Oakland Voices interview quote is the cleanest direct statement we have from him distinguishing homeowner from corporate treatment. Confidence is medium pending a second corroborating quote from a major outlet — his 2026 messaging has emphasized a billionaire wealth tax more than Prop 13 reform."
+    }
+  ]
+}

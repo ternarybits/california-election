@@ -2079,6 +2079,887 @@
         "https://www.pressdemocrat.com/2026/01/19/how-california-governor-candidates-say-they-will-tackle-homelessness-2/"
       ],
       "notes": "Stance 4 fits his housing-supply-plus-services emphasis. Confidence is medium because his campaign site lacks a dedicated homelessness page — positions are reconstructed from CapRadio and Press Democrat reporting. The 'treatment if applicable' condition keeps him from a pure stance 5; he has not endorsed any specific encampment-enforcement or conservatorship-expansion position."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "fuel_env_rules",
+      "stance": 1,
+      "summary": "Hilton would suspend the LCFS, reformulation requirements, and 'other extreme and unnecessary refinery regulation' by executive action on Day 1, fire CARB chair Liane Randolph, and roll back cap-and-trade pass-through to drive pump prices to $3/gal. He frames LCFS as adding ~40 cents/gal with minimal environmental benefit.",
+      "source_quote": "Suspend the Low Carbon Fuel Standard (LCFS), reformulation requirements, and other extreme and unnecessary refinery regulation... On Day 1 as governor I will remove Liane Randolph and start rolling back extreme climate regulations so we can have $3.00 gas.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/gasprices/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://californiaglobe.com/articles/steve-hiltons-plan-for-cutting-gas-prices-and-affordable-energy/",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "The clearest stance 1 in the field — names LCFS, refinery reformulation, and cap-and-trade pass-through explicitly, with a Day 1 executive-action commitment."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "fuel_env_rules",
+      "stance": 3,
+      "summary": "Steyer defends California's climate framework and would attack pump prices via refinery-margin caps and accelerating alternatives — not by loosening LCFS or CARB rules. He has spent decades funding climate policy (NextGen, IRA advisory council) and frames the answer to gas prices as 'get off oil,' not as cutting LCFS. No statement found tightening LCFS specifically, so mapped to 3 rather than 4.",
+      "source_quote": "We need to develop alternative sources of gasoline in the state of California... The answer here is to get off oil. As I say, solar and wind don't go through the Straits of Hormuz.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.volts.wtf/p/tom-steyer-wants-to-be-californias",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/"
+      ],
+      "notes": "Steyer's signature gas-price idea is the CEC 'maximum gross refining margin' penalty, which tightens oversight of refiner profits rather than fuel-carbon rules. He has not publicly proposed tightening LCFS or new refinery emissions rules in the sources reviewed; if anything, the CalMatters 2026-03 piece notes he dismissed Villaraigosa and Mahan's loosening proposals as 'unserious.' Could be argued as 4 given his EnviroVoters endorsement and climate record, but absent a verbatim 'tighten LCFS' statement, 3 is the defensible call."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "fuel_env_rules",
+      "stance": 1,
+      "summary": "Bianco would 'eliminate the regulations' on California's oil industry, allow expanded in-state drilling, and rescind environmental rules he says add ~$2/gal at the pump. He doesn't name LCFS as specifically as Hilton, but his framing of 'the regulations have to go away' encompasses CARB fuel rules and refinery requirements.",
+      "source_quote": "Gasoline, the regulations that increase it almost $2 a gallon, that will be immediately reduced... The regulations have to go away. We have to allow drilling to occur.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://ktla.com/news/politics/inside-california-politics/california-gubernatorial-candidate-chad-bianco/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Less LCFS-specific than Hilton — his rhetoric is wholesale ('regulations have to go away') rather than itemized. Still clearly stance 1: he is the candidate who most flatly rejects the existence of California's fuel/refinery regulatory regime."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "fuel_env_rules",
+      "stance": 2,
+      "summary": "Becerra says he is 'open to revising the state's climate goals to keep fuel affordable for middle-class Californians' and wants to maintain refinery capacity through the transition, while still framing 'we're never going backwards.' He has not endorsed suspending LCFS but signals willingness to soften compliance costs — the most prominent centrist-Democrat 'affordability over speed' position in the field.",
+      "source_quote": "The most important thing we can do is stabilize... not just the price, but stabilize the supply and stabilize the distribution of gas... if you can provide some predictability, you won't see the spikes in the price of gas the way you see now.",
+      "source_url": "https://calmatters.org/california-voter-guide-2026/governor/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/energy-utilities/",
+        "https://laist.com/news/politics/voter-guides/2026-election-california-primary-california-governor",
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/"
+      ],
+      "notes": "Notable position to flag in the dataset. Becerra has not explicitly named LCFS in his own materials — his Energy & Utilities page focuses on utility oversight and 'affordable, reliable, fair' climate transition. The 'open to revising the state's climate goals to keep fuel affordable' phrasing is reported consistently across CalMatters and LAist voter guides, which is what places him at stance 2 rather than 3. Worth re-verifying with a direct on-record statement before publication."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "fuel_env_rules",
+      "stance": 3,
+      "summary": "Porter defends LCFS as part of why California has made air-quality progress and would 'stay the course' on existing refinery capacity through the transition — explicitly distinguishing keeping current refineries open from new drilling, which she opposes. She would not suspend LCFS but also has not proposed tightening it.",
+      "source_quote": "We are creating a lot of good, high-paying jobs in renewables, but I think we're going to have to kind of stay the course with regard to our existing refinery capacity, protecting those California jobs, keeping gas as low as we can for the foreseeable future while that transition occurs.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://envirovoters.org/california-governor-2026/",
+        "https://katieporter.com/priorities/"
+      ],
+      "notes": "Her 'stay the course' line is sometimes misread as deregulation; in context it is about keeping existing refineries operating, not about loosening LCFS. She credited California's fuel standard for the state's air-quality progress in the same CBS interview."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "fuel_env_rules",
+      "stance": 2,
+      "summary": "Mahan's headline gas-price idea is a temporary suspension of the state gas tax, but he has explicitly said he 'wouldn't rule out also curbing some of the state's refinery regulations.' He frames the climate transition as needing innovation and a real cost accounting, criticizing carbon-neutrality mandates set 'without a plan to do it or the math around what it will cost people.'",
+      "source_quote": "Mahan supports temporarily suspending the state gas tax, but in an interview said he wouldn't rule out also curbing some of the state's refinery regulations.",
+      "source_url": "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+      "source_date": "2026-03-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript"
+      ],
+      "notes": "No verbatim Mahan statement found that names LCFS specifically — the CalMatters phrasing is paraphrased but presented as his direct interview answer. Stance 2 reflects the clear 'open to curbing refinery rules' signal plus his innovation-over-mandate climate framing, while acknowledging he has been less specific than Villaraigosa."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "fuel_env_rules",
+      "stance": 2,
+      "summary": "Villaraigosa has called for an immediate moratorium on CARB regulations that raise consumer fuel costs by more than $0.01/gal and proposes a hard cap on LCFS credit-cost pass-through to drivers. He would 'reform and overhaul CARB' as governor and labels existing fuel-emissions rules 'failed policies.' He stops short of fully suspending LCFS — he wants a ceiling on its pass-through cost and a moratorium on new rules, not outright repeal.",
+      "source_quote": "Today, I am calling for an immediate moratorium on costly regulations overburdening California refineries that produce the cleanest gas in the nation and a moratorium on the costly regulations that have made the price of gas a crippling burden on working families... As Governor, I will reform and overhaul CARB...",
+      "source_url": "https://www.antonio2026.com/news/antonio-calls-for-immediate-moratorium-on-costly-regulations-vows-to-reform-carb-as-go",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/gas",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://cal.streetsblog.org/2026/05/07/gas-taxes-and-high-speed-rail-what-we-can-learn-from-the-candidates-debate"
+      ],
+      "notes": "Most deregulatory Democrat on this issue. Plausibly stance 1 given the 'reform and overhaul CARB' language and explicit LCFS credit-price ceiling proposal, but he is not calling to repeal LCFS outright — his gas plan accepts the framework and proposes a price ceiling on compliance costs plus a moratorium on new rules. Stance 2 is the more accurate placement; reviewers should note he sits at the edge of 1-2."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "fuel_env_rules",
+      "stance": 3,
+      "summary": "Thurmond would keep refineries operating during the transition while investing in cleaner technology like carbon capture, and offset higher fuel costs for Californians via a tax credit rather than by loosening rules. He has not proposed suspending or weakening LCFS or CARB rules; his framing is 'balance' — continue climate progress while protecting consumers.",
+      "source_quote": "We can do a better job at balance... We have to find ways to balance climate change, but we also have to invest in technologies like carbon capture that allow refineries to get safer.",
+      "source_url": "https://www.cbsnews.com/news/california-2026-governor-race-gas-prices-envirnmental-policy/",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/"
+      ],
+      "notes": "Thurmond is described as the most progressive Democrat in the field and has touted shutting down idle oil wells and CalSTRS fossil-fuel divestment, which could argue for stance 4. But on LCFS / refinery emissions rules specifically, the only on-record fuel position is 'balance + carbon capture + tax credits' — i.e., maintain current framework. Mapped to 3 absent an explicit tightening statement."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "gas_tax",
+      "stance": 1,
+      "summary": "Hilton's published 'Plan for $3 Gas' commits to cutting the gas excise tax by 50% via procurement and bureaucracy reform, alongside suspending LCFS and refinery rules. In debate and stump appearances he describes this as 'cutting the gas tax in half'; secondary outlets often shorthand his position as a suspension. Either way he is among the field's most aggressive on the tax mechanism itself.",
+      "source_quote": "Reduce bureaucracy and reform procurement to reduce excise tax by 50%. California charges 60 cents per gallon in excise taxes, but much of this revenue intended to improve roads and transportation infrastructure is wasted in sprawling, costly and cumbersome design and procurement bureaucracy.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/gasprices/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://cal.streetsblog.org/2026/05/07/gas-taxes-and-high-speed-rail-what-we-can-learn-from-the-candidates-debate"
+      ],
+      "notes": "The KQED voter guide (2026-05-11) summarizes Hilton's position as 'reduce the gas tax and suspend the state's Low Carbon Fuel Standard.' Most coverage treats Hilton as a suspension proponent, but his campaign issue page is more specific (50% cut via efficiency, not full suspension). Mapped to 1 because the scale's most-cut option captures his directional intent; the 50%-not-100% nuance is flagged here."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "gas_tax",
+      "stance": 3,
+      "summary": "Steyer explicitly opposes a gas tax suspension. His pump-price plan instead activates the California Energy Commission's 'maximum gross refining margin' penalty to cap refiner profits and rebate excess to consumers, and blames high prices on Trump's Iran war and Big Oil rather than on the state tax.",
+      "source_quote": "I will direct the California Energy Commission (CEC) to activate the 'maximum gross refining margin' penalty to establish a legal ceiling on refinery profits, with excess profits returned to Californians as rebates.",
+      "source_url": "https://www.tomsteyer.com/issues/oil-gas-prices",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.dailywire.com/news/top-democrats-could-instantly-lower-gas-prices-they-refuse-to-do-it",
+        "https://www.cbsnews.com/losangeles/news/top-takeaways-cbs-california-governors-debate/"
+      ],
+      "notes": "CalMatters 2026-03 article notes Steyer dismissed Mahan and Villaraigosa's gas-tax-style proposals as 'unserious.' At the 2026-04-28 CBS debate, Steyer answered 'no' on suspending the gas tax and pivoted to a windfall profits tax on oil companies. No verbatim signal that he would raise the tax, so mapped to 3 (hold)."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "gas_tax",
+      "stance": 1,
+      "summary": "Bianco has been the most categorical candidate on eliminating the gas tax outright, framing it as wasted revenue that can be replaced by cutting government waste. He repeats the line in stump speeches, debates, and campaign video.",
+      "source_quote": "When I'm governor the gas tax is gone. California doesn't need a gas tax to fund roads, it needs to cut the waste, fraud and abuse.",
+      "source_url": "https://thenerdstash.com/when-im-governor-the-gas-tax-is-gone-riverside-county-sheriff-chad-bianco-vows-to-cut-waste-fraud-and-abuse-in-california/",
+      "source_date": "2026-04-23",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.kpbs.org/news/politics/2026/05/04/2026-primary-election-california-governor-race-explainer"
+      ],
+      "notes": "Bianco's campaign-site Affordability & Taxes page does not name the excise tax specifically, but his social posts, KQED voter-guide summary ('eliminating the state's 61-cent-per-gallon gas tax, which funds road repair and transit'), and Riverside County stump events do. High confidence, stance 1."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "gas_tax",
+      "stance": 3,
+      "summary": "Becerra is on record opposing a gas tax cut, arguing that the tax funds the roads, bridges, and transit voters use every day. He directs his pump-price answer at supply stability and at Trump-era oil-price spikes rather than at the state tax.",
+      "source_quote": "[I am] not in favor of cutting the gas tax. ... You have to fund [the roads] somehow. ... I want everyone who is sitting here to drive on the roads, cross our bridges, make sure transit is working.",
+      "source_url": "https://www.cbsnews.com/losangeles/news/top-takeaways-cbs-california-governors-debate/",
+      "source_date": "2026-04-28",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://laist.com/news/politics/2026-election-california-primary-xavier-becerra-california-governor-transcript",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.dailywire.com/news/top-democrats-could-instantly-lower-gas-prices-they-refuse-to-do-it"
+      ],
+      "notes": "Multiple debate recaps (CBS, KQED, Streetsblog CA) align that Becerra rejected a suspension at the 2026-04-28 debate. The LAist 2026-04-15 transcript shows the same posture: stabilize supply, not cut the tax. Stance 3 (hold) is solid."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "gas_tax",
+      "stance": 2,
+      "summary": "Porter has long opposed raising the gas tax (she voted-with-her-feet against the 2017 SB 1 hike rhetorically) and argues infrastructure should come from the general fund, not from a regressive pump tax. But at the 2026 debate she declined to commit to a temporary suspension, calling rivals' proposals too narrow.",
+      "source_quote": "I opposed the gas tax increase in 2018. Some of you might not know that 'cause every other Democrat just said sure. ... We do have to, I think, stop imposing gas taxes as a way of funding our infrastructure. Infrastructure benefits all of us. And we should fund it out of the general fund.",
+      "source_url": "https://www.pbs.org/video/former-us-representative-katie-porter-0zyjre/",
+      "source_date": "2026-05-08",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.dailywire.com/news/top-democrats-could-instantly-lower-gas-prices-they-refuse-to-do-it",
+        "https://cal.streetsblog.org/2026/05/07/gas-taxes-and-high-speed-rail-what-we-can-learn-from-the-candidates-debate"
+      ],
+      "notes": "Mapped to 2 (pause scheduled increases) rather than 1 because in 2026 Porter has not endorsed an outright suspension and has not put a gas-tax cut on her priorities page; her stated framing is structural — fund infrastructure from the general fund — rather than a current-rate suspension. Daily Wire (2026-04-29) reports her debate answer to a suspension question as 'no.' Could be argued as 3 if one weights the 2026 debate posture over the 2017/2018 voting record; 2 is the directional middle."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "gas_tax",
+      "stance": 1,
+      "summary": "Mahan is the highest-profile Democratic candidate calling for an outright temporary suspension of the gas excise tax, with a dedicated /gas-tax page on his campaign site and a debate-stage line that it is 'the most regressive tax in California.' He says he would backfill road funding from elsewhere in the budget.",
+      "source_quote": "Sacramento has the power to give working Californians real, immediate relief at the pump. A temporary gas tax suspension isn't a political statement — it's a common-sense solution for working families, and I'm willing to fight for it, even if that means standing up to the status quo.",
+      "source_url": "https://www.mahanforcalifornia.com/gas-tax",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://www.kqed.org/voterguide/california/governor",
+        "https://www.nbcbayarea.com/news/local/sj-mayor-state-leaders-suspend-ca-gas-taxes/4051710/",
+        "https://x.com/MattMahanSJ/status/2039105905174921419"
+      ],
+      "notes": "The 2026-04-28 CBS debate line — 'It is the most regressive tax in California. Working people, rural people are spending three times as much maintaining our roads as wealthy EV owners' — has been widely re-reported. Mahan has paired the suspension call with a proposed EV/road-usage charge to broaden the funding base over time. Unambiguous stance 1."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "gas_tax",
+      "stance": 3,
+      "summary": "Villaraigosa rejects a gas tax suspension in favor of a price-trigger rebate: when gas crosses $5.50/gallon, the state would return cap-and-invest revenue to drivers. His pump-price agenda focuses on refinery regulations and CARB reform, not on cutting the excise tax itself.",
+      "source_quote": "Not break the gas tax, but in fact, I said that on your show — a rebate after $5.50.",
+      "source_url": "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+      "source_date": "2026-04-15",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/gas",
+        "https://www.antonio2026.com/news/gaspriceshit6dollars",
+        "https://calmatters.org/politics/2026/03/california-governors-race-gas-taxes/",
+        "https://cal.streetsblog.org/2026/05/07/gas-taxes-and-high-speed-rail-what-we-can-learn-from-the-candidates-debate"
+      ],
+      "notes": "Villaraigosa is sometimes lumped in with Mahan as a 'suspension Democrat' (e.g., the Legal Insurrection 2026-04-14 piece) but the underlying source is about a regulatory moratorium, not a tax suspension; the LAist transcript explicitly disclaims 'not break the gas tax.' His /gas issues page does not propose changing the excise tax. Confidently 3 (hold) — with a rebate mechanism layered on top."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "gas_tax",
+      "stance": 1,
+      "summary": "Thurmond's affordability platform calls for a temporary pause of the state gas tax, framed as relief from 'Trump's Iran War tax,' alongside a working- and middle-class tax credit. He affirmed this position with a 'yes' on suspension at the 2026 CBS California debate.",
+      "source_quote": "Pause California's Gas tax to provide relief in the midst of Trump's Iran War tax.",
+      "source_url": "https://www.tonythurmond.com/priorities",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.cbsnews.com/losangeles/news/top-takeaways-cbs-california-governors-debate/",
+        "https://www.dailywire.com/news/top-democrats-could-instantly-lower-gas-prices-they-refuse-to-do-it",
+        "https://www.capradio.org/articles/2026/05/07/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race/"
+      ],
+      "notes": "Daily Wire (2026-04-29) and CBS Los Angeles debate recap both report Thurmond aligning with Republicans Bianco and Hilton plus Democrat Mahan in supporting a suspension, against Becerra/Porter/Steyer/Villaraigosa who opposed. The campaign-site language is 'pause' — temporary — so stance 1 (suspend) is appropriate; this is not a permanent repeal proposal."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "prop13_commercial",
+      "stance": 1,
+      "summary": "Opposes any changes to Prop 13, including for commercial property. Endorsed by the Howard Jarvis Taxpayers Association PAC (the leading Prop 13 defense organization).",
+      "source_quote": "I'm proud to have the endorsement of the HJTA PAC. As governor, I'll cut taxes for working people and protect Prop 13 so families can stay in their homes, without property taxes spiraling out of control.",
+      "source_url": "https://www.facebook.com/TheSteveHilton/posts/im-proud-to-have-the-endorsement-of-the-hjta-pac-as-governor-ill-cut-taxes-for-w/1242363491439534/",
+      "source_date": "2026-03-18",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://stevehiltonforgovernor.com/policy/a-califordable-tax-plan/"
+      ],
+      "notes": "HJTA endorsement is the single strongest signal a candidate can send on Prop 13 — HJTA exists specifically to defend Prop 13. KQED's tax-comparison piece (2026-04-14) confirms: 'He opposed any changes to Proposition 13 and wants to eliminate the minimum franchise tax.' Stance 1 (strengthen) rather than 2 (hold) is appropriate because the HJTA-aligned posture is actively defensive."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "prop13_commercial",
+      "stance": 5,
+      "summary": "Centerpiece campaign proposal: remove Prop 13 protections from commercial and industrial property and reassess them at market value. Has floated a 2027 special election to put it on the ballot. Frames it as closing a 'Trump tax loophole' that benefits wealthy corporate landlords.",
+      "source_quote": "We need to fund our schools, and I'll do that by changing Prop 13 so that corporations pay real estate taxes based on their property's true value, not its value from the 1970s.",
+      "source_url": "https://californiaglobe.com/articles/tom-steyer-campaigning-on-blowing-up-prop-13/",
+      "source_date": "2026-04-14",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.tomsteyer.com/issues/tax-loopholes",
+        "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html",
+        "https://therealdeal.com/san-francisco/2026/02/23/steyer-backs-prop-13-commercial-overhaul/",
+        "https://tomsteyer.substack.com/p/what-is-californias-trump-tax-loophole",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Steyer's own campaign site (tax-loopholes page) explicitly calls to 'reform the commercial side of Prop. 13 to end this corporate tax break that lets the wealthiest property owners, like Donald Trump, avoid paying taxes based on what their skyscrapers, golf courses, and tech campuses are actually worth.' He was a major backer of Prop 15 in 2020 (which failed 52-48), and this 2026 proposal is essentially Prop 15 revisited. Stance 5 (full commercial split-roll, market-value reassessment) rather than 4 (phase-in) because his framing is full assessment, not gradual."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "prop13_commercial",
+      "stance": 2,
+      "summary": "Broadly opposes any new taxes on Californians and businesses, including commercial property tax increases. Has not made explicit Prop 13 protection a campaign theme the way Hilton has, but as a Republican running on eliminating the state income tax, he would clearly oppose split-roll.",
+      "source_quote": "Californians deserve to keep more of their hard-earned money.",
+      "source_url": "https://biancoforgovernor.com/affordability-and-taxes/",
+      "source_date": "2026-05-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Bianco's campaign-issues page is silent on Prop 13 specifically, but his platform of eliminating the state income tax and opposing any new taxes places him firmly in the anti-split-roll camp. Stance 2 (hold) rather than 1 (strengthen) because, unlike Hilton, he has not made Prop 13 defense an active campaign plank — he simply opposes the tax increase. Source quote is from his affordability/taxes page rather than a Prop 13 statement. Source date is approximate (campaign page, no clear timestamp)."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "prop13_commercial",
+      "stance": "unknown",
+      "summary": "Has not taken a public position on commercial Prop 13 / split-roll in his 2026 gubernatorial campaign. His published priorities focus on housing, healthcare, and budget management — not property tax reform.",
+      "source_quote": "",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/",
+      "source_date": "2026-05-01",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://laist.com/news/politics/2026-election-california-primary-xavier-becerra-california-governor-transcript",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "As CA Attorney General (2017-2021), Becerra wrote the official ballot title and summary for the 2020 split-roll initiative (Prop 15). Opponents accused his office of writing biased language, but that role was procedural — the title was assigned to his office by law and is not a personal endorsement of split-roll. His 2026 campaign materials (campaign-site priorities, LAist interview transcript 2026-04-15, KQED tax comparison piece 2026-04-14) do not mention Prop 13 or commercial property tax. Given the high political salience of the issue in this race, this silence reads as deliberate caution rather than oversight. Setting stance to unknown rather than guessing."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "prop13_commercial",
+      "stance": "unknown",
+      "summary": "Has built her tax platform around eliminating state income tax for households under $100k and raising the state corporate income tax rate — not around commercial property tax. Has not publicly taken a position on commercial Prop 13 / split-roll in the 2026 race.",
+      "source_quote": "",
+      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
+      "source_date": "2026-05-01",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12078450/katie-porters-run-for-governor-centers-tax-cuts-corporate-accountability",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Porter's published tax plan targets the corporate income tax (raising it from a flat 8.84% up to 9.75% on the highest-earning corporations) and the state personal income tax — explicitly different levers than commercial property tax. Her priorities page, KQED's profile (2026-04-02), and KQED's tax comparison (2026-04-14) do not contain any Porter statement on Prop 13 or split-roll. As a former consumer-finance professor with a populist anti-corporate brand, she might be sympathetic to split-roll, but inferring is not appropriate given the post-Prop-15 political risk and her deliberate silence on the issue."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "prop13_commercial",
+      "stance": 2,
+      "summary": "Opposes raising taxes — including commercial property taxes — until state government demonstrates better spending oversight. Has explicitly opposed Steyer's split-roll proposal.",
+      "source_quote": "We need to make government work better before we ask families and small businesses to pay more.",
+      "source_url": "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html",
+      "source_date": "2026-02-25",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://x.com/TomSteyer/status/2024605495521157185"
+      ],
+      "notes": "Mahan responded specifically to Steyer's split-roll proposal with the quoted statement, framing it as small-business protection. Steyer escalated the dispute on X, accusing Mahan of protecting 'billionaires and MAGA donors.' KQED confirms Mahan 'vows to oppose all tax increases until oversight measures are in place.' Stance 2 (hold) rather than 1 (strengthen) because his framing is fiscal-discipline / oversight rather than Prop 13 defense as a principle."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "prop13_commercial",
+      "stance": 2,
+      "summary": "Opposes Steyer's split-roll proposal in the 2026 race, citing the 2020 Prop 15 defeat as evidence voters have already decided the issue. His campaign site commits to 'holding the line on property taxes' generally. Notable reversal from his 2017 statements as LA mayor when he advocated split-roll.",
+      "source_quote": "A rushed, off-year special election in 2027 to raise corporate taxes isn't serious governing; it's an expensive political gamble.",
+      "source_url": "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html",
+      "source_date": "2026-02-25",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/plan",
+        "https://www.foxandhoundsdaily.com/2017/11/villaraigosa-business-support-and-prop-13/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Important reversal: in 2017, as a previous gubernatorial candidate, Villaraigosa advocated for split-roll in a Sacramento Press Club speech and told reporters 'all aspects of Proposition 13 should be reviewed.' In 2026 he is running with the State Building & Construction Trades Council backing but has shifted to a defensive position, likely reflecting the post-Prop-15 political environment and his Latino-business / moderate-coalition strategy. His campaign plan section is titled 'A Commitment to Hold the Line on Taxes' and reads: 'Holding the line on property taxes is about protecting working- and middle-class families, keeping seniors in their homes, and making sure Californians are not pushed out of an already expensive market.' Stance 2 (hold) rather than 1 because his framing is housing-affordability not Prop 13 sanctity, and the 2017 history means he's not a doctrinaire Prop 13 defender."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "prop13_commercial",
+      "stance": "unknown",
+      "summary": "Has staked out the progressive flank of the Democratic primary on taxes, supporting a one-time 5% billionaire wealth tax and a state inheritance tax — but has not publicly taken a position on commercial Prop 13 / split-roll.",
+      "source_quote": "",
+      "source_url": "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+      "source_date": "2026-04-14",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/"
+      ],
+      "notes": "Thurmond's published tax positions (billionaire wealth tax, inheritance tax, working/middle-class tax credits) are progressive but conspicuously sidestep commercial property tax. As Superintendent of Public Instruction with strong CTA ties — and CTA was a major Prop 15 backer in 2020 — one might predict sympathy for split-roll, but he has not said so on the record. Given his progressive tax framing and education-funding focus, his eventual stance is more likely to be 3-5 than 1-2, but inferring without a quote is inappropriate. KQED tax-comparison article confirms he supports the wealth-tax proposal but says nothing about commercial property tax."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "prop13_residential",
+      "stance": 1,
+      "summary": "Hilton makes Prop 13 a core campaign pillar — 'Protect Prop. 13!' appears explicitly in his tax platform alongside a commitment to no property tax increases. He frames any reform attempt (including split-roll) as part of the affordability problem and is the most vocal defender of Prop 13 in the field.",
+      "source_quote": "No increase in property taxes. Protect Prop.13!",
+      "source_url": "https://stevehiltonforgovernor.com/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Stance 1 (strengthen) rather than 2 (hold) because Hilton uses Prop 13 as an affirmative pillar of his economic message — KQED reports he 'opposed any changes to Proposition 13' and he uses Prop 13 defense to argue for cutting related fees (impact fees) as well. He is positioning himself to capture Howard Jarvis Taxpayers Association-aligned voters."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Steyer is the most aggressive Prop 13 reformer in the field on COMMERCIAL property — vowing a 2027 special election to close what he calls the 'corporate real estate tax loophole' — but is explicit that residential Prop 13 protections stay intact. On the residential question specifically, his stance is hold-the-line.",
+      "source_quote": "Steyer wants to retain Prop 13 for residential property, but repeal its benefits for commercial property, which he has called a 'corporate tax loophole' that costs the state $20 billion per year.",
+      "source_url": "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html",
+      "source_date": "2026-02-23",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/"
+      ],
+      "notes": "Important framing: on the COMMERCIAL Prop 13 question (a separate issue), Steyer would be stance 5. On the RESIDENTIAL question scored here, he is explicitly stance 2 — he has gone out of his way to wall off residential protections from his reform pitch, calling Prop 13 untouchable for homeowners. This is the cleanest illustration of why split-roll proponents register as stance 2 on this specific issue."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "prop13_residential",
+      "stance": 1,
+      "summary": "Bianco has not made Prop 13 a focal point of his campaign but is a hard-line tax-cutter (proposes eliminating the state income tax) and Riverside County's Republican sheriff aligned with Howard Jarvis-style tax-defense politics. His tax platform opposes all new taxes; no reporting suggests any opening to residential Prop 13 reform.",
+      "source_quote": "Californians deserve to keep more of their hard-earned money.",
+      "source_url": "https://biancoforgovernor.com/affordability-and-taxes/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Bianco's affordability/taxes page does not mention Prop 13 by name, so the source quote is the closest direct quote from his own platform. Coded stance 1 (strengthen) rather than 2 (hold) by reasonable inference: he is a Republican county sheriff running on aggressive tax cuts and would be expected to align with the Save Prop 13 November 2026 ballot initiative if asked. Confidence is medium rather than high because he has not affirmatively addressed Prop 13 himself in 2026 coverage we surveyed."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Becerra's published 2026 housing plan pairs a million-homes target with a revenue plan to end Prop 13 protections for INDUSTRIAL AND COMMERCIAL property — explicitly carving out residential. As California AG (2019-20) he wrote the ballot title for Prop 15, which targeted only commercial/industrial property. On residential Prop 13 specifically, his stance is hold.",
+      "source_quote": "Xavier Becerra is more balanced/institutional... his plan to build a million new homes in four years is paired with a revenue plan of ending Proposition 13 protections for industrial and commercial property to raise revenues and reduce cities' dependence on developer fees that drive up housing costs.",
+      "source_url": "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.politifact.com/factchecks/2020/jan/24/facebook-posts/no-californians-arent-being-asked-repeal-prop-13s-/",
+        "https://www.capradio.org/articles/2019/11/12/opponents-of-split-roll-property-tax-ballot-measure-accuse-california-attorney-general-of-rigging-the-system/"
+      ],
+      "notes": "Like Steyer, Becerra would score stance 5 on a COMMERCIAL Prop 13 question but is stance 2 on the residential question — his split-roll position by definition leaves residential homeowner protections untouched. Confidence is medium rather than high because his current campaign site (xavierbecerra2026.com) does not mention Prop 13 explicitly; the residential carve-out is documented via the CA YIMBY summary of his housing plan and his AG-era handling of Prop 15."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "prop13_residential",
+      "stance": "unknown",
+      "summary": "Porter has not staked out a public position on Prop 13 in her 2026 campaign. Her tax pitch centers on eliminating state income tax for families under $100,000, paid for by raising the corporate tax rate — neither her campaign site nor reporting from KQED, LAist, CalMatters, or the May 2026 candidate forums document a stance on residential or commercial Prop 13.",
+      "source_quote": "My promise as Governor is to stand up to Donald Trump and to fight for Californians – not big corporations or special interests.",
+      "source_url": "https://katieporter.com/priorities/",
+      "source_date": "2026-05-12",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/"
+      ],
+      "notes": "Multiple tax-focused articles (KQED, LAist, CalMatters) cover Porter's income-tax and corporate-tax proposals in detail but do not record any statement from her about Prop 13 — residential or commercial. The Real Deal's 2026-05-12 housing debate writeup also did not surface a Porter Prop 13 quote. Source quote is a generic platform line and is included only as a working URL anchor; it does not support a substantive stance. Honest classification: unknown."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Mahan opposes Steyer's commercial split-roll proposal and has staked out a no-new-taxes posture pending efficiency reforms. He has not called for any reform to Prop 13, residential or commercial — he is positioning as the tech-backed moderate defending the status quo on property taxation.",
+      "source_quote": "We need to make government work better before we ask families and small businesses to pay more.",
+      "source_url": "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/",
+        "https://x.com/TomSteyer/status/2024605495521157185"
+      ],
+      "notes": "Mahan's only documented engagement with Prop 13 in 2026 is his rejection of Steyer's commercial split-roll proposal — Steyer publicly attacked him on X for 'want[ing] to preserve this egregious corporate property tax loophole.' Mahan has not addressed RESIDENTIAL Prop 13 directly, but a candidate defending commercial Prop 13 against split-roll is plainly stance 2 (or stronger) on the residential question by implication. Coded stance 2 rather than 1 because his framing is 'fix government first, then talk taxes,' not active Prop 13 defense like Hilton's."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Villaraigosa's 2026 position is muddled but lands on defending homeowner property taxes. He said at a debate he'd 'fix' Prop 13 while also 'holding the line on property taxes,' and has publicly opposed Steyer's 2027 special-election split-roll plan as 'an expensive political gamble' — siding with status quo on the residential question.",
+      "source_quote": "Early in the evening, Villaraigosa said he rejected Prop 13 — a 1970s era policy that caps property tax increases across the state — but wanted to 'hold the line on property taxes.' He later said he wanted to 'fix' Prop 13 but didn't clarify how he could accomplish it while holding the line on property taxes.",
+      "source_url": "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.nbcbayarea.com/news/local/villaraigosas-revisit-of-prop-13/1899117/",
+        "https://laist.com/shows/airtalk/mayor-villaraigosa-puts-proposition-13-on-the-table"
+      ],
+      "notes": "Villaraigosa was an early advocate (as LA mayor, c. 2009-2012) for revisiting Prop 13 on commercial property. In 2026 he has dialed that back: explicit opposition to Steyer's 2027 special election, and the debate quote above shows him defending residential homeowner tax stability. Stance 2 (hold residential) with low-medium confidence because his 'fix Prop 13' language hints he could be open to limited reforms (stance 3) — but he has not specified what 'fix' means and has paired it with the homeowner-protection caveat."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "prop13_residential",
+      "stance": 2,
+      "summary": "Thurmond endorsed Prop 15 in 2020 (commercial split-roll) and has reiterated in 2026 that closing 'Prop 13 loopholes' should target corporations, not homeowners. His direct quote walls off seniors, homeowners, and small businesses from any tax change. On residential Prop 13 specifically, this is a hold-the-line stance.",
+      "source_quote": "I think we tax billionaires and close loopholes for corporations like in Prop 13. That won't mean any new taxes for seniors or for homeowners, or for small businesses.",
+      "source_url": "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+      "source_date": "2026-04-24",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.capradio.org/articles/2026/05/07/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Like Steyer and Becerra, Thurmond is a split-roll supporter (stance 5 on a commercial Prop 13 question) who scores stance 2 here because residential protections are explicitly preserved. The Oakland Voices interview quote is the cleanest direct statement we have from him distinguishing homeowner from corporate treatment. Confidence is medium pending a second corroborating quote from a major outlet — his 2026 messaging has emphasized a billionaire wealth tax more than Prop 13 reform."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "tax_middle",
+      "stance": 1,
+      "summary": "Hilton would eliminate state income tax entirely for Californians earning under $100,000 and replace the current graduated brackets with a flat 7.5% rate on income above $100,000. He says this removes ~7.1 million California households (over half) from paying any state income tax, with the cut for $70K-$100K earners (who currently pay rates up to 9.3%) being especially large.",
+      "source_quote": "If you earn less than $100,000 → you pay no state income tax. ... A single, simple 7.5% rate on income above $100,000.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/a-califordable-tax-plan/",
+      "source_date": "2026-05-06",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://x.com/SteveHiltonx/status/2048985167595974658",
+        "https://www.cnn.com/2026/05/05/politics/takeaways-cnn-california-governor-debate"
+      ],
+      "notes": "Stance 1 (significantly cut) is unambiguous. For a household earning $80K, this is a move from ~9.3% marginal / ~5% effective state tax to zero. KQED's round-up describes it as 'eliminating state income tax for Californians earning less than $100,000 and imposing a flat 7.5% tax on earnings over $100,000.' He reiterated the plan on the CNN debate stage May 5, 2026."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "tax_middle",
+      "stance": 3,
+      "summary": "Steyer has no proposal to cut or raise middle-income state income tax rates. His revenue plan is built around closing corporate tax loopholes and split-roll commercial property reform to raise ~$20 billion per year, and he supports the November 2026 billionaire wealth tax. He explicitly frames the plan as not adding any new tax on working people.",
+      "source_quote": "Tom is going to close these corporate loopholes, and raise $20 billion of new revenue each year to fund things like education, healthcare, childcare, and home care, all without charging working people a penny.",
+      "source_url": "https://www.tomsteyer.com/issues/tax-loopholes",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://fortune.com/2026/04/29/tom-steyer-billionaire-california-governor-wealth-taxes/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Stance 3 (hold) is the cleanest fit: he is silent on middle-income brackets but explicit that working people will not pay more. He has not proposed any middle-income tax credit (which would make him stance 2) — his redistribution flows directly through services funded by corporate/wealth revenue rather than through middle-income tax relief. Distinct from Porter, who proposes both a corporate raise AND a middle-income rate cut."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "tax_middle",
+      "stance": 1,
+      "summary": "Bianco's signature pledge is to eliminate California's state income tax entirely — for every income bracket, including the middle — funded by 'wasteful spending' cuts, anti-fraud enforcement, and expanded oil drilling. Middle-income filers would owe $0 in state income tax under his plan.",
+      "source_quote": "So, as your governor, we will work immediately on eliminating California income tax for all of Californians. ... Other states have done it. There's nine states that don't have a state income tax. So why does the greatest state in the country have an income tax?",
+      "source_url": "https://ktla.com/news/california/california-governor-candidate-chad-bianco-says-hed-abolish-the-state-income-tax-if-elected/",
+      "source_date": "2025-04-01",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/affordability-and-taxes/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://www.foxnews.com/politics/blue-state-sheriff-vows-eliminate-major-tax-if-elected-governor-work-immediately"
+      ],
+      "notes": "Stance 1 (significantly cut) is unambiguous — full elimination is the largest possible middle-income tax cut in the field. KQED's round-up confirms: 'he wants to cut them and make up for lost revenue with undefined wasteful spending cuts.' Bianco frames this as 'Californians deserve to keep more of their hard-earned money' on his campaign site."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "tax_middle",
+      "stance": 3,
+      "summary": "Becerra has not proposed any change to California's middle-income state income tax brackets. His tax framing is about raising effective rates on passive income and very-high-wealth filers so they pay at least as much as teachers and firefighters — not about adjusting the brackets that middle earners face. His affordability agenda runs through utility rate freezes and price-gouging enforcement rather than middle-income tax cuts.",
+      "source_quote": "these billionaires end up paying tax rates that are lower than a teacher or a firefighter. ... We have to start to look at passive income because ... most of the government's revenue is income tax. What we fail to note is that when we tax income, we're only taxing those who get paid by check, by salary. And all that passive income — capital gains and other types of income — is taxed far differently.",
+      "source_url": "https://www.sfexaminer.com/news/politics/2026-california-governor-race-get-to-know-xavier-beccera/article_00b241f6-3fd1-456f-bb91-9a3162a89241.html",
+      "source_date": "2026-02-22",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://www.kqed.org/voterguide/california/governor"
+      ],
+      "notes": "Stance 3 (hold) — his proposals are about closing the passive-income gap at the top, not changing middle-income brackets. KQED's voter guide notes he 'favors higher taxes on wealthy individuals but has not proposed a specific income tax plan' for other brackets. Confidence is medium because he hasn't been asked the middle-income question directly and head-on in the sources I found; the inference is from his stated tax philosophy, not from a verbatim 'I will not change middle-income rates' statement."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "tax_middle",
+      "stance": 1,
+      "summary": "Porter's headline policy is to eliminate state income tax for Californians making under $100,000, offset by raising California's flat corporate income tax (currently 8.84%) on the highest-earning corporations to up to 9.75% — a change she says would generate up to $8 billion per year. For middle-income filers under $100K, her plan zeroes out state income tax.",
+      "source_quote": "As Governor, I will work to eliminate state income tax for Californians making under $100,000.",
+      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://www.kqed.org/voterguide/california/governor",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Stance 1 (significantly cut) is unambiguous — zeroing out state income tax for sub-$100K filers is the largest possible cut for the bottom half of middle-income earners. KQED's tax round-up summarizes the plan as 'eliminating state income taxes for families who make under $100,000 ... offset with corporate tax increases.' Distinct from Hilton's same-threshold proposal in that she keeps the existing progressive brackets above $100K intact instead of flattening them."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "tax_middle",
+      "stance": 3,
+      "summary": "Mahan has pledged to oppose new tax increases and frames his platform as 'results before more taxes,' but he has not proposed cutting middle-income state income tax rates. His tax-cut proposals are narrow and sectoral — a temporary gas-tax suspension, a two-year tax holiday on new housing construction, and fee caps on infill housing — rather than a change to middle-income brackets.",
+      "source_quote": "Matt won't ask Californians to pay more in taxes without results.",
+      "source_url": "https://www.mahanforcalifornia.com/",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Stance 3 (hold) is the honest read. LAist's voter-guide one-liner lumped Mahan and Porter together as 'cut income taxes for middle-income earners,' but Mahan's own campaign materials and interview transcripts show no rate-cut proposal — his commitment is 'no new taxes' (i.e., hold) plus narrow sectoral tax holidays for housing and gas. He explicitly opposes the billionaire wealth tax. Confidence medium because of the LAist summary mismatch; the campaign-site quote is the controlling source."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "tax_middle",
+      "stance": 3,
+      "summary": "Villaraigosa's tax pitch is a 'Commitment to Hold the Line on Taxes': he would veto multi-billion-dollar tax hikes that 'squeeze middle-class families,' but he has not proposed cutting middle-income state income tax rates. He argues 'we can't tax our way out of our problems' — framing the current 13.3% top rate as already the highest in the nation — but the plan is to prevent raises, not to roll back the existing middle-income brackets.",
+      "source_quote": "Antonio will veto any reckless multi-billion dollar tax hike that would squeeze middle-class families even further, and instead demand responsible budgeting, smarter spending, and reforms that protect working people from being used as the state's piggy bank. ... Hold the line on taxes so that working- and middle-class families are not forced to pay twice.",
+      "source_url": "https://www.antonio2026.com/plan",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://www.kqed.org/voterguide/california/governor"
+      ],
+      "notes": "Stance 3 (hold) fits exactly. His framing is structurally anti-raise on middle-class families, but he has not proposed cutting current rates; in the LAist transcript he says even the 13.3% top rate should stay 'unless we do a spending plan.' That's a hold posture, not a cut. He has a Speaker-era record of 'tax cuts for middle-class families' but those were one-time historical actions, not part of his 2026 platform."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "tax_middle",
+      "stance": 2,
+      "summary": "Thurmond doesn't propose changing middle-income tax rates, but his package would functionally reduce middle-income tax burden: he supports the November 2026 one-time 5% billionaire wealth tax and would direct the proceeds into a new state tax credit specifically for working- and middle-class Californians, giving them more money 'every month' to cover the cost of gas, groceries, and housing.",
+      "source_quote": "I plan to tax billionaires and to take the proceeds … to provide a tax credit to working and middle-class Californians. ... [The credit would] give working people and middle-class people more money in their pocket every month to pay for the rising cost of gas, groceries, and housing.",
+      "source_url": "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+      "source_date": "2026-05-07",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://www.kpbs.org/news/politics/2026/05/11/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/"
+      ],
+      "notes": "Stance 2 (modestly cut) rather than 3 (hold) because the proposed middle-class tax credit is a real, quantifiable reduction in middle-income net tax burden — it just operates through credits rather than rate cuts. Distinguished from Porter/Hilton/Bianco (stance 1) because Thurmond keeps the existing rate structure intact and the credit is one-time/cycle-bound rather than a permanent zeroing-out of a bracket. Distinguished from Steyer (stance 3) because Steyer's revenue plan funds services, not a direct middle-class tax credit."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "tax_top_wealth",
+      "stance": 1,
+      "summary": "Hilton would replace California's 13.3% top marginal rate with a flat 7.5% tax on income above $100,000 — a major cut for top earners — and eliminate the $800 minimum LLC tax. He frames California as having 'a spending problem, not a revenue problem,' opposes Prop 13 changes, and would offset roughly $60 billion in lost revenue with spending cuts and anti-fraud enforcement.",
+      "source_quote": "California has built the highest and most punitive state income tax system in America, with top rates reaching 13.3 percent. ... A single, simple 7.5% rate on income above $100,000. ... No state income tax on your first $100,000.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/a-califordable-tax-plan/",
+      "source_date": "2026-05-06",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/policy/end-californias-800-small-business-tax/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://www.kpbs.org/news/politics/2026/05/06/steve-hilton-lays-out-his-plans-to-make-the-state-califordable-as-governor"
+      ],
+      "notes": "Stance 1 is unambiguous: he replaces a graduated top rate of 13.3% with a flat 7.5%, which is a substantial cut for high earners even after the $100K exemption. He opposes Prop 13 changes and has no proposal to raise corporate rates."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "tax_top_wealth",
+      "stance": 5,
+      "summary": "Steyer — himself a billionaire — has said he will vote for the November 2026 billionaire wealth tax initiative and has built his campaign around closing corporate tax loopholes and reforming the commercial side of Prop 13 (split-roll) to raise an estimated $20 billion per year for education, healthcare, and care work.",
+      "source_quote": "If there's an opportunity to tax wealthy people to fund health care and education, I'd vote for it all day long. ... Tom is going to close these corporate loopholes, and raise $20 billion of new revenue each year to fund things like education, healthcare, childcare, and home care, all without charging working people a penny.",
+      "source_url": "https://www.tomsteyer.com/issues/tax-loopholes",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://tomsteyer.substack.com/p/its-time-for-corporations-and-billionaires",
+        "https://fortune.com/2026/01/26/billionaire-tom-steyer-says-he-would-vote-for-california-wealth-tax/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+      ],
+      "notes": "Stance 5 is the most-aggressive bucket and Steyer is the clearest fit: he endorses both the one-time wealth tax AND structural split-roll commercial property reform AND closing the water's edge loophole. He has expressed reservations about the wealth-tax initiative's *design* (one-time, not structural) but said unambiguously he'd vote yes — and his own structural proposals go further still."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "tax_top_wealth",
+      "stance": 1,
+      "summary": "Bianco's signature pledge is to eliminate California's state income tax entirely — including the top bracket — funded by 'wasteful spending' cuts, anti-fraud enforcement, and expanded oil drilling. He would also suspend the gas tax and reduce or eliminate taxes on tips. No proposal to raise corporate rates or any wealth tax.",
+      "source_quote": "Californians deserve to keep more of their hard-earned money. ... You eliminate all of the fraud, you become oil independent and use that to fund government, and now we don't have to pay income taxes.",
+      "source_url": "https://biancoforgovernor.com/affordability-and-taxes/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.foxnews.com/politics/blue-state-sheriff-vows-eliminate-major-tax-if-elected-governor-work-immediately",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://www.kqed.org/news/12081096/riverside-county-sheriff-chad-bianco-on-his-faith-cutting-taxes-and-ballot-seizure"
+      ],
+      "notes": "Stance 1 is clearer than Hilton's: full income-tax elimination would cut the top bracket to zero. The second quote is from his KQED interview, attributed directly to Bianco."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "tax_top_wealth",
+      "stance": 3,
+      "summary": "Becerra opposes the one-time billionaire wealth tax initiative on stability grounds — he argues California needs predictable, recurring revenue — but says he would raise effective tax rates on wealthy Californians whose passive (capital-gains) income is taxed below what teachers, nurses, and firefighters pay on wages. He has not endorsed a specific top-bracket rate change or a corporate-rate increase.",
+      "source_quote": "We will make sure that those who have really large wealth, if they are paying less than a teacher or a firefighter or a police officer or a nurse, that they're going to be paying more in taxes. ... Most of the government's revenue is income tax ... we're only taxing those who get paid by check, by salary. And all that passive income — capital gains and other types of income — is taxed far differently.",
+      "source_url": "https://www.sfexaminer.com/news/politics/2026-california-governor-race-get-to-know-xavier-beccera/article_00b241f6-3fd1-456f-bb91-9a3162a89241.html",
+      "source_date": "2026-05-12",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://x.com/XavierBecerra/status/1988423070864880052",
+        "https://en.wikipedia.org/wiki/2026_California_billionaire_tax",
+        "https://ourcaliforniatimes.com/becerra-surges-in-ca-governor-race-after-swalwell-exit/"
+      ],
+      "notes": "Stance 3 (modestly raise) is the best fit: he explicitly says wealthy people will pay more under him, targeting capital-gains/passive income, but he rejects both the wealth-tax initiative (stance 5) and the substantial-broad-raise framing (stance 4). Confidence medium because he hasn't committed to a specific rate or mechanism — his framing is directional ('they'll pay more') rather than quantified."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "tax_top_wealth",
+      "stance": 3,
+      "summary": "Porter's centerpiece tax proposal is a 'Progressive Corporate Tax' that would replace California's flat 8.84% corporate rate with a graduated scale topping out around 9.75% for the largest, most profitable corporations — generating an estimated $8B/year. She would pair this with eliminating state income tax under $100K. She has not endorsed a wealth tax or a major top-bracket personal income tax increase.",
+      "source_quote": "California's economy is the 4th largest in the world. Yet our tax structure treats a local small business turning a single dollar in profit the same as a global corporation that brings in billions in profits. ... As Governor, I will launch a Progressive Corporate Tax. ... Even less than a one percent increase on the most profitable businesses earning hundreds of millions in profit will generate up to $8 billion in annual revenue.",
+      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Stance 3 fits: a ~1 percentage-point corporate-rate increase on the top tier is a modest raise, not a substantial one (stance 4) or a wealth tax (stance 5). She is conspicuously not endorsing the billionaire-tax initiative."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "tax_top_wealth",
+      "stance": 2,
+      "summary": "Mahan opposes the billionaire wealth-tax initiative, argues 'raising taxes isn't always the answer,' and has committed to not raising broad-based taxes to fix the state budget. The one exception is a narrow, sector-specific tax on AI companies to fund workforce reskilling — not a top-bracket or general corporate-rate increase.",
+      "source_quote": "Raising taxes isn't always the answer, Tom. ... [Mahan] has committed to not raising taxes to fix budget holes — including with a one-time tax on billionaires that most of his rivals are also against.",
+      "source_url": "https://fortune.com/2026/05/07/who-is-matt-mahan-silicon-valley-california-governor-san-jose-mayor/",
+      "source_date": "2026-05-07",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.mahanforcalifornia.com/",
+        "https://www.local10.com/news/national/2026/05/06/california-governor-candidates-clash-on-taxes-trump-and-healthcare-in-lively-debate/",
+        "https://abc7news.com/post/california-governors-race-matt-mahans-campaign-largely-backed-silicon-valley-tech-moguls-billionaires-report-says/18592083/"
+      ],
+      "notes": "Stance 2 (hold) rather than stance 1 (cut) because he does not propose top-bracket or corporate-rate cuts — he opposes raises and opposes the wealth tax, but accepts the current structure. The AI-company tax is a narrow sectoral fee, not a broad top-rate move, and doesn't lift him to stance 3. Silicon Valley donors back him heavily, which is consistent with the hold-current-rates posture."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "tax_top_wealth",
+      "stance": 2,
+      "summary": "Villaraigosa opposes the billionaire wealth-tax initiative and has pledged to veto 'reckless multi-billion dollar tax hikes,' arguing 'we can't tax our way out of our problems.' He says billionaires should pay more but believes that's a federal job because wealthy Californians are already leaving — and would only make California's 13.3% top rate permanent conditional on a corresponding spending plan.",
+      "source_quote": "With respect to making permanent the 13%, which is the highest upper-income tax in the United States, I think we should do it, but not unless we do a spending plan. ... What I've said is billionaires should pay more than the rest of us, but the federal government should do that because at, at the end of the day, they're just leaving and they're leaving as we speak.",
+      "source_url": "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+      "source_date": "2026-05-12",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.antonio2026.com/plan",
+        "https://en.wikipedia.org/wiki/2026_California_billionaire_tax",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Stance 2 (hold) is the best fit: he supports keeping the 13.3% top rate where it is (conditional on spending discipline) but opposes both wealth taxes and broader state-level raises, kicking redistribution to the federal level. The 'they're leaving' framing is closer to a stance-1 instinct on the state side, but because he hasn't proposed cuts and would (conditionally) keep the 13% in place, stance 2 is the honest read."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "tax_top_wealth",
+      "stance": 5,
+      "summary": "Thurmond is the only major Democratic candidate besides Steyer who openly supports the November 2026 one-time 5% billionaire wealth tax initiative, framing it as the way to fund K-14 schools, health care, and food assistance. He would pair this with new tax credits for working- and middle-class families.",
+      "source_quote": "My proposal is to tax billionaires in our state and then use that revenue for our needs. And, to give a tax credit to working people, middle-class people, so they have more money in their pocket every month to pay for the rising cost of gas, groceries, and housing.",
+      "source_url": "https://www.kpbs.org/news/politics/2026/05/11/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race",
+      "source_date": "2026-05-11",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://en.wikipedia.org/wiki/2026_California_billionaire_tax",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Stance 5 fits because he explicitly endorses a state-level wealth tax targeting the highest-wealth individuals. His package is narrower than Steyer's (no split-roll commercial property reform on the record), but the wealth-tax endorsement is the diagnostic move for stance 5."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "utility_rates",
+      "stance": 1,
+      "summary": "Hilton's plan is deregulation plus monopoly break-up from the right: repeal the Renewable Portfolio Standard and Renewable Energy Credits, scrap climate mandates he says inflate ratepayer bills, end PG&E's 'state-protected monopoly,' and expand locally owned utilities and rooftop solar so customers can buy elsewhere. He has launched a 'Cal DOGE' proposal to cut state energy regulators directly to lower electricity costs. He promises to roughly halve electricity bills via this combination.",
+      "source_quote": "California should not be locked into a single, state-protected monopoly utility... Move away from PG&E's monopoly model and toward locally owned utilities... Repeal climate mandates that force utilities into costly energy choices and wasteful spending.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/ending-the-pge-nightmare/",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://stevehiltonforgovernor.com/policy/cut-californias-electricity-bills-by-ending-wind-and-solar-farm-mandates-and-subsidies/",
+        "https://www.kpbs.org/news/politics/2026/05/06/steve-hilton-lays-out-his-plans-to-make-the-state-califordable-as-governor",
+        "https://www.abc10.com/article/entertainment/television/programs/to-the-point/governor-candidate-proposes-cal-doge-cuts-to-states-energy-regulators-to-lower-electricity-costs/103-b86171ef-5dfa-487b-a195-56aa5c9601fe"
+      ],
+      "notes": "Coded 1 (deregulate) rather than 4 (break up monopolies) because Hilton's primary mechanism is repealing state mandates / RPS / RECs and 'auditing system costs of renewables' — i.e., shrinking the regulatory state — with the anti-monopoly framing serving the same deregulatory goal (open the market). His insurance position is similarly market-restoration: 'The industry needs to be able to take account of future risk, including climate' (Newsweek). Notably right-coded but with a populist anti-PG&E edge."
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "utility_rates",
+      "stance": 4,
+      "summary": "Steyer wants to lower electricity bills ~25% by structurally constraining investor-owned utilities short of nationalizing them: cut the CPUC-guaranteed ~10% rate of return on capital projects, fill CPUC seats with ratepayer-side commissioners, expand community choice aggregators so cities/counties can form publicly owned power providers, and shift to distributed generation (rooftop solar, batteries, microgrids) so customers have alternatives. On gas, he proposes a refinery profit cap. On insurance, he focuses on home-hardening plus pressure on insurers.",
+      "source_quote": "We're going to have a different rule at the Public Utilities Commission about how they get paid. And we're going to introduce local competition... Households shouldn't be forced to pay more so that utilities can earn a guaranteed 10 percent return on their investments... stop the utilities from acting like monopolies and build a truly distributed, competitive, and resilient energy system.",
+      "source_url": "https://www.tomsteyer.com/issues/electricity",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/01/governor-steyer-electricity-rates/",
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable",
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071"
+      ],
+      "notes": "Stance 4 (public option / break-up monopolies via competition) is the cleanest fit. He explicitly disclaimed nationalization in the CalMatters piece ('not actually arguing for breaking up PG&E') so stance 5 is wrong. But every concrete lever he names — cutting utility rate of return, ending the monopoly framework, enabling municipal/CCA public power — points to weakening IOU market power rather than just stronger CPUC oversight, which separates him from Becerra (stance 3)."
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "utility_rates",
+      "stance": 1,
+      "summary": "Bianco's lever is deregulation across the supply side: lift drilling prohibitions, scrap the 61-cent gas tax, keep Diablo Canyon running, expand nuclear/hydrogen/geothermal under a market-driven framework, and 'hold the CPUC and CEC accountable' for rate hikes — framed as deregulatory accountability rather than rate-freeze intervention. On insurance, he wants to 'stop insurers from leaving California by ensuring a stable and fair regulatory environment' and shore up the FAIR Plan, blaming wildfire / 'failed environmental policy' for insurer flight.",
+      "source_quote": "Hold the CPUC and CEC accountable for allowing rate price increases to take effect... Unleash the California energy industry by lifting prohibitions and restrictions on new drilling... Stop Insurers from Leaving California by ensuring a stable and fair regulatory environment.",
+      "source_url": "https://biancoforgovernor.com/energy",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://biancoforgovernor.com/insurance",
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071",
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable"
+      ],
+      "notes": "Coded 1 (deregulate) because every proposed lever pulls toward less state intervention: more drilling, less environmental review, less rate-cap regulation on insurance, regulators 'held accountable' for letting rate hikes through rather than empowered to freeze rates. He does not propose breaking up PG&E or creating public utilities."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "utility_rates",
+      "stance": 3,
+      "summary": "Becerra's signature affordability proposal is a state-of-emergency freeze on both utility rates and homeowners-insurance premiums while the state investigates the cost drivers, paired with 'stronger oversight and accountability of our utilities.' He pitches it as a temporary intervention — sit everyone down, get behind the curtain, and resume normal rate-setting only after the audit. He does not propose breaking up IOUs or creating a public option; the structural model stays, but with much stronger CPUC oversight and immediate price controls.",
+      "source_quote": "As Governor, I will freeze utility rates and home insurance premiums. Californians are getting gouged and dropped without explanation. No more. I will fight back for California families.",
+      "source_url": "https://x.com/XavierBecerra/status/2047161583839940859",
+      "source_date": "2026-05-13",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable",
+        "https://energyandpolicy.org/becerra-150k-from-ca-utilities/",
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071"
+      ],
+      "notes": "Textbook stance 3: explicit rate freeze plus CPUC accountability/transparency, no structural break-up, no public takeover. Note the credibility tension flagged by Energy and Policy Institute — Becerra took $153K+ from PG&E/SCE/SDG&E in prior federal/AG races but has not taken utility money in the governor race. The legality of a governor-imposed insurance-rate freeze under Prop 103 / Insurance Commissioner authority was challenged at the April debate; Becerra argued back. Porter publicly disagreed at the same event, warning a freeze would accelerate insurer departures."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "utility_rates",
+      "stance": 3,
+      "summary": "Porter frames utility costs as a consumer-protection problem and has said the CPUC 'is no longer fighting' for Californians and 'needs to have a reboot and a refresh.' In Congress she co-led opposition to CPUC's proposed monthly fixed charge on electric bills regardless of usage. On insurance, she publicly opposed a Becerra-style rate freeze, warning insurers would keep leaving, and instead proposes state-dollar interventions to bring costs down. No proposal to break up PG&E or create a public option.",
+      "source_quote": "Many Californians feel like the Public Utilities Commission is no longer fighting for them... The Public Utilities Commission needs to have a reboot and a refresh.",
+      "source_url": "https://calmatters.org/politics/2026/01/governor-steyer-electricity-rates/",
+      "source_date": "2026-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071",
+        "https://katieporter.com/priority/protecting-our-planet/",
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable"
+      ],
+      "notes": "Coded 3 (rate-side intervention + significant CPUC reform) rather than 4 because she has not endorsed structural break-up, public option, or community-choice expansion as a primary lever, and rejected Becerra's freeze as too blunt on insurance. Her brand is regulator-accountability — pointing-at-the-whiteboard hearings, not breaking up utilities. Confidence medium because her own campaign site doesn't elaborate utility-specific proposals beyond clean-energy investment; the CPUC 'reboot' quote is from a forum, not a written platform document."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "utility_rates",
+      "stance": 2,
+      "summary": "Mahan does not have a stand-alone utility-rates platform; his record is the data: as San Jose mayor he stepped back from his predecessors' exploration of a municipal-utility takeover of PG&E and instead signed a 2024 partnership giving PG&E performance milestones to deliver power for data centers and other large users, in exchange for ~$2.5M/year in city revenue. He has publicly insisted that data-center customers pay their own cost of service rather than shift it onto residential ratepayers, framing utility policy as grid-investment plus cost-shift protection rather than rate freezes or break-ups.",
+      "source_quote": "Large tech companies wanting to build new data centers cannot shift those costs onto ordinary ratepayers and must pay for the full cost, with the goal of leveraging their investment to make energy cleaner and more affordable for everyone else.",
+      "source_url": "https://www.sanjoseca.gov/Home/Components/News/News/6819/4699",
+      "source_date": "2024",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12049830/san-jose-and-pge-strike-deal-to-attract-data-centers-to-south-bay",
+        "https://insider.govtech.com/california/news/data-center-first-to-connect-under-san-jose-pg-e-deal",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript"
+      ],
+      "notes": "Coded 2 (modest regulation, focus on grid investment) because his governing record explicitly chose IOU partnership over public takeover, and his only utility-rate-related public position is cost-shift protection — a grid-investment governance question, not a rate-control or break-up question. Confidence is low because he has issued no gubernatorial-campaign utility-rate platform; the source quote is paraphrased from search-result reporting on his data-center stance, not a verbatim transcript. He has also called for suspending the gas tax, which is consistent with a grid/affordability rather than structural-reform posture."
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "utility_rates",
+      "stance": 2,
+      "summary": "Villaraigosa's energy frame is 'all-of-the-above' generation plus grid build-out — renewables, nuclear, natural gas, and faster transmission permitting — paired with a moratorium on new climate regulations he says burden ratepayers. He has not proposed a rate freeze, CPUC structural reform, or a public option. On insurance he focuses on fixing the FAIR Plan rather than capping rates: 'The Fair Plan, which is an unfair plan, not abiding by Prop 103, we got to make it work.'",
+      "source_quote": "We need an 'All of the Above' energy policy, with renewables like solar and wind, but also nuclear, natural gas, and yes, gas-powered cars... By building our generation capacity, we can meet our energy needs and goals, while creating jobs and ultimately, making energy more affordable.",
+      "source_url": "https://www.antonio2026.com/issues",
+      "source_date": "2026-05-13",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071",
+        "https://www.abc10.com/article/news/politics/california-governor-candidates-sparred-over-housing-insurance-immigration-and-high-speed-rail-in-the-final-televised-debate-before-june-2/103-c1106e27-7b39-493a-bbcb-21ed5f15bb00",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Coded 2 (modest regulation, grid investment) by inference: his proposed mechanism for lower bills is more supply (build more generation, build transmission faster) plus rolling back climate mandates, not rate-side intervention or structural break-up. Confidence low because his affordability plan and issues page do not contain dedicated utility-rate sections — Fair Plan reform is his most concrete rate-adjacent position."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "utility_rates",
+      "stance": 3,
+      "summary": "Thurmond is one of the most interventionist candidates on insurance — he would withhold state tax credits, subsidies, and benefits from insurers that refuse to write policies, and would restrict rate increases unless insurers maintain coverage. On electricity/utility rates specifically, his platform foregrounds clean-energy jobs and broad affordability rather than CPUC structural reform or a public option; he has not endorsed breaking up PG&E or creating a state utility, but he frames the cost crisis as one the state must use leverage to fix.",
+      "source_quote": "The state should restrict rate increases unless insurers continue offering coverage... [Thurmond] would withhold tax credits, subsidies and benefits from noncooperative insurers.",
+      "source_url": "https://www.newsweek.com/california-governor-candidates-insurance-rate-fixes-11897071",
+      "source_date": "2026-05-13",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.capradio.org/news/insight/2026/05/07/ca-insurance-commissioner-race-gubernatorial-candidate-tony-thurmond-arts-talk/",
+        "https://www.tonythurmond.com/",
+        "https://calmatters.org/california-voter-guide-2026/governor/"
+      ],
+      "notes": "Coded 3 (rate-side intervention + CPUC reform-coded) by combining (a) his explicit willingness to use state coercion to restrict insurance rate hikes with (b) the absence of any public-option / break-up / state-takeover language. He is to the left of Mahan/Villaraigosa on rate intervention (because of the insurer-leverage proposal) but to the right of Steyer on structural reform. Confidence medium rather than high because he has issued no dedicated electricity-rate or CPUC platform, and the legality of his insurer-coercion tactic was questioned by debate moderators."
     }
   ],
   "questions": []
