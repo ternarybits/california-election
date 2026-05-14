@@ -35,10 +35,10 @@
     </section>
 
     <section id="results" class="card hidden">
-      <h2>Your match (scaffold scoring)</h2>
+      <h2>Your match</h2>
       <p class="muted small">
-        v0 dataset has no real candidate positions yet, so this is just a plumbing demo.
-        Real matching comes online with <code>dataset_v1.json</code>.
+        Scored against <code>dataset_v1.json</code> — 184 of 192 candidate-issue
+        positions cited from primary sources.
       </p>
       <ol id="ranking"></ol>
       <p><a id="share-link" href="#">share link →</a></p>
@@ -80,7 +80,7 @@
         state.dataset = await datasetRes.json();
         $("#snapshot-date").textContent = state.dataset.snapshot_date;
         if (!state.issues.length) {
-          $("#status").innerHTML = "<p>No issues in dataset_v0. Add some and redeploy.</p>";
+          $("#status").innerHTML = "<p>No issues in the dataset. Add some and redeploy.</p>";
           return;
         }
         $("#status").classList.add("hidden");

@@ -21,7 +21,7 @@ import { dirname, resolve } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
-const datasetPath = resolve(root, "dataset/dataset_v0.json");
+const datasetPath = resolve(root, "dataset/dataset_v1.json");
 
 const argTop = process.argv.indexOf("--top");
 const TOP_N = argTop >= 0 ? Number(process.argv[argTop + 1]) : 15;

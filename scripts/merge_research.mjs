@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Merge research scratch files into the canonical dataset_v0.json.
+// Merge research scratch files into the canonical dataset_v1.json.
 //
 // Reads (if present):
 //   - dataset/research/bios.json
@@ -16,7 +16,7 @@ import { dirname, resolve } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
-const datasetPath = resolve(root, "dataset/dataset_v0.json");
+const datasetPath = resolve(root, "dataset/dataset_v1.json");
 const researchDir = resolve(root, "dataset/research");
 
 const dataset = JSON.parse(readFileSync(datasetPath, "utf-8"));

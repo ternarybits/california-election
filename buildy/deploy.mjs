@@ -6,7 +6,7 @@
 //   node deploy.mjs --pair         # request auto-pairing flow
 //   node deploy.mjs --update <id>  # update an existing app (requires BUILDY_TOKEN env)
 //
-// The dataset is read from ../dataset/dataset_v0.json and inlined into module.js
+// The dataset is read from ../dataset/dataset_v1.json and inlined into module.js
 // (Buildy modules can't read the filesystem and have no outbound HTTP, so the
 // dataset must be bundled).
 
@@ -22,7 +22,7 @@ const pair = args.includes("--pair");
 const updateIdx = args.indexOf("--update");
 const updateId = updateIdx >= 0 ? args[updateIdx + 1] : null;
 
-const datasetPath = resolve(root, "dataset/dataset_v0.json");
+const datasetPath = resolve(root, "dataset/dataset_v1.json");
 const modulePath = resolve(__dirname, "module.js");
 const uiPath = resolve(__dirname, "ui.html");
 const stylesPath = resolve(__dirname, "styles.css");

@@ -2,15 +2,17 @@
 
 stdio MCP server that exposes the California 2026 candidate dataset to Claude, ChatGPT, Cursor — any MCP-speaking client.
 
-## Tools (v0)
+## Tools
 
 | Tool | Returns |
 |---|---|
 | `list_candidates` | Roster summary (id, name, party, bio_short). |
 | `list_issues` | Issue list with stance scales. |
 | `get_positions(issue_id)` | Every candidate's stance on one issue with source citation. |
+| `list_personal_fit_dimensions` | Non-policy axes (career, demographic, geographic, age, endorsement coalition, etc.). |
+| `get_candidate_bio(candidate_id)` | Bio + personal_attributes for one candidate. |
 
-The full v1 toolset (`get_candidate`, `get_differentiating_questions`, `score_user_positions`) lands with `dataset_v1.json`.
+`get_differentiating_questions` and `score_user_positions` are the next additions — they'll let the agent drive a deliberation conversation end to end, not just retrieve data.
 
 ## Install
 
@@ -44,4 +46,4 @@ Restart Claude Desktop, then try:
 
 > *Use the california-election tools to walk me through the issues and find the candidate who'd best match someone who prioritizes housing supply above all else.*
 
-(With the v0 scaffold, the agent will discover that all stances are `unknown` — which is the correct, honest signal that the dataset hasn't been researched yet.)
+The dataset is `dataset_v1.json` — first complete research pass, 184 of 192 candidate-issue positions cited from primary sources, 8 honest "unknown" entries where the candidate has not publicly addressed the issue.

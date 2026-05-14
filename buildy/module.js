@@ -2,7 +2,7 @@
 //
 // Buildy runtime is Workers/WinterTC-shaped (fetch handler, env.storage KV, env.log).
 // No outbound HTTP. The dataset is bundled into this module at deploy time;
-// `deploy.mjs` substitutes the __DATASET__ placeholder with dataset_v0.json contents.
+// `deploy.mjs` substitutes the __DATASET__ placeholder with dataset_v1.json contents.
 
 const DATASET = __DATASET__;
 

@@ -1,7 +1,7 @@
 {
-  "$schema_note": "v0 scaffold. Roster, polling, fundraising are research-backed. Issue stance scales and personal-fit dimensions are agreed schema. Candidate bios and per-(candidate, issue) positions are TODO and will be filled in via Phase 0 research.",
-  "version": "v0",
-  "snapshot_date": "2026-05-12",
+  "$schema_note": "v1 — first complete research pass. 8 candidates × 24 issues = 192 candidate-issue positions, 184 researched with primary-source quotes (8 honest \"unknown\" entries documented in confidence: \"insufficient_data\"). 12 personal-fit dimensions defined. Issues ranked by differentiation score in questions[]; top 15 flagged default_quiz=true. Corrections welcome via GitHub PR or in-app flag.",
+  "version": "v1",
+  "snapshot_date": "2026-05-14",
   "race": {
     "name": "California 2026 Gubernatorial Primary",
     "primary_date": "2026-06-02",

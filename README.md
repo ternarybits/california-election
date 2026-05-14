@@ -2,11 +2,11 @@
 
 A shareable web experience that helps Californians discover which 2026 gubernatorial candidate best aligns with their values — and just as importantly, *why*. Open dataset, cited sources, three modalities (web quiz, MCP server, AI-mediated deliberation).
 
-**Status:** Phase 0 scaffolding. See [`PLAN.md`](./PLAN.md) for the design document.
+**Status:** Phase 0 complete (dataset v1 — first researched pass). See [`PLAN.md`](./PLAN.md) for the design document.
 
 | Surface | Path | Status |
 |---|---|---|
-| Open dataset (v0) | [`dataset/dataset_v0.json`](./dataset/dataset_v0.json) | 8 candidates × 24 issues = 192 positions, 184 researched with primary-source quotes (8 honest unknowns); questions ranked by differentiation score |
+| Open dataset (v1) | [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) | 8 candidates × 24 issues = 192 positions, 184 researched with primary-source quotes (8 honest unknowns); questions ranked by differentiation score |
 | Buildy quiz spike | [`buildy/`](./buildy/) | code written; deploy with `node buildy/deploy.mjs` |
 | MCP server spike | [`mcp/`](./mcp/) | working stdio server, 5 tools (list_candidates / list_issues / get_positions / list_personal_fit_dimensions / get_candidate_bio); `cd mcp && npm install && npm start` |
 

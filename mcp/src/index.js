@@ -2,11 +2,14 @@
 // California 2026 Gubernatorial Candidate Matcher — MCP server (stdio).
 //
 // Tools exposed:
-//   - list_candidates()         — roster summary
-//   - get_positions(issue_id)   — every candidate's stance on one issue, with sources
+//   - list_candidates()                — roster summary
+//   - list_issues()                    — all policy issues with stance scales
+//   - get_positions(issue_id)          — every candidate's stance on one issue, with sources
+//   - list_personal_fit_dimensions()   — non-policy axes (career, demographic, etc.)
+//   - get_candidate_bio(candidate_id)  — bio + personal attributes
 //
-// More tools (list_issues, get_candidate, get_differentiating_questions,
-// score_user_positions) will land alongside dataset_v1.json.
+// Future tools (get_differentiating_questions, score_user_positions) will
+// land when the quiz UI is wired up.
 
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -16,7 +19,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const datasetPath = resolve(__dirname, "..", "..", "dataset", "dataset_v0.json");
+const datasetPath = resolve(__dirname, "..", "..", "dataset", "dataset_v1.json");
 const dataset = JSON.parse(readFileSync(datasetPath, "utf-8"));
 
 const server = new McpServer({
@@ -79,7 +82,7 @@ server.registerTool(
   "get_positions",
   {
     title: "Get positions on an issue",
-    description: "Get every candidate's position on a single issue, including the source quote, URL, and confidence level. Use this to research where candidates differ on a specific topic. Returns 'unknown' for positions that haven't been researched yet (the v0 scaffold).",
+    description: "Get every candidate's position on a single issue, including the source quote, URL, and confidence level. Use this to research where candidates differ on a specific topic. Returns 'unknown' (with confidence: 'insufficient_data') for the ~4% of candidate-issue pairs where the candidate has not publicly addressed the topic.",
     inputSchema: {
       issue_id: z.string().describe("The issue ID from list_issues, e.g. 'housing_supply' or 'public_safety'."),
     },

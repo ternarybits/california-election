@@ -2,7 +2,7 @@
 
 Vertical-slice quiz app for [Buildy](https://buildy.so). Loads the open dataset, walks the user through one question per issue, scores ordinal agreement against each candidate's stance, and persists results in Buildy's KV store.
 
-> v0 dataset has all stances as `unknown` — the UI works end-to-end but every candidate will show `—%` until `dataset_v1.json` lands.
+> Now loading `dataset_v1.json` — 184 of 192 candidate-issue positions are researched with primary-source quotes. The UI shows real scores out of the box.
 
 ## Files
 
