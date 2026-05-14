@@ -11,8 +11,14 @@ stdio MCP server that exposes the California 2026 candidate dataset to Claude, C
 | `get_positions(issue_id)` | Every candidate's stance on one issue with source citation. |
 | `list_personal_fit_dimensions` | Non-policy axes (career, demographic, geographic, age, endorsement coalition, etc.). |
 | `get_candidate_bio(candidate_id)` | Bio + personal_attributes for one candidate. |
+| `get_differentiating_questions(top_n?)` | Issues ranked by differentiation score — the questions where candidates actually differ. Default top 15 (the default web quiz); max 24 (all issues). |
+| `score_user_positions(policy_answers, personal_fit_answers?)` | Rank candidates against the user's stances. Returns **two separate scores** per candidate (policy match % and personal fit %, never blended) plus the top 3 agreements and disagreements per candidate, weighted by user importance, with verbatim source quotes — so the agent can explain *why* each candidate matched. |
 
-`get_differentiating_questions` and `score_user_positions` are the next additions — they'll let the agent drive a deliberation conversation end to end, not just retrieve data.
+Smoke test (covers both new tools end-to-end via the stdio transport):
+
+```bash
+cd mcp && node test_tools.mjs
+```
 
 ## Install
 
