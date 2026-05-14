@@ -43,6 +43,33 @@ async function handleListIssues() {
   })));
 }
 
+async function handleListQuestions() {
+  // Default quiz: questions[] entries with default_quiz=true, ordered by rank.
+  // Each entry is enriched with the corresponding issue fields the UI needs.
+  const issuesById = new Map(DATASET.issues.map((i) => [i.id, i]));
+  const ordered = (DATASET.questions || [])
+    .filter((q) => q.default_quiz)
+    .sort((a, b) => a.rank - b.rank);
+  return json(
+    ordered.map((q) => {
+      const issue = issuesById.get(q.issue_id);
+      if (!issue) return null;
+      return {
+        id: issue.id,
+        name: issue.name,
+        short_description: issue.short_description,
+        stance_scale: issue.stance_scale,
+        rank: q.rank,
+        differentiation: q.differentiation,
+      };
+    }).filter(Boolean),
+  );
+}
+
+async function handleListPersonalFitDimensions() {
+  return json(DATASET.personal_fit_dimensions || []);
+}
+
 async function handleSaveResult(request, env) {
   const body = await request.json().catch(() => null);
   if (!body || typeof body !== "object") return badRequest("invalid body");
@@ -82,6 +109,8 @@ export default {
     if (request.method === "GET" && path === "/api/dataset") return handleGetDataset();
     if (request.method === "GET" && path === "/api/candidates") return handleListCandidates();
     if (request.method === "GET" && path === "/api/issues") return handleListIssues();
+    if (request.method === "GET" && path === "/api/questions") return handleListQuestions();
+    if (request.method === "GET" && path === "/api/personal-fit-dimensions") return handleListPersonalFitDimensions();
     if (request.method === "POST" && path === "/api/result") return handleSaveResult(request, env);
 
     const resultMatch = path.match(/^\/api\/result\/([0-9a-f-]+)$/i);
@@ -97,6 +126,8 @@ export default {
           "GET  /api/dataset",
           "GET  /api/candidates",
           "GET  /api/issues",
+          "GET  /api/questions",
+          "GET  /api/personal-fit-dimensions",
           "POST /api/result",
           "GET  /api/result/:id",
         ],

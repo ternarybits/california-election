@@ -28,7 +28,12 @@ const uiPath = resolve(__dirname, "ui.html");
 const stylesPath = resolve(__dirname, "styles.css");
 
 const dataset = readFileSync(datasetPath, "utf-8").trim();
-const moduleSrc = readFileSync(modulePath, "utf-8").replace("__DATASET__", dataset);
+// Replace only the code-line placeholder (`const DATASET = __DATASET__;`) —
+// the file header comment also contains the token "__DATASET__".
+const moduleSrc = readFileSync(modulePath, "utf-8").replace(
+  /const DATASET = __DATASET__;/,
+  `const DATASET = ${dataset};`,
+);
 const ui = readFileSync(uiPath, "utf-8");
 const styles = readFileSync(stylesPath, "utf-8");
 

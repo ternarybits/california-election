@@ -75,8 +75,54 @@ button#next:disabled { background: var(--panel-2); color: var(--muted); border-c
 .muted { color: var(--muted); }
 .small { font-size: 0.85rem; }
 
-#ranking { padding-left: 1.2em; }
-#ranking li { margin: 8px 0; }
+.phase-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+}
+
+.importance {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.importance label { display: block; color: var(--muted); margin-bottom: 8px; font-size: 0.9rem; }
+.importance input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.importance-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+#ranking { padding-left: 0; list-style: none; }
+#ranking li {
+  margin: 10px 0;
+  padding: 14px 16px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.result-name { font-size: 1.05rem; }
+.result-scores { display: flex; gap: 12px; flex-wrap: wrap; }
+.score { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; }
+.score-label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.score-policy code { background: rgba(247, 201, 72, 0.18); color: var(--accent); }
+.score-personal code { background: rgba(91, 156, 245, 0.18); color: var(--accent-2); }
 
 a { color: var(--accent-2); }
 code { background: #00000044; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
