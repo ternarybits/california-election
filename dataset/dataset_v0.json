@@ -2385,31 +2385,39 @@
       "candidate_id": "becerra",
       "issue_id": "prop13_commercial",
       "stance": "unknown",
-      "summary": "Has not taken a public position on commercial Prop 13 / split-roll in his 2026 gubernatorial campaign. His published priorities focus on housing, healthcare, and budget management — not property tax reform.",
+      "summary": "Has not publicly taken a 2026 position on commercial Prop 13 / split-roll. His campaign housing plan and economy/affordability plan make no mention of Prop 13, commercial property tax, or industrial property reassessment. As CA Attorney General he wrote the official Prop 15 (2020) ballot title and summary, but that role was procedural.",
       "source_quote": "",
-      "source_url": "https://www.xavierbecerra2026.com/priorities/",
-      "source_date": "2026-05-01",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/housing/",
+      "source_date": "2026-05-13",
       "confidence": "insufficient_data",
       "secondary_sources": [
-        "https://laist.com/news/politics/2026-election-california-primary-xavier-becerra-california-governor-transcript",
-        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+        "https://www.xavierbecerra2026.com/priorities/economy-and-affordability/",
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://missionlocal.org/2026/05/california-governor-candidates-housing-abundance/",
+        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/"
       ],
-      "notes": "As CA Attorney General (2017-2021), Becerra wrote the official ballot title and summary for the 2020 split-roll initiative (Prop 15). Opponents accused his office of writing biased language, but that role was procedural — the title was assigned to his office by law and is not a personal endorsement of split-roll. His 2026 campaign materials (campaign-site priorities, LAist interview transcript 2026-04-15, KQED tax comparison piece 2026-04-14) do not mention Prop 13 or commercial property tax. Given the high political salience of the issue in this race, this silence reads as deliberate caution rather than oversight. Setting stance to unknown rather than guessing."
+      "notes": "Important correction to the context-bundle peer note: the California YIMBY blog (2026-05-12) — the only source for the 'million homes + end Prop 13 for industrial/commercial' framing — actually attributes that revenue plan to STEYER, not Becerra. Multiple WebFetch passes of becerra2026.com/priorities/housing/ and /economy-and-affordability/ found zero Prop 13 / commercial / industrial / property-tax language. KQED's 2026-04-14 tax-comparison story (the canonical 2026-race tax overview) and LAist's parallel piece do not mention Becerra in the commercial-property-tax section at all. The Mission Local recap of the Ezra Klein housing forum (2026-05-08) reports Becerra blamed Trump tariffs and red tape for construction costs, not Prop 13. As AG (2019-2020) Becerra wrote the Prop 15 ballot title — opponents (HJTA) sued, accusing him of biased pro-split-roll wording, but the court ruled the title was not misleading; the wording role is statutorily assigned to the AG's office and not a personal endorsement of split-roll. Without a 2026 campaign statement, the responsible code is 'unknown'. Confidence: insufficient_data."
     },
     {
       "candidate_id": "porter",
       "issue_id": "prop13_commercial",
       "stance": "unknown",
-      "summary": "Has built her tax platform around eliminating state income tax for households under $100k and raising the state corporate income tax rate — not around commercial property tax. Has not publicly taken a position on commercial Prop 13 / split-roll in the 2026 race.",
+      "summary": "Has not publicly taken a 2026 position on commercial Prop 13 / split-roll. Her tax plan is built around eliminating state income tax for households under $100k and raising the state corporate income tax from a flat 8.84% to a progressive scale topping out at 9.75% — explicitly different levers than commercial property tax.",
       "source_quote": "",
       "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
-      "source_date": "2026-05-01",
+      "source_date": "2026-05-13",
       "confidence": "insufficient_data",
       "secondary_sources": [
+        "https://katieporter.com/priority/lowering-housing-costs/",
         "https://www.kqed.org/news/12078450/katie-porters-run-for-governor-centers-tax-cuts-corporate-accountability",
-        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://www.pbs.org/video/katie-porter-on-her-plan-to-cut-taxes-and-take-on-corporations-v6nbem/",
+        "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html"
       ],
-      "notes": "Porter's published tax plan targets the corporate income tax (raising it from a flat 8.84% up to 9.75% on the highest-earning corporations) and the state personal income tax — explicitly different levers than commercial property tax. Her priorities page, KQED's profile (2026-04-02), and KQED's tax comparison (2026-04-14) do not contain any Porter statement on Prop 13 or split-roll. As a former consumer-finance professor with a populist anti-corporate brand, she might be sympathetic to split-roll, but inferring is not appropriate given the post-Prop-15 political risk and her deliberate silence on the issue."
+      "notes": "Both of Porter's tax-relevant priority pages (Fighting Income Inequality, Lowering Housing Costs) describe only the corporate income tax and personal income tax — no Prop 13, no commercial property tax, no split-roll language. KQED's 2026-04-09 Political Breakdown episode and KQED's 2026-04-14 candidate tax-comparison piece confirm her platform stops at corporate income tax. The SF Examiner story on Steyer's 2027 special-election split-roll plan (the canonical 'who-supports-split-roll-in-the-2026-race' inventory) names only Betty Yee as a Democratic rival of Steyer's expressing support 'in concept,' and reports Mahan and Villaraigosa as opposed; Porter is conspicuously absent from both lists. Given the political toxicity of split-roll after Prop 15's 2020 defeat and Porter's deliberately moderate-tax messaging (income-tax cut for the middle class), her silence reads as a deliberate non-endorsement rather than a mere oversight. Coding 'unknown' is the responsible call; if forced to guess, a 2 (hold) is more likely than a 4-5 given her platform's structure, but inferring without a quote is inappropriate. Confidence: insufficient_data."
     },
     {
       "candidate_id": "mahan",
@@ -2445,18 +2453,20 @@
     {
       "candidate_id": "thurmond",
       "issue_id": "prop13_commercial",
-      "stance": "unknown",
-      "summary": "Has staked out the progressive flank of the Democratic primary on taxes, supporting a one-time 5% billionaire wealth tax and a state inheritance tax — but has not publicly taken a position on commercial Prop 13 / split-roll.",
-      "source_quote": "",
-      "source_url": "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
-      "source_date": "2026-04-14",
-      "confidence": "insufficient_data",
+      "stance": 5,
+      "summary": "Explicitly supports closing Prop 13 'loopholes for corporations' while protecting homeowners, seniors, and small businesses — a clear commercial split-roll position. Reinforces his 2020 endorsement of Proposition 15 (the failed commercial split-roll initiative), which he supported as Superintendent of Public Instruction alongside Sen. Kamala Harris as the only statewide officials backing it.",
+      "source_quote": "I think we tax billionaires and closed loopholes for corporations like in Prop 13. That won't mean any new taxes for seniors or for homeowners, or for small businesses.",
+      "source_url": "https://www.pbs.org/video/tony-thurmond-makes-his-case-for-governor-of-california-political-breakdown-zi6asl/",
+      "source_date": "2026-03-26",
+      "confidence": "high",
       "secondary_sources": [
-        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
-        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
-        "https://eurweb.com/tony-thurmond-california-governor-2026/"
+        "https://www.kqed.org/news/12077118/tony-thurmond-carves-out-a-progressive-path-in-the-race-for-california-governor",
+        "https://billionairetaxnow.org/california-gubernatorial-candidate-tony-thurmond-endorses-california-billionaire-tax/",
+        "https://ballotpedia.org/2020_California_Proposition_15",
+        "https://en.wikipedia.org/wiki/2020_California_Proposition_15",
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/"
       ],
-      "notes": "Thurmond's published tax positions (billionaire wealth tax, inheritance tax, working/middle-class tax credits) are progressive but conspicuously sidestep commercial property tax. As Superintendent of Public Instruction with strong CTA ties — and CTA was a major Prop 15 backer in 2020 — one might predict sympathy for split-roll, but he has not said so on the record. Given his progressive tax framing and education-funding focus, his eventual stance is more likely to be 3-5 than 1-2, but inferring without a quote is inappropriate. KQED tax-comparison article confirms he supports the wealth-tax proposal but says nothing about commercial property tax."
+      "notes": "Direct quote from KQED's Political Breakdown podcast/PBS broadcast — interview recorded 2026-03-17, aired on PBS 2026-03-26. The quote pairs closing 'loopholes for corporations like in Prop 13' with an explicit carve-out for seniors, homeowners, and small businesses — which is precisely the structure of a commercial split-roll (Prop 15 was titled to leave residential and small commercial alone). Coupled with his 2020 Prop 15 endorsement (he was one of only two statewide officials backing it; the other was then-Senator Harris), this is the most overtly pro-split-roll position of any 2026 gubernatorial candidate after Steyer. Coding 5 (full commercial split-roll — tax commercial at market value) rather than 4 (phased) because (a) the rhetoric is unhedged ('close the loophole') rather than incremental, (b) his 2020 endorsement was for a non-phased measure that reassessed all qualifying commercial/industrial at market value with a small-business carve-out, and (c) no public statement suggests he favors a more gradual approach. The boundary between 4 and 5 is admittedly narrow here — Steyer's centerpiece special-election proposal is coded 5 and Thurmond's rhetoric matches Steyer's, so consistency favors 5. Confidence: high (verbatim quote, primary source, dated, and consistent with prior endorsement record)."
     },
     {
       "candidate_id": "hilton",
@@ -2506,32 +2516,43 @@
     {
       "candidate_id": "becerra",
       "issue_id": "prop13_residential",
-      "stance": 2,
-      "summary": "Becerra's published 2026 housing plan pairs a million-homes target with a revenue plan to end Prop 13 protections for INDUSTRIAL AND COMMERCIAL property — explicitly carving out residential. As California AG (2019-20) he wrote the ballot title for Prop 15, which targeted only commercial/industrial property. On residential Prop 13 specifically, his stance is hold.",
-      "source_quote": "Xavier Becerra is more balanced/institutional... his plan to build a million new homes in four years is paired with a revenue plan of ending Proposition 13 protections for industrial and commercial property to raise revenues and reduce cities' dependence on developer fees that drive up housing costs.",
-      "source_url": "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
-      "source_date": "2026-05-12",
-      "confidence": "medium",
+      "stance": "unknown",
+      "summary": "Has not publicly taken a 2026 position on residential Proposition 13. His campaign housing plan and economy/affordability plan make no mention of Prop 13, residential property tax, or any inheritance/transfer-rule reform. As CA Attorney General he wrote the official Prop 15 (2020) ballot title and summary, but that role was procedural and not a personal endorsement; Prop 15 in any case targeted only commercial/industrial property and would not have changed residential rules.",
+      "source_quote": "",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/housing/",
+      "source_date": "2026-05-13",
+      "confidence": "insufficient_data",
       "secondary_sources": [
-        "https://www.politifact.com/factchecks/2020/jan/24/facebook-posts/no-californians-arent-being-asked-repeal-prop-13s-/",
-        "https://www.capradio.org/articles/2019/11/12/opponents-of-split-roll-property-tax-ballot-measure-accuse-california-attorney-general-of-rigging-the-system/"
+        "https://www.xavierbecerra2026.com/priorities/economy-and-affordability/",
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes"
       ],
-      "notes": "Like Steyer, Becerra would score stance 5 on a COMMERCIAL Prop 13 question but is stance 2 on the residential question — his split-roll position by definition leaves residential homeowner protections untouched. Confidence is medium rather than high because his current campaign site (xavierbecerra2026.com) does not mention Prop 13 explicitly; the residential carve-out is documented via the CA YIMBY summary of his housing plan and his AG-era handling of Prop 15."
+      "notes": "CORRECTION: this entry overrides a previous coding of stance 2 that relied on a misattributed quote from the California YIMBY blog (cayimby.org, 2026-05-12). On verification, the blog's 'million homes paired with a revenue plan of ending Proposition 13 protections for industrial and commercial property' framing actually appears in the Tom Steyer section of the post, not the Becerra section — the Becerra section only mentions his AG-era housing-law enforcement, the Coastal Commission directive, the 90-day permit rule, and an insurance-rate freeze. Becerra's own campaign pages on housing and economy/affordability contain zero Prop 13 / property-tax language. KQED's 2026-04-14 tax-comparison piece and LAist's parallel piece do not attribute any Prop 13 position to him either. Without a 2026 statement, the responsible code is 'unknown' / insufficient_data, matching the prop13_commercial coding for Becerra. Adjacent values considered: stance 2 (hold) remains the field-consensus soft inference, but the previous stance-2 coding cited evidence that does not exist as written, so the honest call is to downgrade rather than substitute new inference for the missing quote."
     },
     {
       "candidate_id": "porter",
       "issue_id": "prop13_residential",
       "stance": "unknown",
-      "summary": "Porter has not staked out a public position on Prop 13 in her 2026 campaign. Her tax pitch centers on eliminating state income tax for families under $100,000, paid for by raising the corporate tax rate — neither her campaign site nor reporting from KQED, LAist, CalMatters, or the May 2026 candidate forums document a stance on residential or commercial Prop 13.",
-      "source_quote": "My promise as Governor is to stand up to Donald Trump and to fight for Californians – not big corporations or special interests.",
-      "source_url": "https://katieporter.com/priorities/",
-      "source_date": "2026-05-12",
+      "summary": "Porter has not published a position on residential Proposition 13. Her gubernatorial tax platform is built entirely around income tax (eliminating it for households under $100,000) and a progressive corporate tax (replacing the flat 8.84% rate with a graduated structure topping out near 9.75%), and she has been conspicuously silent on Prop 13, residential property tax, split-roll, and Prop 19 transfer/inheritance reform across her campaign site, 2026 debate appearances, KQED town hall, and major media coverage. Soft inference from the field consensus (every other surveyed Democrat lands at stance 2, hold residential protections) and from her income/corporate-tax revenue focus would point to stance 2, but she has not personally endorsed even that posture in any sourced statement.",
+      "source_quote": "California's economy is the 4th largest in the world. Yet our tax structure treats a local small business turning a single dollar in profit the same as a global corporation that brings in billions in profits. We have a flat corporate tax, and that must change. As Governor, I will launch a Progressive Corporate Tax.",
+      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
+      "source_date": "2026-05-13",
       "confidence": "insufficient_data",
       "secondary_sources": [
+        "https://katieporter.com/priorities/",
+        "https://katieporter.com/priority/lowering-housing-costs/",
         "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
-        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/"
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://calmatters.org/politics/2026/05/california-governor-housing-2026-yimby/",
+        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/",
+        "https://www.cbsnews.com/losangeles/news/top-takeaways-cbs-california-governors-debate/",
+        "https://calmatters.org/politics/2026/04/governor-race-primary-debate/",
+        "https://www.kqed.org/news/12082619/gubernatorial-candidate-katie-porter-fields-questions-on-housing-gas-prices-ai-agenda-at-kqed-town-hall",
+        "https://www.kqed.org/news/12082915/heres-how-the-candidates-for-governor-would-make-california-more-affordable"
       ],
-      "notes": "Multiple tax-focused articles (KQED, LAist, CalMatters) cover Porter's income-tax and corporate-tax proposals in detail but do not record any statement from her about Prop 13 — residential or commercial. The Real Deal's 2026-05-12 housing debate writeup also did not surface a Porter Prop 13 quote. Source quote is a generic platform line and is included only as a working URL anchor; it does not support a substantive stance. Honest classification: unknown."
+      "notes": "The source_quote above is from Porter's own tax-platform page and is used because the verifiable, citable fact is the documented absence of a Prop 13 / property-tax mechanism in her revenue plan — her stated revenue source is the progressive corporate tax, not property-tax reform. This contrasts directly with Steyer (commercial split-roll, stance 2 residential but 5 commercial) and Thurmond (explicit homeowner/senior wall against any Prop 13 change). Porter's silence is notable precisely because the housing-cost framing she leads with — a single mom whose teenagers won't be able to buy houses in California — is the exact emotional terrain where a reform-leaning candidate (Prop 19 inheritance-loophole closure, transfer-rule tweaks at stance 3) might plant a flag, and she has not done so. Considered and ruled out as evidence: (a) iSideWith-style aggregators are not primary sources and were not citable; (b) her 2020 House-incumbent endorsement record on Prop 15 did not surface in Ballotpedia search returns I could verify; (c) her House voting record (2019–2024) is federal and would not directly resolve a California Prop 13 stance even if a related vote surfaced. Honest finding: insufficient data. Adjacent values considered: stance 2 (hold) is the most likely soft inference given field consensus and her revenue strategy not touching residential property tax, but it requires an inference rather than a quote; stance 1 (strengthen) is unlikely given she has not aligned rhetorically with Howard Jarvis-style tax-defense politics; stances 3–5 (any residential reform) are unlikely given she has had multiple debate and platform opportunities to plant such a flag and has not."
     },
     {
       "candidate_id": "mahan",
@@ -3838,17 +3859,24 @@
       "candidate_id": "thurmond",
       "issue_id": "nuclear",
       "stance": "unknown",
-      "summary": "Thurmond has no findable public position on nuclear power, Diablo Canyon, SMRs, or California's 1976 nuclear moratorium. His campaign priorities page, his Oakland Voices interview, the Legal Planet climate forum recap, and major debate coverage all touch on climate and 'clean energy jobs' generically without naming nuclear in any direction. He skipped the in-person Legal Planet climate forum (submitted video instead). As a progressive aligned with Sierra Club / EnviroVoters' historical opposition camp, his prior is mild anti-nuclear, but he has not voiced it publicly in this race.",
-      "source_quote": "We have to build, build, build. We can create clean energy jobs and protect communities at the same time.",
-      "source_url": "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
-      "source_date": "2026-04-24",
+      "summary": "Thurmond has not publicly addressed California nuclear power, Diablo Canyon extension, or small modular reactors in his 2026 gubernatorial campaign. His campaign site is silent on nuclear, he was not on the Pomona debate exchange about Diablo Canyon, and his Assembly record (2014–2018, 100% EnviroVoters lifetime score) shows strong pro-renewables votes (SB 100, SB 64) but no documented public position on Diablo Canyon. The strongest inference available — a perfect environmental scorecard and rhetoric centered on 'clean energy jobs' rather than 'all of the above' — is suggestive of a renewables-first orientation closer to Porter or Steyer than to Villaraigosa or Hilton, but this is inference, not citation, and the issue scale requires direct evidence to assign a value.",
+      "source_quote": null,
+      "source_url": "https://www.tonythurmond.com/priorities",
+      "source_date": "2026-05-13",
       "confidence": "insufficient_data",
       "secondary_sources": [
-        "https://www.tonythurmond.com/priorities",
-        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/",
-        "https://envirovoters.org/california-governor-2026/"
+        "https://www.tonythurmond.com/in-the-news",
+        "https://www.tonythurmond.com/accomplishments",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://calmatters.org/politics/2026/04/governor-race-primary-debate/",
+        "https://www.cnn.com/2026/04/28/politics/california-governor-candidates-debate-takeaways",
+        "https://envirovoters.org/archives/scorecard/2018/assembly/thurmond/index.html",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://climatevote.org/candidates"
       ],
-      "notes": "Stance 'unknown' is correct here per the brief's instruction to expect 2-4 unknowns. The quoted 'build, build, build' clean-energy line is the closest he has come to an energy-mix statement and is deliberately non-specific. The Paris-Ortiz-Wines recap of the Pomona debate said 'ALL candidates' backed extending Diablo, which would include Thurmond, but I could not find a sourceable Thurmond-specific quote on that question. If forced to guess: probably stance 3 (extend Diablo, no new nuclear) — but per the brief, 'unknown' with insufficient_data is the correct coding rather than speculation."
+      "notes": "Why 'unknown' rather than a low-confidence value of 3 or 4: every other candidate in the peer set has at least one direct quote or campaign-site statement on nuclear (Hilton's reactor expansion plank, Villaraigosa's 'small nuclear' line, Becerra/Mahan's 'keep it open' / 'yes if safe' debate answers, Porter's recorded shift, Steyer's debate extension answer, Bianco's campaign-page nuclear plank). For Thurmond there is no such source — his campaign deliberately leans housing and education and the energy debate questions appear to have either skipped him or been answered without nuclear specifics. Inferring from a renewables-heavy voting record and a 'clean energy jobs' frame would put him most plausibly at 3 (status quo: keep Diablo through current 2030 license, don't expand) or 4 (wind down on schedule, renewables-only future), but this would be analyst inference rather than a citation, which the dataset rules forbid. Sourcing gaps: (1) no Thurmond response located on climatevote.org / EnviroVoters video submissions — those may exist behind a forum recording I couldn't access; (2) SB 1090 individual roll call not retrieved, though the 67-1 Assembly margin implies he voted aye on the community-impact settlement; (3) his actual Pomona debate transcript was not located in text form. If any of those surface a direct nuclear statement, this position should be re-resolved before launch."
     },
     {
       "candidate_id": "hilton",
@@ -4096,17 +4124,30 @@
       "candidate_id": "thurmond",
       "issue_id": "water_allocations",
       "stance": "unknown",
-      "summary": "Thurmond's campaign site and priorities pages do not address water allocations. He did not attend the April 2026 Fresno State ag-forum where most rivals staked positions, and his recent interviews have focused on education, housing, and a billionaire wealth tax. A Bay Area progressive profile and his climate-forum participation suggest he would likely lean stance 4 (environmental flows / urban first), but absent any direct statement on Bay-Delta flows, voluntary agreements, SGMA, or ag allocations, the position is insufficiently documented to assign.",
-      "source_quote": "(no water-allocation position located across campaign site, recent interviews, or forum recaps)",
-      "source_url": "https://www.tonythurmond.com/",
+      "summary": "Thurmond has not publicly addressed the California water-allocation question (ag-vs-environment, Delta flows, Voluntary Agreements, senior water-rights enforcement) in his 2026 gubernatorial campaign. His campaign priorities page is silent on water; he skipped the Fresno State ag/water forum where peers made on-the-record water-rights statements; he was relegated to the video-submission tier at the EnviroVoters climate forum and his responses are not retrievable in text form; and EnviroVoters declined to endorse him. The only water-adjacent characterization in any source is a third-party paraphrase that he has 'water management plans to eliminate the drought/flood cycle' — storage/management framing that does not take a side on the allocation axis.",
+      "source_quote": null,
+      "source_url": "https://www.tonythurmond.com/priorities",
       "source_date": "2026-05-13",
       "confidence": "insufficient_data",
       "secondary_sources": [
+        "https://www.tonythurmond.com/endorsements",
+        "https://www.tonythurmond.com/in-the-news",
+        "https://voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://www.kqed.org/voterguide/california/governor",
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://www.yahoo.com/news/articles/democratic-governor-candidates-case-fresno-064459486.html",
+        "https://abc30.com/post/democratic-governor-candidates-make-case-fresno-voters-during-forum-city-college/18826585/",
+        "https://www.latinotimes.org/2026/04/in-race-for-california-governor-farmers-and-farmworkers-take-center-stage/",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://envirovoters.org/2026-endorsements/",
+        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/",
         "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
-        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
-        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/"
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://sacculturalhub.com/entertainment/headlines/qa-with-gubernatorial-candidate-tony-thurmond-california-needs-a-governor-who-listens-and-leads/",
+        "https://envirovoters.org/archives/scorecard/2018/assembly/thurmond/index.html"
       ],
-      "notes": "Worth re-checking after any upcoming debate appearances or a Fresno/Central Valley campaign swing. Thurmond's progressive flank position on most other issues makes stance 4 the modal prediction, but without a verbatim quote it would be irresponsible to assign — water-rights politics in California are nuanced enough that progressives sometimes split on flow vs. equity-of-disadvantaged-community framings."
+      "notes": "Why 'unknown' rather than a low-confidence value of 3 or 4: every other candidate in the peer set has a directly citable Delta-flows / farmer water-rights / reservoir-build / Delta tunnel position from campaign sites, debate stages, or Fresno forum coverage (Hilton's full ag-first platform with John Duarte appointment, Bianco's 'man-made drought' framing, Becerra's 'predictability' quote at Fresno, Porter's 'no magic wand' and 'choking off' farming line, Mahan's 'a crime' reservoir framing, Villaraigosa's 'all of the above' / moratorium-on-regs line, Steyer's environment-first inference via EnviroVoters endorsement and skipped Fresno forum). For Thurmond there is no such citable statement. Inferring from his 100% EnviroVoters Assembly scorecard and the absence of any ag-courting in his Central Valley appearances would push toward a 4 (favor urban/environmental with ag concessions), but this would be analyst inference rather than a citation. The Agri-Pulse paraphrase about 'drought/flood cycle' management is consistent with stance 2 or 3 and so cannot resolve the value either. Sourcing gaps: (1) Agri-Pulse Communications article on the Fresno candidate forum returned 403 to this researcher and may contain a directly-attributed Thurmond water quote that would change this resolution; (2) Thurmond's climatevote.org / EnviroVoters video submissions on water and environmental-justice were not located in retrievable text form and likely contain at least a clean-water and EJ statement (though probably on access/contamination rather than on the ag-vs-environment allocation fight); (3) no roll-call retrieval for his Assembly votes on the 2018 water conservation package (AB 1668 / SB 606) or on any 2014–2018 Delta flows bill. If any of those surface a direct allocation-axis statement, this position should be re-resolved before launch."
     },
     {
       "candidate_id": "hilton",
@@ -4221,17 +4262,23 @@
       "candidate_id": "thurmond",
       "issue_id": "water_projects",
       "stance": "unknown",
-      "summary": "No public statement located on the Delta tunnel, Sites Reservoir, dams, or water infrastructure in any of the sources reviewed — his campaign site, his Oakland Voices candidate interview, his Ballotpedia and CalMatters Digital Democracy profiles, and the CalMatters/KQED voter guides. Water has not been part of his early-2026 campaign messaging, which has focused on education, childcare, housing, and a billionaire tax.",
-      "source_quote": "",
-      "source_url": "https://www.tonythurmond.com/",
-      "source_date": "2026-05-13",
+      "summary": "Thurmond has not publicly addressed the Delta Conveyance Project, Sites Reservoir, or any specific water-infrastructure build decision in his 2026 gubernatorial campaign. He skipped the April 2026 Fresno State water/regulations forum (the marquee 2026 venue for candidates to take a Delta-tunnel position), and water/water-infrastructure is absent from his campaign priorities page, in-the-news page, and every long-form 2026 interview located. His only on-record water-related legislative actions, AB 1668 and SB 606 (both 2018, demand-side conservation/management), do not speak to the supply-side capital-project question.",
+      "source_quote": null,
+      "source_url": null,
+      "source_date": null,
       "confidence": "insufficient_data",
       "secondary_sources": [
+        "https://www.tonythurmond.com/priorities",
+        "https://www.tonythurmond.com/in-the-news",
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
         "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/",
         "https://calmatters.org/california-voter-guide-2026/governor/",
-        "https://www.kqed.org/voterguide/california/governor"
+        "https://envirovoters.org/archives/scorecard/2018/assembly/thurmond/index.html"
       ],
-      "notes": "Thurmond is a Richmond / East Bay Democrat with progressive endorsements and a Bay Area regional base that generally opposes the Delta Conveyance Project; the directional prior is tunnel-skeptical (likely 3 or 4). But absent any direct quote, marking unknown is the responsible call. Recommend re-research after the June primary when policy positions typically firm up. Source date is access date."
+      "notes": "No primary-source quote exists in any of the reviewed materials. Thurmond's campaign is education-, housing-, billionaire-tax-, and immigration-focused; water policy has not been part of his message. He was offered a video-response slot at the Feb 2026 'Our Climate Future' climate forum (as a non-top-six polling candidate) but the Legal Planet recap does not include the substance of those responses. Per project rule, do not infer a stance from his progressive label, Sierra Club non-endorsement, or his 2018 conservation votes. Re-research after any 2026 debate or candidate questionnaire (CalMatters, Public Policy Institute of California, ACWA) where he answers a direct Delta-tunnel or Sites question. A reasonable refresh trigger: any post-June primary debate where the field is narrowed and water-infrastructure questions are asked directly."
     },
     {
       "candidate_id": "hilton",
@@ -4657,49 +4704,50 @@
     {
       "candidate_id": "becerra",
       "issue_id": "school_choice",
-      "stance": "unknown",
-      "summary": "Becerra's 2026 campaign site lists no K-12 education priorities at all (priorities are health care, fighting Trump, housing, affordability, energy, disasters, AI, and homelessness). His only material public record on charters is a 2018 Attorney General opinion concluding charter schools are subject to the Brown Act and California Public Records Act — a transparency/oversight posture, not a position on expansion vs. restriction.",
-      "source_quote": "Charter schools and their governing bodies are subject to the Ralph M. Brown Act and the California Public Records Act... the public has a right to expect transparency from charter schools because they are licensed and paid by the state to participate in the core function of educating California's children.",
-      "source_url": "https://oag.ca.gov/system/files/opinions/pdfs/11-201.pdf",
-      "source_date": "2018-12-26",
-      "confidence": "insufficient_data",
+      "stance": 4,
+      "summary": "Becerra's 2026 campaign is silent on K-12 charters and vouchers — education is not among his 8 listed priorities. However his record as California AG (2017-2021) places him on the regulation/skeptic side: he issued a 2018 advisory opinion subjecting charter schools to the Brown Act and Public Records Act (more oversight), and led a multistate lawsuit against Secretary DeVos blocking diversion of pandemic relief funds to private schools.",
+      "source_quote": "Again, and again, the Trump Administration takes action to steal from the poor and give to the rich. Congress set clear parameters on how to spend this money in order to confront the devastating effects of a pandemic on our schools.",
+      "source_url": "https://oag.ca.gov/news/press-releases/attorney-general-becerra-leads-multistate-lawsuit-against-secretary-devos%E2%80%99",
+      "source_date": "2020-07-07",
+      "confidence": "low",
       "secondary_sources": [
-        "https://www.xavierbecerra2026.com/",
         "https://www.kqed.org/news/11715137/california-attorney-general-calls-for-more-charter-school-transparency",
-        "https://edsource.org/2026/california-governors-education-debate/756626"
+        "https://blog.csba.org/ag-advisory-charters/",
+        "https://www.xavierbecerra2026.com/priorities"
       ],
-      "notes": "Coded unknown because his 2026 campaign has not addressed K-12 schools. His AG opinion is consistent with a stance 3-4 leaning (more oversight, not expansion) but is a legal interpretation rather than a policy position. CFA dual-endorsed him with Thurmond, which is a higher-ed signal more than a K-12 one. Without an explicit charter statement, insufficient_data is the honest call."
+      "notes": "Coded 4 (lean toward more oversight, no vouchers) based on AG record, not 2026 campaign statements. His 2018 AG advisory subjecting charters to Brown Act / Public Records Act is widely read as part of the regulation-of-charters wave that produced AB 1505 in California; it is a transparency/oversight stance rather than an explicit cap. His DeVos lawsuit on pandemic funds is unambiguously anti-voucher-style diversion. Could plausibly be coded 3 if reviewer prefers to anchor only to 2026 silence; coded 4 here because the AG record is the only substantive evidence and it points one direction. Confidence is LOW because his 2026 campaign has said nothing about K-12 charters specifically and AG actions on transparency are not the same as opposing charters."
     },
     {
       "candidate_id": "porter",
       "issue_id": "school_choice",
-      "stance": "unknown",
-      "summary": "Porter's 2026 gubernatorial platform addresses higher education (tuition-free state universities) but does not mention charter schools, vouchers, or K-12 school choice. Her House voting record on charter legislation is not prominent, and her education identity is built around being a public-school parent who can't afford private school.",
-      "source_quote": "There is no room in my budget to pay for private school... Knowing that my kids are safe, that they're learning and building good life skills in public school, makes this job possible.",
-      "source_url": "https://katieporter.com/priorities/",
-      "source_date": "2026-05-12",
-      "confidence": "insufficient_data",
+      "stance": 4,
+      "summary": "Porter's 2026 campaign issue page is silent on K-12 charters specifically, but her documented record is firmly anti-voucher and pro-traditional-public-school. She opposed the 2018 Christian Coalition voucher question, has publicly attacked Betsy DeVos's school-choice agenda, and as House Oversight ranking member framed the fix for K-12 as fully funding public schools and paying teachers a living wage rather than alternatives.",
+      "source_quote": "Education Vouchers that Allow Parents to Choose a Public or Private School for their Children. (Opposes)",
+      "source_url": "https://ontheissues.org/CA/Katie_Porter_Education.htm",
+      "source_date": "2018-07-01",
+      "confidence": "medium",
       "secondary_sources": [
-        "https://edsource.org/2026/california-governors-education-debate/756626",
-        "https://calmatters.org/california-voter-guide-2026/governor/"
+        "https://www.isidewith.com/candidates/katie-porter/policies",
+        "https://oversightdemocrats.house.gov/news/press-releases/ranking-member-porters-opening-statement-subcommittee-hearing-k-12-education",
+        "https://katieporter.com/priorities/"
       ],
-      "notes": "Coded unknown. Her public-school-parent identity and CSEA endorsement (classified school employees) during her 2024 Senate run suggest she sits in the union/public-schools coalition (stance 4 likely), but she has not made a charter-policy statement in 2026 and her platform omits K-12 entirely. Insufficient_data is the honest read until she publishes a K-12 plank or is pressed in a debate."
+      "notes": "Coded 4 not 5 because she has no on-record statement calling for a cap or reduction in California charter authorizations; her position is best read as 'oppose vouchers, fund public schools fully' rather than 'shut down charters.' The verbatim primary source quote is from a Christian Coalition voter-guide survey response. The isidewith aggregator records her vouchers position as 'No, we should focus on improving our public schools instead' — same direction. Her 2026 governor priorities page lists only tuition-free college and free childcare; she does not discuss K-12 at all, which is the main sourcing gap."
     },
     {
       "candidate_id": "mahan",
       "issue_id": "school_choice",
-      "stance": "unknown",
-      "summary": "Mahan's 'Back to Basics' education plank focuses on phonics-based reading, high-dosage tutoring, and teacher accountability tied to student outcomes. He has not stated a position on charter expansion or vouchers despite a heavily pro-charter donor coalition (Brin, Lonsdale, Moritz, Tan, Seibel collectively giving millions to his campaign and IE committee).",
-      "source_quote": "[Mahan] calls low test scores 'a five-alarm fire' requiring 'high-dosage tutoring for students who are behind'... rewarding teachers whose students improve academically while providing 'additional coaching and training' for those whose students struggle... ensure districts are accountable for adopting evidence-based literacy curricula.",
-      "source_url": "https://edsource.org/2026/california-governors-education-debate/756626",
+      "stance": 3,
+      "summary": "Mahan's 2026 education platform is built entirely around accountability inside the traditional public-school system — science of reading, high-dosage tutoring, performance-based teacher rewards, unifying the State Board of Education with the Department of Education — and is silent on charter schools, vouchers, and ESAs. As San Jose mayor he has no public charter-authorization record (school districts in San Jose are independent of city government). The absence of any pro-voucher or pro-charter-expansion statement, combined with his framing as a public-school-reform Democrat rather than a school-choice Democrat, supports a neutral stance.",
+      "source_quote": "Implement science of reading and other evidence-based curricular and pedagogical practices. Fund high-dosage tutoring programs that train college students to tutor elementary school children who fall behind in reading and math with an emphasis on 3rd grade reading levels. Reward teachers whose students outperform peer cohorts and mandate coaching/training for teachers whose students consistently underperform peer cohorts.",
+      "source_url": "https://growsf.org/voter-guide/questionnaires/june-2026/matt-mahan/",
       "source_date": "2026-04-01",
-      "confidence": "insufficient_data",
+      "confidence": "low",
       "secondary_sources": [
         "https://www.mahanforcalifornia.com/",
-        "https://localnewsmatters.org/2026/02/14/matt-mahan-billionaire-tech-donors-california-governor/",
-        "https://www.cnn.com/2026/05/03/politics/matt-mahan-california-governor-democrats-gavin-newsom"
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript"
       ],
-      "notes": "Coded unknown because his platform is silent on charters and vouchers despite a donor base (Sergey Brin, Joe Lonsdale, Michael Moritz, Garry Tan, Michael Seibel) historically supportive of charters and ed-reform. His accountability/test-score framing leans pro-reform (stance 2 is the most likely landing spot if pressed), but there is no on-record statement. He has also not visibly contested the recent SJUSD public-school closures that some San José Spotlight commentators tie to charter enrollment growth in San José, which is consistent with at least passive tolerance of charters."
+      "notes": "Coded 3 (neutral on charters, no voucher support) with LOW confidence. Mahan is the most education-engaged of the three (former TFA middle-school English/history teacher; wife runs a high school serving first-gen low-income students) and has the most detailed K-12 platform — yet that platform completely omits charters and vouchers, which is unusual for a tech-moderate Democrat. Reasonable readings could place him at 2 (sympathetic to charters as part of accountability/choice agenda, given his outcomes-focused framing and Silicon Valley tech-donor base) or 3 (genuinely neutral). With no direct quote either way, 3 is the conservative choice. As San Jose mayor he has no charter-authorization vote on record because California city mayors do not authorize charters — school districts and county boards of education do. Date estimated (GrowSF questionnaire window). The San Jose Spotlight piece criticizing Mahan for school closures explicitly notes the mayor lacks legal authority over school board decisions, which is why no charter-renewal record exists for him to cite."
     },
     {
       "candidate_id": "villaraigosa",
@@ -4783,16 +4831,20 @@
       "candidate_id": "becerra",
       "issue_id": "school_funding",
       "stance": "unknown",
-      "summary": "As of mid-May 2026, Becerra's campaign priorities page lists eight issue areas (Health Care, Fighting Donald Trump, Housing, Economy & Affordability, Energy & Utilities, Disaster Preparedness, AI, Homelessness) and K-12 education is not among them. He has historical credit for defending federal pandemic K-12 funds in court as AG and for expanding Head Start teacher pay as HHS Secretary, but no current-cycle K-12 spending level proposal has been published. EdSource's debate writeup explicitly noted his absence from the K-12 funding discussion.",
-      "source_quote": "Education is notably absent from this priorities section. [The eight listed priorities are: Health Care, Fighting Donald Trump, Housing, Economy & Affordability, Energy & Utilities, Disaster Preparedness & Resilience, Artificial Intelligence, Homelessness.]",
-      "source_url": "https://www.xavierbecerra2026.com/priorities/",
-      "source_date": "2026-05-12",
+      "summary": "Becerra has not published a K-12 funding position. His 2026 priorities page lists eight issue areas (health care, fighting Trump, housing, economy & affordability, energy & utilities, disaster preparedness, AI, homelessness) with no education section, and EdSource's April 30, 2026 candidate-by-candidate education-funding comparison attributed no quote or position to him on K-12 funding — an omission a commenter on the article called 'inexcusable.' He may align with the broader Democratic field's pro-funding posture, but he has offered no specific Prop 98, LCFF, teacher-pay, or school-bond commitment that would place him on the 1–5 scale.",
+      "source_quote": "No mention of Xavier Becerra's stances on improving education, but you include the ones from candidates polling in single digits? That's inexcusable.",
+      "source_url": "https://edsource.org/2026/california-governors-education-debate/756626",
+      "source_date": "2026-04-30",
       "confidence": "insufficient_data",
       "secondary_sources": [
-        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://www.xavierbecerra2026.com/priorities/",
+        "https://www.xavierbecerra2026.com/bio/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://laist.com/news/politics/2026-election-california-primary-xavier-becerra-california-governor-transcript",
+        "https://localnewsmatters.org/2026/05/03/california-governor-debate-education-2026/",
         "https://www.calfac.org/cfa-makes-dual-endorsement-for-california-governor/"
       ],
-      "notes": "Marked unknown per the spec when a candidate has not addressed the issue. He has CFA (higher-ed faculty) endorsement, which is suggestive but is about higher ed, not K-12 funding levels. If a K-12 plan drops between now and June, expect a Democratic-baseline stance 4 — but that should be re-researched, not inferred."
+      "notes": "The source_quote above is a reader-comment observation on the EdSource article, not a Becerra statement — used because the verifiable, citable fact here is the documented absence of a Becerra position in the most comprehensive 2026 K-12 funding comparison piece. Primary sources searched and confirmed silent on K-12: (1) https://www.xavierbecerra2026.com/priorities/ — eight issue pages, none on education; (2) https://www.xavierbecerra2026.com/bio/ — no K-12 mention; (3) https://calmatters.org/california-voter-guide-2026/governor/ — lists only climate goals and a utility/insurance-rate freeze as Becerra priorities; (4) https://laist.com/news/politics/2026-election-california-primary-xavier-becerra-california-governor-transcript — Larry Mantle interview covers healthcare, budget, homelessness, gas, immigration, labor, pandemic preparedness, with zero mention of K-12, schools, teachers, Prop 98, LCFF, or school bonds; (5) EdSource's comparison article names Becerra as a top candidate but attributes no K-12 quote or position to him; (6) Local News Matters republication confirms same null result. iSideWith lists charter / voucher / book-ban positions for Becerra but explicitly attributes them to 'voterbase' inference and 'ChatGPT Party Research,' not primary sources, so they are not citable. The California Faculty Association co-endorsement with Thurmond is about higher education / CFA faculty, not K-12. Federal congressional voting on Title I-style funding (1993–2017) did not surface specific evidence in searches and would in any case not directly resolve a California Prop 98 / LCFF stance. Honest finding: insufficient data."
     },
     {
       "candidate_id": "porter",

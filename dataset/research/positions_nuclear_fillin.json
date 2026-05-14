@@ -1,0 +1,30 @@
+{
+  "issue_id": "nuclear",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Thurmond's public record on California nuclear power is essentially silent as of the May 2026 research date. His campaign site (tonythurmond.com, including /priorities, /accomplishments, /in-the-news) makes no mention of nuclear power, Diablo Canyon, SMRs, or even the electricity grid — his energy-adjacent platform is limited to (a) pausing the gas tax and (b) a generic 'clean energy jobs' frame ('We have to build, build, build. We can create clean energy jobs and protect communities at the same time.'). At the April 28, 2026 CBS/Pomona College gubernatorial debate, the reported energy exchanges focused on oil refineries, gas prices, and the gas tax — coverage in CalMatters, CNN, and CBS LA does not record Thurmond addressing Diablo Canyon or nuclear, even though other candidates (Becerra, Mahan, Porter, Bianco) are quoted on Diablo Canyon. Thurmond did not appear in person at the EnviroVoters 'Our Climate Future' forum (Pasadena, Feb 2026) — he was relegated to a video-submission tier reserved for non-top-six candidates — and the climatevote.org candidate response pages have not surfaced his recorded answers in any searchable form. Assembly voting record: Thurmond served 2014–2018 and earned a 100% lifetime score on the California Environmental Scorecard. His 2018 scorecard shows pro-environment votes on SB 100 (100% clean renewable power), SB 64 (reducing emissions from electrical generation), and other climate bills, but does NOT list any Diablo Canyon or nuclear bills. SB 1090 (Diablo Canyon community/worker settlement, 2018) passed the Assembly 67-1, and while Thurmond was a sitting Assemblymember at the time and presumably voted aye like nearly all his colleagues, I was unable to retrieve the individual roll call to confirm his vote — and that bill was about community mitigation during the originally-scheduled 2025 closure, not about extending the plant, so it would be only weak evidence even if confirmed. Searched: tonythurmond.com (priorities, in-the-news, accomplishments, home), CalMatters voter guide and Pomona debate coverage, CNN debate takeaways, CapRadio Insight interview (May 7 2026), Oakland Voices interview (April 24 2026), EURweb Q&A, SF Examiner profile, EnviroVoters 2018 scorecard, EnviroVoters 2026 forum page, Legal Planet climate forum recap, Climate One profile, climatevote.org, leginfo.ca.gov SB 1090, CalMatters Digital Democracy, Vote Smart key votes. No primary or secondary source surfaces a Thurmond quote on Diablo Canyon extension, new fission, or SMRs. Given the explicit instruction that 'It is fine and important to return unknown if the public record really is silent,' this is the responsible call.",
+  "positions": [
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "nuclear",
+      "stance": "unknown",
+      "summary": "Thurmond has not publicly addressed California nuclear power, Diablo Canyon extension, or small modular reactors in his 2026 gubernatorial campaign. His campaign site is silent on nuclear, he was not on the Pomona debate exchange about Diablo Canyon, and his Assembly record (2014–2018, 100% EnviroVoters lifetime score) shows strong pro-renewables votes (SB 100, SB 64) but no documented public position on Diablo Canyon. The strongest inference available — a perfect environmental scorecard and rhetoric centered on 'clean energy jobs' rather than 'all of the above' — is suggestive of a renewables-first orientation closer to Porter or Steyer than to Villaraigosa or Hilton, but this is inference, not citation, and the issue scale requires direct evidence to assign a value.",
+      "source_quote": null,
+      "source_url": "https://www.tonythurmond.com/priorities",
+      "source_date": "2026-05-13",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.tonythurmond.com/in-the-news",
+        "https://www.tonythurmond.com/accomplishments",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://calmatters.org/politics/2026/04/governor-race-primary-debate/",
+        "https://www.cnn.com/2026/04/28/politics/california-governor-candidates-debate-takeaways",
+        "https://envirovoters.org/archives/scorecard/2018/assembly/thurmond/index.html",
+        "https://envirovoters.org/california-governor-2026/",
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://climatevote.org/candidates"
+      ],
+      "notes": "Why 'unknown' rather than a low-confidence value of 3 or 4: every other candidate in the peer set has at least one direct quote or campaign-site statement on nuclear (Hilton's reactor expansion plank, Villaraigosa's 'small nuclear' line, Becerra/Mahan's 'keep it open' / 'yes if safe' debate answers, Porter's recorded shift, Steyer's debate extension answer, Bianco's campaign-page nuclear plank). For Thurmond there is no such source — his campaign deliberately leans housing and education and the energy debate questions appear to have either skipped him or been answered without nuclear specifics. Inferring from a renewables-heavy voting record and a 'clean energy jobs' frame would put him most plausibly at 3 (status quo: keep Diablo through current 2030 license, don't expand) or 4 (wind down on schedule, renewables-only future), but this would be analyst inference rather than a citation, which the dataset rules forbid. Sourcing gaps: (1) no Thurmond response located on climatevote.org / EnviroVoters video submissions — those may exist behind a forum recording I couldn't access; (2) SB 1090 individual roll call not retrieved, though the 67-1 Assembly margin implies he voted aye on the community-impact settlement; (3) his actual Pomona debate transcript was not located in text form. If any of those surface a direct nuclear statement, this position should be re-resolved before launch."
+    }
+  ]
+}

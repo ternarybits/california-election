@@ -1,0 +1,55 @@
+{
+  "issue_id": "school_choice",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Filling Becerra, Porter, and Mahan stances on school_choice (scale: 1=robust school choice incl. vouchers/ESAs; 3=neutral on charters, oppose vouchers; 5=cap or reduce charter authorization, no vouchers). None of these three has the CTA endorsement (CTA endorsed Steyer on 2026-04-15). All three Democrats are silent on charters in their 2026 campaign issue pages, which is itself informative — none is making charter expansion a campaign theme, and none is making a charter cap a campaign theme either. On the voucher/ESA half of the question, Porter has the cleanest documented opposition (Christian Coalition survey + her DeVos-era oversight statements). Becerra has a strong anti-voucher record from his AG tenure (multistate DeVos lawsuit on pandemic relief diversion to private schools). Mahan's 2026 platform is silent on both charters and vouchers despite being the most education-focused of the three; absent any record of him voting on or championing charter expansion as San Jose mayor, and given he runs as a 'fix public schools through accountability' moderate Democrat rather than a school-choice Democrat, we code him at 3 (neutral on charters, no public voucher support) with low confidence. Mahan's wife runs a public high school, and his campaign platform focuses on accountability/phonics/tutoring inside the public system — not vouchers or ESAs.",
+  "positions": [
+    {
+      "candidate_id": "becerra",
+      "issue_id": "school_choice",
+      "stance": 4,
+      "summary": "Becerra's 2026 campaign is silent on K-12 charters and vouchers — education is not among his 8 listed priorities. However his record as California AG (2017-2021) places him on the regulation/skeptic side: he issued a 2018 advisory opinion subjecting charter schools to the Brown Act and Public Records Act (more oversight), and led a multistate lawsuit against Secretary DeVos blocking diversion of pandemic relief funds to private schools.",
+      "source_quote": "Again, and again, the Trump Administration takes action to steal from the poor and give to the rich. Congress set clear parameters on how to spend this money in order to confront the devastating effects of a pandemic on our schools.",
+      "source_url": "https://oag.ca.gov/news/press-releases/attorney-general-becerra-leads-multistate-lawsuit-against-secretary-devos%E2%80%99",
+      "source_date": "2020-07-07",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.kqed.org/news/11715137/california-attorney-general-calls-for-more-charter-school-transparency",
+        "https://blog.csba.org/ag-advisory-charters/",
+        "https://www.xavierbecerra2026.com/priorities"
+      ],
+      "notes": "Coded 4 (lean toward more oversight, no vouchers) based on AG record, not 2026 campaign statements. His 2018 AG advisory subjecting charters to Brown Act / Public Records Act is widely read as part of the regulation-of-charters wave that produced AB 1505 in California; it is a transparency/oversight stance rather than an explicit cap. His DeVos lawsuit on pandemic funds is unambiguously anti-voucher-style diversion. Could plausibly be coded 3 if reviewer prefers to anchor only to 2026 silence; coded 4 here because the AG record is the only substantive evidence and it points one direction. Confidence is LOW because his 2026 campaign has said nothing about K-12 charters specifically and AG actions on transparency are not the same as opposing charters."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "school_choice",
+      "stance": 4,
+      "summary": "Porter's 2026 campaign issue page is silent on K-12 charters specifically, but her documented record is firmly anti-voucher and pro-traditional-public-school. She opposed the 2018 Christian Coalition voucher question, has publicly attacked Betsy DeVos's school-choice agenda, and as House Oversight ranking member framed the fix for K-12 as fully funding public schools and paying teachers a living wage rather than alternatives.",
+      "source_quote": "Education Vouchers that Allow Parents to Choose a Public or Private School for their Children. (Opposes)",
+      "source_url": "https://ontheissues.org/CA/Katie_Porter_Education.htm",
+      "source_date": "2018-07-01",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://www.isidewith.com/candidates/katie-porter/policies",
+        "https://oversightdemocrats.house.gov/news/press-releases/ranking-member-porters-opening-statement-subcommittee-hearing-k-12-education",
+        "https://katieporter.com/priorities/"
+      ],
+      "notes": "Coded 4 not 5 because she has no on-record statement calling for a cap or reduction in California charter authorizations; her position is best read as 'oppose vouchers, fund public schools fully' rather than 'shut down charters.' The verbatim primary source quote is from a Christian Coalition voter-guide survey response. The isidewith aggregator records her vouchers position as 'No, we should focus on improving our public schools instead' — same direction. Her 2026 governor priorities page lists only tuition-free college and free childcare; she does not discuss K-12 at all, which is the main sourcing gap."
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "school_choice",
+      "stance": 3,
+      "summary": "Mahan's 2026 education platform is built entirely around accountability inside the traditional public-school system — science of reading, high-dosage tutoring, performance-based teacher rewards, unifying the State Board of Education with the Department of Education — and is silent on charter schools, vouchers, and ESAs. As San Jose mayor he has no public charter-authorization record (school districts in San Jose are independent of city government). The absence of any pro-voucher or pro-charter-expansion statement, combined with his framing as a public-school-reform Democrat rather than a school-choice Democrat, supports a neutral stance.",
+      "source_quote": "Implement science of reading and other evidence-based curricular and pedagogical practices. Fund high-dosage tutoring programs that train college students to tutor elementary school children who fall behind in reading and math with an emphasis on 3rd grade reading levels. Reward teachers whose students outperform peer cohorts and mandate coaching/training for teachers whose students consistently underperform peer cohorts.",
+      "source_url": "https://growsf.org/voter-guide/questionnaires/june-2026/matt-mahan/",
+      "source_date": "2026-04-01",
+      "confidence": "low",
+      "secondary_sources": [
+        "https://www.mahanforcalifornia.com/",
+        "https://edsource.org/2026/california-governors-education-debate/756626",
+        "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript"
+      ],
+      "notes": "Coded 3 (neutral on charters, no voucher support) with LOW confidence. Mahan is the most education-engaged of the three (former TFA middle-school English/history teacher; wife runs a high school serving first-gen low-income students) and has the most detailed K-12 platform — yet that platform completely omits charters and vouchers, which is unusual for a tech-moderate Democrat. Reasonable readings could place him at 2 (sympathetic to charters as part of accountability/choice agenda, given his outcomes-focused framing and Silicon Valley tech-donor base) or 3 (genuinely neutral). With no direct quote either way, 3 is the conservative choice. As San Jose mayor he has no charter-authorization vote on record because California city mayors do not authorize charters — school districts and county boards of education do. Date estimated (GrowSF questionnaire window). The San Jose Spotlight piece criticizing Mahan for school closures explicitly notes the mayor lacks legal authority over school board decisions, which is why no charter-renewal record exists for him to cite."
+    }
+  ]
+}

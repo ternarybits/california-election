@@ -1,0 +1,29 @@
+{
+  "issue_id": "water_projects",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Searched Thurmond's official campaign site (priorities, in-the-news, endorsements pages), CalMatters and KQED 2026 voter guides, GV Wire coverage of the April 1, 2026 Fresno State water forum, the April 24 2026 Oakland Voices long-form interview, the May 7 2026 American Community Media / Precinct Reporter 'progressive flank' Q&A, the May 7-8 2026 SF Chronicle, San Diego City Times and Spectrum News interviews, the EURweb Q&A, Legal Planet's writeup of the 'Our Climate Future' candidate forum, the May 5 2026 California Politics 360 sit-down, and his 2018 California Environmental Scorecard. None of these sources contain a Thurmond statement on the Delta Conveyance Project, Sites Reservoir, stormwater capture, groundwater recharge, or desalination. Thurmond skipped the April 1 2026 Fresno State water/regulations forum (he attended a separate UC Merced Community and Labor Center forum at Fresno City College that same evening, where per GV Wire he 'leaned into economic and housing issues'). The Sierra Club's California state PAC endorsed Tom Steyer, not Thurmond, and no Restore the Delta, CalTrout, or Pacific Coalition endorsement of Thurmond surfaced. His 2018 Assembly water votes (AB 1668 water-management planning, SB 606 drought-adaptation/conservation planning) signal a conservation lean but speak to demand-side management, not the build-versus-don't-build debate over the Delta tunnel or Sites Reservoir. Per project rules ('don't fabricate by extrapolating from he's a progressive'), coded as unknown.",
+  "positions": [
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "water_projects",
+      "stance": "unknown",
+      "summary": "Thurmond has not publicly addressed the Delta Conveyance Project, Sites Reservoir, or any specific water-infrastructure build decision in his 2026 gubernatorial campaign. He skipped the April 2026 Fresno State water/regulations forum (the marquee 2026 venue for candidates to take a Delta-tunnel position), and water/water-infrastructure is absent from his campaign priorities page, in-the-news page, and every long-form 2026 interview located. His only on-record water-related legislative actions, AB 1668 and SB 606 (both 2018, demand-side conservation/management), do not speak to the supply-side capital-project question.",
+      "source_quote": null,
+      "source_url": null,
+      "source_date": null,
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.tonythurmond.com/priorities",
+        "https://www.tonythurmond.com/in-the-news",
+        "https://gvwire.com/2026/04/01/california-governor-candidates-talk-water-regulations-at-fresno-state-forum/",
+        "https://oaklandvoices.us/2026/04/24/interview-tony-thurmond-candidate-california-governor/",
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/",
+        "https://eurweb.com/tony-thurmond-california-governor-2026/",
+        "https://legal-planet.org/2026/02/18/recapping-our-climate-future-a-california-gubernatorial-candidate-forum/",
+        "https://calmatters.org/california-voter-guide-2026/governor/",
+        "https://envirovoters.org/archives/scorecard/2018/assembly/thurmond/index.html"
+      ],
+      "notes": "No primary-source quote exists in any of the reviewed materials. Thurmond's campaign is education-, housing-, billionaire-tax-, and immigration-focused; water policy has not been part of his message. He was offered a video-response slot at the Feb 2026 'Our Climate Future' climate forum (as a non-top-six polling candidate) but the Legal Planet recap does not include the substance of those responses. Per project rule, do not infer a stance from his progressive label, Sierra Club non-endorsement, or his 2018 conservation votes. Re-research after any 2026 debate or candidate questionnaire (CalMatters, Public Policy Institute of California, ACWA) where he answers a direct Delta-tunnel or Sites question. A reasonable refresh trigger: any post-June primary debate where the field is narrowed and water-infrastructure questions are asked directly."
+    }
+  ]
+}

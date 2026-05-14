@@ -1,0 +1,63 @@
+{
+  "issue_id": "prop13_commercial",
+  "researched_on": "2026-05-13",
+  "researcher_notes": "Triangulated three sources per candidate: (a) campaign website primary, (b) tier-2 reporting (KQED, LAist, CalMatters, SF Examiner, Mission Local, Terner Center), (c) candidate-issued long-form interviews (PBS Political Breakdown). Key surprise: the context bundle's peer_stances note for Becerra claims his 2026 housing plan calls for ending Prop 13 protections for industrial/commercial property. On verification, the California YIMBY blog post that is the apparent source of that claim (cayimby.org, 2026-05-12) attributes the 'pair-million-homes-with-ending-Prop-13-for-industrial-commercial' revenue plan to STEYER, not Becerra. Becerra's own campaign housing page contains no Prop 13 / commercial / industrial / property-tax language at all, and no other tier-2 outlet (KQED tax comparison 2026-04-14, LAist tax comparison, CalMatters voter guide, Mission Local Ezra Klein forum recap, Real Deal housing-debate piece 2026-05-12) reports him taking a 2026 position. Becerra-as-AG wrote the Prop 15 (2020) ballot title, but that is procedural and not a personal endorsement. Marking Becerra unknown rather than coding stance 4-5 on a misattributed citation. Porter: confirmed no commercial split-roll stance in any 2026 source reviewed; her tax platform is built on a progressive corporate income tax and an income-tax cut, not property tax. Thurmond: found a direct verbatim quote on the KQED/PBS Political Breakdown interview (recorded 2026-03-17, aired 2026-03-26) closing 'loopholes for corporations like in Prop 13' — this is a clear pro-commercial-split-roll signal and confirms his 2020 Prop 15 endorsement carries forward.",
+  "positions": [
+    {
+      "candidate_id": "becerra",
+      "issue_id": "prop13_commercial",
+      "stance": "unknown",
+      "summary": "Has not publicly taken a 2026 position on commercial Prop 13 / split-roll. His campaign housing plan and economy/affordability plan make no mention of Prop 13, commercial property tax, or industrial property reassessment. As CA Attorney General he wrote the official Prop 15 (2020) ballot title and summary, but that role was procedural.",
+      "source_quote": "",
+      "source_url": "https://www.xavierbecerra2026.com/priorities/housing/",
+      "source_date": "2026-05-13",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://www.xavierbecerra2026.com/priorities/economy-and-affordability/",
+        "https://cayimby.org/blog/on-the-race-for-california-governor-an-abundance-of-pro-housing-candidates/",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://missionlocal.org/2026/05/california-governor-candidates-housing-abundance/",
+        "https://therealdeal.com/la/2026/05/12/california-governor-candidates-spar-over-housing/"
+      ],
+      "notes": "Important correction to the context-bundle peer note: the California YIMBY blog (2026-05-12) — the only source for the 'million homes + end Prop 13 for industrial/commercial' framing — actually attributes that revenue plan to STEYER, not Becerra. Multiple WebFetch passes of becerra2026.com/priorities/housing/ and /economy-and-affordability/ found zero Prop 13 / commercial / industrial / property-tax language. KQED's 2026-04-14 tax-comparison story (the canonical 2026-race tax overview) and LAist's parallel piece do not mention Becerra in the commercial-property-tax section at all. The Mission Local recap of the Ezra Klein housing forum (2026-05-08) reports Becerra blamed Trump tariffs and red tape for construction costs, not Prop 13. As AG (2019-2020) Becerra wrote the Prop 15 ballot title — opponents (HJTA) sued, accusing him of biased pro-split-roll wording, but the court ruled the title was not misleading; the wording role is statutorily assigned to the AG's office and not a personal endorsement of split-roll. Without a 2026 campaign statement, the responsible code is 'unknown'. Confidence: insufficient_data."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "prop13_commercial",
+      "stance": "unknown",
+      "summary": "Has not publicly taken a 2026 position on commercial Prop 13 / split-roll. Her tax plan is built around eliminating state income tax for households under $100k and raising the state corporate income tax from a flat 8.84% to a progressive scale topping out at 9.75% — explicitly different levers than commercial property tax.",
+      "source_quote": "",
+      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
+      "source_date": "2026-05-13",
+      "confidence": "insufficient_data",
+      "secondary_sources": [
+        "https://katieporter.com/priority/lowering-housing-costs/",
+        "https://www.kqed.org/news/12078450/katie-porters-run-for-governor-centers-tax-cuts-corporate-accountability",
+        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes",
+        "https://www.pbs.org/video/katie-porter-on-her-plan-to-cut-taxes-and-take-on-corporations-v6nbem/",
+        "https://www.sfexaminer.com/news/state/steyer-aims-to-end-prop-13-limits-on-commercial-properties/article_693d7ef8-4db4-41f8-ac0a-c5746270fefa.html"
+      ],
+      "notes": "Both of Porter's tax-relevant priority pages (Fighting Income Inequality, Lowering Housing Costs) describe only the corporate income tax and personal income tax — no Prop 13, no commercial property tax, no split-roll language. KQED's 2026-04-09 Political Breakdown episode and KQED's 2026-04-14 candidate tax-comparison piece confirm her platform stops at corporate income tax. The SF Examiner story on Steyer's 2027 special-election split-roll plan (the canonical 'who-supports-split-roll-in-the-2026-race' inventory) names only Betty Yee as a Democratic rival of Steyer's expressing support 'in concept,' and reports Mahan and Villaraigosa as opposed; Porter is conspicuously absent from both lists. Given the political toxicity of split-roll after Prop 15's 2020 defeat and Porter's deliberately moderate-tax messaging (income-tax cut for the middle class), her silence reads as a deliberate non-endorsement rather than a mere oversight. Coding 'unknown' is the responsible call; if forced to guess, a 2 (hold) is more likely than a 4-5 given her platform's structure, but inferring without a quote is inappropriate. Confidence: insufficient_data."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "prop13_commercial",
+      "stance": 5,
+      "summary": "Explicitly supports closing Prop 13 'loopholes for corporations' while protecting homeowners, seniors, and small businesses — a clear commercial split-roll position. Reinforces his 2020 endorsement of Proposition 15 (the failed commercial split-roll initiative), which he supported as Superintendent of Public Instruction alongside Sen. Kamala Harris as the only statewide officials backing it.",
+      "source_quote": "I think we tax billionaires and closed loopholes for corporations like in Prop 13. That won't mean any new taxes for seniors or for homeowners, or for small businesses.",
+      "source_url": "https://www.pbs.org/video/tony-thurmond-makes-his-case-for-governor-of-california-political-breakdown-zi6asl/",
+      "source_date": "2026-03-26",
+      "confidence": "high",
+      "secondary_sources": [
+        "https://www.kqed.org/news/12077118/tony-thurmond-carves-out-a-progressive-path-in-the-race-for-california-governor",
+        "https://billionairetaxnow.org/california-gubernatorial-candidate-tony-thurmond-endorses-california-billionaire-tax/",
+        "https://ballotpedia.org/2020_California_Proposition_15",
+        "https://en.wikipedia.org/wiki/2020_California_Proposition_15",
+        "https://americancommunitymedia.org/politics/tony-thurmond-stakes-out-progressive-flank-of-california-gubernatorial-race/"
+      ],
+      "notes": "Direct quote from KQED's Political Breakdown podcast/PBS broadcast — interview recorded 2026-03-17, aired on PBS 2026-03-26. The quote pairs closing 'loopholes for corporations like in Prop 13' with an explicit carve-out for seniors, homeowners, and small businesses — which is precisely the structure of a commercial split-roll (Prop 15 was titled to leave residential and small commercial alone). Coupled with his 2020 Prop 15 endorsement (he was one of only two statewide officials backing it; the other was then-Senator Harris), this is the most overtly pro-split-roll position of any 2026 gubernatorial candidate after Steyer. Coding 5 (full commercial split-roll — tax commercial at market value) rather than 4 (phased) because (a) the rhetoric is unhedged ('close the loophole') rather than incremental, (b) his 2020 endorsement was for a non-phased measure that reassessed all qualifying commercial/industrial at market value with a small-business carve-out, and (c) no public statement suggests he favors a more gradual approach. The boundary between 4 and 5 is admittedly narrow here — Steyer's centerpiece special-election proposal is coded 5 and Thurmond's rhetoric matches Steyer's, so consistency favors 5. Confidence: high (verbatim quote, primary source, dated, and consistent with prior endorsement record)."
+    }
+  ]
+}
