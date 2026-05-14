@@ -4909,5 +4909,342 @@
       "notes": "Stance 5 (major new funding via dedicated tax or bond) is unambiguous: Thurmond is publicly tying K-14 funding to a billionaire wealth tax, has an active state-superintendent record of pushing for more than the Governor proposed, and explicitly opposes shifting K-12 governance authority out of the elected SPI office. He is also the most LCFF-fluent voice in the field and the most likely to push for an ADA-to-enrollment funding-base shift."
     }
   ],
-  "questions": []
+  "questions": [
+    {
+      "issue_id": "tax_top_wealth",
+      "rank": 1,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.74,
+        "std": 1.479,
+        "mean": 2.75,
+        "range": 4,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "school_choice",
+      "rank": 2,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.707,
+        "std": 1.414,
+        "mean": 3,
+        "range": 4,
+        "n_distinct": 5,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "housing_supply",
+      "rank": 3,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.704,
+        "std": 1.409,
+        "mean": 2.375,
+        "range": 4,
+        "n_distinct": 5,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "sanctuary",
+      "rank": 4,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.682,
+        "std": 1.364,
+        "mean": 3.125,
+        "range": 4,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "homelessness",
+      "rank": 5,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.634,
+        "std": 1.269,
+        "mean": 2.875,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "gun_policy",
+      "rank": 6,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.634,
+        "std": 1.269,
+        "mean": 3.125,
+        "range": 3,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "natgas_bridge",
+      "rank": 7,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.599,
+        "std": 1.199,
+        "mean": 2.25,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "prop13_commercial",
+      "rank": 8,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.59,
+        "std": 1.572,
+        "mean": 2.833,
+        "range": 4,
+        "n_distinct": 3,
+        "n_resolved": 6,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "healthcare_funding",
+      "rank": 9,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.583,
+        "std": 1.166,
+        "mean": 2.875,
+        "range": 3,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "policing",
+      "rank": 10,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.559,
+        "std": 1.118,
+        "mean": 2.5,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "oil_gas",
+      "rank": 11,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.556,
+        "std": 1.111,
+        "mean": 2.375,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "abortion",
+      "rank": 12,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.527,
+        "std": 1.053,
+        "mean": 3.125,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "school_funding",
+      "rank": 13,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.508,
+        "std": 1.161,
+        "mean": 3.714,
+        "range": 3,
+        "n_distinct": 3,
+        "n_resolved": 7,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "prop36_47",
+      "rank": 14,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.5,
+        "std": 1,
+        "mean": 2.5,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "utility_rates",
+      "rank": 15,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.496,
+        "std": 0.992,
+        "mean": 2.375,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "decarbonization",
+      "rank": 16,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.484,
+        "std": 0.968,
+        "mean": 2.25,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "tax_middle",
+      "rank": 17,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.464,
+        "std": 0.927,
+        "mean": 2.125,
+        "range": 2,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "gas_tax",
+      "rank": 18,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.464,
+        "std": 0.927,
+        "mean": 1.875,
+        "range": 2,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "ceqa",
+      "rank": 19,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.464,
+        "std": 0.927,
+        "mean": 1.875,
+        "range": 3,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "water_allocations",
+      "rank": 20,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.459,
+        "std": 1.05,
+        "mean": 2.429,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 7,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "water_projects",
+      "rank": 21,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.433,
+        "std": 0.99,
+        "mean": 2.143,
+        "range": 3,
+        "n_distinct": 4,
+        "n_resolved": 7,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "fuel_env_rules",
+      "rank": 22,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.39,
+        "std": 0.781,
+        "mean": 2.125,
+        "range": 2,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "nuclear",
+      "rank": 23,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.364,
+        "std": 0.833,
+        "mean": 1.857,
+        "range": 2,
+        "n_distinct": 3,
+        "n_resolved": 7,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "prop13_residential",
+      "rank": 24,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.177,
+        "std": 0.471,
+        "mean": 1.667,
+        "range": 1,
+        "n_distinct": 2,
+        "n_resolved": 6,
+        "n_total": 8
+      }
+    }
+  ]
 }

@@ -6,7 +6,7 @@ A shareable web experience that helps Californians discover which 2026 gubernato
 
 | Surface | Path | Status |
 |---|---|---|
-| Open dataset (v0 scaffold) | [`dataset/dataset_v0.json`](./dataset/dataset_v0.json) | structure only; all stances `unknown` pending Phase 0 research |
+| Open dataset (v0) | [`dataset/dataset_v0.json`](./dataset/dataset_v0.json) | 8 candidates × 24 issues = 192 positions, 184 researched with primary-source quotes (8 honest unknowns); questions ranked by differentiation score |
 | Buildy quiz spike | [`buildy/`](./buildy/) | code written; deploy with `node buildy/deploy.mjs` |
 | MCP server spike | [`mcp/`](./mcp/) | working stdio server, 5 tools (list_candidates / list_issues / get_positions / list_personal_fit_dimensions / get_candidate_bio); `cd mcp && npm install && npm start` |
 
