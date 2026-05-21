@@ -54,14 +54,14 @@ console.log("✓ all 7 expected tools registered");
 
 // 2) get_differentiating_questions — default
 const diff = await callTool("get_differentiating_questions");
-console.log(`\n✓ get_differentiating_questions default returned ${diff.returned} of ${diff.total_issues} issues (expected 15 / 24)`);
-if (diff.returned !== 15 || diff.total_issues !== 24) throw new Error("unexpected counts");
+console.log(`\n✓ get_differentiating_questions default returned ${diff.returned} of ${diff.total_issues} issues (expected 15 / 25)`);
+if (diff.returned !== 15 || diff.total_issues !== 25) throw new Error("unexpected counts");
 console.log(`  top 3: ${diff.questions.slice(0, 3).map((q) => `${q.name} (score ${q.differentiation.score})`).join(" | ")}`);
 
 // 3) get_differentiating_questions — explicit top_n
-const full = await callTool("get_differentiating_questions", { top_n: 24 });
-if (full.returned !== 24) throw new Error("top_n=24 should return all 24");
-console.log(`✓ top_n=24 returned all 24 issues`);
+const full = await callTool("get_differentiating_questions", { top_n: 25 });
+if (full.returned !== 25) throw new Error("top_n=24 should return all 25");
+console.log(`✓ top_n=24 returned all 25 issues`);
 
 // 4) score_user_positions — progressive persona (stance 5 on every default-quiz issue, high importance)
 const progressivePolicy = diff.questions.map((q) => ({

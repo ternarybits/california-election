@@ -7,11 +7,11 @@ A stdio MCP server that exposes the open-sourced candidate × issue dataset to a
 | Tool | Returns |
 |---|---|
 | `list_candidates` | Roster summary (id, name, party, bio_short). Call this first to learn IDs. |
-| `list_issues` | All 24 policy issues with stance scales. |
+| `list_issues` | All 25 policy issues with stance scales. |
 | `get_positions(issue_id)` | Every candidate's stance on one issue with source citation. `confidence: "insufficient_data"` marks honest unknowns. |
 | `list_personal_fit_dimensions` | Non-policy axes (career, demographic, geographic, age, endorsement coalition, etc.). |
 | `get_candidate_bio(candidate_id)` | Bio + personal attributes for one candidate. |
-| `get_differentiating_questions(top_n?)` | Issues ranked by differentiation score — the questions where candidates actually differ. Default top 15 (the default web quiz); max 24 (all issues). Start here if you want the agent to focus on what's decisive. |
+| `get_differentiating_questions(top_n?)` | Issues ranked by differentiation score — the questions where candidates actually differ. Default top 15 (the default web quiz); max 25 (all issues). Start here if you want the agent to focus on what's decisive. |
 | `score_user_positions(policy_answers, personal_fit_answers?)` | Rank candidates against the user's stances. Returns **two separate scores** per candidate (policy match % and personal fit %, never blended) plus the top 3 agreements and disagreements per candidate, weighted by user importance, with verbatim source quotes — so the agent can explain *why* each candidate matched. |
 
 ## Install (one-time)
@@ -85,4 +85,4 @@ Once the server is wired up, try these to test the agent + tools end-to-end:
 
 ## Dataset
 
-Backing dataset is [`dataset/dataset_v1.json`](../dataset/dataset_v1.json) — first complete research pass, 184 of 192 candidate-issue positions cited from primary sources, 8 honest "unknown" entries where the candidate has not publicly addressed the issue (`confidence: "insufficient_data"`). Corrections welcome via PR or via the in-app flag button on the web quiz.
+Backing dataset is [`dataset/dataset_v1.json`](../dataset/dataset_v1.json) — first complete research pass, 190 of 200 candidate-issue positions cited from primary sources, 10 honest "unknown" entries where the candidate has not publicly addressed the issue (`confidence: "insufficient_data"`). Corrections welcome via PR or via the in-app flag button on the web quiz.

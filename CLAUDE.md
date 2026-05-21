@@ -18,7 +18,7 @@ Target launch: **before the June 2026 California primary.**
 
 - ✅ Plan written (`PLAN.md`), updated for the Cloudflare pivot
 - ✅ Repo public at `ternarybits/california-election`
-- ✅ **Phase 0 complete** — `dataset/dataset_v1.json` (8 candidates × 24 issues = 192 positions, 184 cited, 8 honest "unknown"s, questions ranked by differentiation score)
+- ✅ **Phase 0 complete** — `dataset/dataset_v1.json` (8 candidates × 25 issues = 200 positions, 190 cited, 10 honest "unknown"s, questions ranked by differentiation score)
 - ✅ **Buildy spike done** but app outgrew Buildy's size limits; code preserved in git history, target stack moved to Cloudflare
 - ✅ **MCP server working** — 7 tools, stdio transport, smoke test passes (`mcp/test_tools.mjs`)
 - 🟡 **Phase 1 in progress** — Worker code written, porting to `infra/` for Cloudflare deploy
@@ -66,7 +66,7 @@ Don't re-litigate these unless the user explicitly raises them. All are two-way 
 
 - [`PLAN.md`](./PLAN.md) — full design document; status snapshot near the top
 - [`README.md`](./README.md) — short public-facing description
-- [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) — current dataset; 192 candidate-issue positions with citations
+- [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) — current dataset; 200 candidate-issue positions with citations
 - `buildy/` — original Buildy spike (works locally, exceeds Buildy size cap on deploy). Kept until Cloudflare is live; then moves to `legacy/buildy/`.
 - `mcp/` — stdio MCP server with 7 tools. Smoke test: `cd mcp && node test_tools.mjs`.
 - `infra/` (in progress) — Cloudflare Worker + D1 + static assets. The target Phase 1 deploy.

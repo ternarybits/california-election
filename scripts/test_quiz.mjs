@@ -57,7 +57,7 @@ const full = await call("GET", "/api/dataset");
 console.log(`✓ /api/questions returned ${questions.length} questions (expected 15)`);
 console.log(`✓ /api/personal-fit-dimensions returned ${dims.length} dimensions (expected 12)`);
 console.log(`✓ /api/candidates returned ${candidates.length} candidates (expected 8)`);
-console.log(`✓ /api/dataset returned ${full.positions.length} positions (expected 192)`);
+console.log(`✓ /api/dataset returned ${full.positions.length} positions (expected 200)`);
 
 if (questions.length !== 15) throw new Error("expected 15 questions");
 if (dims.length !== 12) throw new Error("expected 12 dimensions");

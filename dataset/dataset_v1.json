@@ -1,5 +1,5 @@
 {
-  "$schema_note": "v1 — first complete research pass. 8 candidates × 24 issues = 192 candidate-issue positions, 184 researched with primary-source quotes (8 honest \"unknown\" entries documented in confidence: \"insufficient_data\"). 12 personal-fit dimensions defined. Issues ranked by differentiation score in questions[]; top 15 flagged default_quiz=true. Corrections welcome via GitHub PR or in-app flag.",
+  "$schema_note": "v1 — first complete research pass, then refined. 8 candidates × 25 issues = 200 candidate-issue positions. The tax_top_wealth issue was split into tax_top (income/corporate rates) and tax_wealth (state wealth tax) so the two independent axes score separately. Issues ranked by differentiation score in questions[]; top 15 flagged default_quiz=true. Corrections welcome via GitHub PR or in-app flag.",
   "version": "v1",
   "snapshot_date": "2026-05-14",
   "race": {
@@ -669,7 +669,7 @@
       "stance_scale": [
         {
           "value": 1,
-          "label": "Build aggressively — preempt local zoning where it blocks supply"
+          "label": "Aggressively preempt local zoning to force more supply"
         },
         {
           "value": 2,
@@ -677,15 +677,15 @@
         },
         {
           "value": 3,
-          "label": "Build with balance — state nudges, local control preserved"
+          "label": "Balanced — state nudges, local control preserved"
         },
         {
           "value": 4,
-          "label": "Slow growth — protect neighborhood character and existing residents"
+          "label": "Limit preemption — favor local control and deregulation over upzoning mandates"
         },
         {
           "value": 5,
-          "label": "Focus on subsidies and tenant protections, not supply"
+          "label": "Prioritize subsidies, public housing, and tenant protections over state-forced market-rate supply"
         }
       ],
       "voter_guide": {
@@ -700,7 +700,7 @@
         "comparison": "California has gone further than most states in overriding local zoning, alongside Oregon (which ended single-family-only zoning statewide in 2019) and Montana and Washington (which passed broad upzoning laws in 2023). Many states still leave land-use decisions almost entirely to municipalities.",
         "arguments_for_change": "Proponents of stronger state preemption argue that local control has produced a multi-decade housing shortfall the LAO traces directly to under-building in coastal job centers, driving the nation's highest rents and home prices. They contend that cities respond to homeowner pressure to block growth, so only binding state mandates — by-right approval, enforceable RHNA targets, and the Builder's Remedy — can close the gap, and that voluntary tools like SB 9 underperformed precisely because localities retained discretion to obstruct them.",
         "arguments_against_change": "Opponents argue that land-use decisions are best made locally, where officials understand neighborhood infrastructure, fire risk, traffic, and community character. They contend that one-size-fits-all state mandates override voter-approved local plans, that streamlined by-right projects can bypass environmental and public-input safeguards, and that the housing shortage is driven more by construction costs, interest rates, and labor than by zoning — so preemption imposes friction with cities without reliably producing affordable units.",
-        "note_on_options": "This scale runs from aggressive state preemption to build more housing (option 1) to a focus on subsidies and tenant protections rather than new supply (option 5), with 'preserve local control / slower growth' in between (option 4). The ends reflect competing diagnoses of the housing crisis — a supply shortage that local zoning blocks, versus an affordability problem better addressed through subsidies and renter protections — so a candidate's position signals which diagnosis they accept, not simply 'more' or 'less' government.",
+        "note_on_options": "This is a single axis measuring how hard the state should push to expand market-rate housing supply — from aggressively preempting local zoning (option 1) down to prioritizing subsidies and tenant protections over state-forced supply (option 5). Candidates can reach the low end for different reasons: some defend local control and single-family neighborhoods (option 4), while others favor public/subsidized housing over market-rate construction (option 5). A position here signals how much the candidate would use state power to override local zoning for supply.",
         "sources": [
           {
             "title": "LAO — California's High Housing Costs: Causes and Consequences",
@@ -822,12 +822,12 @@
       ]
     },
     {
-      "id": "tax_top_wealth",
-      "name": "Top-bracket / corporate / wealth tax",
+      "id": "tax_top",
+      "name": "Top-bracket and corporate tax rates",
       "tier": 1,
       "category": "economy",
-      "short_description": "Should CA raise taxes on top earners, corporations, or introduce a wealth tax?",
-      "ca_specific_context": "Multiple wealth-tax bills (e.g., AB 259) have been proposed; corporate tax is 8.84%.",
+      "short_description": "Should CA raise or cut income and corporate tax rates on top earners and businesses?",
+      "ca_specific_context": "Top marginal personal income rate is 13.3% (highest in the US); the corporate rate is 8.84%.",
       "stance_scale": [
         {
           "value": 1,
@@ -835,7 +835,7 @@
         },
         {
           "value": 2,
-          "label": "Hold current top rates"
+          "label": "Hold current rates"
         },
         {
           "value": 3,
@@ -847,22 +847,21 @@
         },
         {
           "value": 5,
-          "label": "Introduce a new state-level wealth tax on highest earners"
+          "label": "Substantially raise rates and add new higher brackets"
         }
       ],
       "voter_guide": {
-        "current_policy": "California's top marginal personal income tax rate is 13.3% on taxable income above roughly $1 million, the highest of any state. Voters made the top brackets permanent with Prop 30 (2012) and Prop 55 (2016). A separate 1% Mental Health Services Tax (Prop 63, 2004) applies to income above $1 million, and a 2024 expansion of State Disability Insurance added 1.1% on wages above $1 million with no cap. The corporate income tax is 8.84% (banks: 10.84%). California has no state-level wealth tax. AB 259 (2023–24) would have imposed 1% on net worth above $50 million and 1.5% above $1 billion; it stalled in committee.",
+        "current_policy": "California's top marginal personal income tax rate is 13.3% on taxable income above roughly $1 million — the highest of any state — made permanent by Prop 30 (2012) and Prop 55 (2016). A 1% Mental Health Services Tax (Prop 63, 2004) applies above $1 million, and a 2024 expansion of State Disability Insurance added 1.1% on wages above $1 million. The corporate income tax has been 8.84% (banks 10.84%) since 1997.",
         "key_facts": [
           "Top marginal individual rate: 13.3% (highest in the US). Next closest: NY 10.9%, NJ 10.75%, OR 9.9%.",
-          "Top 1% of CA filers contribute roughly half of personal-income-tax revenue (Legislative Analyst's Office).",
-          "Texas, Florida, Nevada, Washington, and a handful of other states have no state income tax.",
-          "Corporate tax rate has been 8.84% since 1997.",
-          "No US state currently operates a wealth tax. Washington's 2022 capital-gains tax survived court challenge; broader proposals failed in WA, NY, MA, IL."
+          "The top 1% of filers contribute roughly half of personal-income-tax revenue (Legislative Analyst's Office).",
+          "Corporate rate (8.84%) is mid-pack among states that levy a corporate income tax.",
+          "Texas, Florida, Nevada, Washington and several other states levy no state income tax.",
+          "Reliance on the top bracket makes revenue progressive but volatile — receipts swing sharply in downturns."
         ],
-        "comparison": "California's structure is more progressive than most states (heavy reliance on the top bracket) but also more revenue-volatile. The state's effective combined top marginal rate exceeds 50% when stacked with federal. The corporate rate is mid-pack among states that levy a corporate income tax.",
-        "arguments_for_change": "Proponents of higher top-bracket or corporate rates — or of a new wealth tax — argue that California's wealthiest residents captured most income and asset growth over the past two decades; that revenue is needed to close persistent budget shortfalls without cutting safety-net programs; that existing rules undertax accumulated wealth (assets) relative to income flows that high earners can defer; and that any out-migration is more than offset by the share of revenue the highest earners contribute.",
-        "arguments_against_change": "Opponents argue that California already has the nation's highest top rates; that IRS migration data shows net outflows of high-income filers to no-tax states (TX, FL, NV) since 2020; that over-reliance on top earners makes the budget extremely volatile (e.g., 2009, 2020 collapses); that a state wealth tax raises constitutional and administrative concerns (asset valuation, federal direct-tax precedent); and that further corporate rate hikes accelerate HQ relocations.",
-        "note_on_options": "A wealth tax (option 5) is a different policy mechanism than higher income-tax rates (options 1–4) — it taxes accumulated assets, not income flows. This question groups them on one scale because they share a broad direction (more or less taxation of the top); the policy design and legal questions differ substantially. If a candidate supports rate increases but opposes a wealth tax, our default coding places them at option 4.",
+        "comparison": "California's structure is more progressive than most states, leaning heavily on top earners, but is also more revenue-volatile. Stacked with federal rates, the effective top marginal rate exceeds 50%.",
+        "arguments_for_change": "Proponents of higher top-bracket or corporate rates argue that the wealthiest residents and most profitable corporations captured most of the state's income growth, that recurring revenue is needed to avoid cutting safety-net programs, and that California can ask more of its highest earners without losing the revenue they generate.",
+        "arguments_against_change": "Opponents argue that California already has the nation's highest top rates, that IRS migration data shows net outflows of high-income filers to no-tax states since 2020, that over-reliance on top earners makes the budget extremely volatile, and that higher corporate rates accelerate headquarters relocations.",
         "sources": [
           {
             "title": "LAO — California's Tax System primer",
@@ -875,7 +874,52 @@
           {
             "title": "Tax Foundation — State Individual Income Tax Rates 2024",
             "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2024/"
-          },
+          }
+        ]
+      }
+    },
+    {
+      "id": "tax_wealth",
+      "name": "State wealth tax",
+      "tier": 1,
+      "category": "economy",
+      "short_description": "Should CA create a state wealth tax on the ultra-wealthy — taxing accumulated net worth, not just income?",
+      "ca_specific_context": "AB 259 (2023) and a November 2026 ballot initiative would tax billionaire net worth; none has been enacted.",
+      "stance_scale": [
+        {
+          "value": 1,
+          "label": "Oppose any state wealth tax"
+        },
+        {
+          "value": 2,
+          "label": "Skeptical — no current support"
+        },
+        {
+          "value": 3,
+          "label": "Open or undecided"
+        },
+        {
+          "value": 4,
+          "label": "Support a wealth tax"
+        },
+        {
+          "value": 5,
+          "label": "Strongly support an aggressive wealth tax"
+        }
+      ],
+      "voter_guide": {
+        "current_policy": "California has no state-level wealth tax. A wealth tax levies an annual charge on a person's accumulated net worth (assets), distinct from taxes on income. AB 259 (2023–24) would have imposed 1% on net worth above $50 million and 1.5% above $1 billion; it stalled in committee. A separate billionaire wealth-tax initiative is slated for the November 2026 ballot.",
+        "key_facts": [
+          "No US state currently operates a true wealth tax.",
+          "AB 259 (2023) proposed 1% on net worth over $50M and 1.5% over $1B; it did not advance.",
+          "Washington's 2022 capital-gains tax (a tax on investment income, not net worth) survived court challenge; broad wealth-tax proposals failed in WA, NY, MA, and IL.",
+          "A wealth tax targets the stock of accumulated assets, which high earners can hold without realizing taxable income.",
+          "Valuation of illiquid assets (private companies, art, real estate) is the central administrative challenge."
+        ],
+        "comparison": "California would be the first US state to operate a true net-worth tax. Several other high-tax states considered and rejected the idea, citing constitutional, valuation, and capital-flight concerns.",
+        "arguments_for_change": "Proponents argue that a wealth tax reaches fortunes that income taxes miss — billionaires can minimize taxable income while their net worth compounds — and that even a small annual rate on the very largest fortunes would fund schools, health care, and care work with a stable, narrowly targeted base.",
+        "arguments_against_change": "Opponents argue that a state wealth tax raises serious constitutional and administrative problems (valuing illiquid assets, federal direct-tax precedent), that the most mobile residents would relocate or restructure to avoid it, and that revenue would be unpredictable and concentrated among a handful of taxpayers.",
+        "sources": [
           {
             "title": "AB 259 (Lee, 2023) — California Wealth Tax",
             "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB259"
@@ -883,6 +927,10 @@
           {
             "title": "CRS — Net Wealth Tax: Reviewing the Issues (IF11756)",
             "url": "https://crsreports.congress.gov/product/pdf/IF/IF11756"
+          },
+          {
+            "title": "LAO — California's Tax System primer",
+            "url": "https://lao.ca.gov/Publications/Report/3724"
           }
         ]
       }
@@ -1579,7 +1627,7 @@
         },
         {
           "value": 5,
-          "label": "Major new funding via dedicated tax or bond"
+          "label": "Major funding increase (e.g. teacher pay, smaller classes, facilities), with new revenue if needed"
         }
       ],
       "voter_guide": {
@@ -1629,7 +1677,7 @@
       "stance_scale": [
         {
           "value": 1,
-          "label": "Significantly expand charters and school choice (including vouchers)"
+          "label": "Significantly expand charters and parental school choice"
         },
         {
           "value": 2,
@@ -1711,7 +1759,7 @@
         },
         {
           "value": 5,
-          "label": "State single-payer with broad new taxation (payroll, VAT-style)"
+          "label": "State single-payer funded by broad-based new taxes (e.g. payroll)"
         }
       ],
       "voter_guide": {
@@ -3218,133 +3266,6 @@
         "https://eurweb.com/tony-thurmond-california-governor-2026/"
       ],
       "notes": "Stance 2 (modestly cut) rather than 3 (hold) because the proposed middle-class tax credit is a real, quantifiable reduction in middle-income net tax burden — it just operates through credits rather than rate cuts. Distinguished from Porter/Hilton/Bianco (stance 1) because Thurmond keeps the existing rate structure intact and the credit is one-time/cycle-bound rather than a permanent zeroing-out of a bracket. Distinguished from Steyer (stance 3) because Steyer's revenue plan funds services, not a direct middle-class tax credit."
-    },
-    {
-      "candidate_id": "hilton",
-      "issue_id": "tax_top_wealth",
-      "stance": 1,
-      "summary": "Hilton would replace California's 13.3% top marginal rate with a flat 7.5% tax on income above $100,000 — a major cut for top earners — and eliminate the $800 minimum LLC tax. He frames California as having 'a spending problem, not a revenue problem,' opposes Prop 13 changes, and would offset roughly $60 billion in lost revenue with spending cuts and anti-fraud enforcement.",
-      "source_quote": "California has built the highest and most punitive state income tax system in America, with top rates reaching 13.3 percent. ... A single, simple 7.5% rate on income above $100,000. ... No state income tax on your first $100,000.",
-      "source_url": "https://stevehiltonforgovernor.com/policy/a-califordable-tax-plan/",
-      "source_date": "2026-05-06",
-      "confidence": "high",
-      "secondary_sources": [
-        "https://stevehiltonforgovernor.com/policy/end-californias-800-small-business-tax/",
-        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
-        "https://www.kpbs.org/news/politics/2026/05/06/steve-hilton-lays-out-his-plans-to-make-the-state-califordable-as-governor"
-      ],
-      "notes": "Stance 1 is unambiguous: he replaces a graduated top rate of 13.3% with a flat 7.5%, which is a substantial cut for high earners even after the $100K exemption. He opposes Prop 13 changes and has no proposal to raise corporate rates."
-    },
-    {
-      "candidate_id": "steyer",
-      "issue_id": "tax_top_wealth",
-      "stance": 5,
-      "summary": "Steyer — himself a billionaire — has said he will vote for the November 2026 billionaire wealth tax initiative and has built his campaign around closing corporate tax loopholes and reforming the commercial side of Prop 13 (split-roll) to raise an estimated $20 billion per year for education, healthcare, and care work.",
-      "source_quote": "If there's an opportunity to tax wealthy people to fund health care and education, I'd vote for it all day long. ... Tom is going to close these corporate loopholes, and raise $20 billion of new revenue each year to fund things like education, healthcare, childcare, and home care, all without charging working people a penny.",
-      "source_url": "https://www.tomsteyer.com/issues/tax-loopholes",
-      "source_date": "2026-05-12",
-      "confidence": "high",
-      "secondary_sources": [
-        "https://tomsteyer.substack.com/p/its-time-for-corporations-and-billionaires",
-        "https://fortune.com/2026/01/26/billionaire-tom-steyer-says-he-would-vote-for-california-wealth-tax/",
-        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes"
-      ],
-      "notes": "Stance 5 is the most-aggressive bucket and Steyer is the clearest fit: he endorses both the one-time wealth tax AND structural split-roll commercial property reform AND closing the water's edge loophole. He has expressed reservations about the wealth-tax initiative's *design* (one-time, not structural) but said unambiguously he'd vote yes — and his own structural proposals go further still."
-    },
-    {
-      "candidate_id": "bianco",
-      "issue_id": "tax_top_wealth",
-      "stance": 1,
-      "summary": "Bianco's signature pledge is to eliminate California's state income tax entirely — including the top bracket — funded by 'wasteful spending' cuts, anti-fraud enforcement, and expanded oil drilling. He would also suspend the gas tax and reduce or eliminate taxes on tips. No proposal to raise corporate rates or any wealth tax.",
-      "source_quote": "Californians deserve to keep more of their hard-earned money. ... You eliminate all of the fraud, you become oil independent and use that to fund government, and now we don't have to pay income taxes.",
-      "source_url": "https://biancoforgovernor.com/affordability-and-taxes/",
-      "source_date": "2026-05-12",
-      "confidence": "high",
-      "secondary_sources": [
-        "https://www.foxnews.com/politics/blue-state-sheriff-vows-eliminate-major-tax-if-elected-governor-work-immediately",
-        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
-        "https://www.kqed.org/news/12081096/riverside-county-sheriff-chad-bianco-on-his-faith-cutting-taxes-and-ballot-seizure"
-      ],
-      "notes": "Stance 1 is clearer than Hilton's: full income-tax elimination would cut the top bracket to zero. The second quote is from his KQED interview, attributed directly to Bianco."
-    },
-    {
-      "candidate_id": "becerra",
-      "issue_id": "tax_top_wealth",
-      "stance": 3,
-      "summary": "Becerra opposes the one-time billionaire wealth tax initiative on stability grounds — he argues California needs predictable, recurring revenue — but says he would raise effective tax rates on wealthy Californians whose passive (capital-gains) income is taxed below what teachers, nurses, and firefighters pay on wages. He has not endorsed a specific top-bracket rate change or a corporate-rate increase.",
-      "source_quote": "We will make sure that those who have really large wealth, if they are paying less than a teacher or a firefighter or a police officer or a nurse, that they're going to be paying more in taxes. ... Most of the government's revenue is income tax ... we're only taxing those who get paid by check, by salary. And all that passive income — capital gains and other types of income — is taxed far differently.",
-      "source_url": "https://www.sfexaminer.com/news/politics/2026-california-governor-race-get-to-know-xavier-beccera/article_00b241f6-3fd1-456f-bb91-9a3162a89241.html",
-      "source_date": "2026-05-12",
-      "confidence": "medium",
-      "secondary_sources": [
-        "https://x.com/XavierBecerra/status/1988423070864880052",
-        "https://en.wikipedia.org/wiki/2026_California_billionaire_tax",
-        "https://ourcaliforniatimes.com/becerra-surges-in-ca-governor-race-after-swalwell-exit/"
-      ],
-      "notes": "Stance 3 (modestly raise) is the best fit: he explicitly says wealthy people will pay more under him, targeting capital-gains/passive income, but he rejects both the wealth-tax initiative (stance 5) and the substantial-broad-raise framing (stance 4). Confidence medium because he hasn't committed to a specific rate or mechanism — his framing is directional ('they'll pay more') rather than quantified."
-    },
-    {
-      "candidate_id": "porter",
-      "issue_id": "tax_top_wealth",
-      "stance": 3,
-      "summary": "Porter's centerpiece tax proposal is a 'Progressive Corporate Tax' that would replace California's flat 8.84% corporate rate with a graduated scale topping out around 9.75% for the largest, most profitable corporations — generating an estimated $8B/year. She would pair this with eliminating state income tax under $100K. She has not endorsed a wealth tax or a major top-bracket personal income tax increase.",
-      "source_quote": "California's economy is the 4th largest in the world. Yet our tax structure treats a local small business turning a single dollar in profit the same as a global corporation that brings in billions in profits. ... As Governor, I will launch a Progressive Corporate Tax. ... Even less than a one percent increase on the most profitable businesses earning hundreds of millions in profit will generate up to $8 billion in annual revenue.",
-      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
-      "source_date": "2026-05-12",
-      "confidence": "high",
-      "secondary_sources": [
-        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
-        "https://calmatters.org/california-voter-guide-2026/governor/"
-      ],
-      "notes": "Stance 3 fits: a ~1 percentage-point corporate-rate increase on the top tier is a modest raise, not a substantial one (stance 4) or a wealth tax (stance 5). She is conspicuously not endorsing the billionaire-tax initiative."
-    },
-    {
-      "candidate_id": "mahan",
-      "issue_id": "tax_top_wealth",
-      "stance": 2,
-      "summary": "Mahan opposes the billionaire wealth-tax initiative, argues 'raising taxes isn't always the answer,' and has committed to not raising broad-based taxes to fix the state budget. The one exception is a narrow, sector-specific tax on AI companies to fund workforce reskilling — not a top-bracket or general corporate-rate increase.",
-      "source_quote": "Raising taxes isn't always the answer, Tom. ... [Mahan] has committed to not raising taxes to fix budget holes — including with a one-time tax on billionaires that most of his rivals are also against.",
-      "source_url": "https://fortune.com/2026/05/07/who-is-matt-mahan-silicon-valley-california-governor-san-jose-mayor/",
-      "source_date": "2026-05-07",
-      "confidence": "high",
-      "secondary_sources": [
-        "https://www.mahanforcalifornia.com/",
-        "https://www.local10.com/news/national/2026/05/06/california-governor-candidates-clash-on-taxes-trump-and-healthcare-in-lively-debate/",
-        "https://abc7news.com/post/california-governors-race-matt-mahans-campaign-largely-backed-silicon-valley-tech-moguls-billionaires-report-says/18592083/"
-      ],
-      "notes": "Stance 2 (hold) rather than stance 1 (cut) because he does not propose top-bracket or corporate-rate cuts — he opposes raises and opposes the wealth tax, but accepts the current structure. The AI-company tax is a narrow sectoral fee, not a broad top-rate move, and doesn't lift him to stance 3. Silicon Valley donors back him heavily, which is consistent with the hold-current-rates posture."
-    },
-    {
-      "candidate_id": "villaraigosa",
-      "issue_id": "tax_top_wealth",
-      "stance": 2,
-      "summary": "Villaraigosa opposes the billionaire wealth-tax initiative and has pledged to veto 'reckless multi-billion dollar tax hikes,' arguing 'we can't tax our way out of our problems.' He says billionaires should pay more but believes that's a federal job because wealthy Californians are already leaving — and would only make California's 13.3% top rate permanent conditional on a corresponding spending plan.",
-      "source_quote": "With respect to making permanent the 13%, which is the highest upper-income tax in the United States, I think we should do it, but not unless we do a spending plan. ... What I've said is billionaires should pay more than the rest of us, but the federal government should do that because at, at the end of the day, they're just leaving and they're leaving as we speak.",
-      "source_url": "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
-      "source_date": "2026-05-12",
-      "confidence": "high",
-      "secondary_sources": [
-        "https://www.antonio2026.com/plan",
-        "https://en.wikipedia.org/wiki/2026_California_billionaire_tax",
-        "https://calmatters.org/california-voter-guide-2026/governor/"
-      ],
-      "notes": "Stance 2 (hold) is the best fit: he supports keeping the 13.3% top rate where it is (conditional on spending discipline) but opposes both wealth taxes and broader state-level raises, kicking redistribution to the federal level. The 'they're leaving' framing is closer to a stance-1 instinct on the state side, but because he hasn't proposed cuts and would (conditionally) keep the 13% in place, stance 2 is the honest read."
-    },
-    {
-      "candidate_id": "thurmond",
-      "issue_id": "tax_top_wealth",
-      "stance": 5,
-      "summary": "Thurmond is the only major Democratic candidate besides Steyer who openly supports the November 2026 one-time 5% billionaire wealth tax initiative, framing it as the way to fund K-14 schools, health care, and food assistance. He would pair this with new tax credits for working- and middle-class families.",
-      "source_quote": "My proposal is to tax billionaires in our state and then use that revenue for our needs. And, to give a tax credit to working people, middle-class people, so they have more money in their pocket every month to pay for the rising cost of gas, groceries, and housing.",
-      "source_url": "https://www.kpbs.org/news/politics/2026/05/11/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race",
-      "source_date": "2026-05-11",
-      "confidence": "high",
-      "secondary_sources": [
-        "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
-        "https://en.wikipedia.org/wiki/2026_California_billionaire_tax",
-        "https://calmatters.org/california-voter-guide-2026/governor/"
-      ],
-      "notes": "Stance 5 fits because he explicitly endorses a state-level wealth tax targeting the highest-wealth individuals. His package is narrower than Steyer's (no split-roll commercial property reform on the record), but the wealth-tax endorsement is the diagnostic move for stance 5."
     },
     {
       "candidate_id": "hilton",
@@ -5399,20 +5320,180 @@
         "https://www.cde.ca.gov/nr/ne/yr26/yr26rel01.asp"
       ],
       "notes": "Stance 5 (major new funding via dedicated tax or bond) is unambiguous: Thurmond is publicly tying K-14 funding to a billionaire wealth tax, has an active state-superintendent record of pushing for more than the Governor proposed, and explicitly opposes shifting K-12 governance authority out of the elected SPI office. He is also the most LCFF-fluent voice in the field and the most likely to push for an ADA-to-enrollment funding-base shift."
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "tax_top",
+      "stance": 1,
+      "summary": "Would replace California's 13.3% graduated top marginal income-tax rate with a flat 7.5% rate on income above $100,000 — a large cut for top earners — and eliminate the $800 minimum LLC tax. No corporate-rate increase.",
+      "source_quote": "California has built the highest and most punitive state income tax system in America, with top rates reaching 13.3 percent. ... A single, simple 7.5% rate on income above $100,000. ... No state income tax on your first $100,000.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/a-califordable-tax-plan/",
+      "source_date": "2026-05-06",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "tax_top",
+      "stance": 3,
+      "summary": "Steyer's revenue plan does NOT raise the 13.3% personal income rate or the 8.84% statutory corporate rate. It is structural: closing the 'water's edge' corporate loophole, a split-roll commercial property tax, and backing a special 2027 election in his first year as governor to raise corporate (commercial property) taxes — together with the billionaire wealth tax — to raise ~$20B/year. Because he raises the effective burden on corporations and the wealthy via loopholes and property-tax reform rather than statutory rate hikes, this is a modest rate-direction increase (3), not a substantial bracket/rate raise (4).",
+      "source_quote": "I am proposing closing a corporate real estate tax loophole that's existed for over 40 years. That brings in more money to the state, that is permanent, that is completely fair.",
+      "source_url": "https://laist.com/news/politics/heres-how-californias-next-governor-will-change-your-taxes",
+      "source_date": "2026-04-14",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "tax_top",
+      "stance": 1,
+      "summary": "Signature pledge to eliminate California's state income tax entirely — including the top bracket — funded by spending cuts, anti-fraud enforcement, and expanded oil drilling. No corporate-rate increase.",
+      "source_quote": "You eliminate all of the fraud, you become oil independent and use that to fund government, and now we don't have to pay income taxes.",
+      "source_url": "https://biancoforgovernor.com/affordability-and-taxes/",
+      "source_date": "2026-05-12",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "tax_top",
+      "stance": 3,
+      "summary": "Says he would raise effective tax rates on wealthy Californians whose passive (capital-gains) income is taxed below what teachers, nurses, and firefighters pay on wages. Has not endorsed a specific top-bracket or corporate-rate change; framing is directional ('they'll pay more').",
+      "source_quote": "We will make sure that those who have really large wealth, if they are paying less than a teacher or a firefighter or a police officer or a nurse, that they're going to be paying more in taxes. ... All that passive income — capital gains and other types of income — is taxed far differently.",
+      "source_url": "https://www.sfexaminer.com/news/politics/2026-california-governor-race-get-to-know-xavier-beccera/article_00b241f6-3fd1-456f-bb91-9a3162a89241.html",
+      "source_date": "2026-05-12",
+      "confidence": "medium"
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "tax_top",
+      "stance": 3,
+      "summary": "Centerpiece is a 'Progressive Corporate Tax' replacing the flat 8.84% corporate rate with a graduated scale topping out around 9.75% for the largest, most profitable corporations (~$8B/year), paired with eliminating state income tax under $100K. A modest corporate-rate increase on top earners, not a substantial broad raise.",
+      "source_quote": "As Governor, I will launch a Progressive Corporate Tax. ... Even less than a one percent increase on the most profitable businesses earning hundreds of millions in profit will generate up to $8 billion in annual revenue.",
+      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
+      "source_date": "2026-05-12",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "tax_top",
+      "stance": 2,
+      "summary": "Opposes broad tax increases, says 'raising taxes isn't always the answer,' and commits to not raising broad-based taxes to fix the budget. Lone exception is a narrow sectoral tax on AI companies — not a top-bracket or general corporate-rate increase. Proposes no rate cuts either, so holds current rates.",
+      "source_quote": "Raising taxes isn't always the answer, Tom.",
+      "source_url": "https://fortune.com/2026/05/07/who-is-matt-mahan-silicon-valley-california-governor-san-jose-mayor/",
+      "source_date": "2026-05-07",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "tax_top",
+      "stance": 2,
+      "summary": "Would make the 13.3% top rate permanent only conditional on a spending plan, and opposes new state-level hikes ('we can't tax our way out of our problems'). Says billionaires should pay more but that it's a federal job. Proposes no cuts and no state rate increase — holds current rates.",
+      "source_quote": "With respect to making permanent the 13%, which is the highest upper-income tax in the United States, I think we should do it, but not unless we do a spending plan.",
+      "source_url": "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+      "source_date": "2026-05-12",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "tax_top",
+      "stance": "unknown",
+      "summary": "Thurmond's articulated tax program is the billionaire wealth tax plus a tax credit for working- and middle-class families. No source reviewed (KQED, LAist, CalMatters, KPBS, official voter guide) articulates a position on the personal income-tax RATE (13.3%) or the corporate-tax RATE (8.84%) distinct from the wealth tax. Per sourcing rules, his income/corporate RATE direction is not coded and is NOT inferred from his wealth-tax support.",
+      "source_quote": null,
+      "source_url": "https://www.kqed.org/news/12079441/heres-how-californias-next-governor-will-change-your-taxes",
+      "source_date": "2026-05-12",
+      "confidence": "insufficient_data"
+    },
+    {
+      "candidate_id": "hilton",
+      "issue_id": "tax_wealth",
+      "stance": 1,
+      "summary": "Opposes a state wealth tax; frames California as having 'a spending problem, not a revenue problem' and opposes Prop 13 changes. His plan cuts taxes rather than adding a net-worth levy.",
+      "source_quote": "California has built the highest and most punitive state income tax system in America, with top rates reaching 13.3 percent.",
+      "source_url": "https://stevehiltonforgovernor.com/policy/a-califordable-tax-plan/",
+      "source_date": "2026-05-06",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "steyer",
+      "issue_id": "tax_wealth",
+      "stance": 5,
+      "summary": "Steyer — himself a billionaire — has said he would vote for the November 2026 billionaire wealth-tax initiative and frames his campaign around taxing the wealthy and corporations to fund health care, education, and care work.",
+      "source_quote": "If there's an opportunity to tax wealthy people to fund health care and education, I'd vote for it all day long.",
+      "source_url": "https://www.tomsteyer.com/issues/tax-loopholes",
+      "source_date": "2026-05-12",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "bianco",
+      "issue_id": "tax_wealth",
+      "stance": 1,
+      "summary": "Opposes any new state tax; his signature pledge is to eliminate the state income tax entirely. A net-worth/wealth tax is contrary to his whole platform.",
+      "source_quote": "You eliminate all of the fraud, you become oil independent and use that to fund government, and now we don't have to pay income taxes.",
+      "source_url": "https://biancoforgovernor.com/affordability-and-taxes/",
+      "source_date": "2026-05-12",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "tax_wealth",
+      "stance": 2,
+      "summary": "Opposes the one-time billionaire wealth-tax initiative on stability grounds — argues California needs predictable, recurring revenue rather than a one-time levy — while saying wealthy Californians should pay more (targeting passive/capital-gains income). Skeptical of the wealth-tax mechanism but wants the wealthy to pay more, so coded 2 (skeptical, no current support) rather than outright 1.",
+      "source_quote": "Most of the government's revenue is income tax ... we're only taxing those who get paid by check, by salary. And all that passive income — capital gains and other types of income — is taxed far differently.",
+      "source_url": "https://www.sfexaminer.com/news/politics/2026-california-governor-race-get-to-know-xavier-beccera/article_00b241f6-3fd1-456f-bb91-9a3162a89241.html",
+      "source_date": "2026-05-12",
+      "confidence": "medium"
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "tax_wealth",
+      "stance": "unknown",
+      "summary": "Porter's platform centers on a graduated corporate tax and cutting income tax under $100K; it never mentions a wealth tax. No reviewed source (her campaign site, KQED, LAist, CalMatters voter guide) records her explicitly opposing or declining the November 2026 billionaire wealth-tax initiative — KQED notes only that 'none of the leading candidates has embraced' it, which is silence rather than on-record opposition. Per sourcing rules her wealth-tax position is coded unknown, not inferred to 1-2.",
+      "source_quote": null,
+      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
+      "source_date": "2026-05-12",
+      "confidence": "insufficient_data"
+    },
+    {
+      "candidate_id": "mahan",
+      "issue_id": "tax_wealth",
+      "stance": 1,
+      "summary": "Explicitly opposes the one-time billionaire wealth-tax initiative, alongside his broader commitment to not raising broad-based taxes to fix budget holes.",
+      "source_quote": "[Mahan] has committed to not raising taxes to fix budget holes — including with a one-time tax on billionaires that most of his rivals are also against.",
+      "source_url": "https://fortune.com/2026/05/07/who-is-matt-mahan-silicon-valley-california-governor-san-jose-mayor/",
+      "source_date": "2026-05-07",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "villaraigosa",
+      "issue_id": "tax_wealth",
+      "stance": 1,
+      "summary": "Opposes the billionaire wealth-tax initiative; says billionaires should pay more but that it is the federal government's job, warning that wealthy Californians 'are leaving as we speak.' Pledges to veto reckless multi-billion-dollar state tax hikes.",
+      "source_quote": "What I've said is billionaires should pay more than the rest of us, but the federal government should do that because at, at the end of the day, they're just leaving and they're leaving as we speak.",
+      "source_url": "https://laist.com/news/politics/2026-election-california-primary-antonio-villaraigosa-california-governor-transcript",
+      "source_date": "2026-05-12",
+      "confidence": "high"
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "tax_wealth",
+      "stance": 5,
+      "summary": "Thurmond is the only major Democratic candidate besides Steyer who openly supports the November 2026 one-time 5% billionaire wealth-tax initiative, framing it as the way to fund schools, health care, and food assistance, paired with a tax credit for working/middle-class families.",
+      "source_quote": "My proposal is to tax billionaires in our state and then use that revenue for our needs. And, to give a tax credit to working people, middle-class people, so they have more money in their pocket every month to pay for the rising cost of gas, groceries, and housing.",
+      "source_url": "https://www.kpbs.org/news/politics/2026/05/11/state-superintendent-highlights-revenue-housing-plans-as-he-stays-in-the-governors-race",
+      "source_date": "2026-05-11",
+      "confidence": "high"
     }
   ],
   "questions": [
     {
-      "issue_id": "tax_top_wealth",
+      "issue_id": "tax_wealth",
       "rank": 1,
       "default_quiz": true,
       "differentiation": {
-        "score": 0.74,
-        "std": 1.479,
-        "mean": 2.75,
+        "score": 0.765,
+        "std": 1.75,
+        "mean": 2.286,
         "range": 4,
-        "n_distinct": 4,
-        "n_resolved": 8,
+        "n_distinct": 3,
+        "n_resolved": 7,
         "n_total": 8
       }
     },
@@ -5711,8 +5792,22 @@
       }
     },
     {
-      "issue_id": "nuclear",
+      "issue_id": "tax_top",
       "rank": 23,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.364,
+        "std": 0.833,
+        "mean": 2.143,
+        "range": 2,
+        "n_distinct": 3,
+        "n_resolved": 7,
+        "n_total": 8
+      }
+    },
+    {
+      "issue_id": "nuclear",
+      "rank": 24,
       "default_quiz": false,
       "differentiation": {
         "score": 0.364,
@@ -5726,7 +5821,7 @@
     },
     {
       "issue_id": "prop13_residential",
-      "rank": 24,
+      "rank": 25,
       "default_quiz": false,
       "differentiation": {
         "score": 0.177,

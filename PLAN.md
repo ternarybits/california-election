@@ -7,7 +7,7 @@ last-updated: 2026-05-21
 
 ## Status snapshot (2026-05-21)
 
-- **Phase 0 — Research & data**: ✅ Complete. `dataset_v1.json` shipped: 8 candidates × 24 issues = 192 candidate-issue positions, 184 cited from primary sources, 8 honest `"unknown"` entries (`confidence: "insufficient_data"`). Questions ranked by differentiation score; top 15 flagged `default_quiz: true`.
+- **Phase 0 — Research & data**: ✅ Complete. `dataset_v1.json` shipped: 8 candidates × 25 issues = 200 candidate-issue positions, 190 cited from primary sources, 10 honest `"unknown"` entries (`confidence: "insufficient_data"`). Questions ranked by differentiation score; top 15 flagged `default_quiz: true`.
 - **Phase 1 — Quiz MVP**: 🟡 In progress. Worker-shaped fetch handler + vanilla-JS UI + two-phase quiz + dual scoring (policy / personal-fit) + importance slider all written. **Hosting moved from Buildy to Cloudflare** — see "Hosting pivot" below.
 - **Phase 2 — MCP server**: 🟡 7 tools shipped (1 more than PLAN required), stdio transport works end-to-end via `mcp/test_tools.mjs`. Outstanding: tool-description tuning, sample-prompt docs, ChatGPT/Cursor install instructions, SSE-transport decision.
 - **Phase 3 — Polish & launch**: ⏳ Not started.
@@ -322,8 +322,8 @@ infra/
 
 - [x] Voter-priority research: top 10–15 issues Californians actually care about (PPIC, IGS, recent journalism)
 - [x] Candidate roster locked with selection criteria applied (8 candidates)
-- [x] First pass: candidate × issue matrix populated with cited positions (192 cells)
-- [x] Two-pass review of every position with source verification (184 cited; 8 honest unknowns)
+- [x] First pass: candidate × issue matrix populated with cited positions (200 cells after the tax split)
+- [x] Two-pass review of every position with source verification (190 cited; 10 honest unknowns)
 - [x] Stance scales finalized per issue
 - [x] Question prompts drafted and ranked by differentiation score; top 15 flagged `default_quiz: true`
 - [x] **Output**: `dataset/dataset_v1.json`, published openly

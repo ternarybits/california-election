@@ -188,9 +188,9 @@ server.registerTool(
   "get_differentiating_questions",
   {
     title: "Get questions ranked by how strongly they differentiate the candidates",
-    description: "Return policy issues ranked by differentiation score — the questions where candidates actually differ. Score = (std of stances / 2) * (n_researched / n_total), so questions where the field is uniform or under-researched rank lower. Use this to sequence a deliberation conversation around the issues that matter most. Defaults to top 15 (the default web quiz); pass top_n=24 for the full ranking.",
+    description: "Return policy issues ranked by differentiation score — the questions where candidates actually differ. Score = (std of stances / 2) * (n_researched / n_total), so questions where the field is uniform or under-researched rank lower. Use this to sequence a deliberation conversation around the issues that matter most. Defaults to top 15 (the default web quiz); pass top_n=25 for the full ranking.",
     inputSchema: {
-      top_n: z.number().int().min(1).max(24).optional().describe("How many top-ranked questions to return. Default 15 (matches the default web quiz). Max 24 (all issues)."),
+      top_n: z.number().int().min(1).max(25).optional().describe("How many top-ranked questions to return. Default 15 (matches the default web quiz). Max 25 (all issues)."),
     },
   },
   async ({ top_n }) => {

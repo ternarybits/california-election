@@ -36,10 +36,10 @@ test.describe("API endpoints", () => {
     expect((await res.json())).toHaveLength(12);
   });
 
-  test("/api/dataset has 192 positions", async ({ request }) => {
+  test("/api/dataset has 200 positions", async ({ request }) => {
     const res = await request.get("/api/dataset");
     const body = await res.json();
-    expect(body.positions).toHaveLength(192);
+    expect(body.positions).toHaveLength(200);
     expect(body.version).toBe("v1");
   });
 

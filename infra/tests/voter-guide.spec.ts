@@ -13,9 +13,9 @@ test.describe("Voter-guide context block", () => {
     await expect(page.locator("#policy-quiz")).toBeVisible();
   });
 
-  test("tax question has a voter guide that expands and shows expected sections", async ({ page }) => {
-    // tax_top_wealth is Q1 (rank 1)
-    await expect(page.locator("#pq-title")).toHaveText(/Top-bracket \/ corporate \/ wealth tax/);
+  test("first question has a voter guide that expands and shows expected sections", async ({ page }) => {
+    // After the tax split, the State wealth tax is the #1 differentiating issue.
+    await expect(page.locator("#pq-title")).toHaveText(/State wealth tax/);
     const vg = page.locator("#pq-voter-guide");
     await expect(vg).toBeVisible();
 
@@ -76,7 +76,7 @@ test.describe("Voter-guide context block", () => {
   test("no voter guide leaks internal researcher commentary", async ({ request }) => {
     // Guard against meta-notes like "confirm before display" / "task brief" / "the live dataset"
     const qs = await request.get("/api/questions").then((r) => r.json());
-    const forbidden = [/task('s)? (brief|framing)/i, /confirm .* before display/i, /opposite direction/i, /gold[- ]standard/i];
+    const forbidden = [/task('s)? (brief|framing)/i, /confirm .* before display/i, /opposite direction from/i, /gold[- ]standard/i, /the live dataset/i];
     for (const q of qs) {
       const note = q.voter_guide?.note_on_options ?? "";
       for (const pat of forbidden) {

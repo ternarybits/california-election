@@ -6,7 +6,7 @@ A shareable web experience that helps Californians discover which 2026 gubernato
 
 | Surface | Path | Status |
 |---|---|---|
-| Open dataset (v1) | [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) | 8 candidates × 24 issues = 192 positions, 184 cited from primary sources (8 honest unknowns); questions ranked by differentiation score |
+| Open dataset (v1) | [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) | 8 candidates × 25 issues = 200 positions, 190 cited from primary sources (10 honest unknowns); questions ranked by differentiation score |
 | Web quiz (Cloudflare) | [`infra/`](./infra/) | Live at <https://california-election.tedmao.workers.dev> — Worker + static assets + D1. Update with `cd infra && npm run deploy` (see [`infra/README.md`](./infra/README.md)) |
 | MCP server (stdio) | [`mcp/`](./mcp/) | 7 tools, smoke test passes. Install instructions for Claude Desktop and Cursor in [`mcp/README.md`](./mcp/README.md) |
 | Launch materials | [`press/`](./press/) | Draft thread + Substack note; tighten on launch day |

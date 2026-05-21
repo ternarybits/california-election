@@ -76,8 +76,8 @@ console.log(`✓ /api/candidates returned ${cands.body.length} candidates (expec
 if (cands.body.length !== 8) throw new Error("candidate count");
 
 const issues = await call("GET", "/api/issues");
-console.log(`✓ /api/issues returned ${issues.body.length} issues (expected 24)`);
-if (issues.body.length !== 24) throw new Error("issue count");
+console.log(`✓ /api/issues returned ${issues.body.length} issues (expected 25)`);
+if (issues.body.length !== 25) throw new Error("issue count");
 
 const questions = await call("GET", "/api/questions");
 console.log(`✓ /api/questions returned ${questions.body.length} questions (expected 15)`);
@@ -88,8 +88,8 @@ console.log(`✓ /api/personal-fit-dimensions returned ${dims.body.length} dimen
 if (dims.body.length !== 12) throw new Error("dimension count");
 
 const ds = await call("GET", "/api/dataset");
-console.log(`✓ /api/dataset returned ${ds.body.positions.length} positions (expected 192)`);
-if (ds.body.positions.length !== 192) throw new Error("position count");
+console.log(`✓ /api/dataset returned ${ds.body.positions.length} positions (expected 200)`);
+if (ds.body.positions.length !== 200) throw new Error("position count");
 
 // 2) /dataset_v1.json (audit URL)
 const audit = await call("GET", "/dataset_v1.json");
