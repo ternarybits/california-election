@@ -46,7 +46,6 @@ test.describe("Ask-AI hand-off on a quiz question", () => {
       const decoded = decodeURIComponent(u.split("?q=")[1]);
       expect(decoded).toContain(question);
       expect(decoded).toContain(`/topic/${qId}`);
-      expect(decoded).toContain(`get_positions('${qId}')`);
     }
   });
 });

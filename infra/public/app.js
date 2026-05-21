@@ -268,9 +268,9 @@ function buildTopicPrompt(q, question) {
     : `I'm researching the 2026 California governor's race. Help me understand "${q.name}" — the main arguments on each side and where the leading candidates differ.`;
   return `${lead}
 
-Here's a neutral guide with every candidate's position and primary sources: ${topicUrl}
+Here's a neutral starting-point guide with each candidate's position and primary sources: ${topicUrl}
 
-Please answer using that guide, cite its sources, and tell me if anything is uncertain. (If you have the "california-election" MCP server connected, you can call get_positions('${q.id}') for the sourced data.)`;
+Start there, but feel free to research more widely. Cite your sources, and tell me if anything is uncertain or may have changed since.`;
 }
 
 function wireTopicChat(body, q) {
