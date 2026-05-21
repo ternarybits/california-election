@@ -64,6 +64,7 @@ function handleListQuestions() {
         name: issue.name,
         short_description: issue.short_description,
         stance_scale: issue.stance_scale,
+        voter_guide: issue.voter_guide ?? null,
         rank: q.rank,
         differentiation: q.differentiation,
       };

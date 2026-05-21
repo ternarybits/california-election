@@ -1,0 +1,45 @@
+{
+  "researched_on": "2026-05-21",
+  "researcher": "Claude (Opus 4.7) — bulk voter_guide refresh",
+  "issues": {
+    "housing_supply": {
+      "current_policy": "California has shifted substantial authority over housing approvals from cities to the state over the past decade. SB 35 (2017) created a ministerial (no-discretion) approval track for qualifying multifamily projects in cities that miss their state housing targets, and SB 423 (2023, Chapter 778) extended it to 2036 and broadened it to parts of the coastal zone. SB 9 (2021, Chapter 162) made duplexes and lot splits on most single-family parcels approvable by right. The state assigns each region a Regional Housing Needs Assessment (RHNA) target, and the Housing Accountability Act — strengthened by AB 1893 (2024), which formalized the 'Builder's Remedy' — limits cities' ability to deny housing when their local housing element is out of compliance.",
+      "key_facts": [
+        "The sixth-cycle RHNA (2023–2031) calls for roughly 2.5 million new housing units statewide — about 1 million of them affordable to lower-income households.",
+        "SB 9 (2021) saw far less use than projected: in its first year Los Angeles logged 211 unit applications, San Francisco 25, San Diego 7, and San José 1; a 2021 Terner Center analysis had estimated ~700,000 units could become newly feasible.",
+        "Cities out of compliance with housing-element law can be fined from $10,000 to $600,000 per month under HCD enforcement.",
+        "SB 35 / SB 423 streamlining applies only in jurisdictions failing their RHNA permitting targets or lacking an HCD-certified housing element; SB 423 added prevailing-wage and skilled-workforce conditions tiered by project size.",
+        "The Surplus Land Act requires local agencies to prioritize affordable housing when disposing of surplus public land."
+      ],
+      "comparison": "California has gone further than most states in overriding local zoning, alongside Oregon (which ended single-family-only zoning statewide in 2019) and Montana and Washington (which passed broad upzoning laws in 2023). Many states still leave land-use decisions almost entirely to municipalities.",
+      "arguments_for_change": "Proponents of stronger state preemption argue that local control has produced a multi-decade housing shortfall the LAO traces directly to under-building in coastal job centers, driving the nation's highest rents and home prices. They contend that cities respond to homeowner pressure to block growth, so only binding state mandates — by-right approval, enforceable RHNA targets, and the Builder's Remedy — can close the gap, and that voluntary tools like SB 9 underperformed precisely because localities retained discretion to obstruct them.",
+      "arguments_against_change": "Opponents argue that land-use decisions are best made locally, where officials understand neighborhood infrastructure, fire risk, traffic, and community character. They contend that one-size-fits-all state mandates override voter-approved local plans, that streamlined by-right projects can bypass environmental and public-input safeguards, and that the housing shortage is driven more by construction costs, interest rates, and labor than by zoning — so preemption imposes friction with cities without reliably producing affordable units.",
+      "note_on_options": "In the live dataset the stance scale for this issue runs in the OPPOSITE direction from this task's framing: value 1 = 'build aggressively / preempt local zoning' and value 5 = 'focus on subsidies and tenant protections, not supply,' with local-control / slow-growth at value 4. The task brief described 1 = preserve local control and 5 = aggressive preemption. This voter_guide text is written polarity-neutral (it uses 'proponents of stronger preemption' vs. 'opponents') so it reads correctly regardless of which end the scale anchors. Confirm scale direction before display.",
+      "sources": [
+        { "title": "LAO — California's High Housing Costs: Causes and Consequences", "url": "https://lao.ca.gov/publications/detail/3214" },
+        { "title": "SB 9 (Atkins, 2021) — Housing development: approvals (duplex / lot split)", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB9" },
+        { "title": "SB 423 (Wiener, 2023) — Streamlined housing approvals", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB423" },
+        { "title": "HCD — Regional Housing Needs Allocation (RHNA), Sixth Cycle", "url": "https://www.hcd.ca.gov/rhna/sixth-cycle" },
+        { "title": "Terner Center — California's HOME Act (SB 9) Turns One", "url": "https://ternercenter.berkeley.edu/research-and-policy/sb-9-turns-one-applications/" }
+      ]
+    },
+    "prop13_commercial": {
+      "current_policy": "Under Proposition 13 (1978), all California property — residential, commercial, and industrial — is taxed at 1% of its acquisition value, with assessed value rising no more than 2% per year until the property is sold and reassessed. There is no separate ('split-roll') treatment for business property. Proposition 15 (2020) would have reassessed most commercial and industrial property at current market value while leaving residential property under Prop 13; it failed 52% to 48%.",
+      "key_facts": [
+        "Prop 13 caps the property tax rate at 1% of acquisition value and limits annual assessed-value growth to 2% until a change of ownership triggers reassessment.",
+        "The LAO estimated Prop 15 would have raised $6.5 billion to $11.5 billion per year for local governments and schools once fully phased in (around 2025).",
+        "Of that revenue, roughly 60% would have gone to cities, counties, and special districts and 40% to schools and community colleges (LAO).",
+        "Prop 15 exempted residential property entirely and would have exempted small businesses with $3 million or less in California commercial holdings, plus up to $500,000 of business equipment.",
+        "Prop 15 failed statewide 51.9% to 48.1% in November 2020."
+      ],
+      "comparison": "California is unusual in applying the same acquisition-value cap to commercial and residential property; most states reassess all property toward current market value periodically, so long-held California commercial parcels can be taxed far below comparable recently-sold properties.",
+      "arguments_for_change": "Proponents of a commercial split-roll argue that Prop 13's acquisition-value rule lets long-held commercial property — office towers, malls, large industrial sites — be taxed on decades-old values, shifting the property-tax burden toward newer owners and homeowners. They point to the LAO's $6.5–$11.5 billion annual revenue estimate as stable funding for schools and local services, and contend that reassessing business property to market value, while shielding homeowners and small businesses, corrects a distortion without touching residential protections.",
+      "arguments_against_change": "Opponents argue that higher commercial property taxes are passed through to tenants — small businesses, restaurants, and renters — and ultimately to consumers, raising costs across the economy. They warn that frequent market-value reassessment is administratively complex and litigation-prone, that it would hit businesses during downturns when values and rents are volatile, and that weakening Prop 13 for any property class invites later erosion of residential protections, undermining the predictability voters enacted in 1978.",
+      "note_on_options": "The stance scale is clean and ordinal: value 1 strengthens Prop 13 for commercial property, value 3 is a targeted reform applying only to very large holdings (the Prop 15 small-business carve-out model), and value 5 is a full market-value split-roll. The task brief's 1-to-5 framing matches the dataset's ordering for this issue.",
+      "sources": [
+        { "title": "LAO — Proposition 15 (2020) ballot analysis", "url": "https://lao.ca.gov/BallotAnalysis/Proposition?number=15&year=2020" },
+        { "title": "LAO — Common Claims About Proposition 13", "url": "https://lao.ca.gov/Publications/Report/3497" }
+      ]
+    }
+  }
+}

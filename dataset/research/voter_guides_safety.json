@@ -1,0 +1,86 @@
+{
+  "researched_on": "2026-05-21",
+  "researcher": "Claude (Opus 4.7) — bulk voter_guide refresh",
+  "issues": {
+    "sanctuary": {
+      "current_policy": "California's baseline is the California Values Act (SB 54, 2017, Chapter 495), effective January 1, 2018, which bars state and local agencies from using their personnel or funds for federal civil immigration enforcement — including honoring ICE detainer (hold) requests, making arrests on civil immigration warrants, or entering 287(g) deputization agreements. SB 54 carves out exceptions: jails may notify ICE of release dates or transfer custody for people convicted of certain serious or violent felonies listed in Government Code 7282.5. The TRUTH Act (AB 2792, 2016) requires that detained individuals be notified of and consent to ICE interviews, and that local governments hold a public forum if they give ICE access. CDCR is partially excluded from SB 54 by Government Code 7284.4 and operates under separate notification rules.",
+      "key_facts": [
+        "SB 54 took effect Jan 1, 2018; the Trump administration's challenge was dismissed, the Ninth Circuit affirmed, and the US Supreme Court declined review — leaving the law intact.",
+        "287(g) agreements, which deputize local officers for immigration enforcement, are prohibited for California agencies under SB 54; a 2025 attempt by Shasta County's sheriff was paused over state-law conflict.",
+        "SB 54 exceptions (Gov. Code 7282.5) permit ICE notification/transfer for individuals convicted of specified serious or violent felonies, not for civil-status-only cases.",
+        "The TRUTH Act (2016) guarantees a consent advisory before ICE jail interviews and requires a public community forum when local agencies grant ICE access.",
+        "Sanctuary policy is set largely by statute, so a governor's leverage runs through enforcement guidance, AG litigation posture, CDCR rules, and signing or vetoing new bills rather than direct repeal."
+      ],
+      "comparison": "California is among the most restrictive states on local immigration cooperation, alongside Illinois (TRUST Act) and several others; by contrast, states such as Texas (SB 4) and Florida affirmatively require local cooperation with ICE and ban sanctuary policies. The federal 287(g) program had agreements with roughly 1,600 agencies nationally by 2026, almost none in California.",
+      "arguments_for_change": "Proponents of expanding sanctuary protections argue that limiting local entanglement with ICE preserves community trust so immigrant victims and witnesses will report crimes; that detainers without judicial warrants raise Fourth Amendment concerns and expose counties to liability; and that the existing felony carve-outs already allow cooperation in the most serious cases, so further protections (e.g., narrowing data sharing or limiting ICE access to courthouses, schools, and hospitals) target only civil enforcement.",
+      "arguments_against_change": "Proponents of fuller cooperation with ICE argue that releasing individuals subject to detainers — including some with prior criminal records that fall outside the carve-outs — can return people to communities who federal authorities believe are removable; that coordinated transfers from custody are safer for officers and the public than at-large arrests; and that immigration enforcement is a federal responsibility the state should not obstruct. They contend declining detainers undermines public safety and federal-state cooperation.",
+      "note_on_options": "Because SB 54 is statute and was upheld in court, the realistic range for a governor runs from enforcement/guidance that maximizes the felony carve-outs (lower end) to signing bills that narrow data sharing or ICE facility access (higher end). Wholesale repeal (well below stance 1) or fully abolishing all cooperation (above stance 5) would require legislative action a governor cannot take alone.",
+      "sources": [
+        { "title": "California Values Act (SB 54, 2017) — full text", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201720180SB54" },
+        { "title": "CDCR — Interaction with U.S. Immigration and Customs Enforcement", "url": "https://www.cdcr.ca.gov/interaction-with-the-u-s-immigration-and-customs-enforcement/" },
+        { "title": "TRUTH Act (AB 2792, 2016) — full text", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160AB2792" },
+        { "title": "ICE — Delegation of Immigration Authority Section 287(g)", "url": "https://www.ice.gov/identify-and-arrest/287g" }
+      ]
+    },
+    "gun_policy": {
+      "current_policy": "California has among the most restrictive firearm laws in the nation. The Roberti-Roos Assault Weapons Control Act (1989) and later additions ban many semiautomatic 'assault weapons,' and the state limits magazines to 10 rounds. After NYSRPA v. Bruen (2022) struck down discretionary 'good cause' permitting, SB 2 (2023, effective Jan 1, 2024) moved California to objective 'shall-issue' concealed-carry licensing with a 16-hour training requirement and a long list of 'sensitive places' where carry is barred even with a permit. AB 28 (2023, effective 2024) added an 11% state excise tax on firearm and ammunition sales to fund violence-prevention and school-safety programs.",
+      "key_facts": [
+        "California has banned 'assault weapons' since the 1989 Roberti-Roos Act and limits magazine capacity to 10 rounds.",
+        "SB 2 (effective Jan 1, 2024) preserved shall-issue permits post-Bruen but designated ~26 categories of 'sensitive places'; the Ninth Circuit in 2025 partly upheld and partly blocked the location bans pending litigation.",
+        "AB 28's 11% firearm/ammunition excise tax (effective 2024) is projected at roughly $160 million annually for violence-prevention and school-safety programs; it faces an unresolved court challenge.",
+        "Microstamping and other supply-side requirements (e.g., SB 452, 2023) remain on the books, though some provisions are tied to feasibility findings.",
+        "Multiple California gun statutes are in active Ninth Circuit litigation under the Bruen 'history and tradition' test, so the enforceable scope shifts with court rulings."
+      ],
+      "comparison": "Independent and advocacy scorecards consistently rank California's gun laws the strictest or near-strictest in the country, alongside Massachusetts, New York, Illinois, and Connecticut. By contrast, constitutional-carry states such as Texas, Arizona, and Idaho require no permit to carry concealed and have far fewer restrictions on magazines and rifle types.",
+      "arguments_for_change": "Proponents of additional restrictions argue that states with stronger gun laws tend to report lower firearm-death rates, and that measures like the assault-weapon and magazine limits, the SB 2 sensitive-places list, and the AB 28 excise tax reduce gun availability in high-risk settings while funding prevention. They contend that closing remaining gaps — and defending existing laws in court — saves lives and that the Second Amendment permits reasonable regulation.",
+      "arguments_against_change": "Opponents of further restrictions argue that California already has the nation's strictest regime yet still experiences gun crime, suggesting marginal returns are low; that post-Bruen rulings show several provisions may be unconstitutional and invite costly litigation; that broad sensitive-place bans and an excise tax burden law-abiding owners and shift carry rights based on geography; and that enforcement resources are better aimed at illegal trafficking and prohibited possessors than at lawful purchasers.",
+      "note_on_options": "Much of California's gun law is shaped by Ninth Circuit and Supreme Court litigation, so a governor's practical range runs from defending or narrowing existing rules in light of court rulings (lower end) to signing new restrictions and aggressively defending them (higher end). 'Rolling back' (stance 1) would primarily mean declining to defend or signing repeals, both constrained by the Legislature.",
+      "sources": [
+        { "title": "CA DOJ — New Firearm/Weapon Laws", "url": "https://oag.ca.gov/ogvp/new-firearm-law" },
+        { "title": "SB 2 (2023) — concealed-carry licensing — full text", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB2" },
+        { "title": "AB 28 (2023) — firearm/ammunition excise tax — full text", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB28" },
+        { "title": "RAND — The Science of Gun Policy", "url": "https://www.rand.org/research/gun-policy.html" }
+      ]
+    },
+    "policing": {
+      "current_policy": "California has enacted a series of policing-accountability laws while leaving most funding and charging decisions to local agencies and elected DAs. AB 392 (2019) raised the legal standard for police use of deadly force to when 'necessary' to defend against an imminent threat, replacing the older 'reasonable' standard. SB 2 (2021), the Kenneth Ross Jr. Police Decertification Act, created a statewide POST process to decertify officers for serious misconduct and report separations to a national index. AB 1506 (2020) requires the state Department of Justice to investigate police shootings of unarmed civilians that result in death. State prison population has fallen sharply since the 2011 Realignment (AB 109) shifted lower-level felons to counties.",
+      "key_facts": [
+        "AB 392 (2019) set a 'necessary' standard for police deadly force, among the stricter use-of-force statutes in the country.",
+        "SB 2 (2021) gave POST authority to decertify officers for serious misconduct; decertified officers are barred from rehire and listed on the National Decertification Index.",
+        "AB 1506 (2020) mandates state DOJ investigation of fatal police shootings of unarmed civilians.",
+        "CDCR's prison population fell to about 90,600 by December 2025 — roughly 27% below December 2019 — after the 2011 Realignment (AB 109) and pandemic-era reductions; the state has closed multiple prisons.",
+        "California's imprisonment rate was about 294 per 100,000 adults in 2025, down from a peak of over 173,000 total prisoners in 2006; police staffing and funding are set locally, so a governor's direct control is limited."
+      ],
+      "comparison": "California's use-of-force ('necessary') standard and statewide decertification system are stronger than those in many states, though states like Colorado and New Jersey adopted comparable post-2020 reforms. Its imprisonment rate sits near or modestly below the national average and well below high-incarceration states such as Mississippi, Louisiana, and Texas.",
+      "arguments_for_change": "Proponents of decarceration and alternatives to incarceration argue that California's prison population fell substantially after Realignment without a sustained increase in violent crime, suggesting many people can be safely supervised in communities; that diversion, mental-health and substance-use treatment, and reentry programs address root causes more cost-effectively than incarceration; and that strong accountability rules (AB 392, SB 2) build community trust and reduce costly misconduct.",
+      "arguments_against_change": "Proponents of more funding and stricter penalties argue that adequate police staffing and clear consequences deter crime and reassure victims; that some categories of offending rose during the period of reform and that visible enforcement is needed for public confidence; and that accountability mandates and reduced incarceration, if not paired with sufficient policing and supervision resources, can strain departments and let repeat offenders cycle through. They contend public safety should not be traded for lower incarceration numbers.",
+      "note_on_options": "Policing budgets and most charging decisions are local, so a governor's levers are statewide standards, CDCR operations, prison capacity, grants, and bill signings. Stance 1 (more funding, stricter penalties) and stance 5 (decarceration, alternatives) describe direction and emphasis a governor can push, not unilateral control over local police forces or county jails.",
+      "sources": [
+        { "title": "AB 392 (2019) — peace officers: deadly force — full text", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201920200AB392" },
+        { "title": "SB 2 (2021) — peace officer decertification — full text", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB2" },
+        { "title": "CA POST — Peace Officer Decertification", "url": "https://post.ca.gov/Decertification" },
+        { "title": "PPIC — California's Prison Population", "url": "https://www.ppic.org/publication/californias-prison-population/" }
+      ]
+    },
+    "prop36_47": {
+      "current_policy": "Proposition 47 (Nov 2014) reclassified several nonviolent drug-possession and theft offenses from felonies to misdemeanors, including setting the felony shoplifting/theft threshold at $950, and redirected the savings to treatment and victim programs. Proposition 36 (Nov 2024), which passed roughly 70%-30% and took effect December 18, 2024, partially rolled this back: it allows felony charges for petty theft with two or more prior theft convictions, lets values from multiple incidents be aggregated past the $950 line, increases penalties for certain fentanyl and other drug offenses, and creates a 'treatment-mandated felony' giving repeat drug offenders a choice between treatment and incarceration.",
+      "key_facts": [
+        "Prop 47 (2014) set the felony theft threshold at $950 and reduced certain drug-possession and theft felonies to misdemeanors.",
+        "Prop 36 (2024) passed about 70% to 30% and took effect December 18, 2024.",
+        "Prop 36 permits felony charges for theft under $950 when the person has two or more prior theft convictions, and allows aggregating values across incidents.",
+        "Per PPIC, California's 2024 property-crime rate fell about 9.9% to roughly 2,084 per 100,000 — its lowest since 1985 — while reported shoplifting rose about 14.2% (combined retail theft up ~3%); these trends predate Prop 36's implementation.",
+        "PPIC research attributes the post-2019 retail-theft rise more to pandemic-era criminal-justice responses than to Prop 47 itself, and finds higher likelihood of apprehension deters crime more than longer sentences."
+      ],
+      "comparison": "California's $950 felony-theft threshold was, after Prop 47, in the middle of the national range — higher than states like New Jersey ($200) and Texas (which uses graduated tiers around $2,500 for higher felonies) but lower than Texas's misdemeanor ceiling; Prop 36 narrowed it for repeat offenders rather than lowering the dollar figure. Many states reconsidered theft and drug-sentencing thresholds in the 2020s.",
+      "arguments_for_change": "Proponents of restoring or expanding Prop 47 argue that property crime reached multi-decade lows in 2024 even before Prop 36 took effect, that reduced incarceration freed funds for treatment and victim services, and that PPIC and other research find certainty of apprehension deters crime more than longer sentences — so further decriminalization and diversion would reduce incarceration without raising crime.",
+      "arguments_against_change": "Proponents of further rollback argue that reported shoplifting and certain retail thefts kept rising after 2019 and that the $950 misdemeanor line let repeat offenders avoid meaningful consequences; that Prop 36's nearly 70% approval reflects broad public concern about open-air drug use and theft; and that felony exposure for repeat offenders and treatment-mandated felonies create leverage to push chronic offenders into treatment and deter organized retail crime.",
+      "note_on_options": "Both measures were enacted by voters, so most changes to Prop 36 or Prop 47 require another ballot measure or a high legislative threshold — a governor mainly shapes implementation, funding, and DA/CDCR guidance and can advocate for or against future measures. Crime-trend data is genuinely contested: property crime fell in 2024 while shoplifting rose, and analysts disagree on how much Prop 47 versus pandemic-era factors drove the changes.",
+      "sources": [
+        { "title": "PPIC — Crime after Proposition 47 and the Pandemic", "url": "https://www.ppic.org/publication/crime-after-proposition-47-and-the-pandemic/" },
+        { "title": "PPIC — Crime Trends in California", "url": "https://www.ppic.org/publication/crime-trends-in-california/" },
+        { "title": "CalMatters — Why California voters backed Prop. 36", "url": "https://calmatters.org/justice/2024/11/retail-theft-proposition-36-election/" },
+        { "title": "LAO — Proposition 36 (2024) analysis", "url": "https://lao.ca.gov/ballot/2024/Prop36-110524.pdf" }
+      ]
+    }
+  }
+}

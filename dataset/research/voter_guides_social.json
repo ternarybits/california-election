@@ -1,0 +1,67 @@
+{
+  "researched_on": "2026-05-21",
+  "researcher": "Claude (Opus 4.7) — bulk voter_guide refresh",
+  "issues": {
+    "homelessness": {
+      "current_policy": "California's official policy is \"Housing First\" — codified for state-funded programs in Welfare & Institutions Code §8255 — which prioritizes permanent housing without preconditions such as sobriety or treatment compliance. Recent state action has layered enforcement and treatment tracks on top: the CARE Act (SB 1338, Umberg, 2022) created civil courts that can order treatment plans for people with untreated schizophrenia-spectrum disorders, with all counties live by December 2024, and Proposition 1 (March 2024) authorized a $6.4 billion behavioral-health bond plus a redirection of Mental Health Services Act funds. After Grants Pass v. Johnson (June 2024), Governor Newsom issued an executive order pushing state agencies and cities to clear encampments and circulated a model anti-camping ordinance.",
+      "key_facts": [
+        "187,084 Californians were counted as homeless in the January 2024 point-in-time count, up 3.1% from 181,399 in 2023 (HUD).",
+        "California holds roughly 25% of the nation's homeless population and the highest unsheltered rate — about two-thirds sleep outside rather than in shelters.",
+        "Grants Pass v. Johnson (SCOTUS, 6-3, June 2024) held that enforcing public-camping bans does not violate the Eighth Amendment, removing the prior legal barrier to citing or arresting campers even where shelter is unavailable.",
+        "Proposition 1 (2024) authorized $6.4 billion for behavioral-health housing and treatment, including about $4.4 billion to build roughly 10,000 treatment beds.",
+        "By early 2026 more than 3,800 CARE Act petitions had been filed since the program's December 2024 statewide launch; the state added $291 million in CARE-related services and housing funding in March 2026."
+      ],
+      "comparison": "California's 3% increase in 2024 was far below the roughly 18% national rise, but the state's absolute count, its share of the U.S. total, and its unsheltered share remain the highest in the country. Most other large states shelter a much larger fraction of their homeless residents.",
+      "arguments_for_change": "Proponents of a services-led, Housing First approach (high end of the scale) argue that stable housing is the precondition for addressing addiction and mental illness, not a reward for it; that peer-reviewed evaluations show Housing First improves housing retention; that enforcement and camp sweeps displace people without reducing the population and impose criminal records that make housing harder to obtain; and that conservatorship and mandated-treatment expansions risk coercing people who have not been offered adequate voluntary services.",
+      "arguments_against_change": "Proponents of enforcement, conservatorship expansion, and treatment mandates (low end) argue that California has spent over $20 billion on homelessness in recent years while the unsheltered population stayed near the nation's highest; that Housing First alone fails the large share of unsheltered people with untreated serious mental illness or addiction; that visible encampments pose public-health and safety problems; and that Grants Pass now lets the state pair shelter and treatment offers with consequences for refusal.",
+      "note_on_options": "This scale runs from enforcement-and-mandated-treatment (1) to pure Housing First with no enforcement (5). Many candidates favor combinations — e.g., expanded treatment beds plus voluntary housing — that fall in the middle; the endpoints represent the contested questions of whether to condition housing on treatment and whether to use camping-ban enforcement.",
+      "sources": [
+        { "title": "CalMatters — How does California compare on 2024 HUD point-in-time count", "url": "https://calmatters.org/housing/homelessness/2025/01/hud-pit-count-2024/" },
+        { "title": "CalMatters — Supreme Court Grants Pass ruling and California camps", "url": "https://calmatters.org/housing/2024/06/california-homeless-camps-grants-pass-ruling/" },
+        { "title": "SB 1338 (Umberg, 2022) — CARE Court Program", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB1338" },
+        { "title": "CalMatters — Prop 1 (2024) behavioral health bond voter guide", "url": "https://calmatters.org/california-voter-guide-2024/prop-1-mental-health/" },
+        { "title": "Governor of California — March 2026 CARE Court accountability measures and $291M", "url": "https://www.gov.ca.gov/2026/03/02/governor-newsom-announces-new-care-court-accountability-measures-to-get-more-chronically-mentally-ill-off-our-streets-awards-291-million-in-funding-for-services-and-housing/" }
+      ]
+    },
+    "healthcare_funding": {
+      "current_policy": "California operates a mixed, market-based health-coverage system with heavy public subsidy rather than a single state-run plan. Covered California is the state's Affordable Care Act marketplace, supplemented by state premium subsidies. Medi-Cal, the state's Medicaid program, expanded to cover all income-eligible undocumented adults as of January 1, 2024, making California the first state to extend full-scope Medicaid to residents regardless of immigration status. Legislative attempts at single-payer have repeatedly failed: AB 1400 / CalCare (Kalra, 2022) was pulled without a floor vote, and its successor AB 2200 (2024) was held in committee.",
+      "key_facts": [
+        "Medi-Cal extended full-scope coverage to all income-eligible adults regardless of immigration status on January 1, 2024 — a first among states.",
+        "AB 1400 (CalCare, Kalra) died January 31, 2022 when the author pulled it short of the 41 Assembly votes needed; its 2024 successor AB 2200 was held in Appropriations.",
+        "Analysts estimated CalCare would cost roughly $314–391 billion per year, far exceeding the state's entire general-fund budget and requiring new payroll, business, and high-income taxes.",
+        "Single-payer financing would require federal Section 1332 and Medicaid/Medicare waivers to redirect federal dollars, and ERISA limits state regulation of self-insured employer plans covering many workers.",
+        "California's uninsured rate fell to roughly 6–7% in recent years, among the lowest historically, driven by ACA subsidies and Medi-Cal expansion rather than a single-payer structure."
+      ],
+      "comparison": "No U.S. state operates a single-payer system; Vermont enacted and then abandoned one in 2014 over financing. California has pursued near-universal coverage through subsidies and Medicaid expansion instead, reaching one of the lowest uninsured rates in the nation while leaving the multi-payer insurance market intact.",
+      "arguments_for_change": "Proponents of moving toward state single-payer (high end) argue that a unified public plan would eliminate insurer overhead, premiums, deductibles, and network restrictions; that some analyses (e.g., a UC Berkeley Labor Center estimate) projected net system savings versus current spending; that covering everyone regardless of employment or immigration status simplifies administration; and that California's size gives it leverage to negotiate prices.",
+      "arguments_against_change": "Proponents of preserving the subsidized market system (low end) argue that single-payer's roughly $300–400 billion annual cost would require steep new taxes with uncertain net savings; that it depends on federal waivers and ERISA carve-outs that may not be granted; that disrupting employer and Medicare coverage that most residents currently have is politically and operationally risky; and that California has already reached near-universal coverage by expanding subsidies and Medi-Cal without that disruption.",
+      "note_on_options": "This scale measures the financing mechanism — from preserving a subsidized private market (1) to a state-run single-payer plan like CalCare (5) — not whether to expand coverage. A candidate can favor broad coverage expansion (e.g., the 2024 Medi-Cal expansion) while opposing single-payer financing; such positions land in the middle of the scale.",
+      "sources": [
+        { "title": "CalMatters — California single-payer plan fails in Legislature (AB 1400)", "url": "https://calmatters.org/politics/2022/02/california-single-payer-legislature/" },
+        { "title": "AB 1400 (Kalra, 2021-22) — Guaranteed Health Care for All", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB1400" },
+        { "title": "KFF — Health Insurance Coverage of the Total Population (California)", "url": "https://www.kff.org/other/state-indicator/total-population/" },
+        { "title": "California Health Care Foundation — Medi-Cal Facts and Figures", "url": "https://www.chcf.org/collection/medi-cal-facts-figures/" }
+      ]
+    },
+    "abortion": {
+      "current_policy": "Abortion is a state constitutional right in California. Proposition 1 (November 2022), approved by about 66% of voters, amended the California Constitution to bar the state from denying or interfering with reproductive freedom, including abortion and contraception. After the U.S. Supreme Court's 2022 Dobbs decision, the Legislature enacted a package of statutes: AB 1242 and AB 2091 (2022) restrict California law enforcement, businesses, and providers from cooperating with out-of-state abortion investigations or disclosing related records, and SB 345 (2023) shields California-licensed providers — including telehealth and medication-abortion providers — from out-of-state prosecution or extradition. Medi-Cal covers abortion at full state cost, and the state has appropriated over $200 million to support abortion access and providers.",
+      "key_facts": [
+        "Proposition 1 (2022) passed with about 66% support, writing an explicit right to abortion and contraception into the state constitution.",
+        "Medi-Cal covers abortion services with the state paying the full cost; private state-regulated insurance plans are generally required to cover abortion.",
+        "California enacted shield laws — AB 1242, AB 2091 (2022) and SB 345 (2023) — protecting in-state providers and patients (including out-of-state patients using telehealth) from cooperation with out-of-state abortion prosecutions.",
+        "The state appropriated more than $200 million across recent budgets to fund abortion access, provider capacity, and patient support such as travel.",
+        "Following Dobbs, California positioned itself as an interstate \"refuge,\" with state-funded support for patients traveling from states with bans."
+      ],
+      "comparison": "California is among the most protective states for abortion access in the post-Dobbs landscape, combining a constitutional right, Medicaid coverage, public funding, and provider shield laws. This contrasts sharply with the more than a dozen states that ban or sharply restrict abortion, and places California in a small group of states explicitly funding and protecting interstate care.",
+      "arguments_for_change": "Proponents of expanding protections further (high end) argue that as more states impose bans, California should serve as an interstate refuge by funding travel and care for out-of-state patients, broadening provider protections and capacity, and pre-empting any future federal restrictions; they argue that legal and financial barriers, not just legality, determine real access, so the state should fund and shield care aggressively.",
+      "arguments_against_change": "Proponents of some restrictions or of not expanding further (low end) argue on moral or religious grounds that abortion should face limits such as gestational thresholds; that public funds should not finance abortion or out-of-state patients' care; and that state shield laws and refuge funding draw California into conflicts with other states' laws and over-extend taxpayer commitments. Within California's electorate this is a minority position given Prop 1's 66% margin.",
+      "note_on_options": "This scale runs from supporting some restrictions on access (1) to an expansive state-funded interstate refuge with broad provider protections (5). Given California's constitutional right and lopsided 2022 vote, most viable candidates cluster toward the protective end; the differentiating questions are about how far to fund interstate care and shield providers, not whether abortion is legal in-state.",
+      "sources": [
+        { "title": "LAO — Proposition 1 (2022) Ballot Analysis", "url": "https://lao.ca.gov/BallotAnalysis/Proposition?number=1&year=2022" },
+        { "title": "CalMatters — Prop 1 (2022) Abortion Rights voter guide", "url": "https://calmatters.org/california-voter-guide-2022/propositions/prop-1-abortion-rights/" },
+        { "title": "California Attorney General / OSG — Reproductive Rights", "url": "https://osg.ca.gov/reprorights/" },
+        { "title": "California abortion.ca.gov — What California is doing to protect access", "url": "https://abortion.ca.gov/your-rights/state-action/" }
+      ]
+    }
+  }
+}

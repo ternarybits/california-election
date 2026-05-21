@@ -687,7 +687,43 @@
           "value": 5,
           "label": "Focus on subsidies and tenant protections, not supply"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California has shifted substantial authority over housing approvals from cities to the state over the past decade. SB 35 (2017) created a ministerial (no-discretion) approval track for qualifying multifamily projects in cities that miss their state housing targets, and SB 423 (2023, Chapter 778) extended it to 2036 and broadened it to parts of the coastal zone. SB 9 (2021, Chapter 162) made duplexes and lot splits on most single-family parcels approvable by right. The state assigns each region a Regional Housing Needs Assessment (RHNA) target, and the Housing Accountability Act — strengthened by AB 1893 (2024), which formalized the 'Builder's Remedy' — limits cities' ability to deny housing when their local housing element is out of compliance.",
+        "key_facts": [
+          "The sixth-cycle RHNA (2023–2031) calls for roughly 2.5 million new housing units statewide — about 1 million of them affordable to lower-income households.",
+          "SB 9 (2021) saw far less use than projected: in its first year Los Angeles logged 211 unit applications, San Francisco 25, San Diego 7, and San José 1; a 2021 Terner Center analysis had estimated ~700,000 units could become newly feasible.",
+          "Cities out of compliance with housing-element law can be fined from $10,000 to $600,000 per month under HCD enforcement.",
+          "SB 35 / SB 423 streamlining applies only in jurisdictions failing their RHNA permitting targets or lacking an HCD-certified housing element; SB 423 added prevailing-wage and skilled-workforce conditions tiered by project size.",
+          "The Surplus Land Act requires local agencies to prioritize affordable housing when disposing of surplus public land."
+        ],
+        "comparison": "California has gone further than most states in overriding local zoning, alongside Oregon (which ended single-family-only zoning statewide in 2019) and Montana and Washington (which passed broad upzoning laws in 2023). Many states still leave land-use decisions almost entirely to municipalities.",
+        "arguments_for_change": "Proponents of stronger state preemption argue that local control has produced a multi-decade housing shortfall the LAO traces directly to under-building in coastal job centers, driving the nation's highest rents and home prices. They contend that cities respond to homeowner pressure to block growth, so only binding state mandates — by-right approval, enforceable RHNA targets, and the Builder's Remedy — can close the gap, and that voluntary tools like SB 9 underperformed precisely because localities retained discretion to obstruct them.",
+        "arguments_against_change": "Opponents argue that land-use decisions are best made locally, where officials understand neighborhood infrastructure, fire risk, traffic, and community character. They contend that one-size-fits-all state mandates override voter-approved local plans, that streamlined by-right projects can bypass environmental and public-input safeguards, and that the housing shortage is driven more by construction costs, interest rates, and labor than by zoning — so preemption imposes friction with cities without reliably producing affordable units.",
+        "note_on_options": "This scale runs from aggressive state preemption to build more housing (option 1) to a focus on subsidies and tenant protections rather than new supply (option 5), with 'preserve local control / slower growth' in between (option 4). The ends reflect competing diagnoses of the housing crisis — a supply shortage that local zoning blocks, versus an affordability problem better addressed through subsidies and renter protections — so a candidate's position signals which diagnosis they accept, not simply 'more' or 'less' government.",
+        "sources": [
+          {
+            "title": "LAO — California's High Housing Costs: Causes and Consequences",
+            "url": "https://lao.ca.gov/publications/detail/3214"
+          },
+          {
+            "title": "SB 9 (Atkins, 2021) — Housing development: approvals (duplex / lot split)",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB9"
+          },
+          {
+            "title": "SB 423 (Wiener, 2023) — Streamlined housing approvals",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB423"
+          },
+          {
+            "title": "HCD — Regional Housing Needs Allocation (RHNA), Sixth Cycle",
+            "url": "https://www.hcd.ca.gov/rhna/sixth-cycle"
+          },
+          {
+            "title": "Terner Center — California's HOME Act (SB 9) Turns One",
+            "url": "https://ternercenter.berkeley.edu/research-and-policy/sb-9-turns-one-applications/"
+          }
+        ]
+      }
     },
     {
       "id": "homelessness",
@@ -717,7 +753,43 @@
           "value": 5,
           "label": "Heavy investment in supportive housing and services; treat enforcement as last resort"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California's official policy is \"Housing First\" — codified for state-funded programs in Welfare & Institutions Code §8255 — which prioritizes permanent housing without preconditions such as sobriety or treatment compliance. Recent state action has layered enforcement and treatment tracks on top: the CARE Act (SB 1338, Umberg, 2022) created civil courts that can order treatment plans for people with untreated schizophrenia-spectrum disorders, with all counties live by December 2024, and Proposition 1 (March 2024) authorized a $6.4 billion behavioral-health bond plus a redirection of Mental Health Services Act funds. After Grants Pass v. Johnson (June 2024), Governor Newsom issued an executive order pushing state agencies and cities to clear encampments and circulated a model anti-camping ordinance.",
+        "key_facts": [
+          "187,084 Californians were counted as homeless in the January 2024 point-in-time count, up 3.1% from 181,399 in 2023 (HUD).",
+          "California holds roughly 25% of the nation's homeless population and the highest unsheltered rate — about two-thirds sleep outside rather than in shelters.",
+          "Grants Pass v. Johnson (SCOTUS, 6-3, June 2024) held that enforcing public-camping bans does not violate the Eighth Amendment, removing the prior legal barrier to citing or arresting campers even where shelter is unavailable.",
+          "Proposition 1 (2024) authorized $6.4 billion for behavioral-health housing and treatment, including about $4.4 billion to build roughly 10,000 treatment beds.",
+          "By early 2026 more than 3,800 CARE Act petitions had been filed since the program's December 2024 statewide launch; the state added $291 million in CARE-related services and housing funding in March 2026."
+        ],
+        "comparison": "California's 3% increase in 2024 was far below the roughly 18% national rise, but the state's absolute count, its share of the U.S. total, and its unsheltered share remain the highest in the country. Most other large states shelter a much larger fraction of their homeless residents.",
+        "arguments_for_change": "Proponents of a services-led, Housing First approach (high end of the scale) argue that stable housing is the precondition for addressing addiction and mental illness, not a reward for it; that peer-reviewed evaluations show Housing First improves housing retention; that enforcement and camp sweeps displace people without reducing the population and impose criminal records that make housing harder to obtain; and that conservatorship and mandated-treatment expansions risk coercing people who have not been offered adequate voluntary services.",
+        "arguments_against_change": "Proponents of enforcement, conservatorship expansion, and treatment mandates (low end) argue that California has spent over $20 billion on homelessness in recent years while the unsheltered population stayed near the nation's highest; that Housing First alone fails the large share of unsheltered people with untreated serious mental illness or addiction; that visible encampments pose public-health and safety problems; and that Grants Pass now lets the state pair shelter and treatment offers with consequences for refusal.",
+        "note_on_options": "This scale runs from enforcement-and-mandated-treatment (1) to pure Housing First with no enforcement (5). Many candidates favor combinations — e.g., expanded treatment beds plus voluntary housing — that fall in the middle; the endpoints represent the contested questions of whether to condition housing on treatment and whether to use camping-ban enforcement.",
+        "sources": [
+          {
+            "title": "CalMatters — How does California compare on 2024 HUD point-in-time count",
+            "url": "https://calmatters.org/housing/homelessness/2025/01/hud-pit-count-2024/"
+          },
+          {
+            "title": "CalMatters — Supreme Court Grants Pass ruling and California camps",
+            "url": "https://calmatters.org/housing/2024/06/california-homeless-camps-grants-pass-ruling/"
+          },
+          {
+            "title": "SB 1338 (Umberg, 2022) — CARE Court Program",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB1338"
+          },
+          {
+            "title": "CalMatters — Prop 1 (2024) behavioral health bond voter guide",
+            "url": "https://calmatters.org/california-voter-guide-2024/prop-1-mental-health/"
+          },
+          {
+            "title": "Governor of California — March 2026 CARE Court accountability measures and $291M",
+            "url": "https://www.gov.ca.gov/2026/03/02/governor-newsom-announces-new-care-court-accountability-measures-to-get-more-chronically-mentally-ill-off-our-streets-awards-291-million-in-funding-for-services-and-housing/"
+          }
+        ]
+      }
     },
     {
       "id": "tax_middle",
@@ -777,7 +849,43 @@
           "value": 5,
           "label": "Introduce a new state-level wealth tax on highest earners"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California's top marginal personal income tax rate is 13.3% on taxable income above roughly $1 million, the highest of any state. Voters made the top brackets permanent with Prop 30 (2012) and Prop 55 (2016). A separate 1% Mental Health Services Tax (Prop 63, 2004) applies to income above $1 million, and a 2024 expansion of State Disability Insurance added 1.1% on wages above $1 million with no cap. The corporate income tax is 8.84% (banks: 10.84%). California has no state-level wealth tax. AB 259 (2023–24) would have imposed 1% on net worth above $50 million and 1.5% above $1 billion; it stalled in committee.",
+        "key_facts": [
+          "Top marginal individual rate: 13.3% (highest in the US). Next closest: NY 10.9%, NJ 10.75%, OR 9.9%.",
+          "Top 1% of CA filers contribute roughly half of personal-income-tax revenue (Legislative Analyst's Office).",
+          "Texas, Florida, Nevada, Washington, and a handful of other states have no state income tax.",
+          "Corporate tax rate has been 8.84% since 1997.",
+          "No US state currently operates a wealth tax. Washington's 2022 capital-gains tax survived court challenge; broader proposals failed in WA, NY, MA, IL."
+        ],
+        "comparison": "California's structure is more progressive than most states (heavy reliance on the top bracket) but also more revenue-volatile. The state's effective combined top marginal rate exceeds 50% when stacked with federal. The corporate rate is mid-pack among states that levy a corporate income tax.",
+        "arguments_for_change": "Proponents of higher top-bracket or corporate rates — or of a new wealth tax — argue that California's wealthiest residents captured most income and asset growth over the past two decades; that revenue is needed to close persistent budget shortfalls without cutting safety-net programs; that existing rules undertax accumulated wealth (assets) relative to income flows that high earners can defer; and that any out-migration is more than offset by the share of revenue the highest earners contribute.",
+        "arguments_against_change": "Opponents argue that California already has the nation's highest top rates; that IRS migration data shows net outflows of high-income filers to no-tax states (TX, FL, NV) since 2020; that over-reliance on top earners makes the budget extremely volatile (e.g., 2009, 2020 collapses); that a state wealth tax raises constitutional and administrative concerns (asset valuation, federal direct-tax precedent); and that further corporate rate hikes accelerate HQ relocations.",
+        "note_on_options": "A wealth tax (option 5) is a different policy mechanism than higher income-tax rates (options 1–4) — it taxes accumulated assets, not income flows. This question groups them on one scale because they share a broad direction (more or less taxation of the top); the policy design and legal questions differ substantially. If a candidate supports rate increases but opposes a wealth tax, our default coding places them at option 4.",
+        "sources": [
+          {
+            "title": "LAO — California's Tax System primer",
+            "url": "https://lao.ca.gov/Publications/Report/3724"
+          },
+          {
+            "title": "Franchise Tax Board — Personal Income Tax statistics",
+            "url": "https://www.ftb.ca.gov/about-ftb/data-reports-plans/california-personal-income-tax-statistics.html"
+          },
+          {
+            "title": "Tax Foundation — State Individual Income Tax Rates 2024",
+            "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2024/"
+          },
+          {
+            "title": "AB 259 (Lee, 2023) — California Wealth Tax",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB259"
+          },
+          {
+            "title": "CRS — Net Wealth Tax: Reviewing the Issues (IF11756)",
+            "url": "https://crsreports.congress.gov/product/pdf/IF/IF11756"
+          }
+        ]
+      }
     },
     {
       "id": "prop13_commercial",
@@ -807,7 +915,31 @@
           "value": 5,
           "label": "Full commercial split-roll — tax commercial at market value"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "Under Proposition 13 (1978), all California property — residential, commercial, and industrial — is taxed at 1% of its acquisition value, with assessed value rising no more than 2% per year until the property is sold and reassessed. There is no separate ('split-roll') treatment for business property. Proposition 15 (2020) would have reassessed most commercial and industrial property at current market value while leaving residential property under Prop 13; it failed 52% to 48%.",
+        "key_facts": [
+          "Prop 13 caps the property tax rate at 1% of acquisition value and limits annual assessed-value growth to 2% until a change of ownership triggers reassessment.",
+          "The LAO estimated Prop 15 would have raised $6.5 billion to $11.5 billion per year for local governments and schools once fully phased in (around 2025).",
+          "Of that revenue, roughly 60% would have gone to cities, counties, and special districts and 40% to schools and community colleges (LAO).",
+          "Prop 15 exempted residential property entirely and would have exempted small businesses with $3 million or less in California commercial holdings, plus up to $500,000 of business equipment.",
+          "Prop 15 failed statewide 51.9% to 48.1% in November 2020."
+        ],
+        "comparison": "California is unusual in applying the same acquisition-value cap to commercial and residential property; most states reassess all property toward current market value periodically, so long-held California commercial parcels can be taxed far below comparable recently-sold properties.",
+        "arguments_for_change": "Proponents of a commercial split-roll argue that Prop 13's acquisition-value rule lets long-held commercial property — office towers, malls, large industrial sites — be taxed on decades-old values, shifting the property-tax burden toward newer owners and homeowners. They point to the LAO's $6.5–$11.5 billion annual revenue estimate as stable funding for schools and local services, and contend that reassessing business property to market value, while shielding homeowners and small businesses, corrects a distortion without touching residential protections.",
+        "arguments_against_change": "Opponents argue that higher commercial property taxes are passed through to tenants — small businesses, restaurants, and renters — and ultimately to consumers, raising costs across the economy. They warn that frequent market-value reassessment is administratively complex and litigation-prone, that it would hit businesses during downturns when values and rents are volatile, and that weakening Prop 13 for any property class invites later erosion of residential protections, undermining the predictability voters enacted in 1978.",
+        "note_on_options": "The scale is a clean gradient: option 1 strengthens Prop 13 protections for commercial property, option 3 is a targeted reform applying only to very large holdings (the small-business carve-out model from Prop 15), and option 5 is a full market-value split-roll. Residential Prop 13 protections are not at issue here — every option leaves them intact.",
+        "sources": [
+          {
+            "title": "LAO — Proposition 15 (2020) ballot analysis",
+            "url": "https://lao.ca.gov/BallotAnalysis/Proposition?number=15&year=2020"
+          },
+          {
+            "title": "LAO — Common Claims About Proposition 13",
+            "url": "https://lao.ca.gov/Publications/Report/3497"
+          }
+        ]
+      }
     },
     {
       "id": "prop13_residential",
@@ -867,7 +999,39 @@
           "value": 5,
           "label": "Full state takeover of investor-owned utilities"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California's three large investor-owned utilities (PG&E, SCE, SDG&E) charge among the nation's highest electricity rates — EIA puts the statewide average around 27 cents/kWh, second only to Hawaii. PG&E residential rates rose roughly 50% from 2020 to 2024, driven heavily by wildfire-mitigation and grid-hardening cost recovery approved by the CPUC. In May 2024 the CPUC, implementing AB 205 (2022), adopted an income-graduated fixed charge: about $24.15/month for most customers (with $6 and $12 tiers for CARE/FERA low-income enrollees), paired with a projected 5–7 cents/kWh reduction in the per-kWh (volumetric) rate; it begins appearing on PG&E bills in early 2026.",
+        "key_facts": [
+          "California's average retail electricity price is ~27 cents/kWh per EIA — 2nd-highest among states, behind Hawaii.",
+          "PG&E residential rates rose roughly 50% from 2020 to 2024; CARE-enrolled households saw even steeper increases.",
+          "The CPUC's May 2024 income-graduated fixed charge is ~$24.15/month (reduced to $6/$12 for low-income tiers), offsetting a 5–7 cents/kWh cut to volumetric rates; rolling out 2025–26.",
+          "Wildfire-mitigation and grid-hardening spending is a leading driver of recent rate increases approved in IOU general rate cases.",
+          "Public utilities such as SMUD (Sacramento) and LADWP typically charge well below IOU rates, fueling debate over public-power alternatives."
+        ],
+        "comparison": "California's IOU rates far exceed the US average (around 17 cents/kWh) and most peer states; only Hawaii is consistently higher. Its income-graduated fixed charge is a first-in-the-nation approach to tying a portion of the bill to household income rather than usage.",
+        "arguments_for_change": "Proponents of stronger consumer protection argue that IOU rates have risen far faster than inflation while utilities earn guaranteed shareholder returns; that the CPUC too readily passes wildfire and infrastructure costs to ratepayers; that high rates undercut the electrification the state is mandating; and that public-power models like SMUD deliver lower rates, suggesting structural reform or municipalization could cut bills.",
+        "arguments_against_change": "Proponents of cost-recovery argue that wildfire hardening, grid upgrades, and storm resilience are real and necessary costs that someone must pay, and underfunding them risks blackouts and catastrophic fires; that utilities need predictable returns to attract the capital for those investments; that aggressive rate caps could degrade reliability or shift costs to taxpayers; and that targeted subsidies (CARE/FERA) and the new fixed charge already protect low-income customers without overhauling the system.",
+        "note_on_options": "This is a balancing scale, not a simple more/less axis: option 1 favors utility financial health and full cost recovery, option 5 favors aggressive consumer relief (rate cuts, equity adjustments, public power). The income-graduated fixed charge is contested across the spectrum — some see it as equity-promoting (higher end), others as a new fixed cost that weakens conservation incentives (lower end).",
+        "sources": [
+          {
+            "title": "EIA — California State Energy Profile (rates and ranking)",
+            "url": "https://www.eia.gov/electricity/state/california/"
+          },
+          {
+            "title": "Utility Dive — CPUC approves income-based fixed charge",
+            "url": "https://www.utilitydive.com/news/california-puc-approves-income-based-fixed-charge/715748/"
+          },
+          {
+            "title": "CPUC — AB 205 Fact Sheet (income-graduated fixed charge)",
+            "url": "https://www.cpuc.ca.gov/-/media/cpuc-website/divisions/energy-division/documents/demand-response/demand-flexibility-oir/ab205_factsheet_050824.pdf"
+          },
+          {
+            "title": "California Choice Energy Authority — Income Graduated Fixed Charge update",
+            "url": "https://californiachoiceenergyauthority.com/income-graduated-fixed-charge-update/"
+          }
+        ]
+      }
     },
     {
       "id": "gas_tax",
@@ -957,7 +1121,39 @@
           "value": 5,
           "label": "Substantially shift funding from policing to community services"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California has enacted a series of policing-accountability laws while leaving most funding and charging decisions to local agencies and elected DAs. AB 392 (2019) raised the legal standard for police use of deadly force to when 'necessary' to defend against an imminent threat, replacing the older 'reasonable' standard. SB 2 (2021), the Kenneth Ross Jr. Police Decertification Act, created a statewide POST process to decertify officers for serious misconduct and report separations to a national index. AB 1506 (2020) requires the state Department of Justice to investigate police shootings of unarmed civilians that result in death. State prison population has fallen sharply since the 2011 Realignment (AB 109) shifted lower-level felons to counties.",
+        "key_facts": [
+          "AB 392 (2019) set a 'necessary' standard for police deadly force, among the stricter use-of-force statutes in the country.",
+          "SB 2 (2021) gave POST authority to decertify officers for serious misconduct; decertified officers are barred from rehire and listed on the National Decertification Index.",
+          "AB 1506 (2020) mandates state DOJ investigation of fatal police shootings of unarmed civilians.",
+          "CDCR's prison population fell to about 90,600 by December 2025 — roughly 27% below December 2019 — after the 2011 Realignment (AB 109) and pandemic-era reductions; the state has closed multiple prisons.",
+          "California's imprisonment rate was about 294 per 100,000 adults in 2025, down from a peak of over 173,000 total prisoners in 2006; police staffing and funding are set locally, so a governor's direct control is limited."
+        ],
+        "comparison": "California's use-of-force ('necessary') standard and statewide decertification system are stronger than those in many states, though states like Colorado and New Jersey adopted comparable post-2020 reforms. Its imprisonment rate sits near or modestly below the national average and well below high-incarceration states such as Mississippi, Louisiana, and Texas.",
+        "arguments_for_change": "Proponents of decarceration and alternatives to incarceration argue that California's prison population fell substantially after Realignment without a sustained increase in violent crime, suggesting many people can be safely supervised in communities; that diversion, mental-health and substance-use treatment, and reentry programs address root causes more cost-effectively than incarceration; and that strong accountability rules (AB 392, SB 2) build community trust and reduce costly misconduct.",
+        "arguments_against_change": "Proponents of more funding and stricter penalties argue that adequate police staffing and clear consequences deter crime and reassure victims; that some categories of offending rose during the period of reform and that visible enforcement is needed for public confidence; and that accountability mandates and reduced incarceration, if not paired with sufficient policing and supervision resources, can strain departments and let repeat offenders cycle through. They contend public safety should not be traded for lower incarceration numbers.",
+        "note_on_options": "Policing budgets and most charging decisions are local, so a governor's levers are statewide standards, CDCR operations, prison capacity, grants, and bill signings. Stance 1 (more funding, stricter penalties) and stance 5 (decarceration, alternatives) describe direction and emphasis a governor can push, not unilateral control over local police forces or county jails.",
+        "sources": [
+          {
+            "title": "AB 392 (2019) — peace officers: deadly force — full text",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201920200AB392"
+          },
+          {
+            "title": "SB 2 (2021) — peace officer decertification — full text",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB2"
+          },
+          {
+            "title": "CA POST — Peace Officer Decertification",
+            "url": "https://post.ca.gov/Decertification"
+          },
+          {
+            "title": "PPIC — California's Prison Population",
+            "url": "https://www.ppic.org/publication/californias-prison-population/"
+          }
+        ]
+      }
     },
     {
       "id": "prop36_47",
@@ -987,7 +1183,39 @@
           "value": 5,
           "label": "Restore Prop 47 in full; expand diversion programs"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "Proposition 47 (Nov 2014) reclassified several nonviolent drug-possession and theft offenses from felonies to misdemeanors, including setting the felony shoplifting/theft threshold at $950, and redirected the savings to treatment and victim programs. Proposition 36 (Nov 2024), which passed roughly 70%-30% and took effect December 18, 2024, partially rolled this back: it allows felony charges for petty theft with two or more prior theft convictions, lets values from multiple incidents be aggregated past the $950 line, increases penalties for certain fentanyl and other drug offenses, and creates a 'treatment-mandated felony' giving repeat drug offenders a choice between treatment and incarceration.",
+        "key_facts": [
+          "Prop 47 (2014) set the felony theft threshold at $950 and reduced certain drug-possession and theft felonies to misdemeanors.",
+          "Prop 36 (2024) passed about 70% to 30% and took effect December 18, 2024.",
+          "Prop 36 permits felony charges for theft under $950 when the person has two or more prior theft convictions, and allows aggregating values across incidents.",
+          "Per PPIC, California's 2024 property-crime rate fell about 9.9% to roughly 2,084 per 100,000 — its lowest since 1985 — while reported shoplifting rose about 14.2% (combined retail theft up ~3%); these trends predate Prop 36's implementation.",
+          "PPIC research attributes the post-2019 retail-theft rise more to pandemic-era criminal-justice responses than to Prop 47 itself, and finds higher likelihood of apprehension deters crime more than longer sentences."
+        ],
+        "comparison": "California's $950 felony-theft threshold was, after Prop 47, in the middle of the national range — higher than states like New Jersey ($200) and Texas (which uses graduated tiers around $2,500 for higher felonies) but lower than Texas's misdemeanor ceiling; Prop 36 narrowed it for repeat offenders rather than lowering the dollar figure. Many states reconsidered theft and drug-sentencing thresholds in the 2020s.",
+        "arguments_for_change": "Proponents of restoring or expanding Prop 47 argue that property crime reached multi-decade lows in 2024 even before Prop 36 took effect, that reduced incarceration freed funds for treatment and victim services, and that PPIC and other research find certainty of apprehension deters crime more than longer sentences — so further decriminalization and diversion would reduce incarceration without raising crime.",
+        "arguments_against_change": "Proponents of further rollback argue that reported shoplifting and certain retail thefts kept rising after 2019 and that the $950 misdemeanor line let repeat offenders avoid meaningful consequences; that Prop 36's nearly 70% approval reflects broad public concern about open-air drug use and theft; and that felony exposure for repeat offenders and treatment-mandated felonies create leverage to push chronic offenders into treatment and deter organized retail crime.",
+        "note_on_options": "Both measures were enacted by voters, so most changes to Prop 36 or Prop 47 require another ballot measure or a high legislative threshold — a governor mainly shapes implementation, funding, and DA/CDCR guidance and can advocate for or against future measures. Crime-trend data is genuinely contested: property crime fell in 2024 while shoplifting rose, and analysts disagree on how much Prop 47 versus pandemic-era factors drove the changes.",
+        "sources": [
+          {
+            "title": "PPIC — Crime after Proposition 47 and the Pandemic",
+            "url": "https://www.ppic.org/publication/crime-after-proposition-47-and-the-pandemic/"
+          },
+          {
+            "title": "PPIC — Crime Trends in California",
+            "url": "https://www.ppic.org/publication/crime-trends-in-california/"
+          },
+          {
+            "title": "CalMatters — Why California voters backed Prop. 36",
+            "url": "https://calmatters.org/justice/2024/11/retail-theft-proposition-36-election/"
+          },
+          {
+            "title": "LAO — Proposition 36 (2024) analysis",
+            "url": "https://lao.ca.gov/ballot/2024/Prop36-110524.pdf"
+          }
+        ]
+      }
     },
     {
       "id": "sanctuary",
@@ -1017,7 +1245,39 @@
           "value": 5,
           "label": "Major expansion — state-level immigration protections including state ID"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California's baseline is the California Values Act (SB 54, 2017, Chapter 495), effective January 1, 2018, which bars state and local agencies from using their personnel or funds for federal civil immigration enforcement — including honoring ICE detainer (hold) requests, making arrests on civil immigration warrants, or entering 287(g) deputization agreements. SB 54 carves out exceptions: jails may notify ICE of release dates or transfer custody for people convicted of certain serious or violent felonies listed in Government Code 7282.5. The TRUTH Act (AB 2792, 2016) requires that detained individuals be notified of and consent to ICE interviews, and that local governments hold a public forum if they give ICE access. CDCR is partially excluded from SB 54 by Government Code 7284.4 and operates under separate notification rules.",
+        "key_facts": [
+          "SB 54 took effect Jan 1, 2018; the Trump administration's challenge was dismissed, the Ninth Circuit affirmed, and the US Supreme Court declined review — leaving the law intact.",
+          "287(g) agreements, which deputize local officers for immigration enforcement, are prohibited for California agencies under SB 54; a 2025 attempt by Shasta County's sheriff was paused over state-law conflict.",
+          "SB 54 exceptions (Gov. Code 7282.5) permit ICE notification/transfer for individuals convicted of specified serious or violent felonies, not for civil-status-only cases.",
+          "The TRUTH Act (2016) guarantees a consent advisory before ICE jail interviews and requires a public community forum when local agencies grant ICE access.",
+          "Sanctuary policy is set largely by statute, so a governor's leverage runs through enforcement guidance, AG litigation posture, CDCR rules, and signing or vetoing new bills rather than direct repeal."
+        ],
+        "comparison": "California is among the most restrictive states on local immigration cooperation, alongside Illinois (TRUST Act) and several others; by contrast, states such as Texas (SB 4) and Florida affirmatively require local cooperation with ICE and ban sanctuary policies. The federal 287(g) program had agreements with roughly 1,600 agencies nationally by 2026, almost none in California.",
+        "arguments_for_change": "Proponents of expanding sanctuary protections argue that limiting local entanglement with ICE preserves community trust so immigrant victims and witnesses will report crimes; that detainers without judicial warrants raise Fourth Amendment concerns and expose counties to liability; and that the existing felony carve-outs already allow cooperation in the most serious cases, so further protections (e.g., narrowing data sharing or limiting ICE access to courthouses, schools, and hospitals) target only civil enforcement.",
+        "arguments_against_change": "Proponents of fuller cooperation with ICE argue that releasing individuals subject to detainers — including some with prior criminal records that fall outside the carve-outs — can return people to communities who federal authorities believe are removable; that coordinated transfers from custody are safer for officers and the public than at-large arrests; and that immigration enforcement is a federal responsibility the state should not obstruct. They contend declining detainers undermines public safety and federal-state cooperation.",
+        "note_on_options": "Because SB 54 is statute and was upheld in court, the realistic range for a governor runs from enforcement/guidance that maximizes the felony carve-outs (lower end) to signing bills that narrow data sharing or ICE facility access (higher end). Wholesale repeal (well below stance 1) or fully abolishing all cooperation (above stance 5) would require legislative action a governor cannot take alone.",
+        "sources": [
+          {
+            "title": "California Values Act (SB 54, 2017) — full text",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201720180SB54"
+          },
+          {
+            "title": "CDCR — Interaction with U.S. Immigration and Customs Enforcement",
+            "url": "https://www.cdcr.ca.gov/interaction-with-the-u-s-immigration-and-customs-enforcement/"
+          },
+          {
+            "title": "TRUTH Act (AB 2792, 2016) — full text",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160AB2792"
+          },
+          {
+            "title": "ICE — Delegation of Immigration Authority Section 287(g)",
+            "url": "https://www.ice.gov/identify-and-arrest/287g"
+          }
+        ]
+      }
     },
     {
       "id": "decarbonization",
@@ -1107,7 +1367,39 @@
           "value": 5,
           "label": "Aggressive natural gas phase-out across all sectors"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California still relies on natural gas for roughly 40% of in-state electricity generation and for heating in most of its ~14 million housing units, but state policy is steering new buildings toward electrification. The 2022 CARB State Implementation Plan set a goal that 100% of new residential and commercial space and water heaters sold be zero-emission by 2030 (residential) and 2035 (commercial); CARB's binding zero-emission appliance rule to implement that target remains in development and was scaled back in December 2025, with a board vote anticipated in 2026 but no final adoption to date. Dozens of cities passed all-electric new-construction ordinances after Berkeley's 2019 ban, though a 2023 Ninth Circuit ruling (CRA v. Berkeley) found such local gas bans preempted by federal appliance law, pushing the strategy toward building-code and emissions-standard approaches instead.",
+        "key_facts": [
+          "~40% of California's electricity comes from natural gas; gas heats the large majority of the state's homes and water.",
+          "CARB's 2022 plan targets 100% zero-emission new space/water heater sales by 2030 (residential), but the implementing regulation is unadopted and was scaled back in December 2025.",
+          "The 2023 Ninth Circuit CRA v. Berkeley decision held that local natural-gas bans on new construction are preempted by the federal Energy Policy and Conservation Act.",
+          "California offers heat-pump incentives through TECH Clean California and utility programs, with a state goal of 6 million heat pumps installed by 2030.",
+          "Aliso Canyon — site of the 2015–16 SoCalGas methane blowout, the largest in US history — remains in operation; a once-proposed 2027 closure is now expected no earlier than the late 2030s."
+        ],
+        "comparison": "California is among the most aggressive states on building electrification, alongside New York (which enacted a statewide gas ban for most new buildings starting 2026) and Washington. Most states have moved the opposite direction: more than 20 have passed 'preemption' laws barring cities from restricting natural gas hookups.",
+        "arguments_for_change": "Proponents of faster electrification argue that buildings are a major source of greenhouse gas and NOx emissions and that gas combustion indoors raises health concerns; that locking in new gas infrastructure creates stranded-asset risk as the grid decarbonizes; that heat pumps are now more efficient than gas furnaces in most California climates; and that a shrinking gas customer base shifts fixed pipeline costs onto remaining (often lower-income) ratepayers, making an orderly managed transition cheaper than a disorderly one.",
+        "arguments_against_change": "Proponents of keeping gas as a bridge argue that gas provides dispatchable backup when solar and wind are unavailable and helps prevent blackouts during peak demand; that forcing electrification raises upfront costs for households and strains an already expensive grid; that California electricity rates (2nd-highest in the nation) make heat-pump operating savings uncertain; and that abrupt mandates outrun the panel-upgrade and workforce capacity needed to install millions of heat pumps.",
+        "note_on_options": "This scale measures the pace of moving off gas, not whether to decarbonize at all — nearly all candidates accept the state's long-run carbon-neutrality goal. The disagreement is over timeline and mandates (appliance bans, hookup bans, gas-system retirement) versus incentives and voluntary adoption.",
+        "sources": [
+          {
+            "title": "CARB — Zero-Emission Space and Water Heater Standards",
+            "url": "https://ww2.arb.ca.gov/our-work/programs/zero-emission-space-and-water-heater-standards"
+          },
+          {
+            "title": "CARB — Zero-Emission Space and Water Heaters FAQ",
+            "url": "https://ww2.arb.ca.gov/our-work/programs/building-decarbonization/zero-emission-space-and-water-heater-standards/faq"
+          },
+          {
+            "title": "EIA — California State Energy Profile",
+            "url": "https://www.eia.gov/electricity/state/california/"
+          },
+          {
+            "title": "CalMatters — Aliso Canyon expansion / closure timeline",
+            "url": "https://calmatters.org/newsletters/whatmatters/2023/09/aliso-canyon/"
+          }
+        ]
+      }
     },
     {
       "id": "oil_gas",
@@ -1137,7 +1429,39 @@
           "value": 5,
           "label": "Rapid phase-out of in-state extraction"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California permits in-state oil and gas production but has tightened restrictions and is not issuing significant new drilling expansion. SB 1137 (Gonzalez, 2022) bars new or reworked wells within 3,200 feet of homes, schools, hospitals and other 'sensitive receptors'; an oil-industry referendum to repeal it was withdrawn on June 26, 2024, allowing the setback law to take effect rather than going to voters as a 2024 proposition. Production has fallen sharply — California pumped roughly 104 million barrels of crude in 2024, down about 70% from its peak — and CARB's Low Carbon Fuel Standard (amended 2024, effective July 2025) tightens carbon-intensity targets on transportation fuels.",
+        "key_facts": [
+          "SB 1137's 3,200-ft setback took effect June 27, 2024 after the repeal referendum was withdrawn; it was NOT ratified as a Prop 4 ballot measure (a common misconception).",
+          "California produced roughly 104 million barrels of crude in 2024 — down about 70% from peak; the state ranks ~7th among US oil-producing states.",
+          "Kern County accounts for roughly 65–70% of California's in-state oil production.",
+          "California imports the majority of the crude its refineries process — only about a quarter is sourced from in-state production; most arrives by sea or from Alaska.",
+          "CARB's 2024 LCFS amendments (effective July 1, 2025) tightened carbon-intensity standards; CARB estimated a 5–8 cents/gallon near-term price effect, while some academic estimates were higher."
+        ],
+        "comparison": "California is the only major US oil-producing state pairing significant output with an explicit phasedown agenda; Texas, New Mexico, and North Dakota are expanding production. Its 3,200-foot setback is among the largest mandatory drilling buffers in the country.",
+        "arguments_for_change": "Proponents of a faster phaseout argue that oil extraction concentrates air pollution and health harms in low-income and Latino communities near wells; that in-state production is already declining and supplies only a minority of the crude California refines, so a managed shutdown has limited supply impact; that continued drilling is inconsistent with the state's carbon-neutrality target; and that orphaned and idle wells impose cleanup liabilities the state should not keep adding to.",
+        "arguments_against_change": "Proponents of maintaining production argue that in-state oil supports tens of thousands of jobs and a large share of Kern County's tax base; that cutting local supply increases reliance on imported crude (often produced under weaker environmental rules) and exposes drivers to price spikes; that refinery closures already threaten fuel supply and prices; and that abrupt restrictions raise gasoline costs in a state that already has among the nation's highest pump prices.",
+        "note_on_options": "The scale runs from expanding production (1) to rapid statewide phaseout (5). 'Status quo' sits near the middle: California currently allows existing production to continue and decline while restricting new wells near communities. A candidate who supports SB 1137 setbacks but opposes a hard end-date for extraction codes around 3.",
+        "sources": [
+          {
+            "title": "California SB 1137 (Gonzalez, 2022) — bill text",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB1137"
+          },
+          {
+            "title": "CalMatters — Oil well restrictions referendum off the ballot",
+            "url": "https://calmatters.org/environment/2024/06/oil-ballot-california/"
+          },
+          {
+            "title": "EIA — California State Energy Profile",
+            "url": "https://www.eia.gov/electricity/state/california/"
+          },
+          {
+            "title": "CARB — LCFS updates effective July 2025",
+            "url": "https://ww2.arb.ca.gov/news/carb-announces-latest-lcfs-updates-will-be-implemented-next-month"
+          }
+        ]
+      }
     },
     {
       "id": "water_projects",
@@ -1257,7 +1581,43 @@
           "value": 5,
           "label": "Major new funding via dedicated tax or bond"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "K-12 funding is governed by Proposition 98 (1988), which sets a constitutional minimum guarantee for schools and community colleges, and by the Local Control Funding Formula (LCFF, 2013), which routes most state aid through a base grant plus supplemental grants (20% of base) and concentration grants for districts with high shares of low-income students, English learners, and foster youth. For 2024-25 the Prop 98 guarantee was about $115.3 billion total (~$101.1 billion for K-12). California also passed Proposition 2 (Nov 2024), a $10 billion bond for school and community-college facilities.",
+        "key_facts": [
+          "Total per-pupil spending from all sources was about $23,878 for 2024-25 (state estimate), with continued increases projected.",
+          "On comparable Census-based interstate figures, California spent ~$19,894 per pupil in 2022-23, ranking about 13th among states (up from 28th the prior year).",
+          "LCFF (2013) layers supplemental (20% of base) and concentration grants on top of a base grant to direct more money to higher-need districts.",
+          "On 2024 NAEP, California trailed national averages — e.g., grade-4 reading 212 vs. 214, grade-8 reading 254 vs. 257 — though its long-run gap to the nation has narrowed.",
+          "Prop 2 (Nov 2024) authorized $10 billion in bonds for K-12 and community-college facilities; many districts also levy local parcel taxes (two-thirds voter approval)."
+        ],
+        "comparison": "California's per-pupil spending now sits near the upper-middle of states on cost-adjusted measures, but remains below high-spending states like New York. Its NAEP scores still trail national averages, fueling debate over whether the constraint is dollars, how dollars are spent, or accountability.",
+        "arguments_for_change": "Those favoring more funding and stronger local control argue that California's per-pupil spending lags peer high-cost states and that LCFF's supplemental and concentration grants should be deepened to close opportunity gaps for low-income students, English learners, and foster youth. They contend stable, dedicated revenue (a tax or bond) is needed for competitive teacher pay, facilities, and TK expansion, and that local educators — not Sacramento mandates — best know how to spend it.",
+        "arguments_against_change": "Those emphasizing accountability and reform argue that spending has risen substantially since LCFF without commensurate gains on NAEP, so the priority should be transparency about where concentration-grant dollars go and measurable results, not new taxes. They note Prop 98 already guarantees a rising floor, that the budget is volatile and revenue-dependent, and that LCFF's loose spending rules make it hard to verify funds reach the high-need students they target.",
+        "note_on_options": "The scale spans both the funding level (cut to major new revenue) and the state-vs-local control axis. These can diverge: a candidate might favor more local control without a tax increase, or more state-directed equity funding. Our default coding treats support for a dedicated new tax or bond as the strongest value-5 signal and an accountability-first, reform-LCFF posture as value 1.",
+        "sources": [
+          {
+            "title": "LAO — The 2024-25 California Spending Plan: Proposition 98 and K-12 Education",
+            "url": "https://lao.ca.gov/Publications/Report/4929"
+          },
+          {
+            "title": "CDE — Statewide LCFF Summary Data (Principal Apportionment)",
+            "url": "https://www.cde.ca.gov/fg/aa/pa/lcffsumdata.asp"
+          },
+          {
+            "title": "EdSource — California's education funding level rises compared to other states (2026)",
+            "url": "https://edsource.org/2026/california-education-funding-rise/757381"
+          },
+          {
+            "title": "CDE — California NAEP Results",
+            "url": "https://www.cde.ca.gov/ta/tg/nr/caresults.asp"
+          },
+          {
+            "title": "EdSource — Newsom proposes stable California school funding in 2025-26 (per-pupil figures)",
+            "url": "https://edsource.org/2025/gov-newsom-proposes-stable-school-funding-in-2025-26-with-an-ominous-warning/724853"
+          }
+        ]
+      }
     },
     {
       "id": "school_choice",
@@ -1287,7 +1647,43 @@
           "value": 5,
           "label": "Cap or freeze charter growth; redirect funding to public schools"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California has roughly 1,283 operative charter schools plus seven all-charter districts (CDE, May 2024), enrolling about 11.7% of public-school students (2022-23). AB 1505 and AB 1507 (both signed October 2019, operative July 1, 2020) tightened authorization: districts may now weigh fiscal and community impact when denying petitions, charters generally cannot operate sites outside their authorizing district's boundaries, and authorizers may deny renewal of low-performing schools. California has no state-funded private-school voucher or education-savings-account program; the last voucher attempt, Proposition 38 (2000), failed 71% to 29%.",
+        "key_facts": [
+          "~1,283 charter schools and 7 all-charter districts operative in CA (CDE, May 2024); ~11.7% of public enrollment (2022-23).",
+          "AB 1505 (2019) ended the prior near-automatic appeal path and let districts cite fiscal impact and community need when denying or non-renewing charters.",
+          "AB 1507 (2019) barred most new charters from operating resource centers or satellite sites outside their authorizing district.",
+          "Charter enrollment has edged up while non-charter district enrollment has declined, partly tracking statewide enrollment loss.",
+          "Prop 38 (2000), a ~$4,000-per-child voucher initiative, lost 71-29; no statewide voucher has since reached the ballot."
+        ],
+        "comparison": "California is among the more restrictive large states on choice: it has a sizable charter sector but, unlike Arizona, Florida, or Indiana, offers no private-school vouchers or education savings accounts. Its 2019 laws moved against the national trend of expanding private-choice programs.",
+        "arguments_for_change": "Proponents of expansion argue that charters give families — disproportionately lower-income and students of color — options beyond an assigned neighborhood school, and that some charter networks post strong outcomes for those students. They contend AB 1505 gave districts a financial incentive to block competitors, and that vouchers or education savings accounts would extend choice to families who cannot afford private tuition or to move into a high-performing attendance zone.",
+        "arguments_against_change": "Opponents, including the CTA and CSBA, argue charters and vouchers divert per-pupil dollars from district schools that still serve most students and bear fixed costs, and that charter quality is uneven with weaker public oversight. They note research (e.g., Stanford CREDO) finds charter results vary widely by operator and state, and that California voters have repeatedly rejected vouchers as subsidizing private and religious schools with public money.",
+        "note_on_options": "The scale blends two distinct mechanisms: charter policy (a public-school option) and private-school vouchers/ESAs (public funds for private tuition). A candidate can favor charter expansion while opposing vouchers, or vice versa. Our default coding treats support for vouchers as the strongest pro-choice signal (value 1) and a cap-and-redirect posture as the strongest restrictive signal (value 5).",
+        "sources": [
+          {
+            "title": "CDE — Charter Schools in California (CalEdFacts)",
+            "url": "https://www.cde.ca.gov/sp/ch/cefcharterschools.asp"
+          },
+          {
+            "title": "AB 1505 (O'Donnell, 2019) — charter petitions and renewals",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201920200AB1505"
+          },
+          {
+            "title": "AB 1507 (Smith, 2019) — charter schools: location: resource center",
+            "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201920200AB1507"
+          },
+          {
+            "title": "LAO — Proposition 38 (2000): School Vouchers analysis",
+            "url": "https://www.lao.ca.gov/ballot/2000/38_11_2000.html"
+          },
+          {
+            "title": "Ballotpedia — California Proposition 38, School Vouchers Initiative (2000)",
+            "url": "https://ballotpedia.org/California_Proposition_38,_School_Vouchers_Initiative_(2000)"
+          }
+        ]
+      }
     },
     {
       "id": "healthcare_funding",
@@ -1317,7 +1713,39 @@
           "value": 5,
           "label": "State single-payer with broad new taxation (payroll, VAT-style)"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California operates a mixed, market-based health-coverage system with heavy public subsidy rather than a single state-run plan. Covered California is the state's Affordable Care Act marketplace, supplemented by state premium subsidies. Medi-Cal, the state's Medicaid program, expanded to cover all income-eligible undocumented adults as of January 1, 2024, making California the first state to extend full-scope Medicaid to residents regardless of immigration status. Legislative attempts at single-payer have repeatedly failed: AB 1400 / CalCare (Kalra, 2022) was pulled without a floor vote, and its successor AB 2200 (2024) was held in committee.",
+        "key_facts": [
+          "Medi-Cal extended full-scope coverage to all income-eligible adults regardless of immigration status on January 1, 2024 — a first among states.",
+          "AB 1400 (CalCare, Kalra) died January 31, 2022 when the author pulled it short of the 41 Assembly votes needed; its 2024 successor AB 2200 was held in Appropriations.",
+          "Analysts estimated CalCare would cost roughly $314–391 billion per year, far exceeding the state's entire general-fund budget and requiring new payroll, business, and high-income taxes.",
+          "Single-payer financing would require federal Section 1332 and Medicaid/Medicare waivers to redirect federal dollars, and ERISA limits state regulation of self-insured employer plans covering many workers.",
+          "California's uninsured rate fell to roughly 6–7% in recent years, among the lowest historically, driven by ACA subsidies and Medi-Cal expansion rather than a single-payer structure."
+        ],
+        "comparison": "No U.S. state operates a single-payer system; Vermont enacted and then abandoned one in 2014 over financing. California has pursued near-universal coverage through subsidies and Medicaid expansion instead, reaching one of the lowest uninsured rates in the nation while leaving the multi-payer insurance market intact.",
+        "arguments_for_change": "Proponents of moving toward state single-payer (high end) argue that a unified public plan would eliminate insurer overhead, premiums, deductibles, and network restrictions; that some analyses (e.g., a UC Berkeley Labor Center estimate) projected net system savings versus current spending; that covering everyone regardless of employment or immigration status simplifies administration; and that California's size gives it leverage to negotiate prices.",
+        "arguments_against_change": "Proponents of preserving the subsidized market system (low end) argue that single-payer's roughly $300–400 billion annual cost would require steep new taxes with uncertain net savings; that it depends on federal waivers and ERISA carve-outs that may not be granted; that disrupting employer and Medicare coverage that most residents currently have is politically and operationally risky; and that California has already reached near-universal coverage by expanding subsidies and Medi-Cal without that disruption.",
+        "note_on_options": "This scale measures the financing mechanism — from preserving a subsidized private market (1) to a state-run single-payer plan like CalCare (5) — not whether to expand coverage. A candidate can favor broad coverage expansion (e.g., the 2024 Medi-Cal expansion) while opposing single-payer financing; such positions land in the middle of the scale.",
+        "sources": [
+          {
+            "title": "CalMatters — California single-payer plan fails in Legislature (AB 1400)",
+            "url": "https://calmatters.org/politics/2022/02/california-single-payer-legislature/"
+          },
+          {
+            "title": "AB 1400 (Kalra, 2021-22) — Guaranteed Health Care for All",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB1400"
+          },
+          {
+            "title": "KFF — Health Insurance Coverage of the Total Population (California)",
+            "url": "https://www.kff.org/other/state-indicator/total-population/"
+          },
+          {
+            "title": "California Health Care Foundation — Medi-Cal Facts and Figures",
+            "url": "https://www.chcf.org/collection/medi-cal-facts-figures/"
+          }
+        ]
+      }
     },
     {
       "id": "abortion",
@@ -1347,7 +1775,39 @@
           "value": 5,
           "label": "Major expansion — constitutional amendment beyond Prop 1; fund out-of-state patients; broaden providers"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "Abortion is a state constitutional right in California. Proposition 1 (November 2022), approved by about 66% of voters, amended the California Constitution to bar the state from denying or interfering with reproductive freedom, including abortion and contraception. After the U.S. Supreme Court's 2022 Dobbs decision, the Legislature enacted a package of statutes: AB 1242 and AB 2091 (2022) restrict California law enforcement, businesses, and providers from cooperating with out-of-state abortion investigations or disclosing related records, and SB 345 (2023) shields California-licensed providers — including telehealth and medication-abortion providers — from out-of-state prosecution or extradition. Medi-Cal covers abortion at full state cost, and the state has appropriated over $200 million to support abortion access and providers.",
+        "key_facts": [
+          "Proposition 1 (2022) passed with about 66% support, writing an explicit right to abortion and contraception into the state constitution.",
+          "Medi-Cal covers abortion services with the state paying the full cost; private state-regulated insurance plans are generally required to cover abortion.",
+          "California enacted shield laws — AB 1242, AB 2091 (2022) and SB 345 (2023) — protecting in-state providers and patients (including out-of-state patients using telehealth) from cooperation with out-of-state abortion prosecutions.",
+          "The state appropriated more than $200 million across recent budgets to fund abortion access, provider capacity, and patient support such as travel.",
+          "Following Dobbs, California positioned itself as an interstate \"refuge,\" with state-funded support for patients traveling from states with bans."
+        ],
+        "comparison": "California is among the most protective states for abortion access in the post-Dobbs landscape, combining a constitutional right, Medicaid coverage, public funding, and provider shield laws. This contrasts sharply with the more than a dozen states that ban or sharply restrict abortion, and places California in a small group of states explicitly funding and protecting interstate care.",
+        "arguments_for_change": "Proponents of expanding protections further (high end) argue that as more states impose bans, California should serve as an interstate refuge by funding travel and care for out-of-state patients, broadening provider protections and capacity, and pre-empting any future federal restrictions; they argue that legal and financial barriers, not just legality, determine real access, so the state should fund and shield care aggressively.",
+        "arguments_against_change": "Proponents of some restrictions or of not expanding further (low end) argue on moral or religious grounds that abortion should face limits such as gestational thresholds; that public funds should not finance abortion or out-of-state patients' care; and that state shield laws and refuge funding draw California into conflicts with other states' laws and over-extend taxpayer commitments. Within California's electorate this is a minority position given Prop 1's 66% margin.",
+        "note_on_options": "This scale runs from supporting some restrictions on access (1) to an expansive state-funded interstate refuge with broad provider protections (5). Given California's constitutional right and lopsided 2022 vote, most viable candidates cluster toward the protective end; the differentiating questions are about how far to fund interstate care and shield providers, not whether abortion is legal in-state.",
+        "sources": [
+          {
+            "title": "LAO — Proposition 1 (2022) Ballot Analysis",
+            "url": "https://lao.ca.gov/BallotAnalysis/Proposition?number=1&year=2022"
+          },
+          {
+            "title": "CalMatters — Prop 1 (2022) Abortion Rights voter guide",
+            "url": "https://calmatters.org/california-voter-guide-2022/propositions/prop-1-abortion-rights/"
+          },
+          {
+            "title": "California Attorney General / OSG — Reproductive Rights",
+            "url": "https://osg.ca.gov/reprorights/"
+          },
+          {
+            "title": "California abortion.ca.gov — What California is doing to protect access",
+            "url": "https://abortion.ca.gov/your-rights/state-action/"
+          }
+        ]
+      }
     },
     {
       "id": "gun_policy",
@@ -1377,7 +1837,39 @@
           "value": 5,
           "label": "Major expansion of restrictions (registry, supply controls, additional bans)"
         }
-      ]
+      ],
+      "voter_guide": {
+        "current_policy": "California has among the most restrictive firearm laws in the nation. The Roberti-Roos Assault Weapons Control Act (1989) and later additions ban many semiautomatic 'assault weapons,' and the state limits magazines to 10 rounds. After NYSRPA v. Bruen (2022) struck down discretionary 'good cause' permitting, SB 2 (2023, effective Jan 1, 2024) moved California to objective 'shall-issue' concealed-carry licensing with a 16-hour training requirement and a long list of 'sensitive places' where carry is barred even with a permit. AB 28 (2023, effective 2024) added an 11% state excise tax on firearm and ammunition sales to fund violence-prevention and school-safety programs.",
+        "key_facts": [
+          "California has banned 'assault weapons' since the 1989 Roberti-Roos Act and limits magazine capacity to 10 rounds.",
+          "SB 2 (effective Jan 1, 2024) preserved shall-issue permits post-Bruen but designated ~26 categories of 'sensitive places'; the Ninth Circuit in 2025 partly upheld and partly blocked the location bans pending litigation.",
+          "AB 28's 11% firearm/ammunition excise tax (effective 2024) is projected at roughly $160 million annually for violence-prevention and school-safety programs; it faces an unresolved court challenge.",
+          "Microstamping and other supply-side requirements (e.g., SB 452, 2023) remain on the books, though some provisions are tied to feasibility findings.",
+          "Multiple California gun statutes are in active Ninth Circuit litigation under the Bruen 'history and tradition' test, so the enforceable scope shifts with court rulings."
+        ],
+        "comparison": "Independent and advocacy scorecards consistently rank California's gun laws the strictest or near-strictest in the country, alongside Massachusetts, New York, Illinois, and Connecticut. By contrast, constitutional-carry states such as Texas, Arizona, and Idaho require no permit to carry concealed and have far fewer restrictions on magazines and rifle types.",
+        "arguments_for_change": "Proponents of additional restrictions argue that states with stronger gun laws tend to report lower firearm-death rates, and that measures like the assault-weapon and magazine limits, the SB 2 sensitive-places list, and the AB 28 excise tax reduce gun availability in high-risk settings while funding prevention. They contend that closing remaining gaps — and defending existing laws in court — saves lives and that the Second Amendment permits reasonable regulation.",
+        "arguments_against_change": "Opponents of further restrictions argue that California already has the nation's strictest regime yet still experiences gun crime, suggesting marginal returns are low; that post-Bruen rulings show several provisions may be unconstitutional and invite costly litigation; that broad sensitive-place bans and an excise tax burden law-abiding owners and shift carry rights based on geography; and that enforcement resources are better aimed at illegal trafficking and prohibited possessors than at lawful purchasers.",
+        "note_on_options": "Much of California's gun law is shaped by Ninth Circuit and Supreme Court litigation, so a governor's practical range runs from defending or narrowing existing rules in light of court rulings (lower end) to signing new restrictions and aggressively defending them (higher end). 'Rolling back' (stance 1) would primarily mean declining to defend or signing repeals, both constrained by the Legislature.",
+        "sources": [
+          {
+            "title": "CA DOJ — New Firearm/Weapon Laws",
+            "url": "https://oag.ca.gov/ogvp/new-firearm-law"
+          },
+          {
+            "title": "SB 2 (2023) — concealed-carry licensing — full text",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB2"
+          },
+          {
+            "title": "AB 28 (2023) — firearm/ammunition excise tax — full text",
+            "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB28"
+          },
+          {
+            "title": "RAND — The Science of Gun Policy",
+            "url": "https://www.rand.org/research/gun-policy.html"
+          }
+        ]
+      }
     }
   ],
   "personal_fit_dimensions": [

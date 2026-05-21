@@ -122,6 +122,7 @@ function renderPolicyQuestion() {
   const q = state.questions[state.pIdx];
   $("#pq-title").textContent = q.name;
   $("#pq-desc").textContent = q.short_description;
+  renderVoterGuide(q);
   const optsEl = $("#pq-options");
   optsEl.innerHTML = "";
   let selected = null;
@@ -167,6 +168,55 @@ function advancePolicy() {
   state.pIdx += 1;
   if (state.pIdx >= state.questions.length) return startPersonalPhase();
   renderPolicyQuestion();
+}
+
+function renderVoterGuide(q) {
+  const wrap = $("#pq-voter-guide");
+  const body = wrap.querySelector(".voter-guide-body");
+  const vg = q.voter_guide;
+  if (!vg) {
+    wrap.classList.add("hidden");
+    body.innerHTML = "";
+    wrap.open = false;
+    return;
+  }
+  wrap.classList.remove("hidden");
+  // Always start collapsed on a fresh question; the user can expand.
+  wrap.open = false;
+  const sections = [];
+  if (vg.current_policy) {
+    sections.push(`<div class="vg-section"><h4>Current California policy</h4><p>${escapeHtml(vg.current_policy)}</p></div>`);
+  }
+  if (Array.isArray(vg.key_facts) && vg.key_facts.length) {
+    sections.push(`<div class="vg-section"><h4>Key facts</h4><ul>${vg.key_facts.map((f) => `<li>${escapeHtml(f)}</li>`).join("")}</ul></div>`);
+  }
+  if (vg.comparison) {
+    sections.push(`<div class="vg-section"><h4>How CA compares</h4><p>${escapeHtml(vg.comparison)}</p></div>`);
+  }
+  const hasArgs = vg.arguments_for_change || vg.arguments_against_change;
+  if (hasArgs) {
+    sections.push(`
+      <div class="vg-args">
+        <div class="vg-arg vg-arg-for">
+          <h4>Arguments for change</h4>
+          <p>${escapeHtml(vg.arguments_for_change ?? "")}</p>
+        </div>
+        <div class="vg-arg vg-arg-against">
+          <h4>Arguments against change</h4>
+          <p>${escapeHtml(vg.arguments_against_change ?? "")}</p>
+        </div>
+      </div>`);
+  }
+  if (vg.note_on_options) {
+    sections.push(`<div class="vg-section vg-note"><h4>Note on the options</h4><p>${escapeHtml(vg.note_on_options)}</p></div>`);
+  }
+  if (Array.isArray(vg.sources) && vg.sources.length) {
+    const items = vg.sources
+      .map((s) => `<li><a href="${escapeAttr(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a></li>`)
+      .join("");
+    sections.push(`<div class="vg-section vg-sources"><h4>Sources</h4><ul>${items}</ul></div>`);
+  }
+  body.innerHTML = sections.join("");
 }
 
 // ---------- Personal-fit phase ----------

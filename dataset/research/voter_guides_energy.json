@@ -1,0 +1,66 @@
+{
+  "researched_on": "2026-05-21",
+  "researcher": "Claude (Opus 4.7) — bulk voter_guide refresh",
+  "issues": {
+    "natgas_bridge": {
+      "current_policy": "California still relies on natural gas for roughly 40% of in-state electricity generation and for heating in most of its ~14 million housing units, but state policy is steering new buildings toward electrification. The 2022 CARB State Implementation Plan set a goal that 100% of new residential and commercial space and water heaters sold be zero-emission by 2030 (residential) and 2035 (commercial); CARB's binding zero-emission appliance rule to implement that target remains in development and was scaled back in December 2025, with a board vote anticipated in 2026 but no final adoption to date. Dozens of cities passed all-electric new-construction ordinances after Berkeley's 2019 ban, though a 2023 Ninth Circuit ruling (CRA v. Berkeley) found such local gas bans preempted by federal appliance law, pushing the strategy toward building-code and emissions-standard approaches instead.",
+      "key_facts": [
+        "~40% of California's electricity comes from natural gas; gas heats the large majority of the state's homes and water.",
+        "CARB's 2022 plan targets 100% zero-emission new space/water heater sales by 2030 (residential), but the implementing regulation is unadopted and was scaled back in December 2025.",
+        "The 2023 Ninth Circuit CRA v. Berkeley decision held that local natural-gas bans on new construction are preempted by the federal Energy Policy and Conservation Act.",
+        "California offers heat-pump incentives through TECH Clean California and utility programs, with a state goal of 6 million heat pumps installed by 2030.",
+        "Aliso Canyon — site of the 2015–16 SoCalGas methane blowout, the largest in US history — remains in operation; a once-proposed 2027 closure is now expected no earlier than the late 2030s."
+      ],
+      "comparison": "California is among the most aggressive states on building electrification, alongside New York (which enacted a statewide gas ban for most new buildings starting 2026) and Washington. Most states have moved the opposite direction: more than 20 have passed 'preemption' laws barring cities from restricting natural gas hookups.",
+      "arguments_for_change": "Proponents of faster electrification argue that buildings are a major source of greenhouse gas and NOx emissions and that gas combustion indoors raises health concerns; that locking in new gas infrastructure creates stranded-asset risk as the grid decarbonizes; that heat pumps are now more efficient than gas furnaces in most California climates; and that a shrinking gas customer base shifts fixed pipeline costs onto remaining (often lower-income) ratepayers, making an orderly managed transition cheaper than a disorderly one.",
+      "arguments_against_change": "Proponents of keeping gas as a bridge argue that gas provides dispatchable backup when solar and wind are unavailable and helps prevent blackouts during peak demand; that forcing electrification raises upfront costs for households and strains an already expensive grid; that California electricity rates (2nd-highest in the nation) make heat-pump operating savings uncertain; and that abrupt mandates outrun the panel-upgrade and workforce capacity needed to install millions of heat pumps.",
+      "note_on_options": "This scale measures the pace of moving off gas, not whether to decarbonize at all — nearly all candidates accept the state's long-run carbon-neutrality goal. The disagreement is over timeline and mandates (appliance bans, hookup bans, gas-system retirement) versus incentives and voluntary adoption.",
+      "sources": [
+        { "title": "CARB — Zero-Emission Space and Water Heater Standards", "url": "https://ww2.arb.ca.gov/our-work/programs/zero-emission-space-and-water-heater-standards" },
+        { "title": "CARB — Zero-Emission Space and Water Heaters FAQ", "url": "https://ww2.arb.ca.gov/our-work/programs/building-decarbonization/zero-emission-space-and-water-heater-standards/faq" },
+        { "title": "EIA — California State Energy Profile", "url": "https://www.eia.gov/electricity/state/california/" },
+        { "title": "CalMatters — Aliso Canyon expansion / closure timeline", "url": "https://calmatters.org/newsletters/whatmatters/2023/09/aliso-canyon/" }
+      ]
+    },
+    "oil_gas": {
+      "current_policy": "California permits in-state oil and gas production but has tightened restrictions and is not issuing significant new drilling expansion. SB 1137 (Gonzalez, 2022) bars new or reworked wells within 3,200 feet of homes, schools, hospitals and other 'sensitive receptors'; an oil-industry referendum to repeal it was withdrawn on June 26, 2024, allowing the setback law to take effect rather than going to voters as a 2024 proposition. Production has fallen sharply — California pumped roughly 104 million barrels of crude in 2024, down about 70% from its peak — and CARB's Low Carbon Fuel Standard (amended 2024, effective July 2025) tightens carbon-intensity targets on transportation fuels.",
+      "key_facts": [
+        "SB 1137's 3,200-ft setback took effect June 27, 2024 after the repeal referendum was withdrawn; it was NOT ratified as a Prop 4 ballot measure (a common misconception).",
+        "California produced roughly 104 million barrels of crude in 2024 — down about 70% from peak; the state ranks ~7th among US oil-producing states.",
+        "Kern County accounts for roughly 65–70% of California's in-state oil production.",
+        "California imports the majority of the crude its refineries process — only about a quarter is sourced from in-state production; most arrives by sea or from Alaska.",
+        "CARB's 2024 LCFS amendments (effective July 1, 2025) tightened carbon-intensity standards; CARB estimated a 5–8 cents/gallon near-term price effect, while some academic estimates were higher."
+      ],
+      "comparison": "California is the only major US oil-producing state pairing significant output with an explicit phasedown agenda; Texas, New Mexico, and North Dakota are expanding production. Its 3,200-foot setback is among the largest mandatory drilling buffers in the country.",
+      "arguments_for_change": "Proponents of a faster phaseout argue that oil extraction concentrates air pollution and health harms in low-income and Latino communities near wells; that in-state production is already declining and supplies only a minority of the crude California refines, so a managed shutdown has limited supply impact; that continued drilling is inconsistent with the state's carbon-neutrality target; and that orphaned and idle wells impose cleanup liabilities the state should not keep adding to.",
+      "arguments_against_change": "Proponents of maintaining production argue that in-state oil supports tens of thousands of jobs and a large share of Kern County's tax base; that cutting local supply increases reliance on imported crude (often produced under weaker environmental rules) and exposes drivers to price spikes; that refinery closures already threaten fuel supply and prices; and that abrupt restrictions raise gasoline costs in a state that already has among the nation's highest pump prices.",
+      "note_on_options": "The scale runs from expanding production (1) to rapid statewide phaseout (5). 'Status quo' sits near the middle: California currently allows existing production to continue and decline while restricting new wells near communities. A candidate who supports SB 1137 setbacks but opposes a hard end-date for extraction codes around 3.",
+      "sources": [
+        { "title": "California SB 1137 (Gonzalez, 2022) — bill text", "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB1137" },
+        { "title": "CalMatters — Oil well restrictions referendum off the ballot", "url": "https://calmatters.org/environment/2024/06/oil-ballot-california/" },
+        { "title": "EIA — California State Energy Profile", "url": "https://www.eia.gov/electricity/state/california/" },
+        { "title": "CARB — LCFS updates effective July 2025", "url": "https://ww2.arb.ca.gov/news/carb-announces-latest-lcfs-updates-will-be-implemented-next-month" }
+      ]
+    },
+    "utility_rates": {
+      "current_policy": "California's three large investor-owned utilities (PG&E, SCE, SDG&E) charge among the nation's highest electricity rates — EIA puts the statewide average around 27 cents/kWh, second only to Hawaii. PG&E residential rates rose roughly 50% from 2020 to 2024, driven heavily by wildfire-mitigation and grid-hardening cost recovery approved by the CPUC. In May 2024 the CPUC, implementing AB 205 (2022), adopted an income-graduated fixed charge: about $24.15/month for most customers (with $6 and $12 tiers for CARE/FERA low-income enrollees), paired with a projected 5–7 cents/kWh reduction in the per-kWh (volumetric) rate; it begins appearing on PG&E bills in early 2026.",
+      "key_facts": [
+        "California's average retail electricity price is ~27 cents/kWh per EIA — 2nd-highest among states, behind Hawaii.",
+        "PG&E residential rates rose roughly 50% from 2020 to 2024; CARE-enrolled households saw even steeper increases.",
+        "The CPUC's May 2024 income-graduated fixed charge is ~$24.15/month (reduced to $6/$12 for low-income tiers), offsetting a 5–7 cents/kWh cut to volumetric rates; rolling out 2025–26.",
+        "Wildfire-mitigation and grid-hardening spending is a leading driver of recent rate increases approved in IOU general rate cases.",
+        "Public utilities such as SMUD (Sacramento) and LADWP typically charge well below IOU rates, fueling debate over public-power alternatives."
+      ],
+      "comparison": "California's IOU rates far exceed the US average (around 17 cents/kWh) and most peer states; only Hawaii is consistently higher. Its income-graduated fixed charge is a first-in-the-nation approach to tying a portion of the bill to household income rather than usage.",
+      "arguments_for_change": "Proponents of stronger consumer protection argue that IOU rates have risen far faster than inflation while utilities earn guaranteed shareholder returns; that the CPUC too readily passes wildfire and infrastructure costs to ratepayers; that high rates undercut the electrification the state is mandating; and that public-power models like SMUD deliver lower rates, suggesting structural reform or municipalization could cut bills.",
+      "arguments_against_change": "Proponents of cost-recovery argue that wildfire hardening, grid upgrades, and storm resilience are real and necessary costs that someone must pay, and underfunding them risks blackouts and catastrophic fires; that utilities need predictable returns to attract the capital for those investments; that aggressive rate caps could degrade reliability or shift costs to taxpayers; and that targeted subsidies (CARE/FERA) and the new fixed charge already protect low-income customers without overhauling the system.",
+      "note_on_options": "This is a balancing scale, not a simple more/less axis: option 1 favors utility financial health and full cost recovery, option 5 favors aggressive consumer relief (rate cuts, equity adjustments, public power). The income-graduated fixed charge is contested across the spectrum — some see it as equity-promoting (higher end), others as a new fixed cost that weakens conservation incentives (lower end).",
+      "sources": [
+        { "title": "EIA — California State Energy Profile (rates and ranking)", "url": "https://www.eia.gov/electricity/state/california/" },
+        { "title": "Utility Dive — CPUC approves income-based fixed charge", "url": "https://www.utilitydive.com/news/california-puc-approves-income-based-fixed-charge/715748/" },
+        { "title": "CPUC — AB 205 Fact Sheet (income-graduated fixed charge)", "url": "https://www.cpuc.ca.gov/-/media/cpuc-website/divisions/energy-division/documents/demand-response/demand-flexibility-oir/ab205_factsheet_050824.pdf" },
+        { "title": "California Choice Energy Authority — Income Graduated Fixed Charge update", "url": "https://californiachoiceenergyauthority.com/income-graduated-fixed-charge-update/" }
+      ]
+    }
+  }
+}

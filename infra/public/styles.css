@@ -70,6 +70,68 @@ h4 { font-size: 0.9rem; margin: 8px 0; color: var(--muted); text-transform: uppe
 }
 .row label { color: var(--muted); }
 
+/* Voter guide — modeled after a CA Official Voter Information Guide entry */
+.voter-guide {
+  margin: 8px 0 18px;
+  padding: 10px 16px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-2);
+  border-radius: 8px;
+}
+.voter-guide summary {
+  cursor: pointer;
+  color: var(--accent-2);
+  font-size: 0.95rem;
+  list-style: none;
+  font-weight: 500;
+}
+.voter-guide summary::-webkit-details-marker { display: none; }
+.voter-guide summary::before { content: "▸ "; }
+.voter-guide[open] summary::before { content: "▾ "; }
+.voter-guide-body { margin-top: 14px; }
+.vg-section { margin: 12px 0; }
+.vg-section h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+.vg-section p { margin: 0; font-size: 0.95rem; }
+.vg-section ul { margin: 0; padding-left: 18px; font-size: 0.95rem; }
+.vg-section li { margin: 4px 0; }
+.vg-args {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+.vg-arg {
+  padding: 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.vg-arg h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 0 0 6px;
+}
+.vg-arg-for { border-left: 3px solid var(--accent-3); }
+.vg-arg-for h4 { color: var(--accent-3); }
+.vg-arg-against { border-left: 3px solid var(--warn); }
+.vg-arg-against h4 { color: var(--warn); }
+.vg-arg p { margin: 0; font-size: 0.92rem; }
+.vg-note {
+  padding: 10px 12px;
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+}
+.vg-sources li { font-size: 0.9rem; }
+
 /* Quiz navigation: back on left, skip/next on right */
 .nav-row {
   display: flex;
@@ -295,6 +357,8 @@ footer { margin-top: 32px; }
   #copy-link { width: 100%; }
   /* Importance slider thumb easier to grab */
   .importance input[type="range"] { height: 32px; }
+  /* Stack arguments vertically on phones */
+  .vg-args { grid-template-columns: 1fr; }
 }
 
 /* Reduced motion: kill summary chevron rotation animation */

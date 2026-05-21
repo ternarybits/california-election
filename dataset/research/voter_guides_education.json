@@ -1,0 +1,78 @@
+{
+  "researched_on": "2026-05-21",
+  "researcher": "Claude (Opus 4.7) — bulk voter_guide refresh",
+  "issues": {
+    "school_choice": {
+      "current_policy": "California has roughly 1,283 operative charter schools plus seven all-charter districts (CDE, May 2024), enrolling about 11.7% of public-school students (2022-23). AB 1505 and AB 1507 (both signed October 2019, operative July 1, 2020) tightened authorization: districts may now weigh fiscal and community impact when denying petitions, charters generally cannot operate sites outside their authorizing district's boundaries, and authorizers may deny renewal of low-performing schools. California has no state-funded private-school voucher or education-savings-account program; the last voucher attempt, Proposition 38 (2000), failed 71% to 29%.",
+      "key_facts": [
+        "~1,283 charter schools and 7 all-charter districts operative in CA (CDE, May 2024); ~11.7% of public enrollment (2022-23).",
+        "AB 1505 (2019) ended the prior near-automatic appeal path and let districts cite fiscal impact and community need when denying or non-renewing charters.",
+        "AB 1507 (2019) barred most new charters from operating resource centers or satellite sites outside their authorizing district.",
+        "Charter enrollment has edged up while non-charter district enrollment has declined, partly tracking statewide enrollment loss.",
+        "Prop 38 (2000), a ~$4,000-per-child voucher initiative, lost 71-29; no statewide voucher has since reached the ballot."
+      ],
+      "comparison": "California is among the more restrictive large states on choice: it has a sizable charter sector but, unlike Arizona, Florida, or Indiana, offers no private-school vouchers or education savings accounts. Its 2019 laws moved against the national trend of expanding private-choice programs.",
+      "arguments_for_change": "Proponents of expansion argue that charters give families — disproportionately lower-income and students of color — options beyond an assigned neighborhood school, and that some charter networks post strong outcomes for those students. They contend AB 1505 gave districts a financial incentive to block competitors, and that vouchers or education savings accounts would extend choice to families who cannot afford private tuition or to move into a high-performing attendance zone.",
+      "arguments_against_change": "Opponents, including the CTA and CSBA, argue charters and vouchers divert per-pupil dollars from district schools that still serve most students and bear fixed costs, and that charter quality is uneven with weaker public oversight. They note research (e.g., Stanford CREDO) finds charter results vary widely by operator and state, and that California voters have repeatedly rejected vouchers as subsidizing private and religious schools with public money.",
+      "note_on_options": "The scale blends two distinct mechanisms: charter policy (a public-school option) and private-school vouchers/ESAs (public funds for private tuition). A candidate can favor charter expansion while opposing vouchers, or vice versa. Our default coding treats support for vouchers as the strongest pro-choice signal (value 1) and a cap-and-redirect posture as the strongest restrictive signal (value 5).",
+      "sources": [
+        {
+          "title": "CDE — Charter Schools in California (CalEdFacts)",
+          "url": "https://www.cde.ca.gov/sp/ch/cefcharterschools.asp"
+        },
+        {
+          "title": "AB 1505 (O'Donnell, 2019) — charter petitions and renewals",
+          "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201920200AB1505"
+        },
+        {
+          "title": "AB 1507 (Smith, 2019) — charter schools: location: resource center",
+          "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201920200AB1507"
+        },
+        {
+          "title": "LAO — Proposition 38 (2000): School Vouchers analysis",
+          "url": "https://www.lao.ca.gov/ballot/2000/38_11_2000.html"
+        },
+        {
+          "title": "Ballotpedia — California Proposition 38, School Vouchers Initiative (2000)",
+          "url": "https://ballotpedia.org/California_Proposition_38,_School_Vouchers_Initiative_(2000)"
+        }
+      ]
+    },
+    "school_funding": {
+      "current_policy": "K-12 funding is governed by Proposition 98 (1988), which sets a constitutional minimum guarantee for schools and community colleges, and by the Local Control Funding Formula (LCFF, 2013), which routes most state aid through a base grant plus supplemental grants (20% of base) and concentration grants for districts with high shares of low-income students, English learners, and foster youth. For 2024-25 the Prop 98 guarantee was about $115.3 billion total (~$101.1 billion for K-12). California also passed Proposition 2 (Nov 2024), a $10 billion bond for school and community-college facilities.",
+      "key_facts": [
+        "Total per-pupil spending from all sources was about $23,878 for 2024-25 (state estimate), with continued increases projected.",
+        "On comparable Census-based interstate figures, California spent ~$19,894 per pupil in 2022-23, ranking about 13th among states (up from 28th the prior year).",
+        "LCFF (2013) layers supplemental (20% of base) and concentration grants on top of a base grant to direct more money to higher-need districts.",
+        "On 2024 NAEP, California trailed national averages — e.g., grade-4 reading 212 vs. 214, grade-8 reading 254 vs. 257 — though its long-run gap to the nation has narrowed.",
+        "Prop 2 (Nov 2024) authorized $10 billion in bonds for K-12 and community-college facilities; many districts also levy local parcel taxes (two-thirds voter approval)."
+      ],
+      "comparison": "California's per-pupil spending now sits near the upper-middle of states on cost-adjusted measures, but remains below high-spending states like New York. Its NAEP scores still trail national averages, fueling debate over whether the constraint is dollars, how dollars are spent, or accountability.",
+      "arguments_for_change": "Those favoring more funding and stronger local control argue that California's per-pupil spending lags peer high-cost states and that LCFF's supplemental and concentration grants should be deepened to close opportunity gaps for low-income students, English learners, and foster youth. They contend stable, dedicated revenue (a tax or bond) is needed for competitive teacher pay, facilities, and TK expansion, and that local educators — not Sacramento mandates — best know how to spend it.",
+      "arguments_against_change": "Those emphasizing accountability and reform argue that spending has risen substantially since LCFF without commensurate gains on NAEP, so the priority should be transparency about where concentration-grant dollars go and measurable results, not new taxes. They note Prop 98 already guarantees a rising floor, that the budget is volatile and revenue-dependent, and that LCFF's loose spending rules make it hard to verify funds reach the high-need students they target.",
+      "note_on_options": "The scale spans both the funding level (cut to major new revenue) and the state-vs-local control axis. These can diverge: a candidate might favor more local control without a tax increase, or more state-directed equity funding. Our default coding treats support for a dedicated new tax or bond as the strongest value-5 signal and an accountability-first, reform-LCFF posture as value 1.",
+      "sources": [
+        {
+          "title": "LAO — The 2024-25 California Spending Plan: Proposition 98 and K-12 Education",
+          "url": "https://lao.ca.gov/Publications/Report/4929"
+        },
+        {
+          "title": "CDE — Statewide LCFF Summary Data (Principal Apportionment)",
+          "url": "https://www.cde.ca.gov/fg/aa/pa/lcffsumdata.asp"
+        },
+        {
+          "title": "EdSource — California's education funding level rises compared to other states (2026)",
+          "url": "https://edsource.org/2026/california-education-funding-rise/757381"
+        },
+        {
+          "title": "CDE — California NAEP Results",
+          "url": "https://www.cde.ca.gov/ta/tg/nr/caresults.asp"
+        },
+        {
+          "title": "EdSource — Newsom proposes stable California school funding in 2025-26 (per-pupil figures)",
+          "url": "https://edsource.org/2025/gov-newsom-proposes-stable-school-funding-in-2025-26-with-an-ominous-warning/724853"
+        }
+      ]
+    }
+  }
+}
