@@ -10,7 +10,7 @@ last-updated: 2026-05-21
 **Live at <https://california-election.tedmao.workers.dev>** (Cloudflare Workers + D1).
 
 - **Phase 0 — Research & data**: ✅ Complete. `dataset_v1.json`: 8 candidates × 25 issues = 200 candidate-issue positions, 190 cited from primary sources, 10 honest `"unknown"` entries (`confidence: "insufficient_data"`). Issues ranked by differentiation score; top 15 flagged `default_quiz: true`. The original `tax_top_wealth` issue was later split into `tax_top` + `tax_wealth` (see "Multi-dimensional issue splits" below).
-- **Phase 1 — Quiz MVP**: ✅ Shipped. Deployed on Cloudflare. Two-phase quiz (policy + personal-fit), dual scoring (policy / personal-fit, never blended), inline importance slider, back-navigation, per-question voter-guide context, "see why" receipts with source quotes + per-position flag button, share-link encoding (answers in URL hash), anonymized analytics events (D1), mobile pass, and a landing-page FAQ.
+- **Phase 1 — Quiz MVP**: ✅ Shipped. Deployed on Cloudflare. Two-phase quiz (policy + personal-fit), dual scoring (policy / personal-fit, never blended), inline importance slider, back-navigation (scrolls to top), plain-language prompts/options, an always-shown "Background & arguments" block per question (current policy, key facts, both-sides arguments, sources, "The basics" explainers, and inline links from bill names to the bill text), "see why" receipts with source quotes + a per-position **⚑ flag this** button (top match opens by default), share-link encoding (answers in URL hash), anonymized analytics events (D1), mobile pass, and a landing-page methodology FAQ. The race is named explicitly throughout (June 2, 2026 gubernatorial primary).
 - **Phase 2 — MCP server**: ✅ Largely complete. 7 tools (1 more than PLAN required), stdio transport, smoke test (`mcp/test_tools.mjs`). Tool descriptions tuned, sample prompts + Claude Desktop / Cursor install docs published. Remaining: HTTP/SSE transport for ChatGPT (deferred — small audience).
 - **Phase 3 — Polish & launch**: 🟡 Most deliverables shipped. Done: why-not runner-up panel, what-if explorer, SVG share card, public stats page (D1-backed), voter-guide context on all 15 default questions, Playwright test suite. Remaining: launch posts (drafted in `press/`), custom-domain decision, optional per-result share-card image upgrade (SVG → PNG).
 
@@ -39,6 +39,19 @@ Per the design rule that each ordinal axis should represent one real policy dime
 - **`homelessness` → left as-is.** Enforcement↔services is a genuine single recognized spectrum.
 
 Several scales remain mildly multi-dimensional and carry a voter-facing `note_on_options` explaining the bundled axes (housing, school choice/funding, healthcare financing). Future splits are reversible if the field's differentiation warrants.
+
+## Editorial & accessibility decisions (2026-05-21)
+
+Decisions made while polishing the live quiz, in response to review feedback:
+
+- **Plain language over precision-jargon.** Question prompts and answer options are written for an average voter, not a policy analyst — acronyms and bill shorthand are spelled out or dropped ("SB 54" → "the state's sanctuary law", "split-roll" → "tax at market value", "single-payer" defined inline). The underlying stance scales kept their meaning and order, so candidate codings were unchanged — these were label-only edits.
+- **Context shown by default, not hidden.** The per-question "Background & arguments" block is always open (not a collapsible `<details>`). Rationale: everyone should read the context, so it shouldn't be one click away. The block carries a "The basics" explainer (what a charter school is, what single-payer means, how the Prop 13 cap works, etc.) before the policy detail.
+- **Bills link to their text.** Voter-guide prose uses inline `[label](url)` links so every bill/proposition name is clickable to the actual bill text — verified leginfo / LAO URLs (70 links total). Rendered safely via a small markdown-link parser (`renderProse`, http(s)-only, escaped). Historical statutes predating California's online bill database (e.g. the 1989 Roberti-Roos Act, Prop 13) are left as plain text rather than linked to a fabricated URL.
+- **Flag button surfaced.** The correction affordance lives per-position inside "see why you matched"; the top match's panel now opens by default and each cited position shows a "⚑ flag this" button, so the path the FAQ describes actually exists in front of the user.
+- **Name the race.** Every surface states this is the June 2, 2026 gubernatorial primary, so no one mistakes it for the general election or a different office.
+- **Scroll to top on navigation.** Because the always-open context makes question screens tall, every next/skip/back (and the phase/results transitions) resets scroll to the top.
+
+Content pipeline for the above: research agents wrote per-issue prose into `dataset/research/vg_prose_*.json`; `scripts/merge_voter_guide_prose.mjs` field-patches it into the dataset, preserving `sources` and `note_on_options`. The tax split is reproduced by `scripts/split_tax_issue.mjs`. Differentiation ranking is recomputed by `scripts/score_questions.mjs`.
 
 # California 2026 Gubernatorial Candidate Matcher
 
@@ -352,8 +365,12 @@ infra/
 - [x] Per-position "flag this" button → POST `/api/flag` → D1 → manual sweep into GitHub Issues
 - [x] Aggregate analytics: anonymized response counts → POST `/api/event` → D1; in-UI disclosure
 - [x] Share-link encoding (answers in URL hash; client-side replay)
-- [x] Back-navigation through questions; per-question voter-guide context block
+- [x] Back-navigation through questions (scrolls to top on every move)
+- [x] Plain-language prompts + options for the average voter
+- [x] Always-shown "Background & arguments" per question, with "The basics" explainers and inline bill-text links
+- [x] Flag button surfaced (top match's "see why" opens by default; per-position "⚑ flag this")
 - [x] Landing-page FAQ (methodology, sourcing, corrections, privacy)
+- [x] Race named explicitly throughout (June 2, 2026 gubernatorial primary)
 - [x] Mobile pass: iPhone one-handed (44pt targets, responsive breakpoint)
 - [x] **Output**: live `*.workers.dev` URL, sharable
 
@@ -373,8 +390,8 @@ infra/
 - [x] "Why-not" runner-up analysis ("you matched X; here are the questions where Y would have edged X")
 - [x] What-if explorer ("if you'd answered Q5 differently…")
 - [x] Public stats page (`/stats`): most-divisive questions, response distributions, candidate match-share — D1-backed
-- [x] Voter-guide context (current policy, key facts, comparison, steelmanned arguments, sources) on all 15 default questions
-- [x] Playwright test suite (`infra/tests/`) — landing/FAQ, navigation, full flow, API, mobile, voter-guide
+- [x] Voter-guide context (current policy, key facts, comparison, steelmanned arguments, sources) on all 15 default questions — rewritten in plain language with inline bill-text links (70 links, all verified)
+- [x] Playwright test suite (`infra/tests/`) — landing/FAQ, navigation, full flow, API, mobile, voter-guide (63 passing)
 - [x] Re-research the remaining `"unknown"` positions (no new public statements found in the window; documented)
 - [x] Persona QA + math hand-verification (Steyer 77% / Bianco 93%; hand-computed match confirmed)
 - [ ] Press kit / launch post / Twitter & Bluesky threads — drafted in `press/launch_post.md`, pending launch

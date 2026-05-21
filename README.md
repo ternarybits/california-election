@@ -1,6 +1,6 @@
 # California 2026 Gubernatorial Candidate Matcher
 
-A shareable web experience that helps Californians discover which 2026 gubernatorial candidate best aligns with their values — and *why*. Open dataset, cited sources, three modalities (web quiz, MCP server, AI-mediated deliberation).
+A shareable web experience that helps Californians discover which candidate in the **June 2, 2026 gubernatorial primary** best aligns with their values — and *why*. Open dataset, cited sources, three modalities (web quiz, MCP server, AI-mediated deliberation).
 
 **Status:** Live at **<https://california-election.tedmao.workers.dev>** (Cloudflare Workers + D1). See [`PLAN.md`](./PLAN.md) for the design document.
 
@@ -14,21 +14,23 @@ A shareable web experience that helps Californians discover which 2026 gubernato
 
 ## Modalities
 
-1. **Quick Quiz** — multiple-choice web app. ~3 minutes, ranked results with receipts (per-position source quotes and URLs). Each question carries a collapsible voter-guide block (current CA policy, key facts, steelmanned arguments for/against, sources); the landing page has a methodology FAQ. Results include a why-not runner-up panel, a what-if explorer, a per-position flag button, and a share link that encodes answers in the URL hash (no server state). A public [`/stats`](https://california-election.tedmao.workers.dev/stats) page shows anonymized aggregates.
+1. **Quick Quiz** — multiple-choice web app. ~3 minutes, ranked results with receipts (per-position source quotes and URLs). Questions and options are written in plain language for the average voter. Each question carries an always-shown "Background & arguments" block — current CA policy, key facts, steelmanned arguments for/against, and sources — with bill and proposition names rendered as inline links to the bill text, plus a "The basics" explainer where a term needs defining (charter schools, single-payer, the Prop 13 cap, etc.). The landing page has a methodology FAQ. Results include a why-not runner-up panel, a what-if explorer, a per-position **⚑ flag this** button (the top match's "see why" opens by default), and a share link that encodes answers in the URL hash (no server state). A public [`/stats`](https://california-election.tedmao.workers.dev/stats) page shows anonymized aggregates.
 2. **MCP Server** — exposes the candidate/issue knowledge base to Claude, Cursor (and ChatGPT, once SSE transport ships). Lets power users drive a conversational matching experience in their own agent. Sample prompts in `mcp/README.md`.
 3. **Open dataset** — every candidate position is sourced and citable. PRs and in-app corrections welcome.
 
 ## Principles
 
-- **Differentiation-first.** Every question we ask is one where the candidates actually differ.
-- **Receipts on everything.** Primary-source links and verbatim quotes on every position.
+- **Differentiation-first.** Every question we ask is one where the candidates actually differ. Issues are ranked by a differentiation score; the default quiz is the top 15.
+- **Receipts on everything.** Primary-source links and verbatim quotes on every position; bills linked to their text.
+- **One axis per real dimension.** Multi-dimensional topics are split into separate ordinal questions (e.g. income/corporate rates vs. a wealth tax) rather than force-fit onto one scale.
 - **Two scores, never blended.** Policy match and personal fit shown separately.
+- **Plain language, full context.** Questions read for an average voter; the background and both-sides arguments are shown by default, not hidden behind a toggle.
 - **Transparent math.** No embeddings, no LLM ranking — auditable importance-weighted ordinal agreement. Hand-verifiable.
-- **Open and correctable.** Dataset is public; corrections via PR or in-app flag button.
+- **Open and correctable.** Dataset is public; corrections via PR or in-app flag button. When a candidate hasn't taken a public position, we mark it "unknown" rather than guess.
 
 ## Target
 
-Live ahead of the **June 2026 California primary**.
+Live ahead of the **June 2, 2026 California gubernatorial primary**.
 
 ## Quick start (local)
 
