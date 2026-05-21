@@ -8,9 +8,13 @@ import { test as base, expect } from "@playwright/test";
 // which would otherwise write test rows into production D1 on every run.
 //
 // Guard: unless TEST_URL points at a local dev server, intercept those write
-// endpoints and fulfill them locally so the suite can never pollute prod. When
-// running against localhost we let the writes through, so the write-path tests
-// in api.spec.ts exercise real D1.
+// endpoints on the page and fulfill them locally, so in-page fetches (emitEvent,
+// the flag button) can't pollute prod. When running against localhost we let the
+// writes through, so the write-path tests in api.spec.ts exercise real D1.
+//
+// NOTE: this only covers browser-driven `page` requests. Direct `request`
+// (APIRequestContext) writes bypass page.route — api.spec.ts's request-based
+// write tests must keep self-gating with test.skip(!isLocalTarget).
 const target = process.env.TEST_URL ?? "";
 const isLocalTarget = target !== "" && !/workers\.dev/.test(target);
 

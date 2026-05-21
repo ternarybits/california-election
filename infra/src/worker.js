@@ -476,7 +476,11 @@ export default {
 
     // Content-only per-topic page: /topic/:issue_id
     if (method === "GET" && path.startsWith("/topic/")) {
-      return handleTopicPage(decodeURIComponent(path.slice("/topic/".length)));
+      let issueId;
+      // Malformed percent-encoding (e.g. /topic/%) throws — treat as not found.
+      try { issueId = decodeURIComponent(path.slice("/topic/".length)); }
+      catch { return notFound(); }
+      return handleTopicPage(issueId);
     }
 
     // Convenience: serve the dataset file at a stable open URL for in-browser audit

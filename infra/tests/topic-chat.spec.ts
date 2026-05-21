@@ -48,6 +48,48 @@ test.describe("Ask-AI hand-off on a quiz question", () => {
       expect(decoded).toContain(`/topic/${qId}`);
     }
   });
+
+  test("blank question produces the generic 'help me understand' prompt", async ({ page }) => {
+    await page.route("**/api/event", (route) => route.fulfill({ status: 200, body: '{"ok":true}' }));
+    await page.addInitScript(() => {
+      (window as any).__opened = [];
+      window.open = ((url: string) => { (window as any).__opened.push(url); return null; }) as any;
+    });
+
+    await page.goto("/");
+    await page.getByRole("button", { name: /start the quiz/i }).click();
+    const chat = page.locator("#pq-ask-ai .vg-chat");
+    await expect(chat).toBeVisible();
+
+    // No question typed — just hand off.
+    await chat.locator('.vg-chat-btn[data-target="chatgpt"]').click();
+    const opened: string[] = await page.evaluate(() => (window as any).__opened);
+    expect(opened.length).toBe(1);
+    const decoded = decodeURIComponent(opened[0].split("?q=")[1]);
+    expect(decoded).toMatch(/help me understand/i);
+  });
+
+  test("Copy prompt writes to the clipboard and confirms", async ({ page, context, browserName }) => {
+    test.skip(browserName !== "chromium", "clipboard permissions are chromium-specific here");
+    await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+    await page.route("**/api/event", (route) => route.fulfill({ status: 200, body: '{"ok":true}' }));
+
+    await page.goto("/");
+    await page.getByRole("button", { name: /start the quiz/i }).click();
+    const chat = page.locator("#pq-ask-ai .vg-chat");
+    await expect(chat).toBeVisible();
+
+    const question = "What's the fiscal impact?";
+    await chat.locator(".vg-chat-input").fill(question);
+    const copyBtn = chat.locator('.vg-chat-btn[data-target="copy"]');
+    await copyBtn.click();
+
+    // Button confirms with a checkmark, then reverts.
+    await expect(copyBtn).toHaveText(/copied/i);
+    const clip = await page.evaluate(() => navigator.clipboard.readText());
+    expect(clip).toContain(question);
+    expect(clip).toContain("/topic/");
+  });
 });
 
 test.describe("Content-only topic page", () => {

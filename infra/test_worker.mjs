@@ -199,4 +199,9 @@ const badTopic = await call("GET", "/topic/__nope__");
 if (badTopic.status !== 404) throw new Error(`unknown topic should 404, got ${badTopic.status}`);
 console.log(`✓ GET /topic/:id 404s on unknown issue id`);
 
+// 9c) Malformed percent-encoding 404s rather than throwing an uncaught 500.
+const malformedTopic = await call("GET", "/topic/%");
+if (malformedTopic.status !== 404) throw new Error(`malformed topic id should 404, got ${malformedTopic.status}`);
+console.log(`✓ GET /topic/:id 404s on malformed percent-encoding`);
+
 console.log("\n✓ all infra/test_worker.mjs checks passed.");
