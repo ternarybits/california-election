@@ -521,14 +521,12 @@ function renderResults({ fromShare = false, staleVersion = null } = {}) {
   const shareUrl = makeShareUrl();
   const copyBtn = $("#copy-link");
   copyBtn.onclick = async () => {
-    // Show the link synchronously so it's always available to copy by hand,
-    // even if the async clipboard write is unavailable or blocked.
-    $("#share-status").textContent = shareUrl;
     try {
       await navigator.clipboard.writeText(shareUrl);
-      $("#share-status").textContent = `Copied: ${shareUrl}`;
+      $("#share-status").textContent = "Link copied to clipboard ✓";
     } catch {
-      /* clipboard unavailable — the bare URL is already shown above */
+      // Clipboard blocked — show the bare link so it can be copied by hand.
+      $("#share-status").textContent = shareUrl;
     }
   };
   // Share-card preview link (worker endpoint renders an SVG with the top result).

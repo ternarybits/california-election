@@ -265,6 +265,23 @@ button.primary {
 }
 button.primary:disabled { background: var(--panel-2); color: var(--muted); border-color: var(--border); }
 
+/* Anchor styled as a secondary button (e.g. "preview share card") */
+.btn-link {
+  display: inline-block;
+  background: var(--panel-2);
+  color: var(--accent-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.btn-link:hover { border-color: var(--accent-2); }
+
+/* The share link can be a long unbroken URL (clipboard-blocked fallback) —
+   wrap it so it never runs off the edge of the screen. */
+#share-status { overflow-wrap: anywhere; }
+
 .muted { color: var(--muted); }
 .small { font-size: 0.85rem; }
 

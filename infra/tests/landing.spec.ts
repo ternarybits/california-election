@@ -58,4 +58,9 @@ test.describe("Landing page", () => {
     await expect(dsLink).toHaveAttribute("target", "_blank");
     await expect(dsLink).toHaveAttribute("rel", /noopener/);
   });
+
+  test("footer links to the live stats page", async ({ page }) => {
+    const statsLink = page.locator("footer a", { hasText: /live stats/i });
+    await expect(statsLink).toHaveAttribute("href", "/stats");
+  });
 });

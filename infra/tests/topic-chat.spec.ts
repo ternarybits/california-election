@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 
 // "Ask AI about this topic" hand-off + the content-only /topic/:id page.
 // - Each question has a "Go deeper" box (#pq-ask-ai) with a question input +
