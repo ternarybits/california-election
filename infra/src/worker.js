@@ -165,6 +165,31 @@ function escapeSvg(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
+// SVG <text> has no auto-wrap, so greedily pack words into up to maxLines lines
+// of ~maxChars each. If text remains after the last line, ellipsize it.
+function wrapText(text, maxChars, maxLines) {
+  const words = String(text).split(/\s+/).filter(Boolean);
+  const lines = [""];
+  let truncated = false;
+  for (const w of words) {
+    const i = lines.length - 1;
+    const candidate = lines[i] ? `${lines[i]} ${w}` : w;
+    if (candidate.length <= maxChars) {
+      lines[i] = candidate;
+    } else if (lines.length < maxLines) {
+      lines.push(w);
+    } else {
+      truncated = true;
+      break;
+    }
+  }
+  if (truncated) {
+    const i = lines.length - 1;
+    lines[i] = lines[i].replace(/[;,·\s]+$/, "") + "…";
+  }
+  return lines;
+}
+
 function handleShareCard(url, request) {
   const candidateId = url.searchParams.get("c");
   const pct = Number(url.searchParams.get("p"));
@@ -177,13 +202,18 @@ function handleShareCard(url, request) {
   const matchLine = `${pctRounded}% policy match`;
   const footer = `dataset_${DATASET.version} · snapshot ${DATASET.snapshot_date}`;
 
-  // SVG has no auto-wrap, so size the name to fit the ~1040px text column and
-  // truncate the bio. Name and match-percent go on separate lines (a long name
-  // plus the percent on one line overflowed the card).
+  // SVG has no auto-wrap, so size the name to fit the ~1040px text column. Name
+  // and match-percent go on separate lines (a long name plus the percent on one
+  // line overflowed the card). The bio wraps to up to two lines.
   const FONT = "-apple-system, system-ui, sans-serif";
   const nameFont = Math.max(42, Math.min(76, Math.floor(1040 / Math.max(1, candidate.name.length * 0.6))));
   const bioFull = `${candidate.party} · ${candidate.bio_short ?? ""}`;
-  const bio = bioFull.length > 68 ? bioFull.slice(0, 67).trimEnd() + "…" : bioFull;
+  const bioLines = wrapText(bioFull, 78, 2);
+  const bioSvg = bioLines
+    .map((line, i) => `<text x="80" y="${400 + i * 36}" font-family="${FONT}" font-size="26" fill="#97a3b6">${escapeSvg(line)}</text>`)
+    .join("\n  ");
+  // Push the button below however many bio lines rendered.
+  const buttonY = 400 + bioLines.length * 36 + 12;
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <title>${escapeSvg(docTitle)}</title>
@@ -198,10 +228,10 @@ function handleShareCard(url, request) {
   <text x="80" y="120" font-family="${FONT}" font-size="32" fill="#97a3b6">${escapeSvg(subtitle)}</text>
   <text x="80" y="265" font-family="${FONT}" font-size="${nameFont}" font-weight="700" fill="#e7ecf3">${escapeSvg(candidate.name)}</text>
   <text x="80" y="340" font-family="${FONT}" font-size="46" font-weight="700" fill="#f7c948">${escapeSvg(matchLine)}</text>
-  <text x="80" y="405" font-family="${FONT}" font-size="26" fill="#97a3b6">${escapeSvg(bio)}</text>
-  <rect x="80" y="445" width="300" height="58" rx="8" fill="#f7c948"/>
-  <text x="230" y="482" text-anchor="middle" font-family="${FONT}" font-size="26" font-weight="600" fill="#000">Take the quiz →</text>
-  <text x="80" y="555" font-family="${FONT}" font-size="22" fill="#5b9cf5">${escapeSvg(footer)}</text>
+  ${bioSvg}
+  <rect x="80" y="${buttonY}" width="300" height="58" rx="8" fill="#f7c948"/>
+  <text x="230" y="${buttonY + 37}" text-anchor="middle" font-family="${FONT}" font-size="26" font-weight="600" fill="#000">Take the quiz →</text>
+  <text x="80" y="565" font-family="${FONT}" font-size="22" fill="#5b9cf5">${escapeSvg(footer)}</text>
 </svg>`;
 
   // When a browser navigates here directly (the "preview share card" link),
