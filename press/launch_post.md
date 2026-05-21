@@ -17,7 +17,7 @@ Drafted 2026-05-21. Tighten on the day of launch with the live URL.
 > v1 covers 8 candidates × 24 issues = 192 candidate-issue positions, 184 cited from primary sources. The 8 honest "unknown" entries are themselves a finding — the field has not yet spoken on those.
 >
 > Dataset: github.com/ternarybits/california-election
-> Quiz: [WORKERS-DEV-URL]
+> Quiz: https://california-election.tedmao.workers.dev
 > MCP: clone the repo, drop the config snippet into Claude Desktop or Cursor.
 >
 > Corrections welcome — PR the dataset, or hit the "flag" button on any position.
@@ -53,7 +53,7 @@ Every candidate gets *two* match scores: policy match (where you agreed on the i
 
 ### Live now ahead of the June primary
 
-[WORKERS-DEV-URL] · github.com/ternarybits/california-election
+https://california-election.tedmao.workers.dev · github.com/ternarybits/california-election
 
 Take it, share it, file corrections. Snapshot date is on every page.
 

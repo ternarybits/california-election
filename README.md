@@ -2,12 +2,12 @@
 
 A shareable web experience that helps Californians discover which 2026 gubernatorial candidate best aligns with their values — and *why*. Open dataset, cited sources, three modalities (web quiz, MCP server, AI-mediated deliberation).
 
-**Status:** Phase 1–3 code complete; awaiting first Cloudflare deploy. See [`PLAN.md`](./PLAN.md) for the design document.
+**Status:** Live at **<https://california-election.tedmao.workers.dev>** (Cloudflare Workers + D1). See [`PLAN.md`](./PLAN.md) for the design document.
 
 | Surface | Path | Status |
 |---|---|---|
 | Open dataset (v1) | [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) | 8 candidates × 24 issues = 192 positions, 184 cited from primary sources (8 honest unknowns); questions ranked by differentiation score |
-| Web quiz (Cloudflare) | [`infra/`](./infra/) | Worker + Pages-style static + D1; deploy with `cd infra && npm install && npx wrangler login && npm run deploy` (see [`infra/README.md`](./infra/README.md)) |
+| Web quiz (Cloudflare) | [`infra/`](./infra/) | Live at <https://california-election.tedmao.workers.dev> — Worker + static assets + D1. Update with `cd infra && npm run deploy` (see [`infra/README.md`](./infra/README.md)) |
 | MCP server (stdio) | [`mcp/`](./mcp/) | 7 tools, smoke test passes. Install instructions for Claude Desktop and Cursor in [`mcp/README.md`](./mcp/README.md) |
 | Launch materials | [`press/`](./press/) | Draft thread + Substack note; tighten on launch day |
 | Legacy Buildy spike | [`legacy/buildy/`](./legacy/buildy/) | Original platform; archived after deployed app outgrew Buildy's size limits |
