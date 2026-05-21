@@ -200,7 +200,6 @@ function handleShareCard(url, request) {
   const docTitle = `${candidate.name} — ${pctRounded}% policy match · CA 2026 Governor Primary`;
   const subtitle = "CA 2026 Governor Primary — Candidate Matcher";
   const matchLine = `${pctRounded}% policy match`;
-  const footer = `dataset_${DATASET.version} · snapshot ${DATASET.snapshot_date}`;
 
   // SVG has no auto-wrap, so size the name to fit the ~1040px text column. Name
   // and match-percent go on separate lines (a long name plus the percent on one
@@ -231,7 +230,6 @@ function handleShareCard(url, request) {
   ${bioSvg}
   <rect x="80" y="${buttonY}" width="300" height="58" rx="8" fill="#f7c948"/>
   <text x="230" y="${buttonY + 37}" text-anchor="middle" font-family="${FONT}" font-size="26" font-weight="600" fill="#000">Take the quiz →</text>
-  <text x="80" y="565" font-family="${FONT}" font-size="22" fill="#5b9cf5">${escapeSvg(footer)}</text>
 </svg>`;
 
   // When a browser navigates here directly (the "preview share card" link),
@@ -255,15 +253,30 @@ function handleShareCard(url, request) {
   html, body { margin: 0; padding: 0; min-height: 100%; }
   body {
     min-height: 100vh;
+    box-sizing: border-box;
+    padding: 24px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 18px;
     background: linear-gradient(135deg, #0f1115, #161a22);
+    font-family: -apple-system, system-ui, sans-serif;
   }
   svg { width: min(1100px, 94vw); height: auto; display: block; }
+  footer { max-width: min(1100px, 94vw); color: #97a3b6; font-size: 0.85rem; text-align: center; }
+  footer a { color: #5b9cf5; }
 </style>
 </head>
-<body>${svg}</body>
+<body>
+${svg}
+<footer>
+  Open source: <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">ternarybits/california-election</a>.
+  Dataset: <a href="/dataset_v1.json" target="_blank" rel="noopener">dataset_v1.json</a>.
+  <a href="/stats">Live stats</a>.
+  Snapshot date: ${escapeSvg(DATASET.snapshot_date)}.
+</footer>
+</body>
 </html>`;
     return new Response(html, {
       headers: {
