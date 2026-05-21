@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 
 // Mobile-only assertions. Run by the chromium-mobile project in playwright.config.ts.
 // Skip when running on desktop viewports.

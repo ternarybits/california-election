@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 
 // Hits the live API endpoints. Complements infra/test_worker.mjs (which runs
 // the worker locally with stubbed bindings) — these run against the deployed

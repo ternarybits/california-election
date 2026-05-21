@@ -1,8 +1,9 @@
 import { defineConfig, devices } from "@playwright/test";
 
 // Default target: production deploy. Override with TEST_URL=http://localhost:8787
-// to run against `wrangler dev`.
-const baseURL = process.env.TEST_URL ?? "https://california-election.tedmao.workers.dev";
+// to run against `wrangler dev`. Use || (not ??) so an empty TEST_URL="" falls
+// back to the default rather than producing an invalid "" baseURL.
+const baseURL = process.env.TEST_URL || "https://california-election.tedmao.workers.dev";
 
 export default defineConfig({
   testDir: "./tests",

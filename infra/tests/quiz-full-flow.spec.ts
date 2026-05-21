@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 
 // Drives a complete quiz run end-to-end (15 policy + 12 personal-fit).
 // Validates: results screen renders, ranking has 8 candidates, see-why

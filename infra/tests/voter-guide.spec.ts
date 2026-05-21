@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 
 // Voter-guide context block on each policy question:
 // - always shown — the visible tier (basics, current policy, arguments) carries
