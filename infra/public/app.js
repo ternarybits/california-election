@@ -90,16 +90,20 @@ async function boot() {
     // If URL has a share hash, decode and render results directly.
     const shared = decodeShareHash();
     if (shared) {
+      // A shared link encodes answers against a specific dataset version. If the
+      // dataset has since advanced (issues renumbered/added), the stances no
+      // longer mean the same thing — warn rather than silently mis-score.
+      const stale = shared.dataset_version && shared.dataset_version !== state.dataset_version;
       state.policyAnswers = shared.policyAnswers;
       state.personalAnswers = shared.personalAnswers;
-      renderResults({ fromShare: true });
+      renderResults({ fromShare: true, staleVersion: stale ? shared.dataset_version : null });
       return;
     }
 
     $("#intro").classList.remove("hidden");
     $("#start-btn").onclick = startQuiz;
   } catch (e) {
-    $("#status").innerHTML = `<p>Failed to load: ${e.message}</p>`;
+    $("#status").textContent = `Failed to load: ${e.message}`;
   }
 }
 
@@ -134,7 +138,7 @@ function renderPolicyQuestion() {
     const wrap = document.createElement("label");
     wrap.className = "option";
     const checked = prior && prior.stance === opt.value ? "checked" : "";
-    wrap.innerHTML = `<input type="radio" name="pq-stance" id="${id}" value="${opt.value}" ${checked} /> <span>${opt.label}</span>`;
+    wrap.innerHTML = `<input type="radio" name="pq-stance" id="${id}" value="${opt.value}" ${checked} /> <span>${escapeHtml(opt.label)}</span>`;
     wrap.querySelector("input").addEventListener("change", (e) => {
       selected = Number(e.target.value);
       $("#pq-next").disabled = false;
@@ -249,7 +253,7 @@ function renderPersonalQuestion() {
       const wrap = document.createElement("label");
       wrap.className = "option";
       const checked = typeof answer === "number" && answer === opt.value ? "checked" : "";
-      wrap.innerHTML = `<input type="radio" name="fq-ord" id="${id}" value="${opt.value}" ${checked} /> <span>${opt.label}</span>`;
+      wrap.innerHTML = `<input type="radio" name="fq-ord" id="${id}" value="${opt.value}" ${checked} /> <span>${escapeHtml(opt.label)}</span>`;
       wrap.querySelector("input").addEventListener("change", (e) => {
         answer = Number(e.target.value);
         $("#fq-next").disabled = false;
@@ -263,7 +267,7 @@ function renderPersonalQuestion() {
       const wrap = document.createElement("label");
       wrap.className = "option";
       const isChecked = checked.has(opt.id) ? "checked" : "";
-      wrap.innerHTML = `<input type="checkbox" id="${id}" value="${opt.id}" ${isChecked} /> <span>${opt.label}</span>`;
+      wrap.innerHTML = `<input type="checkbox" id="${id}" value="${escapeAttr(opt.id)}" ${isChecked} /> <span>${escapeHtml(opt.label)}</span>`;
       wrap.querySelector("input").addEventListener("change", (e) => {
         if (e.target.checked) checked.add(e.target.value); else checked.delete(e.target.value);
         answer = Array.from(checked);
@@ -414,10 +418,18 @@ function buildRanking(policyAnswers, personalAnswers) {
 
 // ---------- Results ----------
 
-function renderResults({ fromShare = false } = {}) {
+function renderResults({ fromShare = false, staleVersion = null } = {}) {
   scrollToTop();
   $("#policy-quiz").classList.add("hidden");
   $("#personal-quiz").classList.add("hidden");
+
+  const banner = $("#stale-banner");
+  if (staleVersion) {
+    banner.textContent = `Heads up: this shared link was created against dataset ${staleVersion}, but the current dataset is ${state.dataset_version}. Some positions may have changed since, so this match may be off — retake the quiz for an up-to-date result.`;
+    banner.classList.remove("hidden");
+  } else {
+    banner.classList.add("hidden");
+  }
 
   const ranking = buildRanking(state.policyAnswers, state.personalAnswers);
   const rEl = $("#ranking");
@@ -438,11 +450,14 @@ function renderResults({ fromShare = false } = {}) {
   const shareUrl = makeShareUrl();
   const copyBtn = $("#copy-link");
   copyBtn.onclick = async () => {
+    // Show the link synchronously so it's always available to copy by hand,
+    // even if the async clipboard write is unavailable or blocked.
+    $("#share-status").textContent = shareUrl;
     try {
       await navigator.clipboard.writeText(shareUrl);
       $("#share-status").textContent = `Copied: ${shareUrl}`;
     } catch {
-      $("#share-status").textContent = shareUrl;
+      /* clipboard unavailable — the bare URL is already shown above */
     }
   };
   // Share-card preview link (worker endpoint renders an SVG with the top result).
@@ -683,6 +698,7 @@ function decodeShareHash() {
     const payload = JSON.parse(json);
     if (payload.v !== 1) return null;
     return {
+      dataset_version: payload.ds ?? null,
       policyAnswers: payload.p.map(([issue_id, stance, importance_idx]) => ({ issue_id, stance, importance_idx })),
       personalAnswers: payload.f.map(([dimension_id, value]) => ({ dimension_id, type: Array.isArray(value) ? "multi_select" : "ordinal", value })),
     };

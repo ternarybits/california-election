@@ -58,24 +58,13 @@ test.describe("API endpoints", () => {
     expect(body).toContain("77%");
   });
 
-  test("/api/flag accepts a valid submission", async ({ request }) => {
-    const res = await request.post("/api/flag", {
-      data: { candidate_id: "porter", issue_id: "housing_supply", reason: "playwright smoke test" },
-    });
-    expect(res.status()).toBe(200);
-    expect((await res.json()).ok).toBe(true);
-  });
-
+  // Validation rejections don't write to D1, so they're safe against any target.
   test("/api/flag rejects missing fields", async ({ request }) => {
     const res = await request.post("/api/flag", { data: { candidate_id: "x" } });
     expect(res.status()).toBe(400);
   });
 
-  test("/api/event accepts all 4 kinds and rejects unknowns", async ({ request }) => {
-    for (const kind of ["quiz_start", "policy_answer", "personal_answer", "quiz_complete"]) {
-      const res = await request.post("/api/event", { data: { kind, session_id: "playwright-test" } });
-      expect(res.status()).toBe(200);
-    }
+  test("/api/event rejects an unknown kind", async ({ request }) => {
     const bad = await request.post("/api/event", { data: { kind: "nope", session_id: "playwright-test" } });
     expect(bad.status()).toBe(400);
   });
@@ -87,5 +76,32 @@ test.describe("API endpoints", () => {
     expect(body).toHaveProperty("completes");
     expect(body).toHaveProperty("by_issue_stance");
     expect(body).toHaveProperty("top_candidate_share");
+  });
+});
+
+// Write endpoints insert rows into D1. Skip these unless TEST_URL points at a
+// non-production target (e.g. a local `wrangler dev`), so the suite never
+// pollutes the production analytics that the public /stats page reports.
+// The insert/validation contract is also covered by infra/test_worker.mjs
+// against a stubbed D1.
+const target = process.env.TEST_URL ?? "";
+const isLocalTarget = target !== "" && !/workers\.dev/.test(target);
+
+test.describe("API write endpoints (local-only)", () => {
+  test.skip(!isLocalTarget, "write tests run only against a non-production TEST_URL to avoid polluting prod D1");
+
+  test("/api/flag accepts a valid submission", async ({ request }) => {
+    const res = await request.post("/api/flag", {
+      data: { candidate_id: "porter", issue_id: "housing_supply", reason: "playwright local test" },
+    });
+    expect(res.status()).toBe(200);
+    expect((await res.json()).ok).toBe(true);
+  });
+
+  test("/api/event accepts all 4 kinds", async ({ request }) => {
+    for (const kind of ["quiz_start", "policy_answer", "personal_answer", "quiz_complete"]) {
+      const res = await request.post("/api/event", { data: { kind, session_id: "playwright-local-test" } });
+      expect(res.status()).toBe(200);
+    }
   });
 });

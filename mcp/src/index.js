@@ -227,10 +227,10 @@ server.registerTool(
   },
 );
 
-// Importance string → weight (matches buildy/ui.html).
+// Importance string → weight (matches infra/public/app.js — keep in sync; tests pin both to the same persona outputs).
 const IMPORTANCE_WEIGHTS = { low: 0.5, medium: 1.0, high: 2.0 };
 
-// Multi-select dimension → candidate field name (matches buildy/ui.html scoring).
+// Multi-select dimension → candidate field name (matches infra/public/app.js scoring).
 const MULTI_SELECT_FIELD = {
   career_path: "career_path_tags",
   demographic_background: "demographic_tags",
@@ -260,7 +260,7 @@ server.registerTool(
     const issuesById = new Map(dataset.issues.map((i) => [i.id, i]));
     const dimsById = new Map(dataset.personal_fit_dimensions.map((d) => [d.id, d]));
 
-    // ---- policy scoring (same math as buildy/ui.html scorePolicy) ----
+    // ---- policy scoring (same math as infra/public/app.js scorePolicyDetailed) ----
     const policyBy = {};
     const detailsBy = {}; // per-candidate per-issue detail for top agreements/disagreements
     for (const c of dataset.candidates) {

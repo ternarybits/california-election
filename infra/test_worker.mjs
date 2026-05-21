@@ -120,6 +120,26 @@ for (const kind of ["quiz_start", "policy_answer", "personal_answer", "quiz_comp
 }
 console.log(`✓ POST /api/event accepts all 4 event kinds`);
 
+// 5b) Bad optional-field values are coerced to null (not bound as NaN / non-string),
+// so the fire-and-forget analytics insert never 500s on malformed input.
+d1Inserts.length = 0;
+const coerce = await call("POST", "/api/event", {
+  kind: "policy_answer",
+  session_id: "test123",
+  issue_id: { not: "a string" },   // non-string → null
+  stance: "NaN",                    // non-finite → null
+  match_pct: "abc",                 // non-finite → null
+});
+if (coerce.status !== 200) throw new Error(`event coercion case should 200, got ${coerce.status}`);
+const eventInsert = d1Inserts.find((i) => i.sql.includes("INSERT INTO events"));
+if (!eventInsert) throw new Error("event insert did not reach D1");
+// bind order: kind, session_id, issue_id, dimension_id, stance, importance, candidate_id, match_pct, ...
+const [, , issueArg, , stanceArg, , , matchArg] = eventInsert.args;
+if (issueArg !== null || stanceArg !== null || matchArg !== null) {
+  throw new Error(`bad fields should coerce to null; got issue=${JSON.stringify(issueArg)} stance=${JSON.stringify(stanceArg)} match=${JSON.stringify(matchArg)}`);
+}
+console.log(`✓ POST /api/event coerces non-string / non-finite optional fields to null`);
+
 // 6) Validation: bad flag body returns 400
 const badFlag = await call("POST", "/api/flag", { candidate_id: "x" });
 if (badFlag.status !== 400) throw new Error("missing issue_id should 400");

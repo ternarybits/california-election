@@ -26,7 +26,7 @@ infra/
 | `GET` | `/api/dataset` | Full `dataset_v1.json` |
 | `GET` | `/dataset_v1.json` | Convenience alias for audit links |
 | `GET` | `/api/candidates` | Roster summary |
-| `GET` | `/api/issues` | All 24 issues with stance scales |
+| `GET` | `/api/issues` | All 25 issues with stance scales |
 | `GET` | `/api/questions` | Default 15-question quiz (ranked by differentiation) |
 | `GET` | `/api/personal-fit-dimensions` | 12 personal-fit dimensions |
 | `GET` | `/api/stats` | Aggregated D1 stats (used by `/stats`) |

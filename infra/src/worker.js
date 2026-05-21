@@ -120,6 +120,18 @@ async function handlePostEvent(request, env) {
   if (!validKinds.has(kind)) return badRequest("invalid kind");
   if (typeof session_id !== "string" || session_id.length > 128) return badRequest("session_id required");
 
+  // Coerce optional fields defensively — D1 rejects NaN/non-finite binds, and a
+  // bad value here would otherwise 500 a fire-and-forget analytics call silently.
+  // Note the deliberate asymmetry with /api/flag: flags are user corrections, so
+  // bad input is rejected (400); events are best-effort analytics, so bad input
+  // is coerced to null rather than failing the request.
+  const strOrNull = (v) => (typeof v === "string" && v.length <= 128 ? v : null);
+  const numOrNull = (v) => {
+    if (v == null) return null;
+    const n = Number(v);
+    return Number.isFinite(n) ? n : null;
+  };
+
   await env.DB.prepare(
     `INSERT INTO events
        (kind, session_id, issue_id, dimension_id, stance, importance, candidate_id, match_pct, dataset_version, created_at)
@@ -128,12 +140,12 @@ async function handlePostEvent(request, env) {
     .bind(
       kind,
       session_id,
-      issue_id,
-      dimension_id,
-      stance == null ? null : Number(stance),
-      importance == null ? null : Number(importance),
-      candidate_id,
-      match_pct == null ? null : Number(match_pct),
+      strOrNull(issue_id),
+      strOrNull(dimension_id),
+      numOrNull(stance),
+      numOrNull(importance),
+      strOrNull(candidate_id),
+      numOrNull(match_pct),
       DATASET.version,
       Date.now(),
     )

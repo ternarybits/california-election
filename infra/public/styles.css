@@ -362,6 +362,17 @@ button.primary:disabled { background: var(--panel-2); color: var(--muted); borde
 .wi-down { color: var(--warn); font-weight: 600; }
 .wi-flat { color: var(--muted); }
 
+/* Stale-share-link banner */
+.stale-banner {
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  background: rgba(224, 133, 102, 0.12);
+  border: 1px solid var(--warn);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
 /* Why-not panel */
 .why-not {
   margin-top: 18px;

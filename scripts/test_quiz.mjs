@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Smoke-test the quiz scoring pipeline by simulating the boot → answer → score path.
 //
-// This drives module.js's handlers directly via a fake env, so we exercise
+// This drives infra/src/worker.js's handlers directly via a fake env, so we exercise
 // the same endpoints the UI uses. Then it runs the same scoring math the
 // inline UI script does (re-implemented here in Node) against synthetic
 // answer sets and prints the ranking.
@@ -97,7 +97,7 @@ const conservativePolicy = questions.map((q) => ({
   importance_weight: IMPORTANCE_WEIGHTS[2],
 }));
 
-// --- Reimplement the scoring (mirror of ui.html) ---
+// --- Reimplement the scoring (mirror of infra/public/app.js) ---
 function scorePolicy(answers) {
   const byCandidate = {};
   for (const c of candidates) byCandidate[c.id] = { num: 0, den: 0, used: 0 };

@@ -46,6 +46,14 @@ test("complete quiz → results screen with receipts, share link, why-not, what-
   // Top match should have a rank-badge of #1
   await expect(rankingItems.first().locator(".rank-badge")).toHaveText("#1");
 
+  // Pin the REAL client scorer (not a re-implementation): stance-5-everything
+  // with high importance is the progressive persona, which the scoring smoke
+  // tests put at Tom Steyer ~77% policy. This guards against silent drift in
+  // app.js's scoring and against the web result diverging from the MCP result.
+  await expect(rankingItems.first().locator(".result-name strong")).toHaveText("Tom Steyer");
+  const topPolicy = await rankingItems.first().locator(".score-policy code").textContent();
+  expect(parseInt(topPolicy ?? "0", 10)).toBeGreaterThanOrEqual(70);
+
   // Top match's "see why" is open by default so the flag button is discoverable
   const seeWhy = rankingItems.first().locator(".see-why");
   await expect(seeWhy).toHaveAttribute("open", "");
@@ -70,4 +78,28 @@ test("complete quiz → results screen with receipts, share link, why-not, what-
 
   // Share link button should be clickable; copy-link button present
   await expect(page.locator("#copy-link")).toBeVisible();
+
+  // Share-link round-trip: generate the link, open it in a fresh page, and
+  // confirm it reproduces the same result (answers are encoded in the URL hash,
+  // base64url with re-derived padding — exercise the full encode→decode path).
+  const copyLink = page.locator("#copy-link");
+  await copyLink.scrollIntoViewIfNeeded();
+  // Force past mobile actionability quirks (a sibling element overlaps the hit
+  // point mid-scroll); the button is visually clear and functional for users.
+  await copyLink.click({ force: true });
+  // The copy handler populates #share-status after an async clipboard call —
+  // wait for it rather than reading immediately.
+  await expect(page.locator("#share-status")).toContainText("#r=", { timeout: 10_000 });
+  const statusText = await page.locator("#share-status").textContent();
+  const shareUrl = statusText?.match(/https?:\/\/\S+#r=\S+/)?.[0];
+  expect(shareUrl, "a share URL with an #r= hash should be generated").toBeTruthy();
+
+  const fresh = await page.context().newPage();
+  await fresh.goto(shareUrl!);
+  await expect(fresh.locator("#results")).toBeVisible();
+  await expect(fresh.locator("#ranking > li")).toHaveCount(8);
+  await expect(fresh.locator("#ranking > li").first().locator(".result-name strong")).toHaveText("Tom Steyer");
+  // Same dataset version → no stale-version banner.
+  await expect(fresh.locator("#stale-banner")).toBeHidden();
+  await fresh.close();
 });
