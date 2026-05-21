@@ -7,10 +7,12 @@ last-updated: 2026-05-21
 
 ## Status snapshot (2026-05-21)
 
-- **Phase 0 — Research & data**: ✅ Complete. `dataset_v1.json` shipped: 8 candidates × 25 issues = 200 candidate-issue positions, 190 cited from primary sources, 10 honest `"unknown"` entries (`confidence: "insufficient_data"`). Questions ranked by differentiation score; top 15 flagged `default_quiz: true`.
-- **Phase 1 — Quiz MVP**: 🟡 In progress. Worker-shaped fetch handler + vanilla-JS UI + two-phase quiz + dual scoring (policy / personal-fit) + importance slider all written. **Hosting moved from Buildy to Cloudflare** — see "Hosting pivot" below.
-- **Phase 2 — MCP server**: 🟡 7 tools shipped (1 more than PLAN required), stdio transport works end-to-end via `mcp/test_tools.mjs`. Outstanding: tool-description tuning, sample-prompt docs, ChatGPT/Cursor install instructions, SSE-transport decision.
-- **Phase 3 — Polish & launch**: ⏳ Not started.
+**Live at <https://california-election.tedmao.workers.dev>** (Cloudflare Workers + D1).
+
+- **Phase 0 — Research & data**: ✅ Complete. `dataset_v1.json`: 8 candidates × 25 issues = 200 candidate-issue positions, 190 cited from primary sources, 10 honest `"unknown"` entries (`confidence: "insufficient_data"`). Issues ranked by differentiation score; top 15 flagged `default_quiz: true`. The original `tax_top_wealth` issue was later split into `tax_top` + `tax_wealth` (see "Multi-dimensional issue splits" below).
+- **Phase 1 — Quiz MVP**: ✅ Shipped. Deployed on Cloudflare. Two-phase quiz (policy + personal-fit), dual scoring (policy / personal-fit, never blended), inline importance slider, back-navigation, per-question voter-guide context, "see why" receipts with source quotes + per-position flag button, share-link encoding (answers in URL hash), anonymized analytics events (D1), mobile pass, and a landing-page FAQ.
+- **Phase 2 — MCP server**: ✅ Largely complete. 7 tools (1 more than PLAN required), stdio transport, smoke test (`mcp/test_tools.mjs`). Tool descriptions tuned, sample prompts + Claude Desktop / Cursor install docs published. Remaining: HTTP/SSE transport for ChatGPT (deferred — small audience).
+- **Phase 3 — Polish & launch**: 🟡 Most deliverables shipped. Done: why-not runner-up panel, what-if explorer, SVG share card, public stats page (D1-backed), voter-guide context on all 15 default questions, Playwright test suite. Remaining: launch posts (drafted in `press/`), custom-domain decision, optional per-result share-card image upgrade (SVG → PNG).
 
 ## Hosting pivot — Buildy → Cloudflare
 
@@ -26,6 +28,17 @@ After completing the Phase 1 code on the Buildy platform, the deployed app size 
 Free tier covers everything we need (100k req/day, 5GB D1, unlimited static bandwidth), with no time-limited DB cliff. Custom domain still deferred per decision #7 — launch on `*.workers.dev`.
 
 The Buildy code is moved to `legacy/buildy/` rather than deleted; the deploy path was a working spike and may be useful if Buildy raises its limits later.
+
+## Multi-dimensional issue splits (2026-05-21)
+
+Per the design rule that each ordinal axis should represent one real policy dimension, we reviewed the issues that bundled two axes:
+
+- **`tax_top_wealth` → split** into `tax_top` (income/corporate rate gradient) and `tax_wealth` (state wealth tax). This was the high-value split: re-scoring put `tax_wealth` at #1 differentiation (0.765) while `tax_top` fell to #23 (0.364). The field genuinely splits on a net-worth tax but not on raising the already-highest-in-US 13.3% income rate — the merged question had hidden that. `tax_wealth` is now in the default quiz; `tax_top` is not.
+- **`housing_supply` → scale fixed, not split.** Relabeled to a monotonic "degree of state push for market-rate supply" axis so the previously off-axis option 5 (subsidies/tenant protections) sits coherently at the low-supply-push end. Kept as one question per the original "housing stays single" call.
+- **`school_choice`, `school_funding`, `healthcare_funding` → wording tweaks only.** De-bundled labels (e.g. removed "(including vouchers)" from school_choice) where a sub-axis had near-zero differentiation in the actual field; not worth a separate question.
+- **`homelessness` → left as-is.** Enforcement↔services is a genuine single recognized spectrum.
+
+Several scales remain mildly multi-dimensional and carry a voter-facing `note_on_options` explaining the bundled axes (housing, school choice/funding, healthcare financing). Future splits are reversible if the field's differentiation warrants.
 
 # California 2026 Gubernatorial Candidate Matcher
 
@@ -328,40 +341,44 @@ infra/
 - [x] Question prompts drafted and ranked by differentiation score; top 15 flagged `default_quiz: true`
 - [x] **Output**: `dataset/dataset_v1.json`, published openly
 
-**Phase 1 — Quiz MVP** 🟡 In progress
+**Phase 1 — Quiz MVP** ✅ Shipped (live on Cloudflare)
 
-- [x] ES module with fetch handler (Workers-shaped; lives in `buildy/module.js`, porting to `infra/src/worker.js`)
-- [x] UI: vanilla JS + Tailwind, quiz flow (policy phase + personal-fit phase) + results
+- [x] ES module with fetch handler — ported to `infra/src/worker.js` (Cloudflare Worker)
+- [x] UI: vanilla JS, quiz flow (policy phase + personal-fit phase) + results
 - [x] Scoring algorithm with per-question importance weighting (inline, defaulted to medium)
-- [x] Smoke tests cross-verifying Buildy and MCP scoring outputs (`scripts/test_quiz.mjs`, `mcp/test_tools.mjs`)
-- [ ] **Migrate to Cloudflare Worker** (this PLAN update) — `infra/` directory with wrangler.toml, D1 schema, deploy
-- [ ] Receipts (source links + verbatim quotes) on every position in the result row
-- [ ] Per-position "flag this" button → POST `/api/flag` → D1 → manual sweep into GitHub Issues
-- [ ] Aggregate analytics: anonymized response counts per (question, answer), match-distribution counts; in-UI disclosure
-- [ ] Share-link encoding (answers in URL hash; client-side replay)
-- [ ] Mobile pass: iPhone one-handed
-- [ ] **Output**: live `*.workers.dev` URL, sharable
+- [x] Smoke tests cross-verifying worker and MCP scoring outputs (`scripts/test_quiz.mjs`, `mcp/test_tools.mjs`)
+- [x] **Migrated to Cloudflare Worker** — `infra/` with wrangler.toml, D1 schema, deploy
+- [x] Receipts (source links + verbatim quotes) on every position in the result row ("see why")
+- [x] Per-position "flag this" button → POST `/api/flag` → D1 → manual sweep into GitHub Issues
+- [x] Aggregate analytics: anonymized response counts → POST `/api/event` → D1; in-UI disclosure
+- [x] Share-link encoding (answers in URL hash; client-side replay)
+- [x] Back-navigation through questions; per-question voter-guide context block
+- [x] Landing-page FAQ (methodology, sourcing, corrections, privacy)
+- [x] Mobile pass: iPhone one-handed (44pt targets, responsive breakpoint)
+- [x] **Output**: live `*.workers.dev` URL, sharable
 
-**Phase 2 — MCP server** 🟡 In progress
+**Phase 2 — MCP server** ✅ Largely complete
 
 - [x] MCP server with 7 tools (`list_candidates`, `list_issues`, `get_positions`, `list_personal_fit_dimensions`, `get_candidate_bio`, `get_differentiating_questions`, `score_user_positions`)
 - [x] stdio transport working end-to-end; smoke test in `mcp/test_tools.mjs`
-- [x] README with install instructions for Claude Desktop
-- [ ] Tool descriptions tuned for Claude/ChatGPT/Cursor agent discoverability
-- [ ] Sample prompts that show the agent how to drive a good matching conversation
-- [ ] Cursor install instructions
-- [ ] Decision: HTTP/SSE transport Worker for ChatGPT (probably defer to v2)
-- [ ] **Output**: published install instructions across 2+ agent platforms
+- [x] Tool descriptions tuned for agent discoverability
+- [x] Sample prompts that show the agent how to drive a good matching conversation
+- [x] Install instructions for Claude Desktop and Cursor
+- [ ] HTTP/SSE transport Worker for ChatGPT — deferred (small audience, gated support)
+- [x] **Output**: published install instructions across 2+ agent platforms
 
-**Phase 3 — Polish & launch** ⏳ Not started
+**Phase 3 — Polish & launch** 🟡 Most deliverables shipped
 
-- [ ] Share card image generation (Worker endpoint rendering PNG with [satori](https://github.com/vercel/satori) or similar)
-- [ ] "Why-not" runner-up analysis ("you matched X 84%; here are the 2 questions where Y would have edged X")
-- [ ] What-if explorer ("if you'd answered Q5 differently…")
-- [ ] Public stats page: most-divisive questions, response distributions, candidate match-share — D1-backed, refreshed live
-- [ ] Re-research the 8 remaining `"unknown"` positions
-- [ ] Persona QA + math hand-verification
-- [ ] Press kit / launch post / Twitter & Bluesky threads
+- [x] Share card generation — SVG endpoint (`/api/share-card.svg`); PNG upgrade (satori/resvg) optional later
+- [x] "Why-not" runner-up analysis ("you matched X; here are the questions where Y would have edged X")
+- [x] What-if explorer ("if you'd answered Q5 differently…")
+- [x] Public stats page (`/stats`): most-divisive questions, response distributions, candidate match-share — D1-backed
+- [x] Voter-guide context (current policy, key facts, comparison, steelmanned arguments, sources) on all 15 default questions
+- [x] Playwright test suite (`infra/tests/`) — landing/FAQ, navigation, full flow, API, mobile, voter-guide
+- [x] Re-research the remaining `"unknown"` positions (no new public statements found in the window; documented)
+- [x] Persona QA + math hand-verification (Steyer 77% / Bianco 93%; hand-computed match confirmed)
+- [ ] Press kit / launch post / Twitter & Bluesky threads — drafted in `press/launch_post.md`, pending launch
+- [ ] Custom-domain decision (currently `*.workers.dev` per decision #7)
 - [ ] **Output**: actual launch, ahead of June 2026 primary
 
 > **Design decision — ship in time for the primary, not the general.**
@@ -379,7 +396,7 @@ These were walked through and locked on 2026-05-12. All are two-way doors unless
 4. **AI cost — N/A for v1.** Resolved by decision 1.
 5. **Endorsements yes, donors no.** Endorsements (with date) are listed per candidate; donor data is deferred to v2. Endorsements are well-sourced; donor data is noisy and editorial to summarize.
 6. **Corrections workflow — GitHub PRs + in-app flag button.** Both routes land in the same GitHub issue list. PR route signals seriousness and lets researchers/journalists fix directly; the flag button captures the 99% who won't open GitHub.
-7. **Domain — Buildy URL only for v1.** No custom domain. We grab a domain only if traction warrants it post-launch. *Easy to add later; favor speed now.*
+7. **Domain — `*.workers.dev` URL only for v1.** No custom domain (was "Buildy URL" pre-pivot). We grab a domain only if traction warrants it post-launch. *Easy to add later; favor speed now.*
 8. **Analytics — yes, anonymized, with a public stats page.** Aggregate response counts per (question, answer) and per (user-result → candidate). In-UI disclosure ("we publish anonymized stats"). The public stats page itself is a Phase 3 deliverable and a press hook.
 
 ---

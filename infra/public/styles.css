@@ -45,6 +45,40 @@ h4 { font-size: 0.9rem; margin: 8px 0; color: var(--muted); text-transform: uppe
 .bullets { padding-left: 18px; margin: 0 0 14px; }
 .bullets li { margin: 6px 0; }
 
+/* Landing-page FAQ */
+.faq {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.faq h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.faq details {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+  margin: 8px 0;
+  padding: 0 14px;
+}
+.faq details[open] { padding-bottom: 12px; }
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 12px 0;
+  font-weight: 500;
+  color: var(--text);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::before { content: "＋ "; color: var(--accent-2); }
+.faq details[open] summary::before { content: "－ "; color: var(--accent-2); }
+.faq details p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+.faq details p a { color: var(--accent-2); }
+
 .option {
   display: flex;
   gap: 10px;

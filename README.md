@@ -14,7 +14,7 @@ A shareable web experience that helps Californians discover which 2026 gubernato
 
 ## Modalities
 
-1. **Quick Quiz** — multiple-choice web app. ~3 minutes, ranked results with receipts (per-position source quotes and URLs), shareable via URL hash (no server state). Why-not panel; what-if explorer; per-position flag button.
+1. **Quick Quiz** — multiple-choice web app. ~3 minutes, ranked results with receipts (per-position source quotes and URLs). Each question carries a collapsible voter-guide block (current CA policy, key facts, steelmanned arguments for/against, sources); the landing page has a methodology FAQ. Results include a why-not runner-up panel, a what-if explorer, a per-position flag button, and a share link that encodes answers in the URL hash (no server state). A public [`/stats`](https://california-election.tedmao.workers.dev/stats) page shows anonymized aggregates.
 2. **MCP Server** — exposes the candidate/issue knowledge base to Claude, Cursor (and ChatGPT, once SSE transport ships). Lets power users drive a conversational matching experience in their own agent. Sample prompts in `mcp/README.md`.
 3. **Open dataset** — every candidate position is sourced and citable. PRs and in-app corrections welcome.
 
@@ -41,6 +41,9 @@ cd mcp && npm install && node test_tools.mjs
 
 # Persona QA — runs the quiz scoring against progressive + conservative personas
 node scripts/test_quiz.mjs
+
+# End-to-end browser tests (Playwright) against the live deploy
+cd infra && npm install --ignore-scripts && npm run test:install && npm test
 ```
 
 ## Deploy to production

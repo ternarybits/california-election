@@ -18,12 +18,12 @@ Target launch: **before the June 2026 California primary.**
 
 - ✅ Plan written (`PLAN.md`), updated for the Cloudflare pivot
 - ✅ Repo public at `ternarybits/california-election`
-- ✅ **Phase 0 complete** — `dataset/dataset_v1.json` (8 candidates × 25 issues = 200 positions, 190 cited, 10 honest "unknown"s, questions ranked by differentiation score)
-- ✅ **Buildy spike done** but app outgrew Buildy's size limits; code preserved in git history, target stack moved to Cloudflare
-- ✅ **MCP server working** — 7 tools, stdio transport, smoke test passes (`mcp/test_tools.mjs`)
-- 🟡 **Phase 1 in progress** — Worker code written, porting to `infra/` for Cloudflare deploy
-- ⏳ **Phase 2 polish** — tool description tuning, sample prompts, Cursor docs
-- ⏳ **Phase 3 not started** — share cards, why-not, what-if, stats page, launch posts
+- ✅ **Live** at <https://california-election.tedmao.workers.dev> (Cloudflare Workers + D1)
+- ✅ **Phase 0 complete** — `dataset/dataset_v1.json` (8 candidates × 25 issues = 200 positions, 190 cited, 10 honest "unknown"s, ranked by differentiation; `tax_top_wealth` later split into `tax_top` + `tax_wealth`)
+- ✅ **Phase 1 shipped** — Cloudflare Worker + D1; two-phase quiz, dual scoring, importance slider, back-nav, voter-guide context, "see why" receipts + flag button, share-link encoding, analytics events, mobile pass, landing FAQ
+- ✅ **Phase 2 largely done** — MCP server, 7 tools, stdio, tuned descriptions + sample prompts + Claude Desktop/Cursor install docs (`mcp/test_tools.mjs`). ChatGPT SSE deferred.
+- 🟡 **Phase 3 mostly shipped** — why-not, what-if, SVG share card, public `/stats`, Playwright suite (`infra/tests/`). Remaining: launch posts (drafted in `press/`), custom domain
+- ✅ **Buildy spike** archived to `legacy/buildy/` after it outgrew Buildy's size limits
 
 ## Resolved decisions
 
@@ -67,10 +67,10 @@ Don't re-litigate these unless the user explicitly raises them. All are two-way 
 - [`PLAN.md`](./PLAN.md) — full design document; status snapshot near the top
 - [`README.md`](./README.md) — short public-facing description
 - [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) — current dataset; 200 candidate-issue positions with citations
-- `buildy/` — original Buildy spike (works locally, exceeds Buildy size cap on deploy). Kept until Cloudflare is live; then moves to `legacy/buildy/`.
+- `infra/` — **the live app**: Cloudflare Worker (`src/worker.js`) + static UI (`public/`) + D1 schema + Playwright tests (`tests/`). Deploy with `cd infra && npm run deploy`. See `infra/README.md`.
 - `mcp/` — stdio MCP server with 7 tools. Smoke test: `cd mcp && node test_tools.mjs`.
-- `infra/` (in progress) — Cloudflare Worker + D1 + static assets. The target Phase 1 deploy.
-- `scripts/` — `score_questions.mjs` (recompute differentiation scores), `merge_research.mjs` (merge per-issue research scratch files), `test_quiz.mjs` (smoke test of the quiz module + scoring)
+- `legacy/buildy/` — archived original Buildy spike (outgrew Buildy's size cap on deploy).
+- `scripts/` — `score_questions.mjs` (recompute differentiation + ranking), `merge_research.mjs` / `merge_voter_guides.mjs` (merge research scratch files), `split_tax_issue.mjs` (the tax-split migration), `test_quiz.mjs` (quiz scoring smoke test)
 
 ## Working style preferences
 

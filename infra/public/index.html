@@ -31,6 +31,45 @@
         <button id="start-btn" class="primary">Start the quiz →</button>
         <span class="muted small">Snapshot date: <span id="snapshot-date">—</span></span>
       </div>
+
+      <div class="faq">
+        <h3>Questions &amp; methodology</h3>
+
+        <details>
+          <summary>How were the questions chosen?</summary>
+          <p>Every question is one where the candidates <em>actually</em> differ. We start from the full matrix of candidate positions and rank each issue by a <strong>differentiation score</strong> — how widely the field spreads, scaled by how well-researched the issue is. The questions you see are the highest-spread issues. Topics where nearly everyone agrees become footnotes, not questions. (The full ranking, including the lower-spread issues, is in the open dataset.)</p>
+        </details>
+
+        <details>
+          <summary>How were the candidate positions researched?</summary>
+          <p>Every position is tied to a primary source — a campaign website, interview, debate transcript, op-ed, or voting record — with a verbatim quote, a link, and a date. We never rely on an AI summary of a position without checking the source. When a candidate has not publicly addressed an issue, we mark it <em>"unknown"</em> rather than guess: 10 of 200 positions are honest unknowns. Expand "Background &amp; arguments" on any question to see the sourcing.</p>
+        </details>
+
+        <details>
+          <summary>What if I think a position is wrong?</summary>
+          <p>Use the <strong>flag</strong> button next to any position on your results page, or open an issue or pull request on <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">GitHub</a>. Both routes feed the same correction queue, and the entire dataset is public so anyone can audit it.</p>
+        </details>
+
+        <details>
+          <summary>How is my match calculated?</summary>
+          <p>Simple, auditable math — no black-box AI ranking. For each question we compare your stance to each candidate's on the same scale, weight it by how important you said the issue is, and average. You get <strong>two separate scores</strong> — policy match and personal fit — that are never blended into a single number. Candidates with an "unknown" position on a question are simply not scored on it.</p>
+        </details>
+
+        <details>
+          <summary>Is this partisan? Who made it?</summary>
+          <p>It's a non-partisan, open-source project — not an endorsement engine. Every stance scale is written so neither end is "the right answer," and each question shows steelmanned arguments for both sides. The goal is to help you find <em>alignment</em>, not to tell you who to vote for. Code and data live on <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">GitHub</a>.</p>
+        </details>
+
+        <details>
+          <summary>Is my data tracked?</summary>
+          <p>We log anonymized aggregate counts (which answers get chosen, which candidate matched) to build a public stats page. No cookies, no IP addresses, no per-person profiles. Your individual answers stay in your browser, and your shareable result link encodes your answers in the URL — not on our server.</p>
+        </details>
+
+        <details>
+          <summary>How current is this, and can I use it in my own AI assistant?</summary>
+          <p>Every page shows a snapshot date; positions can shift during a campaign, so we version the dataset and re-check as the June 2026 primary approaches. There's also an <strong>MCP server</strong> that plugs the dataset into Claude or Cursor, so you can talk through the issues conversationally — see the GitHub repo for setup.</p>
+        </details>
+      </div>
     </section>
 
     <section id="policy-quiz" class="card hidden">

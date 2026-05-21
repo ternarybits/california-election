@@ -26,6 +26,30 @@ test.describe("Landing page", () => {
     await expect(page.locator("#pq-progress")).toContainText(/Question 1 of \d+/);
   });
 
+  test("FAQ renders and items expand", async ({ page }) => {
+    const faq = page.locator(".faq");
+    await expect(faq).toBeVisible();
+    const items = faq.locator("details");
+    // At least the methodology questions we care about
+    expect(await items.count()).toBeGreaterThanOrEqual(6);
+    await expect(faq.locator("summary", { hasText: /How were the questions chosen/i })).toBeVisible();
+    await expect(faq.locator("summary", { hasText: /How were the candidate positions researched/i })).toBeVisible();
+    await expect(faq.locator("summary", { hasText: /What if I think a position is wrong/i })).toBeVisible();
+
+    // Expand one and check its content is revealed
+    const researched = faq.locator("details", { has: page.locator("summary", { hasText: /positions researched/i }) });
+    await researched.locator("summary").click();
+    await expect(researched).toHaveAttribute("open", "");
+    await expect(researched.locator("p")).toContainText(/primary source/i);
+  });
+
+  test("FAQ links open in a new tab", async ({ page }) => {
+    const ghLinks = page.locator(".faq a", { hasText: /github/i });
+    expect(await ghLinks.count()).toBeGreaterThan(0);
+    await expect(ghLinks.first()).toHaveAttribute("target", "_blank");
+    await expect(ghLinks.first()).toHaveAttribute("rel", /noopener/);
+  });
+
   test("footer links open in a new tab", async ({ page }) => {
     const ghLink = page.locator("footer a", { hasText: "ternarybits/california-election" });
     const dsLink = page.locator("footer a", { hasText: "dataset_v1.json" });
