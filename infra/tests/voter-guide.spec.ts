@@ -1,10 +1,9 @@
 import { test, expect } from "@playwright/test";
 
-// Voter-guide expandable block on each policy question:
+// Voter-guide context block on each policy question:
+// - always shown (not collapsible) — everyone should read it
 // - shows current policy, key facts, comparison, arguments for/against, sources
-// - is collapsed by default; user expands it to read
 // - source links open in a new tab
-// - is hidden on questions that don't yet have a voter_guide entry (rolling refresh)
 
 test.describe("Voter-guide context block", () => {
   test.beforeEach(async ({ page }) => {
@@ -13,20 +12,17 @@ test.describe("Voter-guide context block", () => {
     await expect(page.locator("#policy-quiz")).toBeVisible();
   });
 
-  test("first question has a voter guide that expands and shows expected sections", async ({ page }) => {
+  test("first question shows an always-open voter guide with expected sections", async ({ page }) => {
     // After the tax split, the State wealth tax is the #1 differentiating issue.
     await expect(page.locator("#pq-title")).toHaveText(/State wealth tax/);
     const vg = page.locator("#pq-voter-guide");
     await expect(vg).toBeVisible();
 
-    // Collapsed by default
-    await expect(vg).not.toHaveAttribute("open", "");
+    // Not a collapsible <details> — there is no summary toggle
+    await expect(vg.locator("summary")).toHaveCount(0);
+    await expect(vg.locator(".voter-guide-heading")).toBeVisible();
 
-    // Expand
-    await vg.locator("summary").click();
-    await expect(vg).toHaveAttribute("open", "");
-
-    // Expected sections present
+    // Content is visible immediately, no interaction required
     await expect(vg.locator("h4", { hasText: /Current California policy/i })).toBeVisible();
     await expect(vg.locator("h4", { hasText: /Key facts/i })).toBeVisible();
     await expect(vg.locator("h4", { hasText: /Arguments for change/i })).toBeVisible();
@@ -36,23 +32,24 @@ test.describe("Voter-guide context block", () => {
 
   test("source links open in a new tab", async ({ page }) => {
     const vg = page.locator("#pq-voter-guide");
-    await vg.locator("summary").click();
     const sourceLinks = vg.locator(".vg-sources a");
     expect(await sourceLinks.count()).toBeGreaterThan(0);
     await expect(sourceLinks.first()).toHaveAttribute("target", "_blank");
     await expect(sourceLinks.first()).toHaveAttribute("rel", /noopener/);
   });
 
-  test("voter-guide collapses again when the user navigates", async ({ page }) => {
+  test("voter guide stays open and updates on every question", async ({ page }) => {
     const vg = page.locator("#pq-voter-guide");
-    await vg.locator("summary").click();
-    await expect(vg).toHaveAttribute("open", "");
+    await expect(vg).toBeVisible();
+    const q1Policy = await vg.locator(".vg-section").first().textContent();
     // Pick an answer and go to Q2
     await page.locator("#pq-options input[value='3']").check();
     await page.locator("#pq-next").click();
-    // On Q2 the voter-guide should reset (collapsed)
     await expect(page.locator("#pq-progress")).toContainText(/Question 2/);
-    await expect(vg).not.toHaveAttribute("open", "");
+    // Still visible (always-open), with different content
+    await expect(vg).toBeVisible();
+    const q2Policy = await vg.locator(".vg-section").first().textContent();
+    expect(q2Policy).not.toBe(q1Policy);
   });
 
   test("every default-quiz question has a complete voter guide", async ({ request }) => {

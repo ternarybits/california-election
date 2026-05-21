@@ -177,13 +177,14 @@ function renderVoterGuide(q) {
   if (!vg) {
     wrap.classList.add("hidden");
     body.innerHTML = "";
-    wrap.open = false;
     return;
   }
+  // Always shown, never collapsible — everyone should read the context.
   wrap.classList.remove("hidden");
-  // Always start collapsed on a fresh question; the user can expand.
-  wrap.open = false;
   const sections = [];
+  if (vg.explainer) {
+    sections.push(`<div class="vg-section vg-explainer"><h4>The basics</h4><p>${escapeHtml(vg.explainer)}</p></div>`);
+  }
   if (vg.current_policy) {
     sections.push(`<div class="vg-section"><h4>Current California policy</h4><p>${escapeHtml(vg.current_policy)}</p></div>`);
   }
@@ -480,8 +481,8 @@ function renderRankingRow(r, rank) {
     </div>
     <p class="muted small">${escapeHtml(r.bio_short ?? "")}</p>
     <p class="muted small">${r.policy_scored} policy q's scored · ${r.personal_scored} personal-fit dims scored</p>
-    <details class="see-why">
-      <summary>see why</summary>
+    <details class="see-why"${rank === 0 ? " open" : ""}>
+      <summary>see why you matched — and flag anything wrong</summary>
       <div class="receipt-container"></div>
     </details>
   `;
@@ -529,7 +530,7 @@ function populateReceiptList(ul, items, candidate, kind) {
       ${quote}
       <div class="receipt-actions">
         ${sourceLink}
-        <button class="flag-btn" data-candidate="${escapeAttr(candidate.id)}" data-issue="${escapeAttr(item.issue_id)}">flag</button>
+        <button class="flag-btn" data-candidate="${escapeAttr(candidate.id)}" data-issue="${escapeAttr(item.issue_id)}">⚑ flag this</button>
       </div>
     `;
     const flagBtn = li.querySelector(".flag-btn");

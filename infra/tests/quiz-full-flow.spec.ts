@@ -46,12 +46,17 @@ test("complete quiz → results screen with receipts, share link, why-not, what-
   // Top match should have a rank-badge of #1
   await expect(rankingItems.first().locator(".rank-badge")).toHaveText("#1");
 
-  // Expand "see why" on top candidate, expect at least one source link
+  // Top match's "see why" is open by default so the flag button is discoverable
   const seeWhy = rankingItems.first().locator(".see-why");
-  await seeWhy.locator("summary").click();
+  await expect(seeWhy).toHaveAttribute("open", "");
   const sourceLinks = seeWhy.locator(".receipt-source");
   expect(await sourceLinks.count()).toBeGreaterThan(0);
   await expect(sourceLinks.first()).toHaveAttribute("target", "_blank");
+
+  // Flag button is visible without any extra interaction
+  const flagBtn = seeWhy.locator(".flag-btn").first();
+  await expect(flagBtn).toBeVisible();
+  await expect(flagBtn).toContainText(/flag/i);
 
   // Why-not panel should be visible (runner-up exists)
   await expect(page.locator("#why-not")).toBeVisible();

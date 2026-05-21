@@ -664,28 +664,28 @@
       "name": "Housing supply & zoning preemption",
       "tier": 1,
       "category": "housing",
-      "short_description": "How aggressively should the state push to build more housing, including over local objection?",
+      "short_description": "How hard should the state push cities to build more housing — even when local residents object?",
       "ca_specific_context": "Local control under CEQA and city zoning has historically blocked dense infill; recent state law (SB 9, SB 10, SB 423) preempts some of that.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Aggressively preempt local zoning to force more supply"
+          "label": "Push hard — override local zoning rules to force more building"
         },
         {
           "value": 2,
-          "label": "Build a lot — strong state targets, modest preemption"
+          "label": "Push a lot — set strong building targets, override cities somewhat"
         },
         {
           "value": 3,
-          "label": "Balanced — state nudges, local control preserved"
+          "label": "Strike a balance — encourage building but leave most decisions to cities"
         },
         {
           "value": 4,
-          "label": "Limit preemption — favor local control and deregulation over upzoning mandates"
+          "label": "Mostly leave it to cities — limit state override, cut local red tape instead"
         },
         {
           "value": 5,
-          "label": "Prioritize subsidies, public housing, and tenant protections over state-forced market-rate supply"
+          "label": "Focus on subsidized housing and renter protections rather than forcing market-rate building"
         }
       ],
       "voter_guide": {
@@ -730,28 +730,28 @@
       "name": "Homelessness response",
       "tier": 1,
       "category": "housing",
-      "short_description": "Where should the state's approach to homelessness sit on the enforcement-to-services spectrum?",
+      "short_description": "How should California handle homelessness — lean more on enforcement, or on housing and services?",
       "ca_specific_context": "Prop 1 (2024) expanded conservatorship and mental-health funding; cities differ widely on encampment sweeps; SB 43 widened the bar for conservatorship.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Aggressive clearance — sweeps and expanded conservatorship as primary tools"
+          "label": "Clear encampments and expand court-ordered treatment as the main tools"
         },
         {
           "value": 2,
-          "label": "Enforcement-first with concurrent service offers"
+          "label": "Lead with enforcement, but offer services at the same time"
         },
         {
           "value": 3,
-          "label": "Balanced — enforcement only when shelter/services are available"
+          "label": "Balance the two — only clear camps when shelter or services are available"
         },
         {
           "value": 4,
-          "label": "Housing-first primarily, minimal enforcement"
+          "label": "Lead with housing first; use enforcement sparingly"
         },
         {
           "value": 5,
-          "label": "Heavy investment in supportive housing and services; treat enforcement as last resort"
+          "label": "Invest heavily in housing and services; use enforcement only as a last resort"
         }
       ],
       "voter_guide": {
@@ -883,20 +883,20 @@
       "name": "State wealth tax",
       "tier": 1,
       "category": "economy",
-      "short_description": "Should CA create a state wealth tax on the ultra-wealthy — taxing accumulated net worth, not just income?",
+      "short_description": "Should California create a wealth tax — a yearly tax on the total net worth of its richest residents, separate from income tax?",
       "ca_specific_context": "AB 259 (2023) and a November 2026 ballot initiative would tax billionaire net worth; none has been enacted.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Oppose any state wealth tax"
+          "label": "Oppose a state wealth tax"
         },
         {
           "value": 2,
-          "label": "Skeptical — no current support"
+          "label": "Lean against it — no current support"
         },
         {
           "value": 3,
-          "label": "Open or undecided"
+          "label": "Open to it / undecided"
         },
         {
           "value": 4,
@@ -904,7 +904,7 @@
         },
         {
           "value": 5,
-          "label": "Strongly support an aggressive wealth tax"
+          "label": "Strongly support a wealth tax on the ultra-rich"
         }
       ],
       "voter_guide": {
@@ -940,28 +940,28 @@
       "name": "Commercial property tax (Prop 13 split-roll)",
       "tier": 1,
       "category": "economy",
-      "short_description": "Should commercial property be taxed at market value (split-roll), or stay under Prop 13?",
+      "short_description": "California caps property taxes based on a property's purchase price (Prop 13). Should business and commercial property instead be taxed at today's market value?",
       "ca_specific_context": "Prop 15 (2020) would have implemented a commercial split-roll; failed 52-48.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Strengthen Prop 13 protections for commercial property"
+          "label": "Strengthen the tax cap for commercial property"
         },
         {
           "value": 2,
-          "label": "Hold Prop 13 protections for commercial property"
+          "label": "Keep the current tax cap for commercial property"
         },
         {
           "value": 3,
-          "label": "Targeted reforms (e.g., apply only to very large commercial holdings)"
+          "label": "Change it only for the largest commercial properties"
         },
         {
           "value": 4,
-          "label": "Phase in commercial split-roll"
+          "label": "Gradually tax commercial property at market value"
         },
         {
           "value": 5,
-          "label": "Full commercial split-roll — tax commercial at market value"
+          "label": "Fully tax commercial property at market value"
         }
       ],
       "voter_guide": {
@@ -1024,28 +1024,28 @@
       "name": "Utility rate regulation",
       "tier": 1,
       "category": "economy",
-      "short_description": "What role should the state play in setting electricity, gas, and insurance rates?",
+      "short_description": "How much should the state step in to control electricity, gas, and insurance rates?",
       "ca_specific_context": "PG&E, SCE, SDG&E rates have risen sharply; CPUC reform and proposals to replace investor-owned utilities are active debate.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Deregulate — let market and competition set rates"
+          "label": "Step back — let competition set rates"
         },
         {
           "value": 2,
-          "label": "Modest regulation, focus on grid investment"
+          "label": "Light regulation, focus on upgrading the grid"
         },
         {
           "value": 3,
-          "label": "Rate freeze and significant CPUC reform"
+          "label": "Freeze rates and overhaul the state utilities regulator"
         },
         {
           "value": 4,
-          "label": "Public option / break up monopolies"
+          "label": "Create a public option or break up the big utilities"
         },
         {
           "value": 5,
-          "label": "Full state takeover of investor-owned utilities"
+          "label": "Have the state take over the big private utilities"
         }
       ],
       "voter_guide": {
@@ -1146,28 +1146,28 @@
       "name": "Policing and criminal penalties",
       "tier": 2,
       "category": "safety",
-      "short_description": "What's the right balance between expanding police capacity, reform, and non-police alternatives?",
+      "short_description": "How should California balance more police, police reform, and non-police alternatives?",
       "ca_specific_context": "Fentanyl deaths, retail-theft enforcement, and police oversight debates have all driven CA policy since 2024.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Significantly expand law enforcement and toughen penalties"
+          "label": "Expand police and toughen criminal penalties"
         },
         {
           "value": 2,
-          "label": "Expand law enforcement with modest reforms"
+          "label": "Expand police, with some reforms"
         },
         {
           "value": 3,
-          "label": "Mixed approach — more officers AND more accountability/diversion"
+          "label": "Do both — more officers and more accountability and alternatives"
         },
         {
           "value": 4,
-          "label": "Prioritize reform, oversight, and non-police alternatives"
+          "label": "Prioritize reform, oversight, and non-police responses"
         },
         {
           "value": 5,
-          "label": "Substantially shift funding from policing to community services"
+          "label": "Shift significant funding from police to community services"
         }
       ],
       "voter_guide": {
@@ -1208,28 +1208,28 @@
       "name": "Prop 36 / Prop 47 direction",
       "tier": 2,
       "category": "safety",
-      "short_description": "Should CA go further on rolling back Prop 47, hold Prop 36 as passed, or restore Prop 47?",
+      "short_description": "California voters recently toughened penalties for some theft and drug crimes (Prop 36, 2024). Should the state go further, keep those changes, or return to the more lenient earlier approach (Prop 47)?",
       "ca_specific_context": "Prop 47 (2014) reduced certain felonies to misdemeanors; Prop 36 (2024) rolled back parts of that; implementation is still in progress.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Go further than Prop 36 — significantly toughen penalties"
+          "label": "Go even tougher than Prop 36"
         },
         {
           "value": 2,
-          "label": "Implement Prop 36 fully, consider further toughening"
+          "label": "Fully enforce Prop 36; consider going tougher"
         },
         {
           "value": 3,
-          "label": "Implement Prop 36 as passed; no further changes"
+          "label": "Keep Prop 36 as voters passed it"
         },
         {
           "value": 4,
-          "label": "Implement narrowly; advocate restoring some Prop 47 protections"
+          "label": "Enforce it narrowly; restore some lighter penalties"
         },
         {
           "value": 5,
-          "label": "Restore Prop 47 in full; expand diversion programs"
+          "label": "Return to the Prop 47 approach; expand treatment over jail"
         }
       ],
       "voter_guide": {
@@ -1270,28 +1270,28 @@
       "name": "Sanctuary and immigration enforcement",
       "tier": 2,
       "category": "immigration",
-      "short_description": "What should CA's posture be on cooperation with federal immigration enforcement?",
+      "short_description": "How much should California cooperate with federal immigration enforcement (ICE)?",
       "ca_specific_context": "SB 54 (2017) limits state cooperation with ICE; under renewed federal pressure as of 2025–2026.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Repeal SB 54; full ICE cooperation"
+          "label": "Cooperate fully with ICE — repeal the state's sanctuary law"
         },
         {
           "value": 2,
-          "label": "Allow specific exceptions to SB 54"
+          "label": "Keep the sanctuary law but allow more exceptions"
         },
         {
           "value": 3,
-          "label": "Maintain SB 54 as-is"
+          "label": "Keep the current sanctuary law as it is"
         },
         {
           "value": 4,
-          "label": "Expand sanctuary protections (e.g., legal defense funding)"
+          "label": "Strengthen protections (e.g. fund legal defense for immigrants)"
         },
         {
           "value": 5,
-          "label": "Major expansion — state-level immigration protections including state ID"
+          "label": "Go much further — add new state protections, like state IDs for all"
         }
       ],
       "voter_guide": {
@@ -1392,28 +1392,28 @@
       "name": "Natural gas as bridge fuel",
       "tier": 3,
       "category": "energy",
-      "short_description": "What role should natural gas play during the energy transition?",
+      "short_description": "What role should natural gas play as California shifts to cleaner energy?",
       "ca_specific_context": "Natural gas peaker plants and building-gas hookups are both contested; SoCalGas / PG&E gas systems are aging.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Expand natural gas infrastructure and use"
+          "label": "Expand natural gas use and infrastructure"
         },
         {
           "value": 2,
-          "label": "Maintain current natural gas role; gradual phase-down"
+          "label": "Keep natural gas for now; phase it down slowly"
         },
         {
           "value": 3,
-          "label": "Stable status; let market and reliability needs decide"
+          "label": "No firm timeline — let cost and grid reliability decide"
         },
         {
           "value": 4,
-          "label": "Phase out natural gas in power generation by mid-2030s"
+          "label": "Phase gas out of electricity by the mid-2030s"
         },
         {
           "value": 5,
-          "label": "Aggressive natural gas phase-out across all sectors"
+          "label": "Phase gas out quickly across homes, businesses, and power plants"
         }
       ],
       "voter_guide": {
@@ -1454,28 +1454,28 @@
       "name": "Oil and gas production in CA",
       "tier": 3,
       "category": "energy",
-      "short_description": "Should in-state oil and gas extraction expand, hold, or phase down?",
+      "short_description": "Should California drill for more oil and gas in-state, keep current levels, or wind it down?",
       "ca_specific_context": "SB 1137 (2022) established 3,200-ft setbacks; ballot fight overturned and re-affirmed; Kern County is the production heartland.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Expand in-state oil and gas production"
+          "label": "Drill more — expand in-state oil and gas"
         },
         {
           "value": 2,
-          "label": "Maintain current production levels; reduce regulation"
+          "label": "Keep current production; ease regulations"
         },
         {
           "value": 3,
-          "label": "Status quo — current setbacks and permitting"
+          "label": "Keep things roughly as they are"
         },
         {
           "value": 4,
-          "label": "Phase down — tighten setbacks, halt new permits"
+          "label": "Wind it down — tighten rules, stop issuing new drilling permits"
         },
         {
           "value": 5,
-          "label": "Rapid phase-out of in-state extraction"
+          "label": "Phase out in-state drilling quickly"
         }
       ],
       "voter_guide": {
@@ -1606,28 +1606,28 @@
       "name": "K-12 school funding and governance",
       "tier": 4,
       "category": "education",
-      "short_description": "Should CA increase, hold, or restructure K-12 funding?",
+      "short_description": "Should California spend more, less, or about the same on K-12 public schools?",
       "ca_specific_context": "Prop 98 (1988) sets a minimum funding floor; LCFF (2013) restructured allocation around student need.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Significantly cut K-12 spending"
+          "label": "Cut K-12 spending significantly"
         },
         {
           "value": 2,
-          "label": "Hold or modestly trim spending"
+          "label": "Trim or hold spending"
         },
         {
           "value": 3,
-          "label": "Maintain current spending levels"
+          "label": "Keep spending about the same"
         },
         {
           "value": 4,
-          "label": "Modest funding increases (teacher pay, facilities)"
+          "label": "Increase funding modestly (teacher pay, facilities)"
         },
         {
           "value": 5,
-          "label": "Major funding increase (e.g. teacher pay, smaller classes, facilities), with new revenue if needed"
+          "label": "Increase funding a lot (teacher pay, smaller classes), raising new revenue if needed"
         }
       ],
       "voter_guide": {
@@ -1672,28 +1672,28 @@
       "name": "School choice and charters",
       "tier": 4,
       "category": "education",
-      "short_description": "Should CA expand charter schools and school choice, or restrict them?",
+      "short_description": "Should California make it easier or harder to open charter schools and give families more school choices?",
       "ca_specific_context": "AB 1505 (2019) gave districts more charter denial authority; vouchers have repeatedly failed at the ballot.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Significantly expand charters and parental school choice"
+          "label": "Open many more charter schools and expand family choice"
         },
         {
           "value": 2,
-          "label": "Expand charters; protect parental choice"
+          "label": "Open more charter schools; protect family choice"
         },
         {
           "value": 3,
-          "label": "Maintain the current charter framework"
+          "label": "Keep the current charter school rules about the same"
         },
         {
           "value": 4,
-          "label": "Restrict charter expansion"
+          "label": "Make it harder to open new charter schools"
         },
         {
           "value": 5,
-          "label": "Cap or freeze charter growth; redirect funding to public schools"
+          "label": "Stop new charter schools; send the money to traditional public schools"
         }
       ],
       "voter_guide": {
@@ -1730,7 +1730,8 @@
             "title": "Ballotpedia — California Proposition 38, School Vouchers Initiative (2000)",
             "url": "https://ballotpedia.org/California_Proposition_38,_School_Vouchers_Initiative_(2000)"
           }
-        ]
+        ],
+        "explainer": "Traditional public schools are run by local school districts and are free and open to all students. Charter schools are also free public schools funded by tax dollars, but they're run independently — usually by a nonprofit under a contract (a 'charter') — with more freedom over how they teach and hire, and less district oversight. Private schools charge tuition and don't receive state funding. 'School choice' also sometimes means vouchers — public money families could put toward private-school tuition — which California does not currently offer."
       }
     },
     {
@@ -1738,28 +1739,28 @@
       "name": "Healthcare funding mechanism",
       "tier": 4,
       "category": "healthcare",
-      "short_description": "If state-level single-payer healthcare is on the table, how should it be funded?",
+      "short_description": "Should California move toward a state-run, single-payer health system (the state covers everyone instead of private insurance) — and if so, how would it be paid for?",
       "ca_specific_context": "AB 1400 / CalCare proposals have repeatedly stalled over funding; Medi-Cal was expanded to undocumented adults in 2024.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Roll back recent Medi-Cal expansions"
+          "label": "Roll back recent expansions of state health coverage (Medi-Cal)"
         },
         {
           "value": 2,
-          "label": "Hold current system; focus on cost containment"
+          "label": "Keep today's system; focus on lowering costs"
         },
         {
           "value": 3,
-          "label": "Incremental Medi-Cal / ACA expansion, no new broad tax"
+          "label": "Expand coverage gradually, without a big new tax"
         },
         {
           "value": 4,
-          "label": "State single-payer, funded primarily by wealth and corporate taxes"
+          "label": "Single-payer, paid for mainly by taxes on wealth and corporations"
         },
         {
           "value": 5,
-          "label": "State single-payer funded by broad-based new taxes (e.g. payroll)"
+          "label": "Single-payer, paid for by broad new taxes (such as a payroll tax)"
         }
       ],
       "voter_guide": {
@@ -1800,28 +1801,28 @@
       "name": "Abortion and reproductive rights",
       "tier": 4,
       "category": "social",
-      "short_description": "Should CA expand, hold, or restrict abortion access?",
+      "short_description": "Should California expand, keep, or restrict abortion access?",
       "ca_specific_context": "Prop 1 (2022) enshrined abortion rights in the CA Constitution; CA has funded travel for out-of-state patients.",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Significant restrictions (gestational limits, parental consent)"
+          "label": "Add restrictions (such as time limits or parental consent)"
         },
         {
           "value": 2,
-          "label": "Permit some restrictions"
+          "label": "Allow some restrictions"
         },
         {
           "value": 3,
-          "label": "Hold current CA protections (Prop 1)"
+          "label": "Keep California's current strong protections"
         },
         {
           "value": 4,
-          "label": "Strong defense — expand access funding and provider network"
+          "label": "Strengthen access — more funding and more providers"
         },
         {
           "value": 5,
-          "label": "Major expansion — constitutional amendment beyond Prop 1; fund out-of-state patients; broaden providers"
+          "label": "Go further — fund out-of-state patients and broaden who can provide care"
         }
       ],
       "voter_guide": {
@@ -1862,28 +1863,28 @@
       "name": "Gun policy",
       "tier": 4,
       "category": "safety",
-      "short_description": "Should CA's gun laws be loosened, held, or expanded?",
+      "short_description": "Should California's gun laws be loosened, kept the same, or made stricter?",
       "ca_specific_context": "CA's assault-weapons ban, magazine limits, and CCW frameworks have been in continuous litigation since Bruen (2022).",
       "stance_scale": [
         {
           "value": 1,
-          "label": "Significant rollback (looser concealed-carry, ease assault-weapons enforcement)"
+          "label": "Loosen them significantly (easier concealed carry, lighter enforcement)"
         },
         {
           "value": 2,
-          "label": "Loosen specific restrictions"
+          "label": "Loosen some specific rules"
         },
         {
           "value": 3,
-          "label": "Hold current CA gun laws"
+          "label": "Keep current gun laws as they are"
         },
         {
           "value": 4,
-          "label": "Strong defense of current laws; close loopholes"
+          "label": "Defend current laws and close loopholes"
         },
         {
           "value": 5,
-          "label": "Major expansion of restrictions (registry, supply controls, additional bans)"
+          "label": "Add major new restrictions (gun registry, more bans)"
         }
       ],
       "voter_guide": {
