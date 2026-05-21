@@ -367,11 +367,21 @@ function handleTopicPage(issueId) {
 <meta property="og:title" content="${escapeSvg(docTitle)}">
 <meta property="og:description" content="${escapeSvg(desc)}">
 <meta name="twitter:card" content="summary">
+<script src="/theme.js"></script>
 <style>
   :root { --bg:#0f1115; --panel:#161a22; --panel-2:#1d2230; --border:#262c39; --text:#e7ecf3;
-          --muted:#97a3b6; --accent:#f7c948; --accent-2:#5b9cf5; --accent-3:#6ed29b; }
+          --muted:#97a3b6; --accent:#f7c948; --accent-2:#5b9cf5; --accent-3:#6ed29b; color-scheme:dark; }
+  :root[data-theme="light"] { --bg:#f4f6fa; --panel:#ffffff; --panel-2:#f3f4f7; --border:#d7dde8;
+          --text:#1a2230; --muted:#586273; --accent:#d99000; --accent-2:#2563c9; --accent-3:#138a4e; color-scheme:light; }
   html,body { margin:0; background:var(--bg); color:var(--text);
-              font-family:${FONT}; line-height:1.55; }
+              font-family:${FONT}; line-height:1.55; transition:background-color .2s ease, color .2s ease; }
+  .topbar { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .theme-toggle { flex:0 0 auto; width:36px; height:36px; padding:0; display:inline-flex; align-items:center;
+          justify-content:center; border:1px solid var(--border); border-radius:50%; background:var(--panel-2);
+          color:var(--muted); cursor:pointer; }
+  .theme-toggle:hover { color:var(--accent-2); border-color:var(--accent-2); }
+  :root[data-theme="dark"] .theme-toggle .icon-moon { display:none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display:none; }
   .wrap { max-width:760px; margin:0 auto; padding:32px 20px 64px; }
   .kicker { color:var(--muted); font-size:.85rem; text-transform:uppercase; letter-spacing:.04em; }
   h1 { font-size:1.9rem; margin:.2em 0 .1em; }
@@ -398,7 +408,13 @@ function handleTopicPage(issueId) {
 </head>
 <body>
 <main class="wrap">
-  <p class="kicker">CA 2026 Governor Primary · Candidate Matcher</p>
+  <div class="topbar">
+    <p class="kicker">CA 2026 Governor Primary · Candidate Matcher</p>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
   <h1>${escapeSvg(issue.name)}</h1>
   <p class="lede">${escapeSvg(desc)}</p>
   ${issue.ca_specific_context ? `<section><h2>California context</h2>${para(issue.ca_specific_context)}</section>` : ""}
