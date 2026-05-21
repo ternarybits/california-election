@@ -38,6 +38,16 @@ test.describe("Voter-guide context block", () => {
     await expect(sourceLinks.first()).toHaveAttribute("rel", /noopener/);
   });
 
+  test("inline bill links in prose render as real anchors", async ({ page }) => {
+    // The wealth-tax question (Q1) cites AB 259 inline in its body text.
+    const billLink = page.locator("#pq-voter-guide .vg-section a", { hasText: /AB 259/i }).first();
+    await expect(billLink).toBeVisible();
+    await expect(billLink).toHaveAttribute("href", /leginfo\.legislature\.ca\.gov/);
+    await expect(billLink).toHaveAttribute("target", "_blank");
+    // The raw markdown syntax must not leak as visible text anywhere in the guide.
+    await expect(page.locator("#pq-voter-guide")).not.toContainText("](http");
+  });
+
   test("voter guide stays open and updates on every question", async ({ page }) => {
     const vg = page.locator("#pq-voter-guide");
     await expect(vg).toBeVisible();

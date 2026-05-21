@@ -57,6 +57,18 @@ test.describe("Quiz navigation", () => {
     await expect(page.locator("#pq-importance")).toHaveValue("2");
   });
 
+  test("navigating to another question scrolls back to the top", async ({ page }) => {
+    // Scroll down within Q1 (the always-open voter guide makes the page tall)
+    await page.evaluate(() => window.scrollTo(0, 800));
+    expect(await page.evaluate(() => window.scrollY)).toBeGreaterThan(100);
+    // Advance to Q2
+    await page.locator("#pq-options input").first().check();
+    await page.locator("#pq-next").click();
+    await expect(page.locator("#pq-progress")).toContainText(/Question 2/);
+    // Should be back at the top
+    expect(await page.evaluate(() => window.scrollY)).toBeLessThan(50);
+  });
+
   test("skip records a no-answer and advances", async ({ page }) => {
     await page.locator("#pq-skip").click();
     await expect(page.locator("#pq-progress")).toContainText(/Question 2/);

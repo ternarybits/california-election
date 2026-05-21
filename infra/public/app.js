@@ -120,6 +120,7 @@ function startPolicyPhase() {
 
 function renderPolicyQuestion() {
   const q = state.questions[state.pIdx];
+  scrollToTop();
   $("#pq-title").textContent = q.name;
   $("#pq-desc").textContent = q.short_description;
   renderVoterGuide(q);
@@ -183,16 +184,16 @@ function renderVoterGuide(q) {
   wrap.classList.remove("hidden");
   const sections = [];
   if (vg.explainer) {
-    sections.push(`<div class="vg-section vg-explainer"><h4>The basics</h4><p>${escapeHtml(vg.explainer)}</p></div>`);
+    sections.push(`<div class="vg-section vg-explainer"><h4>The basics</h4><p>${renderProse(vg.explainer)}</p></div>`);
   }
   if (vg.current_policy) {
-    sections.push(`<div class="vg-section"><h4>Current California policy</h4><p>${escapeHtml(vg.current_policy)}</p></div>`);
+    sections.push(`<div class="vg-section"><h4>Current California policy</h4><p>${renderProse(vg.current_policy)}</p></div>`);
   }
   if (Array.isArray(vg.key_facts) && vg.key_facts.length) {
-    sections.push(`<div class="vg-section"><h4>Key facts</h4><ul>${vg.key_facts.map((f) => `<li>${escapeHtml(f)}</li>`).join("")}</ul></div>`);
+    sections.push(`<div class="vg-section"><h4>Key facts</h4><ul>${vg.key_facts.map((f) => `<li>${renderProse(f)}</li>`).join("")}</ul></div>`);
   }
   if (vg.comparison) {
-    sections.push(`<div class="vg-section"><h4>How CA compares</h4><p>${escapeHtml(vg.comparison)}</p></div>`);
+    sections.push(`<div class="vg-section"><h4>How CA compares</h4><p>${renderProse(vg.comparison)}</p></div>`);
   }
   const hasArgs = vg.arguments_for_change || vg.arguments_against_change;
   if (hasArgs) {
@@ -200,16 +201,16 @@ function renderVoterGuide(q) {
       <div class="vg-args">
         <div class="vg-arg vg-arg-for">
           <h4>Arguments for change</h4>
-          <p>${escapeHtml(vg.arguments_for_change ?? "")}</p>
+          <p>${renderProse(vg.arguments_for_change ?? "")}</p>
         </div>
         <div class="vg-arg vg-arg-against">
           <h4>Arguments against change</h4>
-          <p>${escapeHtml(vg.arguments_against_change ?? "")}</p>
+          <p>${renderProse(vg.arguments_against_change ?? "")}</p>
         </div>
       </div>`);
   }
   if (vg.note_on_options) {
-    sections.push(`<div class="vg-section vg-note"><h4>Note on the options</h4><p>${escapeHtml(vg.note_on_options)}</p></div>`);
+    sections.push(`<div class="vg-section vg-note"><h4>Note on the options</h4><p>${renderProse(vg.note_on_options)}</p></div>`);
   }
   if (Array.isArray(vg.sources) && vg.sources.length) {
     const items = vg.sources
@@ -232,6 +233,7 @@ function startPersonalPhase() {
 
 function renderPersonalQuestion() {
   const d = state.dimensions[state.fIdx];
+  scrollToTop();
   $("#fq-title").textContent = d.name;
   $("#fq-desc").textContent = d.description;
   const optsEl = $("#fq-options");
@@ -413,6 +415,7 @@ function buildRanking(policyAnswers, personalAnswers) {
 // ---------- Results ----------
 
 function renderResults({ fromShare = false } = {}) {
+  scrollToTop();
   $("#policy-quiz").classList.add("hidden");
   $("#personal-quiz").classList.add("hidden");
 
@@ -695,6 +698,20 @@ function escapeHtml(s) {
 }
 function escapeAttr(s) {
   return escapeHtml(s);
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+}
+
+// Render curated prose with inline markdown links: [label](https://…).
+// Content is author-controlled (our dataset), but we still escape everything
+// and only allow http(s) links so a bad URL can't inject markup.
+function renderProse(s) {
+  const escaped = escapeHtml(s);
+  return escaped.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (_m, label, url) => {
+    return `<a href="${url}" target="_blank" rel="noopener">${label}</a>`;
+  });
 }
 
 boot();
