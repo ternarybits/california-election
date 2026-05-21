@@ -1,7 +1,7 @@
 {
   "$schema_note": "v1 — first complete research pass, then refined. 8 candidates × 25 issues = 200 candidate-issue positions. The tax_top_wealth issue was split into tax_top (income/corporate rates) and tax_wealth (state wealth tax) so the two independent axes score separately. Issues ranked by differentiation score in questions[]; top 15 flagged default_quiz=true. Corrections welcome via GitHub PR or in-app flag.",
   "version": "v1",
-  "snapshot_date": "2026-05-14",
+  "snapshot_date": "2026-05-21",
   "race": {
     "name": "California 2026 Gubernatorial Primary",
     "primary_date": "2026-06-02",
@@ -3359,17 +3359,18 @@
       "candidate_id": "mahan",
       "issue_id": "utility_rates",
       "stance": 2,
-      "summary": "Mahan does not have a stand-alone utility-rates platform; his record is the data: as San Jose mayor he stepped back from his predecessors' exploration of a municipal-utility takeover of PG&E and instead signed a 2024 partnership giving PG&E performance milestones to deliver power for data centers and other large users, in exchange for ~$2.5M/year in city revenue. He has publicly insisted that data-center customers pay their own cost of service rather than shift it onto residential ratepayers, framing utility policy as grid-investment plus cost-shift protection rather than rate freezes or break-ups.",
-      "source_quote": "Large tech companies wanting to build new data centers cannot shift those costs onto ordinary ratepayers and must pay for the full cost, with the goal of leveraging their investment to make energy cleaner and more affordable for everyone else.",
-      "source_url": "https://www.sanjoseca.gov/Home/Components/News/News/6819/4699",
-      "source_date": "2024",
-      "confidence": "low",
+      "summary": "Mahan's utility-rate stance centers on cost-shift protection rather than rate freezes or utility break-ups. As San Jose mayor he stepped back from a municipal takeover of PG&E and signed a 2024 partnership giving PG&E performance milestones to serve data centers and other large users for ~$2.5M/year in city revenue. His May 2026 'hold Big Tech accountable' plan elevates this to a campaign centerpiece: require large data centers and major energy users to cover their own surging electrical costs and contribute to renewable-energy and grid infrastructure, rather than shifting costs onto residential ratepayers.",
+      "source_quote": "A large portion of Mahan's plan focuses on forcing AI and data center companies to cover surging electrical costs and address the environmental impacts on the electrical grid.",
+      "source_url": "https://sfstandard.com/2026/05/15/tech-titans-built-mahan-s-bid-governor-s-plan-regulate-their-companies/",
+      "source_date": "2026-05-15",
+      "confidence": "medium",
       "secondary_sources": [
+        "https://www.sanjoseca.gov/Home/Components/News/News/6819/4699",
         "https://www.kqed.org/news/12049830/san-jose-and-pge-strike-deal-to-attract-data-centers-to-south-bay",
         "https://insider.govtech.com/california/news/data-center-first-to-connect-under-san-jose-pg-e-deal",
         "https://laist.com/news/politics/2026-election-california-primary-matt-mahan-california-governor-transcript"
       ],
-      "notes": "Coded 2 (modest regulation, focus on grid investment) because his governing record explicitly chose IOU partnership over public takeover, and his only utility-rate-related public position is cost-shift protection — a grid-investment governance question, not a rate-control or break-up question. Confidence is low because he has issued no gubernatorial-campaign utility-rate platform; the source quote is paraphrased from search-result reporting on his data-center stance, not a verbatim transcript. He has also called for suspending the gas tax, which is consistent with a grid/affordability rather than structural-reform posture."
+      "notes": "Stance unchanged at 2 (modest regulation, grid investment + cost-shift protection). Refreshed from a stale '2024'/low-confidence record to his May 2026 statewide plan, which makes data-center cost-shift protection a campaign centerpiece; confidence raised low->medium. The source quote is the SF Standard's characterization of his unveiled plan, not a verbatim Mahan transcript; the 2024 San Jose PG&E deal remains as corroborating secondary evidence."
     },
     {
       "candidate_id": "villaraigosa",
@@ -4795,16 +4796,17 @@
       "candidate_id": "villaraigosa",
       "issue_id": "abortion",
       "stance": 3,
-      "summary": "Pro-choice; frames reproductive freedom as economic justice. In 2018 said he 'would be the strongest defender of a woman's right to choose'; said he would have signed the Reproductive Health Nondiscrimination Act if governor. 2026 campaign materials focus on affordability, housing, public safety — no dedicated reproductive-rights issue page found.",
-      "source_quote": "The issue of reproductive freedom is really an issue of economic justice. … all four of us would be the strongest defenders of a woman's right to choose and for protecting reproductive health care choices for women.",
-      "source_url": "https://www.ontheissues.org/Governor/Antonio_Villaraigosa_Abortion.htm",
-      "source_date": "2018-01-23",
-      "confidence": "medium",
+      "summary": "Pro-choice; frames reproductive freedom as economic justice. At the May 14, 2026 final debate he said he would NOT allow another state to extradite a California physician for mailing abortion pills across state lines (joining all the Democratic candidates; the two Republicans said they would). Consistent with his lifetime pro-choice record dating to the 2018 NARAL forum. 2026 campaign materials emphasize affordability, housing, and public safety with no dedicated reproductive-rights page, and he has articulated no new 2026 expansion proposals.",
+      "source_quote": "At the May 14, 2026 debate, asked whether they would allow Louisiana to extradite a California OB-GYN for sending abortion pills across state lines, Antonio Villaraigosa — with the other Democrats — said he would not.",
+      "source_url": "https://www.cbsnews.com/sanfrancisco/news/takeaways-cbs-news-california-san-francisco-examiner-debate/",
+      "source_date": "2026-05-14",
+      "confidence": "high",
       "secondary_sources": [
+        "https://www.ontheissues.org/Governor/Antonio_Villaraigosa_Abortion.htm",
         "https://www.courthousenews.com/top-california-democrats-agree-on-abortion-rights/",
         "https://www.antonio2026.com/"
       ],
-      "notes": "Verbatim quotes are from the 2018 NARAL Pro-Choice California gubernatorial forum, not 2026 campaign materials; his antonio2026.com/issues page does not address abortion. Coded 3 because: (a) consistent lifetime pro-choice record but (b) positioned as one of the more moderate Democrats in the 2026 field and has not articulated 2026 expansion proposals. Could be 4 with a verbatim 2026 statement; confidence medium."
+      "notes": "Refreshed from a stale 2018-01-23 NARAL-forum source to the May 14, 2026 final debate, where his refusal to permit extradition of a CA abortion provider gives a current on-record datapoint. Source quote is the outlet's account of the yes/no debate question. Kept at 3: consistent pro-choice record but positioned as a more moderate Democrat with no new 2026 expansion proposals; confidence raised to high given the fresh corroboration."
     },
     {
       "candidate_id": "thurmond",
@@ -5363,11 +5365,16 @@
       "candidate_id": "becerra",
       "issue_id": "tax_top",
       "stance": 3,
-      "summary": "Says he would raise effective tax rates on wealthy Californians whose passive (capital-gains) income is taxed below what teachers, nurses, and firefighters pay on wages. Has not endorsed a specific top-bracket or corporate-rate change; framing is directional ('they'll pay more').",
+      "summary": "Says he would raise effective tax rates on wealthy Californians whose passive (capital-gains) income is taxed below what teachers, nurses, and firefighters pay on wages. At the May 14, 2026 final debate, pressed on how he would fund his agenda, he named a specific mechanism for the first time: restricting some corporations' use of tax credits (mirroring Newsom's same-day budget proposal). Still has not endorsed a top-bracket or general corporate-rate change; framing remains directional ('they'll pay more').",
       "source_quote": "We will make sure that those who have really large wealth, if they are paying less than a teacher or a firefighter or a police officer or a nurse, that they're going to be paying more in taxes. ... All that passive income — capital gains and other types of income — is taxed far differently.",
       "source_url": "https://www.sfexaminer.com/news/politics/2026-california-governor-race-get-to-know-xavier-beccera/article_00b241f6-3fd1-456f-bb91-9a3162a89241.html",
       "source_date": "2026-05-12",
-      "confidence": "medium"
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://calmatters.org/politics/2026/05/california-governor-race-final-debate/",
+        "https://www.kpbs.org/news/politics/2026/05/15/california-governor-debate-rivals-gang-up-on-democratic-frontrunner-becerra"
+      ],
+      "notes": "Stance unchanged at 3. May 14, 2026 final debate added specificity (restrict corporate tax-credit use, per CalMatters/KPBS) but not a rate change, so still 'make the wealthy/corporations pay more' without a bracket move. Primary quote retained from the SF Examiner profile; debate sources added as secondary corroboration."
     },
     {
       "candidate_id": "porter",
@@ -5383,11 +5390,15 @@
       "candidate_id": "mahan",
       "issue_id": "tax_top",
       "stance": 2,
-      "summary": "Opposes broad tax increases, says 'raising taxes isn't always the answer,' and commits to not raising broad-based taxes to fix the budget. Lone exception is a narrow sectoral tax on AI companies — not a top-bracket or general corporate-rate increase. Proposes no rate cuts either, so holds current rates.",
+      "summary": "Opposes broad tax increases, says 'raising taxes isn't always the answer,' and commits to not raising broad-based taxes to fix the budget. Lone exception is a narrow sectoral levy on AI: his May 2026 'hold Big Tech accountable' plan formalizes a 'Shared Prosperity Fund' directing a portion of tax revenue from data centers and robotics manufacturers into job-training and apprenticeship programs (he floated UBI only 'if we see mass job loss'). Not a top-bracket or general corporate-rate increase; proposes no rate cuts either, so holds current rates.",
       "source_quote": "Raising taxes isn't always the answer, Tom.",
       "source_url": "https://fortune.com/2026/05/07/who-is-matt-mahan-silicon-valley-california-governor-san-jose-mayor/",
       "source_date": "2026-05-07",
-      "confidence": "high"
+      "confidence": "high",
+      "secondary_sources": [
+        "https://sfstandard.com/2026/05/15/tech-titans-built-mahan-s-bid-governor-s-plan-regulate-their-companies/"
+      ],
+      "notes": "Stance unchanged at 2. The May 14-15, 2026 tech-accountability plan formalized the previously vague 'narrow sectoral tax on AI companies' into a named 'Shared Prosperity Fund' financed by data-center/robotics tax revenue. Primary quote retained; SF Standard added as secondary."
     },
     {
       "candidate_id": "villaraigosa",
@@ -5452,12 +5463,16 @@
     {
       "candidate_id": "porter",
       "issue_id": "tax_wealth",
-      "stance": "unknown",
-      "summary": "Porter's platform centers on a graduated corporate tax and cutting income tax under $100K; it never mentions a wealth tax. No reviewed source (her campaign site, KQED, LAist, CalMatters voter guide) records her explicitly opposing or declining the November 2026 billionaire wealth-tax initiative — KQED notes only that 'none of the leading candidates has embraced' it, which is silence rather than on-record opposition. Per sourcing rules her wealth-tax position is coded unknown, not inferred to 1-2.",
-      "source_quote": null,
-      "source_url": "https://katieporter.com/priority/fighting-income-inequality/",
-      "source_date": "2026-05-12",
-      "confidence": "insufficient_data"
+      "stance": 2,
+      "summary": "Now on record: at the May 2026 gubernatorial debate Porter opposed Tom Steyer's proposed one-time billionaire wealth-tax initiative, calling it 'too narrow' and saying it 'wouldn't make a real change.' Her own platform centers on a graduated corporate tax and cutting income tax under $100K rather than a net-worth levy. Like Becerra, she criticizes this specific mechanism as insufficient while still favoring making the wealthy and corporations pay more — a skeptical 'no current support' posture rather than principled anti-tax opposition.",
+      "source_quote": "Porter, meanwhile, said the tax was too narrow and wouldn't make a real change.",
+      "source_url": "https://abc7.com/post/california-governor-debate-candidates-clash-gas-prices-immigration-taxes/19048232/",
+      "source_date": "2026-05-06",
+      "confidence": "medium",
+      "secondary_sources": [
+        "https://katieporter.com/priority/fighting-income-inequality/"
+      ],
+      "notes": "Recoded from unknown to 2 after the May 5-6, 2026 CNN/ABC7 debate put her on record against Steyer's one-time billionaire tax ('too narrow', 'wouldn't make a real change'). Coded 2 (lean against / no current support) rather than 1, mirroring Becerra: her critique is from the left (the mechanism is insufficient) and she still wants the wealthy/corporations to pay more via a graduated corporate tax. Confidence medium — clear single on-record debate line; she has not addressed a recurring state wealth tax in principle."
     },
     {
       "candidate_id": "mahan",
@@ -5496,12 +5511,12 @@
       "rank": 1,
       "default_quiz": true,
       "differentiation": {
-        "score": 0.765,
-        "std": 1.75,
-        "mean": 2.286,
+        "score": 0.82,
+        "std": 1.639,
+        "mean": 2.25,
         "range": 4,
         "n_distinct": 3,
-        "n_resolved": 7,
+        "n_resolved": 8,
         "n_total": 8
       }
     },
