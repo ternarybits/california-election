@@ -6,7 +6,7 @@ This file orients a fresh Claude Code (or other AI) session. Read it first, then
 
 A shareable web experience that helps Californians find the 2026 gubernatorial candidate they best align with — and *why*. Three modalities over one shared, openly-published dataset:
 
-1. **Quick Quiz** — Buildy-hosted multiple-choice web app (~3 min, ranked results, share card)
+1. **Quick Quiz** — Cloudflare-Worker-hosted multiple-choice web app (~3 min, ranked results, share card)
 2. **MCP Server** — Claude / ChatGPT / Cursor call our tools to drive a conversational matching experience using cited candidate/issue data
 3. **Open dataset** — versioned JSON in this repo; every candidate position has a primary-source citation
 
@@ -14,13 +14,16 @@ The unifying claim: **every quiz question is one where the candidates *actually*
 
 Target launch: **before the June 2026 California primary.**
 
-## Current state (2026-05-12)
+## Current state (2026-05-21)
 
-- ✅ Plan written (`PLAN.md`)
-- ✅ Repo created (public, `ternarybits/california-election`)
-- ⏳ No code yet
-- ⏳ No dataset yet
-- ⏳ Buildy and MCP "hello world" spikes not yet run
+- ✅ Plan written (`PLAN.md`), updated for the Cloudflare pivot
+- ✅ Repo public at `ternarybits/california-election`
+- ✅ **Phase 0 complete** — `dataset/dataset_v1.json` (8 candidates × 24 issues = 192 positions, 184 cited, 8 honest "unknown"s, questions ranked by differentiation score)
+- ✅ **Buildy spike done** but app outgrew Buildy's size limits; code preserved in git history, target stack moved to Cloudflare
+- ✅ **MCP server working** — 7 tools, stdio transport, smoke test passes (`mcp/test_tools.mjs`)
+- 🟡 **Phase 1 in progress** — Worker code written, porting to `infra/` for Cloudflare deploy
+- ⏳ **Phase 2 polish** — tool description tuning, sample prompts, Cursor docs
+- ⏳ **Phase 3 not started** — share cards, why-not, what-if, stats page, launch posts
 
 ## Resolved decisions
 
@@ -34,70 +37,53 @@ Don't re-litigate these unless the user explicitly raises them. All are two-way 
 | 4 | AI cost | **N/A** (resolved by #1). |
 | 5 | Endorsements / donors | **Endorsements yes (dated), donors no.** Donor data deferred to v2. |
 | 6 | Corrections workflow | **GitHub PRs + in-app flag button**, both feeding the same GitHub issue list. |
-| 7 | Domain | **Buildy URL only for v1.** No custom domain. |
+| 7 | Domain | **`*.workers.dev` URL only for v1.** Custom domain only if traction warrants it post-launch. |
 | 8 | Analytics | **Yes, anonymized, with a public stats page** (Phase 3 deliverable). |
+| 9 | Quiz hosting | **Cloudflare Workers + D1.** Replaced Buildy after the inlined-dataset app exceeded Buildy's size limits. |
 
 ## Architecture in one diagram
 
 ```
 [ versioned dataset JSON ]   ← single source of truth, openly published
         |
-   +----+--------+----------+
-   v             v          v
-[ Buildy quiz ] [ MCP server ] [ (v2) standalone chat UI? ]
-                     |
-                     v
-              Claude / ChatGPT / Cursor
-              (user's own agent)
+   +----+--------+
+   v             v
+[ Cloudflare Worker ]   [ MCP server (stdio) ]
+  - UI (static)              |
+  - /api/* endpoints         v
+  - D1 (flags/events)  Claude / Cursor / (future) ChatGPT
 ```
 
-## Critical platform constraint: Buildy has no outbound HTTP
+## Cloudflare runtime notes
 
-This is the single most important thing for a new session to know.
+- Workers free tier: 100k req/day, 1 MB compressed script size, unlimited bandwidth.
+- D1 free tier: 5 GB storage, 5M reads/day, 100k writes/day, no expiration.
+- WinterTC API surface — `Request`, `Response`, `crypto.subtle`, streams, `setTimeout`. Same surface our Buildy module used.
+- Deploy via `wrangler deploy` from `infra/`. D1 provisioning: `wrangler d1 create california-election` once, paste database_id into `wrangler.toml`, then `wrangler d1 execute california-election --file=schema.sql`.
+- Login (`wrangler login`) is interactive — Claude can prep the deploy but the user runs the final command.
 
-- Buildy backend modules **cannot fetch external URLs.**
-- Buildy UI iframe runs under `connect-src 'self'` — **cannot call third-party APIs either.**
-- Buildy UI is **vanilla JS + Tailwind, no React/Vue/Svelte.** Inline small UMD libs only.
-- Available runtime: Workers/WinterTC shape (`Request`, `Response`, `crypto.subtle`, `crypto.randomUUID`, streams, `setTimeout`). `env.storage` (KV, 10MB cap) and `env.log` if imported.
-- Auth model: `bld_app_*` tokens (per-app, 7-day expiry if unclaimed). Auto-pairing supported via `pair: true` in the create call.
-- Deploy: `POST https://app.buildy.so/app { module, ui, styles }` → returns `{ id, url, token }`. **Save the token immediately — it's irrecoverable.**
-- Reference: `https://buildy.so/llms-full.txt`
+## Key files
 
-Implications:
-- The quiz works great on Buildy (static data + scoring).
-- The MCP server should probably live on a Cloudflare Worker (or similar) with the dataset bundled or fetched from a public URL — Buildy can't serve it cleanly because MCP transport needs flexibility Buildy doesn't currently expose, and the dataset is published openly anyway.
-- Any LLM-driven feature **must** happen in the user's own agent (via MCP), not inside Buildy.
-
-## Recommended next steps
-
-In rough priority order. #1 and #2 are independent and can run in parallel.
-
-1. **Buildy hello-world spike** — POST a tiny ES module + UI to `/app`, verify deploy/storage/Tailwind work end-to-end. Goal: de-risk the platform with ~1 hour of effort.
-2. **MCP hello-world spike** — one tool returning one issue, wired into Claude Desktop end-to-end. De-risks the second platform.
-3. **Phase 0 research kickoff** — voter-priority research (PPIC, Berkeley IGS, recent journalism) and candidate roster lockdown against the threshold criteria. Produces `dataset_v0.json`.
-4. After both spikes pass: start `dataset_v1.json` (full candidate × issue matrix with citations, two-pass verified).
+- [`PLAN.md`](./PLAN.md) — full design document; status snapshot near the top
+- [`README.md`](./README.md) — short public-facing description
+- [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) — current dataset; 192 candidate-issue positions with citations
+- `buildy/` — original Buildy spike (works locally, exceeds Buildy size cap on deploy). Kept until Cloudflare is live; then moves to `legacy/buildy/`.
+- `mcp/` — stdio MCP server with 7 tools. Smoke test: `cd mcp && node test_tools.mjs`.
+- `infra/` (in progress) — Cloudflare Worker + D1 + static assets. The target Phase 1 deploy.
+- `scripts/` — `score_questions.mjs` (recompute differentiation scores), `merge_research.mjs` (merge per-issue research scratch files), `test_quiz.mjs` (smoke test of the quiz module + scoring)
 
 ## Working style preferences
 
 Distilled from the planning conversation:
 
-- **Make reasonable calls and continue.** The user explicitly said "work without stopping for clarifying questions" — default to executing, flag decision points inline, let them redirect. Exception: when the user explicitly says "let's walk through X," ask one question at a time with concrete options (`AskUserQuestion`).
-- **Be creative.** The user wants something genuinely interesting to share, not a clone of iSideWith. Look for differentiated angles (MCP integration, why-not analysis, public stats page).
-- **No yak-shaving Gumnut ceremony.** This is a personal project, not Gumnut work. No Linear issues, no Gumnut-style design-doc-in-`docs/design-docs/`, no PRs unless explicitly requested. PLAN.md at the repo root is the design doc.
-- **Receipts and credibility matter.** Civic-tech tools rise or fall on trust. Never trust an LLM summary of a candidate position without source verification.
+- **Make reasonable calls and continue.** The user explicitly said "work without stopping for clarifying questions" — default to executing, flag decision points inline, let them redirect.
+- **Be creative.** The user wants something genuinely interesting to share, not a clone of iSideWith. Differentiated angles include MCP integration, why-not analysis, public stats page.
+- **No yak-shaving Gumnut ceremony.** This is a personal project, not Gumnut work. No Linear issues, no design-doc-in-`docs/design-docs/`, no PRs unless explicitly requested. PLAN.md at the repo root is the design doc.
+- **Receipts and credibility matter.** Civic-tech tools rise or fall on trust. Never trust an LLM summary of a candidate position without source verification — set `"unknown"` rather than fabricate.
 - **Use `git -C <path>`** for git ops on a different repo (per the user's global preferences).
 
-## Key files
-
-- [`PLAN.md`](./PLAN.md) — full design document
-- [`README.md`](./README.md) — short public-facing description
-- `dataset_vN.json` (future) — versioned candidate × issue dataset
-- `buildy/` (future) — Buildy app source (manifest, module, UI)
-- `mcp/` (future) — MCP server source
-- `data-pipeline/` (future) — research / position elicitation tooling
-
-## User context (for the AI's benefit)
+## User context
 
 - GitHub: `ternarybits`
 - Repo: `ternarybits/california-election` (public)
-- Date this file was written: 2026-05-12
+- File last updated: 2026-05-21

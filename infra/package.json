@@ -1,0 +1,16 @@
+{
+  "name": "california-election-infra",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create california-election",
+    "db:apply": "wrangler d1 execute california-election --file=schema.sql --remote",
+    "db:apply-local": "wrangler d1 execute california-election --file=schema.sql --local",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.78.0"
+  }
+}

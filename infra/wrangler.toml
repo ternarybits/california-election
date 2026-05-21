@@ -1,0 +1,17 @@
+name = "california-election"
+main = "src/worker.js"
+compatibility_date = "2026-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Static assets (UI HTML, CSS) served via env.ASSETS.fetch(request).
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# D1 binding for analytics events + correction flags.
+# Provision once: `wrangler d1 create california-election`
+# then paste the returned database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "california-election"
+database_id = "PASTE_DATABASE_ID_AFTER_WRANGLER_D1_CREATE"

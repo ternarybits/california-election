@@ -1,9 +1,31 @@
 ---
 title: California 2026 Gubernatorial Candidate Matcher
-status: draft
+status: in-progress
 created: 2026-05-12
-last-updated: 2026-05-12
+last-updated: 2026-05-21
 ---
+
+## Status snapshot (2026-05-21)
+
+- **Phase 0 — Research & data**: ✅ Complete. `dataset_v1.json` shipped: 8 candidates × 24 issues = 192 candidate-issue positions, 184 cited from primary sources, 8 honest `"unknown"` entries (`confidence: "insufficient_data"`). Questions ranked by differentiation score; top 15 flagged `default_quiz: true`.
+- **Phase 1 — Quiz MVP**: 🟡 In progress. Worker-shaped fetch handler + vanilla-JS UI + two-phase quiz + dual scoring (policy / personal-fit) + importance slider all written. **Hosting moved from Buildy to Cloudflare** — see "Hosting pivot" below.
+- **Phase 2 — MCP server**: 🟡 7 tools shipped (1 more than PLAN required), stdio transport works end-to-end via `mcp/test_tools.mjs`. Outstanding: tool-description tuning, sample-prompt docs, ChatGPT/Cursor install instructions, SSE-transport decision.
+- **Phase 3 — Polish & launch**: ⏳ Not started.
+
+## Hosting pivot — Buildy → Cloudflare
+
+After completing the Phase 1 code on the Buildy platform, the deployed app size exceeded Buildy's limits (inlined dataset + module + UI). PLAN.md decision #7 anticipated this risk; the dataset is portable JSON and the existing code is Workers-shaped, so the port is mostly cosmetic.
+
+**New target stack:**
+
+- **Cloudflare Workers** — API endpoints (former `buildy/module.js`)
+- **Cloudflare Pages-style static assets** — UI + dataset JSON served from the same Worker (Workers Sites / Assets binding)
+- **Cloudflare D1** — analytics events + correction flags (replaces Buildy KV)
+- **MCP server** — stays stdio for v1; optional HTTP/SSE Worker deferred until ChatGPT demand surfaces
+
+Free tier covers everything we need (100k req/day, 5GB D1, unlimited static bandwidth), with no time-limited DB cliff. Custom domain still deferred per decision #7 — launch on `*.workers.dev`.
+
+The Buildy code is moved to `legacy/buildy/` rather than deleted; the deploy path was a working spike and may be useful if Buildy raises its limits later.
 
 # California 2026 Gubernatorial Candidate Matcher
 
@@ -236,49 +258,58 @@ No collaborative filtering, no embeddings, no LLM ranking. The math is auditable
 ### Component layout
 
 ```
-[ Research artifacts ]    [ Web quiz ]     [ MCP server ]     [ Deliberation mode ]
-        |                       |                |                     |
-        v                       v                v                     v
-+----------------+      +-------------+   +-------------+      +---------------+
-| dataset_vN.json|      |  Buildy app |   |  MCP server |      | Hosted agent  |
-| (versioned    )|----->|  static    -|---|  reads from |      | reads from    |
-| (sources cited)|      |  payload    |   |  dataset    |      | dataset       |
-+----------------+      +-------------+   +-------------+      +---------------+
-                                                |                     |
-                                                v                     v
-                                         Claude / ChatGPT      Browser (chat UI)
+[ Research artifacts ]    [ Web quiz (Worker) ]     [ MCP server ]     [ Deliberation mode ]
+        |                          |                       |                     |
+        v                          v                       v                     v
++----------------+      +----------------------+   +-------------+      +---------------+
+| dataset_vN.json|      | Cloudflare Worker:   |   |  MCP server |      | Hosted agent  |
+| (versioned    )|----->|  - /api/* endpoints  |---|  reads from |      | reads from    |
+| (sources cited)|      |  - static assets     |   |  dataset    |      | dataset       |
++----------------+      |  - D1 (flags/events) |   +-------------+      +---------------+
+                        +----------------------+         |                     |
+                                                         v                     v
+                                                  Claude / ChatGPT      Browser (chat UI)
 ```
 
 **The dataset JSON is the single source of truth.** All three surfaces read from it. Builds happen offline, results are versioned.
 
-### Why Buildy works for the quiz
+### Why Cloudflare Workers for the quiz
 
-- Static dataset baked into the module — no outbound HTTP needed ✓
-- Multiple choice + scoring — pure compute, no external services ✓
-- Persistent storage for user results and aggregate stats — `buildy:storage/kv@1.0` ✓
-- Public URL, real storage, mobile-friendly — Buildy's core promise ✓
-- Vanilla JS + Tailwind UI — fine for a quiz app ✓
+- WinterTC runtime — same `Request`/`Response`/`crypto.subtle`/streams shape we used on Buildy, minimal porting
+- Free tier: 100k requests/day, unlimited bandwidth, no expiration
+- D1 free tier: 5 GB, 5M reads/day, 100k writes/day — covers analytics + correction-flag submissions with headroom; **no time-limited DB cliff** (unlike Render's 30-day Postgres trial)
+- Workers Assets binding serves static UI + dataset JSON from the same deployable
+- 1 MB compressed script size limit on free tier; our 400 KB dataset + ~10 KB of code gzips to ~80 KB. Plenty of room.
+- Custom domain when wanted, free Workers SSL — but v1 launches on `*.workers.dev` (decision #7)
 
-Buildy estimated cost: $0 (per their model). 10MB storage cap is fine — the dataset will be well under 1MB, and we don't store per-user data verbatim (just hashed result IDs + share counts).
+### Why Cloudflare does NOT host the MCP server (yet)
 
-### Why Buildy does NOT work for the AI mode
+MCP stdio transport doesn't need a public endpoint — Claude Desktop and Cursor invoke the server as a local subprocess. ChatGPT's MCP wants SSE/HTTP, but ChatGPT MCP support is still gated and the audience is small for a US-state-specific tool.
 
-Buildy explicitly disallows outbound HTTP from both the backend and the UI iframe (`connect-src 'self'`). That means:
-
-- No calling Claude/OpenAI APIs from inside Buildy
-- No live polling lookups
-- No web-search for fresh quotes at runtime
-
-Resolved: Deliberation Mode is **driven entirely from Claude/ChatGPT via the MCP server**. No new hosting needed for the chat UI — the user's agent IS the chat UI. The MCP server returns JSON-ish responses, which means it can be Buildy itself (the dataset already lives there) or a tiny Cloudflare Worker / Vercel function. Zero AI cost on our side.
+v1 ships stdio-only with install instructions for Claude Desktop and Cursor. SSE-transport Worker is a reversible Phase 3+ add if ChatGPT demand materializes.
 
 > **Design decision — MCP-only for v1, no standalone chat UI.**
 > Shipping a real MCP-driven experience is the differentiated bet. A standalone hosted chat UI is well-trodden — many tools do it — and we can add it in v2 if there's demand. v1 gets viral leverage from "use this in your Claude app."
 
 ### Deployment plan
 
-- **Quiz**: Buildy app at `https://app.buildy.so/app/<id>` — primary distribution URL
-- **MCP server**: Either (a) Buildy app exposing JSON endpoints under `/api/*` (paired with the quiz; same dataset), proxied through a thin MCP shim hosted on Cloudflare Workers, OR (b) standalone Cloudflare Worker / Vercel function with the dataset bundled. Decision deferred to spike.
-- **Dataset hosting**: Versioned JSON in this repo, mirrored to a static URL (raw GitHub or a Worker) so anyone can audit our source data.
+- **Quiz**: Cloudflare Worker at `https://<name>.workers.dev` — primary distribution URL. Same Worker serves static UI, dataset JSON, and `/api/*` endpoints. D1 binding for flags + events.
+- **MCP server**: Stdio Node process, installed locally by users (Claude Desktop and Cursor configs published in `mcp/README.md`). No hosting required.
+- **Dataset hosting**: Versioned JSON in this repo (public on GitHub) + served by the same Worker at `/dataset_v1.json` for in-browser audit.
+
+#### Phase 1 hosting layout
+
+```
+infra/
+  wrangler.toml          # Worker name, compatibility date, D1 binding, Assets binding
+  schema.sql             # flags + events tables
+  src/
+    worker.js            # API endpoints (ported from buildy/module.js)
+  public/
+    index.html           # UI (ported from buildy/ui.html)
+    styles.css
+    dataset_v1.json      # statically served
+```
 
 > **Design decision — keep the dataset open and auditable.**
 > Civic-tech tools rise or fall on credibility. We publish the dataset publicly, list every source, accept issues/PRs for corrections. That's the difference between "AI candidate matcher" (suspect) and "well-sourced candidate matcher with citations" (sharable to your mom).
@@ -287,41 +318,49 @@ Resolved: Deliberation Mode is **driven entirely from Claude/ChatGPT via the MCP
 
 ## Phased rollout
 
-**Phase 0 — Research & data (2026-05 → 2026-06)**
+**Phase 0 — Research & data** ✅ Complete (2026-05-14)
 
-- [ ] Voter-priority research: top 10–15 issues Californians actually care about (PPIC, IGS, recent journalism)
-- [ ] Candidate roster locked with selection criteria applied
-- [ ] First pass: candidate × issue matrix populated with cited positions
-- [ ] Two-pass review of every position with source verification
-- [ ] Stance scales finalized per issue
-- [ ] Question prompts drafted and reviewed
-- [ ] **Output**: `dataset_v1.json`, published openly
+- [x] Voter-priority research: top 10–15 issues Californians actually care about (PPIC, IGS, recent journalism)
+- [x] Candidate roster locked with selection criteria applied (8 candidates)
+- [x] First pass: candidate × issue matrix populated with cited positions (192 cells)
+- [x] Two-pass review of every position with source verification (184 cited; 8 honest unknowns)
+- [x] Stance scales finalized per issue
+- [x] Question prompts drafted and ranked by differentiation score; top 15 flagged `default_quiz: true`
+- [x] **Output**: `dataset/dataset_v1.json`, published openly
 
-**Phase 1 — Quiz MVP (2026-06)**
+**Phase 1 — Quiz MVP** 🟡 In progress
 
-- [ ] Buildy ES module with manifest + fetch handler
-- [ ] UI: vanilla JS + Tailwind, quiz flow + results + share
-- [ ] Scoring algorithm with per-question importance weighting (inline, defaulted to medium)
-- [ ] Receipts (source links) on every position
-- [ ] Per-position "flag this" button → POST to a GitHub Issues integration (or a `corrections` KV bucket we sweep into GitHub)
-- [ ] Aggregate analytics: anonymized response counts per (question, answer), match-distribution counts; disclosure copy in the UI
-- [ ] Share-link encoding + result persistence in `buildy:storage/kv`
-- [ ] **Output**: live Buildy URL, sharable
+- [x] ES module with fetch handler (Workers-shaped; lives in `buildy/module.js`, porting to `infra/src/worker.js`)
+- [x] UI: vanilla JS + Tailwind, quiz flow (policy phase + personal-fit phase) + results
+- [x] Scoring algorithm with per-question importance weighting (inline, defaulted to medium)
+- [x] Smoke tests cross-verifying Buildy and MCP scoring outputs (`scripts/test_quiz.mjs`, `mcp/test_tools.mjs`)
+- [ ] **Migrate to Cloudflare Worker** (this PLAN update) — `infra/` directory with wrangler.toml, D1 schema, deploy
+- [ ] Receipts (source links + verbatim quotes) on every position in the result row
+- [ ] Per-position "flag this" button → POST `/api/flag` → D1 → manual sweep into GitHub Issues
+- [ ] Aggregate analytics: anonymized response counts per (question, answer), match-distribution counts; in-UI disclosure
+- [ ] Share-link encoding (answers in URL hash; client-side replay)
+- [ ] Mobile pass: iPhone one-handed
+- [ ] **Output**: live `*.workers.dev` URL, sharable
 
-**Phase 2 — MCP server (2026-06 → 2026-07)**
+**Phase 2 — MCP server** 🟡 In progress
 
-- [ ] MCP server with the 6 tools above
-- [ ] Tool descriptions tuned for Claude/ChatGPT discoverability
+- [x] MCP server with 7 tools (`list_candidates`, `list_issues`, `get_positions`, `list_personal_fit_dimensions`, `get_candidate_bio`, `get_differentiating_questions`, `score_user_positions`)
+- [x] stdio transport working end-to-end; smoke test in `mcp/test_tools.mjs`
+- [x] README with install instructions for Claude Desktop
+- [ ] Tool descriptions tuned for Claude/ChatGPT/Cursor agent discoverability
 - [ ] Sample prompts that show the agent how to drive a good matching conversation
-- [ ] README with install instructions for Claude / ChatGPT / Cursor
-- [ ] **Output**: connection URL + onboarding docs
+- [ ] Cursor install instructions
+- [ ] Decision: HTTP/SSE transport Worker for ChatGPT (probably defer to v2)
+- [ ] **Output**: published install instructions across 2+ agent platforms
 
-**Phase 3 — Polish & launch (2026-07 → 2026-08)**
+**Phase 3 — Polish & launch** ⏳ Not started
 
-- [ ] Share card image generation
-- [ ] "Why-not" runner-up analysis
+- [ ] Share card image generation (Worker endpoint rendering PNG with [satori](https://github.com/vercel/satori) or similar)
+- [ ] "Why-not" runner-up analysis ("you matched X 84%; here are the 2 questions where Y would have edged X")
 - [ ] What-if explorer ("if you'd answered Q5 differently…")
-- [ ] Public stats page: most-divisive questions, response distributions, candidate match-share — refreshed live from `buildy:storage/kv`
+- [ ] Public stats page: most-divisive questions, response distributions, candidate match-share — D1-backed, refreshed live
+- [ ] Re-research the 8 remaining `"unknown"` positions
+- [ ] Persona QA + math hand-verification
 - [ ] Press kit / launch post / Twitter & Bluesky threads
 - [ ] **Output**: actual launch, ahead of June 2026 primary
 
@@ -375,12 +414,13 @@ How do we know it works?
 
 ---
 
-## Next steps (immediate)
+## Next steps (immediate, post-pivot)
 
-1. **Confirm direction** — review this plan, flag changes to scope, candidates, or modalities. Especially the open decisions above.
-2. **Set up the repo** — initialize git in `/Users/ted/dev/california-election`, push to GitHub as a private (or open!) repo, add a README pointing at this plan.
-3. **Phase 0 kickoff** — start the research spike: voter priorities + candidate roster, leading to `dataset_v0.json` (rough first pass) inside a week.
-4. **Buildy spike** — ship a "hello world" Buildy app to validate the deploy flow and Tailwind UI ergonomics before investing in the real UI. Takes maybe an hour.
-5. **MCP spike** — similarly, get one tool returning one issue to one Claude session, end-to-end, before scaling out.
+In execution order:
 
-The two spikes (#4 and #5) de-risk the platform choices early. Phase 0 research runs in parallel.
+1. **Cloudflare migration** — scaffold `infra/`, port the Worker, set up D1, deploy to `*.workers.dev`. Unblocks every Phase 1 deliverable.
+2. **Phase 1 polish** — "see why" receipts, share-link encoding, flag button, analytics events, mobile pass.
+3. **Phase 2 polish** — MCP tool description tuning, sample prompts, Cursor install instructions.
+4. **Phase 3** — why-not, what-if, share cards, public stats page, persona QA, re-research the 8 unknowns, press kit.
+
+The Buildy port is moved to `legacy/buildy/` once Cloudflare is live (preserved in git history regardless). Everything downstream of the Cloudflare deploy is parallelizable.

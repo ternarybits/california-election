@@ -1,0 +1,48 @@
+{
+  "researched_on": "2026-05-21",
+  "window": "2026-05-14 to 2026-05-21",
+  "researcher_notes": "Fresh re-check of the 8 honest 'unknown' positions from dataset_v1 (snapshot 2026-05-14), focused exclusively on primary-source statements made between 2026-05-14 and 2026-05-21. Searched: (a) each candidate's campaign website news / priorities pages (xavierbecerra2026.com/news, /priorities; katieporter.com/news, /priorities; tonythurmond.com/in-the-news, /priorities); (b) coverage of the final pre-primary debate on 2026-05-14 (CBS Bay Area / SF Examiner) via SF Standard, CalMatters, SFist, and PBS NewsHour writeups; (c) post-debate interviews including the SD City Times Becerra introduction (2026-05-15), ABC7 Porter sit-down (2026-05-17), KEYT/News Channel 3-12 Thurmond profile (2026-05-15); (d) candidate forum coverage (CalMatters, Black Voice News, Capitol Weekly); (e) major outlets (CalMatters, KQED, LA Times, SF Chronicle, Sac Bee, EdSource); (f) Thurmond's 2026-05-14 statement on the May Revise budget (as Superintendent — addressed K-12 funding, but only in his official role, not as a candidate stance on the issue scale's 1–5 questions of how much new funding / what mechanism). Findings: Becerra's only press item in-window is a generic 'closing argument' release on 2026-05-21 with no education or property-tax content; his priorities page still shows the same 8 issues, none education. Porter's in-window press items are two endorsements (SF Chronicle 2026-05-16, Bay Area Reporter 2026-05-13 — the latter just outside window) and an ABC7 interview (2026-05-17) focused on corporate tax, free childcare, free college, $100k income-tax cut, AI, and healthcare — no Prop 13 / property-tax discussion. Thurmond's in-window appearances (KEYT 2026-05-15 profile; May Revise statement 2026-05-14; campaign messaging) remain education-, housing-, affordability-, and immigration-focused with zero water or nuclear content. The 2026-05-14 final debate did not feature Thurmond (tier-2 candidate), and CalMatters / SF Standard / SFist writeups confirm no Prop 13, K-12 funding, nuclear, or water exchanges from Becerra or Porter at that debate either — coverage centered on Becerra's consultant scandal, Chevron donations, AI chatbot regulation, housing, and the hospice-fraud allegations. No CalMatters voter guide update, no new EdSource piece, no AFT/CTA endorsement event for Becerra, no candidate tax-policy interview for Porter, and no post-Fresno-State water follow-up for Thurmond surfaced in the window. All 8 unknowns remain unknown under the project's no-extrapolation rule.",
+  "resolved": [],
+  "still_unknown": [
+    {
+      "candidate_id": "becerra",
+      "issue_id": "prop13_commercial",
+      "notes": "Searched xavierbecerra2026.com/news (only 2026-05-21 'closing argument' release, no Prop 13 content), /priorities (unchanged 8 issues, no property-tax), CalMatters 2026-05-14 final-debate coverage (no Prop 13 exchange), SD City Times 2026-05-15 candidate intro (focused on Trump fight, healthcare, immigration), and final-week coverage via SF Standard / SFist / PBS NewsHour. The misattributed CA-YIMBY Steyer quote from prior research has not reappeared in any source. No new primary-source statement on commercial split-roll exists in the window. Remains 'unknown' / insufficient_data."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "prop13_residential",
+      "notes": "Same null result as prop13_commercial: no campaign-site or media-interview statement on residential Prop 13 in the 2026-05-14 to 2026-05-21 window. Becerra's 2026-05-21 closing-argument release is silent on property tax. Remains 'unknown' / insufficient_data."
+    },
+    {
+      "candidate_id": "becerra",
+      "issue_id": "school_funding",
+      "notes": "K-12 remains absent from Becerra's campaign messaging through the window. His priorities page still lists 8 non-education issues; his 2026-05-21 closing-argument release does not introduce an education plank; the SD City Times 2026-05-15 candidate intro covers healthcare/Trump/immigration/homelessness with no K-12 content; the 2026-05-14 final-debate coverage records Becerra defending himself on consultant ethics and Chevron donations but not on schools. No fresh AFT/CTA-style candidate questionnaire surfaced; CTA endorsed Steyer back on 2026-04-15 and CFA's dual Becerra/Thurmond endorsement is higher-education-only and predates the window. Remains 'unknown' / insufficient_data."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "prop13_commercial",
+      "notes": "Porter's two in-window press releases are endorsement announcements (SF Chronicle 2026-05-16; Bay Area Reporter 2026-05-13 just outside window). Her 2026-05-17 ABC7 sit-down interview covers corporate tax, free childcare, free college, income-tax cut, AI, and healthcare with no Prop 13 / property-tax discussion. Her priorities page (13 items, including Lowering Housing Costs and Fighting Income Inequality) remains silent on Prop 13. Remains 'unknown' / insufficient_data."
+    },
+    {
+      "candidate_id": "porter",
+      "issue_id": "prop13_residential",
+      "notes": "Same null result as prop13_commercial: no campaign-site or interview content on residential Prop 13 in the window. The 2026-05-17 ABC7 interview reiterates her income-tax / corporate-tax framing without touching property tax. Remains 'unknown' / insufficient_data."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "nuclear",
+      "notes": "Thurmond's in-window appearances (KEYT/News Channel 3-12 profile 2026-05-15; May Revise budget statement 2026-05-14 issued in his SPI role, on K-12 only; ongoing campaign messaging) remain silent on Diablo Canyon, SMRs, or nuclear's grid role. He was not on the 2026-05-14 final debate stage (tier-2 candidate). No fresh climatevote.org / EnviroVoters response surfaced. Remains 'unknown' / insufficient_data."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "water_allocations",
+      "notes": "No Thurmond statement on Delta flows, Voluntary Agreements, senior water-rights enforcement, or ag-vs-environmental allocation in the window. The 2026-05-15 KEYT profile, 2026-05-14 May Revise statement, and ongoing campaign messaging are silent on water allocation. The post-Fresno-State follow-up explicitly searched for did not materialize — no ag-press or CalMatters interview placed him on the allocation axis. Remains 'unknown' / insufficient_data."
+    },
+    {
+      "candidate_id": "thurmond",
+      "issue_id": "water_projects",
+      "notes": "No Thurmond statement on the Delta Conveyance Project, Sites Reservoir, or other water-infrastructure builds in the window. Newsom delivered widely-covered Delta-tunnel remarks at the ACWA conference on 2026-05-19, and the Delta Counties Coalition responded — but no candidate-side response from Thurmond appears in any source. KEYT 2026-05-15 profile and May Revise statement do not address water infrastructure. Remains 'unknown' / insufficient_data."
+    }
+  ]
+}

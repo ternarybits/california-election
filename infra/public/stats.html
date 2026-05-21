@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stats · CA 2026 Candidate Matcher</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Live stats</h1>
+      <p class="subtitle"><a href="/">← back to the quiz</a></p>
+    </header>
+
+    <section id="overview" class="card">
+      <h2>Overview</h2>
+      <p id="overview-body" class="muted">Loading…</p>
+    </section>
+
+    <section id="top-matches" class="card">
+      <h2>Top match share</h2>
+      <p class="muted small">Share of completions where each candidate finished #1 on policy match.</p>
+      <ol id="match-share-list">Loading…</ol>
+    </section>
+
+    <section id="divisive" class="card">
+      <h2>Most divisive questions</h2>
+      <p class="muted small">Issues where the spread of user answers is widest. The policy questions where Californians most disagree.</p>
+      <ol id="divisive-list">Loading…</ol>
+    </section>
+
+    <footer>
+      <p class="muted small">
+        Counts are anonymized — no per-user data is stored. <a href="/dataset_v1.json">View dataset</a> ·
+        <a href="https://github.com/ternarybits/california-election">github</a>
+      </p>
+    </footer>
+  </main>
+
+  <script type="module">
+    const $ = (s) => document.querySelector(s);
+
+    async function load() {
+      try {
+        const [statsRes, candidatesRes, issuesRes] = await Promise.all([
+          fetch("/api/stats"),
+          fetch("/api/candidates"),
+          fetch("/api/issues"),
+        ]);
+        const stats = await statsRes.json();
+        const candidates = await candidatesRes.json();
+        const issues = await issuesRes.json();
+        const candidatesById = Object.fromEntries(candidates.map((c) => [c.id, c]));
+        const issuesById = Object.fromEntries(issues.map((i) => [i.id, i]));
+
+        $("#overview-body").innerHTML =
+          `<strong>${stats.completes.toLocaleString()}</strong> quizzes completed against <code>dataset_${stats.dataset_version}.json</code> (snapshot ${stats.snapshot_date}).`;
+
+        const total = stats.top_candidate_share.reduce((a, b) => a + b.n, 0) || 1;
+        $("#match-share-list").innerHTML =
+          stats.top_candidate_share.length
+            ? stats.top_candidate_share.map((row) => {
+                const c = candidatesById[row.candidate_id];
+                const pct = Math.round((row.n / total) * 100);
+                return `<li><strong>${c?.name ?? row.candidate_id}</strong> <span class="muted">(${c?.party ?? "?"})</span> — ${pct}% (${row.n})</li>`;
+              }).join("")
+            : '<li class="muted">No completed quizzes yet.</li>';
+
+        // Compute divisiveness from by_issue_stance: variance of stance distribution per issue.
+        const byIssue = {};
+        for (const row of stats.by_issue_stance) {
+          (byIssue[row.issue_id] ||= []).push({ stance: row.stance, n: row.n });
+        }
+        const divisive = Object.entries(byIssue).map(([issueId, rows]) => {
+          const n = rows.reduce((a, b) => a + b.n, 0);
+          if (n === 0) return null;
+          const mean = rows.reduce((a, b) => a + b.stance * b.n, 0) / n;
+          const variance = rows.reduce((a, b) => a + b.n * (b.stance - mean) ** 2, 0) / n;
+          return { issueId, n, variance };
+        }).filter(Boolean).sort((a, b) => b.variance - a.variance).slice(0, 10);
+
+        $("#divisive-list").innerHTML = divisive.length
+          ? divisive.map((d) => {
+              const issue = issuesById[d.issueId];
+              return `<li><strong>${issue?.name ?? d.issueId}</strong> <span class="muted">— ${d.n} answers, σ²=${d.variance.toFixed(2)}</span></li>`;
+            }).join("")
+          : '<li class="muted">Not enough answers yet.</li>';
+      } catch (e) {
+        $("#overview-body").textContent = `Failed to load stats: ${e.message}`;
+      }
+    }
+
+    load();
+  </script>
+</body>
+</html>

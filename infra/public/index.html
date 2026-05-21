@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CA 2026 Candidate Matcher</title>
+  <meta name="description" content="Find which 2026 California gubernatorial candidate best aligns with your values. Differentiation-first questions, cited sources, open dataset." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>California 2026 Candidate Matcher</h1>
+      <p class="subtitle">Pick where you stand. Match against where the candidates actually stand.</p>
+    </header>
+
+    <section id="status" class="card">
+      <p>Loading dataset…</p>
+    </section>
+
+    <section id="intro" class="card hidden">
+      <h2>How this works</h2>
+      <ul class="bullets">
+        <li>Every question is one where the candidates <em>actually</em> differ — picked by spread, not vibes.</li>
+        <li>Per-question importance slider; defaults to medium so you can just answer.</li>
+        <li>Two separate scores per candidate: <strong>policy match</strong> and <strong>personal fit</strong>. Never blended.</li>
+        <li>Every position links to a primary-source quote. Flag anything that's wrong.</li>
+      </ul>
+      <p class="muted small">We log anonymized response counts to build a public stats page. No tracking cookies, no IPs stored.</p>
+      <div class="row">
+        <button id="start-btn" class="primary">Start the quiz →</button>
+        <span class="muted small">Snapshot date: <span id="snapshot-date">—</span></span>
+      </div>
+    </section>
+
+    <section id="policy-quiz" class="card hidden">
+      <p class="muted small phase-label">Policy questions</p>
+      <h2 id="pq-title"></h2>
+      <p id="pq-desc" class="muted"></p>
+      <div id="pq-options"></div>
+      <div class="importance">
+        <label for="pq-importance">How much does this question matter to you?</label>
+        <input type="range" id="pq-importance" min="0" max="2" step="1" value="1" />
+        <div class="importance-labels"><span>low</span><span>medium</span><span>high</span></div>
+      </div>
+      <div class="row">
+        <button id="pq-skip">skip</button>
+        <button id="pq-next" class="primary" disabled>next →</button>
+      </div>
+      <p class="muted small"><span id="pq-progress"></span></p>
+    </section>
+
+    <section id="personal-quiz" class="card hidden">
+      <p class="muted small phase-label">Personal fit</p>
+      <h2 id="fq-title"></h2>
+      <p id="fq-desc" class="muted"></p>
+      <div id="fq-options"></div>
+      <div class="row">
+        <button id="fq-skip">no preference</button>
+        <button id="fq-next" class="primary" disabled>next →</button>
+      </div>
+      <p class="muted small"><span id="fq-progress"></span></p>
+    </section>
+
+    <section id="results" class="card hidden">
+      <h2>Your match</h2>
+      <p class="muted small">
+        Scored against <code id="dataset-label">dataset</code>. Two scores per candidate:
+        <strong>policy match</strong> (where you agreed on the issues you cared about)
+        and <strong>personal fit</strong> (background, career, coalition, etc.).
+        Shown separately on purpose — never blended.
+      </p>
+      <ol id="ranking"></ol>
+      <div id="why-not" class="why-not hidden">
+        <h3>Why not your runner-up?</h3>
+        <p id="why-not-body" class="muted small"></p>
+      </div>
+
+      <details id="what-if" class="what-if">
+        <summary>what if I'd answered something differently?</summary>
+        <div class="what-if-body">
+          <div class="what-if-row">
+            <label for="wi-issue">Pick a policy question:</label>
+            <select id="wi-issue"></select>
+          </div>
+          <div id="wi-options"></div>
+          <div id="wi-result" class="what-if-result"></div>
+        </div>
+      </details>
+
+      <div class="row">
+        <button id="copy-link" class="primary">copy share link</button>
+        <a id="share-card-link" class="muted small" target="_blank" rel="noopener">preview share card →</a>
+        <button id="retake">retake</button>
+      </div>
+      <p class="muted small" id="share-status"></p>
+    </section>
+
+    <footer>
+      <p class="muted small">
+        Open source: <a href="https://github.com/ternarybits/california-election">ternarybits/california-election</a>.
+        Dataset: <a href="/dataset_v1.json">dataset_v1.json</a>.
+        Snapshot date: <span id="footer-snapshot-date">—</span>.
+      </p>
+    </footer>
+  </main>
+
+  <!-- "See why" receipt template -->
+  <template id="receipt-template">
+    <div class="receipt">
+      <div class="receipt-row receipt-agreements">
+        <h4>You agreed on</h4>
+        <ul class="receipt-list" data-list="agreements"></ul>
+      </div>
+      <div class="receipt-row receipt-disagreements">
+        <h4>You disagreed on</h4>
+        <ul class="receipt-list" data-list="disagreements"></ul>
+      </div>
+    </div>
+  </template>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

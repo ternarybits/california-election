@@ -16,17 +16,20 @@ import { tmpdir } from "node:os";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 const datasetPath = resolve(root, "dataset/dataset_v1.json");
-const modulePath = resolve(root, "buildy/module.js");
+const workerPath = resolve(root, "infra/src/worker.js");
 
-// Load module.js with the __DATASET__ placeholder substituted (same as deploy.mjs does).
-// Write to a temp file because data: URLs choke on a 400KB inlined dataset.
+// Load worker.js with the JSON import substituted with an inline literal so we
+// can dynamic-import it in Node (wrangler bundles JSON imports for the Cloudflare
+// build; Node doesn't, hence the substitution).
 const dataset = JSON.parse(readFileSync(datasetPath, "utf-8"));
-// Replace only the literal placeholder on line 7 — the comment also contains the token.
-const moduleSrc = readFileSync(modulePath, "utf-8").replace(/const DATASET = __DATASET__;/, `const DATASET = ${JSON.stringify(dataset)};`);
+const workerSrc = readFileSync(workerPath, "utf-8").replace(
+  /^import dataset from .*?;$/m,
+  `const dataset = ${JSON.stringify(dataset)};`,
+);
 const tmpDir = resolve(tmpdir(), `ca-quiz-test-${process.pid}`);
 mkdirSync(tmpDir, { recursive: true });
-const tmpModulePath = resolve(tmpDir, "module.mjs");
-writeFileSync(tmpModulePath, moduleSrc);
+const tmpModulePath = resolve(tmpDir, "worker.mjs");
+writeFileSync(tmpModulePath, workerSrc);
 const mod = await import(pathToFileURL(tmpModulePath).href);
 process.on("exit", () => rmSync(tmpDir, { recursive: true, force: true }));
 
@@ -36,7 +39,12 @@ async function call(method, path, body) {
     headers: body ? { "content-type": "application/json" } : {},
     body: body ? JSON.stringify(body) : undefined,
   });
-  const res = await mod.default.fetch(req, { storage: { put: async () => {}, get: async () => null } });
+  // Stub D1 + ASSETS — analytics/flag writes are no-ops; static fallback unused.
+  const env = {
+    DB: { prepare: () => ({ bind: () => ({ run: async () => ({}) }) }) },
+    ASSETS: { fetch: async () => new Response("", { status: 200 }) },
+  };
+  const res = await mod.default.fetch(req, env);
   return res.json();
 }
 
