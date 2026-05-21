@@ -169,6 +169,36 @@ h4 { font-size: 0.9rem; margin: 8px 0; color: var(--muted); text-transform: uppe
   border-radius: 6px;
 }
 .vg-sources li { font-size: 0.9rem; }
+.vg-more {
+  margin-top: 14px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+.vg-more > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  list-style: none;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-2);
+}
+.vg-more > summary:hover { border-color: var(--accent-2); }
+.vg-more > summary::-webkit-details-marker { display: none; }
+.vg-more > summary::before {
+  content: "▸";
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 120ms ease;
+}
+.vg-more[open] > summary::before { transform: rotate(90deg); }
+.vg-more-body { margin-top: 8px; }
+.vg-more-body .vg-section:first-child { margin-top: 10px; }
 
 /* Quiz navigation: back on left, skip/next on right */
 .nav-row {
@@ -412,5 +442,5 @@ footer { margin-top: 32px; }
 
 /* Reduced motion: kill summary chevron rotation animation */
 @media (prefers-reduced-motion: reduce) {
-  .see-why summary::before, .what-if summary::before { transition: none; }
+  .see-why summary::before, .what-if summary::before, .vg-more > summary::before { transition: none; }
 }

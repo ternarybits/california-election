@@ -160,17 +160,28 @@ function escapeSvg(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
-function handleShareCard(url) {
+function handleShareCard(url, request) {
   const candidateId = url.searchParams.get("c");
   const pct = Number(url.searchParams.get("p"));
   const candidate = DATASET.candidates.find((c) => c.id === candidateId);
   if (!candidate || !Number.isFinite(pct)) return badRequest("c and p required");
 
-  const title = `${candidate.name} — ${Math.round(pct)}% policy match`;
+  const pctRounded = Math.round(pct);
+  const docTitle = `${candidate.name} — ${pctRounded}% policy match · CA 2026 Governor Primary`;
   const subtitle = "CA 2026 Governor Primary — Candidate Matcher";
+  const matchLine = `${pctRounded}% policy match`;
   const footer = `dataset_${DATASET.version} · snapshot ${DATASET.snapshot_date}`;
 
+  // SVG has no auto-wrap, so size the name to fit the ~1040px text column and
+  // truncate the bio. Name and match-percent go on separate lines (a long name
+  // plus the percent on one line overflowed the card).
+  const FONT = "-apple-system, system-ui, sans-serif";
+  const nameFont = Math.max(42, Math.min(76, Math.floor(1040 / Math.max(1, candidate.name.length * 0.6))));
+  const bioFull = `${candidate.party} · ${candidate.bio_short ?? ""}`;
+  const bio = bioFull.length > 68 ? bioFull.slice(0, 67).trimEnd() + "…" : bioFull;
+
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>${escapeSvg(docTitle)}</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f1115"/>
@@ -179,13 +190,53 @@ function handleShareCard(url) {
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect x="40" y="40" width="1120" height="550" rx="20" fill="#1d2230" stroke="#262c39" stroke-width="2"/>
-  <text x="80" y="140" font-family="-apple-system, system-ui, sans-serif" font-size="32" fill="#97a3b6">${escapeSvg(subtitle)}</text>
-  <text x="80" y="320" font-family="-apple-system, system-ui, sans-serif" font-size="84" font-weight="700" fill="#e7ecf3">${escapeSvg(title)}</text>
-  <text x="80" y="400" font-family="-apple-system, system-ui, sans-serif" font-size="28" fill="#97a3b6">${escapeSvg(candidate.party)} · ${escapeSvg(candidate.bio_short ?? "")}</text>
-  <text x="80" y="540" font-family="-apple-system, system-ui, sans-serif" font-size="22" fill="#5b9cf5">${escapeSvg(footer)}</text>
-  <rect x="80" y="430" width="320" height="60" rx="8" fill="#f7c948"/>
-  <text x="240" y="470" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="26" font-weight="600" fill="#000">Take the quiz →</text>
+  <text x="80" y="120" font-family="${FONT}" font-size="32" fill="#97a3b6">${escapeSvg(subtitle)}</text>
+  <text x="80" y="265" font-family="${FONT}" font-size="${nameFont}" font-weight="700" fill="#e7ecf3">${escapeSvg(candidate.name)}</text>
+  <text x="80" y="340" font-family="${FONT}" font-size="46" font-weight="700" fill="#f7c948">${escapeSvg(matchLine)}</text>
+  <text x="80" y="405" font-family="${FONT}" font-size="26" fill="#97a3b6">${escapeSvg(bio)}</text>
+  <rect x="80" y="445" width="300" height="58" rx="8" fill="#f7c948"/>
+  <text x="230" y="482" text-anchor="middle" font-family="${FONT}" font-size="26" font-weight="600" fill="#000">Take the quiz →</text>
+  <text x="80" y="555" font-family="${FONT}" font-size="22" fill="#5b9cf5">${escapeSvg(footer)}</text>
 </svg>`;
+
+  // When a browser navigates here directly (the "preview share card" link),
+  // wrap the SVG in a centered HTML page on a full-bleed dark background and
+  // give it a real document title. Image/social-embed fetches (Accept: image/*)
+  // still get the raw SVG so it works as an OG/Twitter card.
+  const accept = request?.headers.get("accept") ?? "";
+  if (accept.includes("text/html")) {
+    const cardUrl = `/api/share-card.svg?c=${encodeURIComponent(candidate.id)}&p=${pctRounded}`;
+    const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${escapeSvg(docTitle)}</title>
+<meta property="og:title" content="${escapeSvg(`${candidate.name} — ${matchLine}`)}">
+<meta property="og:description" content="${escapeSvg(subtitle)}">
+<meta property="og:image" content="${escapeSvg(cardUrl)}">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  html, body { margin: 0; padding: 0; min-height: 100%; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f1115, #161a22);
+  }
+  svg { width: min(1100px, 94vw); height: auto; display: block; }
+</style>
+</head>
+<body>${svg}</body>
+</html>`;
+    return new Response(html, {
+      headers: {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=300",
+      },
+    });
+  }
 
   return new Response(svg, {
     headers: {
@@ -244,7 +295,7 @@ export default {
     if (method === "POST" && path === "/api/flag") return handlePostFlag(request, env);
     if (method === "POST" && path === "/api/event") return handlePostEvent(request, env);
     if (method === "GET" && path === "/api/stats") return handleGetStats(env);
-    if (method === "GET" && path === "/api/share-card.svg") return handleShareCard(url);
+    if (method === "GET" && path === "/api/share-card.svg") return handleShareCard(url, request);
 
     // Convenience: serve the dataset file at a stable open URL for in-browser audit
     if (method === "GET" && path === "/dataset_v1.json") return handleGetDataset();

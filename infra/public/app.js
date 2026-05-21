@@ -184,24 +184,20 @@ function renderVoterGuide(q) {
     body.innerHTML = "";
     return;
   }
-  // Always shown, never collapsible — everyone should read the context.
   wrap.classList.remove("hidden");
-  const sections = [];
+
+  // Visible tier — the minimum to understand the issue and decide: what it is,
+  // the status quo, and the case on each side.
+  const visible = [];
   if (vg.explainer) {
-    sections.push(`<div class="vg-section vg-explainer"><h4>The basics</h4><p>${renderProse(vg.explainer)}</p></div>`);
+    visible.push(`<div class="vg-section vg-explainer"><h4>The basics</h4><p>${renderProse(vg.explainer)}</p></div>`);
   }
   if (vg.current_policy) {
-    sections.push(`<div class="vg-section"><h4>Current California policy</h4><p>${renderProse(vg.current_policy)}</p></div>`);
-  }
-  if (Array.isArray(vg.key_facts) && vg.key_facts.length) {
-    sections.push(`<div class="vg-section"><h4>Key facts</h4><ul>${vg.key_facts.map((f) => `<li>${renderProse(f)}</li>`).join("")}</ul></div>`);
-  }
-  if (vg.comparison) {
-    sections.push(`<div class="vg-section"><h4>How CA compares</h4><p>${renderProse(vg.comparison)}</p></div>`);
+    visible.push(`<div class="vg-section"><h4>Current California policy</h4><p>${renderProse(vg.current_policy)}</p></div>`);
   }
   const hasArgs = vg.arguments_for_change || vg.arguments_against_change;
   if (hasArgs) {
-    sections.push(`
+    visible.push(`
       <div class="vg-args">
         <div class="vg-arg vg-arg-for">
           <h4>Arguments for change</h4>
@@ -213,16 +209,30 @@ function renderVoterGuide(q) {
         </div>
       </div>`);
   }
+
+  // Collapsed tier — reference detail for readers who want to go deeper.
+  const more = [];
+  if (Array.isArray(vg.key_facts) && vg.key_facts.length) {
+    more.push(`<div class="vg-section"><h4>Key facts</h4><ul>${vg.key_facts.map((f) => `<li>${renderProse(f)}</li>`).join("")}</ul></div>`);
+  }
+  if (vg.comparison) {
+    more.push(`<div class="vg-section"><h4>How CA compares</h4><p>${renderProse(vg.comparison)}</p></div>`);
+  }
   if (vg.note_on_options) {
-    sections.push(`<div class="vg-section vg-note"><h4>Note on the options</h4><p>${renderProse(vg.note_on_options)}</p></div>`);
+    more.push(`<div class="vg-section vg-note"><h4>Note on the options</h4><p>${renderProse(vg.note_on_options)}</p></div>`);
   }
   if (Array.isArray(vg.sources) && vg.sources.length) {
     const items = vg.sources
       .map((s) => `<li><a href="${escapeAttr(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a></li>`)
       .join("");
-    sections.push(`<div class="vg-section vg-sources"><h4>Sources</h4><ul>${items}</ul></div>`);
+    more.push(`<div class="vg-section vg-sources"><h4>Sources</h4><ul>${items}</ul></div>`);
   }
-  body.innerHTML = sections.join("");
+
+  let html = visible.join("");
+  if (more.length) {
+    html += `<details class="vg-more"><summary>More background — key facts, how CA compares, sources</summary><div class="vg-more-body">${more.join("")}</div></details>`;
+  }
+  body.innerHTML = html;
 }
 
 // ---------- Personal-fit phase ----------

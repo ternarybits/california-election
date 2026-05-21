@@ -1,8 +1,10 @@
 import { test, expect } from "@playwright/test";
 
 // Voter-guide context block on each policy question:
-// - always shown (not collapsible) — everyone should read it
-// - shows current policy, key facts, comparison, arguments for/against, sources
+// - always shown — the visible tier (basics, current policy, arguments) carries
+//   the decision-relevant context
+// - reference detail (key facts, comparison, note, sources) folds into a single
+//   "More background" disclosure to cut the reading load
 // - source links open in a new tab
 
 test.describe("Voter-guide context block", () => {
@@ -12,21 +14,30 @@ test.describe("Voter-guide context block", () => {
     await expect(page.locator("#policy-quiz")).toBeVisible();
   });
 
-  test("first question shows an always-open voter guide with expected sections", async ({ page }) => {
+  test("first question shows the visible tier, with reference detail behind a disclosure", async ({ page }) => {
     // After the tax split, the State wealth tax is the #1 differentiating issue.
     await expect(page.locator("#pq-title")).toHaveText(/State wealth tax/);
     const vg = page.locator("#pq-voter-guide");
     await expect(vg).toBeVisible();
-
-    // Not a collapsible <details> — there is no summary toggle
-    await expect(vg.locator("summary")).toHaveCount(0);
     await expect(vg.locator(".voter-guide-heading")).toBeVisible();
 
-    // Content is visible immediately, no interaction required
+    // Visible tier: current policy and both arguments — no click needed.
+    // ("The basics" explainer is optional and absent on this question.)
     await expect(vg.locator("h4", { hasText: /Current California policy/i })).toBeVisible();
-    await expect(vg.locator("h4", { hasText: /Key facts/i })).toBeVisible();
     await expect(vg.locator("h4", { hasText: /Arguments for change/i })).toBeVisible();
     await expect(vg.locator("h4", { hasText: /Arguments against change/i })).toBeVisible();
+
+    // Reference detail is collapsed by default behind the "More background" toggle
+    const more = vg.locator("details.vg-more");
+    await expect(more).toHaveCount(1);
+    await expect(more).not.toHaveAttribute("open", "");
+    await expect(vg.locator("h4", { hasText: /Key facts/i })).toBeHidden();
+    await expect(vg.locator("h4", { hasText: /Sources/i })).toBeHidden();
+
+    // Expanding it reveals the hidden sections
+    await more.locator("summary").click();
+    await expect(vg.locator("h4", { hasText: /Key facts/i })).toBeVisible();
+    await expect(vg.locator("h4", { hasText: /How CA compares/i })).toBeVisible();
     await expect(vg.locator("h4", { hasText: /Sources/i })).toBeVisible();
   });
 
