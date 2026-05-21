@@ -114,9 +114,10 @@ async function handlePostEvent(request, env) {
     importance = null,
     candidate_id = null,
     match_pct = null,
+    detail = null,
   } = body;
 
-  const validKinds = new Set(["quiz_start", "policy_answer", "personal_answer", "quiz_complete"]);
+  const validKinds = new Set(["quiz_start", "policy_answer", "personal_answer", "quiz_complete", "chat_opened"]);
   if (!validKinds.has(kind)) return badRequest("invalid kind");
   if (typeof session_id !== "string" || session_id.length > 128) return badRequest("session_id required");
 
@@ -131,11 +132,14 @@ async function handlePostEvent(request, env) {
     const n = Number(v);
     return Number.isFinite(n) ? n : null;
   };
+  // detail holds free-text (the user's typed question on chat_opened). Truncate
+  // rather than reject — it's best-effort analytics like the rest of this row.
+  const detailOrNull = typeof detail === "string" && detail.trim() ? detail.trim().slice(0, 500) : null;
 
   await env.DB.prepare(
     `INSERT INTO events
-       (kind, session_id, issue_id, dimension_id, stance, importance, candidate_id, match_pct, dataset_version, created_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+       (kind, session_id, issue_id, dimension_id, stance, importance, candidate_id, match_pct, detail, dataset_version, created_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
   )
     .bind(
       kind,
@@ -146,6 +150,7 @@ async function handlePostEvent(request, env) {
       numOrNull(importance),
       strOrNull(candidate_id),
       numOrNull(match_pct),
+      detailOrNull,
       DATASET.version,
       Date.now(),
     )
@@ -246,6 +251,135 @@ function handleShareCard(url, request) {
   });
 }
 
+// ---------- Content-only per-topic page ----------
+
+// Curated dataset prose can contain inline markdown links [label](https://…).
+// Escape everything, then re-allow only http(s) anchors — same contract as the
+// client's renderProse, so a bad URL can't inject markup.
+function proseToHtml(s) {
+  return escapeSvg(s).replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (_m, label, url) => {
+    return `<a href="${url}" target="_blank" rel="noopener">${label}</a>`;
+  });
+}
+
+function handleTopicPage(issueId) {
+  const issue = DATASET.issues.find((i) => i.id === issueId);
+  if (!issue) return notFound();
+
+  const vg = issue.voter_guide ?? {};
+  const stanceLabel = new Map((issue.stance_scale ?? []).map((s) => [s.value, s.label]));
+  const posByCandidate = new Map(
+    DATASET.positions.filter((p) => p.issue_id === issueId).map((p) => [p.candidate_id, p]),
+  );
+
+  const section = (heading, inner) => inner
+    ? `<section><h2>${escapeSvg(heading)}</h2>${inner}</section>` : "";
+  const para = (prose) => (prose ? `<p>${proseToHtml(prose)}</p>` : "");
+
+  const argsBlock = (vg.arguments_for_change || vg.arguments_against_change)
+    ? `<div class="cols">
+         <div class="col for"><h3>Arguments for change</h3>${para(vg.arguments_for_change ?? "")}</div>
+         <div class="col against"><h3>Arguments against change</h3>${para(vg.arguments_against_change ?? "")}</div>
+       </div>`
+    : "";
+
+  const keyFacts = Array.isArray(vg.key_facts) && vg.key_facts.length
+    ? `<ul>${vg.key_facts.map((f) => `<li>${proseToHtml(f)}</li>`).join("")}</ul>` : "";
+
+  const scaleList = Array.isArray(issue.stance_scale) && issue.stance_scale.length
+    ? `<ol class="scale">${issue.stance_scale.map((s) => `<li>${escapeSvg(s.label)}</li>`).join("")}</ol>` : "";
+
+  const sourcesList = Array.isArray(vg.sources) && vg.sources.length
+    ? `<ul>${vg.sources.map((s) => `<li><a href="${escapeSvg(s.url)}" target="_blank" rel="noopener">${escapeSvg(s.title)}</a></li>`).join("")}</ul>` : "";
+
+  // Candidate positions, in dataset candidate order. Unknown / missing positions
+  // are shown honestly rather than omitted.
+  const candidateCards = DATASET.candidates.map((c) => {
+    const p = posByCandidate.get(c.id);
+    const label = p && p.stance !== "unknown" && stanceLabel.has(p.stance)
+      ? stanceLabel.get(p.stance)
+      : "Position unknown";
+    const summary = p && p.summary ? `<p>${proseToHtml(p.summary)}</p>` : "";
+    const src = p && p.source_url
+      ? `<p class="src"><a href="${escapeSvg(p.source_url)}" target="_blank" rel="noopener">Source${p.source_date ? ` (${escapeSvg(p.source_date)})` : ""}</a></p>`
+      : "";
+    return `<article class="cand">
+      <h3>${escapeSvg(c.name)} <span class="party">${escapeSvg(c.party ?? "")}</span></h3>
+      <p class="stance">${escapeSvg(label)}</p>
+      ${summary}${src}
+    </article>`;
+  }).join("");
+
+  const docTitle = `${issue.name} — CA 2026 Governor Primary`;
+  const desc = issue.short_description ?? "Where the 2026 California governor candidates stand.";
+  const FONT = "-apple-system, system-ui, sans-serif";
+
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${escapeSvg(docTitle)}</title>
+<meta name="description" content="${escapeSvg(desc)}">
+<meta property="og:title" content="${escapeSvg(docTitle)}">
+<meta property="og:description" content="${escapeSvg(desc)}">
+<meta name="twitter:card" content="summary">
+<style>
+  :root { --bg:#0f1115; --panel:#161a22; --panel-2:#1d2230; --border:#262c39; --text:#e7ecf3;
+          --muted:#97a3b6; --accent:#f7c948; --accent-2:#5b9cf5; --accent-3:#6ed29b; }
+  html,body { margin:0; background:var(--bg); color:var(--text);
+              font-family:${FONT}; line-height:1.55; }
+  .wrap { max-width:760px; margin:0 auto; padding:32px 20px 64px; }
+  .kicker { color:var(--muted); font-size:.85rem; text-transform:uppercase; letter-spacing:.04em; }
+  h1 { font-size:1.9rem; margin:.2em 0 .1em; }
+  .lede { color:var(--muted); font-size:1.05rem; margin-top:0; }
+  h2 { font-size:1.15rem; margin:1.8em 0 .4em; color:var(--accent-2); }
+  h3 { font-size:1rem; margin:.2em 0; }
+  section { border-top:1px solid var(--border); padding-top:.2em; }
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .col { background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:12px 14px; }
+  .col.for { border-left:3px solid var(--accent-3); } .col.for h3 { color:var(--accent-3); }
+  .col.against { border-left:3px solid var(--accent); } .col.against h3 { color:var(--accent); }
+  .scale li { margin:.25em 0; color:var(--muted); }
+  .cand { background:var(--panel-2); border:1px solid var(--border); border-radius:10px;
+          padding:12px 16px; margin:12px 0; }
+  .cand .party { color:var(--muted); font-weight:400; font-size:.85rem; }
+  .cand .stance { color:var(--accent); font-weight:600; margin:.2em 0; }
+  .src a { color:var(--accent-2); font-size:.85rem; }
+  a { color:var(--accent-2); }
+  .cta { display:inline-block; margin-top:8px; background:var(--accent); color:#000;
+         font-weight:600; padding:10px 16px; border-radius:8px; text-decoration:none; }
+  footer { margin-top:2.5em; color:var(--muted); font-size:.8rem; border-top:1px solid var(--border); padding-top:1em; }
+  @media (max-width:560px) { .cols { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="kicker">CA 2026 Governor Primary · Candidate Matcher</p>
+  <h1>${escapeSvg(issue.name)}</h1>
+  <p class="lede">${escapeSvg(desc)}</p>
+  ${issue.ca_specific_context ? `<section><h2>California context</h2>${para(issue.ca_specific_context)}</section>` : ""}
+  ${section("Current California policy", para(vg.current_policy))}
+  ${argsBlock ? `<section><h2>The debate</h2>${argsBlock}</section>` : ""}
+  ${section("Key facts", keyFacts)}
+  ${section("How California compares", para(vg.comparison))}
+  ${scaleList ? `<section><h2>The range of positions</h2>${scaleList}</section>` : ""}
+  <section><h2>Where the candidates stand</h2>${candidateCards}</section>
+  ${section("Sources", sourcesList)}
+  <section style="border:0">
+    <a class="cta" href="/">Take the 3-minute quiz →</a>
+  </section>
+  <footer>dataset_${escapeSvg(DATASET.version)} · snapshot ${escapeSvg(DATASET.snapshot_date)}.
+    Every position links to a primary source. Spot an error? Flag it in the quiz.</footer>
+</main>
+</body>
+</html>`;
+
+  return new Response(html, {
+    headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300" },
+  });
+}
+
 // ---------- Stats endpoint (Phase 3 public stats page reads this) ----------
 
 async function handleGetStats(env) {
@@ -297,6 +431,11 @@ export default {
     if (method === "GET" && path === "/api/stats") return handleGetStats(env);
     if (method === "GET" && path === "/api/share-card.svg") return handleShareCard(url, request);
 
+    // Content-only per-topic page: /topic/:issue_id
+    if (method === "GET" && path.startsWith("/topic/")) {
+      return handleTopicPage(decodeURIComponent(path.slice("/topic/".length)));
+    }
+
     // Convenience: serve the dataset file at a stable open URL for in-browser audit
     if (method === "GET" && path === "/dataset_v1.json") return handleGetDataset();
 
@@ -315,6 +454,7 @@ export default {
           "GET  /api/personal-fit-dimensions",
           "GET  /api/stats",
           "GET  /api/share-card.svg?c=:candidate_id&p=:pct",
+          "GET  /topic/:issue_id",
           "POST /api/flag",
           "POST /api/event",
         ],

@@ -128,6 +128,7 @@ function renderPolicyQuestion() {
   $("#pq-title").textContent = q.name;
   $("#pq-desc").textContent = q.short_description;
   renderVoterGuide(q);
+  renderAskAi(q);
   const optsEl = $("#pq-options");
   optsEl.innerHTML = "";
   let selected = null;
@@ -233,6 +234,66 @@ function renderVoterGuide(q) {
     html += `<details class="vg-more"><summary>More background — key facts, how CA compares, sources</summary><div class="vg-more-body">${more.join("")}</div></details>`;
   }
   body.innerHTML = html;
+}
+
+// "Ask an AI about this topic" — its own box below the voter guide. Lets the
+// user hand the topic off to their own ChatGPT/Claude (or copy a prompt) with
+// the typed question + a link to the content-only /topic page.
+function renderAskAi(q) {
+  const wrap = $("#pq-ask-ai");
+  const body = wrap.querySelector(".ask-ai-body");
+  wrap.classList.remove("hidden");
+  body.innerHTML = `
+    <div class="vg-chat">
+      <label class="vg-chat-label" for="vg-chat-q">Have a question about this topic? Ask an AI assistant.</label>
+      <input type="text" id="vg-chat-q" class="vg-chat-input" maxlength="500" autocomplete="off"
+        placeholder="e.g. How would this affect renters in my city?" />
+      <div class="vg-chat-actions">
+        <button type="button" class="vg-chat-btn" data-target="chatgpt">Ask ChatGPT →</button>
+        <button type="button" class="vg-chat-btn" data-target="claude">Ask Claude →</button>
+        <button type="button" class="vg-chat-btn vg-chat-copy" data-target="copy">Copy prompt</button>
+      </div>
+      <p class="vg-chat-hint">Opens your own AI in a new tab with this topic's sourced guide. Don't include personal info.</p>
+    </div>`;
+  wireTopicChat(body, q);
+}
+
+// Build the hand-off prompt for an external AI. The user's typed question (if
+// any) leads; we point the model at the content-only /topic page so it can pull
+// every candidate's sourced position rather than relying on us inlining it.
+function buildTopicPrompt(q, question) {
+  const topicUrl = `${location.origin}/topic/${encodeURIComponent(q.id)}`;
+  const lead = question
+    ? `I'm researching the 2026 California governor's race. My question about "${q.name}": ${question}`
+    : `I'm researching the 2026 California governor's race. Help me understand "${q.name}" — the main arguments on each side and where the leading candidates differ.`;
+  return `${lead}
+
+Here's a neutral guide with every candidate's position and primary sources: ${topicUrl}
+
+Please answer using that guide, cite its sources, and tell me if anything is uncertain. (If you have the "california-election" MCP server connected, you can call get_positions('${q.id}') for the sourced data.)`;
+}
+
+function wireTopicChat(body, q) {
+  const input = body.querySelector(".vg-chat-input");
+  body.querySelectorAll(".vg-chat-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const question = (input.value || "").trim();
+      const prompt = buildTopicPrompt(q, question);
+      // Capture the question (anonymous, fire-and-forget) before handing off.
+      emitEvent("chat_opened", { issue_id: q.id, detail: question || null });
+      const target = btn.dataset.target;
+      if (target === "copy") {
+        navigator.clipboard?.writeText(prompt).then(() => {
+          const orig = btn.textContent;
+          btn.textContent = "Copied ✓";
+          setTimeout(() => { btn.textContent = orig; }, 1500);
+        }).catch(() => {});
+        return;
+      }
+      const base = target === "claude" ? "https://claude.ai/new?q=" : "https://chatgpt.com/?q=";
+      window.open(base + encodeURIComponent(prompt), "_blank", "noopener");
+    });
+  });
 }
 
 // ---------- Personal-fit phase ----------

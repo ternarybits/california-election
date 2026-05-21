@@ -114,13 +114,38 @@ if (!d1Inserts.find((i) => i.sql.startsWith("INSERT INTO flags"))) {
 console.log(`✓ POST /api/flag persisted (D1 args: ${JSON.stringify(d1Inserts.at(-1).args)})`);
 
 // 5) POST /api/event with each kind
-for (const kind of ["quiz_start", "policy_answer", "personal_answer", "quiz_complete"]) {
+for (const kind of ["quiz_start", "policy_answer", "personal_answer", "quiz_complete", "chat_opened"]) {
   const e = await call("POST", "/api/event", { kind, session_id: "test123" });
   if (e.status !== 200) throw new Error(`event ${kind} failed: ${e.status}`);
 }
-console.log(`✓ POST /api/event accepts all 4 event kinds`);
+console.log(`✓ POST /api/event accepts all 5 event kinds`);
 
-// 5b) Bad optional-field values are coerced to null (not bound as NaN / non-string),
+// 5a) chat_opened captures the user's question in `detail`, trimmed and capped at 500 chars.
+d1Inserts.length = 0;
+const longQuestion = "x".repeat(900);
+const chat = await call("POST", "/api/event", {
+  kind: "chat_opened",
+  session_id: "test123",
+  issue_id: "housing_supply",
+  detail: `  ${longQuestion}  `,
+});
+if (chat.status !== 200) throw new Error(`chat_opened should 200, got ${chat.status}`);
+const chatInsert = d1Inserts.find((i) => i.sql.includes("INSERT INTO events"));
+// bind order: kind, session_id, issue_id, dimension_id, stance, importance, candidate_id, match_pct, detail, ...
+const detailArg = chatInsert.args[8];
+if (typeof detailArg !== "string" || detailArg.length !== 500 || detailArg.startsWith(" ")) {
+  throw new Error(`detail should be trimmed and capped to 500 chars; got len=${detailArg?.length}`);
+}
+console.log(`✓ POST /api/event chat_opened trims + caps the question to 500 chars`);
+
+// 5b) Blank/whitespace detail coerces to null.
+d1Inserts.length = 0;
+await call("POST", "/api/event", { kind: "chat_opened", session_id: "test123", detail: "   " });
+const blankInsert = d1Inserts.find((i) => i.sql.includes("INSERT INTO events"));
+if (blankInsert.args[8] !== null) throw new Error("blank detail should bind null");
+console.log(`✓ POST /api/event coerces blank chat detail to null`);
+
+// 5c) Bad optional-field values are coerced to null (not bound as NaN / non-string),
 // so the fire-and-forget analytics insert never 500s on malformed input.
 d1Inserts.length = 0;
 const coerce = await call("POST", "/api/event", {
@@ -154,5 +179,24 @@ console.log(`✓ /api/event validates kind enum`);
 const staticReq = await call("GET", "/index.html");
 if (staticReq.status !== 200) throw new Error("static fallback should 200");
 console.log(`✓ Non-API paths fall through to env.ASSETS`);
+
+// 9) Content-only topic page renders the issue + every candidate. The page
+// HTML-escapes text, so compare against the escaped form (& → &amp;, etc).
+const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const sampleIssue = dataset.issues[0];
+const topic = await call("GET", `/topic/${sampleIssue.id}`);
+if (topic.status !== 200) throw new Error(`/topic/${sampleIssue.id} should 200, got ${topic.status}`);
+if (typeof topic.body !== "string" || !topic.body.includes(escapeHtml(sampleIssue.name))) {
+  throw new Error("topic page should contain the issue name");
+}
+for (const c of dataset.candidates) {
+  if (!topic.body.includes(escapeHtml(c.name))) throw new Error(`topic page missing candidate ${c.name}`);
+}
+console.log(`✓ GET /topic/:id renders "${sampleIssue.name}" with all ${dataset.candidates.length} candidates`);
+
+// 9b) Unknown topic id 404s.
+const badTopic = await call("GET", "/topic/__nope__");
+if (badTopic.status !== 404) throw new Error(`unknown topic should 404, got ${badTopic.status}`);
+console.log(`✓ GET /topic/:id 404s on unknown issue id`);
 
 console.log("\n✓ all infra/test_worker.mjs checks passed.");

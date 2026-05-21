@@ -14,7 +14,7 @@ CREATE INDEX IF NOT EXISTS flags_by_target ON flags (candidate_id, issue_id);
 
 CREATE TABLE IF NOT EXISTS events (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  -- kind: 'quiz_start' | 'policy_answer' | 'personal_answer' | 'quiz_complete'
+  -- kind: 'quiz_start' | 'policy_answer' | 'personal_answer' | 'quiz_complete' | 'chat_opened'
   kind TEXT NOT NULL,
   session_id TEXT NOT NULL,
   issue_id TEXT,
@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS events (
   importance INTEGER,    -- 0=low 1=medium 2=high
   candidate_id TEXT,     -- for quiz_complete: the top match
   match_pct INTEGER,     -- for quiz_complete: the top match's %
+  detail TEXT,           -- for chat_opened: the user's typed question (free text, capped)
   dataset_version TEXT,
   created_at INTEGER NOT NULL
 );

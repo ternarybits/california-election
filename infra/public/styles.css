@@ -200,6 +200,41 @@ h4 { font-size: 0.9rem; margin: 8px 0; color: var(--muted); text-transform: uppe
 .vg-more-body { margin-top: 8px; }
 .vg-more-body .vg-section:first-child { margin-top: 10px; }
 
+/* "Ask AI about this topic" — its own box below the voter guide */
+.ask-ai-body { margin-top: 10px; }
+.vg-chat-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  margin-bottom: 8px;
+}
+.vg-chat-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+}
+.vg-chat-input:focus { outline: none; border-color: var(--accent-2); }
+.vg-chat-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.vg-chat-btn {
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--accent-2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.vg-chat-btn:hover:not(:disabled) { border-color: var(--accent-2); }
+.vg-chat-copy { color: var(--muted); }
+.vg-chat-hint { margin: 8px 0 0; font-size: 0.78rem; color: var(--muted); }
+
 /* Quiz navigation: back on left, skip/next on right */
 .nav-row {
   display: flex;
