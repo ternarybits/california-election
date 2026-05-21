@@ -1,0 +1,37 @@
+import { test, expect } from "@playwright/test";
+
+test.describe("Landing page", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto("/");
+  });
+
+  test("title and intro render", async ({ page }) => {
+    await expect(page).toHaveTitle(/CA 2026 Candidate Matcher/);
+    await expect(page.getByRole("heading", { name: /California 2026 Candidate Matcher/i })).toBeVisible();
+    await expect(page.getByText(/Pick where you stand/i)).toBeVisible();
+  });
+
+  test("snapshot date is populated from dataset", async ({ page }) => {
+    const snap = page.locator("#snapshot-date");
+    await expect(snap).toBeVisible();
+    await expect(snap).not.toHaveText("—");
+    await expect(snap).toHaveText(/^\d{4}-\d{2}-\d{2}$/);
+  });
+
+  test("start button advances to the policy phase", async ({ page }) => {
+    await expect(page.locator("#intro")).toBeVisible();
+    await page.getByRole("button", { name: /start the quiz/i }).click();
+    await expect(page.locator("#intro")).toBeHidden();
+    await expect(page.locator("#policy-quiz")).toBeVisible();
+    await expect(page.locator("#pq-progress")).toContainText(/Question 1 of \d+/);
+  });
+
+  test("footer links open in a new tab", async ({ page }) => {
+    const ghLink = page.locator("footer a", { hasText: "ternarybits/california-election" });
+    const dsLink = page.locator("footer a", { hasText: "dataset_v1.json" });
+    await expect(ghLink).toHaveAttribute("target", "_blank");
+    await expect(ghLink).toHaveAttribute("rel", /noopener/);
+    await expect(dsLink).toHaveAttribute("target", "_blank");
+    await expect(dsLink).toHaveAttribute("rel", /noopener/);
+  });
+});

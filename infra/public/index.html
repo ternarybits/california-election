@@ -43,9 +43,12 @@
         <input type="range" id="pq-importance" min="0" max="2" step="1" value="1" />
         <div class="importance-labels"><span>low</span><span>medium</span><span>high</span></div>
       </div>
-      <div class="row">
-        <button id="pq-skip">skip</button>
-        <button id="pq-next" class="primary" disabled>next →</button>
+      <div class="nav-row">
+        <button id="pq-back">← back</button>
+        <div class="nav-right">
+          <button id="pq-skip">skip</button>
+          <button id="pq-next" class="primary" disabled>next →</button>
+        </div>
       </div>
       <p class="muted small"><span id="pq-progress"></span></p>
     </section>
@@ -55,9 +58,12 @@
       <h2 id="fq-title"></h2>
       <p id="fq-desc" class="muted"></p>
       <div id="fq-options"></div>
-      <div class="row">
-        <button id="fq-skip">no preference</button>
-        <button id="fq-next" class="primary" disabled>next →</button>
+      <div class="nav-row">
+        <button id="fq-back">← back</button>
+        <div class="nav-right">
+          <button id="fq-skip">no preference</button>
+          <button id="fq-next" class="primary" disabled>next →</button>
+        </div>
       </div>
       <p class="muted small"><span id="fq-progress"></span></p>
     </section>
@@ -98,8 +104,8 @@
 
     <footer>
       <p class="muted small">
-        Open source: <a href="https://github.com/ternarybits/california-election">ternarybits/california-election</a>.
-        Dataset: <a href="/dataset_v1.json">dataset_v1.json</a>.
+        Open source: <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">ternarybits/california-election</a>.
+        Dataset: <a href="/dataset_v1.json" target="_blank" rel="noopener">dataset_v1.json</a>.
         Snapshot date: <span id="footer-snapshot-date">—</span>.
       </p>
     </footer>

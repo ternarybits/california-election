@@ -8,3 +8,8 @@ build/
 *.log
 .vscode/
 .idea/
+
+# Playwright test artifacts
+infra/test-results/
+infra/playwright-report/
+infra/blob-report/

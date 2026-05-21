@@ -8,9 +8,14 @@
     "db:create": "wrangler d1 create california-election",
     "db:apply": "wrangler d1 execute california-election --file=schema.sql --remote",
     "db:apply-local": "wrangler d1 execute california-election --file=schema.sql --local",
-    "tail": "wrangler tail"
+    "tail": "wrangler tail",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:install": "playwright install chromium"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "wrangler": "^4.0.0"
   }
 }

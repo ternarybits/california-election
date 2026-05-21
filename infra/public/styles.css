@@ -70,6 +70,17 @@ h4 { font-size: 0.9rem; margin: 8px 0; color: var(--muted); text-transform: uppe
 }
 .row label { color: var(--muted); }
 
+/* Quiz navigation: back on left, skip/next on right */
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.nav-right { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
 button, select {
   background: var(--panel-2);
   color: var(--text);

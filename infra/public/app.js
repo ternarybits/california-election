@@ -125,30 +125,41 @@ function renderPolicyQuestion() {
   const optsEl = $("#pq-options");
   optsEl.innerHTML = "";
   let selected = null;
+  // Pre-fill from any prior answer (so back-navigation shows what was chosen).
+  const prior = state.policyAnswers[state.pIdx];
   q.stance_scale.forEach((opt) => {
     const id = `pq-opt-${q.id}-${opt.value}`;
     const wrap = document.createElement("label");
     wrap.className = "option";
-    wrap.innerHTML = `<input type="radio" name="pq-stance" id="${id}" value="${opt.value}" /> <span>${opt.label}</span>`;
+    const checked = prior && prior.stance === opt.value ? "checked" : "";
+    wrap.innerHTML = `<input type="radio" name="pq-stance" id="${id}" value="${opt.value}" ${checked} /> <span>${opt.label}</span>`;
     wrap.querySelector("input").addEventListener("change", (e) => {
       selected = Number(e.target.value);
       $("#pq-next").disabled = false;
     });
+    if (checked) selected = opt.value;
     optsEl.appendChild(wrap);
   });
-  $("#pq-importance").value = "1";
-  $("#pq-next").disabled = true;
+  $("#pq-importance").value = prior ? String(prior.importance_idx ?? 1) : "1";
+  $("#pq-next").disabled = selected == null;
+  $("#pq-back").disabled = state.pIdx === 0;
   $("#pq-progress").textContent = `Question ${state.pIdx + 1} of ${state.questions.length}`;
   $("#pq-next").onclick = () => {
     if (selected == null) return;
     const importanceIdx = Number($("#pq-importance").value);
-    state.policyAnswers.push({ issue_id: q.id, stance: selected, importance_idx: importanceIdx });
+    state.policyAnswers[state.pIdx] = { issue_id: q.id, stance: selected, importance_idx: importanceIdx };
     emitEvent("policy_answer", { issue_id: q.id, stance: selected, importance: importanceIdx });
     advancePolicy();
   };
   $("#pq-skip").onclick = () => {
-    state.policyAnswers.push({ issue_id: q.id, stance: null, importance_idx: 0 });
+    state.policyAnswers[state.pIdx] = { issue_id: q.id, stance: null, importance_idx: 0 };
     advancePolicy();
+  };
+  $("#pq-back").onclick = () => {
+    if (state.pIdx > 0) {
+      state.pIdx -= 1;
+      renderPolicyQuestion();
+    }
   };
 }
 
@@ -175,14 +186,17 @@ function renderPersonalQuestion() {
   const optsEl = $("#fq-options");
   optsEl.innerHTML = "";
 
-  let answer = null;
+  // Pre-fill from any prior answer (for back-navigation).
+  const prior = state.personalAnswers[state.fIdx];
+  let answer = prior && prior.value != null ? prior.value : null;
 
   if (d.type === "ordinal") {
     d.scale.forEach((opt) => {
       const id = `fq-opt-${d.id}-${opt.value}`;
       const wrap = document.createElement("label");
       wrap.className = "option";
-      wrap.innerHTML = `<input type="radio" name="fq-ord" id="${id}" value="${opt.value}" /> <span>${opt.label}</span>`;
+      const checked = typeof answer === "number" && answer === opt.value ? "checked" : "";
+      wrap.innerHTML = `<input type="radio" name="fq-ord" id="${id}" value="${opt.value}" ${checked} /> <span>${opt.label}</span>`;
       wrap.querySelector("input").addEventListener("change", (e) => {
         answer = Number(e.target.value);
         $("#fq-next").disabled = false;
@@ -190,12 +204,13 @@ function renderPersonalQuestion() {
       optsEl.appendChild(wrap);
     });
   } else if (d.type === "multi_select") {
-    const checked = new Set();
+    const checked = new Set(Array.isArray(answer) ? answer : []);
     d.options.forEach((opt) => {
       const id = `fq-opt-${d.id}-${opt.id}`;
       const wrap = document.createElement("label");
       wrap.className = "option";
-      wrap.innerHTML = `<input type="checkbox" id="${id}" value="${opt.id}" /> <span>${opt.label}</span>`;
+      const isChecked = checked.has(opt.id) ? "checked" : "";
+      wrap.innerHTML = `<input type="checkbox" id="${id}" value="${opt.id}" ${isChecked} /> <span>${opt.label}</span>`;
       wrap.querySelector("input").addEventListener("change", (e) => {
         if (e.target.checked) checked.add(e.target.value); else checked.delete(e.target.value);
         answer = Array.from(checked);
@@ -203,19 +218,35 @@ function renderPersonalQuestion() {
       });
       optsEl.appendChild(wrap);
     });
+    if (checked.size > 0) answer = Array.from(checked);
   }
 
-  $("#fq-next").disabled = true;
+  const hasAnswer = (typeof answer === "number") || (Array.isArray(answer) && answer.length > 0);
+  $("#fq-next").disabled = !hasAnswer;
+  $("#fq-back").disabled = false; // always enabled in personal phase (back into policy)
   $("#fq-progress").textContent = `Personal-fit ${state.fIdx + 1} of ${state.dimensions.length}`;
   $("#fq-next").onclick = () => {
-    if (answer == null) return;
-    state.personalAnswers.push({ dimension_id: d.id, type: d.type, value: answer });
+    if (answer == null || (Array.isArray(answer) && answer.length === 0)) return;
+    state.personalAnswers[state.fIdx] = { dimension_id: d.id, type: d.type, value: answer };
     emitEvent("personal_answer", { dimension_id: d.id });
     advancePersonal();
   };
   $("#fq-skip").onclick = () => {
-    state.personalAnswers.push({ dimension_id: d.id, type: d.type, value: null });
+    state.personalAnswers[state.fIdx] = { dimension_id: d.id, type: d.type, value: null };
     advancePersonal();
+  };
+  $("#fq-back").onclick = () => {
+    if (state.fIdx > 0) {
+      state.fIdx -= 1;
+      renderPersonalQuestion();
+    } else {
+      // Back from first personal question → return to last policy question
+      $("#personal-quiz").classList.add("hidden");
+      state.phase = "policy";
+      state.pIdx = state.questions.length - 1;
+      $("#policy-quiz").classList.remove("hidden");
+      renderPolicyQuestion();
+    }
   };
 }
 
