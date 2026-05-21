@@ -155,7 +155,7 @@ function handleShareCard(url) {
   if (!candidate || !Number.isFinite(pct)) return badRequest("c and p required");
 
   const title = `${candidate.name} — ${Math.round(pct)}% policy match`;
-  const subtitle = "CA 2026 Candidate Matcher";
+  const subtitle = "CA 2026 Governor Primary — Candidate Matcher";
   const footer = `dataset_${DATASET.version} · snapshot ${DATASET.snapshot_date}`;
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">

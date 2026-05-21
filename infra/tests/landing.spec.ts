@@ -5,10 +5,10 @@ test.describe("Landing page", () => {
     await page.goto("/");
   });
 
-  test("title and intro render", async ({ page }) => {
-    await expect(page).toHaveTitle(/CA 2026 Candidate Matcher/);
-    await expect(page.getByRole("heading", { name: /California 2026 Candidate Matcher/i })).toBeVisible();
-    await expect(page.getByText(/Pick where you stand/i)).toBeVisible();
+  test("title and intro render, and name the gubernatorial primary", async ({ page }) => {
+    await expect(page).toHaveTitle(/Governor Primary/i);
+    await expect(page.getByRole("heading", { name: /California 2026 Governor/i })).toBeVisible();
+    await expect(page.getByText(/June 2, 2026 gubernatorial primary/i)).toBeVisible();
   });
 
   test("snapshot date is populated from dataset", async ({ page }) => {
