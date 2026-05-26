@@ -26,6 +26,17 @@
     </section>
 
     <section id="intro" class="card hidden">
+      <div class="about">
+        <h2>What is this?</h2>
+        <p>A non-partisan way to find which candidate in California's June 2026 governor primary you actually line up with — and exactly why. A few things set it apart from the usual candidate quiz:</p>
+        <ul class="bullets">
+          <li><strong>Only questions where the candidates actually differ.</strong> No "do you support good schools?" filler — every question is one the field is genuinely split on, chosen by spread.</li>
+          <li><strong>An AI-researched, fully-cited dataset.</strong> Every candidate position was researched and assembled by AI from primary sources — not hand-curated by a research team — and each one links to a dated quote you can open and check yourself.</li>
+          <li><strong>You can keep asking.</strong> The part I'm most excited about: from any question, hand the topic to <strong>ChatGPT</strong> or <strong>Claude</strong> — pre-loaded with that topic's sourced guide — and go as deep as you want. It also works in agentic browsers like <a href="https://www.diabrowser.com/" target="_blank" rel="noopener">Dia</a>, or copy the prompt into any AI agent you like.</li>
+        </ul>
+        <p class="muted small">AI runs through both the <em>making</em> of this and the product itself. The first version was built at an AI hack-day at <a href="https://thegp.com" target="_blank" rel="noopener">The General Partnership</a>, then cleaned up for sharing.</p>
+      </div>
+
       <h2>How this works</h2>
       <ul class="bullets">
         <li>Every question is one where the candidates <em>actually</em> differ — picked by spread, not vibes.</li>
@@ -51,7 +62,7 @@
 
         <details>
           <summary>How were the candidate positions researched?</summary>
-          <p>Every position is tied to a primary source — a campaign website, interview, debate transcript, op-ed, or voting record — with a verbatim quote, a link, and a date. We never rely on an AI summary of a position without checking the source. When a candidate has not publicly addressed an issue, we mark it <em>"unknown"</em> rather than guess: 10 of 200 positions are honest unknowns. Expand "Background &amp; arguments" on any question to see the sourcing.</p>
+          <p>The dataset was researched and assembled by AI, working from primary sources — there was no human research team hand-curating it. The guardrail that keeps it honest: every position links to a primary source — a campaign website, interview, debate transcript, op-ed, or voting record — with a verbatim quote, a link, and a date, and any issue a candidate hasn't publicly addressed is marked <em>"unknown"</em> rather than guessed (10 of 200 positions are honest unknowns). So you never have to take the AI's word for it — open the source on any position and check it yourself. Expand "Background &amp; arguments" on any question to see the sourcing.</p>
         </details>
 
         <details>
@@ -65,8 +76,13 @@
         </details>
 
         <details>
-          <summary>Is this partisan? Who made it?</summary>
-          <p>It's a non-partisan, open-source project — not an endorsement engine. Every stance scale is written so neither end is "the right answer," and each question shows steelmanned arguments for both sides. The goal is to help you find <em>alignment</em>, not to tell you who to vote for. Code and data live on <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">GitHub</a>.</p>
+          <summary>Is this partisan?</summary>
+          <p>No — it's a non-partisan, open-source project, not an endorsement engine. Every stance scale is written so neither end is "the right answer," and each question shows steelmanned arguments for both sides. The goal is to help you find <em>alignment</em>, not to tell you who to vote for. Code and data live on <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">GitHub</a>.</p>
+        </details>
+
+        <details>
+          <summary>Can I dig deeper on a topic?</summary>
+          <p>Yes — this is the part I'm most excited about. On every question, under "Go deeper," type a question and hand the topic to <strong>ChatGPT</strong> or <strong>Claude</strong> in one click — it opens pre-loaded with that topic's sourced guide so the AI can reason from the same primary sources. It also works in agentic browsers like <a href="https://www.diabrowser.com/" target="_blank" rel="noopener">Dia</a> that can read the page directly, and there's a <strong>Copy prompt</strong> button so you can paste it into any AI agent you prefer. Power users can also connect the project's <strong>MCP server</strong> to Claude or Cursor — see the GitHub repo.</p>
         </details>
 
         <details>
@@ -77,6 +93,11 @@
         <details>
           <summary>How current is this, and can I use it in my own AI assistant?</summary>
           <p>Every page shows a snapshot date; positions can shift during a campaign, so we version the dataset and re-check as the June 2026 primary approaches. There's also an <strong>MCP server</strong> that plugs the dataset into Claude or Cursor, so you can talk through the issues conversationally — see the GitHub repo for setup.</p>
+        </details>
+
+        <details>
+          <summary>Who built this — and why?</summary>
+          <p>Built by <a href="https://www.linkedin.com/in/tedmao/" target="_blank" rel="noopener">Ted Mao</a>. The first version came together at an AI hack-day at <a href="https://thegp.com" target="_blank" rel="noopener">The General Partnership</a>, the venture firm I'm affiliated with, then I cleaned it up to share. It's also a small showcase of how far AI can carry a project end-to-end — researching the dataset, building the app, and powering the in-product follow-up questions. I'm the founder of <a href="https://www.gumnut.ai" target="_blank" rel="noopener">Gumnut</a>; this is a personal side project, not affiliated with any campaign.</p>
         </details>
       </div>
     </section>
