@@ -884,8 +884,8 @@
       "name": "State wealth tax",
       "tier": 1,
       "category": "economy",
-      "short_description": "Should California create a wealth tax — a yearly tax on the total net worth of its richest residents, separate from income tax?",
-      "ca_specific_context": "AB 259 (2023) and a November 2026 ballot initiative would tax billionaire net worth; none has been enacted.",
+      "short_description": "Should California tax the net worth of its very richest residents — a tax on wealth itself, separate from income tax?",
+      "ca_specific_context": "Two distinct proposals: AB 259 (2023, Asm. Alex Lee) sought an annual tax on net worth over $50M but stalled in committee; the One-Time Wealth Tax / 'Billionaire Tax Act' (SEIU-UHW) qualified for the November 2026 ballot as a one-time 5% tax on billionaires. Neither is law.",
       "stance_scale": [
         {
           "value": 1,
@@ -909,21 +909,25 @@
         }
       ],
       "voter_guide": {
-        "current_policy": "California has no wealth tax. A wealth tax is a yearly charge on what someone owns — their total assets — rather than on the income they earn that year. In 2023, a bill called [AB 259](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB259) proposed taxing fortunes over $50 million (and more over $1 billion), but it didn't pass. A similar measure is headed for the November 2026 ballot.",
+        "current_policy": "California has no wealth tax — a tax on what someone owns (their net worth) rather than the income they earn. Two different versions have been floated, and they work very differently. In 2023, Asm. Alex Lee's [AB 259](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB259) (with constitutional amendment ACA 3) proposed an annual tax — 1% on net worth above $50 million and 1.5% above $1 billion — but it stalled in committee and never became law. Separately, a one-time measure — the 'Billionaire Tax Act,' formally the One-Time Wealth Tax for State-Funded Health Care Programs Initiative, backed by SEIU-UHW — qualified for the November 2026 ballot: a single 5% tax on the net worth of California billionaires, with revenue going mostly to health care and the rest to education and food assistance.",
         "key_facts": [
           "No U.S. state currently has a true wealth tax.",
-          "[AB 259](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB259) (2023) would have charged 1% a year on net worth over $50 million, and 1.5% over $1 billion — it never advanced.",
-          "Washington taxes investment gains (a tax on income from selling assets), but that is not the same as a tax on total wealth. Broad wealth-tax proposals have failed in Washington, New York, Massachusetts, and Illinois.",
-          "A wealth tax targets assets the very rich can hold without ever cashing them in, which income taxes don't reach.",
-          "The hardest part is valuing things that don't have a clear price — private companies, art, real estate — every single year."
+          "These are two different proposals. [AB 259](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB259) (2023, Alex Lee) was an annual tax — 1% on net worth over $50 million, 1.5% over $1 billion — that stalled in committee and never became law.",
+          "The measure on the November 2026 ballot is a one-time 5% tax on the net worth of California billionaires (over $1 billion), assessed as of a set date — not a recurring tax. Most of the revenue is earmarked for health care, with a share for education and food assistance.",
+          "A one-time tax is owed once, on wealth as of a snapshot date; an annual tax recurs every year the wealth is held. The 2023 bill was annual; the 2026 ballot measure is one-time.",
+          "Broad wealth taxes have been proposed and failed in Washington, New York, Massachusetts, and Illinois. The hardest part of any wealth tax is valuing things without a clear market price — private companies, art, real estate."
         ],
         "comparison": "California would be the first U.S. state to run a true tax on total wealth. Several other high-tax states looked at the idea and passed on it, citing legal challenges, the difficulty of valuing assets, and the risk that the wealthiest residents simply move away.",
-        "arguments_for_change": "Supporters say a wealth tax reaches fortunes that income taxes miss — billionaires can keep their taxable income low while their net worth keeps growing — and that even a small yearly charge on the very largest fortunes could fund schools, health care, and child care from a narrow, stable group of taxpayers.",
-        "arguments_against_change": "Opponents say a state wealth tax runs into serious legal and practical problems (how do you value someone's assets every year?), that the most mobile residents would leave or restructure to avoid it, and that revenue resting on a handful of people would be unpredictable.",
+        "arguments_for_change": "Supporters say a wealth tax reaches fortunes that income taxes miss — billionaires can keep their taxable income low while their net worth keeps growing — and that even a modest tax on the very largest fortunes could fund schools, health care, and child care from a narrow group of taxpayers.",
+        "arguments_against_change": "Opponents say a state wealth tax runs into serious legal and practical problems (how do you value someone's assets?), that the most mobile residents would leave or restructure to avoid it, and that revenue resting on a handful of people would be unpredictable.",
         "sources": [
           {
-            "title": "AB 259 (Lee, 2023) — California Wealth Tax",
+            "title": "AB 259 (Lee, 2023) — California Wealth Tax (annual; held in committee)",
             "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240AB259"
+          },
+          {
+            "title": "California One-Time Wealth Tax (Billionaire Tax Act) Initiative (2026) — Ballotpedia",
+            "url": "https://ballotpedia.org/California_One-Time_Wealth_Tax_for_State-Funded_Health_Care_Programs_Initiative_(2026)"
           },
           {
             "title": "CRS — Net Wealth Tax: Reviewing the Issues (IF11756)",
