@@ -2,17 +2,18 @@
 title: California 2026 Gubernatorial Candidate Matcher
 status: in-progress
 created: 2026-05-12
-last-updated: 2026-05-21
+last-updated: 2026-05-26
 ---
 
-## Status snapshot (2026-05-21)
+## Status snapshot (2026-05-26)
 
 **Live at <https://california-election.tedmao.workers.dev>** (Cloudflare Workers + D1).
 
 - **Phase 0 — Research & data**: ✅ Complete. `dataset_v1.json`: 8 candidates × 25 issues = 200 candidate-issue positions, 190 cited from primary sources, 10 honest `"unknown"` entries (`confidence: "insufficient_data"`). Issues ranked by differentiation score; top 13 flagged `default_quiz: true`. The original `tax_top_wealth` issue was later split into `tax_top` + `tax_wealth` (see "Multi-dimensional issue splits" below).
 - **Phase 1 — Quiz MVP**: ✅ Shipped. Deployed on Cloudflare. Two-phase quiz (policy + personal-fit), dual scoring (policy / personal-fit, never blended), inline importance slider, back-navigation (scrolls to top), plain-language prompts/options, an always-shown "Background & arguments" block per question (current policy, key facts, both-sides arguments, sources, "The basics" explainers, and inline links from bill names to the bill text), "see why" receipts with source quotes + a per-position **⚑ flag this** button (top match opens by default), share-link encoding (answers in URL hash), anonymized analytics events (D1), mobile pass, and a landing-page methodology FAQ. The race is named explicitly throughout (June 2, 2026 gubernatorial primary).
 - **Phase 2 — MCP server**: ✅ Largely complete. 7 tools (1 more than PLAN required), stdio transport, smoke test (`mcp/test_tools.mjs`). Tool descriptions tuned, sample prompts + Claude Desktop / Cursor install docs published. Remaining: HTTP/SSE transport for ChatGPT (deferred — small audience).
-- **Phase 3 — Polish & launch**: 🟡 Most deliverables shipped. Done: why-not runner-up panel, what-if explorer, SVG share card, public stats page (D1-backed), voter-guide context on all 15 default questions, Playwright test suite. Remaining: launch posts (drafted in `press/`), custom-domain decision, optional per-result share-card image upgrade (SVG → PNG).
+- **Phase 3 — Polish & launch**: 🟡 Most deliverables shipped. Done: why-not runner-up panel, what-if explorer, SVG share card, public stats page (D1-backed), voter-guide context on all default questions, content-only `/topic/:id` pages, per-question "ask ChatGPT/Claude/Dia" hand-off, Playwright test suite. Remaining: launch posts (drafted in `press/`), custom-domain decision, optional per-result share-card image upgrade (SVG → PNG).
+- **Post-launch polish (2026-05-26)**: Quiz trimmed to the **13** highest-differentiation policy questions and **7** personal-fit dimensions (flags computed by `scripts/score_questions.mjs` and `scripts/score_personal_fit.mjs`; the Worker filters on `default_quiz`). Added a progress bar, question/results animations, light/dark theme toggle, editorial typography (Newsreader + Inter), an intro share button, and ntfy completion notifications (no PII). Analytics endpoint renamed `/api/event` → **`/api/tally`** because content blockers drop the Plausible-signature `/api/event` path; `/api/stats` now sends `no-store`.
 
 ## Hosting pivot — Buildy → Cloudflare
 
@@ -390,7 +391,7 @@ infra/
 - [x] "Why-not" runner-up analysis ("you matched X; here are the questions where Y would have edged X")
 - [x] What-if explorer ("if you'd answered Q5 differently…")
 - [x] Public stats page (`/stats`): most-divisive questions, response distributions, candidate match-share — D1-backed
-- [x] Voter-guide context (current policy, key facts, comparison, steelmanned arguments, sources) on all 15 default questions — rewritten in plain language with inline bill-text links (70 links, all verified)
+- [x] Voter-guide context (current policy, key facts, comparison, steelmanned arguments, sources) on every default-quiz question — rewritten in plain language with inline bill-text links (70 links, all verified)
 - [x] Playwright test suite (`infra/tests/`) — landing/FAQ, navigation, full flow, API, mobile, voter-guide (63 passing)
 - [x] Re-research the remaining `"unknown"` positions (no new public statements found in the window; documented)
 - [x] Persona QA + math hand-verification (Steyer 77% / Bianco 93%; hand-computed match confirmed)

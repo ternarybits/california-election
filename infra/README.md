@@ -31,6 +31,7 @@ infra/
 | `GET` | `/api/personal-fit-dimensions` | Default 7-dimension personal-fit phase (ranked by differentiation) |
 | `GET` | `/api/stats` | Aggregated D1 stats (used by `/stats`) |
 | `GET` | `/api/share-card.svg?c=...&p=...` | SVG share card |
+| `GET` | `/topic/:issue_id` | Server-rendered, content-only page for one issue (every candidate's sourced position) — the link target for the "ask an AI" hand-off |
 | `POST` | `/api/flag` | Submit a position correction → D1 `flags` |
 | `POST` | `/api/tally` | Anonymized quiz event → D1 `events` (named to dodge content blockers, not `/api/event`) |
 

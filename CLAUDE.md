@@ -14,7 +14,7 @@ The unifying claim: **every quiz question is one where the candidates *actually*
 
 Target launch: **before the June 2026 California primary.**
 
-## Current state (2026-05-21)
+## Current state (2026-05-26)
 
 - ✅ Plan written (`PLAN.md`), updated for the Cloudflare pivot
 - ✅ Repo public at `ternarybits/california-election`
@@ -22,8 +22,9 @@ Target launch: **before the June 2026 California primary.**
 - ✅ **Phase 0 complete** — `dataset/dataset_v1.json` (8 candidates × 25 issues = 200 positions, 190 cited, 10 honest "unknown"s, ranked by differentiation; `tax_top_wealth` later split into `tax_top` + `tax_wealth`)
 - ✅ **Phase 1 shipped** — Cloudflare Worker + D1; two-phase quiz, dual scoring, importance slider, back-nav, voter-guide context, "see why" receipts + flag button, share-link encoding, analytics events, mobile pass, landing FAQ
 - ✅ **Phase 2 largely done** — MCP server, 7 tools, stdio, tuned descriptions + sample prompts + Claude Desktop/Cursor install docs (`mcp/test_tools.mjs`). ChatGPT SSE deferred.
-- 🟡 **Phase 3 mostly shipped** — why-not, what-if, SVG share card, public `/stats`, Playwright suite (`infra/tests/`). Remaining: launch posts (drafted in `press/`), custom domain
+- 🟡 **Phase 3 mostly shipped** — why-not, what-if, SVG share card, public `/stats`, content-only `/topic/:id` pages, per-question "ask ChatGPT/Claude/Dia" hand-off, Playwright suite (`infra/tests/`). Remaining: launch posts (drafted in `press/`), custom domain
 - ✅ **Buildy spike** archived to `legacy/buildy/` after it outgrew Buildy's size limits
+- ✅ **Post-launch polish (2026-05-26)** — quiz trimmed to the **13** highest-differentiation policy questions + **7** personal-fit dimensions (flags computed by `score_questions.mjs` / `score_personal_fit.mjs`; the Worker filters on them); progress bar + question/results animations; editorial typography (Newsreader headings + Inter body, Google Fonts CDN); light/dark theme toggle; intro share button; ntfy completion notification (no PII, via `NTFY_TOPIC` secret); `/api/stats` is `no-store`. **Analytics endpoint is `/api/tally`, not `/api/event`** — the latter is Plausible's signature and was being dropped by content blockers; don't rename it back.
 
 ## Resolved decisions
 
@@ -70,7 +71,7 @@ Don't re-litigate these unless the user explicitly raises them. All are two-way 
 - `infra/` — **the live app**: Cloudflare Worker (`src/worker.js`) + static UI (`public/`) + D1 schema + Playwright tests (`tests/`). Deploy with `cd infra && npm run deploy`. See `infra/README.md`.
 - `mcp/` — stdio MCP server with 7 tools. Smoke test: `cd mcp && node test_tools.mjs`.
 - `legacy/buildy/` — archived original Buildy spike (outgrew Buildy's size cap on deploy).
-- `scripts/` — `score_questions.mjs` (recompute differentiation + ranking), `merge_research.mjs` / `merge_voter_guides.mjs` (merge research scratch files), `split_tax_issue.mjs` (the tax-split migration), `test_quiz.mjs` (quiz scoring smoke test)
+- `scripts/` — `score_questions.mjs` (rank policy issues by differentiation, flag the top-N `default_quiz`), `score_personal_fit.mjs` (same for personal-fit dimensions: std/2 for ordinal axes, mean pairwise Jaccard for multi-select), `merge_research.mjs` / `merge_voter_guides.mjs` (merge research scratch files), `split_tax_issue.mjs` (the tax-split migration), `test_quiz.mjs` (quiz scoring smoke test)
 
 ## Working style preferences
 
@@ -80,10 +81,11 @@ Distilled from the planning conversation:
 - **Be creative.** The user wants something genuinely interesting to share, not a clone of iSideWith. Differentiated angles include MCP integration, why-not analysis, public stats page.
 - **No yak-shaving Gumnut ceremony.** This is a personal project, not Gumnut work. No Linear issues, no design-doc-in-`docs/design-docs/`, no PRs unless explicitly requested. PLAN.md at the repo root is the design doc.
 - **Receipts and credibility matter.** Civic-tech tools rise or fall on trust. Never trust an LLM summary of a candidate position without source verification — set `"unknown"` rather than fabricate.
+- **Ground every ballot-proposal reference in verified facts.** Before writing/editing any voter-guide text, stance label, or context that names a ballot proposition or proposed/historic measure (AB 259, the 2026 "Billionaire Tax Act," Prop 13/15/19/36/47/4/98/2/38, Prop 1, …), verify that specific proposal's mechanism (one-time vs. annual, rates, thresholds), status, and sponsor against a primary/authoritative source and cite it. Don't conflate distinct proposals. (See `AGENTS.md`.)
 - **Use `git -C <path>`** for git ops on a different repo (per the user's global preferences).
 
 ## User context
 
 - GitHub: `ternarybits`
 - Repo: `ternarybits/california-election` (public)
-- File last updated: 2026-05-21
+- File last updated: 2026-05-26
