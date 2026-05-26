@@ -83,6 +83,7 @@ async function boot() {
     $("#snapshot-date").textContent = state.snapshot_date;
     $("#footer-snapshot-date").textContent = state.snapshot_date;
     $("#dataset-label").textContent = `dataset_${state.dataset_version}.json`;
+    $("#q-count").textContent = String(state.questions.length + state.dimensions.length);
 
     if (!state.questions.length) {
       $("#status").innerHTML = "<p>No questions configured. Run scripts/score_questions.mjs and redeploy.</p>";
