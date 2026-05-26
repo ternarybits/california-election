@@ -11,19 +11,22 @@ test.describe("Progress bar", () => {
     const fill = page.locator("#policy-quiz .progress-fill");
     await expect(fill).toBeVisible();
 
-    const widthOf = async () =>
-      (await fill.evaluate((el) => (el as HTMLElement).getBoundingClientRect().width)) as number;
+    // Read the explicit width percentage the app sets (e.g. "8%"), not the
+    // measured pixel width — that's deterministic and free of CSS-transition
+    // timing, so it can't flake on a mid-animation sample.
+    const pctOf = async () =>
+      (await fill.evaluate((el) => parseFloat((el as HTMLElement).style.width) || 0)) as number;
 
-    const q1 = await widthOf();
-    expect(q1).toBeGreaterThan(0);
+    await expect.poll(pctOf).toBeGreaterThan(0);
+    const q1 = await pctOf();
 
     // Answer Q1 and advance.
     await page.locator("#pq-options input[type='radio']").first().check();
     await page.locator("#pq-next").click();
     await expect(page.locator("#pq-progress")).toContainText(/Question 2/);
 
-    // Width transitions; poll until it grows past Q1.
-    await expect.poll(widthOf).toBeGreaterThan(q1);
+    // Q2's progress percentage must exceed Q1's.
+    await expect.poll(pctOf).toBeGreaterThan(q1);
   });
 });
 

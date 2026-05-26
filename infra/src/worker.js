@@ -180,9 +180,8 @@ async function handlePostEvent(request, env, ctx) {
     )
     .run();
 
-  // A completed quiz pings ntfy with the top-match result (no PII). Run it after
-  // the response via waitUntil so it never adds latency to the fire-and-forget
-  // analytics call; if ctx is unavailable (tests), just detach the promise.
+  // Run the notify after the response via waitUntil so it adds no latency to the
+  // fire-and-forget analytics call; if ctx is unavailable, just detach the promise.
   if (kind === "quiz_complete") {
     const notify = notifyQuizComplete(env, strOrNull(candidate_id), numOrNull(match_pct));
     if (ctx?.waitUntil) ctx.waitUntil(notify);

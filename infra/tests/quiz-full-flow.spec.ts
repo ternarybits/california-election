@@ -1,6 +1,6 @@
 import { test, expect } from "./fixtures";
 
-// Drives a complete quiz run end-to-end (15 policy + 12 personal-fit).
+// Drives a complete quiz run end-to-end (13 policy + 12 personal-fit).
 // Validates: results screen renders, ranking has 8 candidates, see-why
 // receipts render, share link is generated, what-if explorer works.
 

@@ -21,6 +21,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const datasetPath = resolve(__dirname, "..", "..", "dataset", "dataset_v1.json");
 const dataset = JSON.parse(readFileSync(datasetPath, "utf-8"));
 
+// The web quiz's default length = however many issues are flagged default_quiz.
+// Derive it so this server stays in lockstep with the quiz instead of hardcoding.
+const DEFAULT_QUIZ_N = (dataset.questions || []).filter((q) => q.default_quiz).length;
+
 const server = new McpServer({
   name: "california-election",
   version: "0.0.1",
@@ -188,18 +192,20 @@ server.registerTool(
   "get_differentiating_questions",
   {
     title: "Get questions ranked by how strongly they differentiate the candidates",
-    description: "Return policy issues ranked by differentiation score — the questions where candidates actually differ. Score = (std of stances / 2) * (n_researched / n_total), so questions where the field is uniform or under-researched rank lower. Use this to sequence a deliberation conversation around the issues that matter most. Defaults to top 15 (the default web quiz); pass top_n=25 for the full ranking.",
+    description: `Return policy issues ranked by differentiation score — the questions where candidates actually differ. Score = (std of stances / 2) * (n_researched / n_total), so questions where the field is uniform or under-researched rank lower. Use this to sequence a deliberation conversation around the issues that matter most. Defaults to the ${DEFAULT_QUIZ_N} that make up the default web quiz; pass top_n=25 for the full ranking.`,
     inputSchema: {
-      top_n: z.number().int().min(1).max(25).optional().describe("How many top-ranked questions to return. Default 15 (matches the default web quiz). Max 25 (all issues)."),
+      top_n: z.number().int().min(1).max(25).optional().describe(`How many top-ranked questions to return. Default ${DEFAULT_QUIZ_N} (matches the default web quiz). Max 25 (all issues).`),
     },
   },
   async ({ top_n }) => {
-    const n = top_n ?? 15;
     const issuesById = new Map(dataset.issues.map((i) => [i.id, i]));
-    const ranked = (dataset.questions || [])
-      .slice()
-      .sort((a, b) => a.rank - b.rank)
-      .slice(0, n)
+    const sorted = (dataset.questions || []).slice().sort((a, b) => a.rank - b.rank);
+    // Default (no top_n) returns exactly the web quiz's default_quiz set — match
+    // on the flag, not a rank cutoff, so the two modalities can't diverge if the
+    // flagged subset ever stops being a contiguous top-N. An explicit top_n still
+    // takes the top N by rank (e.g. top_n=25 for the full ranking).
+    const selected = top_n == null ? sorted.filter((q) => q.default_quiz) : sorted.slice(0, top_n);
+    const ranked = selected
       .map((q) => {
         const issue = issuesById.get(q.issue_id);
         if (!issue) return null;

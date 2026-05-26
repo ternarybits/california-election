@@ -245,6 +245,22 @@ console.log(`✓ GET /topic/:id 404s on malformed percent-encoding`);
   if (fetchCalls.length !== 0) throw new Error("no ntfy call should fire when NTFY_TOPIC is unset");
   console.log("✓ quiz_complete stays silent when NTFY_TOPIC is unset");
 
+  // Without a ctx (no execution context) the notify still fires via the detached
+  // fallback path, and the request still 200s. Microtask flush lets it land.
+  fetchCalls.length = 0;
+  const reqNoCtx = new Request("http://x/api/event", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ kind: "quiz_complete", session_id: "s", candidate_id: topCandidate.id, match_pct: 60 }),
+  });
+  const resNoCtx = await mod.default.fetch(reqNoCtx, ntfyEnv); // no ctx arg
+  if (resNoCtx.status !== 200) throw new Error(`quiz_complete (no ctx) should 200, got ${resNoCtx.status}`);
+  await new Promise((r) => setTimeout(r, 0));
+  if (!fetchCalls.some((c) => c.url.startsWith("https://ntfy.example/"))) {
+    throw new Error("quiz_complete should still notify via the detached fallback when ctx is absent");
+  }
+  console.log("✓ quiz_complete notifies via the detached fallback when ctx is absent");
+
   globalThis.fetch = realFetch;
 }
 

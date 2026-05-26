@@ -54,12 +54,16 @@ const dims = await call("GET", "/api/personal-fit-dimensions");
 const candidates = await call("GET", "/api/candidates");
 const full = await call("GET", "/api/dataset");
 
-console.log(`✓ /api/questions returned ${questions.length} questions (expected 15)`);
+// Expected quiz length is whatever the dataset flags default_quiz — don't
+// hardcode it, so trimming the quiz doesn't silently break this test.
+const expectedQuestions = full.questions.filter((q) => q.default_quiz).length;
+
+console.log(`✓ /api/questions returned ${questions.length} questions (expected ${expectedQuestions})`);
 console.log(`✓ /api/personal-fit-dimensions returned ${dims.length} dimensions (expected 12)`);
 console.log(`✓ /api/candidates returned ${candidates.length} candidates (expected 8)`);
 console.log(`✓ /api/dataset returned ${full.positions.length} positions (expected 200)`);
 
-if (questions.length !== 15) throw new Error("expected 15 questions");
+if (questions.length !== expectedQuestions) throw new Error(`expected ${expectedQuestions} questions`);
 if (dims.length !== 12) throw new Error("expected 12 dimensions");
 if (candidates.length !== 8) throw new Error("expected 8 candidates");
 

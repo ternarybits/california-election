@@ -20,7 +20,7 @@ A shareable web experience that helps Californians discover which candidate in t
 
 ## Principles
 
-- **Differentiation-first.** Every question we ask is one where the candidates actually differ. Issues are ranked by a differentiation score; the default quiz is the top 15.
+- **Differentiation-first.** Every question we ask is one where the candidates actually differ. Issues are ranked by a differentiation score; the default quiz is the top 13.
 - **Receipts on everything.** Primary-source links and verbatim quotes on every position; bills linked to their text.
 - **One axis per real dimension.** Multi-dimensional topics are split into separate ordinal questions (e.g. income/corporate rates vs. a wealth tax) rather than force-fit onto one scale.
 - **Two scores, never blended.** Policy match and personal fit shown separately.

@@ -150,7 +150,7 @@ for (const issueId of ["tax_top", "tax_wealth"]) {
 // ---- Schema note + counts ----
 const nIssues = ds.issues.length;
 const nPositions = ds.positions.length;
-ds.$schema_note = `v1 — first complete research pass, then refined. ${ds.candidates.length} candidates × ${nIssues} issues = ${nPositions} candidate-issue positions. The tax_top_wealth issue was split into tax_top (income/corporate rates) and tax_wealth (state wealth tax) so the two independent axes score separately. Issues ranked by differentiation score in questions[]; top 15 flagged default_quiz=true. Corrections welcome via GitHub PR or in-app flag.`;
+ds.$schema_note = `v1 — first complete research pass, then refined. ${ds.candidates.length} candidates × ${nIssues} issues = ${nPositions} candidate-issue positions. The tax_top_wealth issue was split into tax_top (income/corporate rates) and tax_wealth (state wealth tax) so the two independent axes score separately. Issues ranked by differentiation score in questions[]; the top-ranked subset is flagged default_quiz=true. Corrections welcome via GitHub PR or in-app flag.`;
 
 writeFileSync(datasetPath, JSON.stringify(ds, null, 2) + "\n");
 

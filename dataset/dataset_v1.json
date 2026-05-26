@@ -1,5 +1,5 @@
 {
-  "$schema_note": "v1 — first complete research pass, then refined. 8 candidates × 25 issues = 200 candidate-issue positions. The tax_top_wealth issue was split into tax_top (income/corporate rates) and tax_wealth (state wealth tax) so the two independent axes score separately. Issues ranked by differentiation score in questions[]; top 15 flagged default_quiz=true. Corrections welcome via GitHub PR or in-app flag.",
+  "$schema_note": "v1 — first complete research pass, then refined. 8 candidates × 25 issues = 200 candidate-issue positions. The tax_top_wealth issue was split into tax_top (income/corporate rates) and tax_wealth (state wealth tax) so the two independent axes score separately. Issues ranked by differentiation score in questions[]; the top-ranked subset is flagged default_quiz=true. Corrections welcome via GitHub PR or in-app flag.",
   "version": "v1",
   "snapshot_date": "2026-05-21",
   "race": {

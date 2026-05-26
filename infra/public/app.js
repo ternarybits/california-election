@@ -816,7 +816,8 @@ function updateProgress() {
 }
 
 // Re-trigger the enter animation on each render by clearing the class, forcing
-// a reflow, then re-adding it. CSS gates the actual motion (prefers-reduced-motion).
+// a reflow, then re-adding it — the same card element is reused across questions,
+// so without the reset it would only animate once. CSS gates the actual motion.
 function animateIn(el) {
   if (!el) return;
   el.classList.remove("anim-in");

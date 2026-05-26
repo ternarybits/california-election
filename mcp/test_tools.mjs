@@ -9,11 +9,20 @@
 
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const serverPath = resolve(__dirname, "src", "index.js");
+
+// Expected default-quiz length is derived from the dataset, not hardcoded, so a
+// quiz trim doesn't silently break this test.
+const dataset = JSON.parse(
+  readFileSync(resolve(__dirname, "..", "dataset", "dataset_v1.json"), "utf-8"),
+);
+const DEFAULT_QUIZ_N = (dataset.questions || []).filter((q) => q.default_quiz).length;
+const TOTAL_ISSUES = dataset.issues.length;
 
 const transport = new StdioClientTransport({
   command: "node",
@@ -54,8 +63,8 @@ console.log("✓ all 7 expected tools registered");
 
 // 2) get_differentiating_questions — default
 const diff = await callTool("get_differentiating_questions");
-console.log(`\n✓ get_differentiating_questions default returned ${diff.returned} of ${diff.total_issues} issues (expected 15 / 25)`);
-if (diff.returned !== 15 || diff.total_issues !== 25) throw new Error("unexpected counts");
+console.log(`\n✓ get_differentiating_questions default returned ${diff.returned} of ${diff.total_issues} issues (expected ${DEFAULT_QUIZ_N} / ${TOTAL_ISSUES})`);
+if (diff.returned !== DEFAULT_QUIZ_N || diff.total_issues !== TOTAL_ISSUES) throw new Error("unexpected counts");
 console.log(`  top 3: ${diff.questions.slice(0, 3).map((q) => `${q.name} (score ${q.differentiation.score})`).join(" | ")}`);
 
 // 3) get_differentiating_questions — explicit top_n

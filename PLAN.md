@@ -9,7 +9,7 @@ last-updated: 2026-05-21
 
 **Live at <https://california-election.tedmao.workers.dev>** (Cloudflare Workers + D1).
 
-- **Phase 0 — Research & data**: ✅ Complete. `dataset_v1.json`: 8 candidates × 25 issues = 200 candidate-issue positions, 190 cited from primary sources, 10 honest `"unknown"` entries (`confidence: "insufficient_data"`). Issues ranked by differentiation score; top 15 flagged `default_quiz: true`. The original `tax_top_wealth` issue was later split into `tax_top` + `tax_wealth` (see "Multi-dimensional issue splits" below).
+- **Phase 0 — Research & data**: ✅ Complete. `dataset_v1.json`: 8 candidates × 25 issues = 200 candidate-issue positions, 190 cited from primary sources, 10 honest `"unknown"` entries (`confidence: "insufficient_data"`). Issues ranked by differentiation score; top 13 flagged `default_quiz: true`. The original `tax_top_wealth` issue was later split into `tax_top` + `tax_wealth` (see "Multi-dimensional issue splits" below).
 - **Phase 1 — Quiz MVP**: ✅ Shipped. Deployed on Cloudflare. Two-phase quiz (policy + personal-fit), dual scoring (policy / personal-fit, never blended), inline importance slider, back-navigation (scrolls to top), plain-language prompts/options, an always-shown "Background & arguments" block per question (current policy, key facts, both-sides arguments, sources, "The basics" explainers, and inline links from bill names to the bill text), "see why" receipts with source quotes + a per-position **⚑ flag this** button (top match opens by default), share-link encoding (answers in URL hash), anonymized analytics events (D1), mobile pass, and a landing-page methodology FAQ. The race is named explicitly throughout (June 2, 2026 gubernatorial primary).
 - **Phase 2 — MCP server**: ✅ Largely complete. 7 tools (1 more than PLAN required), stdio transport, smoke test (`mcp/test_tools.mjs`). Tool descriptions tuned, sample prompts + Claude Desktop / Cursor install docs published. Remaining: HTTP/SSE transport for ChatGPT (deferred — small audience).
 - **Phase 3 — Polish & launch**: 🟡 Most deliverables shipped. Done: why-not runner-up panel, what-if explorer, SVG share card, public stats page (D1-backed), voter-guide context on all 15 default questions, Playwright test suite. Remaining: launch posts (drafted in `press/`), custom-domain decision, optional per-result share-card image upgrade (SVG → PNG).
@@ -351,7 +351,7 @@ infra/
 - [x] First pass: candidate × issue matrix populated with cited positions (200 cells after the tax split)
 - [x] Two-pass review of every position with source verification (190 cited; 10 honest unknowns)
 - [x] Stance scales finalized per issue
-- [x] Question prompts drafted and ranked by differentiation score; top 15 flagged `default_quiz: true`
+- [x] Question prompts drafted and ranked by differentiation score; top 13 flagged `default_quiz: true`
 - [x] **Output**: `dataset/dataset_v1.json`, published openly
 
 **Phase 1 — Quiz MVP** ✅ Shipped (live on Cloudflare)
