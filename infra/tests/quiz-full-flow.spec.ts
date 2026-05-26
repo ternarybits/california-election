@@ -12,8 +12,8 @@ test("complete quiz → results screen with receipts, share link, why-not, what-
   await expect(page.locator("#policy-quiz")).toBeVisible();
 
   // Answer all policy questions with stance 5 + high importance (progressive persona)
-  for (let i = 0; i < 15; i++) {
-    await expect(page.locator("#pq-progress")).toContainText(`Question ${i + 1} of 15`);
+  for (let i = 0; i < 13; i++) {
+    await expect(page.locator("#pq-progress")).toContainText(`Question ${i + 1} of 13`);
     const opt5 = page.locator("#pq-options input[value='5']");
     const has5 = await opt5.count();
     if (has5 > 0) {

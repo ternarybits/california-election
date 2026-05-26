@@ -5691,7 +5691,7 @@
     {
       "issue_id": "prop36_47",
       "rank": 14,
-      "default_quiz": true,
+      "default_quiz": false,
       "differentiation": {
         "score": 0.5,
         "std": 1,
@@ -5705,7 +5705,7 @@
     {
       "issue_id": "utility_rates",
       "rank": 15,
-      "default_quiz": true,
+      "default_quiz": false,
       "differentiation": {
         "score": 0.496,
         "std": 0.992,

@@ -22,10 +22,10 @@ test.describe("API endpoints", () => {
     expect(body[0]).toHaveProperty("party");
   });
 
-  test("/api/questions returns 15 default-quiz items in rank order", async ({ request }) => {
+  test("/api/questions returns 13 default-quiz items in rank order", async ({ request }) => {
     const res = await request.get("/api/questions");
     const body = await res.json();
-    expect(body).toHaveLength(15);
+    expect(body).toHaveLength(13);
     for (let i = 0; i < body.length; i++) {
       expect(body[i].rank).toBe(i + 1);
     }

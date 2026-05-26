@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 // Score each issue by how strongly it differentiates the candidates, then
 // populate the dataset's questions[] array with a ranked ordering. The top
-// N (default 15) get default_quiz: true so the Buildy quiz UI can pick them
-// up automatically.
+// N (default 13) get default_quiz: true so the quiz UI can pick them up
+// automatically. The cutoff is set where the differentiation score levels off
+// — issues below it split the field too little to make a worthwhile question.
 //
 // Metric: score = (std / 2) * (n_resolved / 8)
 //   - std is the sample standard deviation of researched stances on a 1-5 scale.
@@ -24,7 +25,7 @@ const root = resolve(__dirname, "..");
 const datasetPath = resolve(root, "dataset/dataset_v1.json");
 
 const argTop = process.argv.indexOf("--top");
-const TOP_N = argTop >= 0 ? Number(process.argv[argTop + 1]) : 15;
+const TOP_N = argTop >= 0 ? Number(process.argv[argTop + 1]) : 13;
 
 const dataset = JSON.parse(readFileSync(datasetPath, "utf-8"));
 const totalCandidates = dataset.candidates.length;

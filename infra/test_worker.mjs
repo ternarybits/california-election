@@ -80,8 +80,8 @@ console.log(`✓ /api/issues returned ${issues.body.length} issues (expected 25)
 if (issues.body.length !== 25) throw new Error("issue count");
 
 const questions = await call("GET", "/api/questions");
-console.log(`✓ /api/questions returned ${questions.body.length} questions (expected 15)`);
-if (questions.body.length !== 15) throw new Error("question count");
+console.log(`✓ /api/questions returned ${questions.body.length} questions (expected 13)`);
+if (questions.body.length !== 13) throw new Error("question count");
 
 const dims = await call("GET", "/api/personal-fit-dimensions");
 console.log(`✓ /api/personal-fit-dimensions returned ${dims.body.length} dimensions (expected 12)`);
@@ -203,5 +203,49 @@ console.log(`✓ GET /topic/:id 404s on unknown issue id`);
 const malformedTopic = await call("GET", "/topic/%");
 if (malformedTopic.status !== 404) throw new Error(`malformed topic id should 404, got ${malformedTopic.status}`);
 console.log(`✓ GET /topic/:id 404s on malformed percent-encoding`);
+
+// 10) quiz_complete fires a no-PII ntfy notification when NTFY_TOPIC is set,
+// and stays silent when it isn't. Stub global fetch to capture the outbound POST.
+{
+  const fetchCalls = [];
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = async (url, init) => {
+    fetchCalls.push({ url: String(url), body: init?.body });
+    return new Response("ok");
+  };
+  const waited = [];
+  const ctx = { waitUntil: (p) => waited.push(p) };
+  const topCandidate = dataset.candidates[0];
+
+  const ntfyEnv = { ...env, NTFY_TOPIC: "topic-abc", NTFY_SERVER: "https://ntfy.example" };
+  const req = new Request("http://x/api/event", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ kind: "quiz_complete", session_id: "sess-PRIVATE", candidate_id: topCandidate.id, match_pct: 87 }),
+  });
+  const res = await mod.default.fetch(req, ntfyEnv, ctx);
+  if (res.status !== 200) throw new Error(`quiz_complete should 200, got ${res.status}`);
+  await Promise.all(waited);
+  const ntfyCall = fetchCalls.find((c) => c.url.startsWith("https://ntfy.example/"));
+  if (!ntfyCall) throw new Error("quiz_complete should POST to ntfy when NTFY_TOPIC set");
+  if (ntfyCall.url !== "https://ntfy.example/topic-abc") throw new Error(`ntfy url should target the topic, got ${ntfyCall.url}`);
+  if (!String(ntfyCall.body).includes(topCandidate.name)) throw new Error("ntfy message should name the top match");
+  if (String(ntfyCall.body).includes("sess-PRIVATE")) throw new Error("ntfy message must not leak the session id (PII)");
+  console.log(`✓ quiz_complete fires a no-PII ntfy notification (top match: ${topCandidate.name})`);
+
+  fetchCalls.length = 0;
+  waited.length = 0;
+  const reqNoTopic = new Request("http://x/api/event", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ kind: "quiz_complete", session_id: "s", candidate_id: topCandidate.id, match_pct: 50 }),
+  });
+  await mod.default.fetch(reqNoTopic, env, ctx); // env has no NTFY_TOPIC
+  await Promise.all(waited);
+  if (fetchCalls.length !== 0) throw new Error("no ntfy call should fire when NTFY_TOPIC is unset");
+  console.log("✓ quiz_complete stays silent when NTFY_TOPIC is unset");
+
+  globalThis.fetch = realFetch;
+}
 
 console.log("\n✓ all infra/test_worker.mjs checks passed.");

@@ -99,7 +99,31 @@ async function handlePostFlag(request, env) {
   return json({ ok: true });
 }
 
-async function handlePostEvent(request, env) {
+// Fire a notification when someone finishes the quiz. Strictly no PII: no
+// session id, no IP, no answers — only the public top-match result. The ntfy
+// topic acts as a shared secret, so it lives in env (a Worker secret), and the
+// whole thing no-ops when unset. Best-effort: never lets a notify failure break
+// the analytics request that triggered it.
+async function notifyQuizComplete(env, candidateId, matchPct) {
+  const topic = env.NTFY_TOPIC;
+  if (!topic) return;
+  const server = (env.NTFY_SERVER || "https://ntfy.sh").replace(/\/+$/, "");
+  const candidate = DATASET.candidates.find((c) => c.id === candidateId);
+  const name = candidate ? candidate.name : "a candidate";
+  const pct = Number.isFinite(matchPct) ? `${Math.round(matchPct)}% policy match` : "no policy match computed";
+  const message = `Someone finished the quiz — top match: ${name} (${pct}).`;
+  try {
+    await fetch(`${server}/${topic}`, {
+      method: "POST",
+      headers: { Title: "CA 2026 Governor quiz", Tags: "ballot_box" },
+      body: message,
+    });
+  } catch {
+    // swallow — analytics notifications must never surface to the user
+  }
+}
+
+async function handlePostEvent(request, env, ctx) {
   if (!env.DB) return json({ error: "database not configured" }, { status: 503 });
 
   const body = await request.json().catch(() => null);
@@ -155,6 +179,15 @@ async function handlePostEvent(request, env) {
       Date.now(),
     )
     .run();
+
+  // A completed quiz pings ntfy with the top-match result (no PII). Run it after
+  // the response via waitUntil so it never adds latency to the fire-and-forget
+  // analytics call; if ctx is unavailable (tests), just detach the promise.
+  if (kind === "quiz_complete") {
+    const notify = notifyQuizComplete(env, strOrNull(candidate_id), numOrNull(match_pct));
+    if (ctx?.waitUntil) ctx.waitUntil(notify);
+    else notify.catch(() => {});
+  }
 
   return json({ ok: true });
 }
@@ -474,7 +507,7 @@ async function handleGetStats(env) {
 // ---------- Router ----------
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const path = url.pathname.replace(/\/+$/, "") || "/";
     const method = request.method;
@@ -486,7 +519,7 @@ export default {
     if (method === "GET" && path === "/api/questions") return handleListQuestions();
     if (method === "GET" && path === "/api/personal-fit-dimensions") return handleListPersonalFitDimensions();
     if (method === "POST" && path === "/api/flag") return handlePostFlag(request, env);
-    if (method === "POST" && path === "/api/event") return handlePostEvent(request, env);
+    if (method === "POST" && path === "/api/event") return handlePostEvent(request, env, ctx);
     if (method === "GET" && path === "/api/stats") return handleGetStats(env);
     if (method === "GET" && path === "/api/share-card.svg") return handleShareCard(url, request);
 

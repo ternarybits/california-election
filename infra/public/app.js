@@ -102,6 +102,15 @@ async function boot() {
 
     $("#intro").classList.remove("hidden");
     $("#start-btn").onclick = startQuiz;
+    $("#share-quiz").onclick = async () => {
+      const url = quizShareUrl();
+      try {
+        await navigator.clipboard.writeText(url);
+        $("#intro-share-status").textContent = "Quiz link copied to clipboard ✓";
+      } catch {
+        $("#intro-share-status").textContent = url;
+      }
+    };
   } catch (e) {
     $("#status").textContent = `Failed to load: ${e.message}`;
   }
@@ -125,6 +134,8 @@ function startPolicyPhase() {
 function renderPolicyQuestion() {
   const q = state.questions[state.pIdx];
   scrollToTop();
+  updateProgress();
+  animateIn($("#policy-quiz"));
   $("#pq-title").textContent = q.name;
   $("#pq-desc").textContent = q.short_description;
   renderVoterGuide(q);
@@ -309,6 +320,8 @@ function startPersonalPhase() {
 function renderPersonalQuestion() {
   const d = state.dimensions[state.fIdx];
   scrollToTop();
+  updateProgress();
+  animateIn($("#personal-quiz"));
   $("#fq-title").textContent = d.name;
   $("#fq-desc").textContent = d.description;
   const optsEl = $("#fq-options");
@@ -509,6 +522,9 @@ function renderResults({ fromShare = false, staleVersion = null } = {}) {
     rEl.appendChild(renderRankingRow(r, i));
   });
   $("#results").classList.remove("hidden");
+  // Celebratory reveal: the results card slides in and the #1 match pulses.
+  animateIn($("#results"));
+  rEl.firstElementChild?.classList.add("celebrate");
 
   // Why-not panel: compare top match against runner-up on the issues
   // where the runner-up did better than the top match.
@@ -787,6 +803,30 @@ function escapeAttr(s) {
 
 function scrollToTop() {
   window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+}
+
+// Overall progress across both phases (policy questions + personal-fit dims).
+// Fill reflects the current step so the bar grows with each "Question N of M".
+function updateProgress() {
+  const total = state.questions.length + state.dimensions.length;
+  if (!total) return;
+  const step = state.phase === "personal" ? state.questions.length + state.fIdx : state.pIdx;
+  const pct = Math.round(((step + 1) / total) * 100);
+  $$(".progress-fill").forEach((el) => { el.style.width = `${pct}%`; });
+}
+
+// Re-trigger the enter animation on each render by clearing the class, forcing
+// a reflow, then re-adding it. CSS gates the actual motion (prefers-reduced-motion).
+function animateIn(el) {
+  if (!el) return;
+  el.classList.remove("anim-in");
+  void el.offsetWidth;
+  el.classList.add("anim-in");
+}
+
+// The quiz's own shareable URL — base page, no result hash.
+function quizShareUrl() {
+  return `${location.origin}${location.pathname}`;
 }
 
 // Render curated prose with inline markdown links: [label](https://…).

@@ -27,7 +27,7 @@ infra/
 | `GET` | `/dataset_v1.json` | Convenience alias for audit links |
 | `GET` | `/api/candidates` | Roster summary |
 | `GET` | `/api/issues` | All 25 issues with stance scales |
-| `GET` | `/api/questions` | Default 15-question quiz (ranked by differentiation) |
+| `GET` | `/api/questions` | Default 13-question quiz (ranked by differentiation) |
 | `GET` | `/api/personal-fit-dimensions` | 12 personal-fit dimensions |
 | `GET` | `/api/stats` | Aggregated D1 stats (used by `/stats`) |
 | `GET` | `/api/share-card.svg?c=...&p=...` | SVG share card |
@@ -84,11 +84,29 @@ URL=https://california-election.<subdomain>.workers.dev
 
 curl "$URL/api"                       # discovery
 curl "$URL/api/candidates" | jq .[0]  # one candidate
-curl "$URL/api/questions" | jq length # should be 15
+curl "$URL/api/questions" | jq length # should be 13
 curl "$URL/dataset_v1.json" | jq .version
 ```
 
 Then open `$URL` in a browser, take the quiz, verify a known persona (progressive → Steyer top match ~77%).
+
+## Completion notifications (ntfy)
+
+When someone finishes the quiz, the Worker can ping an [ntfy](https://ntfy.sh) topic with the
+top-match result. The message carries **no PII** — no session id, no IP, no answers — just the
+public top-match candidate name + policy-match %. It no-ops entirely when no topic is configured.
+
+```bash
+# Set the topic as a secret (it acts as a shared subscribe key — keep it out of wrangler.toml):
+npx wrangler secret put NTFY_TOPIC
+# → enter a hard-to-guess topic, e.g. ca-gov-quiz-<random>
+
+# Then subscribe on your phone/desktop (ntfy app) or:
+curl -s https://ntfy.sh/<your-topic>/json
+```
+
+Optional: set `NTFY_SERVER` (a plain var in `wrangler.toml`, default `https://ntfy.sh`) to point at
+a self-hosted ntfy instance.
 
 ## Reading flagged corrections
 

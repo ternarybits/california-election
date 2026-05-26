@@ -75,7 +75,7 @@ test.describe("Voter-guide context block", () => {
 
   test("every default-quiz question has a complete voter guide", async ({ request }) => {
     const qs = await request.get("/api/questions").then((r) => r.json());
-    expect(qs.length).toBe(15);
+    expect(qs.length).toBe(13);
     const required = ["current_policy", "key_facts", "comparison", "arguments_for_change", "arguments_against_change", "sources"];
     for (const q of qs) {
       expect(q.voter_guide, `${q.id} should have a voter_guide`).not.toBeNull();
