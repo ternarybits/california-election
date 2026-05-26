@@ -1955,7 +1955,17 @@
           "value": 5,
           "label": "Strongly prefer wealthy / self-funded (independent of donors)"
         }
-      ]
+      ],
+      "rank": 9,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.496,
+        "measure": "ordinal_std",
+        "std": 0.992,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
     },
     {
       "id": "conflict_orientation",
@@ -1983,7 +1993,17 @@
           "value": 5,
           "label": "Strongly prefer principled fighter / outspoken critic"
         }
-      ]
+      ],
+      "rank": 11,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.39,
+        "measure": "ordinal_std",
+        "std": 0.781,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
     },
     {
       "id": "federal_vs_state_focus",
@@ -2011,7 +2031,17 @@
           "value": 5,
           "label": "Strongly prefer willingness to confront the Trump administration"
         }
-      ]
+      ],
+      "rank": 8,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.556,
+        "measure": "ordinal_std",
+        "std": 1.111,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
     },
     {
       "id": "position_consistency",
@@ -2039,7 +2069,17 @@
           "value": 5,
           "label": "Strongly value candidates who update based on new information"
         }
-      ]
+      ],
+      "rank": 12,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.348,
+        "measure": "ordinal_std",
+        "std": 0.696,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
     },
     {
       "id": "integrity_record",
@@ -2067,7 +2107,17 @@
           "value": 5,
           "label": "Past controversies do not influence me"
         }
-      ]
+      ],
+      "rank": 10,
+      "default_quiz": false,
+      "differentiation": {
+        "score": 0.415,
+        "measure": "ordinal_std",
+        "std": 0.829,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
     },
     {
       "id": "electability",
@@ -2095,7 +2145,17 @@
           "value": 5,
           "label": "Does not factor in — I vote on alignment regardless of viability"
         }
-      ]
+      ],
+      "rank": 5,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.682,
+        "measure": "ordinal_std",
+        "std": 1.364,
+        "n_distinct": 4,
+        "n_resolved": 8,
+        "n_total": 8
+      }
     },
     {
       "id": "years_in_office_band",
@@ -2123,7 +2183,17 @@
           "value": 5,
           "label": "Strongly prefer extensive — 15+ years in elected office"
         }
-      ]
+      ],
+      "rank": 1,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.893,
+        "measure": "ordinal_std",
+        "std": 1.785,
+        "n_distinct": 3,
+        "n_resolved": 8,
+        "n_total": 8
+      }
     },
     {
       "id": "career_path",
@@ -2179,7 +2249,16 @@
           "id": "social_work",
           "label": "Social work / public service"
         }
-      ]
+      ],
+      "rank": 2,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.892,
+        "measure": "multiselect_jaccard",
+        "mean_pairwise_jaccard": 0.892,
+        "n_distinct_tags": 11,
+        "n_total": 8
+      }
     },
     {
       "id": "demographic_background",
@@ -2263,7 +2342,16 @@
           "id": "veteran",
           "label": "Veteran / military service"
         }
-      ]
+      ],
+      "rank": 7,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.677,
+        "measure": "multiselect_jaccard",
+        "mean_pairwise_jaccard": 0.677,
+        "n_distinct_tags": 9,
+        "n_total": 8
+      }
     },
     {
       "id": "geographic_background",
@@ -2299,7 +2387,16 @@
           "id": "central_coast",
           "label": "Central Coast"
         }
-      ]
+      ],
+      "rank": 4,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.714,
+        "measure": "multiselect_jaccard",
+        "mean_pairwise_jaccard": 0.714,
+        "n_distinct_tags": 3,
+        "n_total": 8
+      }
     },
     {
       "id": "age_band",
@@ -2323,7 +2420,16 @@
           "id": "silent",
           "label": "Silent Generation (born before 1946)"
         }
-      ]
+      ],
+      "rank": 6,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.679,
+        "measure": "multiselect_jaccard",
+        "mean_pairwise_jaccard": 0.679,
+        "n_distinct_tags": 3,
+        "n_total": 8
+      }
     },
     {
       "id": "endorsement_coalition",
@@ -2383,7 +2489,16 @@
           "id": "trump",
           "label": "Donald Trump / national Republican figures"
         }
-      ]
+      ],
+      "rank": 3,
+      "default_quiz": true,
+      "differentiation": {
+        "score": 0.805,
+        "measure": "multiselect_jaccard",
+        "mean_pairwise_jaccard": 0.805,
+        "n_distinct_tags": 11,
+        "n_total": 8
+      }
     }
   ],
   "positions": [

@@ -73,7 +73,14 @@ function handleListQuestions() {
 }
 
 function handleListPersonalFitDimensions() {
-  return json(DATASET.personal_fit_dimensions || []);
+  // Same differentiation-first rule as the policy quiz: only the dimensions
+  // flagged default_quiz (the ones that actually separate the field), in rank
+  // order. See scripts/score_personal_fit.mjs.
+  return json(
+    (DATASET.personal_fit_dimensions || [])
+      .filter((d) => d.default_quiz)
+      .sort((a, b) => a.rank - b.rank),
+  );
 }
 
 // ---------- D1-backed write endpoints ----------

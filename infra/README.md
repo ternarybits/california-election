@@ -28,7 +28,7 @@ infra/
 | `GET` | `/api/candidates` | Roster summary |
 | `GET` | `/api/issues` | All 25 issues with stance scales |
 | `GET` | `/api/questions` | Default 13-question quiz (ranked by differentiation) |
-| `GET` | `/api/personal-fit-dimensions` | 12 personal-fit dimensions |
+| `GET` | `/api/personal-fit-dimensions` | Default 7-dimension personal-fit phase (ranked by differentiation) |
 | `GET` | `/api/stats` | Aggregated D1 stats (used by `/stats`) |
 | `GET` | `/api/share-card.svg?c=...&p=...` | SVG share card |
 | `POST` | `/api/flag` | Submit a position correction → D1 `flags` |

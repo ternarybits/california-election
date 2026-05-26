@@ -31,9 +31,13 @@ test.describe("API endpoints", () => {
     }
   });
 
-  test("/api/personal-fit-dimensions returns 12 dimensions", async ({ request }) => {
+  test("/api/personal-fit-dimensions returns the 7 default-quiz dimensions in rank order", async ({ request }) => {
     const res = await request.get("/api/personal-fit-dimensions");
-    expect((await res.json())).toHaveLength(12);
+    const body = await res.json();
+    expect(body).toHaveLength(7);
+    for (let i = 0; i < body.length; i++) {
+      expect(body[i].rank).toBe(i + 1);
+    }
   });
 
   test("/api/dataset has 200 positions", async ({ request }) => {

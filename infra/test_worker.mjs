@@ -83,9 +83,10 @@ const questions = await call("GET", "/api/questions");
 console.log(`✓ /api/questions returned ${questions.body.length} questions (expected 13)`);
 if (questions.body.length !== 13) throw new Error("question count");
 
+const expectedDims = dataset.personal_fit_dimensions.filter((d) => d.default_quiz).length;
 const dims = await call("GET", "/api/personal-fit-dimensions");
-console.log(`✓ /api/personal-fit-dimensions returned ${dims.body.length} dimensions (expected 12)`);
-if (dims.body.length !== 12) throw new Error("dimension count");
+console.log(`✓ /api/personal-fit-dimensions returned ${dims.body.length} dimensions (expected ${expectedDims})`);
+if (dims.body.length !== expectedDims) throw new Error("dimension count");
 
 const ds = await call("GET", "/api/dataset");
 console.log(`✓ /api/dataset returned ${ds.body.positions.length} positions (expected 200)`);

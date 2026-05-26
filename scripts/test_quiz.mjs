@@ -55,16 +55,17 @@ const candidates = await call("GET", "/api/candidates");
 const full = await call("GET", "/api/dataset");
 
 // Expected quiz length is whatever the dataset flags default_quiz — don't
-// hardcode it, so trimming the quiz doesn't silently break this test.
+// hardcode it, so trimming the quiz/personal-fit set doesn't silently break this test.
 const expectedQuestions = full.questions.filter((q) => q.default_quiz).length;
+const expectedDims = full.personal_fit_dimensions.filter((d) => d.default_quiz).length;
 
 console.log(`✓ /api/questions returned ${questions.length} questions (expected ${expectedQuestions})`);
-console.log(`✓ /api/personal-fit-dimensions returned ${dims.length} dimensions (expected 12)`);
+console.log(`✓ /api/personal-fit-dimensions returned ${dims.length} dimensions (expected ${expectedDims})`);
 console.log(`✓ /api/candidates returned ${candidates.length} candidates (expected 8)`);
 console.log(`✓ /api/dataset returned ${full.positions.length} positions (expected 200)`);
 
 if (questions.length !== expectedQuestions) throw new Error(`expected ${expectedQuestions} questions`);
-if (dims.length !== 12) throw new Error("expected 12 dimensions");
+if (dims.length !== expectedDims) throw new Error(`expected ${expectedDims} dimensions`);
 if (candidates.length !== 8) throw new Error("expected 8 candidates");
 
 // 2) Simulate a progressive-leaning user
