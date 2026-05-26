@@ -4,7 +4,7 @@ import { test, expect } from "./fixtures";
 // - Each question has a "Go deeper" box (#pq-ask-ai) with a question input +
 //   ChatGPT/Claude/Copy actions. Clicking builds a prompt (with the typed
 //   question + a link to the topic page) and opens the user's own AI in a new tab.
-// - We stub window.open to capture the URL and intercept /api/event so the test
+// - We stub window.open to capture the URL and intercept /api/tally so the test
 //   never opens a real tab or writes to prod D1.
 
 test.describe("Ask-AI hand-off on a quiz question", () => {
@@ -14,7 +14,7 @@ test.describe("Ask-AI hand-off on a quiz question", () => {
     const qId = qs[0].id;
 
     // Don't write analytics to D1, and capture window.open targets in-page.
-    await page.route("**/api/event", (route) => route.fulfill({ status: 200, body: '{"ok":true}' }));
+    await page.route("**/api/tally", (route) => route.fulfill({ status: 200, body: '{"ok":true}' }));
     await page.addInitScript(() => {
       (window as any).__opened = [];
       window.open = ((url: string) => { (window as any).__opened.push(url); return null; }) as any;
@@ -50,7 +50,7 @@ test.describe("Ask-AI hand-off on a quiz question", () => {
   });
 
   test("blank question produces the generic 'help me understand' prompt", async ({ page }) => {
-    await page.route("**/api/event", (route) => route.fulfill({ status: 200, body: '{"ok":true}' }));
+    await page.route("**/api/tally", (route) => route.fulfill({ status: 200, body: '{"ok":true}' }));
     await page.addInitScript(() => {
       (window as any).__opened = [];
       window.open = ((url: string) => { (window as any).__opened.push(url); return null; }) as any;
@@ -72,7 +72,7 @@ test.describe("Ask-AI hand-off on a quiz question", () => {
   test("Copy prompt writes to the clipboard and confirms", async ({ page, context, browserName }) => {
     test.skip(browserName !== "chromium", "clipboard permissions are chromium-specific here");
     await context.grantPermissions(["clipboard-read", "clipboard-write"]);
-    await page.route("**/api/event", (route) => route.fulfill({ status: 200, body: '{"ok":true}' }));
+    await page.route("**/api/tally", (route) => route.fulfill({ status: 200, body: '{"ok":true}' }));
 
     await page.goto("/");
     await page.getByRole("button", { name: /start the quiz/i }).click();

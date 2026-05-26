@@ -68,8 +68,8 @@ test.describe("API endpoints", () => {
     expect(res.status()).toBe(400);
   });
 
-  test("/api/event rejects an unknown kind", async ({ request }) => {
-    const bad = await request.post("/api/event", { data: { kind: "nope", session_id: "playwright-test" } });
+  test("/api/tally rejects an unknown kind", async ({ request }) => {
+    const bad = await request.post("/api/tally", { data: { kind: "nope", session_id: "playwright-test" } });
     expect(bad.status()).toBe(400);
   });
 
@@ -102,9 +102,9 @@ test.describe("API write endpoints (local-only)", () => {
     expect((await res.json()).ok).toBe(true);
   });
 
-  test("/api/event accepts all 4 kinds", async ({ request }) => {
+  test("/api/tally accepts all 4 kinds", async ({ request }) => {
     for (const kind of ["quiz_start", "policy_answer", "personal_answer", "quiz_complete"]) {
-      const res = await request.post("/api/event", { data: { kind, session_id: "playwright-local-test" } });
+      const res = await request.post("/api/tally", { data: { kind, session_id: "playwright-local-test" } });
       expect(res.status()).toBe(200);
     }
   });

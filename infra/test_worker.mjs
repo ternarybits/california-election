@@ -114,17 +114,17 @@ if (!d1Inserts.find((i) => i.sql.startsWith("INSERT INTO flags"))) {
 }
 console.log(`✓ POST /api/flag persisted (D1 args: ${JSON.stringify(d1Inserts.at(-1).args)})`);
 
-// 5) POST /api/event with each kind
+// 5) POST /api/tally with each kind
 for (const kind of ["quiz_start", "policy_answer", "personal_answer", "quiz_complete", "chat_opened"]) {
-  const e = await call("POST", "/api/event", { kind, session_id: "test123" });
+  const e = await call("POST", "/api/tally", { kind, session_id: "test123" });
   if (e.status !== 200) throw new Error(`event ${kind} failed: ${e.status}`);
 }
-console.log(`✓ POST /api/event accepts all 5 event kinds`);
+console.log(`✓ POST /api/tally accepts all 5 event kinds`);
 
 // 5a) chat_opened captures the user's question in `detail`, trimmed and capped at 500 chars.
 d1Inserts.length = 0;
 const longQuestion = "x".repeat(900);
-const chat = await call("POST", "/api/event", {
+const chat = await call("POST", "/api/tally", {
   kind: "chat_opened",
   session_id: "test123",
   issue_id: "housing_supply",
@@ -137,19 +137,19 @@ const detailArg = chatInsert.args[8];
 if (typeof detailArg !== "string" || detailArg.length !== 500 || detailArg.startsWith(" ")) {
   throw new Error(`detail should be trimmed and capped to 500 chars; got len=${detailArg?.length}`);
 }
-console.log(`✓ POST /api/event chat_opened trims + caps the question to 500 chars`);
+console.log(`✓ POST /api/tally chat_opened trims + caps the question to 500 chars`);
 
 // 5b) Blank/whitespace detail coerces to null.
 d1Inserts.length = 0;
-await call("POST", "/api/event", { kind: "chat_opened", session_id: "test123", detail: "   " });
+await call("POST", "/api/tally", { kind: "chat_opened", session_id: "test123", detail: "   " });
 const blankInsert = d1Inserts.find((i) => i.sql.includes("INSERT INTO events"));
 if (blankInsert.args[8] !== null) throw new Error("blank detail should bind null");
-console.log(`✓ POST /api/event coerces blank chat detail to null`);
+console.log(`✓ POST /api/tally coerces blank chat detail to null`);
 
 // 5c) Bad optional-field values are coerced to null (not bound as NaN / non-string),
 // so the fire-and-forget analytics insert never 500s on malformed input.
 d1Inserts.length = 0;
-const coerce = await call("POST", "/api/event", {
+const coerce = await call("POST", "/api/tally", {
   kind: "policy_answer",
   session_id: "test123",
   issue_id: { not: "a string" },   // non-string → null
@@ -164,7 +164,7 @@ const [, , issueArg, , stanceArg, , , matchArg] = eventInsert.args;
 if (issueArg !== null || stanceArg !== null || matchArg !== null) {
   throw new Error(`bad fields should coerce to null; got issue=${JSON.stringify(issueArg)} stance=${JSON.stringify(stanceArg)} match=${JSON.stringify(matchArg)}`);
 }
-console.log(`✓ POST /api/event coerces non-string / non-finite optional fields to null`);
+console.log(`✓ POST /api/tally coerces non-string / non-finite optional fields to null`);
 
 // 6) Validation: bad flag body returns 400
 const badFlag = await call("POST", "/api/flag", { candidate_id: "x" });
@@ -172,9 +172,9 @@ if (badFlag.status !== 400) throw new Error("missing issue_id should 400");
 console.log(`✓ /api/flag validates required fields`);
 
 // 7) Validation: bad event kind returns 400
-const badEvent = await call("POST", "/api/event", { kind: "junk", session_id: "abc" });
+const badEvent = await call("POST", "/api/tally", { kind: "junk", session_id: "abc" });
 if (badEvent.status !== 400) throw new Error("invalid kind should 400");
-console.log(`✓ /api/event validates kind enum`);
+console.log(`✓ /api/tally validates kind enum`);
 
 // 8) Static asset fallback
 const staticReq = await call("GET", "/index.html");
@@ -219,7 +219,7 @@ console.log(`✓ GET /topic/:id 404s on malformed percent-encoding`);
   const topCandidate = dataset.candidates[0];
 
   const ntfyEnv = { ...env, NTFY_TOPIC: "topic-abc", NTFY_SERVER: "https://ntfy.example" };
-  const req = new Request("http://x/api/event", {
+  const req = new Request("http://x/api/tally", {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ kind: "quiz_complete", session_id: "sess-PRIVATE", candidate_id: topCandidate.id, match_pct: 87 }),
@@ -236,7 +236,7 @@ console.log(`✓ GET /topic/:id 404s on malformed percent-encoding`);
 
   fetchCalls.length = 0;
   waited.length = 0;
-  const reqNoTopic = new Request("http://x/api/event", {
+  const reqNoTopic = new Request("http://x/api/tally", {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ kind: "quiz_complete", session_id: "s", candidate_id: topCandidate.id, match_pct: 50 }),
@@ -249,7 +249,7 @@ console.log(`✓ GET /topic/:id 404s on malformed percent-encoding`);
   // Without a ctx (no execution context) the notify still fires via the detached
   // fallback path, and the request still 200s. Microtask flush lets it land.
   fetchCalls.length = 0;
-  const reqNoCtx = new Request("http://x/api/event", {
+  const reqNoCtx = new Request("http://x/api/tally", {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ kind: "quiz_complete", session_id: "s", candidate_id: topCandidate.id, match_pct: 60 }),

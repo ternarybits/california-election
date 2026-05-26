@@ -363,7 +363,7 @@ infra/
 - [x] **Migrated to Cloudflare Worker** — `infra/` with wrangler.toml, D1 schema, deploy
 - [x] Receipts (source links + verbatim quotes) on every position in the result row ("see why")
 - [x] Per-position "flag this" button → POST `/api/flag` → D1 → manual sweep into GitHub Issues
-- [x] Aggregate analytics: anonymized response counts → POST `/api/event` → D1; in-UI disclosure
+- [x] Aggregate analytics: anonymized response counts → POST `/api/tally` (not `/api/event`, which content blockers drop) → D1; in-UI disclosure
 - [x] Share-link encoding (answers in URL hash; client-side replay)
 - [x] Back-navigation through questions (scrolls to top on every move)
 - [x] Plain-language prompts + options for the average voter

@@ -501,13 +501,15 @@ async function handleGetStats(env) {
     ).all(),
   ]);
 
+  // Live counter — never let a browser or proxy serve a stale snapshot, so a
+  // freshly-completed quiz always shows up on reload.
   return json({
     dataset_version: DATASET.version,
     snapshot_date: DATASET.snapshot_date,
     completes: completes?.n ?? 0,
     by_issue_stance: byIssue?.results ?? [],
     top_candidate_share: byTopCandidate?.results ?? [],
-  });
+  }, { headers: { "cache-control": "no-store" } });
 }
 
 // ---------- Router ----------
@@ -525,7 +527,7 @@ export default {
     if (method === "GET" && path === "/api/questions") return handleListQuestions();
     if (method === "GET" && path === "/api/personal-fit-dimensions") return handleListPersonalFitDimensions();
     if (method === "POST" && path === "/api/flag") return handlePostFlag(request, env);
-    if (method === "POST" && path === "/api/event") return handlePostEvent(request, env, ctx);
+    if (method === "POST" && path === "/api/tally") return handlePostEvent(request, env, ctx);
     if (method === "GET" && path === "/api/stats") return handleGetStats(env);
     if (method === "GET" && path === "/api/share-card.svg") return handleShareCard(url, request);
 
@@ -558,7 +560,7 @@ export default {
           "GET  /api/share-card.svg?c=:candidate_id&p=:pct",
           "GET  /topic/:issue_id",
           "POST /api/flag",
-          "POST /api/event",
+          "POST /api/tally",
         ],
       });
     }

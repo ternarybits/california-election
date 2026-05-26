@@ -32,7 +32,7 @@ infra/
 | `GET` | `/api/stats` | Aggregated D1 stats (used by `/stats`) |
 | `GET` | `/api/share-card.svg?c=...&p=...` | SVG share card |
 | `POST` | `/api/flag` | Submit a position correction → D1 `flags` |
-| `POST` | `/api/event` | Anonymized quiz event → D1 `events` |
+| `POST` | `/api/tally` | Anonymized quiz event → D1 `events` (named to dodge content blockers, not `/api/event`) |
 
 ## Local smoke test
 

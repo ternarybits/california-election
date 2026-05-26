@@ -46,7 +46,10 @@ function newSessionId() {
 function emitEvent(kind, extra = {}) {
   if (!state.sessionId) return;
   // Fire-and-forget; never block the UI on analytics.
-  fetch(`${API}/api/event`, {
+  // NOTE: the path is /api/tally, not /api/event — "/api/event" is Plausible's
+  // signature and is on uBlock/EasyPrivacy blocklists, so content blockers were
+  // silently dropping every completion. Don't rename this back to /api/event.
+  fetch(`${API}/api/tally`, {
     method: "POST",
     headers: { "content-type": "application/json" },
     keepalive: true,
