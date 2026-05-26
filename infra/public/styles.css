@@ -58,10 +58,16 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Display headings in an editorial serif; body and small labels stay in Inter. */
+h1, h2 {
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em;
 }
 
 .container {

@@ -394,7 +394,8 @@ function handleTopicPage(issueId) {
 
   const docTitle = `${issue.name} — CA 2026 Governor Primary`;
   const desc = issue.short_description ?? "Where the 2026 California governor candidates stand.";
-  const FONT = "-apple-system, system-ui, sans-serif";
+  const FONT = "'Inter', -apple-system, system-ui, sans-serif";
+  const SERIF = "'Newsreader', Georgia, 'Times New Roman', serif";
 
   const html = `<!doctype html>
 <html lang="en">
@@ -407,6 +408,9 @@ function handleTopicPage(issueId) {
 <meta property="og:description" content="${escapeSvg(desc)}">
 <meta name="twitter:card" content="summary">
 <script src="/theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#0f1115; --panel:#161a22; --panel-2:#1d2230; --border:#262c39; --text:#e7ecf3;
           --muted:#97a3b6; --accent:#f7c948; --accent-2:#5b9cf5; --accent-3:#6ed29b; color-scheme:dark; }
@@ -423,9 +427,9 @@ function handleTopicPage(issueId) {
   :root[data-theme="light"] .theme-toggle .icon-sun { display:none; }
   .wrap { max-width:760px; margin:0 auto; padding:32px 20px 64px; }
   .kicker { color:var(--muted); font-size:.85rem; text-transform:uppercase; letter-spacing:.04em; }
-  h1 { font-size:1.9rem; margin:.2em 0 .1em; }
+  h1 { font-size:1.9rem; margin:.2em 0 .1em; font-family:${SERIF}; letter-spacing:-0.01em; }
   .lede { color:var(--muted); font-size:1.05rem; margin-top:0; }
-  h2 { font-size:1.15rem; margin:1.8em 0 .4em; color:var(--accent-2); }
+  h2 { font-size:1.15rem; margin:1.8em 0 .4em; color:var(--accent-2); font-family:${SERIF}; }
   h3 { font-size:1rem; margin:.2em 0; }
   section { border-top:1px solid var(--border); padding-top:.2em; }
   .cols { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
