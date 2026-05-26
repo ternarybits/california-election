@@ -45,6 +45,15 @@
 :root[data-theme="light"] .vg-note { background: #fdf7e8; }
 :root[data-theme="light"] .vg-more > summary { background: #eef2f8; }
 :root[data-theme="light"] .option { background: #f1f4fa; }
+/* Results screen: the candidate rows and receipt boxes use var(--bg)/--panel-2,
+   which now tracks the deeper page color — brighten them so they read as panels
+   inside the white card, and carry the same semantic green/amber onto the
+   agreed/disagreed receipts. */
+:root[data-theme="light"] #ranking li { background: #f4f7fc; }
+:root[data-theme="light"] .receipt-agreements .receipt-item { background: #edf7f0; }
+:root[data-theme="light"] .receipt-disagreements .receipt-item { background: #fdf3eb; }
+:root[data-theme="light"] .why-not { background: #eef3fb; }
+:root[data-theme="light"] .what-if { background: #f4f7fc; }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
