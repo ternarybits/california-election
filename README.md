@@ -4,14 +4,6 @@ A shareable web experience that helps Californians discover which candidate in t
 
 **Status:** Live at **<https://california-election.tedmao.workers.dev>** (Cloudflare Workers + D1). See [`PLAN.md`](./PLAN.md) for the design document.
 
-| Surface | Path | Status |
-|---|---|---|
-| Open dataset (v1) | [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) | 8 candidates × 25 issues = 200 positions, 190 cited from primary sources (10 honest unknowns); questions ranked by differentiation score |
-| Web quiz (Cloudflare) | [`infra/`](./infra/) | Live at <https://california-election.tedmao.workers.dev> — Worker + static assets + D1. Update with `cd infra && npm run deploy` (see [`infra/README.md`](./infra/README.md)) |
-| MCP server (stdio) | [`mcp/`](./mcp/) | 7 tools, smoke test passes. Install instructions for Claude Desktop and Cursor in [`mcp/README.md`](./mcp/README.md) |
-| Launch materials | [`press/`](./press/) | Draft thread + Substack note; tighten on launch day |
-| Legacy Buildy spike | [`legacy/buildy/`](./legacy/buildy/) | Original platform; archived after deployed app outgrew Buildy's size limits |
-
 ## What is this?
 
 A non-partisan way to find which candidate in California's June 2026 governor primary you actually line up with — and exactly why. A few things set it apart from the usual candidate quiz:
@@ -54,6 +46,16 @@ AI runs through both the *making* of this and the product itself. The first vers
 ## Target
 
 Live ahead of the **June 2, 2026 California gubernatorial primary**.
+
+## Repository layout
+
+| Surface | Path | Status |
+|---|---|---|
+| Open dataset (v1) | [`dataset/dataset_v1.json`](./dataset/dataset_v1.json) | 8 candidates × 25 issues = 200 positions, 190 cited from primary sources (10 honest unknowns); questions ranked by differentiation score |
+| Web quiz (Cloudflare) | [`infra/`](./infra/) | Live at <https://california-election.tedmao.workers.dev> — Worker + static assets + D1. Update with `cd infra && npm run deploy` (see [`infra/README.md`](./infra/README.md)) |
+| MCP server (stdio) | [`mcp/`](./mcp/) | 7 tools, smoke test passes. Install instructions for Claude Desktop and Cursor in [`mcp/README.md`](./mcp/README.md) |
+| Launch materials | [`press/`](./press/) | Draft thread + Substack note; tighten on launch day |
+| Legacy Buildy spike | [`legacy/buildy/`](./legacy/buildy/) | Original platform; archived after deployed app outgrew Buildy's size limits |
 
 ## Quick start (local)
 
