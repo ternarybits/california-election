@@ -23,7 +23,8 @@ const FIELD_MAP = {
 };
 
 const state = {
-  candidates: [],
+  candidates: [],      // localized view (overlay merged onto candidatesRaw)
+  candidatesRaw: [],   // English candidates from /api/candidates (source of truth)
   questionsRaw: [],    // English questions from /api/questions (source of truth)
   dimensionsRaw: [],   // English personal-fit dimensions
   issuesRaw: [],       // English issues from /api/dataset
@@ -78,7 +79,7 @@ async function boot() {
     if (![candidatesRes, questionsRes, dimensionsRes, datasetRes].every((r) => r.ok)) {
       throw new Error("API error");
     }
-    state.candidates = await candidatesRes.json();
+    state.candidatesRaw = await candidatesRes.json();
     state.questionsRaw = await questionsRes.json();
     state.dimensionsRaw = await dimensionsRes.json();
     const dataset = await datasetRes.json();
@@ -170,9 +171,21 @@ function localizeDataset() {
   const overlay = (window.DATASET_I18N && window.DATASET_I18N[I18N.lang]) || null;
   const qOv = (overlay && overlay.questions) || {};
   const dOv = (overlay && overlay.dimensions) || {};
+  const cOv = (overlay && overlay.candidates) || {};
+  state.candidates = (state.candidatesRaw || []).map((c) => localizeCandidate(c, cOv[c.id]));
   state.questions = (state.questionsRaw || []).map((q) => localizeIssueLike(q, qOv[q.id]));
   state.dimensions = (state.dimensionsRaw || []).map((d) => localizeDimension(d, dOv[d.id]));
   state.issuesById = new Map((state.issuesRaw || []).map((i) => [i.id, localizeIssueLike(i, qOv[i.id])]));
+}
+
+// Candidate names stay English (proper nouns, like citations); only the party
+// label and the bio_short blurb carry an overlay.
+function localizeCandidate(c, ov) {
+  if (!ov) return c;
+  const out = { ...c };
+  if (ov.party) out.party = ov.party;
+  if (ov.bio_short) out.bio_short = ov.bio_short;
+  return out;
 }
 
 function localizeIssueLike(obj, ov) {

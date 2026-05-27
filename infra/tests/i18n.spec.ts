@@ -100,6 +100,49 @@ test.describe("Language selector", () => {
     await context.close();
   });
 
+  test("localizes candidate party + bio on results, but keeps names in English", async ({ page }) => {
+    test.setTimeout(60_000);
+    const policyCount = (await (await page.request.get("/api/questions")).json()).length;
+
+    await page.goto("/");
+    await page.getByRole("button", { name: /start the quiz/i }).click();
+    await expect(page.locator("#policy-quiz")).toBeVisible();
+    for (let i = 0; i < policyCount; i++) {
+      const opt5 = page.locator("#pq-options input[value='5']");
+      if ((await opt5.count()) > 0) await opt5.check();
+      else await page.locator("#pq-options input[type='radio']").last().check();
+      await page.locator("#pq-importance").fill("2");
+      await page.locator("#pq-next").click();
+    }
+    await expect(page.locator("#personal-quiz")).toBeVisible();
+    for (let i = 0; i < 30; i++) {
+      if (await page.locator("#personal-quiz").isVisible()) await page.locator("#fq-skip").click();
+      else break;
+    }
+    await expect(page.locator("#results")).toBeVisible();
+
+    const topRow = page.locator("#ranking > li").first();
+    const enName = (await topRow.locator(".result-name strong").textContent())?.trim() ?? "";
+    const enParty = (await topRow.locator(".result-name .muted").textContent())?.trim() ?? "";
+    const enBio = (await topRow.locator("p.muted.small").first().textContent())?.trim() ?? "";
+    expect(enName.length).toBeGreaterThan(0);
+    expect(enParty).toContain("Democratic"); // progressive persona → Tom Steyer (D)
+
+    // Switch to Spanish: results re-render (rerender → buildRanking on localized
+    // candidates). Party + bio localize; the candidate name stays English.
+    await page.locator("#lang-select").selectOption("es");
+    await expect(page.locator("#results")).toBeVisible();
+    const esName = (await topRow.locator(".result-name strong").textContent())?.trim() ?? "";
+    const esParty = (await topRow.locator(".result-name .muted").textContent())?.trim() ?? "";
+    const esBio = (await topRow.locator("p.muted.small").first().textContent())?.trim() ?? "";
+
+    expect(esName).toBe(enName); // proper noun — not translated
+    expect(esParty).not.toBe(enParty); // "(Democratic)" → "(Demócrata)"
+    expect(esParty).toContain("Demócrata");
+    expect(esBio).not.toBe(enBio); // bio_short is translated
+    expect(esBio.length).toBeGreaterThan(0);
+  });
+
   test("falls back to English for an unsupported browser locale", async ({ browser }) => {
     const context = await browser.newContext({ locale: "de-DE" });
     const page = await context.newPage();

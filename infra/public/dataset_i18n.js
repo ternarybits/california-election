@@ -2248,3 +2248,177 @@ DATASET_I18N.ko = {
   }
 };
 
+
+// ---------- Candidate overlays (party + bio_short) ----------
+// Candidate *names* are intentionally NOT translated (proper nouns), matching
+// the citations-stay-English rule; only party label + bio_short are localized.
+DATASET_I18N.es.candidates = {
+  "hilton": {
+    "party": "Republicano",
+    "bio_short": "Colaborador de Fox News; expresentador de The Next Revolution (2017–2023); exasesor sénior del primer ministro británico David Cameron. Respaldado por Donald Trump (2026-04-06)."
+  },
+  "steyer": {
+    "party": "Demócrata",
+    "bio_short": "Inversionista multimillonario, activista ambiental y candidato presidencial en 2020; fundador de Farallon Capital y NextGen America. Su campaña se financia en gran parte con fondos propios."
+  },
+  "bianco": {
+    "party": "Republicano",
+    "bio_short": "Sheriff del condado de Riverside desde 2018; con 26 años de servicio en el Departamento del Sheriff del condado de Riverside."
+  },
+  "becerra": {
+    "party": "Demócrata",
+    "bio_short": "Exsecretario de Salud y Servicios Humanos de EE. UU. (2021–2025); exfiscal general de California (2017–2021); exrepresentante de EE. UU. (1993–2017)."
+  },
+  "porter": {
+    "party": "Demócrata",
+    "bio_short": "Exrepresentante de EE. UU. por CA-47 (antes CA-45), 2019–2025; profesora de derecho en UC Irvine; reconocida a nivel nacional por sus explicaciones con pizarra en las audiencias de comités."
+  },
+  "mahan": {
+    "party": "Demócrata",
+    "bio_short": "Alcalde de San José desde 2022; exconcejal de la ciudad de San José; exejecutivo tecnológico; demócrata moderado enfocado en la respuesta a la falta de vivienda y el costo de vida."
+  },
+  "villaraigosa": {
+    "party": "Demócrata",
+    "bio_short": "Exalcalde de Los Angeles (2005–2013); expresidente de la Asamblea Estatal de California (1998–2000). Se postuló anteriormente para gobernador en 2018."
+  },
+  "thurmond": {
+    "party": "Demócrata",
+    "bio_short": "Superintendente de Instrucción Pública de California desde 2019; exmiembro de la Asamblea Estatal (Richmond / Contra Costa); extrabajador social."
+  }
+};
+DATASET_I18N.zh.candidates = {
+  "hilton": {
+    "party": "共和党",
+    "bio_short": "Fox News 撰稿人；曾任 The Next Revolution 节目主持人（2017–2023）；曾任英国首相 David Cameron 的高级顾问。获 Donald Trump 背书（2026-04-06）。"
+  },
+  "steyer": {
+    "party": "民主党",
+    "bio_short": "亿万富翁投资者、环保活动人士及 2020 年总统候选人；Farallon Capital 和 NextGen America 的创始人。竞选活动主要为自筹资金。"
+  },
+  "bianco": {
+    "party": "共和党",
+    "bio_short": "自 2018 年起任 Riverside County 警长；在 Riverside County Sheriff's Department 服务长达 26 年。"
+  },
+  "becerra": {
+    "party": "民主党",
+    "bio_short": "前美国卫生与公众服务部部长（2021–2025）；前加利福尼亚州总检察长（2017–2021）；前美国众议员（1993–2017）。"
+  },
+  "porter": {
+    "party": "民主党",
+    "bio_short": "前 CA-47 选区（此前为 CA-45）美国众议员，2019–2025 年在任；UC Irvine 法学教授；以在委员会听证会上用白板讲解而闻名全国。"
+  },
+  "mahan": {
+    "party": "民主党",
+    "bio_short": "自 2022 年起任 San José 市长；前 San José 市议会议员；前科技公司高管；专注于无家可归问题应对和生活成本的温和派民主党人。"
+  },
+  "villaraigosa": {
+    "party": "民主党",
+    "bio_short": "前 Los Angeles 市长（2005–2013）；前加利福尼亚州议会议长（1998–2000）。曾于 2018 年竞选州长。"
+  },
+  "thurmond": {
+    "party": "民主党",
+    "bio_short": "自 2019 年起任加利福尼亚州公共教育总监；前州议会议员（Richmond / Contra Costa）；前社会工作者。"
+  }
+};
+DATASET_I18N.vi.candidates = {
+  "hilton": {
+    "party": "Đảng Cộng hòa",
+    "bio_short": "Cộng tác viên của Fox News; cựu người dẫn chương trình The Next Revolution (2017–2023); cựu cố vấn cấp cao cho Thủ tướng Anh David Cameron. Được Donald Trump ủng hộ (2026-04-06)."
+  },
+  "steyer": {
+    "party": "Đảng Dân chủ",
+    "bio_short": "Nhà đầu tư tỷ phú, nhà hoạt động môi trường, và ứng cử viên tổng thống năm 2020; người sáng lập Farallon Capital và NextGen America. Chiến dịch tranh cử phần lớn do ông tự tài trợ."
+  },
+  "bianco": {
+    "party": "Đảng Cộng hòa",
+    "bio_short": "Cảnh sát trưởng của Riverside County từ năm 2018; 26 năm công tác tại Sở Cảnh sát Riverside County."
+  },
+  "becerra": {
+    "party": "Đảng Dân chủ",
+    "bio_short": "Cựu Bộ trưởng Y tế và Dịch vụ Nhân sinh Hoa Kỳ (2021–2025); cựu Bộ trưởng Tư pháp California (2017–2021); cựu Dân biểu Hoa Kỳ (1993–2017)."
+  },
+  "porter": {
+    "party": "Đảng Dân chủ",
+    "bio_short": "Cựu Dân biểu Hoa Kỳ đại diện cho CA-47 (trước đây là CA-45), 2019–2025; giáo sư luật tại UC Irvine; được biết đến trên toàn quốc qua các phần giải thích bằng bảng trắng tại các phiên điều trần của ủy ban."
+  },
+  "mahan": {
+    "party": "Đảng Dân chủ",
+    "bio_short": "Thị trưởng San José từ năm 2022; cựu thành viên Hội đồng Thành phố San José; cựu giám đốc điều hành công nghệ; đảng viên Dân chủ ôn hòa tập trung vào việc ứng phó với tình trạng vô gia cư và chi phí sinh hoạt."
+  },
+  "villaraigosa": {
+    "party": "Đảng Dân chủ",
+    "bio_short": "Cựu Thị trưởng Los Angeles (2005–2013); cựu Chủ tịch Hạ viện Tiểu bang California (1998–2000). Trước đây từng tranh cử thống đốc vào năm 2018."
+  },
+  "thurmond": {
+    "party": "Đảng Dân chủ",
+    "bio_short": "Tổng Giám đốc Giáo dục Công California từ năm 2019; cựu Dân biểu Hạ viện Tiểu bang (Richmond / Contra Costa); cựu nhân viên công tác xã hội."
+  }
+};
+DATASET_I18N.tl.candidates = {
+  "hilton": {
+    "party": "Republikano",
+    "bio_short": "Kontribyutor sa Fox News; dating host ng The Next Revolution (2017–2023); dating senior adviser kay UK PM David Cameron. Inendorso ni Donald Trump (2026-04-06)."
+  },
+  "steyer": {
+    "party": "Demokratiko",
+    "bio_short": "Bilyonaryong investor, aktibista para sa kapaligiran, at kandidato sa pagkapangulo noong 2020; tagapagtatag ng Farallon Capital at NextGen America. Ang kampanya ay halos sariling-pondo."
+  },
+  "bianco": {
+    "party": "Republikano",
+    "bio_short": "Sheriff ng Riverside County mula 2018; 26-taóng beterano ng Riverside County Sheriff's Department."
+  },
+  "becerra": {
+    "party": "Demokratiko",
+    "bio_short": "Dating U.S. Secretary of Health and Human Services (2021–2025); dating Attorney General of California (2017–2021); dating U.S. Representative (1993–2017)."
+  },
+  "porter": {
+    "party": "Demokratiko",
+    "bio_short": "Dating U.S. Representative para sa CA-47 (dating CA-45), 2019–2025; propesor ng batas sa UC Irvine; kilala sa buong bansa dahil sa mga paliwanag gamit ang whiteboard sa mga committee hearing."
+  },
+  "mahan": {
+    "party": "Demokratiko",
+    "bio_short": "Mayor ng San José mula 2022; dating miyembro ng San José City Council; dating tech executive; moderatong Demokrata na nakatuon sa pagtugon sa kawalan ng tahanan at sa halaga ng pamumuhay."
+  },
+  "villaraigosa": {
+    "party": "Demokratiko",
+    "bio_short": "Dating Mayor ng Los Angeles (2005–2013); dating Speaker ng California State Assembly (1998–2000). Dating tumakbo bilang gobernador noong 2018."
+  },
+  "thurmond": {
+    "party": "Demokratiko",
+    "bio_short": "California Superintendent of Public Instruction mula 2019; dating State Assemblymember (Richmond / Contra Costa); dating social worker."
+  }
+};
+DATASET_I18N.ko.candidates = {
+  "hilton": {
+    "party": "공화당",
+    "bio_short": "Fox News 객원 논평가; The Next Revolution 진행자 역임(2017–2023); 영국 총리 David Cameron의 선임 보좌관 역임. Donald Trump의 지지를 받음(2026-04-06)."
+  },
+  "steyer": {
+    "party": "민주당",
+    "bio_short": "억만장자 투자자, 환경 운동가이자 2020년 대선 후보; Farallon Capital 및 NextGen America 설립자. 선거 운동은 대부분 자가 자금으로 충당."
+  },
+  "bianco": {
+    "party": "공화당",
+    "bio_short": "2018년부터 Riverside County 보안관(Sheriff); Riverside County 보안관서 26년 경력의 베테랑."
+  },
+  "becerra": {
+    "party": "민주당",
+    "bio_short": "미국 보건복지부 장관 역임(2021–2025); 캘리포니아주 법무장관 역임(2017–2021); 미국 연방 하원의원 역임(1993–2017)."
+  },
+  "porter": {
+    "party": "민주당",
+    "bio_short": "CA-47(이전 CA-45) 미국 연방 하원의원 역임, 2019–2025; UC Irvine 법학 교수; 위원회 청문회에서의 화이트보드 설명으로 전국적으로 알려짐."
+  },
+  "mahan": {
+    "party": "민주당",
+    "bio_short": "2022년부터 San José 시장; San José 시의회 의원 역임; 테크 기업 임원 출신; 노숙 문제 대응과 생활비 문제에 집중하는 중도 성향 민주당원."
+  },
+  "villaraigosa": {
+    "party": "민주당",
+    "bio_short": "Los Angeles 시장 역임(2005–2013); 캘리포니아 주의회 의장 역임(1998–2000). 2018년 주지사 선거에 출마한 바 있음."
+  },
+  "thurmond": {
+    "party": "민주당",
+    "bio_short": "2019년부터 캘리포니아주 교육감(Superintendent of Public Instruction); 주의회 의원 역임(Richmond / Contra Costa); 사회복지사 출신."
+  }
+};
