@@ -96,6 +96,8 @@ test.describe("API endpoints", () => {
     expect(body).toHaveProperty("completes");
     expect(body).toHaveProperty("by_issue_stance");
     expect(body).toHaveProperty("top_candidate_share");
+    expect(body).toHaveProperty("recent_questions");
+    expect(Array.isArray(body.recent_questions)).toBe(true);
   });
 });
 

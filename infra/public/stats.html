@@ -40,6 +40,12 @@
       <ol id="divisive-list">Loading…</ol>
     </section>
 
+    <section id="questions" class="card">
+      <h2>Recently asked</h2>
+      <p class="muted small">Questions people typed before handing a topic off to an AI assistant. Shown anonymously, most recent first.</p>
+      <ul id="questions-list">Loading…</ul>
+    </section>
+
     <footer>
       <p class="muted small">
         Counts are anonymized — no per-user data is stored. <a href="/dataset_v1.json">View dataset</a> ·
@@ -50,6 +56,13 @@
 
   <script type="module">
     const $ = (s) => document.querySelector(s);
+    const esc = (s) =>
+      String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+    // Don't rank an issue as "divisive" until it has a meaningful sample — a
+    // 2-answer issue split across extremes shows a huge variance that's noise,
+    // and pre-trim issues no longer in the quiz shouldn't surface at all.
+    const MIN_DIVISIVE_ANSWERS = 10;
 
     async function load() {
       try {
@@ -84,18 +97,29 @@
         }
         const divisive = Object.entries(byIssue).map(([issueId, rows]) => {
           const n = rows.reduce((a, b) => a + b.n, 0);
-          if (n === 0) return null;
           const mean = rows.reduce((a, b) => a + b.stance * b.n, 0) / n;
           const variance = rows.reduce((a, b) => a + b.n * (b.stance - mean) ** 2, 0) / n;
           return { issueId, n, variance };
-        }).filter(Boolean).sort((a, b) => b.variance - a.variance).slice(0, 10);
+        }).filter((d) => d.n >= MIN_DIVISIVE_ANSWERS).sort((a, b) => b.variance - a.variance).slice(0, 10);
 
         $("#divisive-list").innerHTML = divisive.length
           ? divisive.map((d) => {
               const issue = issuesById[d.issueId];
-              return `<li><strong>${issue?.name ?? d.issueId}</strong> <span class="muted">— ${d.n} answers, σ²=${d.variance.toFixed(2)}</span></li>`;
+              return `<li><strong>${esc(issue?.name ?? d.issueId)}</strong> <span class="muted">— ${d.n} answers, σ²=${d.variance.toFixed(2)}</span></li>`;
             }).join("")
           : '<li class="muted">Not enough answers yet.</li>';
+
+        // Recently asked questions — free text the user typed, so escape it.
+        const questions = stats.recent_questions ?? [];
+        $("#questions-list").innerHTML = questions.length
+          ? questions.map((row) => {
+              const issue = issuesById[row.issue_id];
+              const topic = issue
+                ? `<a href="/topic/${encodeURIComponent(row.issue_id)}">${esc(issue.name)}</a>`
+                : esc(row.issue_id ?? "a topic");
+              return `<li><span class="muted small">on ${topic}</span><br>${esc(row.detail)}</li>`;
+            }).join("")
+          : '<li class="muted">No questions asked yet.</li>';
       } catch (e) {
         $("#overview-body").textContent = `Failed to load stats: ${e.message}`;
       }

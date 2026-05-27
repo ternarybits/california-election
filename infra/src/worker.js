@@ -479,14 +479,19 @@ function handleTopicPage(issueId) {
 async function handleGetStats(env) {
   if (!env.DB) return json({ error: "database not configured" }, { status: 503 });
 
-  const [completes, byIssue, byTopCandidate] = await Promise.all([
+  const [completes, byIssue, byTopCandidate, recentQuestions] = await Promise.all([
     env.DB.prepare("SELECT COUNT(*) AS n FROM events WHERE kind = 'quiz_complete'").first(),
+    // Count each session's *latest* answer per issue, so going back and changing
+    // an answer doesn't double-count (back-nav re-emits a policy_answer event).
     env.DB.prepare(
-      `SELECT issue_id, stance, COUNT(*) AS n
-         FROM events
-        WHERE kind = 'policy_answer' AND issue_id IS NOT NULL AND stance IS NOT NULL
-        GROUP BY issue_id, stance
-        ORDER BY issue_id, stance`,
+      `SELECT issue_id, stance, COUNT(*) AS n FROM (
+         SELECT issue_id, stance,
+                ROW_NUMBER() OVER (PARTITION BY session_id, issue_id ORDER BY created_at DESC, id DESC) AS rn
+           FROM events
+          WHERE kind = 'policy_answer' AND issue_id IS NOT NULL AND stance IS NOT NULL
+       ) WHERE rn = 1
+       GROUP BY issue_id, stance
+       ORDER BY issue_id, stance`,
     ).all(),
     env.DB.prepare(
       `SELECT candidate_id, COUNT(*) AS n
@@ -494,6 +499,13 @@ async function handleGetStats(env) {
         WHERE kind = 'quiz_complete' AND candidate_id IS NOT NULL
         GROUP BY candidate_id
         ORDER BY n DESC`,
+    ).all(),
+    env.DB.prepare(
+      `SELECT issue_id, detail, created_at
+         FROM events
+        WHERE kind = 'chat_opened' AND detail IS NOT NULL AND TRIM(detail) <> ''
+        ORDER BY created_at DESC
+        LIMIT 20`,
     ).all(),
   ]);
 
@@ -505,6 +517,7 @@ async function handleGetStats(env) {
     completes: completes?.n ?? 0,
     by_issue_stance: byIssue?.results ?? [],
     top_candidate_share: byTopCandidate?.results ?? [],
+    recent_questions: recentQuestions?.results ?? [],
   }, { headers: { "cache-control": "no-store" } });
 }
 
