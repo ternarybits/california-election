@@ -31,6 +31,14 @@
 /* Gold-on-pale-gold code chip needs a darker text in light mode to stay readable. */
 :root[data-theme="light"] .score-policy code { color: #8a5a00; }
 
+/* In light mode the amber primary button is dark enough that white text reads
+   as a stronger CTA than black; deepen the fill slightly to keep contrast. */
+:root[data-theme="light"] button.primary {
+  background: #b5730a;
+  border-color: #b5730a;
+  color: #fff;
+}
+
 /* Light mode reads flat if every surface is the same grey, so build hierarchy
    two ways: lift the white cards off the tinted page with a soft shadow, and
    give the nested panels distinct tints — including a semantic green/amber wash
@@ -408,6 +416,7 @@ button, select {
   padding: 8px 14px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 button:hover:not(:disabled) { border-color: var(--accent-2); }
 button:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -416,6 +425,19 @@ button.primary {
   color: #000;
   border-color: var(--accent);
   font-weight: 600;
+}
+/* The generic hover only recolors the border, which is invisible on the gold
+   fill — give the primary button a deeper fill + soft glow so it clearly reads. */
+button.primary { transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease; }
+button.primary:hover:not(:disabled) {
+  background: #ffd95e;
+  border-color: #ffd95e;
+  box-shadow: 0 2px 12px rgba(247, 201, 72, 0.45);
+}
+:root[data-theme="light"] button.primary:hover:not(:disabled) {
+  background: #9c6308;
+  border-color: #9c6308;
+  box-shadow: 0 2px 12px rgba(181, 115, 10, 0.4);
 }
 button.primary:disabled { background: var(--panel-2); color: var(--muted); border-color: var(--border); }
 
