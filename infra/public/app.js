@@ -7,6 +7,10 @@ const API = "";
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
+// Localization runtime (defined by i18n.js, loaded ahead of this module).
+const I18N = window.I18N;
+const t = (key, params) => I18N.t(key, params);
+
 const IMPORTANCE_WEIGHTS = [0.5, 1.0, 2.0]; // low, medium, high
 const IMPORTANCE_LABELS = ["low", "medium", "high"];
 
@@ -20,11 +24,14 @@ const FIELD_MAP = {
 
 const state = {
   candidates: [],
-  questions: [],
-  dimensions: [],
+  questionsRaw: [],    // English questions from /api/questions (source of truth)
+  dimensionsRaw: [],   // English personal-fit dimensions
+  issuesRaw: [],       // English issues from /api/dataset
+  questions: [],       // localized view (overlay merged onto questionsRaw)
+  dimensions: [],      // localized view
   positions: [],
   candidatesFull: [],
-  issuesById: new Map(),
+  issuesById: new Map(), // localized, keyed by issue id
   snapshot_date: "",
   dataset_version: "",
   phase: "intro",
@@ -33,6 +40,7 @@ const state = {
   policyAnswers: [],   // { issue_id, stance, importance_idx }
   personalAnswers: [], // { dimension_id, type, value }
   sessionId: null,
+  _lastStale: null,    // remembered stale-version for re-render on language switch
 };
 
 // ---------- Analytics ----------
@@ -71,22 +79,23 @@ async function boot() {
       throw new Error("API error");
     }
     state.candidates = await candidatesRes.json();
-    state.questions = await questionsRes.json();
-    state.dimensions = await dimensionsRes.json();
+    state.questionsRaw = await questionsRes.json();
+    state.dimensionsRaw = await dimensionsRes.json();
     const dataset = await datasetRes.json();
     state.positions = dataset.positions || [];
     state.candidatesFull = dataset.candidates || [];
     state.snapshot_date = dataset.snapshot_date;
     state.dataset_version = dataset.version;
-    state.issuesById = new Map(dataset.issues.map((i) => [i.id, i]));
+    state.issuesRaw = dataset.issues || [];
+    // Build the localized view of the dataset for the current language.
+    localizeDataset();
 
     $("#snapshot-date").textContent = state.snapshot_date;
     $("#footer-snapshot-date").textContent = state.snapshot_date;
-    $("#dataset-label").textContent = `dataset_${state.dataset_version}.json`;
-    $("#q-count").textContent = String(state.questions.length + state.dimensions.length);
+    fillDynamicIntro();
 
     if (!state.questions.length) {
-      $("#status").innerHTML = "<p>No questions configured. Run scripts/score_questions.mjs and redeploy.</p>";
+      $("#status").textContent = t("status.noQuestions");
       return;
     }
     $("#status").classList.add("hidden");
@@ -110,14 +119,99 @@ async function boot() {
       const url = quizShareUrl();
       try {
         await navigator.clipboard.writeText(url);
-        $("#intro-share-status").textContent = "Quiz link copied to clipboard ✓";
+        $("#intro-share-status").textContent = t("intro.shareCopied");
       } catch {
         $("#intro-share-status").textContent = url;
       }
     };
   } catch (e) {
-    $("#status").textContent = `Failed to load: ${e.message}`;
+    $("#status").textContent = t("status.loadFailed", { msg: e.message });
   }
+}
+
+// Intro bits that mix translated copy with live data (counts) or are
+// shown conditionally. Re-run on language change so they stay localized.
+function fillDynamicIntro() {
+  const count = state.questions.length + state.dimensions.length;
+  const li = $("#how-count");
+  if (li) li.textContent = t("intro.how.count", { count });
+  const note = $("#intro-lang-note");
+  if (note) {
+    if (I18N.isDefaultLang()) {
+      note.textContent = "";
+      note.classList.add("hidden");
+    } else {
+      note.textContent = t("intro.langNote");
+      note.classList.remove("hidden");
+    }
+  }
+}
+
+// Re-render whatever view is on screen after a language switch. Static markup
+// is handled by I18N.apply(); the dataset view + these JS-built views are rebuilt.
+function rerender() {
+  localizeDataset();
+  fillDynamicIntro();
+  if (!$("#policy-quiz").classList.contains("hidden")) renderPolicyQuestion();
+  if (!$("#personal-quiz").classList.contains("hidden")) renderPersonalQuestion();
+  if (!$("#results").classList.contains("hidden")) {
+    renderResults({ fromShare: true, staleVersion: state._lastStale });
+  }
+}
+
+// ---------- Dataset localization ----------
+// The English dataset (from the API) is the source of truth; window.DATASET_I18N
+// supplies per-language overlays keyed by issue/dimension id. We merge the
+// overlay onto the English originals to produce the rendered view, falling back
+// to English for any field a translation is missing. Citations (source quotes
+// and titles) carry no overlay and stay in English.
+
+function localizeDataset() {
+  const overlay = (window.DATASET_I18N && window.DATASET_I18N[I18N.lang]) || null;
+  const qOv = (overlay && overlay.questions) || {};
+  const dOv = (overlay && overlay.dimensions) || {};
+  state.questions = (state.questionsRaw || []).map((q) => localizeIssueLike(q, qOv[q.id]));
+  state.dimensions = (state.dimensionsRaw || []).map((d) => localizeDimension(d, dOv[d.id]));
+  state.issuesById = new Map((state.issuesRaw || []).map((i) => [i.id, localizeIssueLike(i, qOv[i.id])]));
+}
+
+function localizeIssueLike(obj, ov) {
+  if (!ov) return obj;
+  const out = { ...obj };
+  if (ov.name) out.name = ov.name;
+  if (ov.short_description) out.short_description = ov.short_description;
+  if (ov.stance_scale && Array.isArray(obj.stance_scale)) {
+    out.stance_scale = obj.stance_scale.map((s) => ({ ...s, label: ov.stance_scale[String(s.value)] ?? s.label }));
+  }
+  if (obj.voter_guide && ov.voter_guide) {
+    out.voter_guide = localizeVoterGuide(obj.voter_guide, ov.voter_guide);
+  }
+  return out;
+}
+
+function localizeVoterGuide(vg, ov) {
+  const out = { ...vg };
+  for (const f of ["explainer", "current_policy", "arguments_for_change", "arguments_against_change", "comparison", "note_on_options"]) {
+    if (ov[f] != null) out[f] = ov[f];
+  }
+  if (Array.isArray(vg.key_facts) && Array.isArray(ov.key_facts)) {
+    out.key_facts = vg.key_facts.map((f, i) => ov.key_facts[i] ?? f);
+  }
+  return out; // sources intentionally left in English (citations)
+}
+
+function localizeDimension(d, ov) {
+  if (!ov) return d;
+  const out = { ...d };
+  if (ov.name) out.name = ov.name;
+  if (ov.description) out.description = ov.description;
+  if (d.type === "ordinal" && Array.isArray(d.scale) && ov.scale) {
+    out.scale = d.scale.map((s) => ({ ...s, label: ov.scale[String(s.value)] ?? s.label }));
+  }
+  if (d.type === "multi_select" && Array.isArray(d.options) && ov.options) {
+    out.options = d.options.map((o) => ({ ...o, label: ov.options[o.id] ?? o.label }));
+  }
+  return out;
 }
 
 function startQuiz() {
@@ -165,7 +259,7 @@ function renderPolicyQuestion() {
   $("#pq-importance").value = prior ? String(prior.importance_idx ?? 1) : "1";
   $("#pq-next").disabled = selected == null;
   $("#pq-back").disabled = state.pIdx === 0;
-  $("#pq-progress").textContent = `Question ${state.pIdx + 1} of ${state.questions.length}`;
+  $("#pq-progress").textContent = t("pq.progress", { n: state.pIdx + 1, total: state.questions.length });
   $("#pq-next").onclick = () => {
     if (selected == null) return;
     const importanceIdx = Number($("#pq-importance").value);
@@ -206,21 +300,21 @@ function renderVoterGuide(q) {
   // the status quo, and the case on each side.
   const visible = [];
   if (vg.explainer) {
-    visible.push(`<div class="vg-section vg-explainer"><h4>The basics</h4><p>${renderProse(vg.explainer)}</p></div>`);
+    visible.push(`<div class="vg-section vg-explainer"><h4>${t("vg.basics")}</h4><p>${renderProse(vg.explainer)}</p></div>`);
   }
   if (vg.current_policy) {
-    visible.push(`<div class="vg-section"><h4>Current California policy</h4><p>${renderProse(vg.current_policy)}</p></div>`);
+    visible.push(`<div class="vg-section"><h4>${t("vg.current")}</h4><p>${renderProse(vg.current_policy)}</p></div>`);
   }
   const hasArgs = vg.arguments_for_change || vg.arguments_against_change;
   if (hasArgs) {
     visible.push(`
       <div class="vg-args">
         <div class="vg-arg vg-arg-for">
-          <h4>Arguments for change</h4>
+          <h4>${t("vg.argsFor")}</h4>
           <p>${renderProse(vg.arguments_for_change ?? "")}</p>
         </div>
         <div class="vg-arg vg-arg-against">
-          <h4>Arguments against change</h4>
+          <h4>${t("vg.argsAgainst")}</h4>
           <p>${renderProse(vg.arguments_against_change ?? "")}</p>
         </div>
       </div>`);
@@ -229,24 +323,24 @@ function renderVoterGuide(q) {
   // Collapsed tier — reference detail for readers who want to go deeper.
   const more = [];
   if (Array.isArray(vg.key_facts) && vg.key_facts.length) {
-    more.push(`<div class="vg-section"><h4>Key facts</h4><ul>${vg.key_facts.map((f) => `<li>${renderProse(f)}</li>`).join("")}</ul></div>`);
+    more.push(`<div class="vg-section"><h4>${t("vg.keyFacts")}</h4><ul>${vg.key_facts.map((f) => `<li>${renderProse(f)}</li>`).join("")}</ul></div>`);
   }
   if (vg.comparison) {
-    more.push(`<div class="vg-section"><h4>How CA compares</h4><p>${renderProse(vg.comparison)}</p></div>`);
+    more.push(`<div class="vg-section"><h4>${t("vg.comparison")}</h4><p>${renderProse(vg.comparison)}</p></div>`);
   }
   if (vg.note_on_options) {
-    more.push(`<div class="vg-section vg-note"><h4>Note on the options</h4><p>${renderProse(vg.note_on_options)}</p></div>`);
+    more.push(`<div class="vg-section vg-note"><h4>${t("vg.noteOnOptions")}</h4><p>${renderProse(vg.note_on_options)}</p></div>`);
   }
   if (Array.isArray(vg.sources) && vg.sources.length) {
     const items = vg.sources
       .map((s) => `<li><a href="${escapeAttr(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a></li>`)
       .join("");
-    more.push(`<div class="vg-section vg-sources"><h4>Sources</h4><ul>${items}</ul></div>`);
+    more.push(`<div class="vg-section vg-sources"><h4>${t("vg.sources")}</h4><ul>${items}</ul></div>`);
   }
 
   let html = visible.join("");
   if (more.length) {
-    html += `<details class="vg-more"><summary>More background — key facts, how CA compares, sources</summary><div class="vg-more-body">${more.join("")}</div></details>`;
+    html += `<details class="vg-more"><summary>${t("vg.moreSummary")}</summary><div class="vg-more-body">${more.join("")}</div></details>`;
   }
   body.innerHTML = html;
 }
@@ -260,15 +354,15 @@ function renderAskAi(q) {
   wrap.classList.remove("hidden");
   body.innerHTML = `
     <div class="vg-chat">
-      <label class="vg-chat-label" for="vg-chat-q">Have a question about this topic? Ask an AI assistant.</label>
+      <label class="vg-chat-label" for="vg-chat-q">${t("askai.label")}</label>
       <input type="text" id="vg-chat-q" class="vg-chat-input" maxlength="500" autocomplete="off"
-        placeholder="e.g. How would this affect renters in my city?" />
+        placeholder="${escapeAttr(t("askai.placeholder"))}" />
       <div class="vg-chat-actions">
-        <button type="button" class="vg-chat-btn" data-target="chatgpt">Ask ChatGPT →</button>
-        <button type="button" class="vg-chat-btn" data-target="claude">Ask Claude →</button>
-        <button type="button" class="vg-chat-btn vg-chat-copy" data-target="copy">Copy prompt</button>
+        <button type="button" class="vg-chat-btn" data-target="chatgpt">${t("askai.chatgpt")}</button>
+        <button type="button" class="vg-chat-btn" data-target="claude">${t("askai.claude")}</button>
+        <button type="button" class="vg-chat-btn vg-chat-copy" data-target="copy">${t("askai.copy")}</button>
       </div>
-      <p class="vg-chat-hint">Opens your own AI in a new tab with this topic's sourced guide. Don't include personal info.</p>
+      <p class="vg-chat-hint">${t("askai.hint")}</p>
     </div>`;
   wireTopicChat(body, q);
 }
@@ -279,13 +373,12 @@ function renderAskAi(q) {
 function buildTopicPrompt(q, question) {
   const topicUrl = `${location.origin}/topic/${encodeURIComponent(q.id)}`;
   const lead = question
-    ? `I'm researching the 2026 California governor's race. My question about "${q.name}": ${question}`
-    : `I'm researching the 2026 California governor's race. Help me understand "${q.name}" — the main arguments on each side and where the leading candidates differ.`;
-  return `${lead}
-
-Here's a neutral starting-point guide with each candidate's position and primary sources: ${topicUrl}
-
-Start there, but feel free to research more widely. Cite your sources, and tell me if anything is uncertain or may have changed since.`;
+    ? t("prompt.withQ", { name: q.name, question })
+    : t("prompt.withoutQ", { name: q.name });
+  const body = t("prompt.body", { url: topicUrl });
+  // When the UI isn't in English, ask the AI to reply in the chosen language.
+  const replyIn = t("prompt.replyIn");
+  return replyIn ? `${lead}\n\n${body}\n\n${replyIn}` : `${lead}\n\n${body}`;
 }
 
 function wireTopicChat(body, q) {
@@ -300,7 +393,7 @@ function wireTopicChat(body, q) {
       if (target === "copy") {
         navigator.clipboard?.writeText(prompt).then(() => {
           const orig = btn.textContent;
-          btn.textContent = "Copied ✓";
+          btn.textContent = t("askai.copied");
           setTimeout(() => { btn.textContent = orig; }, 1500);
         }).catch(() => {});
         return;
@@ -369,7 +462,7 @@ function renderPersonalQuestion() {
   const hasAnswer = (typeof answer === "number") || (Array.isArray(answer) && answer.length > 0);
   $("#fq-next").disabled = !hasAnswer;
   $("#fq-back").disabled = false; // always enabled in personal phase (back into policy)
-  $("#fq-progress").textContent = `Personal-fit ${state.fIdx + 1} of ${state.dimensions.length}`;
+  $("#fq-progress").textContent = t("fq.progress", { n: state.fIdx + 1, total: state.dimensions.length });
   $("#fq-next").onclick = () => {
     if (answer == null || (Array.isArray(answer) && answer.length === 0)) return;
     state.personalAnswers[state.fIdx] = { dimension_id: d.id, type: d.type, value: answer };
@@ -511,9 +604,10 @@ function renderResults({ fromShare = false, staleVersion = null } = {}) {
   $("#policy-quiz").classList.add("hidden");
   $("#personal-quiz").classList.add("hidden");
 
+  state._lastStale = staleVersion;
   const banner = $("#stale-banner");
   if (staleVersion) {
-    banner.textContent = `Heads up: this shared link was created against dataset ${staleVersion}, but the current dataset is ${state.dataset_version}. Some positions may have changed since, so this match may be off — retake the quiz for an up-to-date result.`;
+    banner.textContent = t("results.stale", { staleVersion, currentVersion: state.dataset_version });
     banner.classList.remove("hidden");
   } else {
     banner.classList.add("hidden");
@@ -539,7 +633,10 @@ function renderResults({ fromShare = false, staleVersion = null } = {}) {
 
   // Headline the top match by name.
   const topMatch = ranking[0];
-  $("#results-heading").textContent = topMatch ? `Your match: ${topMatch.name}` : "Your match";
+  $("#results-heading").textContent = topMatch ? t("results.heading", { name: topMatch.name }) : t("results.headingNone");
+
+  // Method footnote mixes translated copy with the live dataset label.
+  $("#results-method").innerHTML = t("results.method", { label: `dataset_${state.dataset_version}.json` });
 
   // Put the full-result link in the address bar so it can be copied straight
   // from there — no button click needed. (Encodes answers in the #r= hash.)
@@ -570,7 +667,7 @@ function renderResults({ fromShare = false, staleVersion = null } = {}) {
     copyBtn.onclick = async () => {
       try {
         await navigator.clipboard.writeText(cardUrl);
-        $("#share-status").textContent = "Share-card link copied to clipboard ✓";
+        $("#share-status").textContent = t("results.cardCopied");
       } catch {
         // Clipboard blocked — show the bare link so it can be copied by hand.
         $("#share-status").textContent = cardUrl;
@@ -605,14 +702,14 @@ function renderRankingRow(r, rank) {
         <span class="muted">(${escapeHtml(r.party)})</span>
       </div>
       <div class="result-scores">
-        <span class="score score-policy"><span class="score-label">policy</span> <code>${policyPct}</code></span>
-        <span class="score score-personal"><span class="score-label">personal fit</span> <code>${personalPct}</code></span>
+        <span class="score score-policy"><span class="score-label">${t("score.policy")}</span> <code>${policyPct}</code></span>
+        <span class="score score-personal"><span class="score-label">${t("score.personalFit")}</span> <code>${personalPct}</code></span>
       </div>
     </div>
     <p class="muted small">${escapeHtml(r.bio_short ?? "")}</p>
-    <p class="muted small">${r.policy_scored} policy q's scored · ${r.personal_scored} personal-fit dims scored</p>
+    <p class="muted small">${t("rank.scored", { p: r.policy_scored, f: r.personal_scored })}</p>
     <details class="see-why"${rank === 0 ? " open" : ""}>
-      <summary>see why you matched — and flag anything wrong</summary>
+      <summary>${t("rank.seeWhy")}</summary>
       <div class="receipt-container"></div>
     </details>
   `;
@@ -634,7 +731,7 @@ function populateReceiptList(ul, items, candidate, kind) {
   if (!items?.length) {
     const li = document.createElement("li");
     li.className = "muted small";
-    li.textContent = kind === "agreement" ? "No scored agreements." : "No scored disagreements.";
+    li.textContent = kind === "agreement" ? t("receipt.noAgree") : t("receipt.noDisagree");
     ul.appendChild(li);
     return;
   }
@@ -642,25 +739,25 @@ function populateReceiptList(ul, items, candidate, kind) {
     const issue = state.issuesById.get(item.issue_id);
     if (!issue) continue;
     const pct = Math.round((kind === "agreement" ? item.agreement : 1 - item.agreement) * 100);
-    const stanceLabel = issue.stance_scale.find((s) => s.value === item.candidate_stance)?.label ?? `stance ${item.candidate_stance}`;
-    const yourLabel = issue.stance_scale.find((s) => s.value === item.user_stance)?.label ?? `stance ${item.user_stance}`;
+    const stanceLabel = issue.stance_scale.find((s) => s.value === item.candidate_stance)?.label ?? t("receipt.stanceFallback", { value: item.candidate_stance });
+    const yourLabel = issue.stance_scale.find((s) => s.value === item.user_stance)?.label ?? t("receipt.stanceFallback", { value: item.user_stance });
     const li = document.createElement("li");
     li.className = "receipt-item";
     const pos = item.position;
     const quote = pos.source_quote ? `<blockquote>"${escapeHtml(pos.source_quote)}"</blockquote>` : "";
     const sourceLink = pos.source_url
-      ? `<a class="receipt-source" href="${escapeAttr(pos.source_url)}" target="_blank" rel="noopener">source</a>`
+      ? `<a class="receipt-source" href="${escapeAttr(pos.source_url)}" target="_blank" rel="noopener">${t("receipt.source")}</a>`
       : "";
     li.innerHTML = `
       <div class="receipt-issue">
         <strong>${escapeHtml(issue.name)}</strong>
-        <span class="muted small">${kind === "agreement" ? pct + "% agree" : pct + "% apart"}</span>
+        <span class="muted small">${kind === "agreement" ? t("receipt.agreePct", { pct }) : t("receipt.apartPct", { pct })}</span>
       </div>
-      <div class="muted small">You: ${escapeHtml(yourLabel)} · ${escapeHtml(candidate.name)}: ${escapeHtml(stanceLabel)}</div>
+      <div class="muted small">${t("receipt.youVs", { you: escapeHtml(yourLabel), name: escapeHtml(candidate.name), them: escapeHtml(stanceLabel) })}</div>
       ${quote}
       <div class="receipt-actions">
         ${sourceLink}
-        <button class="flag-btn" data-candidate="${escapeAttr(candidate.id)}" data-issue="${escapeAttr(item.issue_id)}">⚑ flag this</button>
+        <button class="flag-btn" data-candidate="${escapeAttr(candidate.id)}" data-issue="${escapeAttr(item.issue_id)}">${t("receipt.flag")}</button>
       </div>
     `;
     const flagBtn = li.querySelector(".flag-btn");
@@ -670,19 +767,19 @@ function populateReceiptList(ul, items, candidate, kind) {
 }
 
 async function onFlagClick(candidate, issue, btn) {
-  const reason = prompt(`Flag ${candidate.name}'s position on "${issue.name}" — what's wrong?`);
+  const reason = prompt(t("receipt.flagPrompt", { name: candidate.name, issue: issue.name }));
   if (reason == null) return;
   btn.disabled = true;
-  btn.textContent = "sending…";
+  btn.textContent = t("receipt.sending");
   try {
     const res = await fetch(`${API}/api/flag`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ candidate_id: candidate.id, issue_id: issue.id, reason: reason.slice(0, 2000) }),
     });
-    btn.textContent = res.ok ? "flagged ✓" : "failed";
+    btn.textContent = res.ok ? t("receipt.flagged") : t("receipt.failed");
   } catch {
-    btn.textContent = "failed";
+    btn.textContent = t("receipt.failed");
   }
 }
 
@@ -700,7 +797,7 @@ function renderWhatIf(originalRanking) {
     const stanceLabel = issue.stance_scale.find((s) => s.value === a.stance)?.label ?? "?";
     const opt = document.createElement("option");
     opt.value = a.issue_id;
-    opt.textContent = `${issue.name} — you said: ${stanceLabel}`;
+    opt.textContent = t("whatif.optionLabel", { issue: issue.name, label: stanceLabel });
     select.appendChild(opt);
   }
 
@@ -717,7 +814,7 @@ function renderWhatIf(originalRanking) {
       if (opt.value === userAnswer.stance) continue;
       const btn = document.createElement("button");
       btn.className = "wi-option";
-      btn.textContent = `→ what if you'd said: ${opt.label}`;
+      btn.textContent = t("whatif.alt", { label: opt.label });
       btn.onclick = () => recompute(issueId, opt.value);
       optionsEl.appendChild(btn);
     }
@@ -735,11 +832,16 @@ function renderWhatIf(originalRanking) {
       const delta = orig - i;
       const arrow = delta === 0 ? "—" : delta > 0 ? `↑${delta}` : `↓${-delta}`;
       const klass = delta === 0 ? "wi-flat" : delta > 0 ? "wi-up" : "wi-down";
-      return `<li><span class="${klass}">${arrow}</span> <strong>${escapeHtml(nr.name)}</strong> — ${nr.policy_match_pct ?? "—"}% policy (was ${originalRanking[orig]?.policy_match_pct ?? "—"}%)</li>`;
+      const rowText = t("whatif.row", {
+        name: `<strong>${escapeHtml(nr.name)}</strong>`,
+        pct: nr.policy_match_pct ?? "—",
+        was: originalRanking[orig]?.policy_match_pct ?? "—",
+      });
+      return `<li><span class="${klass}">${arrow}</span> ${rowText}</li>`;
     }).join("");
 
     resultEl.innerHTML = `
-      <p class="muted small">New top 3 (changes vs. your original ranking):</p>
+      <p class="muted small">${t("whatif.newTop3")}</p>
       <ol class="wi-ranking">${rows}</ol>
     `;
   }
@@ -771,8 +873,14 @@ function renderWhyNot(ranking) {
 
   const lines = flips
     .map((m) => `“${escapeHtml(state.issuesById.get(m.issueId)?.name ?? m.issueId)}”`)
-    .join(" and ");
-  $("#why-not-body").innerHTML = `Your top match was <strong>${escapeHtml(top.name)}</strong> at ${top.policy_match_pct}%. <strong>${escapeHtml(runner.name)}</strong> (${runner.policy_match_pct}%) edged them on ${lines}.`;
+    .join(t("whynot.and"));
+  $("#why-not-body").innerHTML = t("whynot.body", {
+    top: escapeHtml(top.name),
+    topPct: top.policy_match_pct,
+    runner: escapeHtml(runner.name),
+    runnerPct: runner.policy_match_pct,
+    lines,
+  });
   $("#why-not").classList.remove("hidden");
 }
 
@@ -873,5 +981,7 @@ function renderProse(s) {
     return `<a href="${url}" target="_blank" rel="noopener">${label}</a>`;
   });
 }
+
+document.addEventListener("i18n:change", rerender);
 
 boot();

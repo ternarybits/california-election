@@ -6,6 +6,8 @@
   <title>CA 2026 Governor Primary — Candidate Matcher</title>
   <meta name="description" content="Find which candidate in California's June 2, 2026 gubernatorial primary best aligns with your values. Differentiation-first questions, cited sources, open dataset." />
   <script src="./theme.js"></script>
+  <script src="./i18n.js"></script>
+  <script src="./dataset_i18n.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet" />
@@ -15,119 +17,123 @@
   <main class="container">
     <header>
       <div class="header-top">
-        <h1>California 2026 Governor — Candidate Matcher</h1>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
-          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        </button>
+        <h1 data-i18n="header.h1">California 2026 Governor — Candidate Matcher</h1>
+        <div class="header-controls">
+          <select id="lang-select" class="lang-select" data-i18n-aria="header.langAria" aria-label="Choose language"></select>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+        </div>
       </div>
-      <p class="subtitle">For the June 2, 2026 gubernatorial primary. Pick where you stand, then match against where the candidates actually stand.</p>
+      <p class="subtitle" data-i18n="header.subtitle">For the June 2, 2026 gubernatorial primary. Pick where you stand, then match against where the candidates actually stand.</p>
     </header>
 
     <section id="status" class="card">
-      <p>Loading dataset…</p>
+      <p data-i18n="status.loading">Loading dataset…</p>
     </section>
 
     <section id="intro" class="card hidden">
       <div class="about">
-        <h2>What is this?</h2>
-        <p>A non-partisan way to find which candidate in California's June 2026 governor primary you actually line up with — and exactly why. A few things set it apart from the usual candidate quiz:</p>
+        <h2 data-i18n="intro.about.h2">What is this?</h2>
+        <p data-i18n="intro.about.lead">A non-partisan way to find which candidate in California's June 2026 governor primary you actually line up with — and exactly why. A few things set it apart from the usual candidate quiz:</p>
         <ul class="bullets">
-          <li><strong>Only questions where the candidates actually differ.</strong> No "do you support good schools?" filler — every question is one the field is genuinely split on, chosen by spread.</li>
-          <li><strong>You can keep asking.</strong> From any question, hand the topic to ChatGPT or Claude — pre-loaded with that topic's sourced guide — and go as deep as you want. It also works in agentic browsers like <a href="https://www.diabrowser.com/" target="_blank" rel="noopener">Dia</a>, or copy the prompt into any AI agent you like.</li>
-          <li><strong>An AI-researched, fully-cited dataset.</strong> Every candidate position was researched and assembled by AI from primary sources — not hand-curated by a research team — and each one links to a dated quote you can open and check yourself.</li>
+          <li data-i18n="intro.about.differ"><strong>Only questions where the candidates actually differ.</strong> No "do you support good schools?" filler — every question is one the field is genuinely split on, chosen by spread.</li>
+          <li data-i18n="intro.about.keepAsking"><strong>You can keep asking.</strong> From any question, hand the topic to ChatGPT or Claude — pre-loaded with that topic's sourced guide — and go as deep as you want. It also works in agentic browsers like <a href="https://www.diabrowser.com/" target="_blank" rel="noopener">Dia</a>, or copy the prompt into any AI agent you like.</li>
+          <li data-i18n="intro.about.dataset"><strong>An AI-researched, fully-cited dataset.</strong> Every candidate position was researched and assembled by AI from primary sources — not hand-curated by a research team — and each one links to a dated quote you can open and check yourself.</li>
         </ul>
       </div>
 
-      <h2>How this works</h2>
+      <h2 data-i18n="intro.how.h2">How this works</h2>
       <ul class="bullets">
-        <li><span id="q-count">20</span> questions in all — skip any you'd rather not answer.</li>
-        <li>Per-question importance slider; defaults to medium so you can just answer.</li>
-        <li>Two separate scores per candidate: <strong>policy match</strong> and <strong>personal fit</strong>.</li>
-        <li>Every position links to a primary-source quote. Flag anything that's wrong.</li>
+        <li id="how-count"><span id="q-count">20</span> questions in all — skip any you'd rather not answer.</li>
+        <li data-i18n="intro.how.importance">Per-question importance slider; defaults to medium so you can just answer.</li>
+        <li data-i18n="intro.how.scores">Two separate scores per candidate: <strong>policy match</strong> and <strong>personal fit</strong>.</li>
+        <li data-i18n="intro.how.sources">Every position links to a primary-source quote. Flag anything that's wrong.</li>
       </ul>
-      <p class="muted small">We log anonymized response counts to build a public stats page. No tracking cookies, no IPs stored.</p>
+      <p class="muted small" data-i18n="intro.how.privacy">We log anonymized response counts to build a public stats page. No tracking cookies, no IPs stored.</p>
+      <p class="muted small lang-note hidden" id="intro-lang-note"></p>
       <div class="row">
-        <button id="start-btn" class="primary">start the quiz</button>
-        <button id="share-quiz" type="button">share this quiz</button>
-        <span class="muted small">Snapshot date: <span id="snapshot-date">—</span></span>
+        <button id="start-btn" class="primary" data-i18n="intro.start">start the quiz</button>
+        <button id="share-quiz" type="button" data-i18n="intro.share">share this quiz</button>
+        <span class="muted small"><span data-i18n="intro.snapshot">Snapshot date:</span> <span id="snapshot-date">—</span></span>
       </div>
       <p class="muted small" id="intro-share-status"></p>
 
       <div class="faq">
-        <h3>Questions &amp; methodology</h3>
+        <h3 data-i18n="faq.h3">Questions &amp; methodology</h3>
 
         <details>
-          <summary>How were the questions chosen?</summary>
-          <p>Every question is one where the candidates <em>actually</em> differ. We start from the full matrix of candidate positions and rank each issue by a <strong>differentiation score</strong> — how widely the field spreads, scaled by how well-researched the issue is. The questions you see are the highest-spread issues. Topics where nearly everyone agrees become footnotes, not questions. (The full ranking, including the lower-spread issues, is in the open dataset.)</p>
+          <summary data-i18n="faq.q1.s">How were the questions chosen?</summary>
+          <p data-i18n="faq.q1.a">Every question is one where the candidates <em>actually</em> differ. We start from the full matrix of candidate positions and rank each issue by a <strong>differentiation score</strong> — how widely the field spreads, scaled by how well-researched the issue is. The questions you see are the highest-spread issues. Topics where nearly everyone agrees become footnotes, not questions. (The full ranking, including the lower-spread issues, is in the open dataset.)</p>
         </details>
 
         <details>
-          <summary>How were the candidate positions researched?</summary>
-          <p>The dataset was researched and assembled by AI, working from primary sources — there was no human research team hand-curating it. The guardrail that keeps it honest: every position links to a primary source — a campaign website, interview, debate transcript, op-ed, or voting record — with a verbatim quote, a link, and a date, and any issue a candidate hasn't publicly addressed is marked <em>"unknown"</em> rather than guessed (10 of 200 positions are honest unknowns). So you never have to take the AI's word for it — open the source on any position and check it yourself. Expand "Background &amp; arguments" on any question to see the sourcing.</p>
+          <summary data-i18n="faq.q2.s">How were the candidate positions researched?</summary>
+          <p data-i18n="faq.q2.a">The dataset was researched and assembled by AI, working from primary sources — there was no human research team hand-curating it. The guardrail that keeps it honest: every position links to a primary source — a campaign website, interview, debate transcript, op-ed, or voting record — with a verbatim quote, a link, and a date, and any issue a candidate hasn't publicly addressed is marked <em>"unknown"</em> rather than guessed (10 of 200 positions are honest unknowns). So you never have to take the AI's word for it — open the source on any position and check it yourself. Expand "Background &amp; arguments" on any question to see the sourcing.</p>
         </details>
 
         <details>
-          <summary>What if I think a position is wrong?</summary>
-          <p>On your results page, expand <strong>"see why you matched"</strong> under any candidate — each cited position has a <strong>⚑ flag this</strong> button. You can also open an issue or pull request on <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">GitHub</a>. Both routes feed the same correction queue, and the entire dataset is public so anyone can audit it.</p>
+          <summary data-i18n="faq.q3.s">What if I think a position is wrong?</summary>
+          <p data-i18n="faq.q3.a">On your results page, expand <strong>"see why you matched"</strong> under any candidate — each cited position has a <strong>⚑ flag this</strong> button. You can also open an issue or pull request on <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">GitHub</a>. Both routes feed the same correction queue, and the entire dataset is public so anyone can audit it.</p>
         </details>
 
         <details>
-          <summary>How is my match calculated?</summary>
-          <p>Simple, auditable math — no black-box AI ranking. For each question we compare your stance to each candidate's on the same scale, weight it by how important you said the issue is, and average. You get <strong>two separate scores</strong> — policy match and personal fit — that are never blended into a single number. Candidates with an "unknown" position on a question are simply not scored on it.</p>
+          <summary data-i18n="faq.q4.s">How is my match calculated?</summary>
+          <p data-i18n="faq.q4.a">Simple, auditable math — no black-box AI ranking. For each question we compare your stance to each candidate's on the same scale, weight it by how important you said the issue is, and average. You get <strong>two separate scores</strong> — policy match and personal fit — that are never blended into a single number. Candidates with an "unknown" position on a question are simply not scored on it.</p>
         </details>
 
         <details>
-          <summary>Is this partisan?</summary>
-          <p>No — it's a non-partisan, open-source project, not an endorsement engine. Every stance scale is written so neither end is "the right answer," and each question shows steelmanned arguments for both sides. The goal is to help you find <em>alignment</em>, not to tell you who to vote for. Code and data live on <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">GitHub</a>.</p>
+          <summary data-i18n="faq.q5.s">Is this partisan?</summary>
+          <p data-i18n="faq.q5.a">No — it's a non-partisan, open-source project, not an endorsement engine. Every stance scale is written so neither end is "the right answer," and each question shows steelmanned arguments for both sides. The goal is to help you find <em>alignment</em>, not to tell you who to vote for. Code and data live on <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">GitHub</a>.</p>
         </details>
 
         <details>
-          <summary>Can I dig deeper on a topic?</summary>
-          <p>Yes — this is the part I'm most excited about. On every question, under "Go deeper," type a question and hand the topic to <strong>ChatGPT</strong> or <strong>Claude</strong> in one click — it opens pre-loaded with that topic's sourced guide so the AI can reason from the same primary sources. It also works in agentic browsers like <a href="https://www.diabrowser.com/" target="_blank" rel="noopener">Dia</a> that can read the page directly, and there's a <strong>Copy prompt</strong> button so you can paste it into any AI agent you prefer. Power users can also connect the project's <strong>MCP server</strong> to Claude or Cursor — see the GitHub repo.</p>
+          <summary data-i18n="faq.q6.s">Can I dig deeper on a topic?</summary>
+          <p data-i18n="faq.q6.a">Yes — this is the part I'm most excited about. On every question, under "Go deeper," type a question and hand the topic to <strong>ChatGPT</strong> or <strong>Claude</strong> in one click — it opens pre-loaded with that topic's sourced guide so the AI can reason from the same primary sources. It also works in agentic browsers like <a href="https://www.diabrowser.com/" target="_blank" rel="noopener">Dia</a> that can read the page directly, and there's a <strong>Copy prompt</strong> button so you can paste it into any AI agent you prefer. Power users can also connect the project's <strong>MCP server</strong> to Claude or Cursor — see the GitHub repo.</p>
         </details>
 
         <details>
-          <summary>Is my data tracked?</summary>
-          <p>We log anonymized aggregate counts (which answers get chosen, which candidate matched) to build a public stats page. No cookies, no IP addresses, no per-person profiles. Your individual answers stay in your browser, and your shareable result link encodes your answers in the URL — not on our server.</p>
+          <summary data-i18n="faq.q7.s">Is my data tracked?</summary>
+          <p data-i18n="faq.q7.a">We log anonymized aggregate counts (which answers get chosen, which candidate matched) to build a public stats page. No cookies, no IP addresses, no per-person profiles. Your individual answers stay in your browser, and your shareable result link encodes your answers in the URL — not on our server.</p>
         </details>
 
         <details>
-          <summary>How current is this, and can I use it in my own AI assistant?</summary>
-          <p>Every page shows a snapshot date; positions can shift during a campaign, so we version the dataset and re-check as the June 2026 primary approaches. There's also an <strong>MCP server</strong> that plugs the dataset into Claude or Cursor, so you can talk through the issues conversationally — see the GitHub repo for setup.</p>
+          <summary data-i18n="faq.q8.s">How current is this, and can I use it in my own AI assistant?</summary>
+          <p data-i18n="faq.q8.a">Every page shows a snapshot date; positions can shift during a campaign, so we version the dataset and re-check as the June 2026 primary approaches. There's also an <strong>MCP server</strong> that plugs the dataset into Claude or Cursor, so you can talk through the issues conversationally — see the GitHub repo for setup.</p>
         </details>
 
         <details>
-          <summary>Who built this — and why?</summary>
-          <p>Built by <a href="https://www.linkedin.com/in/tedmao/" target="_blank" rel="noopener">Ted Mao</a>. The first version came together at an AI hack-day at <a href="https://thegp.com" target="_blank" rel="noopener">The General Partnership</a>, the venture firm I'm affiliated with, then I cleaned it up to share. It's also a small showcase of how far AI can carry a project end-to-end — researching the dataset, building the app, and powering the in-product follow-up questions. I'm the founder of <a href="https://www.gumnut.ai" target="_blank" rel="noopener">Gumnut</a>; this is a personal side project, not affiliated with any campaign.</p>
+          <summary data-i18n="faq.q9.s">Who built this — and why?</summary>
+          <p data-i18n="faq.q9.a">Built by <a href="https://www.linkedin.com/in/tedmao/" target="_blank" rel="noopener">Ted Mao</a>. The first version came together at an AI hack-day at <a href="https://thegp.com" target="_blank" rel="noopener">The General Partnership</a>, the venture firm I'm affiliated with, then I cleaned it up to share. It's also a small showcase of how far AI can carry a project end-to-end — researching the dataset, building the app, and powering the in-product follow-up questions. I'm the founder of <a href="https://www.gumnut.ai" target="_blank" rel="noopener">Gumnut</a>; this is a personal side project, not affiliated with any campaign.</p>
         </details>
       </div>
     </section>
 
     <section id="policy-quiz" class="card hidden">
       <div class="progress" role="progressbar" aria-label="Quiz progress"><div class="progress-fill"></div></div>
-      <p class="muted small phase-label">Policy questions</p>
+      <p class="muted small phase-label" data-i18n="pq.phase">Policy questions</p>
       <h2 id="pq-title"></h2>
       <p id="pq-desc" class="muted"></p>
       <section id="pq-voter-guide" class="voter-guide hidden">
-        <p class="voter-guide-heading">Background &amp; arguments</p>
+        <p class="voter-guide-heading" data-i18n="pq.guideHeading">Background &amp; arguments</p>
         <div class="voter-guide-body"></div>
       </section>
       <section id="pq-ask-ai" class="voter-guide hidden">
-        <p class="voter-guide-heading">Go deeper</p>
+        <p class="voter-guide-heading" data-i18n="pq.askHeading">Go deeper</p>
         <div class="ask-ai-body"></div>
       </section>
       <div id="pq-options"></div>
       <div class="importance">
-        <label for="pq-importance">How much does this question matter to you?</label>
+        <label for="pq-importance" data-i18n="pq.importance">How much does this question matter to you?</label>
         <input type="range" id="pq-importance" min="0" max="2" step="1" value="1" />
-        <div class="importance-labels"><span>low</span><span>medium</span><span>high</span></div>
+        <div class="importance-labels"><span data-i18n="imp.low">low</span><span data-i18n="imp.medium">medium</span><span data-i18n="imp.high">high</span></div>
       </div>
       <div class="nav-row">
-        <button id="pq-back">← back</button>
+        <button id="pq-back" data-i18n="nav.back">← back</button>
         <div class="nav-right">
-          <button id="pq-skip">skip</button>
-          <button id="pq-next" class="primary" disabled>next →</button>
+          <button id="pq-skip" data-i18n="nav.skip">skip</button>
+          <button id="pq-next" class="primary" disabled data-i18n="nav.next">next →</button>
         </div>
       </div>
       <p class="muted small"><span id="pq-progress"></span></p>
@@ -135,43 +141,43 @@
 
     <section id="personal-quiz" class="card hidden">
       <div class="progress" role="progressbar" aria-label="Quiz progress"><div class="progress-fill"></div></div>
-      <p class="muted small phase-label">Personal fit</p>
+      <p class="muted small phase-label" data-i18n="fq.phase">Personal fit</p>
       <h2 id="fq-title"></h2>
       <p id="fq-desc" class="muted"></p>
       <div id="fq-options"></div>
       <div class="nav-row">
-        <button id="fq-back">← back</button>
+        <button id="fq-back" data-i18n="nav.back">← back</button>
         <div class="nav-right">
-          <button id="fq-skip">no preference</button>
-          <button id="fq-next" class="primary" disabled>next →</button>
+          <button id="fq-skip" data-i18n="fq.skip">no preference</button>
+          <button id="fq-next" class="primary" disabled data-i18n="nav.next">next →</button>
         </div>
       </div>
       <p class="muted small"><span id="fq-progress"></span></p>
     </section>
 
     <section id="results" class="card hidden">
-      <h2 id="results-heading">Your match</h2>
+      <h2 id="results-heading" data-i18n="results.headingNone">Your match</h2>
       <p id="stale-banner" class="stale-banner hidden"></p>
       <ol id="top3-summary" class="top3-summary"></ol>
       <div class="row results-actions">
-        <button id="copy-link" class="primary">copy share link</button>
-        <button id="retake">retake</button>
-        <a href="/stats" target="_blank" rel="noopener" class="btn-link">see how everyone's answering</a>
+        <button id="copy-link" class="primary" data-i18n="results.copyLink">copy share link</button>
+        <button id="retake" data-i18n="results.retake">retake</button>
+        <a href="/stats" target="_blank" rel="noopener" class="btn-link" data-i18n="results.seeStats">see how everyone's answering</a>
       </div>
       <p class="muted small" id="share-status"></p>
 
-      <h3 class="ranking-heading">How you match every candidate</h3>
+      <h3 class="ranking-heading" data-i18n="results.rankingHeading">How you match every candidate</h3>
       <ol id="ranking"></ol>
       <div id="why-not" class="why-not hidden">
-        <h3>Why not your runner-up?</h3>
+        <h3 data-i18n="whynot.h3">Why not your runner-up?</h3>
         <p id="why-not-body" class="muted small"></p>
       </div>
 
       <details id="what-if" class="what-if">
-        <summary>what if I'd answered something differently?</summary>
+        <summary data-i18n="whatif.summary">what if I'd answered something differently?</summary>
         <div class="what-if-body">
           <div class="what-if-row">
-            <label for="wi-issue">Pick a policy question:</label>
+            <label for="wi-issue" data-i18n="whatif.pick">Pick a policy question:</label>
             <select id="wi-issue"></select>
           </div>
           <div id="wi-options"></div>
@@ -179,7 +185,7 @@
         </div>
       </details>
 
-      <p class="muted small">
+      <p class="muted small" id="results-method">
         Scored against <code id="dataset-label">dataset</code>. Two scores per candidate:
         <strong>policy match</strong> (where you agreed on the issues you cared about)
         and <strong>personal fit</strong> (background, career, coalition, etc.).
@@ -189,10 +195,10 @@
 
     <footer>
       <p class="muted small">
-        Open source: <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">ternarybits/california-election</a>.
-        Dataset: <a href="/dataset_v1.json" target="_blank" rel="noopener">dataset_v1.json</a>.
-        <a href="/stats">Live stats</a>.
-        Snapshot date: <span id="footer-snapshot-date">—</span>.
+        <span data-i18n="footer.opensource">Open source:</span> <a href="https://github.com/ternarybits/california-election" target="_blank" rel="noopener">ternarybits/california-election</a>.
+        <span data-i18n="footer.dataset">Dataset:</span> <a href="/dataset_v1.json" target="_blank" rel="noopener">dataset_v1.json</a>.
+        <a href="/stats" data-i18n="footer.stats">Live stats</a>.
+        <span data-i18n="footer.snapshot">Snapshot date:</span> <span id="footer-snapshot-date">—</span>.
       </p>
     </footer>
   </main>
@@ -201,11 +207,11 @@
   <template id="receipt-template">
     <div class="receipt">
       <div class="receipt-row receipt-agreements">
-        <h4>You agreed on</h4>
+        <h4 data-i18n="receipt.agreedOn">You agreed on</h4>
         <ul class="receipt-list" data-list="agreements"></ul>
       </div>
       <div class="receipt-row receipt-disagreements">
-        <h4>You disagreed on</h4>
+        <h4 data-i18n="receipt.disagreedOn">You disagreed on</h4>
         <ul class="receipt-list" data-list="disagreements"></ul>
       </div>
     </div>
