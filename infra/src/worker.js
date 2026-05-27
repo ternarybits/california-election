@@ -225,8 +225,8 @@ function handleShareCard(url, request) {
 
   const FONT = "-apple-system, system-ui, sans-serif";
   const medals = ["#f7c948", "#c7ccd6", "#cd8a4b"]; // gold / silver / bronze accents
-  const rowY = 300; // baseline of the first row
-  const rowGap = 92;
+  const rowY = 278; // baseline of the first row (leaves room under the heading)
+  const rowGap = 80;
   const rowsSvg = matches
     .map((m, i) => {
       const y = rowY + i * rowGap;
@@ -241,7 +241,7 @@ function handleShareCard(url, request) {
   <text x="1120" y="${y}" text-anchor="end" font-family="${FONT}" font-size="44" font-weight="700" fill="${accent}">${m.pct}%</text>`;
     })
     .join("\n  ");
-  const buttonY = rowY + matches.length * rowGap + 6;
+  const buttonY = rowY + matches.length * rowGap;
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <title>${escapeSvg(ogTitle)}</title>
@@ -256,8 +256,10 @@ function handleShareCard(url, request) {
   <text x="80" y="120" font-family="${FONT}" font-size="32" fill="#97a3b6">${escapeSvg(subtitle)}</text>
   <text x="80" y="195" font-family="${FONT}" font-size="44" font-weight="700" fill="#e7ecf3">${escapeSvg(heading)}</text>
   ${rowsSvg}
-  <rect x="80" y="${buttonY}" width="300" height="58" rx="8" fill="#f7c948"/>
-  <text x="230" y="${buttonY + 37}" text-anchor="middle" font-family="${FONT}" font-size="26" font-weight="600" fill="#000">Take the quiz →</text>
+  <a href="/" target="_top">
+    <rect x="80" y="${buttonY}" width="300" height="58" rx="8" fill="#f7c948"/>
+    <text x="230" y="${buttonY + 37}" text-anchor="middle" font-family="${FONT}" font-size="26" font-weight="600" fill="#000">Take the quiz →</text>
+  </a>
 </svg>`;
 
   // When a browser navigates here directly (the "preview share card" link),

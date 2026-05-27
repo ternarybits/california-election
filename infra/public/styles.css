@@ -195,7 +195,6 @@ h4 { font-size: 0.9rem; margin: 8px 0; color: var(--muted); text-transform: uppe
   list-style: none;
   margin: 12px 0 0;
   padding: 8px 4px;
-  max-width: 520px;
 }
 .top3-row {
   display: flex;
@@ -223,8 +222,7 @@ h4 { font-size: 0.9rem; margin: 8px 0; color: var(--muted); text-transform: uppe
 .top3-name { display: flex; flex-direction: column; line-height: 1.2; flex: 1 1 auto; }
 .top3-pct { flex: none; font-weight: 700; font-size: 1.15rem; color: var(--accent-2); }
 .results-actions { margin-top: 8px; }
-.results-actions button { padding: 10px 18px; }
-.results-links { margin-top: 8px; }
+.results-actions button, .results-actions .btn-link { padding: 10px 18px; }
 .ranking-heading { margin-top: 28px; }
 
 /* Voter guide — modeled after a CA Official Voter Information Guide entry.
@@ -422,9 +420,17 @@ button, select {
   transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 /* Secondary buttons wear the brand outline (matching the primary fill) and
-   highlight it on hover — the same color move the primary fill makes. */
+   highlight it on hover — the same color move the primary fill makes, plus a
+   slight glow. Scoped to exclude buttons with their own identity (theme toggle,
+   flag, "go deeper"), which keep their own hover treatment. */
 button { border-color: var(--btn); }
-button:hover:not(:disabled) { border-color: var(--btn-hover); }
+button:not(.primary):not(.theme-toggle):not(.flag-btn):not(.vg-chat-btn):hover:not(:disabled) {
+  border-color: var(--btn-hover);
+  box-shadow: 0 1px 8px rgba(247, 201, 72, 0.3);
+}
+:root[data-theme="light"] button:not(.primary):not(.theme-toggle):not(.flag-btn):not(.vg-chat-btn):hover:not(:disabled) {
+  box-shadow: 0 1px 8px rgba(181, 115, 10, 0.25);
+}
 select { border-color: var(--border); }
 button:disabled { opacity: 0.5; cursor: not-allowed; border-color: var(--border); }
 button.primary {
@@ -454,9 +460,10 @@ button.primary:disabled { background: var(--panel-2); color: var(--muted); borde
   font-size: 1rem;
   text-decoration: none;
   text-align: center;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-.btn-link:hover { border-color: var(--btn-hover); }
+.btn-link:hover { border-color: var(--btn-hover); box-shadow: 0 1px 8px rgba(247, 201, 72, 0.3); }
+:root[data-theme="light"] .btn-link:hover { box-shadow: 0 1px 8px rgba(181, 115, 10, 0.25); }
 
 /* The share link can be a long unbroken URL (clipboard-blocked fallback) —
    wrap it so it never runs off the edge of the screen. */
