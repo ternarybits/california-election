@@ -10,6 +10,10 @@
   --warn: #e08566;
   --border: #262c39;
   --radius: 12px;
+  /* Shared button brand: the primary fill and the secondary outline use these,
+     so both share one color per mode. Hover brightens (dark) for "highlight". */
+  --btn: #f7c948;
+  --btn-hover: #ffd95e;
   color-scheme: dark;
 }
 
@@ -26,18 +30,17 @@
   --accent-3: #15824a;
   --warn: #c2410c;
   --border: #d2d9e6;
+  /* Light mode deepens on hover (darker = more prominent on a pale page). */
+  --btn: #b5730a;
+  --btn-hover: #9c6308;
   color-scheme: light;
 }
 /* Gold-on-pale-gold code chip needs a darker text in light mode to stay readable. */
 :root[data-theme="light"] .score-policy code { color: #8a5a00; }
 
 /* In light mode the amber primary button is dark enough that white text reads
-   as a stronger CTA than black; deepen the fill slightly to keep contrast. */
-:root[data-theme="light"] button.primary {
-  background: #b5730a;
-  border-color: #b5730a;
-  color: #fff;
-}
+   as a stronger CTA than black. */
+:root[data-theme="light"] button.primary { color: #fff; }
 
 /* Light mode reads flat if every surface is the same grey, so build hierarchy
    two ways: lift the white cards off the tinted page with a soft shadow, and
@@ -416,44 +419,44 @@ button, select {
   padding: 8px 14px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
-button:hover:not(:disabled) { border-color: var(--accent-2); }
-button:disabled { opacity: 0.5; cursor: not-allowed; }
+/* Secondary buttons wear the brand outline (matching the primary fill) and
+   highlight it on hover — the same color move the primary fill makes. */
+button { border-color: var(--btn); }
+button:hover:not(:disabled) { border-color: var(--btn-hover); }
+select { border-color: var(--border); }
+button:disabled { opacity: 0.5; cursor: not-allowed; border-color: var(--border); }
 button.primary {
-  background: var(--accent);
+  background: var(--btn);
   color: #000;
-  border-color: var(--accent);
+  border-color: var(--btn);
   font-weight: 600;
 }
-/* The generic hover only recolors the border, which is invisible on the gold
-   fill — give the primary button a deeper fill + soft glow so it clearly reads. */
-button.primary { transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease; }
+/* The generic hover only recolors the border, which is invisible on the filled
+   primary — brighten its fill + add a soft glow so the highlight clearly reads. */
 button.primary:hover:not(:disabled) {
-  background: #ffd95e;
-  border-color: #ffd95e;
+  background: var(--btn-hover);
+  border-color: var(--btn-hover);
   box-shadow: 0 2px 12px rgba(247, 201, 72, 0.45);
 }
-:root[data-theme="light"] button.primary:hover:not(:disabled) {
-  background: #9c6308;
-  border-color: #9c6308;
-  box-shadow: 0 2px 12px rgba(181, 115, 10, 0.4);
-}
+:root[data-theme="light"] button.primary:hover:not(:disabled) { box-shadow: 0 2px 12px rgba(181, 115, 10, 0.4); }
 button.primary:disabled { background: var(--panel-2); color: var(--muted); border-color: var(--border); }
 
-/* Anchor styled as a secondary button (e.g. "preview share card") */
+/* Anchor styled as a secondary button (e.g. the stats link) */
 .btn-link {
   display: inline-block;
   background: var(--panel-2);
   color: var(--text);
-  border: 1px solid var(--border);
+  border: 1px solid var(--btn);
   border-radius: 8px;
   padding: 8px 14px;
   font-size: 1rem;
   text-decoration: none;
   text-align: center;
+  transition: border-color 0.15s ease;
 }
-.btn-link:hover { border-color: var(--accent-2); }
+.btn-link:hover { border-color: var(--btn-hover); }
 
 /* The share link can be a long unbroken URL (clipboard-blocked fallback) —
    wrap it so it never runs off the edge of the screen. */
