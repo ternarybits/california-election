@@ -733,6 +733,7 @@ function renderRankingRow(r, rank) {
 
 function buildReceipt(candidate) {
   const tpl = $("#receipt-template").content.cloneNode(true);
+  I18N.apply(tpl); // localize the cloned template's static [data-i18n] headings
   const agreementsList = tpl.querySelector('[data-list="agreements"]');
   const disagreementsList = tpl.querySelector('[data-list="disagreements"]');
   populateReceiptList(agreementsList, candidate.top_agreements, candidate, "agreement");

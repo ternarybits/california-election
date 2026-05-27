@@ -141,6 +141,13 @@ test.describe("Language selector", () => {
     expect(esParty).toContain("Demócrata");
     expect(esBio).not.toBe(enBio); // bio_short is translated
     expect(esBio.length).toBeGreaterThan(0);
+
+    // The receipt headings live in a cloned <template>; they must be localized
+    // by I18N.apply() on the clone, not left at the English default.
+    const agreedHeading = topRow.locator('.see-why h4[data-i18n="receipt.agreedOn"]').first();
+    const agreedExpected = await page.evaluate(() => window.I18N.t("receipt.agreedOn"));
+    await expect(agreedHeading).toHaveText(agreedExpected);
+    expect(agreedExpected).not.toBe("You agreed on"); // sanity: es value differs
   });
 
   test("falls back to English for an unsupported browser locale", async ({ browser }) => {
