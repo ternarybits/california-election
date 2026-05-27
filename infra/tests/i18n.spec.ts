@@ -128,8 +128,7 @@ test.describe("Language selector", () => {
     expect(enName.length).toBeGreaterThan(0);
     expect(enParty).toContain("Democratic"); // progressive persona → Tom Steyer (D)
 
-    // Switch to Spanish: results re-render (rerender → buildRanking on localized
-    // candidates). Party + bio localize; the candidate name stays English.
+    // Switch to Spanish: results re-render. Party + bio localize; name stays English.
     await page.locator("#lang-select").selectOption("es");
     await expect(page.locator("#results")).toBeVisible();
     const esName = (await topRow.locator(".result-name strong").textContent())?.trim() ?? "";
@@ -148,6 +147,14 @@ test.describe("Language selector", () => {
     const agreedExpected = await page.evaluate(() => window.I18N.t("receipt.agreedOn"));
     await expect(agreedHeading).toHaveText(agreedExpected);
     expect(agreedExpected).not.toBe("You agreed on"); // sanity: es value differs
+
+    // Switching back restores English — exercises the fallback branch of
+    // localizeCandidate and re-cloning the receipt on every re-render.
+    await page.locator("#lang-select").selectOption("en");
+    await expect(page.locator("#results")).toBeVisible();
+    await expect(topRow.locator(".result-name .muted")).toHaveText(enParty);
+    await expect(topRow.locator("p.muted.small").first()).toHaveText(enBio);
+    await expect(topRow.locator('.see-why h4[data-i18n="receipt.agreedOn"]').first()).toHaveText("You agreed on");
   });
 
   test("falls back to English for an unsupported browser locale", async ({ browser }) => {
