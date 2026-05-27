@@ -61,6 +61,9 @@ function jaccardDistance(a, b) {
   return union === 0 ? 0 : 1 - inter / union;
 }
 
+// geographic_background and age_band map to single-valued categorical fields,
+// not tag arrays — wrapping them in a 1-element set makes Jaccard a plain
+// "same category or not?" distance, which is the intent.
 function tagsFor(candidate, dim) {
   const field = FIELD_MAP[dim.id] || dim.id;
   const raw = candidate.personal_attributes?.[field];

@@ -5,7 +5,7 @@
 // (env.DB); static UI assets are served from public/ via env.ASSETS.
 //
 // Dataset is imported and bundled into the Worker. Workers free-tier script
-// budget is 1 MB compressed; dataset_v1.json is ~80 KB gzipped, code is ~5 KB.
+// budget is 1 MB compressed; dataset_v1.json is ~130 KB gzipped, code is ~5 KB.
 
 import dataset from "../../dataset/dataset_v1.json";
 
@@ -213,7 +213,8 @@ function handleShareCard(url, request) {
   for (let i = 0; i < ids.length && matches.length < 3; i++) {
     const candidate = DATASET.candidates.find((c) => c.id === ids[i]);
     const pct = pcts[i];
-    if (candidate && Number.isFinite(pct)) matches.push({ candidate, pct: Math.round(pct) });
+    // Clamp to 0..100 so a hand-crafted/stale URL can't render a bogus percent.
+    if (candidate && Number.isFinite(pct)) matches.push({ candidate, pct: Math.max(0, Math.min(100, Math.round(pct))) });
   }
   if (!matches.length) return badRequest("c and p required");
 
@@ -262,7 +263,7 @@ function handleShareCard(url, request) {
   </a>
 </svg>`;
 
-  // When a browser navigates here directly (the "preview share card" link),
+  // When a browser opens this URL directly (e.g. the copied share-card link),
   // wrap the SVG in a centered HTML page on a full-bleed dark background and
   // give it a real document title. Image/social-embed fetches (Accept: image/*)
   // still get the raw SVG so it works as an OG/Twitter card.

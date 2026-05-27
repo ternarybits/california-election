@@ -79,9 +79,10 @@ const issues = await call("GET", "/api/issues");
 console.log(`✓ /api/issues returned ${issues.body.length} issues (expected 25)`);
 if (issues.body.length !== 25) throw new Error("issue count");
 
+const expectedQuestions = dataset.questions.filter((q) => q.default_quiz).length;
 const questions = await call("GET", "/api/questions");
-console.log(`✓ /api/questions returned ${questions.body.length} questions (expected 13)`);
-if (questions.body.length !== 13) throw new Error("question count");
+console.log(`✓ /api/questions returned ${questions.body.length} questions (expected ${expectedQuestions})`);
+if (questions.body.length !== expectedQuestions) throw new Error("question count");
 
 const expectedDims = dataset.personal_fit_dimensions.filter((d) => d.default_quiz).length;
 const dims = await call("GET", "/api/personal-fit-dimensions");
@@ -125,6 +126,26 @@ console.log("✓ /api/share-card.svg renders all three ranked candidates");
 const cardBad = await call("GET", "/api/share-card.svg?c=not_a_candidate&p=50");
 if (cardBad.status !== 400) throw new Error("share card should 400 on unknown candidate");
 console.log("✓ /api/share-card.svg rejects unknown candidate ids");
+
+// 3c) Robustness: a mid-list unknown id keeps the remaining pairs index-aligned
+// (porter must still pair with its own pct, not shift up), a length mismatch
+// drops the unpaired candidate, and an out-of-range pct is clamped to 0..100.
+const [c0, c1, c2] = dataset.candidates;
+const cardMid = await call("GET", `/api/share-card.svg?c=${c0.id},__nope__,${c2.id}&p=77,72,68`);
+if (cardMid.status !== 200) throw new Error("mid-list unknown should still render");
+if (!String(cardMid.body).includes(c0.name) || !String(cardMid.body).includes("77%")) throw new Error("mid-list: first pair lost");
+if (!String(cardMid.body).includes(c2.name) || !String(cardMid.body).includes("68%")) throw new Error("mid-list: third pair misaligned (should be 68%, not 72%)");
+if (String(cardMid.body).includes("72%")) throw new Error("mid-list: dropped pct 72 should not appear");
+console.log("✓ /api/share-card.svg keeps pct alignment when a mid-list id is unknown");
+
+const cardShortP = await call("GET", `/api/share-card.svg?c=${c0.id},${c1.id}&p=77`);
+if (cardShortP.status !== 200 || !String(cardShortP.body).includes(c0.name)) throw new Error("length mismatch should render paired candidate");
+if (String(cardShortP.body).includes(c1.name)) throw new Error("length mismatch: unpaired candidate should be dropped");
+console.log("✓ /api/share-card.svg drops the unpaired candidate on c/p length mismatch");
+
+const cardClamp = await call("GET", `/api/share-card.svg?c=${c0.id}&p=99999`);
+if (!String(cardClamp.body).includes("100%") || String(cardClamp.body).includes("99999")) throw new Error("out-of-range pct should clamp to 100%");
+console.log("✓ /api/share-card.svg clamps an out-of-range pct to 100%");
 
 // 4) POST /api/flag — D1 stub records the insert
 const flagRes = await call("POST", "/api/flag", {

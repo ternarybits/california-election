@@ -1,19 +1,23 @@
 import { test, expect } from "./fixtures";
 
-// Drives a complete quiz run end-to-end (13 policy + 7 personal-fit).
+// Drives a complete quiz run end-to-end (all policy + personal-fit questions).
 // Validates: results screen renders, ranking has 8 candidates, see-why
 // receipts render, share link is generated, what-if explorer works.
 
 test("complete quiz → results screen with receipts, share link, why-not, what-if", async ({ page }) => {
   test.setTimeout(60_000);
 
+  // Derive the policy-question count from the dataset (default_quiz flags) rather
+  // than hardcoding it, so a re-trim doesn't spuriously fail this test.
+  const policyCount = (await (await page.request.get("/api/questions")).json()).length;
+
   await page.goto("/");
   await page.getByRole("button", { name: /start the quiz/i }).click();
   await expect(page.locator("#policy-quiz")).toBeVisible();
 
   // Answer all policy questions with stance 5 + high importance (progressive persona)
-  for (let i = 0; i < 13; i++) {
-    await expect(page.locator("#pq-progress")).toContainText(`Question ${i + 1} of 13`);
+  for (let i = 0; i < policyCount; i++) {
+    await expect(page.locator("#pq-progress")).toContainText(`Question ${i + 1} of ${policyCount}`);
     const opt5 = page.locator("#pq-options input[value='5']");
     const has5 = await opt5.count();
     if (has5 > 0) {

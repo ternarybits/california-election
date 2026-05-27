@@ -22,19 +22,25 @@ test.describe("API endpoints", () => {
     expect(body[0]).toHaveProperty("party");
   });
 
-  test("/api/questions returns 13 default-quiz items in rank order", async ({ request }) => {
+  test("/api/questions returns the default-quiz items in rank order", async ({ request }) => {
+    // Count is derived from the dataset's default_quiz flags, not hardcoded, so a
+    // re-trim (score_questions.mjs --top N) doesn't spuriously fail this test.
+    const ds = await (await request.get("/api/dataset")).json();
+    const expected = ds.questions.filter((q: { default_quiz?: boolean }) => q.default_quiz).length;
     const res = await request.get("/api/questions");
     const body = await res.json();
-    expect(body).toHaveLength(13);
+    expect(body).toHaveLength(expected);
     for (let i = 0; i < body.length; i++) {
       expect(body[i].rank).toBe(i + 1);
     }
   });
 
-  test("/api/personal-fit-dimensions returns the 7 default-quiz dimensions in rank order", async ({ request }) => {
+  test("/api/personal-fit-dimensions returns the default-quiz dimensions in rank order", async ({ request }) => {
+    const ds = await (await request.get("/api/dataset")).json();
+    const expected = ds.personal_fit_dimensions.filter((d: { default_quiz?: boolean }) => d.default_quiz).length;
     const res = await request.get("/api/personal-fit-dimensions");
     const body = await res.json();
-    expect(body).toHaveLength(7);
+    expect(body).toHaveLength(expected);
     for (let i = 0; i < body.length; i++) {
       expect(body[i].rank).toBe(i + 1);
     }
