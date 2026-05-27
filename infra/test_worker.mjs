@@ -102,6 +102,30 @@ const root_ = await call("GET", "/api");
 if (!root_.body.ok) throw new Error("/api should return ok");
 console.log(`✓ /api discovery endpoint returned ${root_.body.endpoints.length} endpoints`);
 
+// 3b) /api/share-card.svg — single + top-3
+const card1 = await call("GET", `/api/share-card.svg?c=${dataset.candidates[0].id}&p=77`);
+if (card1.status !== 200 || !String(card1.body).includes("<svg")) throw new Error("single share card should render SVG");
+if (!String(card1.body).includes(dataset.candidates[0].name) || !String(card1.body).includes("77%")) {
+  throw new Error("single share card missing name or pct");
+}
+console.log("✓ /api/share-card.svg renders a single-candidate SVG");
+
+const top3 = dataset.candidates.slice(0, 3);
+const card3 = await call("GET", `/api/share-card.svg?c=${top3.map((c) => c.id).join(",")}&p=77,72,68`);
+if (card3.status !== 200 || !String(card3.body).includes("<svg")) throw new Error("top-3 share card should render SVG");
+for (const [i, c] of top3.entries()) {
+  const pct = ["77%", "72%", "68%"][i];
+  if (!String(card3.body).includes(c.name) || !String(card3.body).includes(pct)) {
+    throw new Error(`top-3 share card missing ${c.name} or ${pct}`);
+  }
+}
+if (!String(card3.body).includes("top 3 policy matches")) throw new Error("top-3 card missing heading");
+console.log("✓ /api/share-card.svg renders all three ranked candidates");
+
+const cardBad = await call("GET", "/api/share-card.svg?c=not_a_candidate&p=50");
+if (cardBad.status !== 400) throw new Error("share card should 400 on unknown candidate");
+console.log("✓ /api/share-card.svg rejects unknown candidate ids");
+
 // 4) POST /api/flag — D1 stub records the insert
 const flagRes = await call("POST", "/api/flag", {
   candidate_id: "porter",

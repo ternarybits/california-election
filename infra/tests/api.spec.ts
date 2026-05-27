@@ -62,6 +62,16 @@ test.describe("API endpoints", () => {
     expect(body).toContain("77%");
   });
 
+  test("/api/share-card.svg renders a top-3 card", async ({ request }) => {
+    const res = await request.get("/api/share-card.svg?c=steyer,porter,becerra&p=77,72,68");
+    expect(res.headers()["content-type"]).toContain("image/svg+xml");
+    const body = await res.text();
+    expect(body).toContain("top 3 policy matches");
+    expect(body).toContain("Tom Steyer");
+    expect(body).toContain("72%");
+    expect(body).toContain("68%");
+  });
+
   // Validation rejections don't write to D1, so they're safe against any target.
   test("/api/flag rejects missing fields", async ({ request }) => {
     const res = await request.post("/api/flag", { data: { candidate_id: "x" } });

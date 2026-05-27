@@ -204,57 +204,47 @@ function escapeSvg(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
-// SVG <text> has no auto-wrap, so greedily pack words into up to maxLines lines
-// of ~maxChars each. If text remains after the last line, ellipsize it.
-function wrapText(text, maxChars, maxLines) {
-  const words = String(text).split(/\s+/).filter(Boolean);
-  const lines = [""];
-  let truncated = false;
-  for (const w of words) {
-    const i = lines.length - 1;
-    const candidate = lines[i] ? `${lines[i]} ${w}` : w;
-    if (candidate.length <= maxChars) {
-      lines[i] = candidate;
-    } else if (lines.length < maxLines) {
-      lines.push(w);
-    } else {
-      truncated = true;
-      break;
-    }
-  }
-  if (truncated) {
-    const i = lines.length - 1;
-    lines[i] = lines[i].replace(/[;,·\s]+$/, "") + "…";
-  }
-  return lines;
-}
-
 function handleShareCard(url, request) {
-  const candidateId = url.searchParams.get("c");
-  const pct = Number(url.searchParams.get("p"));
-  const candidate = DATASET.candidates.find((c) => c.id === candidateId);
-  if (!candidate || !Number.isFinite(pct)) return badRequest("c and p required");
+  // Accept up to 3 ranked candidates: c=id1,id2,id3 & p=77,72,68. A single
+  // value still works (back-compat with older share links).
+  const ids = (url.searchParams.get("c") ?? "").split(",").map((s) => s.trim()).filter(Boolean);
+  const pcts = (url.searchParams.get("p") ?? "").split(",").map((s) => Number(s.trim()));
+  const matches = [];
+  for (let i = 0; i < ids.length && matches.length < 3; i++) {
+    const candidate = DATASET.candidates.find((c) => c.id === ids[i]);
+    const pct = pcts[i];
+    if (candidate && Number.isFinite(pct)) matches.push({ candidate, pct: Math.round(pct) });
+  }
+  if (!matches.length) return badRequest("c and p required");
 
-  const pctRounded = Math.round(pct);
-  const docTitle = `${candidate.name} — ${pctRounded}% policy match · CA 2026 Governor Primary`;
+  const top = matches[0];
   const subtitle = "CA 2026 Governor Primary — Candidate Matcher";
-  const matchLine = `${pctRounded}% policy match`;
+  const heading = matches.length > 1 ? `My top ${matches.length} policy matches` : `${top.pct}% policy match`;
+  const ogTitle = matches.map((m) => `${m.candidate.name} (${m.pct}%)`).join(" · ");
+  const docTitle = `My top ${matches.length === 1 ? "match" : matches.length} · CA 2026 Governor Primary`;
 
-  // SVG has no auto-wrap, so size the name to fit the ~1040px text column. Name
-  // and match-percent go on separate lines (a long name plus the percent on one
-  // line overflowed the card). The bio wraps to up to two lines.
   const FONT = "-apple-system, system-ui, sans-serif";
-  const nameFont = Math.max(42, Math.min(76, Math.floor(1040 / Math.max(1, candidate.name.length * 0.6))));
-  const bioFull = `${candidate.party} · ${candidate.bio_short ?? ""}`;
-  const bioLines = wrapText(bioFull, 78, 2);
-  const bioSvg = bioLines
-    .map((line, i) => `<text x="80" y="${400 + i * 36}" font-family="${FONT}" font-size="26" fill="#97a3b6">${escapeSvg(line)}</text>`)
+  const medals = ["#f7c948", "#c7ccd6", "#cd8a4b"]; // gold / silver / bronze accents
+  const rowY = 300; // baseline of the first row
+  const rowGap = 92;
+  const rowsSvg = matches
+    .map((m, i) => {
+      const y = rowY + i * rowGap;
+      const accent = medals[i] ?? "#97a3b6";
+      // Size the name to fit between the rank badge (~x=150) and the percent (~x=980).
+      const nameFont = Math.max(30, Math.min(50, Math.floor(820 / Math.max(1, m.candidate.name.length * 0.55))));
+      const sub = escapeSvg(m.candidate.party ?? "");
+      return `<circle cx="105" cy="${y - 12}" r="26" fill="${accent}"/>
+  <text x="105" y="${y - 3}" text-anchor="middle" font-family="${FONT}" font-size="30" font-weight="700" fill="#0f1115">${i + 1}</text>
+  <text x="150" y="${y}" font-family="${FONT}" font-size="${nameFont}" font-weight="700" fill="#e7ecf3">${escapeSvg(m.candidate.name)}</text>
+  <text x="150" y="${y + 30}" font-family="${FONT}" font-size="24" fill="#97a3b6">${sub}</text>
+  <text x="1120" y="${y}" text-anchor="end" font-family="${FONT}" font-size="44" font-weight="700" fill="${accent}">${m.pct}%</text>`;
+    })
     .join("\n  ");
-  // Push the button below however many bio lines rendered.
-  const buttonY = 400 + bioLines.length * 36 + 12;
+  const buttonY = rowY + matches.length * rowGap + 6;
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <title>${escapeSvg(docTitle)}</title>
+  <title>${escapeSvg(ogTitle)}</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f1115"/>
@@ -264,9 +254,8 @@ function handleShareCard(url, request) {
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect x="40" y="40" width="1120" height="550" rx="20" fill="#1d2230" stroke="#262c39" stroke-width="2"/>
   <text x="80" y="120" font-family="${FONT}" font-size="32" fill="#97a3b6">${escapeSvg(subtitle)}</text>
-  <text x="80" y="265" font-family="${FONT}" font-size="${nameFont}" font-weight="700" fill="#e7ecf3">${escapeSvg(candidate.name)}</text>
-  <text x="80" y="340" font-family="${FONT}" font-size="46" font-weight="700" fill="#f7c948">${escapeSvg(matchLine)}</text>
-  ${bioSvg}
+  <text x="80" y="195" font-family="${FONT}" font-size="44" font-weight="700" fill="#e7ecf3">${escapeSvg(heading)}</text>
+  ${rowsSvg}
   <rect x="80" y="${buttonY}" width="300" height="58" rx="8" fill="#f7c948"/>
   <text x="230" y="${buttonY + 37}" text-anchor="middle" font-family="${FONT}" font-size="26" font-weight="600" fill="#000">Take the quiz →</text>
 </svg>`;
@@ -277,14 +266,14 @@ function handleShareCard(url, request) {
   // still get the raw SVG so it works as an OG/Twitter card.
   const accept = request?.headers.get("accept") ?? "";
   if (accept.includes("text/html")) {
-    const cardUrl = `/api/share-card.svg?c=${encodeURIComponent(candidate.id)}&p=${pctRounded}`;
+    const cardUrl = `/api/share-card.svg?c=${encodeURIComponent(matches.map((m) => m.candidate.id).join(","))}&p=${matches.map((m) => m.pct).join(",")}`;
     const html = `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeSvg(docTitle)}</title>
-<meta property="og:title" content="${escapeSvg(`${candidate.name} — ${matchLine}`)}">
+<meta property="og:title" content="${escapeSvg(ogTitle)}">
 <meta property="og:description" content="${escapeSvg(subtitle)}">
 <meta property="og:image" content="${escapeSvg(cardUrl)}">
 <meta name="twitter:card" content="summary_large_image">

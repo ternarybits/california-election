@@ -76,26 +76,30 @@ test("complete quiz → results screen with receipts, share link, why-not, what-
   const wiOptions = whatIf.locator(".wi-option");
   expect(await wiOptions.count()).toBeGreaterThan(0);
 
-  // Share link button should be clickable; copy-link button present
+  // Results actions are present near the top: copy-link + preview card + retake.
   await expect(page.locator("#copy-link")).toBeVisible();
+  await expect(page.locator("#retake")).toBeVisible();
 
-  // Share-link round-trip: generate the link, open it in a fresh page, and
-  // confirm it reproduces the same result (answers are encoded in the URL hash,
-  // base64url with re-derived padding — exercise the full encode→decode path).
-  const copyLink = page.locator("#copy-link");
-  await copyLink.scrollIntoViewIfNeeded();
-  // Force past mobile actionability quirks (a sibling element overlaps the hit
-  // point mid-scroll); the button is visually clear and functional for users.
-  await copyLink.click({ force: true });
-  // The copy handler populates #share-status after an async clipboard call —
-  // wait for it rather than reading immediately.
-  await expect(page.locator("#share-status")).toContainText("#r=", { timeout: 10_000 });
-  const statusText = await page.locator("#share-status").textContent();
-  const shareUrl = statusText?.match(/https?:\/\/\S+#r=\S+/)?.[0];
-  expect(shareUrl, "a share URL with an #r= hash should be generated").toBeTruthy();
+  // The top-3 summary lists three matches, and "copy share link" carries a
+  // top-3 share-card URL (3 comma-separated candidate ids + 3 percents).
+  await expect(page.locator("#top3-summary .top3-row")).toHaveCount(3);
+  const cardHref = await page.locator("#copy-link").getAttribute("data-share-card");
+  expect(cardHref, "share-card URL should be set").toBeTruthy();
+  const cardParams = new URL(cardHref!).searchParams;
+  expect(cardParams.get("c")?.split(",").length).toBe(3);
+  expect(cardParams.get("p")?.split(",").length).toBe(3);
+  expect(cardHref).toContain("/api/share-card.svg");
+
+  // Reaching results updates the address bar to the full-result link (answers
+  // encoded in the #r= hash) so it can be copied straight from there.
+  expect(page.url()).toMatch(/#r=\S+/);
+
+  // Share-link round-trip: open the address-bar URL in a fresh page and confirm
+  // it reproduces the same result (base64url encode→decode of the answers).
+  const shareUrl = page.url();
 
   const fresh = await page.context().newPage();
-  await fresh.goto(shareUrl!);
+  await fresh.goto(shareUrl);
   await expect(fresh.locator("#results")).toBeVisible();
   await expect(fresh.locator("#ranking > li")).toHaveCount(8);
   await expect(fresh.locator("#ranking > li").first().locator(".result-name strong")).toHaveText("Tom Steyer");

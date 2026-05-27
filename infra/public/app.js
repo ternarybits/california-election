@@ -537,24 +537,47 @@ function renderResults({ fromShare = false, staleVersion = null } = {}) {
   // What-if explorer
   renderWhatIf(ranking);
 
-  // Share link wiring
-  const shareUrl = makeShareUrl();
+  // Headline the top match by name.
+  const topMatch = ranking[0];
+  $("#results-heading").textContent = topMatch ? `Your match: ${topMatch.name}` : "Your match";
+
+  // Put the full-result link in the address bar so it can be copied straight
+  // from there — no button click needed. (Encodes answers in the #r= hash.)
+  history.replaceState(null, "", makeShareUrl());
+
+  // Native, theme-aware recap of the top 3 matches. "Copy share link" copies
+  // the share-card page URL (the same OG card that renders for social embeds).
+  // The address bar already carries the full-result link for reproducing the rank.
+  const top3 = ranking.filter((r) => r.policy_match_pct != null).slice(0, 3);
+  const summaryEl = $("#top3-summary");
+  summaryEl.innerHTML = "";
+  top3.forEach((r, i) => {
+    const li = document.createElement("li");
+    li.className = `top3-row rank-${i + 1}`;
+    li.innerHTML = `
+      <span class="top3-rank">${i + 1}</span>
+      <span class="top3-name"><strong>${escapeHtml(r.name)}</strong><span class="muted small">${escapeHtml(r.party ?? "")}</span></span>
+      <span class="top3-pct">${r.policy_match_pct}%</span>
+    `;
+    summaryEl.appendChild(li);
+  });
+
   const copyBtn = $("#copy-link");
-  copyBtn.onclick = async () => {
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      $("#share-status").textContent = "Link copied to clipboard ✓";
-    } catch {
-      // Clipboard blocked — show the bare link so it can be copied by hand.
-      $("#share-status").textContent = shareUrl;
-    }
-  };
-  // Share-card preview link (worker endpoint renders an SVG with the top result).
-  if (ranking[0]?.policy_match_pct != null) {
-    const top = ranking[0];
-    $("#share-card-link").href = `/api/share-card.svg?c=${encodeURIComponent(top.id)}&p=${top.policy_match_pct}`;
+  if (top3.length) {
+    const cardUrl = top3CardUrl(top3);
+    copyBtn.dataset.shareCard = cardUrl;
+    copyBtn.classList.remove("hidden");
+    copyBtn.onclick = async () => {
+      try {
+        await navigator.clipboard.writeText(cardUrl);
+        $("#share-status").textContent = "Share-card link copied to clipboard ✓";
+      } catch {
+        // Clipboard blocked — show the bare link so it can be copied by hand.
+        $("#share-status").textContent = cardUrl;
+      }
+    };
   } else {
-    $("#share-card-link").classList.add("hidden");
+    copyBtn.classList.add("hidden");
   }
   $("#retake").onclick = () => {
     location.hash = "";
@@ -832,6 +855,13 @@ function animateIn(el) {
 // The quiz's own shareable URL — base page, no result hash.
 function quizShareUrl() {
   return `${location.origin}${location.pathname}`;
+}
+
+// Absolute URL to the top-3 share card page (worker renders an SVG + OG tags).
+function top3CardUrl(top3) {
+  const c = top3.map((r) => encodeURIComponent(r.id)).join(",");
+  const p = top3.map((r) => r.policy_match_pct).join(",");
+  return `${location.origin}/api/share-card.svg?c=${c}&p=${p}`;
 }
 
 // Render curated prose with inline markdown links: [label](https://…).

@@ -65,7 +65,7 @@ body {
 }
 
 /* Display headings in an editorial serif; body and small labels stay in Inter. */
-h1, h2 {
+h1, h2, h3 {
   font-family: "Newsreader", Georgia, "Times New Roman", serif;
   letter-spacing: -0.01em;
 }
@@ -126,6 +126,7 @@ h4 { font-size: 0.9rem; margin: 8px 0; color: var(--muted); text-transform: uppe
   border-top: 1px solid var(--border);
 }
 .faq h3 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -177,6 +178,43 @@ h4 { font-size: 0.9rem; margin: 8px 0; color: var(--muted); text-transform: uppe
   flex-wrap: wrap;
 }
 .row label { color: var(--muted); }
+
+/* Native, theme-aware recap of the top 3 matches, just under the heading. */
+.top3-summary {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 8px 4px;
+  max-width: 520px;
+}
+.top3-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 4px;
+}
+.top3-row + .top3-row { border-top: 1px solid var(--border); }
+.top3-rank {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  background: var(--border);
+}
+.top3-row.rank-1 .top3-rank { background: #f7c948; }
+.top3-row.rank-2 .top3-rank { background: #c7ccd6; }
+.top3-row.rank-3 .top3-rank { background: #cd8a4b; }
+.top3-name { display: flex; flex-direction: column; line-height: 1.2; flex: 1 1 auto; }
+.top3-pct { flex: none; font-weight: 700; font-size: 1.15rem; color: var(--accent-2); }
+.results-actions { margin-top: 8px; }
+.results-actions button { padding: 10px 18px; }
+.results-links { margin-top: 8px; }
+.ranking-heading { margin-top: 28px; }
 
 /* Voter guide — modeled after a CA Official Voter Information Guide entry.
    Always shown (not collapsible): everyone should read the context. */
@@ -385,12 +423,13 @@ button.primary:disabled { background: var(--panel-2); color: var(--muted); borde
 .btn-link {
   display: inline-block;
   background: var(--panel-2);
-  color: var(--accent-2);
+  color: var(--text);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 8px 14px;
   font-size: 1rem;
   text-decoration: none;
+  text-align: center;
 }
 .btn-link:hover { border-color: var(--accent-2); }
 
