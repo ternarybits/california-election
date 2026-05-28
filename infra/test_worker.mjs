@@ -211,6 +211,18 @@ if (issueArg !== null || stanceArg !== null || matchArg !== null) {
 }
 console.log(`✓ POST /api/tally coerces non-string / non-finite optional fields to null`);
 
+// 5d) lang is stored when it's a supported code, and coerced to null otherwise.
+// bind order: ..., detail(8), lang(9), dataset_version(10), created_at(11)
+d1Inserts.length = 0;
+await call("POST", "/api/tally", { kind: "quiz_complete", session_id: "test123", candidate_id: dataset.candidates[0].id, match_pct: 80, lang: "es" });
+const langInsert = d1Inserts.find((i) => i.sql.includes("INSERT INTO events"));
+if (langInsert.args[9] !== "es") throw new Error(`supported lang should bind through; got ${JSON.stringify(langInsert.args[9])}`);
+d1Inserts.length = 0;
+await call("POST", "/api/tally", { kind: "quiz_complete", session_id: "test123", candidate_id: dataset.candidates[0].id, match_pct: 80, lang: "xx" });
+const badLangInsert = d1Inserts.find((i) => i.sql.includes("INSERT INTO events"));
+if (badLangInsert.args[9] !== null) throw new Error(`unsupported lang should bind null; got ${JSON.stringify(badLangInsert.args[9])}`);
+console.log(`✓ POST /api/tally stores supported lang and coerces unknown lang to null`);
+
 // 6) Validation: bad flag body returns 400
 const badFlag = await call("POST", "/api/flag", { candidate_id: "x" });
 if (badFlag.status !== 400) throw new Error("missing issue_id should 400");

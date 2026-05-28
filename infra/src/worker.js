@@ -11,6 +11,10 @@ import dataset from "../../dataset/dataset_v1.json";
 
 const DATASET = dataset;
 
+// Languages the UI/dataset ship in — mirrors I18N_SUPPORTED in public/i18n.js.
+// Used to keep the per-language analytics tally clean.
+const SUPPORTED_LANGS = new Set(["en", "es", "zh", "vi", "tl", "ko"]);
+
 function json(body, init = {}) {
   return new Response(JSON.stringify(body), {
     ...init,
@@ -146,6 +150,7 @@ async function handlePostEvent(request, env, ctx) {
     candidate_id = null,
     match_pct = null,
     detail = null,
+    lang = null,
   } = body;
 
   const validKinds = new Set(["quiz_start", "policy_answer", "personal_answer", "quiz_complete", "chat_opened"]);
@@ -166,11 +171,14 @@ async function handlePostEvent(request, env, ctx) {
   // detail holds free-text (the user's typed question on chat_opened). Truncate
   // rather than reject — it's best-effort analytics like the rest of this row.
   const detailOrNull = typeof detail === "string" && detail.trim() ? detail.trim().slice(0, 500) : null;
+  // lang is the session's UI/dataset language. Constrain to the supported set so
+  // a stray value can't pollute the per-language tally; anything else → null.
+  const langOrNull = SUPPORTED_LANGS.has(lang) ? lang : null;
 
   await env.DB.prepare(
     `INSERT INTO events
-       (kind, session_id, issue_id, dimension_id, stance, importance, candidate_id, match_pct, detail, dataset_version, created_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+       (kind, session_id, issue_id, dimension_id, stance, importance, candidate_id, match_pct, detail, lang, dataset_version, created_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
   )
     .bind(
       kind,
@@ -182,6 +190,7 @@ async function handlePostEvent(request, env, ctx) {
       strOrNull(candidate_id),
       numOrNull(match_pct),
       detailOrNull,
+      langOrNull,
       DATASET.version,
       Date.now(),
     )
@@ -479,7 +488,7 @@ function handleTopicPage(issueId) {
 async function handleGetStats(env) {
   if (!env.DB) return json({ error: "database not configured" }, { status: 503 });
 
-  const [completes, byIssue, byTopCandidate, recentQuestions] = await Promise.all([
+  const [completes, byIssue, byTopCandidate, recentQuestions, byLang] = await Promise.all([
     env.DB.prepare("SELECT COUNT(*) AS n FROM events WHERE kind = 'quiz_complete'").first(),
     // Count each session's *latest* answer per issue, so going back and changing
     // an answer doesn't double-count (back-nav re-emits a policy_answer event).
@@ -507,6 +516,15 @@ async function handleGetStats(env) {
         ORDER BY created_at DESC
         LIMIT 20`,
     ).all(),
+    // Language each completed quiz finished in. Older completions predate the
+    // lang column, so a NULL bucket ("unknown") is expected and surfaced as such.
+    env.DB.prepare(
+      `SELECT lang, COUNT(*) AS n
+         FROM events
+        WHERE kind = 'quiz_complete'
+        GROUP BY lang
+        ORDER BY n DESC`,
+    ).all(),
   ]);
 
   // Live counter — never let a browser or proxy serve a stale snapshot, so a
@@ -518,6 +536,7 @@ async function handleGetStats(env) {
     by_issue_stance: byIssue?.results ?? [],
     top_candidate_share: byTopCandidate?.results ?? [],
     recent_questions: recentQuestions?.results ?? [],
+    by_lang: byLang?.results ?? [],
   }, { headers: { "cache-control": "no-store" } });
 }
 
