@@ -2,7 +2,9 @@
 //
 // Loaded as a classic <script> in <head> (after theme.js) so window.I18N exists
 // before app.js (a module) runs. It:
-//   - picks a language from localStorage, else the browser locale, else English
+//   - picks a language from the ?locale= URL param, else localStorage, else the
+//     browser locale, else English (a ?locale= link wins and is persisted, so a
+//     shared https://…/?locale=zh-CN link opens in that language)
 //   - fills any element carrying data-i18n / data-i18n-aria / data-i18n-placeholder
 //   - exposes I18N.t(key, params) for the strings app.js builds at runtime
 //   - persists the choice and dispatches "i18n:change" so app.js can re-render
@@ -16,6 +18,18 @@ var I18N_SUPPORTED = ["en", "es", "zh", "vi", "tl", "ko"];
 var I18N_AUTONYMS = { en: "English", es: "Español", zh: "中文", vi: "Tiếng Việt", tl: "Tagalog", ko: "한국어" };
 // Human language name to ask an external AI to reply in (used in hand-off prompt).
 var I18N_REPLY_LANG = { en: "English", es: "Spanish", zh: "Chinese", vi: "Vietnamese", tl: "Tagalog", ko: "Korean" };
+// Full BCP-47 locale (language + region) we emit in the ?locale= URL param and
+// share links, so the value is a real locale rather than a bare language. Every
+// reader is US-based (this is a California election), so the region is US — the
+// audience, not the language's country of origin — EXCEPT Chinese, which stays
+// zh-CN to preserve the Simplified-script signal (zh-US would be ambiguous, since
+// US Chinese readers split between Simplified and Traditional; our content is
+// Simplified). The region is otherwise just a label: normalize() discards it on
+// read (every tag maps back to one of the six base languages) and also tolerates
+// a bare code or any other region. (If we ever add Traditional Chinese, split on
+// script: zh-Hans/zh-CN for Simplified vs zh-Hant/zh-TW for Traditional.)
+var I18N_LOCALES = { en: "en-US", es: "es-US", zh: "zh-CN", vi: "vi-US", tl: "tl-US", ko: "ko-US" };
+function localeTag(l) { return I18N_LOCALES[l] || l; }
 
 // English is the source of truth. Other languages are merged in below; any
 // missing key falls back to the English string, so partial translations are safe.
@@ -783,10 +797,12 @@ TRANSLATIONS.ko["intro.langNote"] = "참고: 후보자 이름과 인용된 출�
   function store(l) { try { localStorage.setItem("lang", l); } catch (e) { /* private mode */ } }
 
   // Map a BCP-47 tag to one of our supported codes (zh-Hans/zh-TW → zh, fil → tl).
+  // Accepts hyphen (en-US) and underscore (en_US) region separators, and a bare
+  // language code (en); only the primary subtag selects the language for now.
   function normalize(tag) {
     if (!tag) return null;
     var lower = String(tag).toLowerCase();
-    var primary = lower.split("-")[0];
+    var primary = lower.split(/[-_]/)[0];
     if (primary === "zh") return "zh";
     if (primary === "fil" || primary === "tl") return "tl";
     if (I18N_SUPPORTED.indexOf(primary) !== -1) return primary;
@@ -802,13 +818,43 @@ TRANSLATIONS.ko["intro.langNote"] = "참고: 후보자 이름과 인용된 출�
     return null;
   }
 
+  // An explicit ?locale= (or ?lang=) param wins — it's how someone shares a link
+  // in a specific language. normalize() maps tags like zh-CN → zh, fil → tl.
+  function detectFromUrl() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      return normalize(params.get("locale") || params.get("lang"));
+    } catch (e) { return null; }
+  }
+
+  // True when the language reflects a deliberate choice — a ?locale= link, a
+  // stored prior choice, or the in-app selector — rather than browser
+  // auto-detection or the English fallback. Only deliberate choices get pinned
+  // into the address bar and shareable links (see syncUrl / shareLocale), so a
+  // default visitor's links stay locale-less and let each recipient auto-detect.
+  var explicit = false;
+
   var lang = (function () {
+    var fromUrl = detectFromUrl();
+    if (fromUrl) { store(fromUrl); explicit = true; return fromUrl; } // shared link → pin + persist
     var s = stored();
-    if (s && I18N_SUPPORTED.indexOf(s) !== -1) return s;
+    if (s && I18N_SUPPORTED.indexOf(s) !== -1) { explicit = true; return s; }
     return detectFromBrowser() || "en";
   })();
 
   document.documentElement.setAttribute("lang", lang);
+
+  // Reflect the chosen language in the address bar as ?locale=<full locale>,
+  // preserving the path and any #r= result hash so the URL itself is shareable.
+  // replaceState (not push) keeps the back button from cycling through languages.
+  function syncUrl(l) {
+    try {
+      var url = new URL(window.location.href);
+      url.searchParams.set("locale", localeTag(l));
+      url.searchParams.delete("lang"); // collapse the legacy alias onto ?locale=
+      window.history.replaceState(null, "", url.toString());
+    } catch (e) { /* no URL/History API (e.g. file://) — skip */ }
+  }
 
   function interpolate(s, params) {
     if (!params) return s;
@@ -867,7 +913,9 @@ TRANSLATIONS.ko["intro.langNote"] = "참고: 후보자 이름과 인용된 출�
   function setLang(l) {
     if (I18N_SUPPORTED.indexOf(l) === -1 || l === lang) return;
     lang = l;
+    explicit = true;
     store(l);
+    syncUrl(l);
     document.documentElement.setAttribute("lang", l);
     apply(document);
     var sel = document.getElementById("lang-select");
@@ -881,6 +929,10 @@ TRANSLATIONS.ko["intro.langNote"] = "참고: 후보자 이름과 인용된 출�
     autonyms: I18N_AUTONYMS,
     replyLanguage: function () { return I18N_REPLY_LANG[lang] || "English"; },
     isDefaultLang: function () { return lang === "en"; },
+    // The full locale (e.g. "es-US") to pin into shareable URLs, or null when
+    // the language was auto-detected / left at the English default — then each
+    // recipient's own browser locale decides. Consumed by app.js's withLocale().
+    shareLocale: function () { return explicit ? localeTag(lang) : null; },
     t: t,
     apply: apply,
     setLang: setLang,

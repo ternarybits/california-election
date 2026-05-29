@@ -100,6 +100,83 @@ test.describe("Language selector", () => {
     await context.close();
   });
 
+  test("respects a ?locale= URL param (zh-CN → zh) over the browser locale, and persists it", async ({ page }) => {
+    // Browser locale is the default en-US, but a shared ?locale= link wins.
+    await page.goto("/?locale=zh-CN");
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh");
+    await expect(page.locator("#lang-select")).toHaveValue("zh");
+
+    // The choice is persisted, so navigating to a param-less URL keeps Chinese.
+    await page.goto("/");
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh");
+  });
+
+  test("accepts an underscore-separated locale (es_MX → es)", async ({ page }) => {
+    await page.goto("/?locale=es_MX");
+    await expect(page.locator("html")).toHaveAttribute("lang", "es");
+  });
+
+  test("?locale= wins over a previously stored preference", async ({ page }) => {
+    await page.goto("/");
+    await page.locator("#lang-select").selectOption("es");
+    await expect(page.locator("html")).toHaveAttribute("lang", "es");
+
+    // A link in a different language overrides the stored choice on next load.
+    await page.goto("/?locale=ko");
+    await expect(page.locator("html")).toHaveAttribute("lang", "ko");
+  });
+
+  test("ignores an unsupported ?locale= and falls back to the browser locale", async ({ page }) => {
+    // de isn't supported and there's no stored choice → en-US browser default.
+    await page.goto("/?locale=de");
+    await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  });
+
+  test("changing language pins a full ?locale= in the address bar, which round-trips", async ({ page }) => {
+    await page.goto("/");
+    expect(new URL(page.url()).searchParams.get("locale")).toBeNull();
+
+    // The emitted value is a full BCP-47 locale (language + US region), not a bare code.
+    await page.locator("#lang-select").selectOption("ko");
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("ko-US");
+
+    // Switching again rewrites (not stacks) the param.
+    await page.locator("#lang-select").selectOption("vi");
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("vi-US");
+
+    // The full locale we emit reads back to the same language on reload.
+    await page.goto(`/?locale=vi-US`);
+    await expect(page.locator("html")).toHaveAttribute("lang", "vi");
+  });
+
+  test("share buttons carry the chosen full ?locale=", async ({ browser }) => {
+    const context = await browser.newContext({ permissions: ["clipboard-read", "clipboard-write"] });
+    const page = await context.newPage();
+    await page.route("**/api/tally", (r) => r.fulfill({ status: 200, contentType: "application/json", body: '{"ok":true}' }));
+    await page.goto("/");
+
+    await page.locator("#lang-select").selectOption("vi");
+    await page.locator("#share-quiz").click();
+    const copied = await page.evaluate(() => navigator.clipboard.readText());
+    expect(new URL(copied).searchParams.get("locale")).toBe("vi-US");
+    await context.close();
+  });
+
+  test("share link is locale-less when the language was only auto-detected", async ({ browser }) => {
+    // Korean browser, no explicit choice → the shared link omits ?locale= so the
+    // recipient's own browser locale decides.
+    const context = await browser.newContext({ locale: "ko-KR", permissions: ["clipboard-read", "clipboard-write"] });
+    const page = await context.newPage();
+    await page.route("**/api/tally", (r) => r.fulfill({ status: 200, contentType: "application/json", body: '{"ok":true}' }));
+    await page.goto("/");
+    await expect(page.locator("html")).toHaveAttribute("lang", "ko");
+
+    await page.locator("#share-quiz").click();
+    const copied = await page.evaluate(() => navigator.clipboard.readText());
+    expect(new URL(copied).searchParams.get("locale")).toBeNull();
+    await context.close();
+  });
+
   test("localizes candidate party + bio on results, but keeps names in English", async ({ page }) => {
     test.setTimeout(60_000);
     const policyCount = (await (await page.request.get("/api/questions")).json()).length;

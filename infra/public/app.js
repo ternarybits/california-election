@@ -916,7 +916,7 @@ function makeShareUrl() {
   const b64 = btoa(bin).replace(/=+$/, "").replace(/\+/g, "-").replace(/\//g, "_");
   const url = new URL(location.href);
   url.hash = `r=${b64}`;
-  return url.toString();
+  return withLocale(url.toString());
 }
 
 function decodeShareHash() {
@@ -974,9 +974,26 @@ function animateIn(el) {
   el.classList.add("anim-in");
 }
 
+// Pin the current language onto a shareable URL (?locale=…) so the recipient
+// opens the app in the same language. No-op when the language was auto-detected
+// or left at the English default (shareLocale() returns null) — then the
+// recipient's own browser locale decides. Preserves any #r= result hash.
+function withLocale(urlStr) {
+  const loc = I18N.shareLocale && I18N.shareLocale();
+  if (!loc) return urlStr;
+  try {
+    const u = new URL(urlStr);
+    u.searchParams.set("locale", loc);
+    u.searchParams.delete("lang"); // collapse the legacy alias onto ?locale=
+    return u.toString();
+  } catch {
+    return urlStr;
+  }
+}
+
 // The quiz's own shareable URL — base page, no result hash.
 function quizShareUrl() {
-  return `${location.origin}${location.pathname}`;
+  return withLocale(`${location.origin}${location.pathname}`);
 }
 
 // Absolute URL to the top-3 share card page (worker renders an SVG + OG tags).
