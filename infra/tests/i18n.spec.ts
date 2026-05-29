@@ -46,10 +46,14 @@ test.describe("Language selector", () => {
     // The English-content note becomes visible in a non-English UI.
     await expect(page.locator("#intro-lang-note")).toBeVisible();
 
-    // Choice persists on reload (localStorage), beating the en-US browser locale.
-    await page.reload();
+    // Choice persists when we navigate to a bare URL (no param): localStorage
+    // drives it, beating the en-US browser locale.
+    await page.goto("/");
     await expect(page.locator("html")).toHaveAttribute("lang", "es");
     await expect(page.locator("#start-btn")).toHaveText(startExpected);
+    // A stored choice is canonicalized into the address bar on load, so the URL
+    // a returning visitor copies is itself shareable in their language.
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("es-US");
   });
 
   test("re-renders an in-progress quiz question on language switch", async ({ page }) => {
@@ -97,6 +101,10 @@ test.describe("Language selector", () => {
     await expect(page.locator("html")).toHaveAttribute("lang", "ko");
     const startExpected = await page.evaluate(() => window.I18N.t("intro.start"));
     await expect(page.locator("#start-btn")).toHaveText(startExpected);
+    // Auto-detection is NOT a deliberate choice: the address bar stays locale-less
+    // (the `if (explicit)` canonicalization must not fire), so a copied URL lets
+    // each recipient auto-detect their own language.
+    expect(new URL(page.url()).searchParams.get("locale")).toBeNull();
     await context.close();
   });
 
@@ -114,6 +122,16 @@ test.describe("Language selector", () => {
   test("accepts an underscore-separated locale (es_MX → es)", async ({ page }) => {
     await page.goto("/?locale=es_MX");
     await expect(page.locator("html")).toHaveAttribute("lang", "es");
+    // A region variant is canonicalized to our emitted US locale on load.
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("es-US");
+  });
+
+  test("accepts the legacy ?lang= alias and canonicalizes it to ?locale= on load", async ({ page }) => {
+    await page.goto("/?lang=es");
+    await expect(page.locator("html")).toHaveAttribute("lang", "es");
+    // The legacy alias collapses to the full ?locale= on load, leaving no ?lang=.
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("es-US");
+    expect(new URL(page.url()).searchParams.get("lang")).toBeNull();
   });
 
   test("?locale= wins over a previously stored preference", async ({ page }) => {
@@ -208,6 +226,13 @@ test.describe("Language selector", () => {
     // Switch to Spanish: results re-render. Party + bio localize; name stays English.
     await page.locator("#lang-select").selectOption("es");
     await expect(page.locator("#results")).toBeVisible();
+
+    // The results URL must carry BOTH the result hash and the chosen locale:
+    // makeShareUrl()/syncUrl pin ?locale= while preserving the #r= answers hash,
+    // so a shared result link reproduces the ranking in the chosen language.
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("es-US");
+    expect(new URL(page.url()).hash).toMatch(/^#r=/);
+
     const esName = (await topRow.locator(".result-name strong").textContent())?.trim() ?? "";
     const esParty = (await topRow.locator(".result-name .muted").textContent())?.trim() ?? "";
     const esBio = (await topRow.locator("p.muted.small").first().textContent())?.trim() ?? "";

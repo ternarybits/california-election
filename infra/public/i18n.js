@@ -847,14 +847,24 @@ TRANSLATIONS.ko["intro.langNote"] = "참고: 후보자 이름과 인용된 출�
   // Reflect the chosen language in the address bar as ?locale=<full locale>,
   // preserving the path and any #r= result hash so the URL itself is shareable.
   // replaceState (not push) keeps the back button from cycling through languages.
+  // The same set/delete pair lives in app.js's withLocale() (for non-address-bar
+  // share URLs) — keep both in sync if the param names ever change.
   function syncUrl(l) {
     try {
       var url = new URL(window.location.href);
       url.searchParams.set("locale", localeTag(l));
       url.searchParams.delete("lang"); // collapse the legacy alias onto ?locale=
-      window.history.replaceState(null, "", url.toString());
+      var next = url.toString();
+      if (next !== window.location.href) window.history.replaceState(null, "", next);
     } catch (e) { /* no URL/History API (e.g. file://) — skip */ }
   }
+
+  // On load, canonicalize the address bar for a deliberate choice that arrived
+  // outside the selector: a stored choice (no param yet), a bare/region-variant
+  // ?locale=, or the legacy ?lang= all become ?locale=<full locale>, so the URL
+  // a returning or linked-in visitor copies is itself shareable in their
+  // language. Auto-detected/default visitors stay locale-less (explicit=false).
+  if (explicit) syncUrl(lang);
 
   function interpolate(s, params) {
     if (!params) return s;
