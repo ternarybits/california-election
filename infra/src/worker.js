@@ -13,7 +13,7 @@ const DATASET = dataset;
 
 // Languages the UI/dataset ship in — mirrors I18N_SUPPORTED in public/i18n.js.
 // Used to keep the per-language analytics tally clean.
-const SUPPORTED_LANGS = new Set(["en", "es", "zh", "vi", "tl", "ko"]);
+const SUPPORTED_LANGS = new Set(["en", "es", "zh", "zh-Hant", "vi", "tl", "ko"]);
 
 function json(body, init = {}) {
   return new Response(JSON.stringify(body), {

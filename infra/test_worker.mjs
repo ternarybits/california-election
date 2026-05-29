@@ -217,6 +217,12 @@ d1Inserts.length = 0;
 await call("POST", "/api/tally", { kind: "quiz_complete", session_id: "test123", candidate_id: dataset.candidates[0].id, match_pct: 80, lang: "es" });
 const langInsert = d1Inserts.find((i) => i.sql.includes("INSERT INTO events"));
 if (langInsert.args[9] !== "es") throw new Error(`supported lang should bind through; got ${JSON.stringify(langInsert.args[9])}`);
+// The hyphenated script code is the one most prone to drift between this list
+// and i18n.js's I18N_SUPPORTED — assert it binds through rather than nulling out.
+d1Inserts.length = 0;
+await call("POST", "/api/tally", { kind: "quiz_complete", session_id: "test123", candidate_id: dataset.candidates[0].id, match_pct: 80, lang: "zh-Hant" });
+const hantInsert = d1Inserts.find((i) => i.sql.includes("INSERT INTO events"));
+if (hantInsert.args[9] !== "zh-Hant") throw new Error(`zh-Hant should bind through; got ${JSON.stringify(hantInsert.args[9])}`);
 d1Inserts.length = 0;
 await call("POST", "/api/tally", { kind: "quiz_complete", session_id: "test123", candidate_id: dataset.candidates[0].id, match_pct: 80, lang: "xx" });
 const badLangInsert = d1Inserts.find((i) => i.sql.includes("INSERT INTO events"));

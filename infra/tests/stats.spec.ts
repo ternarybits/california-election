@@ -49,13 +49,20 @@ test.describe("Stats page (local-only, seeds D1)", () => {
   });
 
   test("tallies the language a quiz was completed in", async ({ request, page }) => {
-    const res = await request.post("/api/tally", {
+    const es = await request.post("/api/tally", {
       data: { kind: "quiz_complete", session_id: "stats-spec-lang", candidate_id: "porter", match_pct: 81, lang: "es" },
     });
-    expect(res.status()).toBe(200);
+    expect(es.status()).toBe(200);
+    // zh-Hant is the hyphenated script code that the supported-list and label-map
+    // must both carry; assert it survives storage and renders with its own label.
+    const hant = await request.post("/api/tally", {
+      data: { kind: "quiz_complete", session_id: "stats-spec-lang-hant", candidate_id: "porter", match_pct: 81, lang: "zh-Hant" },
+    });
+    expect(hant.status()).toBe(200);
 
     await page.goto("/stats");
     await expect(page.locator("#lang-list", { hasText: "Español" })).toBeVisible();
+    await expect(page.locator("#lang-list", { hasText: "中文（繁體）" })).toBeVisible();
   });
 
   test("divisive ranking ignores issues below the answer floor", async ({ request, page }) => {
