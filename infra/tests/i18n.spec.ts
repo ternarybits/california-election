@@ -17,11 +17,12 @@ declare global {
 // page, so they validate the wiring without hardcoding any translated wording.
 
 test.describe("Language selector", () => {
-  test("offers the six supported languages and defaults to English (en-US locale)", async ({ page }) => {
+  test("offers the seven supported languages and defaults to English (en-US locale)", async ({ page }) => {
     await page.goto("/");
     const select = page.locator("#lang-select");
     await expect(select).toBeVisible();
-    await expect(select.locator("option")).toHaveCount(6);
+    // en, es, zh (Simplified), zh-Hant (Traditional), vi, tl, ko
+    await expect(select.locator("option")).toHaveCount(7);
     await expect(page.locator("html")).toHaveAttribute("lang", "en");
     // The English UI hides the "questions stay in English" note.
     await expect(page.locator("#intro-lang-note")).toBeHidden();
@@ -117,6 +118,38 @@ test.describe("Language selector", () => {
     // The choice is persisted, so navigating to a param-less URL keeps Chinese.
     await page.goto("/");
     await expect(page.locator("html")).toHaveAttribute("lang", "zh");
+  });
+
+  test("Traditional Chinese (zh-Hant) is distinct from Simplified and maps to/from zh-TW", async ({ page }) => {
+    // Simplified via zh-CN → internal code "zh".
+    await page.goto("/?locale=zh-CN");
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh");
+    const simplifiedH1 = (await page.locator("header h1").textContent())?.trim() ?? "";
+
+    // Traditional via zh-TW → internal code "zh-Hant"; canonicalizes back to zh-TW.
+    await page.goto("/?locale=zh-TW");
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh-Hant");
+    await expect(page.locator("#lang-select")).toHaveValue("zh-Hant");
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("zh-TW");
+    const traditionalH1 = (await page.locator("header h1").textContent())?.trim() ?? "";
+
+    // Both are Chinese, but the script differs (e.g. 长/長, 选/選), so the
+    // rendered chrome must not be identical — proves the overlay is wired, not
+    // silently falling back to Simplified or English.
+    expect(simplifiedH1.length).toBeGreaterThan(0);
+    expect(traditionalH1.length).toBeGreaterThan(0);
+    expect(traditionalH1).not.toBe(simplifiedH1);
+  });
+
+  test("detects a Traditional-Chinese browser locale (zh-TW → zh-Hant)", async ({ browser }) => {
+    const context = await browser.newContext({ locale: "zh-TW" });
+    const page = await context.newPage();
+    await page.route("**/api/tally", (r) => r.fulfill({ status: 200, contentType: "application/json", body: '{"ok":true}' }));
+    await page.goto("/");
+    // zh-TW region → Traditional; address bar stays locale-less (auto-detected).
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh-Hant");
+    expect(new URL(page.url()).searchParams.get("locale")).toBeNull();
+    await context.close();
   });
 
   test("accepts an underscore-separated locale (es_MX → es)", async ({ page }) => {
