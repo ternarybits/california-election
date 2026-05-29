@@ -815,7 +815,7 @@ TRANSLATIONS["zh-Hant"] = {
   "intro.how.scores": "每位候選人有兩項獨立評分：<strong>政策匹配度</strong>和<strong>個人契合度</strong>。",
   "intro.how.sources": "每項立場都鏈接到一段原始來源引文。發現有誤請標記出來。",
   "intro.how.privacy": "我們會記錄匿名的回答計數，用於生成公開的統計頁面。不使用追蹤 cookie，不存儲 IP 地址。",
-  "intro.langNote": "intro.langNote",
+  "intro.langNote": "說明：候選人姓名以及所引用的原始資料（逐字引語和資料標題）均以英文顯示，因此每一項立場都可以對照其原始一手資料進行核查。",
   "intro.start": "開始測驗",
   "intro.share": "分享此測驗",
   "intro.snapshot": "快照日期：",

@@ -73,11 +73,13 @@ function extractBraced(src, marker) {
   throw new Error(`unbalanced braces after: ${marker}`);
 }
 
-// Return the string-literal text (incl. quotes) assigned at `marker`.
+// Return the string-literal text (incl. quotes) assigned at `marker`. Search for
+// the opening quote AFTER the marker — the marker itself contains quotes (the
+// `["intro.langNote"]` key), so starting from `at` would grab the key, not the value.
 function extractString(src, marker) {
   const at = src.indexOf(marker);
   if (at === -1) throw new Error(`marker not found: ${marker}`);
-  const start = src.indexOf('"', at);
+  const start = src.indexOf('"', at + marker.length);
   let escaped = false;
   for (let i = start + 1; i < src.length; i++) {
     const c = src[i];

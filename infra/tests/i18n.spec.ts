@@ -44,8 +44,11 @@ test.describe("Language selector", () => {
     await expect(page.locator("#start-btn")).toHaveText(startExpected);
     await expect(page.locator("#how-count")).not.toHaveText(/questions in all/i);
 
-    // The English-content note becomes visible in a non-English UI.
+    // The English-content note becomes visible in a non-English UI, with real
+    // translated text — not the bare "intro.langNote" key (a fallback miss).
     await expect(page.locator("#intro-lang-note")).toBeVisible();
+    await expect(page.locator("#intro-lang-note")).not.toHaveText("intro.langNote");
+    await expect(page.locator("#intro-lang-note")).not.toBeEmpty();
 
     // Choice persists when we navigate to a bare URL (no param): localStorage
     // drives it, beating the en-US browser locale.
@@ -132,6 +135,11 @@ test.describe("Language selector", () => {
     await expect(page.locator("#lang-select")).toHaveValue("zh-Hant");
     await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("zh-TW");
     const traditionalH1 = (await page.locator("header h1").textContent())?.trim() ?? "";
+
+    // The generated zh-Hant chrome must carry real text, not the bare key
+    // (the generator once folded the langNote key in as its own value).
+    await expect(page.locator("#intro-lang-note")).toBeVisible();
+    await expect(page.locator("#intro-lang-note")).not.toHaveText("intro.langNote");
 
     // Both are Chinese, but the script differs (e.g. 长/長, 选/選), so the
     // rendered chrome must not be identical — proves the overlay is wired, not
