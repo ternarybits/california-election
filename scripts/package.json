@@ -1,0 +1,8 @@
+{
+  "name": "california-election-scripts",
+  "private": true,
+  "description": "Authoring/build scripts. opencc-js is used only by gen_zh_hant.mjs to derive the Traditional Chinese (zh-Hant) translations from the Simplified ones.",
+  "devDependencies": {
+    "opencc-js": "^1.0.5"
+  }
+}

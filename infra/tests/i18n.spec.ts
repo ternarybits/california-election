@@ -17,11 +17,12 @@ declare global {
 // page, so they validate the wiring without hardcoding any translated wording.
 
 test.describe("Language selector", () => {
-  test("offers the six supported languages and defaults to English (en-US locale)", async ({ page }) => {
+  test("offers the seven supported languages and defaults to English (en-US locale)", async ({ page }) => {
     await page.goto("/");
     const select = page.locator("#lang-select");
     await expect(select).toBeVisible();
-    await expect(select.locator("option")).toHaveCount(6);
+    // en, es, zh (Simplified), zh-Hant (Traditional), vi, tl, ko
+    await expect(select.locator("option")).toHaveCount(7);
     await expect(page.locator("html")).toHaveAttribute("lang", "en");
     // The English UI hides the "questions stay in English" note.
     await expect(page.locator("#intro-lang-note")).toBeHidden();
@@ -43,13 +44,20 @@ test.describe("Language selector", () => {
     await expect(page.locator("#start-btn")).toHaveText(startExpected);
     await expect(page.locator("#how-count")).not.toHaveText(/questions in all/i);
 
-    // The English-content note becomes visible in a non-English UI.
+    // The English-content note becomes visible in a non-English UI, with real
+    // translated text — not the bare "intro.langNote" key (a fallback miss).
     await expect(page.locator("#intro-lang-note")).toBeVisible();
+    await expect(page.locator("#intro-lang-note")).not.toHaveText("intro.langNote");
+    await expect(page.locator("#intro-lang-note")).not.toBeEmpty();
 
-    // Choice persists on reload (localStorage), beating the en-US browser locale.
-    await page.reload();
+    // Choice persists when we navigate to a bare URL (no param): localStorage
+    // drives it, beating the en-US browser locale.
+    await page.goto("/");
     await expect(page.locator("html")).toHaveAttribute("lang", "es");
     await expect(page.locator("#start-btn")).toHaveText(startExpected);
+    // A stored choice is canonicalized into the address bar on load, so the URL
+    // a returning visitor copies is itself shareable in their language.
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("es-US");
   });
 
   test("re-renders an in-progress quiz question on language switch", async ({ page }) => {
@@ -97,6 +105,134 @@ test.describe("Language selector", () => {
     await expect(page.locator("html")).toHaveAttribute("lang", "ko");
     const startExpected = await page.evaluate(() => window.I18N.t("intro.start"));
     await expect(page.locator("#start-btn")).toHaveText(startExpected);
+    // Auto-detection is NOT a deliberate choice: the address bar stays locale-less
+    // (the `if (explicit)` canonicalization must not fire), so a copied URL lets
+    // each recipient auto-detect their own language.
+    expect(new URL(page.url()).searchParams.get("locale")).toBeNull();
+    await context.close();
+  });
+
+  test("respects a ?locale= URL param (zh-CN → zh) over the browser locale, and persists it", async ({ page }) => {
+    // Browser locale is the default en-US, but a shared ?locale= link wins.
+    await page.goto("/?locale=zh-CN");
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh");
+    await expect(page.locator("#lang-select")).toHaveValue("zh");
+
+    // The choice is persisted, so navigating to a param-less URL keeps Chinese.
+    await page.goto("/");
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh");
+  });
+
+  test("Traditional Chinese (zh-Hant) is distinct from Simplified and maps to/from zh-TW", async ({ page }) => {
+    // Simplified via zh-CN → internal code "zh".
+    await page.goto("/?locale=zh-CN");
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh");
+    const simplifiedH1 = (await page.locator("header h1").textContent())?.trim() ?? "";
+
+    // Traditional via zh-TW → internal code "zh-Hant"; canonicalizes back to zh-TW.
+    await page.goto("/?locale=zh-TW");
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh-Hant");
+    await expect(page.locator("#lang-select")).toHaveValue("zh-Hant");
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("zh-TW");
+    const traditionalH1 = (await page.locator("header h1").textContent())?.trim() ?? "";
+
+    // The generated zh-Hant chrome must carry real text, not the bare key
+    // (the generator once folded the langNote key in as its own value).
+    await expect(page.locator("#intro-lang-note")).toBeVisible();
+    await expect(page.locator("#intro-lang-note")).not.toHaveText("intro.langNote");
+
+    // Both are Chinese, but the script differs (e.g. 长/長, 选/選), so the
+    // rendered chrome must not be identical — proves the overlay is wired, not
+    // silently falling back to Simplified or English.
+    expect(simplifiedH1.length).toBeGreaterThan(0);
+    expect(traditionalH1.length).toBeGreaterThan(0);
+    expect(traditionalH1).not.toBe(simplifiedH1);
+  });
+
+  test("detects a Traditional-Chinese browser locale (zh-TW → zh-Hant)", async ({ browser }) => {
+    const context = await browser.newContext({ locale: "zh-TW" });
+    const page = await context.newPage();
+    await page.route("**/api/tally", (r) => r.fulfill({ status: 200, contentType: "application/json", body: '{"ok":true}' }));
+    await page.goto("/");
+    // zh-TW region → Traditional; address bar stays locale-less (auto-detected).
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh-Hant");
+    expect(new URL(page.url()).searchParams.get("locale")).toBeNull();
+    await context.close();
+  });
+
+  test("accepts an underscore-separated locale (es_MX → es)", async ({ page }) => {
+    await page.goto("/?locale=es_MX");
+    await expect(page.locator("html")).toHaveAttribute("lang", "es");
+    // A region variant is canonicalized to our emitted US locale on load.
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("es-US");
+  });
+
+  test("accepts the legacy ?lang= alias and canonicalizes it to ?locale= on load", async ({ page }) => {
+    await page.goto("/?lang=es");
+    await expect(page.locator("html")).toHaveAttribute("lang", "es");
+    // The legacy alias collapses to the full ?locale= on load, leaving no ?lang=.
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("es-US");
+    expect(new URL(page.url()).searchParams.get("lang")).toBeNull();
+  });
+
+  test("?locale= wins over a previously stored preference", async ({ page }) => {
+    await page.goto("/");
+    await page.locator("#lang-select").selectOption("es");
+    await expect(page.locator("html")).toHaveAttribute("lang", "es");
+
+    // A link in a different language overrides the stored choice on next load.
+    await page.goto("/?locale=ko");
+    await expect(page.locator("html")).toHaveAttribute("lang", "ko");
+  });
+
+  test("ignores an unsupported ?locale= and falls back to the browser locale", async ({ page }) => {
+    // de isn't supported and there's no stored choice → en-US browser default.
+    await page.goto("/?locale=de");
+    await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  });
+
+  test("changing language pins a full ?locale= in the address bar, which round-trips", async ({ page }) => {
+    await page.goto("/");
+    expect(new URL(page.url()).searchParams.get("locale")).toBeNull();
+
+    // The emitted value is a full BCP-47 locale (language + US region), not a bare code.
+    await page.locator("#lang-select").selectOption("ko");
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("ko-US");
+
+    // Switching again rewrites (not stacks) the param.
+    await page.locator("#lang-select").selectOption("vi");
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("vi-US");
+
+    // The full locale we emit reads back to the same language on reload.
+    await page.goto(`/?locale=vi-US`);
+    await expect(page.locator("html")).toHaveAttribute("lang", "vi");
+  });
+
+  test("share buttons carry the chosen full ?locale=", async ({ browser }) => {
+    const context = await browser.newContext({ permissions: ["clipboard-read", "clipboard-write"] });
+    const page = await context.newPage();
+    await page.route("**/api/tally", (r) => r.fulfill({ status: 200, contentType: "application/json", body: '{"ok":true}' }));
+    await page.goto("/");
+
+    await page.locator("#lang-select").selectOption("vi");
+    await page.locator("#share-quiz").click();
+    const copied = await page.evaluate(() => navigator.clipboard.readText());
+    expect(new URL(copied).searchParams.get("locale")).toBe("vi-US");
+    await context.close();
+  });
+
+  test("share link is locale-less when the language was only auto-detected", async ({ browser }) => {
+    // Korean browser, no explicit choice → the shared link omits ?locale= so the
+    // recipient's own browser locale decides.
+    const context = await browser.newContext({ locale: "ko-KR", permissions: ["clipboard-read", "clipboard-write"] });
+    const page = await context.newPage();
+    await page.route("**/api/tally", (r) => r.fulfill({ status: 200, contentType: "application/json", body: '{"ok":true}' }));
+    await page.goto("/");
+    await expect(page.locator("html")).toHaveAttribute("lang", "ko");
+
+    await page.locator("#share-quiz").click();
+    const copied = await page.evaluate(() => navigator.clipboard.readText());
+    expect(new URL(copied).searchParams.get("locale")).toBeNull();
     await context.close();
   });
 
@@ -131,6 +267,13 @@ test.describe("Language selector", () => {
     // Switch to Spanish: results re-render. Party + bio localize; name stays English.
     await page.locator("#lang-select").selectOption("es");
     await expect(page.locator("#results")).toBeVisible();
+
+    // The results URL must carry BOTH the result hash and the chosen locale:
+    // makeShareUrl()/syncUrl pin ?locale= while preserving the #r= answers hash,
+    // so a shared result link reproduces the ranking in the chosen language.
+    await expect.poll(() => new URL(page.url()).searchParams.get("locale")).toBe("es-US");
+    expect(new URL(page.url()).hash).toMatch(/^#r=/);
+
     const esName = (await topRow.locator(".result-name strong").textContent())?.trim() ?? "";
     const esParty = (await topRow.locator(".result-name .muted").textContent())?.trim() ?? "";
     const esBio = (await topRow.locator("p.muted.small").first().textContent())?.trim() ?? "";
