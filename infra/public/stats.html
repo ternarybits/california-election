@@ -34,6 +34,12 @@
       <ol id="match-share-list">Loading…</ol>
     </section>
 
+    <section id="languages" class="card">
+      <h2>Completions by language</h2>
+      <p class="muted small">The language each quiz was finished in. Completions from before this was tracked show as “unknown.”</p>
+      <ol id="lang-list">Loading…</ol>
+    </section>
+
     <section id="divisive" class="card">
       <h2>Most divisive questions</h2>
       <p class="muted small">Issues where the spread of user answers is widest. The policy questions where Californians most disagree.</p>
@@ -64,6 +70,9 @@
     // and pre-trim issues no longer in the quiz shouldn't surface at all.
     const MIN_DIVISIVE_ANSWERS = 10;
 
+    // Mirrors I18N_AUTONYMS in i18n.js — label each language in its own script.
+    const LANG_NAMES = { en: "English", es: "Español", zh: "中文（简体）", "zh-Hant": "中文（繁體）", vi: "Tiếng Việt", tl: "Tagalog", ko: "한국어" };
+
     async function load() {
       try {
         const [statsRes, candidatesRes, issuesRes] = await Promise.all([
@@ -89,6 +98,17 @@
                 return `<li><strong>${c?.name ?? row.candidate_id}</strong> <span class="muted">(${c?.party ?? "?"})</span> — ${pct}% (${row.n})</li>`;
               }).join("")
             : '<li class="muted">No completed quizzes yet.</li>';
+
+        // Completions by language.
+        const byLang = stats.by_lang ?? [];
+        const langTotal = byLang.reduce((a, b) => a + b.n, 0) || 1;
+        $("#lang-list").innerHTML = byLang.length
+          ? byLang.map((row) => {
+              const label = row.lang ? (LANG_NAMES[row.lang] ?? row.lang) : "unknown";
+              const pct = Math.round((row.n / langTotal) * 100);
+              return `<li><strong>${esc(label)}</strong> — ${pct}% (${row.n})</li>`;
+            }).join("")
+          : '<li class="muted">No completed quizzes yet.</li>';
 
         // Compute divisiveness from by_issue_stance: variance of stance distribution per issue.
         const byIssue = {};

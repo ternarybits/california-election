@@ -24,8 +24,13 @@ CREATE TABLE IF NOT EXISTS events (
   candidate_id TEXT,     -- for quiz_complete: the top match
   match_pct INTEGER,     -- for quiz_complete: the top match's %
   detail TEXT,           -- for chat_opened: the user's typed question (free text, capped)
+  lang TEXT,             -- UI/dataset language the session was in (e.g. 'en','es','zh')
   dataset_version TEXT,
   created_at INTEGER NOT NULL
 );
+-- One-time migration for the existing remote D1 (the CREATE above only adds the
+-- column on a fresh DB). D1 has no "ADD COLUMN IF NOT EXISTS"; run this once and
+-- ignore the "duplicate column name" error on a DB that already has it:
+--   wrangler d1 execute california-election --remote --command "ALTER TABLE events ADD COLUMN lang TEXT"
 CREATE INDEX IF NOT EXISTS events_by_kind ON events (kind, created_at);
 CREATE INDEX IF NOT EXISTS events_by_issue ON events (issue_id, kind);

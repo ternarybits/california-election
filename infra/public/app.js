@@ -698,6 +698,7 @@ function renderResults({ fromShare = false, staleVersion = null } = {}) {
     emitEvent("quiz_complete", {
       candidate_id: ranking[0].id,
       match_pct: ranking[0].policy_match_pct,
+      lang: window.I18N?.lang,
     });
   }
 }
